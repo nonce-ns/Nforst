@@ -1,0 +1,1962 @@
+{
+  "meta": {
+    "source_html": "Cobalt_Session_1769383380.html",
+    "extracted_at_utc": "2026-01-25T23:41:11Z",
+    "dictionary_entries": 249,
+    "event_rows": 567
+  },
+  "dictionary_data": {
+    "53": "{    \"BindableEvent\",    \"Fire\"}",
+    "43": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"13_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "73": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayDeathAnimation,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"PlayDeathAnimation\"    }}",
+    "63": "{    \"FireAllClients\",    .Bunny --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"]}",
+    "93": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    .Log --[[Nil Parent]],    false}",
+    "83": "StopDraggingItem",
+    "137": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"38_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, -1.3218773631252e-08, 0.56551021337509, -5.3843816516519e-08, 1, -5.5150987776642e-08, -0.56551021337509, -7.5934522669741e-08, -0.82474130392075)}",
+    "237": "{    workspace.Items[\"Item Chest2\"]}",
+    "249": "{    workspace.Items:GetChildren()[183]}",
+    "159": "{    [2] = .Part --[[Nil Parent]]}",
+    "154": "{    \"Night\",    6}",
+    "227": "{    game:GetService(\"Players\").LocalPlayer.ItemBag:GetChildren()[2]}",
+    "236": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestOpenItemChest",
+    "246": "{    \"FireAllClients\",    workspace.Map.Landmarks[\"Log Cabin\"].Door,    true}",
+    "245": "{    \"FireAllClients\",    \"DoorToggle\",    {        Instance = workspace.Map.Landmarks[\"Log Cabin\"].Door.Main,        Volume = 0.3    }}",
+    "207": "{    200,    0}",
+    "243": "{    80,    -200}",
+    "151": "{    .Sapling --[[Nil Parent]],    Vector3.new(-29.069286346436, 0.85770559310913, 45.799240112305)}",
+    "130": "{    workspace.Map.Campground.CraftingBench,    .Log --[[Nil Parent]]}",
+    "15": "{    \"FireAllClients\",    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"]}",
+    "138": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"39_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, 8.36449665087e-09, 0.56551021337509, 3.4071874210895e-08, 1, 3.489942912438e-08, -0.56551021337509, 4.8050992518256e-08, -0.82474130392075)}",
+    "13": "game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayEnemyHitSound",
+    "240": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    game:GetService(\"Players\").LocalPlayer.ItemBag[\"Revolver Ammo\"]}",
+    "33": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"3_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "23": "InvokeServer",
+    "42": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"12_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "52": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.DestroyObject,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"DestroyObject\"    }}",
+    "62": "{    0,    60}",
+    "72": "{    .Bunny --[[Nil Parent]]}",
+    "82": "{    .Sapling --[[Nil Parent]],    Vector3.new(10.542573928833, 0.8565878868103, 70.202491760254)}",
+    "92": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestBagDropItem",
+    "239": "{    game:GetService(\"Players\").LocalPlayer.ItemBag[\"Revolver Ammo\"]}",
+    "238": "{    \"ItemChest2\",    126.41968536377,    -215.27459716797,    {        Visible = true,        Open = true    }}",
+    "247": "{    \"FireAllClients\",    \"DoorToggle\",    {        Instance = workspace.Map.Landmarks[\"Log Cabin\"]:GetChildren()[3].ClosetDoors.DoorLeft.Main,        Volume = 0.3    }}",
+    "147": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"44_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, -1.7695539256124e-08, 0.56551021337509, -7.208929986291e-08, 1, -7.3843899883741e-08, -0.56551021337509, -1.01669350272e-07, -0.82474130392075)}",
+    "217": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.MakeIconOnMap,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"MakeIconOnMap\"    }}",
+    "143": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.SetPopUpMessage,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"SetPopUpMessage\"    }}",
+    "222": "ToggleDoor",
+    "122": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"31_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, 1.763361678897e-10, -0.07542610168457, -6.3613214695835e-10, 1, -6.0719544947574e-09, 0.07542610168457, 6.102638838712e-09, 0.99715137481689)}",
+    "234": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    game:GetService(\"Players\").LocalPlayer.ItemBag.Coal}",
+    "233": "{    game:GetService(\"Players\").LocalPlayer.ItemBag.Coal}",
+    "140": "SetPopUpMessage",
+    "223": "game:GetService(\"ReplicatedStorage\").RemoteEvents.ToggleDoor",
+    "231": "{    game:GetService(\"Players\").LocalPlayer.ItemBag[\"Sheet Metal\"]}",
+    "129": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestScrapItem",
+    "230": "{    \"FireAllClients\",    workspace.Map.Landmarks[\"Log Cabin\"].Closet.ClosetDoors,    true}",
+    "229": "{    \"FireAllClients\",    \"DoorToggle\",    {        Instance = workspace.Map.Landmarks[\"Log Cabin\"].Closet.ClosetDoors.DoorLeft.Main,        Volume = 0.3    }}",
+    "121": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"30_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, -2.3446784513936e-09, -0.07542610168457, 8.4582856274551e-09, 1, 8.0734814389416e-08, 0.07542610168457, -8.1142808028289e-08, 0.99715137481689)}",
+    "221": "{    \"FireAllClients\",    \"DoorToggle\",    {        Instance = workspace.Map.Landmarks[\"Log Cabin\"]:GetChildren()[18].Main,        Volume = 0.3    }}",
+    "148": "{    [\"Small Tree\"] --[[Nil Parent]],    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82471919059753, 0, 0.56554269790649, 0, 1, 0, -0.56554269790649, 0, -0.82471919059753)}",
+    "165": "MapDrawRemoveFogBlock",
+    "228": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    game:GetService(\"Players\").LocalPlayer.ItemBag:GetChildren()[2]}",
+    "248": "{    \"FireAllClients\",    workspace.Map.Landmarks[\"Log Cabin\"]:GetChildren()[3].ClosetDoors,    true}",
+    "215": "game:GetService(\"ReplicatedStorage\").RemoteEvents.MakeIconOnMap",
+    "12": "PlayEnemyHitSound",
+    "22": "game:GetService(\"ReplicatedStorage\").RemoteEvents.ToolDamageObject",
+    "32": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"2_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "196": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    workspace.Items[\"Bunny Foot\"],    true}",
+    "95": "RequestBurnItem",
+    "85": "{    .Log --[[Nil Parent]]}",
+    "75": "UnequipItemHandle",
+    "65": "{    .Bunny --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"14_8401342884\",    CFrame.new(-9.550274848938, 4.0218744277954, -77.107276916504, 0.98694497346878, 0, -0.16105763614178, 0, 1, 0, 0.16105763614178, 0, 0.98694497346878)}",
+    "55": "game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayerSprinting",
+    "45": "game:GetService(\"ReplicatedStorage\").RemoteEvents.DestroyObject",
+    "35": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"5_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "225": "{    game:GetService(\"Players\").LocalPlayer.ItemBag.Chair}",
+    "193": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.FlashlightWarning,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"FlashlightWarning\"    }}",
+    "116": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"25_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, 1.9809369700141e-09, -0.07542610168457, -7.1455872330262e-09, 1, -6.8203114267362e-08, 0.07542610168457, 6.8547798548479e-08, 0.99715137481689)}",
+    "224": "{    \"FireAllClients\",    workspace.Map.Landmarks[\"Log Cabin\"]:GetChildren()[18],    true}",
+    "132": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"33_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, -1.6600899543917e-09, 0.56551021337509, -6.7024017447181e-09, 1, -6.8392354002356e-09, -0.56551021337509, -9.4308765241635e-09, -0.82474130392075)}",
+    "232": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    game:GetService(\"Players\").LocalPlayer.ItemBag[\"Sheet Metal\"]}",
+    "203": "{    \"FireAllClients\",    .Part --[[Nil Parent]]}",
+    "219": "{    120,    -160}",
+    "1": "EquipItemHandle",
+    "218": "{    120,    -120}",
+    "3": "game:GetService(\"ReplicatedStorage\").RemoteEvents.EquipItemHandle",
+    "2": "RemoteEvent",
+    "5": "game:GetService(\"Players\").LocalPlayer.PlayerScripts.LoadClient",
+    "4": "FireServer",
+    "7": "FireOtherClients",
+    "6": "{    \"FireAllClients\",    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"]}",
+    "25": "8ef9db0b3e740b6d24c5553eac15120f91a00df99434c0d55069fa781c051cfd18472962ed2e987dc628a58579d06647",
+    "8": "Players.nsopnet.PlayerScripts.Client.UtilityModules.Events",
+    "135": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"36_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, -1.3578672408698e-08, 0.56551021337509, -5.5307435076202e-08, 1, -5.6649113844287e-08, -0.56551021337509, -7.7997782454986e-08, -0.82474130392075)}",
+    "235": "RequestOpenItemChest",
+    "110": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"19_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, 1.4681845739162e-09, -0.07542610168457, -1.4547539839427e-09, 1, 2.330043102905e-10, 0.07542610168457, -1.2261415494041e-10, 0.99715137481689)}",
+    "210": "{    160,    -80}",
+    "198": "DayDisplay",
+    "216": "{    \"LargeStructure\",    80,    -320,    {        Visible = false    }}",
+    "94": "{    \"FireAllClients\",    \"BagDrop\",    {        Instance = game:GetService(\"Players\").LocalPlayer.Character.Head,        Volume = 0.25    }}",
+    "182": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"51_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, -4.1975859232934e-08, -0.7179217338562, -4.1917378013068e-08, 1, -1.7823913012194e-08, 0.7179217338562, 1.7685747977225e-08, -0.69612377882004)}",
+    "74": "{    \"FireAllClients\",    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"]}",
+    "84": "game:GetService(\"ReplicatedStorage\").RemoteEvents.StopDraggingItem",
+    "54": "PlayerSprinting",
+    "64": "{    \"FireAllClients\",    \"WeaponHit\",    {        Instance = game:GetService(\"Players\").LocalPlayer.Character.Head,        Volume = 0.4    }}",
+    "34": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"4_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "44": "DestroyObject",
+    "226": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    game:GetService(\"Players\").LocalPlayer.ItemBag.Chair}",
+    "214": "MakeIconOnMap",
+    "213": "{    160,    -120}",
+    "126": "{    1}",
+    "191": "FlashlightWarning",
+    "190": "{    .Sapling --[[Nil Parent]],    Vector3.new(-15.803287506104, 0.99103689193726, 44.674419403076)}",
+    "202": "game:GetService(\"Players\").LocalPlayer.PlayerScripts.Client.EffectModules.FogEffectModule",
+    "102": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    [\"Cooked Morsel\"] --[[Nil Parent]],    false}",
+    "209": "{    160,    -40}",
+    "208": "{    200,    -40}",
+    "144": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"41_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, 1.650021275168e-08, 0.56551021337509, 6.7215175647561e-08, 1, 6.8849189460707e-08, -0.56551021337509, 9.4793641380875e-08, -0.82474130392075)}",
+    "244": "{    80,    -240}",
+    "101": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    [\"Cooked Morsel\"] --[[Nil Parent]]}",
+    "201": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.DayDisplay,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"DayDisplay\"    }}",
+    "189": "{    [\"Small Tree\"] --[[Nil Parent]],    CFrame.new(42.970867156982, 4.0360465049744, 40.266956329346, -0.48727655410767, 0, -0.8732476234436, 0, 1, 0, 0.8732476234436, 0, -0.48727655410767)}",
+    "206": "{    200,    40}",
+    "14": "game:GetService(\"Players\").LocalPlayer.PlayerScripts.Client.InteractionHandler",
+    "24": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"1_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "128": "RequestScrapItem",
+    "145": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"42_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, -7.8371742429084e-10, 0.56551021337509, -3.1925013743717e-09, 1, -3.2700917529382e-09, -0.56551021337509, -4.5023718087123e-09, -0.82474130392075)}",
+    "205": "{    160,    40}",
+    "204": "{    160,    0}",
+    "220": "{    120,    -200}",
+    "120": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"29_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, 3.0703219966455e-09, -0.07542610168457, -1.1075828254548e-08, 1, -1.0571878306109e-07, 0.07542610168457, 1.0625303303868e-07, 0.99715137481689)}",
+    "87": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestBagStoreItem",
+    "77": "RequestStartDraggingItem",
+    "176": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"45_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, -2.913056817988e-08, -0.7179217338562, -2.915123964442e-08, 1, -1.2310111152658e-08, 0.7179217338562, 1.2358948531244e-08, -0.69612377882004)}",
+    "97": "game:GetService(\"Players\").LocalPlayer.PlayerScripts.Client.CampsiteModules.FireSourceModule",
+    "47": "game:GetService(\"Players\").LocalPlayer.PlayerScripts.Client.UtilityModules.Events",
+    "37": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"7_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "67": "{    .Bunny --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"16_8401342884\",    CFrame.new(-45.111152648926, 4.2750115394592, -25.436889648438, -0.72271704673767, 0, 0.69114404916763, 0, 1, 0, -0.69114404916763, 0, -0.72271704673767)}",
+    "57": "0964d4db3620af7664d7691f2a0d6525cadad9e743dddbc8c8415c8693560d8fdc0bfd0527b9d0fed74c7c01165b820d",
+    "173": "{    -120,    -80}",
+    "161": "FireUpgradeVisuals",
+    "168": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.MapDrawRemoveFogBlock,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"MapDrawRemoveFogBlock\"    }}",
+    "177": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"46_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, 4.6798636077483e-09, -0.7179217338562, 4.6952477461559e-09, 1, 1.9659383010406e-09, 0.7179217338562, -2.0022838942424e-09, -0.69612377882004)}",
+    "197": "{    \"Day\",    6}",
+    "195": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    workspace.Items[\"Bunny Foot\"]}",
+    "112": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"21_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, -2.5335238351687e-09, -0.07542610168457, 9.1684313474616e-09, 1, 8.7619397959315e-08, 0.07542610168457, -8.8061348435531e-08, 0.99715137481689)}",
+    "212": "{    200,    -120}",
+    "192": "game:GetService(\"ReplicatedStorage\").RemoteEvents.FlashlightWarning",
+    "115": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"24_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, -1.8373202959054e-09, -0.07542610168457, 6.6274679078049e-09, 1, 6.3257523663651e-08, 0.07542610168457, -6.3577211051324e-08, 0.99715137481689)}",
+    "194": "{    workspace.Items[\"Bunny Foot\"]}",
+    "170": "{    120,    80}",
+    "211": "{    200,    -80}",
+    "111": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"20_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, 3.3573193114478e-09, -0.07542610168457, -1.2783304192965e-08, 1, -1.2448700204004e-07, 0.07542610168457, 1.250965908639e-07, 0.99715137481689)}",
+    "139": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"40_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, -4.1184731180977e-09, 0.56551021337509, -1.6776697364662e-08, 1, -1.7184413891869e-08, -0.56551021337509, -2.3660090775479e-08, -0.82474130392075)}",
+    "199": "game:GetService(\"ReplicatedStorage\").RemoteEvents.DayDisplay",
+    "114": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"23_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, 5.505522149285e-10, -0.07542610168457, -1.9859893729546e-09, 1, -1.8956034963935e-08, 0.07542610168457, 1.9051832111927e-08, 0.99715137481689)}",
+    "119": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"28_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, -2.2809658606349e-09, -0.07542610168457, 8.2281914615123e-09, 1, 7.8537624403907e-08, 0.07542610168457, -7.8934519365248e-08, 0.99715137481689)}",
+    "27": "RequestReplicateSound",
+    "17": "bbf90e5eda7419d4f880ab3d75e0efe52136d5f4c550bd02d8211b942ce51e002947250edcf1ac2425037a0e94abaf48",
+    "178": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"47_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, 3.8283273578153e-13, -0.7179217338562, 1.1940960373269e-12, 1, -6.2458892224893e-13, 0.7179217338562, -1.2920587993612e-12, -0.69612377882004)}",
+    "181": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"50_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, -3.0689555785557e-08, -0.7179217338562, -3.0646813087287e-08, 1, -1.3031473677927e-08, 0.7179217338562, 1.2930494008856e-08, -0.69612377882004)}",
+    "117": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"26_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, -2.5052551144711e-09, -0.07542610168457, 9.0369818295244e-09, 1, 8.6256392251016e-08, 0.07542610168457, -8.6692310219405e-08, 0.99715137481689)}",
+    "184": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"53_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, 1.0123018512331e-07, -0.7179217338562, 1.0108865211578e-07, 1, 4.2985142556518e-08, 0.7179217338562, -4.2650764697783e-08, -0.69612377882004)}",
+    "107": "RequestConsumeItem",
+    "86": "RequestBagStoreItem",
+    "96": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestBurnItem",
+    "186": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"55_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, -4.6277982335141e-08, -0.7179217338562, -4.6213070703516e-08, 1, -1.9651112737051e-08, 0.7179217338562, 1.9497761627463e-08, -0.69612377882004)}",
+    "36": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"6_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "46": "OnClientEvent",
+    "103": "RequestCookItem",
+    "66": "{    .Bunny --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"15_8401342884\",    CFrame.new(-3.2178475856781, 4.0218348503113, -69.51309967041, -0.98094940185547, 0, 0.19426348805428, 0, 1, 0, -0.19426348805428, 0, -0.98094940185547)}",
+    "183": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"52_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, -5.4471112065357e-08, -0.7179217338562, -5.4395083992631e-08, 1, -2.3129816284495e-08, 0.7179217338562, 2.2950198186322e-08, -0.69612377882004)}",
+    "106": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    [\"Cooked Morsel\"] --[[Nil Parent]],    true}",
+    "187": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"56_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, 8.5560024842835e-08, -0.7179217338562, 8.5439793906517e-08, 1, 3.6331744723839e-08, 0.7179217338562, -3.6047691054364e-08, -0.69612377882004)}",
+    "76": "game:GetService(\"ReplicatedStorage\").RemoteEvents.UnequipItemHandle",
+    "175": "{    -80,    120}",
+    "155": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.ChangeColorCorrection,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"ChangeColorCorrection\"    }}",
+    "172": "{    -120,    80}",
+    "136": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"37_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, 1.6907760524987e-08, 0.56551021337509, 6.8868530433974e-08, 1, 7.0539776686473e-08, -0.56551021337509, 9.7122928366389e-08, -0.82474130392075)}",
+    "125": "game:GetService(\"ReplicatedStorage\").RemoteEvents.TutorialEnd",
+    "108": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestConsumeItem",
+    "167": "{    80,    -120}",
+    "180": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"49_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, -8.3476393797355e-08, -0.7179217338562, -8.3360390590315e-08, 1, -3.544570148506e-08, 0.7179217338562, 3.5171641599163e-08, -0.69612377882004)}",
+    "169": "{    -80,    -120}",
+    "166": "game:GetService(\"ReplicatedStorage\").RemoteEvents.MapDrawRemoveFogBlock",
+    "164": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.FireUpgradeVisuals,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"FireUpgradeVisuals\"    }}",
+    "163": "{    2}",
+    "162": "game:GetService(\"ReplicatedStorage\").RemoteEvents.FireUpgradeVisuals",
+    "124": "TutorialEnd",
+    "16": "FireAllClients",
+    "26": "{    \"RemoteFunction\",    \"rawget\",    [4] = \"InvokeServer\",    [5] = \"warn\",    [7] = \"Remote function does not exist for event\",    [8] = \"Name\"}",
+    "200": "{    2,    1,    {},    {        npcs = {            \"Pelt Trader\"        },        berries = 0,        rain = 19,        plants = {},        attack = 15    }}",
+    "100": "{    [\"Cooked Morsel\"] --[[Nil Parent]]}",
+    "160": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.FadeOutFogBlock,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"FadeOutFogBlock\"    }}",
+    "188": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"57_8401342884\",    CFrame.new(42.970867156982, 4.0360465049744, 40.266956329346, -0.4872961640358, 4.2756553852996e-08, -0.87323677539825, 3.85386620394e-08, 1, 2.7457401685638e-08, 0.87323677539825, -2.0273489553801e-08, -0.4872961640358)}",
+    "71": "game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayDeathAnimation",
+    "61": "game:GetService(\"ReplicatedStorage\").RemoteEvents.AnalyticsTimeFirstPerson",
+    "51": "1fc9826231362a4cfddfa3ff173bd6c1d3cc3626d96616d2af78bca1dc649692ef36d3bbdc44e000f71ee033dc147c33",
+    "41": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"11_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "157": "FadeOutFogBlock",
+    "156": "{    \"FIRE REACHED 100%. The Map has grown bigger\",    \"note\"}",
+    "91": "RequestBagDropItem",
+    "81": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestPlantItem",
+    "59": "{    false}",
+    "49": "Anonymous",
+    "39": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"9_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "29": "{    \"FireAllClients\",    \"WoodChop\",    {        Instance = game:GetService(\"Players\").LocalPlayer.Character.Head,        Volume = 0.4    }}",
+    "99": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    .Log --[[Nil Parent]],    true}",
+    "89": "{    {        Success = true,        Cooked = false    }}",
+    "79": "{    .Sapling --[[Nil Parent]]}",
+    "69": "{    .Bunny --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"18_8401342884\",    CFrame.new(-10.06676197052, 3.9945542812347, -24.537702560425, -0.29569348692894, 0, -0.9552828669548, 0, 1, 0, 0.9552828669548, 0, -0.29569348692894)}",
+    "174": "{    80,    120}",
+    "150": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    .Sapling --[[Nil Parent]],    false}",
+    "153": "game:GetService(\"ReplicatedStorage\").RemoteEvents.ChangeColorCorrection",
+    "152": "ChangeColorCorrection",
+    "19": "{    \"BindableEvent\",    \"Fire\",    \"RemoteEvent\",    \"rawget\",    [6] = \"FireAllClients\",    [7] = \"FireServer\",    [8] = \"warn\",    [10] = \"Remote event does not exist for event\",    [11] = \"Name\"}",
+    "179": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"48_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, 8.8262751773982e-08, -0.7179217338562, 8.814035368232e-08, 1, 3.7477839498479e-08, 0.7179217338562, -3.7188659263165e-08, -0.69612377882004)}",
+    "146": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"43_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, 2.8827653597574e-09, 0.56551021337509, 1.1743612304826e-08, 1, 1.2029272689063e-08, -0.56551021337509, 1.6562170301881e-08, -0.82474130392075)}",
+    "142": "{    \"night is approaching\",    \"night\"}",
+    "56": "{    true}",
+    "158": "game:GetService(\"ReplicatedStorage\").RemoteEvents.FadeOutFogBlock",
+    "171": "{    120,    -80}",
+    "134": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"35_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, -1.8414690217128e-08, 0.56551021337509, -7.5002027699611e-08, 1, -7.6820150241019e-08, -0.56551021337509, -1.0577116427157e-07, -0.82474130392075)}",
+    "31": "{    {        Success = true    }}",
+    "21": "RemoteFunction",
+    "11": "{    \"RemoteEvent\",    \"rawget\",    [4] = \"FireAllClients\",    [5] = \"FireServer\",    [6] = \"warn\",    [8] = \"Remote event does not exist for event\",    [9] = \"Name\"}",
+    "133": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"34_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, 1.042002573115e-08, 0.56551021337509, 4.2431882008032e-08, 1, 4.3456861220648e-08, -0.56551021337509, 5.983633144524e-08, -0.82474130392075)}",
+    "60": "AnalyticsTimeFirstPerson",
+    "70": "PlayDeathAnimation",
+    "40": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"10_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "50": "Unknown",
+    "131": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"32_8401342884\",    CFrame.new(-28.816759109497, 3.061253786087, 70.337509155273, -0.82474130392075, 5.3785553788543e-09, 0.56551021337509, 2.0654667309827e-08, 1, 2.0611832241002e-08, -0.56551021337509, 2.8679854935376e-08, -0.82474130392075)}",
+    "242": "{    \"FireAllClients\",    workspace.Map.Landmarks[\"Log Cabin\"]:GetChildren()[20],    true}",
+    "80": "RequestPlantItem",
+    "90": "{    \"FireAllClients\",    \"BagGet\",    {        Instance = game:GetService(\"Players\").LocalPlayer.Character.Head,        Volume = 0.25    }}",
+    "48": "{    [\"Small Tree\"] --[[Nil Parent]],    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771583080292, 0, 0.067551523447037, 0, 1, 0, -0.067551523447037, 0, -0.99771583080292)}",
+    "58": "{    \"RemoteEvent\",    \"rawget\",    [4] = \"FireServer\",    [5] = \"warn\",    [7] = \"Remote event does not exist for event\",    [8] = \"Name\"}",
+    "28": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestReplicateSound",
+    "38": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"8_8401342884\",    CFrame.new(1.4462873935699, 3.8565876483917, 62.373195648193, -0.99771374464035, 0, 0.067581310868263, 0, 1, 0, -0.067581310868263, 0, -0.99771374464035)}",
+    "88": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    .Log --[[Nil Parent]]}",
+    "98": "{    workspace.Map.Campground.MainFire,    .Log --[[Nil Parent]]}",
+    "68": "{    .Bunny --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"17_8401342884\",    CFrame.new(-20.248611450195, 3.9163904190063, -26.091239929199, -0.44880160689354, 0, -0.89363139867783, 0, 1, 0, 0.89363139867783, 0, -0.44880160689354)}",
+    "78": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestStartDraggingItem",
+    "127": "{    {        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.TutorialEnd,        BindableEvent = {            BindableEvent = .Event --[[Nil Parent]]        },        Name = \"TutorialEnd\"    }}",
+    "149": "{    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Sack\"],    .Sapling --[[Nil Parent]]}",
+    "105": "{    workspace.Map.Campground.MainFire,    [\"Cooked Morsel\"] --[[Nil Parent]]}",
+    "123": "{    [\"Small Tree\"] --[[Nil Parent]],    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715399742126, -0, -0.075391739606857, 0, 1, -0, 0.075391739606857, 0, 0.99715399742126)}",
+    "9": "aa39ac63239108cfa21a4866f294cdc519399c76890294f5fe74daded1530f5b406c3a843a850c1edfeafb6b0328691f",
+    "18": "{    game:GetService(\"Players\").LocalPlayer}",
+    "113": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"22_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, -1.0475888906347e-10, -0.07542610168457, 3.7896452642627e-10, 1, 3.6211085241433e-09, 0.07542610168457, -3.6393772440135e-09, 0.99715137481689)}",
+    "118": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"27_8401342884\",    CFrame.new(51.158626556396, 4.0226559638977, -39.175685882568, 0.99715137481689, 1.5316818924305e-09, -0.07542610168457, -5.5251887509655e-09, 1, -5.2737284761406e-08, 0.07542610168457, 5.3003802236162e-08, 0.99715137481689)}",
+    "185": "{    [\"Small Tree\"] --[[Nil Parent]],    game:GetService(\"Players\").LocalPlayer.Inventory[\"Old Axe\"],    \"54_8401342884\",    CFrame.new(42.588069915771, 4.0360465049744, 40.418231964111, -0.69612377882004, -8.1288803244206e-08, -0.7179217338562, -8.1174924559946e-08, 1, -3.451769714502e-08, 0.7179217338562, 3.4248653690838e-08, -0.69612377882004)}",
+    "141": "game:GetService(\"ReplicatedStorage\").RemoteEvents.SetPopUpMessage",
+    "109": "{    \"FireAllClients\",    \"Eat\",    {        Instance = game:GetService(\"Players\").LocalPlayer.Character.Head,        Volume = 0.15    }}",
+    "104": "game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestCookItem",
+    "20": "ToolDamageObject",
+    "30": "OnClientInvoke",
+    "241": "{    \"FireAllClients\",    \"DoorToggle\",    {        Instance = workspace.Map.Landmarks[\"Log Cabin\"]:GetChildren()[20].Main,        Volume = 0.3    }}",
+    "10": "{}"
+  },
+  "event_data": [
+    [
+      1,2,3,4,1769408248.2964,5,6,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      12,2,13,4,1769408259.90484,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408259.9055703,14,24,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408259.9058456,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408260.016418,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408260.8730981,5,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408260.8735616,5,32,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408260.8739154,5,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408260.9625273,5,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408261.6816843,5,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408261.6819222,5,33,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408261.6821325,5,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408261.771963,5,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408265.2520497,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408265.2524772,14,34,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408265.2527807,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408265.3251367,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408265.9040585,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408265.9043007,14,35,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408265.9045029,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408266.0158315,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408266.4351375,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408266.4354572,14,36,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408266.4357085,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408266.5400074,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408266.9456196,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408266.9459531,14,37,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408266.9462352,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408267.0430553,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408267.4732072,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408267.4736555,14,38,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408267.4740705,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408267.5754554,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408268.0087323,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408268.0089936,14,39,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408268.0092366,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408268.1177113,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408268.5262225,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408268.5266607,14,40,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408268.5270896,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408268.6382322,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408269.0368416,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408269.0375338,14,41,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408269.0381184,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408269.1533718,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408269.585322,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408269.5858235,14,42,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408269.5862708,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408269.695965,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408270.1392627,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408270.1395607,14,43,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      20,21,22,30,1769408270.2422242,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      44,2,45,46,1769408270.4238954,47,48,46,49,-1,50,0,0,51,52,10,53
+    ],
+    [
+      54,2,55,4,1769408275.1212418,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408275.170795,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408277.4606762,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      60,2,61,4,1769408277.9929814,5,62,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      12,2,13,4,1769408279.4561923,14,63,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      27,2,28,4,1769408279.4563298,14,64,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,23,1769408279.4571168,14,65,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      20,21,22,30,1769408279.5578744,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408281.0898893,14,63,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      27,2,28,4,1769408281.090024,14,64,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,23,1769408281.09061,14,66,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      20,21,22,30,1769408281.1911592,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      54,2,55,4,1769408283.8590357,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408283.899946,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      12,2,13,4,1769408284.7738492,14,63,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      27,2,28,4,1769408284.774106,14,64,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,23,1769408284.7752926,14,67,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      20,21,22,30,1769408284.8443851,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      54,2,55,4,1769408284.9984853,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408285.2503595,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408286.357229,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      12,2,13,4,1769408286.423325,14,63,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      27,2,28,4,1769408286.4235802,14,64,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,23,1769408286.4246724,14,68,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      20,21,22,30,1769408286.5295427,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      54,2,55,4,1769408286.7023335,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      12,2,13,4,1769408287.0526786,14,63,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      27,2,28,4,1769408287.0529945,14,64,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,23,1769408287.054342,14,69,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      20,21,22,30,1769408287.1665802,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      70,2,71,46,1769408287.1802478,47,72,46,49,-1,50,0,0,51,73,10,53
+    ],
+    [
+      54,2,55,4,1769408287.205518,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408287.4511573,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408287.7509203,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408287.8923252,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      1,2,3,4,1769408295.9673922,5,74,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      75,2,76,4,1769408297.2530081,5,74,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      77,2,78,4,1769408298.0657303,14,79,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      80,21,81,23,1769408301.0983827,14,82,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408301.1273046,14,79,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      80,21,81,30,1769408301.2390501,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      1,2,3,4,1769408304.6634724,5,74,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408305.529289,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408306.2060595,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408306.2393742,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408306.3155956,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408306.3160653,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408306.6776795,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408307.078814,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408307.100994,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408307.1826131,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408307.183184,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408307.5810926,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408308.1471949,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408308.1733441,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408308.2755806,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408308.2760313,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      91,2,92,4,1769408314.20169,5,93,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408314.2020128,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      95,2,96,4,1769408314.2508655,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      91,2,92,4,1769408314.7294762,5,93,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408314.7296884,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      95,2,96,4,1769408314.782005,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      91,2,92,4,1769408315.3175862,5,99,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408315.3177667,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      95,2,96,4,1769408315.3686666,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      77,2,78,4,1769408320.2212384,14,100,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408320.9796557,5,101,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408321.001866,14,100,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408321.0920746,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408321.0923607,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408321.7149053,14,100,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408322.3781962,5,101,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408322.4004705,14,100,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408322.5076098,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408322.508039,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      91,2,92,4,1769408325.6874027,5,102,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408325.6877615,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      103,2,104,4,1769408325.7418528,97,105,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      103,2,104,4,1769408325.74205,97,105,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      91,2,92,4,1769408326.2872539,5,106,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408326.2875328,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      103,2,104,4,1769408326.337641,97,105,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      103,2,104,4,1769408326.3379202,97,105,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      77,2,78,4,1769408327.7635279,14,100,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      107,21,108,23,1769408328.5739439,14,100,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408328.606386,14,100,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      107,21,108,30,1769408328.6934593,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408328.6939576,14,109,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408330.3039865,14,100,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      107,21,108,23,1769408331.1255486,14,100,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408331.1519425,14,100,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      107,21,108,30,1769408331.2510624,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408331.2514286,14,109,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      1,2,3,4,1769408333.979402,5,6,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      12,2,13,4,1769408336.243816,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408336.2440143,14,110,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408336.2441623,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408336.3643212,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408336.7944298,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408336.795006,14,111,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408336.7954473,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408336.9129443,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408337.311465,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408337.3119967,14,112,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408337.3124452,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408337.4310403,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408337.8246934,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408337.8250659,14,113,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408337.8253562,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408337.9414713,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      60,2,61,4,1769408338.113042,5,62,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      12,2,13,4,1769408338.3671324,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408338.3674972,14,114,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408338.3678174,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408338.4861763,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408338.8800237,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408338.8804848,14,115,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408338.8809824,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408338.9748883,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408339.4324422,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408339.4331634,14,116,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408339.4337618,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408339.5599995,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408339.9604359,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408339.9607966,14,117,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408339.9610643,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408340.0884874,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408340.511316,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408340.5117633,14,118,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408340.5121834,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408340.63787,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408341.1042793,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408341.104614,14,119,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408341.104942,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408341.2444339,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408341.6403782,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408341.6407335,14,120,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408341.6410387,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408341.7350042,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408342.1827765,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408342.1832347,14,121,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408342.1836734,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408342.2999325,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408342.6915936,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408342.6918666,14,122,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      20,21,22,30,1769408342.7734647,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      44,2,45,46,1769408342.9725382,47,123,46,49,-1,50,0,0,51,52,10,53
+    ],
+    [
+      124,2,125,46,1769408342.9731288,47,126,46,49,-1,50,0,0,51,127,10,53
+    ],
+    [
+      1,2,3,4,1769408345.7307906,5,74,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408346.2308426,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408346.8231707,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408346.8539622,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408346.9529366,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408346.9534338,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408347.3250659,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408347.8098447,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408347.8425384,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408347.9216793,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408347.921923,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408348.3768313,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408348.8627777,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408348.8949182,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408349.0111763,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408349.0116665,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      91,2,92,4,1769408354.3080993,5,93,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408354.308453,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      95,2,96,4,1769408354.3663502,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      91,2,92,4,1769408355.6574008,5,93,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408355.6577246,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      95,2,96,4,1769408355.710219,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      91,2,92,4,1769408360.478252,5,99,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408360.478424,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      128,21,129,23,1769408360.5460832,5,130,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      128,21,129,30,1769408360.6502182,5,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      1,2,3,4,1769408371.6279604,5,6,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      12,2,13,4,1769408374.2522554,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408374.2525103,14,131,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408374.2527213,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408374.4489527,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408374.8161013,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408374.8166325,14,132,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408374.8171556,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408374.940096,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408375.344659,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408375.3453565,14,133,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408375.3457804,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408375.491998,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408375.8589845,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408375.8594134,14,134,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408375.859803,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408375.9866428,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408376.5367193,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408376.5370326,14,135,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408376.5373096,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408376.6420188,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408377.081702,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408377.0822122,14,136,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408377.0826426,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408377.2754824,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408377.607657,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408377.607922,14,137,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408377.608172,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408377.746869,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408378.152647,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408378.1532326,14,138,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408378.1537268,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408378.3505561,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408378.696862,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408378.6973946,14,139,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408378.6978438,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408378.8972063,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      140,2,141,46,1769408379.1219785,47,142,46,49,-1,50,0,0,51,143,10,53
+    ],
+    [
+      12,2,13,4,1769408379.2951608,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408379.295754,14,144,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408379.2964313,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408379.5036623,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408379.9778624,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408379.9782796,14,145,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408379.9786575,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408380.1154025,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408380.549661,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408380.5499697,14,146,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408380.5502477,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408380.6968212,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408381.077355,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408381.0776093,14,147,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      20,21,22,30,1769408381.1976252,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      44,2,45,46,1769408381.4051857,47,148,46,49,-1,50,0,0,51,52,10,53
+    ],
+    [
+      1,2,3,4,1769408382.2083023,5,74,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408382.7315435,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408383.2431154,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408383.2740588,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408383.370943,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408383.3711557,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408383.7945697,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408384.296292,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408384.3347588,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408384.4320226,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408384.4325213,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408384.9418764,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408385.4394307,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408385.471068,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408385.5682847,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408385.5688548,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408387.7404113,14,79,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408388.3641703,5,149,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408388.3936162,14,79,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408388.4759634,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408388.4764183,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      91,2,92,4,1769408390.8676188,5,150,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408390.8678732,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408392.2232409,14,79,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      80,21,81,23,1769408392.8711264,14,151,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408392.9086747,14,79,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      80,21,81,30,1769408393.0074625,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      152,2,153,46,1769408396.340363,47,154,46,49,-1,50,0,0,51,155,10,53
+    ],
+    [
+      60,2,61,4,1769408398.261434,5,62,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      91,2,92,4,1769408399.163473,5,93,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408399.163811,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      91,2,92,4,1769408399.1657617,5,93,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408399.165998,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      91,2,92,4,1769408399.1677623,5,99,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408399.167952,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      95,2,96,4,1769408399.325311,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      95,2,96,4,1769408399.3279378,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      95,2,96,4,1769408399.3305695,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      140,2,141,46,1769408399.5025551,47,156,46,49,-1,50,0,0,51,143,10,53
+    ],
+    [
+      157,2,158,46,1769408399.502938,47,159,46,49,-1,50,0,0,51,160,10,53
+    ],
+    [
+      161,2,162,46,1769408399.526822,47,163,46,49,-1,50,0,0,51,164,10,53
+    ],
+    [
+      165,2,166,46,1769408399.5522754,47,167,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408399.5523832,47,167,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,46,1769408399.670423,47,159,46,49,-1,50,0,0,51,160,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6710873,47,169,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6712773,47,169,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,46,1769408399.6717093,47,159,46,49,-1,50,0,0,51,160,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6721447,47,170,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6723151,47,170,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,46,1769408399.6729386,47,159,46,49,-1,50,0,0,51,160,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6734915,47,171,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408399.673709,47,171,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,46,1769408399.6741023,47,159,46,49,-1,50,0,0,51,160,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6745028,47,172,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6746736,47,172,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,46,1769408399.6750472,47,159,46,49,-1,50,0,0,51,160,10,53
+    ],
+    [
+      165,2,166,46,1769408399.675449,47,173,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6756155,47,173,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,46,1769408399.6759672,47,159,46,49,-1,50,0,0,51,160,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6764188,47,174,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6766078,47,174,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,46,1769408399.6769989,47,159,46,49,-1,50,0,0,51,160,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6773574,47,175,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408399.6775076,47,175,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      1,2,3,4,1769408405.0156925,5,6,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      12,2,13,4,1769408408.3869414,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408408.3875139,14,176,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408408.3879654,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408408.5464976,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408409.0619543,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408409.0625741,14,177,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408409.063001,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408409.2663655,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408409.7481182,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408409.7484982,14,178,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408409.74889,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408409.871823,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408410.3988771,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408410.3995936,14,179,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408410.4000695,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408410.5534303,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408410.935181,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408410.9355404,14,180,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408410.9357643,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408411.128906,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408411.6304162,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408411.6307387,14,181,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408411.6318119,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408411.8380046,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408412.167731,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408412.1686943,14,182,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408412.169405,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408412.4079118,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408412.8716433,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408412.8719978,14,183,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408412.872345,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408413.0776649,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408413.449195,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408413.4503226,14,184,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408413.4512737,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408413.575375,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408414.0210338,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408414.0214424,14,185,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408414.0218084,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408414.2278118,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408414.7407951,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408414.7412047,14,186,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408414.7415276,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408414.8737204,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408415.273946,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408415.2745166,14,187,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408415.275019,14,29,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      20,21,22,30,1769408415.4778621,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      12,2,13,4,1769408415.9733622,14,15,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      20,21,22,23,1769408415.9737363,14,188,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      20,21,22,30,1769408416.1028385,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      44,2,45,46,1769408416.3069558,47,189,46,49,-1,50,0,0,51,52,10,53
+    ],
+    [
+      1,2,3,4,1769408417.3773112,5,74,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408417.9215548,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408418.379084,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408418.4207559,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408418.516395,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408418.5170362,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408419.302287,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408419.7742624,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408419.8095,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408419.9227872,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408419.9231899,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408420.3646116,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408420.7283323,5,88,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408420.7672477,14,85,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408420.8774698,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408420.8779798,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408421.9228103,14,79,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      80,21,81,23,1769408430.7385716,14,190,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408430.7738194,14,79,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      80,21,81,30,1769408430.8808436,14,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      91,2,92,4,1769408435.1984522,5,93,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408435.198757,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      95,2,96,4,1769408435.268925,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      91,2,92,4,1769408435.8047814,5,93,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408435.8051453,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      95,2,96,4,1769408435.8817518,97,98,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      91,2,92,4,1769408438.3272407,5,99,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408438.3274004,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      128,21,129,23,1769408438.3834941,5,130,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      128,21,129,30,1769408438.4595497,5,31,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      191,2,192,46,1769408457.8724444,47,59,46,49,-1,50,0,0,51,193,10,53
+    ],
+    [
+      60,2,61,4,1769408458.4035985,5,62,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      77,2,78,4,1769408458.7359717,14,194,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408460.9450448,5,195,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408460.9867597,14,194,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408461.106599,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408461.1070418,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      91,2,92,4,1769408462.1591272,5,196,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408462.1592774,5,94,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      152,2,153,46,1769408493.503551,47,197,46,49,-1,50,0,0,51,155,10,53
+    ],
+    [
+      54,2,55,4,1769408500.1025198,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408500.161299,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      198,2,199,46,1769408502.4837744,47,200,46,49,-1,50,0,0,51,201,10,53
+    ],
+    [
+      157,2,158,4,1769408503.9487736,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408504.074627,47,204,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408504.0748947,47,204,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408505.2706378,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408505.340543,47,205,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408505.341185,47,205,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408506.5008144,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408506.608761,47,206,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408506.6088428,47,206,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408507.6035078,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408507.7380936,47,207,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408507.7383783,47,207,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408509.0776415,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408509.1711879,47,208,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408509.1714244,47,208,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408510.5270052,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408510.6143706,47,209,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408510.6145594,47,209,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408510.8909264,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408511.0262997,47,210,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408511.0268228,47,210,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408511.6167793,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408511.745759,47,211,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408511.7459812,47,211,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408512.4125962,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      157,2,158,4,1769408512.4570272,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408512.5246062,47,212,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408512.5254972,47,212,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408512.6509707,47,213,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408512.6512277,47,213,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      214,2,215,46,1769408512.9640548,47,216,46,49,-1,50,0,0,51,217,10,53
+    ],
+    [
+      157,2,158,4,1769408513.9453957,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408514.086153,47,218,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408514.0862803,47,218,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408515.461964,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408515.5747817,47,219,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408515.5748568,47,219,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      157,2,158,4,1769408516.8415837,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408516.9158833,47,220,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408516.9161098,47,220,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      54,2,55,4,1769408517.1392162,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408517.4432788,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408518.0203156,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      60,2,61,4,1769408518.6350787,5,62,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408518.7623382,5,221,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      222,2,223,4,1769408518.764017,5,224,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      54,2,55,4,1769408519.457952,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408519.9623325,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408520.4562101,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408520.8926394,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408522.4130387,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408522.5791593,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      77,2,78,4,1769408523.1009836,14,225,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408523.792188,5,226,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408523.8389852,14,225,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408523.9538078,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408523.9543376,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      54,2,55,4,1769408524.3148491,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408524.5589137,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      77,2,78,4,1769408525.2261698,14,227,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408525.9015923,5,228,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408525.948626,14,227,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408526.0725734,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408526.073401,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      54,2,55,4,1769408527.140367,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408527.4058127,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408528.3793406,5,229,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      222,2,223,4,1769408528.3799827,5,230,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      54,2,55,4,1769408528.984946,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408529.1766634,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      77,2,78,4,1769408529.8275206,14,231,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408530.3961623,5,232,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408530.44377,14,231,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408530.5727918,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408530.5733974,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      77,2,78,4,1769408531.0514517,14,233,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408531.6593115,5,234,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408531.7006607,14,233,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408531.7855163,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408531.786035,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      54,2,55,4,1769408532.3388584,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408532.6546266,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      235,2,236,4,1769408538.902703,5,237,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      214,2,215,46,1769408539.1726387,47,238,46,49,-1,50,0,0,51,217,10,53
+    ],
+    [
+      77,2,78,4,1769408541.5164409,14,239,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,23,1769408542.194629,5,240,23,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      83,2,84,4,1769408542.2469237,14,239,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      86,21,87,30,1769408542.3766518,5,89,30,23,83,8,0,0,25,10,10,26
+    ],
+    [
+      27,2,28,4,1769408542.3773928,5,90,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      54,2,55,4,1769408543.2542074,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408543.4965117,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408543.970901,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408544.13495,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408544.5901825,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408544.7303429,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408545.04391,5,241,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      222,2,223,4,1769408545.0455015,5,242,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      54,2,55,4,1769408545.4906142,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408545.6784906,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408546.140466,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408546.368079,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408546.680267,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      157,2,158,4,1769408547.0655067,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      157,2,158,4,1769408547.1196203,202,203,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      165,2,166,46,1769408547.1750236,47,243,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408547.1753728,47,243,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408547.2626634,47,244,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      165,2,166,46,1769408547.2627847,47,244,46,49,-1,50,0,0,51,168,10,53
+    ],
+    [
+      54,2,55,4,1769408547.679336,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408548.211886,5,245,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      222,2,223,4,1769408548.2124987,5,246,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      54,2,55,4,1769408548.7622433,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408549.3834546,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      27,2,28,4,1769408550.996108,5,247,4,7,91,8,0,0,9,10,10,11
+    ],
+    [
+      222,2,223,4,1769408550.9965277,5,248,4,16,101,8,0,0,17,18,10,19
+    ],
+    [
+      77,2,78,4,1769408552.0762959,14,249,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      83,2,84,4,1769408555.2785535,14,249,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408556.0132017,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408556.2296553,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408556.568962,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408556.8704548,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408557.263763,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408557.4935443,5,59,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      54,2,55,4,1769408558.0493789,5,56,4,4,75,8,0,0,57,10,10,58
+    ],
+    [
+      60,2,61,4,1769408578.773043,5,62,4,4,75,8,0,0,57,10,10,58
+    ]
+  ]
+}
