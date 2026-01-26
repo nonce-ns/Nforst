@@ -1,4 +1,2 @@
-*.log
-logs/
 *.tmp
 .DS_Store

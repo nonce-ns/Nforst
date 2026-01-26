@@ -1,0 +1,237 @@
+=== WindUI Log Session ===
+Started: 2026-01-26 00:53:05
+User: nsopnet (ID: 8401342884)
+========================================
+
+[15:53:03][Info] Loader: Fetching MainInterface...
+[15:53:06][Info] Loader: Fetching MainInterface...
+[15:53:08][Info] [OP][Info] App.Init: Loading modules...
+[15:53:09][Success] [OP] UI created!
+[15:53:09][Success] [OP] GodMode: STARTED
+[15:53:09][Success] [OP] AutoWarmth: STARTED
+[15:53:09][Success] [OP] AutoEat: STARTED
+[15:53:09][Success] [OP] KillAura: STARTED
+[15:53:09][Success] [OP] MiningAura: STARTED
+[15:53:09][Success] [OP] AutoScrap: STARTED
+[15:53:09][Success] [OP] All features started!
+[15:53:09][Success] [OP] AutoCraft: STARTED
+[15:53:09][Success] [OP] AutoPlant: STARTED
+[15:53:09][Success] [OP] AutoLoot: STARTED
+[15:53:09][Success] [OP] App.Init: Complete!
+[15:53:09][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:53:33][Info] [OP] getStat('Hunger'): 187.30666666666636
+[15:53:33][Info] [OP] getStat('Hunger'): 187.09333333333302
+[15:53:34][Info] [OP] getStat('Hunger'): 187.09333333333302
+[15:53:34][Info] [OP] getStat('Hunger'): 186.87999999999968
+[15:53:34][Warning] [OP] AutoEat: No food found!
+[15:53:34][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:35][Info] [OP] getStat('Hunger'): 186.87999999999968
+[15:53:35][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:35][Warning] [OP] AutoEat: No food found!
+[15:53:35][Warning] [OP] AutoEat: No food found!
+[15:53:35][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:35][Info] [OP] getStat('Hunger'): 186.66666666666634
+[15:53:36][Info] [OP] getStat('Hunger'): 186.66666666666634
+[15:53:36][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:36][Warning] [OP] AutoEat: No food found!
+[15:53:36][Warning] [OP] AutoEat: No food found!
+[15:53:36][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:36][Info] [OP] getStat('Hunger'): 186.453333333333
+[15:53:37][Info] [OP] getStat('Hunger'): 186.453333333333
+[15:53:37][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:37][Warning] [OP] AutoEat: No food found!
+[15:53:37][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:37][Info] [OP] getStat('Hunger'): 186.23999999999967
+[15:53:37][Warning] [OP] AutoEat: No food found!
+[15:53:38][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:38][Info] [OP] getStat('Hunger'): 186.23999999999967
+[15:53:38][Warning] [OP] AutoEat: No food found!
+[15:53:38][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:38][Warning] [OP] AutoEat: No food found!
+[15:53:38][Info] [OP] getStat('Hunger'): 186.02666666666633
+[15:53:39][Warning] [OP] AutoEat: Hungry! (186/200)
+[15:53:39][Warning] [OP] AutoEat: No food found!
+[15:53:39][Info] [OP] getStat('Hunger'): 186.02666666666633
+[15:53:39][Info] [OP] getStat('Hunger'): 185.813333333333
+[15:53:39][Warning] [OP] AutoEat: Hungry! (185/200)
+[15:53:39][Warning] [OP] AutoEat: No food found!
+[15:53:40][Warning] [OP] AutoEat: Hungry! (185/200)
+[15:53:40][Warning] [OP] AutoEat: No food found!
+[15:53:40][Info] [OP] getStat('Hunger'): 185.813333333333
+[15:53:40][Info] [OP] getStat('Hunger'): 185.59999999999965
+[15:53:40][Warning] [OP] AutoEat: Hungry! (185/200)
+[15:53:40][Warning] [OP] AutoEat: No food found!
+[15:53:41][Warning] [OP] AutoEat: No food found!
+[15:53:41][Warning] [OP] AutoEat: Hungry! (185/200)
+[15:53:41][Info] [OP] getStat('Hunger'): 185.59999999999965
+[15:53:41][Warning] [OP] AutoEat: Hungry! (185/200)
+[15:53:41][Warning] [OP] AutoEat: No food found!
+[15:53:41][Info] [OP] getStat('Hunger'): 185.38666666666631
+[15:53:42][Info] [OP] getStat('Hunger'): 185.38666666666631
+[15:53:42][Warning] [OP] AutoEat: Hungry! (185/200)
+[15:53:42][Warning] [OP] AutoEat: No food found!
+[15:53:42][Warning] [OP] AutoEat: Hungry! (185/200)
+[15:53:42][Info] [OP] getStat('Hunger'): 185.17333333333298
+[15:53:42][Warning] [OP] AutoEat: No food found!
+[15:53:43][Warning] [OP] AutoEat: Hungry! (185/200)
+[15:53:43][Warning] [OP] AutoEat: No food found!
+[15:53:43][Info] [OP] getStat('Hunger'): 185.17333333333298
+[15:53:43][Info] [OP] getStat('Hunger'): 184.95999999999964
+[15:53:43][Warning] [OP] AutoEat: Hungry! (184/200)
+[15:53:43][Warning] [OP] AutoEat: No food found!
+[15:53:44][Warning] [OP] AutoEat: Hungry! (184/200)
+[15:53:44][Warning] [OP] AutoEat: No food found!
+[15:53:44][Info] [OP] getStat('Hunger'): 184.95999999999964
+[15:53:44][Warning] [OP] AutoEat: No food found!
+[15:53:44][Info] [OP] getStat('Hunger'): 184.7466666666663
+[15:53:44][Warning] [OP] AutoEat: Hungry! (184/200)
+[15:53:45][Warning] [OP] AutoEat: Hungry! (184/200)
+[15:53:45][Info] [OP] getStat('Hunger'): 184.7466666666663
+[15:53:45][Warning] [OP] AutoEat: No food found!
+[15:53:45][Info] [OP] getStat('Hunger'): 184.53333333333296
+[15:53:45][Warning] [OP] AutoEat: No food found!
+[15:53:45][Warning] [OP] AutoEat: Hungry! (184/200)
+[15:53:46][Warning] [OP] AutoEat: No food found!
+[15:53:46][Info] [OP] getStat('Hunger'): 184.53333333333296
+[15:53:46][Warning] [OP] AutoEat: Hungry! (184/200)
+[15:53:46][Info] [OP] getStat('Hunger'): 184.31999999999962
+[15:53:46][Warning] [OP] AutoEat: Hungry! (184/200)
+[15:53:46][Warning] [OP] AutoEat: No food found!
+[15:53:47][Info] [OP] getStat('Hunger'): 184.31999999999962
+[15:53:47][Warning] [OP] AutoEat: No food found!
+[15:53:47][Warning] [OP] AutoEat: Hungry! (184/200)
+[15:53:53][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:53:53][Info] [OP] getStat('Temperature'): 100
+[15:53:53][Info] [OP] getStat('Warmth'): 0
+[15:53:54][Info] [OP] getStat('Warmth'): 0
+[15:53:54][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:53:54][Info] [OP] getStat('Temperature'): 100
+[15:53:54][Info] [OP] getStat('Warmth'): 0
+[15:53:54][Info] [OP] getStat('Temperature'): 100
+[15:53:54][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:53:55][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:53:55][Info] [OP] getStat('Temperature'): 100
+[15:53:55][Info] [OP] getStat('Warmth'): 0
+[15:53:55][Info] [OP] getStat('Warmth'): 0
+[15:53:55][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:53:55][Info] [OP] getStat('Temperature'): 100
+[15:53:58][Info] [OP] getStat('Temperature'): 100
+[15:53:58][Info] [OP] getStat('Warmth'): 0
+[15:53:58][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:53:58][Info] [OP] getStat('Warmth'): 0
+[15:53:58][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:53:58][Info] [OP] getStat('Temperature'): 100
+[15:53:59][Info] [OP] getStat('Warmth'): 0
+[15:53:59][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:53:59][Info] [OP] getStat('Temperature'): 100
+[15:53:59][Info] [OP] getStat('Temperature'): 100
+[15:53:59][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:53:59][Info] [OP] getStat('Warmth'): 0
+[15:54:00][Info] [OP] getStat('Temperature'): 100
+[15:54:00][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:54:00][Info] [OP] getStat('Warmth'): 0
+[15:54:00][Info] [OP] getStat('Warmth'): 0
+[15:54:00][Warning] [OP] AutoWarmth: Need warmth! (W=0, T=100)
+[15:54:00][Info] [OP] getStat('Temperature'): 100
+[15:54:25][Success] [OP] equipTool: Found Old Axe
+[15:54:25][Success] [OP] RemoteEvents found: 196 remotes
+[15:54:26][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:26][Success] [OP] equipTool: Found Old Axe
+[15:54:27][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:27][Success] [OP] equipTool: Found Old Axe
+[15:54:28][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:28][Success] [OP] equipTool: Found Old Axe
+[15:54:29][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:29][Success] [OP] equipTool: Found Old Axe
+[15:54:30][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:30][Success] [OP] equipTool: Found Old Axe
+[15:54:31][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:31][Success] [OP] equipTool: Found Old Axe
+[15:54:32][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:32][Success] [OP] equipTool: Found Old Axe
+[15:54:33][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:33][Success] [OP] equipTool: Found Old Axe
+[15:54:34][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:34][Success] [OP] equipTool: Found Old Axe
+[15:54:35][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:35][Success] [OP] equipTool: Found Old Axe
+[15:54:36][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:36][Success] [OP] equipTool: Found Old Axe
+[15:54:37][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:37][Success] [OP] equipTool: Found Old Axe
+[15:54:38][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:38][Success] [OP] equipTool: Found Old Axe
+[15:54:39][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:39][Success] [OP] equipTool: Found Old Axe
+[15:54:39][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:40][Success] [OP] equipTool: Found Old Axe
+[15:54:40][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:41][Success] [OP] equipTool: Found Old Axe
+[15:54:41][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:42][Success] [OP] equipTool: Found Old Axe
+[15:54:42][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:43][Success] [OP] equipTool: Found Old Axe
+[15:54:43][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:43][Success] [OP] equipTool: Found Old Axe
+[15:54:44][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:45][Success] [OP] equipTool: Found Old Axe
+[15:54:45][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:46][Success] [OP] equipTool: Found Old Axe
+[15:54:46][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:47][Success] [OP] equipTool: Found Old Axe
+[15:54:47][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:47][Success] [OP] equipTool: Found Old Axe
+[15:54:48][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:48][Success] [OP] equipTool: Found Old Axe
+[15:54:49][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:49][Success] [OP] equipTool: Found Old Axe
+[15:54:50][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:50][Success] [OP] equipTool: Found Old Axe
+[15:54:51][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:51][Success] [OP] equipTool: Found Old Axe
+[15:54:53][Success] [OP] MiningAura: Hit 10 nodes
+[15:54:57][Info] [OP] Starting full scan...
+[15:54:57][Success] [OP] Scanned 216 items
+[15:54:57][Success] [OP] Scanned 101 characters
+[15:54:57][Success] [OP] Scanned 777 nodes
+[15:54:57][Success] [OP] Scanned 2 inventory items
+[15:54:57][Success] [OP] Full scan complete!
+[15:54:57][Success] [OP] Scanned 153 landmarks
+[15:54:59][Success] [OP] Scanned 216 items
+[15:55:00][Success] [OP] Scanned 101 characters
+[15:55:01][Success] [OP] Scanned 777 nodes
+[15:55:49][Info] [OP] AutoPlant: Planting 50 trees (Circle)
+[15:55:56][Success] [OP] AutoPlant: Planted 50 trees!
+[15:57:02][Success] [OP] All features started!
+[15:57:10][Warning] [OP] All features stopped!
+[15:57:10][Info] function is already waiting :)
+[15:57:10][Warning] [OP] AutoLoot: STOPPED
+[15:57:10][Warning] [OP] KillAura: STOPPED
+[15:57:10][Warning] [OP] MiningAura: STOPPED
+[15:57:10][Warning] [OP] AutoEat: STOPPED
+[15:57:10][Warning] [OP] AutoWarmth: STOPPED
+[15:57:10][Warning] [OP] AutoPlant: STOPPED
+[15:57:11][Warning] [OP] AutoCraft: STOPPED
+[15:57:11][Warning] [OP] AutoScrap: STOPPED
+[15:57:11][Warning] [OP] GodMode: STOPPED
+[15:57:14][Success] [OP] KillAura: STARTED
+[15:57:14][Success] [OP] AutoWarmth: STARTED
+[15:57:14][Success] [OP] AutoEat: STARTED
+[15:57:14][Success] [OP] AutoPlant: STARTED
+[15:57:14][Success] [OP] MiningAura: STARTED
+[15:57:14][Success] [OP] GodMode: STARTED
+[15:57:14][Success] [OP] AutoLoot: STARTED
+[15:57:14][Success] [OP] AutoCraft: STARTED
+[15:57:14][Success] [OP] AutoScrap: STARTED
+[15:57:14][Success] [OP] All features started!
+[15:57:16][Warning] [OP] All features stopped!
+[15:57:16][Warning] [OP] KillAura: STOPPED
+[15:57:16][Warning] [OP] MiningAura: STOPPED
+[15:57:16][Warning] [OP] AutoLoot: STOPPED
+[15:57:16][Warning] [OP] AutoEat: STOPPED
+[15:57:16][Warning] [OP] AutoWarmth: STOPPED
+[15:57:16][Warning] [OP] AutoPlant: STOPPED
+[15:57:17][Warning] [OP] AutoScrap: STOPPED
+[15:57:17][Warning] [OP] GodMode: STOPPED
+[15:57:18][Warning] [OP] AutoCraft: STOPPED
+[15:57:18][Warning] [OP] All features stopped!
