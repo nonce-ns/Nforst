@@ -1,60 +1,54 @@
 --[[
     Features/GodMode.lua
-    God Mode - Infinite health via DamagePlayer remote
+    God Mode feature module
 ]]
 
 local GodMode = {}
 
-local Config = nil
-local Utils = nil
+-- Dependencies
 local Remote = nil
 
 -- State
-local running = false
-local fireCount = 0
+local State = {
+    Enabled = false,
+    Thread = nil,
+}
 
-function GodMode.Init(config, utils, remote)
-	Config = config
-	Utils = utils
-	Remote = remote
+-- ============================================
+-- PUBLIC API
+-- ============================================
+function GodMode.Init(deps)
+    Remote = deps.Remote
 end
 
 function GodMode.Start()
-	if running then
-		return
-	end
-	running = true
-	fireCount = 0
-
-	Utils.log("GodMode: STARTED", "Success")
-
-	task.spawn(function()
-		while running do
-			if Config.GodMode.Enabled then
-				Remote.DamagePlayer(-math.huge)
-				fireCount = fireCount + 1
-
-				-- Log periodically
-				if fireCount % Config.GodMode.LogFrequency == 0 then
-					Utils.log("GodMode: Active (" .. fireCount .. " fires)", "Info")
-				end
-			end
-			task.wait(Config.GodMode.FireRate)
-		end
-		Utils.log("GodMode: STOPPED", "Warning")
-	end)
+    if State.Thread then
+        print("[OP] GodMode: Already running!")
+        return
+    end
+    
+    State.Enabled = true
+    
+    State.Thread = task.spawn(function()
+        while State.Enabled do
+            pcall(function()
+                Remote.DamagePlayer(-math.huge)
+            end)
+            task.wait(1)
+        end
+        State.Thread = nil
+    end)
+    
+    print("[OP] GodMode: STARTED")
 end
 
 function GodMode.Stop()
-	running = false
+    State.Enabled = false
+    print("[OP] GodMode: STOPPED")
 end
 
-function GodMode.IsRunning()
-	return running
-end
-
-function GodMode.GetFireCount()
-	return fireCount
+function GodMode.IsEnabled()
+    return State.Enabled
 end
 
 return GodMode
