@@ -1,10 +1,10 @@
 # 99 Nights In The Forest - OP Script
 
 > **🎮 Game:** 99 Nights In The Forest (Roblox)  
-> **📅 Last Updated:** 2026-01-27  
-> **🔧 Version:** 1.2.0
+> **📅 Last Updated:** 2026-01-28  
+> **🔧 Version:** 1.2.1
 
-Script OP untuk game survival "99 Nights In The Forest" dengan arsitektur modular, UI WindUI yang clean, dan fitur lengkap.
+Script OP untuk game survival "99 Nights In The Forest" dengan arsitektur modular, Dashboard UI baru, dan perbaikan stabilitas.
 
 ---
 
@@ -16,34 +16,32 @@ Script OP untuk game survival "99 Nights In The Forest" dengan arsitektur modula
 - [Usage](#-usage)
 - [Configuration](#-configuration)
 - [Development](#-development)
-- [Remote Mapping](#-remote-mapping)
 - [Credits](#-credits)
 
 ---
 
 ## ✨ Features
 
-Saat ini script memiliki **4 fitur utama** yang berfungsi penuh, sementara fitur lainnya masih dalam pengembangan (roadmap).
+Saat ini script memiliki **Dashboard UI** baru dan fitur survival inti yang stabil.
 
 ### ✅ Implemented Features
 
 | Feature | Category | Description |
 |---------|----------|-------------|
+| **Dashboard** | 🏠 UI | Home tab dengan User Info, System Stats, dan Changelog |
 | **God Mode** | 🛡️ Survival | Infinite health via `DamagePlayer(-math.huge)` spam |
 | **Auto Eat** | 🛡️ Survival | Smart system yang otomatis makan saat lapar (Scan & Eat) |
 | **Config System** | 🔧 System | Save & Load settings, Auto-load last config |
-| **Modular Core** | � System | Arsitektur modular yang stabil dan mudah di-maintain |
+| **Modular Core** | 📦 System | Arsitektur modular yang stabil dan mudah di-maintain |
 
-### � Roadmap (Coming Soon)
+### 🚧 Roadmap (Coming Soon)
 
-Fitur berikut sudah ada placeholder di code tapi **belum aktif**:
+Fitur berikut dalam antrian pengembangan:
 
-- [ ] **Auto Warmth**: Manage temperature & campfire
-- [ ] **Kill Aura**: Auto attack enemies
-- [ ] **Mining Aura**: Auto harvest resources
-- [ ] **Auto Loot**: Auto pickup drops
-- [ ] **Auto Plant**: Mass plant exploit
-- [ ] **Auto Craft**: Crafting automation
+- [ ] **Combat Tab**: Kill Aura & Auto Weapon
+- [ ] **Automation Tab**: Auto Harvest & Crafting
+- [ ] **ESP/Visuals**: Player & Item ESP
+- [ ] **Teleports**: Waypoints & POI
 
 ---
 
@@ -69,8 +67,47 @@ loadstring(game:HttpGet("http://192.168.1.5:8000/main.lua"))()
 ### Dependencies
 
 - **WindUI Library** - UI Framework
-  - Location: `/Libs/WindUI/`
-  - Source: [Footagesus/WindUI](https://github.com/Footagesus/WindUI)
+  - Location: `/WindUI/`
+  - Version: Latest (Cloned)
+
+---
+
+## 📁 Project Structure
+
+```
+Nforst/
+├── README.md                 # This file
+├── main.lua                  # Entry point (Loaders)
+├── Src/
+│   ├── Core/                 # Core utilities
+│   │   ├── Config.lua        # Settings & Catalog
+│   │   ├── Utils.lua         # Helper functions
+│   │   ├── RemoteHandler.lua # Remote wrappers
+│   │   └── Scanner.lua       # Entity scanner
+│   ├── Features/             # Feature Logic
+│   │   ├── AutoEat.lua       # Auto Eat implementation
+│   │   ├── GodMode.lua       # God Mode implementation
+│   ├── UI/                   # User Interface
+│   │   ├── MainInterface.lua # Main Window Layout
+│   │   └── Tabs/             # Tab Components
+│   │       ├── HomeTab.lua   # Dashboard & Info (New)
+│   │       ├── SurvivalTab.lua # God Mode & Auto Eat
+│   │       └── SettingsTab.lua # Config & Debug
+└── logs/                     # Debug logs
+```
+
+### Option 2: Remote Load
+
+```lua
+-- Load dari debug server
+loadstring(game:HttpGet("http://192.168.1.5:8000/main.lua"))()
+```
+
+### Dependencies
+
+- **WindUI Library** - UI Framework
+  - Location: `/WindUI/`
+  - Version: Latest (Cloned)
 
 ---
 

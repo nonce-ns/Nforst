@@ -87,7 +87,7 @@ GlobalCleanup()
 -- LOAD LIBRARIES
 -- ==============================================================================
 print("[Loader] Loading WindUI...")
-local WindUI = loadModule("Libs/WindUI/dist/main.lua")
+local WindUI = loadModule("WindUI/dist/main.lua")
 
 print("[Loader] Loading Logger...")
 getgenv().Logger = loadModule("Libs/Logger.lua")

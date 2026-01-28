@@ -6,11 +6,9 @@
 local SettingsTab = {}
 
 function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
-    local SettingsSection = Window:Section({ Title = "System" })
-    
-    local Tab = SettingsSection:Tab({
+    local Tab = Window:Tab({
         Title = "Settings",
-        Icon = "settings",
+        Icon = "solar:settings-bold",
         IconColor = CONFIG.COLORS.Grey,
         Border = true,
     })
@@ -19,7 +17,7 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
     -- THEME SECTION
     -- ========================================
     local ThemeSection = Tab:Section({
-        Title = "🎨 Theme",
+        Title = "Theme",
         Box = true,
         BoxBorder = true,
         Opened = true,
@@ -37,13 +35,13 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
         end,
     })
     
-    Tab:Space()
+    Tab:Space({ Size = 10 })
     
     -- ========================================
     -- CONFIG SECTION
     -- ========================================
     local ConfigSection = Tab:Section({
-        Title = "💾 Config",
+        Title = "Configuration",
         Box = true,
         BoxBorder = true,
         Opened = true,
@@ -62,8 +60,9 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
     })
     
     ConfigSection:Button({
-        Title = "💾 Save Config",
+        Title = "Save Config",
         Desc = "Save current settings",
+        Icon = "solar:diskette-bold",
         Callback = function()
             if ConfigManager then
                 local success = ConfigManager:SaveConfig(ConfigName)
@@ -80,8 +79,9 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
     })
     
     ConfigSection:Button({
-        Title = "📂 Load Config",
+        Title = "Load Config",
         Desc = "Load saved settings",
+        Icon = "solar:file-download-bold",
         Callback = function()
             if ConfigManager then
                 local success = ConfigManager:LoadConfig(ConfigName)
@@ -97,13 +97,13 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
         end,
     })
     
-    Tab:Space()
+    Tab:Space({ Size = 10 })
     
     -- ========================================
     -- DEBUG SECTION
     -- ========================================
     local DebugSection = Tab:Section({
-        Title = "🐛 Debug",
+        Title = "Debug",
         Box = true,
         BoxBorder = true,
         Opened = false,
@@ -120,7 +120,7 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
     DebugSection:Button({
         Title = "Print Stats",
         Justify = "Center",
-        Icon = "",
+        Icon = "solar:graph-new-bold",
         Callback = function()
             if Utils then
                 local hunger = Utils.getStat("Hunger")
@@ -134,7 +134,7 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
     DebugSection:Button({
         Title = "List Remotes",
         Justify = "Center",
-        Icon = "",
+        Icon = "solar:list-bold",
         Callback = function()
             if Remote then
                 local list = Remote.getAllRemotes()

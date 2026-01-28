@@ -1,8 +1,0 @@
-=== WindUI Log Session ===
-Started: 2026-01-25 17:01:05
-User: nsopnet (ID: 8401342884)
-========================================
-
-[08:01:03][Info] Loader: Fetching app.lua...
-[08:01:05][Info] App: Initializing...
-[08:01:06][Success] App: UI Loaded successfully

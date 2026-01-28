@@ -112,7 +112,7 @@ function LoadApp()
 
 	local success, result = pcall(function()
 		-- IMPORTANT: Load compiled/bundled WindUI FRESH every time.
-		local windUiInstance = load_module("Libs/WindUI/dist/main.lua")
+		local windUiInstance = load_module("WindUI/dist/main.lua")
 
 		local appModule = load_module("Src/UI/MainInterface.lua")
 		CurrentApp = appModule.Init({

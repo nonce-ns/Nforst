@@ -771,12 +771,12 @@ return function(Config)
                 New("Frame", { -- Topbar Right Side -- Window.UIElements.Main.Main.Topbar.Right
                     AutomaticSize = "XY",
                     BackgroundTransparency = 1,
-                    Position = UDim2.new(Window.Topbar.ButtonsType == "Default" and 1 or 0,0,0.5,0),
-                    AnchorPoint = Vector2.new(Window.Topbar.ButtonsType == "Default" and 1 or 0,0.5),
+                    Position = UDim2.new(1,0,0.5,0),
+                    AnchorPoint = Vector2.new(1,0.5),
                     Name = "Right",
                 }, {
                     New("UIListLayout", {
-                        Padding = UDim.new(0,Window.Topbar.ButtonsType == "Default" and 9 or 0),
+                        Padding = UDim.new(0, 8), -- Added spacing (8px)
                         FillDirection = "Horizontal",
                         SortOrder = "LayoutOrder",
                     }),
@@ -821,11 +821,11 @@ return function(Config)
         )
     end)
     
-    if Window.Topbar.ButtonsType ~= "Default" then
-        Creator.AddSignal(Window.UIElements.Main.Main.Topbar.Right:GetPropertyChangedSignal("AbsoluteSize"), function()
-            Window.UIElements.Main.Main.Topbar.Left.Position = UDim2.new(0,(Window.UIElements.Main.Main.Topbar.Right.AbsoluteSize.X/Config.WindUI.UIScale) + Window.UIPadding - 4,0,0)
-        end)
-    end
+    -- if Window.Topbar.ButtonsType ~= "Default" then
+    --     Creator.AddSignal(Window.UIElements.Main.Main.Topbar.Right:GetPropertyChangedSignal("AbsoluteSize"), function()
+    --         Window.UIElements.Main.Main.Topbar.Left.Position = UDim2.new(0,(Window.UIElements.Main.Main.Topbar.Right.AbsoluteSize.X/Config.WindUI.UIScale) + Window.UIPadding - 4,0,0)
+    --     end)
+    -- end
     
     function Window:CreateTopbarButton(Name, Icon, Callback, LayoutOrder, IconThemed, Color, IconSize)
         local IconFrame = Creator.Image(

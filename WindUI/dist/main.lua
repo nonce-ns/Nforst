@@ -11796,12 +11796,12 @@ Padding=UDim.new(0,au.UIPadding/2)
 am("Frame",{
 AutomaticSize="XY",
 BackgroundTransparency=1,
-Position=UDim2.new(au.Topbar.ButtonsType=="Default"and 1 or 0,0,0.5,0),
-AnchorPoint=Vector2.new(au.Topbar.ButtonsType=="Default"and 1 or 0,0.5),
+Position=UDim2.new(1,0,0.5,0),
+AnchorPoint=Vector2.new(1,0.5),
 Name="Right",
 },{
 am("UIListLayout",{
-Padding=UDim.new(0,au.Topbar.ButtonsType=="Default"and 9 or 0),
+Padding=UDim.new(0,8),
 FillDirection="Horizontal",
 SortOrder="LayoutOrder",
 }),
@@ -11826,9 +11826,9 @@ local v=au.UIElements.Main.Main.Topbar.Right.UIListLayout.AbsoluteContentSize.X/
 
 
 u=au.UIElements.Main.Main.Topbar.Left.AbsoluteSize.X/at.WindUI.UIScale
-if au.Topbar.ButtonsType~="Default"then
-u=u+v+au.UIPadding-4
-end
+--if au.Topbar.ButtonsType~="Default"then
+--u=u+v+au.UIPadding-4
+--end
 
 
 
@@ -11846,11 +11846,11 @@ au.UIElements.Main.Main.Topbar.Center.Size=UDim2.new(
 )
 end)
 
-if au.Topbar.ButtonsType~="Default"then
-al.AddSignal(au.UIElements.Main.Main.Topbar.Right:GetPropertyChangedSignal"AbsoluteSize",function()
-au.UIElements.Main.Main.Topbar.Left.Position=UDim2.new(0,(au.UIElements.Main.Main.Topbar.Right.AbsoluteSize.X/at.WindUI.UIScale)+au.UIPadding-4,0,0)
-end)
-end
+--if au.Topbar.ButtonsType~="Default"then
+--al.AddSignal(au.UIElements.Main.Main.Topbar.Right:GetPropertyChangedSignal"AbsoluteSize",function()
+--au.UIElements.Main.Main.Topbar.Left.Position=UDim2.new(0,(au.UIElements.Main.Main.Topbar.Right.AbsoluteSize.X/at.WindUI.UIScale)+au.UIPadding-4,0,0)
+--end)
+--end
 
 function au.CreateTopbarButton(u,v,x,z,A,B,C,F)
 local G=al.Image(

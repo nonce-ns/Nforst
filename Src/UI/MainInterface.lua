@@ -108,6 +108,7 @@ local AutoEat = loadModule("Features/AutoEat.lua")
 local GodMode = loadModule("Features/GodMode.lua")
 
 -- UI Tabs
+local HomeTab = loadModule("UI/Tabs/HomeTab.lua")
 local SurvivalTab = loadModule("UI/Tabs/SurvivalTab.lua")
 local SettingsTab = loadModule("UI/Tabs/SettingsTab.lua")
 
@@ -128,93 +129,6 @@ local Features = {
     AutoEat = AutoEat,
     GodMode = GodMode,
 }
-
--- ============================================
--- CREATE HOME TAB
--- ============================================
-local function createHomeTab(Window, WindUI, CONFIG)
-    -- Tab directly on Window (not wrapped in Section)
-    local HomeTab = Window:Tab({
-        Title = "🏠 Home",
-        Icon = "home",
-    })
-    
-    -- ========================================
-    -- WELCOME SECTION
-    -- ========================================
-    HomeTab:Section({
-        Title = "Welcome, " .. (LocalPlayer.DisplayName or "Player") .. "!",
-        TextSize = 24,
-        FontWeight = Enum.FontWeight.Bold,
-    })
-    
-    HomeTab:Space()
-    
-    -- ========================================
-    -- PLAYER INFO BOX
-    -- ========================================
-    local InfoBox = HomeTab:Section({
-        Title = "👤 Player Information",
-        Box = true,
-        BoxBorder = true,
-        Opened = true,
-    })
-    
-    -- Player Info (Text Only)
-    InfoBox:Section({
-        Title = "� " .. (LocalPlayer.DisplayName or "Unknown"),
-        Desc = "@" .. (LocalPlayer.Name or "Unknown") .. " | 🆔 " .. LocalPlayer.UserId,
-        TextSize = 18,
-        FontWeight = Enum.FontWeight.SemiBold,
-        DescTextSize = 13,
-        DescTextTransparency = 0.5,
-    })
-    
-    
-    HomeTab:Space()
-    
-
-    
-    -- ========================================
-    -- SCRIPT INFO BOX
-    -- ========================================
-    local ScriptBox = HomeTab:Section({
-        Title = "📜 Script Info",
-        Box = true,
-        BoxBorder = true,
-        Opened = true,
-    })
-    
-    ScriptBox:Section({
-        Title = "99 Nights In The Forest - OP Script",
-        TextSize = 16,
-        FontWeight = Enum.FontWeight.Medium,
-    })
-    
-    ScriptBox:Section({
-        Title = "Version 1.0.0 | WindUI v" .. (WindUI.Version or "?"),
-        TextSize = 12,
-        TextTransparency = 0.4,
-    })
-    
-    HomeTab:Space()
-    
-    -- ========================================
-    -- QUICK ACTIONS
-    -- ========================================
-    HomeTab:Button({
-        Title = "❌ Destroy UI",
-        Color = Color3.fromHex("#ff4830"),
-        Callback = function()
-            if getgenv then
-                getgenv().OP_WINDOW = nil
-            end
-            Window:Destroy()
-        end,
-    })
-    
-    return HomeTab
-end
 
 -- ============================================
 -- BUILD UI
@@ -239,28 +153,43 @@ local function createUI(WindUI)
     local Window = WindUI:CreateWindow({
         Title = CONFIG.WINDOW.Title,
         Folder = CONFIG.WINDOW.Folder,
-        Icon = CONFIG.WINDOW.Icon,
+        Icon = "solar:moon-stars-bold",
         Theme = CONFIG.WINDOW.Theme,
         Size = UDim2.fromOffset(580, 460),
         HasOutline = true,
         Transparent = true,
-        SideBarWidth = 180,
+        SideBarWidth = 200,
+        NewElements = true,
+        Topbar = {
+            Height = 44,
+            ButtonsType = "Mac",
+        }
     })
     
+    -- Debug Window type
+    print("[OP] Window created. Type: " .. type(Window))
+    
+    if type(Window) ~= "table" then
+        warn("[OP] CRITICAL: Window is not a table! It is: " .. tostring(Window))
+        return nil
+    end
+
     -- Store reference for anti-duplicate
     if getgenv then
         getgenv().OP_WINDOW = Window
     end
     
-    -- Create Home Tab first
-    createHomeTab(Window, WindUI, CONFIG)
+    -- Create Home Tab
+    if HomeTab then
+        HomeTab.Create(Window, CONFIG, WindUI)
+    end
     
-    -- Create Features Section
-    local MainSection = Window:Section({ Title = "Features" })
+    -- Create Features Section (Optional Divider)
+    -- local MainSection = Window:Section({ Title = "Features" }) -- Removed causing error
     
     -- Create tabs
     if SurvivalTab then
-        SurvivalTab.Create(MainSection, Features, CONFIG)
+        SurvivalTab.Create(Window, Features, CONFIG)
     end
     
     if SettingsTab then
@@ -270,6 +199,7 @@ local function createUI(WindUI)
     print("[OP] UI Created! Ready to use.")
     return Window
 end
+
 
 -- ============================================
 -- APP INIT

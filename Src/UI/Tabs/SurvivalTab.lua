@@ -5,10 +5,10 @@
 
 local SurvivalTab = {}
 
-function SurvivalTab.Create(MainSection, Features, CONFIG)
-    local Tab = MainSection:Tab({
+function SurvivalTab.Create(Window, Features, CONFIG)
+    local Tab = Window:Tab({
         Title = "Survival",
-        Icon = "heart",
+        Icon = "solar:heart-bold",
         IconColor = CONFIG.COLORS.Red,
         Border = true,
     })
@@ -17,7 +17,7 @@ function SurvivalTab.Create(MainSection, Features, CONFIG)
     -- GOD MODE SECTION
     -- ========================================
     local GodSection = Tab:Section({
-        Title = "💪 God Mode",
+        Title = "God Mode",
         Box = true,
         BoxBorder = true,
         Opened = true,
@@ -37,13 +37,13 @@ function SurvivalTab.Create(MainSection, Features, CONFIG)
         end,
     })
     
-    Tab:Space()
+    Tab:Space({ Size = 10 })
     
     -- ========================================
     -- AUTO EAT SECTION
     -- ========================================
     local EatSection = Tab:Section({
-        Title = "🍖 Auto Eat",
+        Title = "Auto Eat",
         Box = true,
         BoxBorder = true,
         Opened = true,
@@ -107,8 +107,9 @@ function SurvivalTab.Create(MainSection, Features, CONFIG)
     })
     
     EatSection:Button({
-        Title = "🔍 Scan Food",
+        Title = "Scan Food",
         Desc = "Show all food available in the map",
+        Icon = "solar:magnifer-bold",
         Callback = function()
             Features.AutoEat.Scan()
         end,

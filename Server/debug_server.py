@@ -16,7 +16,7 @@ from urllib.parse import parse_qs, urlparse
 import sys
 
 # Force UTF-8 output for Windows
-sys.stdout.reconfigure(encoding='utf-8')
+sys.stdout.reconfigure(encoding="utf-8")
 
 # Configuration
 PORT = 8000
@@ -26,7 +26,7 @@ SERVE_FILES = True  # Also serve lua files
 # Files that need IP update
 LUA_FILES_TO_UPDATE = [
     "Src/DevLoader.lua",
-    "Libs/WindUI/dist/main.lua",
+    "WindUI/dist/main.lua",
     "Src/UI/MainInterface.lua",
     "Libs/Logger.lua",
 ]
@@ -69,18 +69,18 @@ def update_ip_in_files(new_ip):
     # But this function might be called before start_server or independently.
     # To be safe, we should use the initial execution path or absolute path.
     # We will assume this is run from the directory where start_server sets us (Project Root)
-    
+
     # However, if run from menu (option 2), start_server hasn't run yet.
     # Let's verify where we are.
-    
-    script_dir = os.path.dirname(os.path.abspath(__file__)) # Server/
-    project_root = os.path.dirname(script_dir) # Project Root
-    
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # Server/
+    project_root = os.path.dirname(script_dir)  # Project Root
+
     new_base_url = f"http://{new_ip}:{PORT}/"
 
     # Pattern to match any local IP base URL in lua files
     lua_pattern = r"http://[\d\.]+:\d+/"
-    
+
     # Pattern to match LOCAL_BASE in github_manager.py
     py_pattern = r'LOCAL_BASE = "http://[\d\.]+:\d+/"'
     py_replacement = f'LOCAL_BASE = "{new_base_url}"'
@@ -267,7 +267,9 @@ def save_to_file(data):
 
 class LogHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
-        self.send_header("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0")
+        self.send_header(
+            "Cache-Control", "no-store, no-cache, must-revalidate, max-age=0"
+        )
         self.send_header("Pragma", "no-cache")
         self.send_header("Expires", "0")
         self.send_header("Access-Control-Allow-Origin", "*")
@@ -387,7 +389,7 @@ def main():
             break
         elif choice == "2":
             print(f"\n{Colors.CYAN}[*] Updating IP to: {local_ip}:{PORT}{Colors.RESET}")
-            
+
             # Temporary chdir to find files if needed, but update_ip_in_files handles paths absolute/relative to project
             updated = update_ip_in_files(local_ip)
             if updated:

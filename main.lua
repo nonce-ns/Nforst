@@ -26,7 +26,8 @@ local CONFIG = {
     BASE_URL = "http://192.168.1.5:8000/",
     
     -- WindUI source (change to local path if needed)
-    WINDUI_URL = "https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua",
+    -- WINDUI_URL = "https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua",
+    WINDUI_URL = "http://192.168.1.5:8000/WindUI/dist/main.lua",
 }
 
 -- Allow override via getgenv
@@ -99,11 +100,22 @@ local WindUI
 
 -- Try local WindUI first
 if LOCAL_BASE and readfile and isfile then
-    local localWindUI = LOCAL_BASE .. "Libs/WindUI/dist/main.lua"
-    if isfile(localWindUI) then
-        log("Using local WindUI", "Debug")
+    -- Check for cloned repo at root (WindUI/dist/main.lua)
+    local rootWindUI = LOCAL_BASE .. "WindUI/dist/main.lua"
+    -- Check for Libs path (Libs/WindUI/dist/main.lua)
+    local libsWindUI = LOCAL_BASE .. "Libs/WindUI/dist/main.lua"
+    
+    local targetPath
+    if isfile(rootWindUI) then
+        targetPath = rootWindUI
+    elseif isfile(libsWindUI) then
+        targetPath = libsWindUI
+    end
+
+    if targetPath then
+        log("Using local WindUI: " .. targetPath, "Debug")
         local ok, result = pcall(function()
-            return loadstring(readfile(localWindUI))()
+            return loadstring(readfile(targetPath))()
         end)
         if ok then
             WindUI = result
