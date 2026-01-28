@@ -90,6 +90,32 @@ function RemoteHandler.Fire(remoteName, ...)
 	return true
 end
 
+-- INVOKE for RemoteFunctions (returns result)
+function RemoteHandler.Invoke(remoteName, ...)
+	local args = { ... }
+	local remote = RemoteHandler.Get(remoteName)
+	if not remote then
+		log("Remote not found: " .. remoteName, "Warning")
+		return nil
+	end
+
+	if not remote:IsA("RemoteFunction") then
+		log("Invoke called on non-RemoteFunction: " .. remoteName, "Warning")
+		return nil
+	end
+
+	local ok, result = pcall(function()
+		return remote:InvokeServer(unpack(args))
+	end)
+
+	if not ok then
+		log("Invoke failed for " .. remoteName .. ": " .. tostring(result), "Error")
+		return nil
+	end
+
+	return result
+end
+
 -- ============================================
 -- COMMON REMOTES (shortcuts)
 -- ============================================
@@ -98,7 +124,42 @@ function RemoteHandler.DamagePlayer(amount)
 end
 
 function RemoteHandler.ToolDamageObject(target, tool, hitId, cframe)
-	return RemoteHandler.Fire("ToolDamageObject", target, tool, hitId, cframe)
+	-- This is a RemoteFunction, not RemoteEvent!
+	return RemoteHandler.Invoke("ToolDamageObject", target, tool, hitId, cframe)
+end
+
+function RemoteHandler.ProjectileDamageEnemy(target, projectileId, hitId, hitPart)
+	-- This is a RemoteFunction, not RemoteEvent!
+	return RemoteHandler.Invoke("ProjectileDamageEnemy", target, projectileId, hitId, hitPart)
+end
+
+-- EquipItemHandle - required before shooting
+function RemoteHandler.EquipItemHandle(weapon)
+	return RemoteHandler.Fire("EquipItemHandle", "FireAllClients", weapon)
+end
+
+-- RegisterProjectile must be called BEFORE ProjectileDamageEnemy
+-- Returns: { Success = true/false }
+function RemoteHandler.RegisterProjectile(weapon, projectileId)
+	return RemoteHandler.Invoke("RegisterProjectile", weapon, projectileId)
+end
+
+-- Auto-reload firearm
+function RemoteHandler.RequestReloadFirearm(weapon)
+	return RemoteHandler.Invoke("RequestReloadFirearm", weapon)
+end
+
+-- ReplicateBullet - MANDATORY for ranged weapons
+-- Must be called after RegisterProjectile, before damage call
+-- bulletData format: { ProjectileGravity, HeadPos, Origin, Velocity, ProjectileName }
+function RemoteHandler.ReplicateBullet(projectileId, bulletData)
+	return RemoteHandler.Fire("ReplicateBullet", "FireAllClients", projectileId, bulletData)
+end
+
+-- ExplosiveProjectileDamageEnemy - for AOE weapons (Laser Canon, Raygun)
+-- targets format: { {Model = targetModel, Distance = float}, ... }
+function RemoteHandler.ExplosiveProjectileDamageEnemy(targets, projectileId, hitId, explosionPos)
+	return RemoteHandler.Invoke("ExplosiveProjectileDamageEnemy", targets, projectileId, hitId, explosionPos)
 end
 
 function RemoteHandler.RequestConsumeItem(item, bag)

@@ -106,10 +106,12 @@ local Remote = loadModule("Core/RemoteHandler.lua")
 -- Features
 local AutoEat = loadModule("Features/AutoEat.lua")
 local GodMode = loadModule("Features/GodMode.lua")
+local KillAura = loadModule("Features/KillAura.lua")
 
 -- UI Tabs
 local HomeTab = loadModule("UI/Tabs/HomeTab.lua")
 local SurvivalTab = loadModule("UI/Tabs/SurvivalTab.lua")
+local CombatTab = loadModule("UI/Tabs/CombatTab.lua")
 local SettingsTab = loadModule("UI/Tabs/SettingsTab.lua")
 
 print("[OP] Modules loaded!")
@@ -119,6 +121,7 @@ if getgenv then
     getgenv().OP_FEATURES = {
         AutoEat = AutoEat,
         GodMode = GodMode,
+        KillAura = KillAura,
     }
 end
 
@@ -128,6 +131,7 @@ end
 local Features = {
     AutoEat = AutoEat,
     GodMode = GodMode,
+    KillAura = KillAura,
 }
 
 -- ============================================
@@ -146,6 +150,14 @@ local function createUI(WindUI)
     if GodMode then
         GodMode.Init({
             Remote = Remote,
+        })
+    end
+    
+    if KillAura then
+        KillAura.Init({
+            Utils = Utils,
+            Remote = Remote,
+            WindUI = WindUI,
         })
     end
     
@@ -191,6 +203,10 @@ local function createUI(WindUI)
     -- Create tabs
     if SurvivalTab then
         SurvivalTab.Create(Window, Features, CONFIG)
+    end
+    
+    if CombatTab then
+        CombatTab.Create(Window, Features, CONFIG)
     end
     
     if SettingsTab then
