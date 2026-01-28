@@ -179,9 +179,10 @@ local function createUI(WindUI)
         getgenv().OP_WINDOW = Window
     end
     
-    -- Create Home Tab
+    -- Create Home Tab (and auto-select it)
+    local homeTabRef = nil
     if HomeTab then
-        HomeTab.Create(Window, CONFIG, WindUI)
+        homeTabRef = HomeTab.Create(Window, CONFIG, WindUI)
     end
     
     -- Create Features Section (Optional Divider)
@@ -194,6 +195,11 @@ local function createUI(WindUI)
     
     if SettingsTab then
         SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
+    end
+    
+    -- Auto-select Home tab on startup
+    if homeTabRef and homeTabRef.Select then
+        homeTabRef:Select()
     end
     
     print("[OP] UI Created! Ready to use.")

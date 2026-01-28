@@ -2,9 +2,9 @@
 
 > **🎮 Game:** 99 Nights In The Forest (Roblox)  
 > **📅 Last Updated:** 2026-01-28  
-> **🔧 Version:** 1.2.1
+> **🔧 Version:** 1.2.2
 
-Script OP untuk game survival "99 Nights In The Forest" dengan arsitektur modular, Dashboard UI baru, dan perbaikan stabilitas.
+Modular survival script dengan WindUI, clean architecture, dan config persistence.
 
 ---
 
@@ -13,62 +13,35 @@ Script OP untuk game survival "99 Nights In The Forest" dengan arsitektur modula
 - [Features](#-features)
 - [Installation](#-installation)
 - [Project Structure](#-project-structure)
-- [Usage](#-usage)
-- [Configuration](#-configuration)
-- [Development](#-development)
+- [Coding Standards](#-coding-standards)
+- [Development Guide](#-development-guide)
 - [Credits](#-credits)
 
 ---
 
 ## ✨ Features
 
-Saat ini script memiliki **Dashboard UI** baru dan fitur survival inti yang stabil.
-
-### ✅ Implemented Features
-
 | Feature | Category | Description |
 |---------|----------|-------------|
-| **Dashboard** | 🏠 UI | Home tab dengan User Info, System Stats, dan Changelog |
-| **God Mode** | 🛡️ Survival | Infinite health via `DamagePlayer(-math.huge)` spam |
-| **Auto Eat** | 🛡️ Survival | Smart system yang otomatis makan saat lapar (Scan & Eat) |
-| **Config System** | 🔧 System | Save & Load settings, Auto-load last config |
-| **Modular Core** | 📦 System | Arsitektur modular yang stabil dan mudah di-maintain |
-
-### 🚧 Roadmap (Coming Soon)
-
-Fitur berikut dalam antrian pengembangan:
-
-- [ ] **Combat Tab**: Kill Aura & Auto Weapon
-- [ ] **Automation Tab**: Auto Harvest & Crafting
-- [ ] **ESP/Visuals**: Player & Item ESP
-- [ ] **Teleports**: Waypoints & POI
+| **Dashboard** | 🏠 UI | Home tab dengan User Info & Changelog |
+| **God Mode** | 🛡️ Survival | Infinite health |
+| **Auto Eat** | 🛡️ Survival | Smart food consumption system |
+| **Config System** | 🔧 System | Save & Load settings dengan Flag system |
+| **Theme Selector** | 🎨 UI | 16 WindUI themes |
+| **Notification Control** | 🔔 System | Toggle untuk disable semua notifikasi |
 
 ---
 
 ## 🚀 Installation
 
-### Option 1: Local Development
-
 ```lua
--- Set base path untuk development lokal
+-- Option 1: Local Development
 getgenv().OP_BASE_PATH = "C:/path/to/Nforst/"
-
--- Load script
 loadstring(readfile("path/to/Nforst/main.lua"))()
-```
 
-### Option 2: Remote Load
-
-```lua
--- Load dari debug server
+-- Option 2: Remote Load
 loadstring(game:HttpGet("http://192.168.1.5:8000/main.lua"))()
 ```
-
-### Dependencies
-
-- **WindUI Library** - UI Framework
-  - Location: `/WindUI/`
-  - Version: Latest (Cloned)
 
 ---
 
@@ -76,127 +49,225 @@ loadstring(game:HttpGet("http://192.168.1.5:8000/main.lua"))()
 
 ```
 Nforst/
-├── README.md                 # This file
-├── main.lua                  # Entry point (Loaders)
+├── main.lua                  # Entry point
 ├── Src/
 │   ├── Core/                 # Core utilities
-│   │   ├── Config.lua        # Settings & Catalog
+│   │   ├── Config.lua        # Settings & Constants
 │   │   ├── Utils.lua         # Helper functions
-│   │   ├── RemoteHandler.lua # Remote wrappers
-│   │   └── Scanner.lua       # Entity scanner
+│   │   └── RemoteHandler.lua # Remote wrappers
 │   ├── Features/             # Feature Logic
-│   │   ├── AutoEat.lua       # Auto Eat implementation
-│   │   ├── GodMode.lua       # God Mode implementation
-│   ├── UI/                   # User Interface
-│   │   ├── MainInterface.lua # Main Window Layout
-│   │   └── Tabs/             # Tab Components
-│   │       ├── HomeTab.lua   # Dashboard & Info (New)
-│   │       ├── SurvivalTab.lua # God Mode & Auto Eat
-│   │       └── SettingsTab.lua # Config & Debug
-└── logs/                     # Debug logs
+│   │   ├── AutoEat.lua       
+│   │   └── GodMode.lua       
+│   └── UI/                   # User Interface
+│       ├── MainInterface.lua # Main Window
+│       └── Tabs/             
+│           ├── HomeTab.lua   # Dashboard (flat layout)
+│           ├── SurvivalTab.lua # Collapsible sections
+│           └── SettingsTab.lua # Flat layout
+└── WindUI/                   # UI Library (local)
 ```
 
-### Option 2: Remote Load
+---
+
+## 📐 Coding Standards
+
+### 1. Clean Unload (WAJIB)
+
+Setiap feature **HARUS** bisa di-stop dengan bersih. Unload button harus:
 
 ```lua
--- Load dari debug server
-loadstring(game:HttpGet("http://192.168.1.5:8000/main.lua"))()
+-- HomeTab.lua - Unload Callback
+Callback = function()
+    -- Stop ALL features
+    if getgenv().OP_FEATURES then
+        for name, feature in pairs(getgenv().OP_FEATURES) do
+            pcall(function()
+                if feature.Stop then feature.Stop() end
+            end)
+        end
+        getgenv().OP_FEATURES = nil
+    end
+    
+    -- Clear ALL globals
+    getgenv().OP_WINDOW = nil
+    getgenv().OP_DEBUG = nil
+    getgenv().OP_BASE_PATH = nil
+    
+    -- Destroy UI
+    Window:Destroy()
+end
 ```
 
-### Dependencies
+### 2. Config Save/Load (Flag System)
 
-- **WindUI Library** - UI Framework
-  - Location: `/WindUI/`
-  - Version: Latest (Cloned)
+Setiap UI element yang perlu di-save **HARUS** memiliki `Flag`:
 
----
+```lua
+-- ✅ BENAR - Akan tersimpan
+Tab:Toggle({
+    Flag = "GodMode.Enabled",  -- WAJIB untuk config save
+    Title = "Enable God Mode",
+    Value = false,
+    Callback = function(state) ... end,
+})
 
-## 📁 Project Structure
-
-```
-Nforst/
-├── README.md                 # This file
-├── main.lua                  # Entry point (Loaders)
-├── Src/
-│   ├── Core/                 # Core utilities
-│   │   ├── Config.lua        # Settings & Catalog
-│   │   ├── Utils.lua         # Helper functions
-│   │   ├── RemoteHandler.lua # Remote wrappers
-│   │   └── Scanner.lua       # Entity scanner
-│   ├── Features/             # Feature Logic
-│   │   ├── AutoEat.lua       # Auto Eat implementation
-│   │   ├── GodMode.lua       # God Mode implementation
-│   │   └── Placeholders.lua  # Future features
-│   ├── UI/                   # User Interface
-│   │   ├── MainInterface.lua # Main Window Layout
-│   │   └── Tabs/             # Tab Components
-│   │       ├── SurvivalTab.lua
-│   │       ├── CombatTab.lua
-│   │       ├── AutomationTab.lua
-│   │       └── SettingsTab.lua
-└── logs/                     # Debug logs
+-- ❌ SALAH - Tidak tersimpan
+Tab:Toggle({
+    Title = "Enable God Mode",  -- Tidak ada Flag!
+    Value = false,
+    Callback = function(state) ... end,
+})
 ```
 
+**Flag Naming Convention:**
+- Format: `Category.SettingName`
+- Contoh: `GodMode.Enabled`, `AutoEat.HungerThreshold`, `System.Theme`
+
+### 3. Feature Module Pattern
+
+Setiap feature di `/Src/Features/` harus mengikuti pola:
+
+```lua
+local FeatureName = {}
+
+local State = {
+    Enabled = false,
+    Thread = nil,
+}
+
+function FeatureName.Init(deps)
+    -- Initialize dependencies
+end
+
+function FeatureName.Start()
+    if State.Thread then return end  -- Prevent duplicate
+    State.Enabled = true
+    State.Thread = task.spawn(function()
+        while State.Enabled do
+            -- Feature logic
+            task.wait(1)
+        end
+        State.Thread = nil
+    end)
+end
+
+function FeatureName.Stop()
+    State.Enabled = false  -- Thread akan cleanup sendiri
+end
+
+return FeatureName
+```
+
+### 4. UI Tab Layout
+
+**HomeTab & SettingsTab → Flat Layout (tanpa chevron):**
+```lua
+Tab:Paragraph({ Title = "Section Title", ... })
+Tab:Toggle({ ... })
+Tab:Button({ ... })
+Tab:Space({ Size = 12 })
+```
+
+**SurvivalTab & Feature Tabs → Collapsible Sections:**
+```lua
+local Section = Tab:Section({
+    Title = "Section Name",
+    Icon = "solar:icon-bold",
+    Box = true,           -- Enable collapsible
+    BoxBorder = true,
+    Opened = true,        -- Default expanded
+})
+
+Section:Toggle({ ... })
+Section:Slider({ ... })
+
+Tab:Space({ Size = 10 })  -- Space between sections
+```
+
+### 5. Notification System
+
+**Konfigurasi default (di `WindUI/dist/main.lua`):**
+- Position: Left side, 46% from top
+- Width: 180px
+- Duration: 3 seconds
+- Single mode: New notif replaces old
+
+**Disable via Settings:**
+```lua
+-- Toggle di SettingsTab
+Tab:Toggle({
+    Flag = "System.DisableNotifications",
+    Title = "Disable Notifications",
+    Callback = function(state)
+        getgenv().OP_DISABLE_NOTIF = state
+    end,
+})
+```
+
+### 6. Theme System
+
+Gunakan WindUI themes dengan dropdown:
+```lua
+Tab:Dropdown({
+    Flag = "System.Theme",  -- Tersimpan di config
+    Title = "Theme",
+    Values = themes,        -- dari WindUI:GetThemes()
+    Value = WindUI:GetCurrentTheme(),
+    Callback = function(theme)
+        WindUI:SetTheme(theme)
+    end,
+})
+```
+
 ---
 
-## 🎮 Usage
+## 🔨 Development Guide
 
-### UI Controls
+### Adding New Feature
 
-1. **Tabs**: Navigasi antar kategori (Home, Survival, Combat, etc)
-2. **Features**: Toggle fitur ON/OFF
-3. **Settings**: Atur parameter seperti Radius, Threshold, dll
-4. **Quick Actions**: 
-   - `❌ Destroy UI` - Tutup dan bersihkan script
-   - `⏹️ Stop All` - Matikan semua fitur
-5. **Config**: Save/Load via tab Settings
+1. **Buat Module** di `Src/Features/NewFeature.lua`
+2. **Ikuti Pattern** (Init, Start, Stop)
+3. **Register** di `MainInterface.lua`:
+   ```lua
+   Features.NewFeature = require("Features/NewFeature")
+   Features.NewFeature.Init(deps)
+   getgenv().OP_FEATURES.NewFeature = Features.NewFeature
+   ```
+4. **Buat UI** di Tab yang sesuai dengan Flag
 
-### Keyboard Shortcuts
+### Adding New Tab
 
-| Key | Action |
-|-----|--------|
-| `RightShift` | Toggle UI visibility |
+1. Buat file `Src/UI/Tabs/NewTab.lua`
+2. Pilih layout: Flat atau Collapsible
+3. Pastikan semua UI elements punya Flag
+4. Import di `MainInterface.lua`
 
----
+### Testing
 
-## ⚙️ Configuration
+```bash
+# Start debug server
+cd Nforst/Server
+python3 debug_server.py
 
-### Config System
-
-Settings disimpan otomatis di folder workspace executor:
-`workspace/99NightsOP/config.json`
-
----
-
-## 🔨 Development
-
-### Adding New Features
-
-1. **Create Module**: Buat file baru di `Src/Features/NamaFitur.lua`
-2. **Implement Logic**: `Init`, `Start`, `Stop` functions
-3. **Connect UI**: Edit Tab yang sesuai di `Src/UI/Tabs/` dan hubungkan callback ke module
-
-### Debugging
-
-- Gunakan `Server/debug_server.py` untuk **Hot Reload**
-- Cek log di console (F9) atau file log eksternal
+# Load di executor
+loadstring(game:HttpGet("http://localhost:8000/main.lua"))()
+```
 
 ---
 
 ## 🙏 Credits
 
-- **Script Development**: OP Script Team
-- **UI Library**: [WindUI](https://github.com/Footagesus/WindUI)
+- **UI Library**: [WindUI by Footagesus](https://github.com/Footagesus/WindUI)
 
 ---
 
 ## ⚠️ Disclaimer
 
-Script ini dibuat untuk tujuan edukasi. Penggunaan script exploit dalam game online dapat melanggar Terms of Service dan berisiko ban. Gunakan dengan risiko sendiri.
+Script untuk edukasi. Penggunaan exploit melanggar ToS dan berisiko ban.
 
 ---
 
 <p align="center">
-  <b>99 Nights OP Script</b><br>
+  <b>99 Nights OP Script v1.2.2</b><br>
   Built with ❤️ using WindUI
 </p>

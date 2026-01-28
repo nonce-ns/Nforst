@@ -1,6 +1,6 @@
 --[[
     UI/Tabs/SettingsTab.lua
-    Settings tab UI components
+    Settings tab - Theme & Config management (WindUI compliant)
 ]]
 
 local SettingsTab = {}
@@ -10,47 +10,52 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
         Title = "Settings",
         Icon = "solar:settings-bold",
         IconColor = CONFIG.COLORS.Grey,
-        Border = true,
     })
+
+    -- ========================================
+    -- THEME
+    -- ========================================
     
-    -- ========================================
-    -- THEME SECTION
-    -- ========================================
-    local ThemeSection = Tab:Section({
+    -- Get all available themes sorted
+    local themes = {}
+    for name, _ in pairs(WindUI:GetThemes() or {}) do
+        table.insert(themes, name)
+    end
+    table.sort(themes)
+    
+    Tab:Dropdown({
+        Flag = "System.Theme",  -- This enables save/load with config
         Title = "Theme",
-        Box = true,
-        BoxBorder = true,
-        Opened = true,
+        Desc = "Change UI appearance",
+        Values = themes,
+        Value = WindUI:GetCurrentTheme() or "Dark",
+        Callback = function(theme)
+            WindUI:SetTheme(theme)
+        end,
     })
-    
-    ThemeSection:Dropdown({
-        Flag = "System.Theme",
-        Title = "Theme",
-        Values = Window.Themes or {"Dark", "Light", "Rose", "Aqua"},
-        Value = "Dark",
-        Callback = function(newTheme)
-            if Window.SetTheme then
-                Window:SetTheme(newTheme)
+
+    Tab:Toggle({
+        Flag = "System.DisableNotifications",
+        Title = "Disable Notifications",
+        Desc = "Disable to hide all popup info (e.g. scan results)",
+        Value = false,
+        Callback = function(state)
+            if getgenv then
+                getgenv().OP_DISABLE_NOTIF = state
             end
         end,
     })
-    
-    Tab:Space({ Size = 10 })
-    
+
+    Tab:Space({ Size = 12 })
+
     -- ========================================
-    -- CONFIG SECTION
+    -- CONFIG MANAGEMENT
     -- ========================================
-    local ConfigSection = Tab:Section({
-        Title = "Configuration",
-        Box = true,
-        BoxBorder = true,
-        Opened = true,
-    })
-    
     local ConfigManager = Window.ConfigManager
     local ConfigName = "default"
     
-    ConfigSection:Input({
+    -- Config name input
+    local configInput = Tab:Input({
         Title = "Config Name",
         Value = ConfigName,
         Placeholder = "Enter config name...",
@@ -58,94 +63,128 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
             ConfigName = text
         end,
     })
-    
-    ConfigSection:Button({
+
+    Tab:Space({ Size = 8 })
+
+    -- Existing configs dropdown
+    local allConfigs = ConfigManager and ConfigManager:AllConfigs() or {}
+    local configDropdown = Tab:Dropdown({
+        Title = "Saved Configs",
+        Desc = "Select existing config",
+        Values = #allConfigs > 0 and allConfigs or {"(none)"},
+        Callback = function(name)
+            if name ~= "(none)" then
+                ConfigName = name
+                configInput:Set(name)
+            end
+        end,
+    })
+
+    Tab:Space({ Size = 8 })
+
+    -- Save button
+    Tab:Button({
         Title = "Save Config",
-        Desc = "Save current settings",
         Icon = "solar:diskette-bold",
+        Color = CONFIG.COLORS.Blue,
         Callback = function()
-            if ConfigManager then
-                local success = ConfigManager:SaveConfig(ConfigName)
-                if success and WindUI then
-                    WindUI:Notify({
-                        Title = "Config Saved",
-                        Content = "Saved config: " .. ConfigName,
-                        Icon = "check",
-                        Duration = 3,
-                    })
-                end
+            if not ConfigManager then
+                WindUI:Notify({
+                    Title = "Error",
+                    Content = "Config system not available",
+                    Icon = "solar:close-circle-bold",
+                    Duration = 3,
+                })
+                return
+            end
+            
+            Window.CurrentConfig = ConfigManager:Config(ConfigName)
+            local result = Window.CurrentConfig:Save()
+            
+            if result then
+                WindUI:Notify({
+                    Title = "Config Saved",
+                    Content = "Saved: " .. ConfigName,
+                    Icon = "solar:check-circle-bold",
+                    Duration = 3,
+                })
+                -- Refresh dropdown
+                local updated = ConfigManager:AllConfigs()
+                configDropdown:Refresh(#updated > 0 and updated or {"(none)"})
             end
         end,
     })
-    
-    ConfigSection:Button({
+
+    -- Load button
+    Tab:Button({
         Title = "Load Config",
-        Desc = "Load saved settings",
         Icon = "solar:file-download-bold",
+        Color = CONFIG.COLORS.Green,
         Callback = function()
-            if ConfigManager then
-                local success = ConfigManager:LoadConfig(ConfigName)
-                if success and WindUI then
-                    WindUI:Notify({
-                        Title = "Config Loaded",
-                        Content = "Loaded config: " .. ConfigName,
-                        Icon = "check",
-                        Duration = 3,
-                    })
-                end
+            if not ConfigManager then
+                WindUI:Notify({
+                    Title = "Error",
+                    Content = "Config system not available",
+                    Icon = "solar:close-circle-bold",
+                    Duration = 3,
+                })
+                return
+            end
+            
+            Window.CurrentConfig = ConfigManager:CreateConfig(ConfigName)
+            local result = Window.CurrentConfig:Load()
+            
+            if result then
+                WindUI:Notify({
+                    Title = "Config Loaded",
+                    Content = "Loaded: " .. ConfigName,
+                    Icon = "solar:check-circle-bold",
+                    Duration = 3,
+                })
+            else
+                WindUI:Notify({
+                    Title = "Load Failed",
+                    Content = "Config not found: " .. ConfigName,
+                    Icon = "solar:close-circle-bold",
+                    Duration = 3,
+                })
             end
         end,
     })
-    
-    Tab:Space({ Size = 10 })
-    
-    -- ========================================
-    -- DEBUG SECTION
-    -- ========================================
-    local DebugSection = Tab:Section({
-        Title = "Debug",
-        Box = true,
-        BoxBorder = true,
-        Opened = false,
-    })
-    
-    DebugSection:Toggle({
-        Flag = "System.DebugMode",
-        Title = "Debug Mode",
-        Desc = "Show detailed logs",
-        Value = false,
-        Callback = function(v) end,
-    })
-    
-    DebugSection:Button({
-        Title = "Print Stats",
-        Justify = "Center",
-        Icon = "solar:graph-new-bold",
+
+    -- Delete button
+    Tab:Button({
+        Title = "Delete Config",
+        Icon = "solar:trash-bin-trash-bold",
+        Color = CONFIG.COLORS.Red,
         Callback = function()
-            if Utils then
-                local hunger = Utils.getStat("Hunger")
-                local health = Utils.getStat("Health")
-                local warmth = Utils.getStat("Warmth")
-                print("[OP] Stats: Hunger=" .. tostring(hunger) .. ", Health=" .. tostring(health) .. ", Warmth=" .. tostring(warmth))
+            if not ConfigManager then return end
+            
+            local success, err = ConfigManager:DeleteConfig(ConfigName)
+            
+            if success then
+                WindUI:Notify({
+                    Title = "Config Deleted",
+                    Content = "Deleted: " .. ConfigName,
+                    Icon = "solar:check-circle-bold",
+                    Duration = 3,
+                })
+                -- Refresh dropdown
+                local updated = ConfigManager:AllConfigs()
+                configDropdown:Refresh(#updated > 0 and updated or {"(none)"})
+                configInput:Set("default")
+                ConfigName = "default"
+            else
+                WindUI:Notify({
+                    Title = "Delete Failed",
+                    Content = err or "Unknown error",
+                    Icon = "solar:close-circle-bold",
+                    Duration = 3,
+                })
             end
         end,
     })
-    
-    DebugSection:Button({
-        Title = "List Remotes",
-        Justify = "Center",
-        Icon = "solar:list-bold",
-        Callback = function()
-            if Remote then
-                local list = Remote.getAllRemotes()
-                print("[OP] Found " .. #list .. " remotes:")
-                for _, r in ipairs(list) do
-                    print("  - " .. r.Name .. " (" .. r.Class .. ")")
-                end
-            end
-        end,
-    })
-    
+
     return Tab
 end
 

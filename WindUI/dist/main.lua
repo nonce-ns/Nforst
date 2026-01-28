@@ -1202,10 +1202,10 @@ local d=b.New
 local e=b.Tween
 
 local f={
-Size=UDim2.new(0,300,1,-156),
-SizeLower=UDim2.new(0,300,1,-56),
-UICorner=18,
-UIPadding=14,
+Size=UDim2.new(0,180,1,-156),
+SizeLower=UDim2.new(0,180,1,-56),
+UICorner=10,
+UIPadding=7,
 
 Holder=nil,
 NotificationIndex=0,
@@ -1223,30 +1223,38 @@ h.Frame.Size=j and f.SizeLower or f.Size
 end
 
 h.Frame=d("Frame",{
-Position=UDim2.new(1,-29,0,56),
-AnchorPoint=Vector2.new(1,0),
+Position=UDim2.new(0,29,0.46,0),
+AnchorPoint=Vector2.new(0,0.5),
 Size=f.Size,
 Parent=g,
 BackgroundTransparency=1,
-
-
-
-
+ClipsDescendants=true,
 },{
 d("UIListLayout",{
 HorizontalAlignment="Center",
 SortOrder="LayoutOrder",
-VerticalAlignment="Bottom",
-Padding=UDim.new(0,8),
+VerticalAlignment="Top",
+Padding=UDim.new(0,0),
 }),
-d("UIPadding",{
-PaddingBottom=UDim.new(0,29)
 })
-})
+
+-- Store reference for single notification mode
+h.CurrentNotification = nil
+
 return h
 end
 
 function f.New(g)
+-- Skip if notifications are disabled
+if getgenv and getgenv().OP_DISABLE_NOTIF then
+    return { Close = function() end, Closed = true }
+end
+
+-- Close any existing notification first (single notification mode)
+if f.CurrentNotification and not f.CurrentNotification.Closed then
+    pcall(function() f.CurrentNotification:Close() end)
+end
+
 local h={
 Title=g.Title or"Notification",
 Content=g.Content or nil,
@@ -1254,14 +1262,15 @@ Icon=g.Icon or nil,
 IconThemed=g.IconThemed,
 Background=g.Background,
 BackgroundImageTransparency=g.BackgroundImageTransparency,
-Duration=g.Duration or 5,
+Duration=g.Duration or 3,
 Buttons=g.Buttons or{},
 CanClose=g.CanClose~=false,
 UIElements={},
 Closed=false,
 }
 
-
+-- Store as current notification
+f.CurrentNotification = h
 
 f.NotificationIndex=f.NotificationIndex+1
 f.Notifications[f.NotificationIndex]=h
@@ -1306,7 +1315,7 @@ g.Window,
 "Notification",
 h.IconThemed
 )
-j.Size=UDim2.new(0,26,0,26)
+j.Size=UDim2.new(0,18,0,18)
 j.Position=UDim2.new(0,f.UIPadding,0,f.UIPadding)
 
 end
@@ -1318,7 +1327,7 @@ Image=b.Icon"x"[1],
 ImageRectSize=b.Icon"x"[2].ImageRectSize,
 ImageRectOffset=b.Icon"x"[2].ImageRectPosition,
 BackgroundTransparency=1,
-Size=UDim2.new(0,16,0,16),
+Size=UDim2.new(0,12,0,12),
 Position=UDim2.new(1,-f.UIPadding,0,f.UIPadding),
 AnchorPoint=Vector2.new(1,0),
 ThemeTag={
@@ -1367,7 +1376,7 @@ TextWrapped=true,
 TextXAlignment="Left",
 RichText=true,
 BackgroundTransparency=1,
-TextSize=18,
+TextSize=11,
 ThemeTag={
 TextColor3="NotificationTitle",
 TextTransparency="NotificationTitleTransparency",
@@ -1389,7 +1398,7 @@ TextXAlignment="Left",
 RichText=true,
 BackgroundTransparency=1,
 
-TextSize=15,
+TextSize=10,
 ThemeTag={
 TextColor3="NotificationContent",
 TextTransparency="NotificationContentTransparency",

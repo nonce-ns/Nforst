@@ -1,121 +1,143 @@
 --[[
     UI/Tabs/HomeTab.lua
-    Home/Dashboard tab for the interface
+    Home/Dashboard tab - Clean design without collapsible sections
 ]]
 
 local HomeTab = {}
 
+-- Services
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
--- Helper to get executor name safely
+-- ============================================
+-- HELPER FUNCTIONS
+-- ============================================
+
 local function getExecutor()
-    return (identifyexecutor and identifyexecutor()) or "Unknown Executor"
+    local success, name = pcall(function()
+        return identifyexecutor and identifyexecutor() or nil
+    end)
+    return (success and name) or "Unknown"
 end
 
+local function getAvatarUrl()
+    local success, url = pcall(function()
+        return Players:GetUserThumbnailAsync(
+            LocalPlayer.UserId,
+            Enum.ThumbnailType.HeadShot,
+            Enum.ThumbnailSize.Size150x150
+        )
+    end)
+    return (success and url) or ""
+end
+
+local function formatAccountAge(days)
+    if days >= 365 then
+        return math.floor(days / 365) .. " years"
+    elseif days >= 30 then
+        return math.floor(days / 30) .. " months"
+    else
+        return days .. " days"
+    end
+end
+
+-- ============================================
+-- CREATE HOME TAB
+-- ============================================
 function HomeTab.Create(Window, CONFIG, WindUI)
     local Tab = Window:Tab({
         Title = "Home",
         Icon = "solar:home-2-bold",
+        IconColor = CONFIG.COLORS.Blue,
     })
 
     -- ========================================
-    -- HEADER / WELCOME
+    -- PLAYER INFO (Direct on Tab = no toggle)
     -- ========================================
-    local WelcomeSection = Tab:Section({
-        Title = "Welcome back, " .. LocalPlayer.DisplayName,
-        TextSize = 22,
-        FontWeight = Enum.FontWeight.Bold,
-    })
-
-    WelcomeSection:Paragraph({
-        Title = "Ready to survive the 99 Nights?",
-        Desc = "Your dashboard for all automation tools.",
-        Image = "solar:stars-bold-duotone",
-        ImageColor = CONFIG.COLORS.Yellow,
-    })
-
-    Tab:Space({ Size = 10 })
-
-    -- ========================================
-    -- PLAYER & SESSION INFO (Grid Layout)
-    -- ========================================
-    -- Since WindUI doesn't strictly have a "Grid", we use Sections/Paragraphs.
-    
-    local InfoSection = Tab:Section({
-        Title = "Session Information",
-        Box = true,
-        BoxBorder = true,
-        Opened = true,
-    })
-
-    -- User Stats
-    InfoSection:Paragraph({
-        Title = "Identity",
-        Desc = string.format("User: @%s\nID: %d\nAccount Age: %d days", 
+    Tab:Paragraph({
+        Title = LocalPlayer.DisplayName,
+        Desc = string.format("@%s • Account Age: %s", 
             LocalPlayer.Name, 
-            LocalPlayer.UserId, 
-            LocalPlayer.AccountAge),
-        Image = "solar:user-id-bold",
-        ImageColor = CONFIG.COLORS.Blue,
+            formatAccountAge(LocalPlayer.AccountAge)),
+        Image = getAvatarUrl(),
     })
 
-    -- System Stats
-    InfoSection:Paragraph({
-        Title = "System",
-        Desc = string.format("Executor: %s\nScript Version: 1.0.0\nWindUI Version: %s", 
-            getExecutor(), 
-            (WindUI.Version or "Latest")),
-        Image = "solar:monitor-smartphone-bold", -- Mobile/PC icon
+    Tab:Space({ Size = 8 })
+
+    -- ========================================
+    -- SYSTEM INFO
+    -- ========================================  
+    Tab:Paragraph({
+        Title = getExecutor(),
+        Desc = string.format("Script v1.2.1 • WindUI v%s", WindUI.Version or "Latest"),
+        Image = "solar:monitor-bold",
         ImageColor = CONFIG.COLORS.Purple,
     })
 
-    Tab:Space({ Size = 10 })
+    Tab:Space({ Size = 8 })
 
     -- ========================================
     -- CHANGELOG
     -- ========================================
-    local ChangelogSection = Tab:Section({
-        Title = "What's New",
-        Box = true,
-        BoxBorder = true, -- Distinct look
-        Opened = true,
+    Tab:Paragraph({
+        Title = "v1.2.1 - Dashboard Update",
+        Desc = "• Clean Home tab\n• God Mode (DamagePlayer)\n• Auto Eat with scanner",
+        Image = "solar:star-bold",
+        ImageColor = CONFIG.COLORS.Yellow,
     })
 
-    local changes = {
-        { "New UI Design", "Completely redesigned Home tab for better clarity." },
-        { "Mobile Support", "Fixed topbar buttons and spacing for mobile users." },
-        { "Local Loader", "Optimized loading speed with local debug server." },
-    }
-
-    for _, change in ipairs(changes) do
-        ChangelogSection:Paragraph({
-            Title = change[1],
-            Desc = change[2],
-            Image = "solar:check-circle-bold",
-            ImageColor = CONFIG.COLORS.Green,
-        })
-    end
-
-    Tab:Space({ Size = 10 })
+    Tab:Space({ Size = 12 })
 
     -- ========================================
-    -- ACTION CENTER
+    -- QUICK ACTIONS
     -- ========================================
-    local ActionSection = Tab:Section({
-        Title = "Quick Actions",
+    Tab:Button({
+        Title = "Copy Discord Invite",
+        Icon = "solar:link-bold",
+        Color = CONFIG.COLORS.Blue,
+        Callback = function()
+            if setclipboard then
+                setclipboard("https://discord.gg/yourserver")
+                WindUI:Notify({
+                    Title = "Discord",
+                    Content = "Invite link copied!",
+                    Icon = "solar:check-circle-bold",
+                    Duration = 3,
+                })
+            end
+        end,
     })
 
-    ActionSection:Button({
+    Tab:Button({
         Title = "Unload Script",
-        Desc = "Clean up and close the interface",
-        Icon = "solar:trash-bin-trash-bold",
+        Icon = "solar:logout-3-bold",
         Color = CONFIG.COLORS.Red,
         Callback = function()
-            if getgenv and getgenv().OP_WINDOW then
-                getgenv().OP_WINDOW = nil
+            -- Stop all features
+            if getgenv and getgenv().OP_FEATURES then
+                for name, feature in pairs(getgenv().OP_FEATURES) do
+                    pcall(function()
+                        if feature.Stop then 
+                            feature.Stop() 
+                            print("[OP] Stopped: " .. tostring(name))
+                        end
+                    end)
+                end
+                getgenv().OP_FEATURES = nil
             end
-            Window:Destroy() -- WindUI destroy method
+            
+            -- Clear global state
+            if getgenv then
+                getgenv().OP_WINDOW = nil
+                getgenv().OP_DEBUG = nil
+                getgenv().OP_BASE_PATH = nil
+            end
+            
+            -- Destroy UI completely
+            Window:Destroy()
+            
+            -- Notify user
+            print("[OP] Script unloaded successfully! All features stopped.")
         end,
     })
 
