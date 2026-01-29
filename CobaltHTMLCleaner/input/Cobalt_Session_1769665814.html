@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cobalt - Session Viewer</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cobalt-xil.pages.dev/Assets/Logo.png"
+    />
+    <style>
+      :root {
+        --bg-color: #0b0b0b;
+        --surface-color: #161b22;
+        --border-color: #30363d;
+        --text-primary: #c9d1d9;
+        --text-secondary: #8b949e;
+        --accent-blue: #58a6ff;
+        --accent-green: #3fb950;
+        --accent-orange: #d29922;
+        --accent-red: #ff7b72;
+        --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-primary);
+        font-family: var(--font-family);
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      /* Top Header */
+      .app-header {
+        height: 50px;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        background-color: var(--bg-color);
+        flex-shrink: 0;
+        z-index: 10;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .brand-icon {
+        width: 20px;
+        height: 20px;
+        background-image: url("https://cobalt-xil.pages.dev/Assets/Logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .session-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .session-info {
+        color: var(--text-secondary);
+        font-family: monospace;
+        font-size: 12px;
+        cursor: pointer;
+        padding: 2px 5px;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+        user-select: none;
+      }
+
+      .session-info:hover {
+        background-color: #1c2128;
+      }
+
+      .session-id {
+        color: #fff;
+      }
+
+      .session-tooltip {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #1c2128;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        padding: 10px;
+        z-index: 100;
+        width: 250px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        margin-top: 5px;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        visibility: hidden;
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+      }
+
+      .session-tooltip::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: transparent;
+      }
+
+      .session-container:hover .session-tooltip,
+      .session-tooltip.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .tooltip-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        font-size: 11px;
+      }
+
+      .tooltip-label {
+        color: var(--text-secondary);
+      }
+
+      .tooltip-value {
+        color: var(--text-primary);
+        font-family: monospace;
+        user-select: text;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .app-header {
+          height: auto;
+          flex-wrap: wrap;
+          padding: 10px;
+          gap: 10px;
+        }
+
+        .brand {
+          font-size: 14px;
+        }
+
+        .session-container {
+          align-items: flex-start;
+          display: none;
+          /* Hide session info on mobile to save space */
+        }
+
+        .trace-toolbar {
+          height: auto;
+          flex-wrap: wrap;
+          padding: 10px;
+          gap: 10px;
+          justify-content: space-between;
+        }
+
+        /* Hide non-essential info on mobile */
+        .trace-toolbar > div:first-child,
+        #statsLabel {
+          display: none;
+        }
+
+        .search-widget {
+          width: 100%;
+          order: 3;
+          margin-top: 5px;
+        }
+
+        .view-toggle {
+          width: 100%;
+          display: flex;
+        }
+
+        .view-btn {
+          flex: 1;
+          text-align: center;
+        }
+
+        .row-list {
+          width: 60vw;
+          /* Use viewport width to prevent runaway expansion */
+        }
+
+        .col-list {
+          width: 60vw;
+          flex: none;
+        }
+
+        .details-panel.visible {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1000;
+          border-left: none;
+        }
+
+        .details-header-top {
+          margin-top: 10px;
+        }
+
+        /* Fix Details Header Overflow */
+        .details-title-group {
+          min-width: 0;
+          flex: 1;
+          margin-right: 10px;
+        }
+
+        .details-name-large {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .details-actions {
+          flex-shrink: 0;
+        }
+
+        /* Allow wrapping for paths on mobile */
+        .details-path-row,
+        .origin-row,
+        .remote-path-copy {
+          white-space: normal !important;
+          word-break: break-all;
+        }
+      }
+
+      /* Scrollbars */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #0d1117;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #30363d;
+        border-radius: 5px;
+        border: 2px solid #0d1117;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #8b949e;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: var(--bg-color);
+      }
+
+      /* Heatmap Styles */
+      .heatmap-container {
+        flex: 1;
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: var(--bg-color);
+        position: relative;
+      }
+
+      .heatmap-container.visible {
+        display: flex;
+      }
+
+      .heatmap-canvas {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+      }
+
+      .view-toggle {
+        display: flex;
+        background: #1c2128;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .view-btn {
+        padding: 4px 12px;
+        font-size: 12px;
+        cursor: pointer;
+        color: var(--text-secondary);
+        background: transparent;
+        border: none;
+        transition: all 0.2s;
+      }
+
+      .view-btn.active {
+        background: var(--accent-blue);
+        color: white;
+      }
+
+      .view-btn:hover:not(.active) {
+        background: #30363d;
+      }
+
+      /* Main Layout */
+      .main-container {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      /* Left Panel: Trace View */
+      .trace-panel {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid var(--border-color);
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .trace-toolbar {
+        height: 40px;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        gap: 10px;
+        background-color: var(--bg-color);
+        flex-shrink: 0;
+      }
+
+      .search-widget {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        width: 320px;
+        position: relative;
+        transition: border-color 0.2s ease, border-radius 0.2s ease;
+        box-sizing: border-box;
+      }
+
+      .search-widget:focus-within {
+        border-color: var(--accent-blue);
+      }
+
+      .search-widget:focus-within > .search-options {
+        border-color: var(--accent-blue);
+      }
+
+      .search-widget.expanded {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-color: transparent;
+      }
+
+      .search-row {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+      }
+
+      .search-chevron {
+        cursor: pointer;
+        padding: 2px;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease, color 0.2s ease;
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+      }
+
+      .search-chevron:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--text-primary);
+      }
+
+      .search-chevron.expanded {
+        transform: rotate(90deg);
+      }
+
+      .search-input-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-left: 4px;
+      }
+
+      .search-input {
+        background: transparent;
+        border: none;
+        color: var(--text-primary);
+        font-size: 12px;
+        width: 100%;
+        outline: none;
+        height: 20px;
+      }
+
+      .search-options {
+        transition: border-color 0.2s ease, border-radius 0.2s ease;
+        display: none;
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-top: none;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        gap: 12px;
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        right: -1px;
+        z-index: 100;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+      }
+
+      .search-options.visible {
+        display: flex;
+      }
+
+      .time-range-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        color: var(--text-secondary);
+      }
+
+      .filter-options-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-top: 8px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .filter-checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 11px;
+        color: var(--text-secondary);
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .filter-checkbox-label:hover {
+        color: var(--text-primary);
+      }
+
+      .filter-checkbox {
+        accent-color: var(--accent-blue);
+      }
+
+      .time-input-styled {
+        background-color: #161b22;
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+        border-radius: 4px;
+        padding: 4px 8px;
+        width: 60px;
+        outline: none;
+        font-size: 11px;
+        transition: border-color 0.2s ease;
+        margin: 0 2px;
+      }
+
+      .time-input-styled:focus {
+        border-color: var(--accent-blue);
+      }
+
+      .unit-select {
+        background-color: #161b22;
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+        border-radius: 4px;
+        outline: none;
+        font-size: 11px;
+        padding: 3px 6px;
+        cursor: pointer;
+        transition: border-color 0.2s ease;
+      }
+
+      .unit-select:focus {
+        border-color: var(--accent-blue);
+      }
+
+      .trace-header-row {
+        display: flex;
+        height: 30px;
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--surface-color);
+        font-size: 11px;
+        color: var(--text-secondary);
+        line-height: 30px;
+        flex-shrink: 0;
+      }
+
+      .col-list {
+        width: 300px;
+        padding-left: 15px;
+        border-right: 1px solid var(--border-color);
+        flex-shrink: 0;
+        z-index: 5;
+        background-color: var(--surface-color);
+        box-sizing: border-box;
+        /* Match row-list */
+      }
+
+      .col-timeline {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        min-width: calc(100vw - 300px);
+      }
+
+      .timeline-ruler {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .tick {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        border-left: 1px solid #30363d;
+        font-size: 10px;
+        color: #484f58;
+        padding-left: 4px;
+      }
+
+      .trace-rows {
+        flex: 1;
+        overflow: auto;
+        /* Ensure both scrollbars appear */
+        position: relative;
+        contain: strict;
+      }
+
+      .virtual-spacer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+      }
+
+      .virtual-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .trace-row {
+        display: flex;
+        height: 28px;
+        /* align-items: center;  Removed to allow children to stretch */
+        cursor: pointer;
+        /* border-bottom: 1px solid #1c2128; Moved to children */
+        width: fit-content;
+        min-width: 100%;
+        transition: background-color 0.1s ease;
+        box-sizing: border-box;
+      }
+
+      .trace-row:hover {
+        background-color: #1c2128;
+      }
+
+      .trace-row.selected {
+        background-color: rgba(88, 166, 255, 0.1);
+      }
+
+      .trace-row.hidden {
+        display: none;
+      }
+
+      .trace-row:hover * {
+        background-color: #1c2128;
+      }
+
+      .trace-row.selected * {
+        background-color: #1c2333;
+      }
+
+      .row-list {
+        width: 300px;
+        padding-left: 15px;
+        /* Use box-shadow for sticky border to prevent it from disappearing */
+        box-shadow: 1px 0 0 0 var(--border-color);
+        border-right: none;
+        border-bottom: 1px solid #1c2128;
+        /* Added border here */
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        position: sticky;
+        left: 0;
+        background-color: var(--bg-color);
+        z-index: 2;
+        transition: background-color 0.1s ease;
+        height: 100%;
+      }
+
+      .row-timeline {
+        flex: 1;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid #1c2128;
+        /* Added border here */
+        box-sizing: border-box;
+        /* Ensure border is inside height */
+      }
+
+      .type-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        flex-shrink: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .remote-name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--text-primary);
+        font-size: 12px;
+      }
+
+      .timeline-marker {
+        position: absolute;
+        top: 10px;
+        height: 8px;
+        min-width: 4px;
+        border-radius: 4px;
+        opacity: 0.9;
+      }
+
+      .timeline-marker.incoming {
+        background: linear-gradient(90deg, var(--accent-green), #2ea043);
+      }
+
+      .timeline-marker.outgoing {
+        background: linear-gradient(90deg, var(--accent-orange), #b08800);
+      }
+
+      /* Right Panel: Details */
+      .details-panel {
+        width: 0;
+        opacity: 0;
+        background-color: var(--bg-color);
+        border-left: 0 solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: relative;
+        flex-shrink: 0;
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease,
+          padding 0.3s ease;
+      }
+
+      .details-panel.visible {
+        width: 450px;
+        opacity: 1;
+        padding: 20px;
+        border-left: 1px solid var(--border-color);
+      }
+
+      /* Header */
+      .details-header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .details-title-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .details-icon-large {
+        width: 32px;
+        height: 32px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .details-name-large {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .details-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .close-btn {
+        cursor: pointer;
+        color: var(--text-secondary);
+        font-size: 20px;
+        transition: color 0.2s ease;
+        line-height: 1;
+      }
+
+      .close-btn:hover {
+        color: #fff;
+      }
+
+      /* Unified Badge Style */
+      .badge-pill {
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: 1px solid;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+      }
+
+      .badge-pill.incoming {
+        color: var(--accent-green);
+        border-color: var(--accent-green);
+      }
+
+      .badge-pill.outgoing {
+        color: var(--accent-orange);
+        border-color: var(--accent-orange);
+      }
+
+      .badge-pill.executor {
+        color: var(--accent-green);
+        border-color: var(--accent-green);
+      }
+
+      .badge-pill.actor {
+        color: var(--accent-red);
+        border-color: var(--accent-red);
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 2px,
+          rgba(255, 123, 114, 0.1) 2px,
+          rgba(255, 123, 114, 0.1) 4px
+        );
+      }
+
+      .details-path-row {
+        color: var(--text-secondary);
+        font-size: 12px;
+        margin-bottom: 20px;
+        font-family: monospace;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 1.2em;
+      }
+
+      .remote-path-copy {
+        cursor: pointer;
+        color: var(--text-secondary);
+        font-size: 12px;
+        font-weight: normal;
+        transition: color 0.2s ease;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        width: 25%;
+      }
+
+      .remote-path-copy:hover {
+        color: var(--accent-blue);
+      }
+
+      /* Info Grid 2 */
+      .info-grid-2 {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 25px;
+      }
+
+      .info-item-2 h4 {
+        margin: 0 0 6px 0;
+        color: var(--text-secondary);
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      .info-item-2 div {
+        font-size: 11px;
+        color: var(--text-primary);
+        font-family: monospace;
+      }
+
+      /* Info Grid */
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 25px;
+      }
+
+      .info-item h4 {
+        margin: 0 0 6px 0;
+        color: var(--text-secondary);
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      .info-item div {
+        font-size: 14px;
+        color: var(--text-primary);
+        font-family: monospace;
+      }
+
+      .clickable-path {
+        border-bottom: 1px dashed var(--text-secondary);
+        cursor: pointer;
+        transition: color 0.2s, border-color 0.2s;
+      }
+
+      .clickable-path:hover {
+        color: var(--accent-blue);
+        border-color: var(--accent-blue);
+      }
+
+      /* Content Boxes */
+      .content-box {
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 20px;
+        position: relative;
+        background-color: rgba(22, 27, 34, 0.5);
+      }
+
+      .box-title {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: var(--bg-color);
+        padding: 0 5px;
+        font-size: 11px;
+        color: var(--text-secondary);
+      }
+
+      .caller-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      .caller-icon {
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .caller-icon svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .caller-info {
+        flex: 1;
+        min-width: 0;
+        /* Critical for flex child truncation */
+      }
+
+      .caller-name {
+        color: var(--accent-blue);
+        font-family: monospace;
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+
+      .caller-source {
+        color: var(--text-secondary);
+        font-size: 11px;
+        font-family: monospace;
+        height: 1.2em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+      }
+
+      .flags-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+
+      .origin-row {
+        font-size: 12px;
+        color: var(--text-primary);
+        font-family: monospace;
+        display: block;
+        white-space: nowrap;
+        height: 1.2em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 35%;
+      }
+
+      /* Arguments */
+      .args-content {
+        font-family: "Consolas", "Monaco", monospace;
+        font-size: 12px;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        color: #e0e0e0;
+        max-height: 300px;
+        overflow-y: auto;
+        line-height: 1.5;
+      }
+
+      /* Copy Button with Animation */
+      .copy-icon-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        color: var(--text-secondary);
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        overflow: hidden;
+        /* Ensure check icon doesn't spill out */
+      }
+
+      .copy-icon-btn:hover {
+        border-color: var(--text-primary);
+        color: var(--text-primary);
+        background-color: var(--surface-color);
+      }
+
+      .copy-icon-btn svg {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .copy-icon-btn .icon-check {
+        transform: translate(-50%, -50%) scale(0);
+        color: var(--accent-green);
+      }
+
+      .copy-icon-btn.copied .icon-copy {
+        transform: translate(-50%, -50%) scale(0);
+      }
+
+      .copy-icon-btn.copied .icon-check {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      /* Dropdown */
+      .dropdown-menu {
+        position: absolute;
+        top: 42px;
+        /* Button height + spacing */
+        right: 10px;
+        background-color: #1c2128;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        width: 160px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        z-index: 50;
+        display: none;
+        overflow: hidden;
+      }
+
+      .dropdown-menu.visible {
+        display: block;
+      }
+
+      .dropdown-item {
+        padding: 8px 12px;
+        font-size: 12px;
+        color: var(--text-primary);
+        cursor: pointer;
+        transition: background-color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .dropdown-item:hover {
+        background-color: var(--accent-blue);
+        color: #fff;
+      }
+
+      .dropdown-item svg {
+        width: 14px;
+        height: 14px;
+        opacity: 0.7;
+      }
+
+      /* Toast Notification */
+      .toast-container {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        background-color: #1c2128;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        padding: 8px 16px;
+        color: #fff;
+        font-size: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s, transform 0.3s;
+        pointer-events: none;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .toast-container.visible {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .toast-container svg {
+        width: 16px;
+        height: 16px;
+        color: var(--accent-green);
+      }
+
+      /* Syntax Highlighting */
+      .hl-str {
+        color: #a5d6ff;
+      }
+
+      .hl-num {
+        color: #79c0ff;
+      }
+
+      .hl-bool {
+        color: #ff7b72;
+      }
+
+      .hl-key {
+        color: #7ee787;
+      }
+
+      .hl-nil {
+        color: #ff7b72;
+      }
+
+      .footer {
+        height: 25px;
+        border-top: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        background-color: var(--bg-color);
+        color: var(--text-secondary);
+        font-size: 11px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app-header">
+      <a
+        href="https://github.com/notpoiu/cobalt/tree/main"
+        target="_blank"
+        style="text-decoration: none"
+      >
+        <div class="brand">
+          <div class="brand-icon"></div>
+          Cobalt - Session Viewer
+        </div>
+      </a>
+      <div class="session-container">
+        <div class="session-info">
+          Session / <span class="session-id">c70d5f45-29c3-46bb-ada2-df43ecb2f900</span>
+        </div>
+        <div class="session-tooltip">
+          <div class="tooltip-row">
+            <span class="tooltip-label">Start Time (tick)</span>
+            <span class="tooltip-value">1769690751.471251</span>
+          </div>
+          <div class="tooltip-row">
+            <span class="tooltip-label">Place ID</span>
+            <span class="tooltip-value">126509999114328</span>
+          </div>
+          <div class="tooltip-row">
+            <span class="tooltip-label">Job ID</span>
+            <span class="tooltip-value">a39cd5f3-1a09-41f2-a568-b0b88fe3f71c</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <!-- LEFT PANEL WRAPPER -->
+      <div
+        class="left-panel-wrapper"
+        style="
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          border-right: 1px solid var(--border-color);
+          min-width: 0;
+          overflow: hidden;
+        "
+      >
+        <!-- SHARED TOOLBAR -->
+        <div class="trace-toolbar">
+          <div
+            style="
+              font-size: 11px;
+              color: var(--text-secondary);
+              margin-right: 20px;
+            "
+          >
+            Started: 29 Jan 2026, 19:45:51
+          </div>
+          <div style="flex: 1"></div>
+          <div class="view-toggle">
+            <button class="view-btn active" onclick="switchView('timeline')">
+              Timeline
+            </button>
+            <button class="view-btn" onclick="switchView('heatmap')">
+              Heatmap
+            </button>
+          </div>
+          <div class="divider"></div>
+          <div class="search-widget">
+            <div class="search-row">
+              <div
+                class="search-chevron"
+                onclick="toggleSearchOptions()"
+                id="searchChevron"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M6 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <div class="search-input-container">
+                <input
+                  type="text"
+                  class="search-input"
+                  id="filterInput"
+                  placeholder="Filter events..."
+                  oninput="handleFilterInput()"
+                />
+              </div>
+            </div>
+            <div class="search-options" id="searchOptions">
+              <div class="time-range-row">
+                <span>Time Range:</span>
+                <input
+                  type="number"
+                  class="time-input-styled"
+                  id="minTimeInput"
+                  placeholder="Start"
+                  oninput="handleTimeInput()"
+                />
+                <span>-</span>
+                <input
+                  type="number"
+                  class="time-input-styled"
+                  id="maxTimeInput"
+                  placeholder="End"
+                  oninput="handleTimeInput()"
+                />
+                <select
+                  class="unit-select"
+                  id="timeUnitSelect"
+                  onchange="handleTimeInput()"
+                >
+                  <option value="1">s</option>
+                  <option value="0.001">ms</option>
+                </select>
+              </div>
+              <div class="filter-options-row">
+                <label class="filter-checkbox-label"
+                  ><input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    id="filterIncoming"
+                    onchange="handleFilterInput()"
+                  />
+                  Incoming</label
+                >
+                <label class="filter-checkbox-label"
+                  ><input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    id="filterOutgoing"
+                    onchange="handleFilterInput()"
+                  />
+                  Outgoing</label
+                >
+                <div
+                  style="
+                    width: 1px;
+                    height: 14px;
+                    background: var(--border-color);
+                    margin: 0 4px;
+                  "
+                ></div>
+                <label class="filter-checkbox-label"
+                  ><input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    id="filterActor"
+                    onchange="handleFilterInput()"
+                  />
+                  Actor</label
+                >
+                <label class="filter-checkbox-label"
+                  ><input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    id="filterNonActor"
+                    onchange="handleFilterInput()"
+                  />
+                  Non-Actor</label
+                >
+                <div
+                  style="
+                    width: 1px;
+                    height: 14px;
+                    background: var(--border-color);
+                    margin: 0 4px;
+                  "
+                ></div>
+                <label class="filter-checkbox-label"
+                  ><input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    id="filterArgs"
+                    onchange="handleFilterInput()"
+                  />
+                  Args</label
+                >
+                <label class="filter-checkbox-label"
+                  ><input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    id="filterProto"
+                    onchange="handleFilterInput()"
+                  />
+                  Proto</label
+                >
+                <label class="filter-checkbox-label"
+                  ><input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    id="filterConst"
+                    onchange="handleFilterInput()"
+                  />
+                  Const</label
+                >
+                <label class="filter-checkbox-label"
+                  ><input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    id="filterHash"
+                    onchange="handleFilterInput()"
+                  />
+                  Hash</label
+                >
+                <label class="filter-checkbox-label"
+                  ><input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    id="filterSource"
+                    onchange="handleFilterInput()"
+                  />
+                  Source</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE VIEW -->
+        <div class="trace-panel" id="timelinePanel" style="border-right: none">
+          <div class="trace-header-row">
+            <div class="col-list">Remote</div>
+            <div class="col-timeline" id="timelineHeader">
+              <div class="timeline-ruler" id="ruler"></div>
+            </div>
+          </div>
+
+          <div class="trace-rows" id="rowsContainer">
+            <div id="virtualSpacer" class="virtual-spacer"></div>
+            <div id="virtualContent" class="virtual-content"></div>
+          </div>
+        </div>
+
+        <!-- HEATMAP VIEW -->
+        <div class="heatmap-container" id="heatmapPanel">
+          <div
+            id="heatmapScroll"
+            style="
+              width: 100%;
+              height: 100%;
+              overflow-x: auto;
+              overflow-y: hidden;
+              position: relative;
+            "
+          >
+            <div
+              id="heatmapSpacer"
+              style="
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+              "
+            ></div>
+            <canvas
+              id="heatmapCanvas"
+              class="heatmap-canvas"
+              style="
+                position: sticky;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+              "
+            ></canvas>
+          </div>
+          <div
+            id="heatmapTooltip"
+            class="heatmap-tooltip"
+            style="
+              display: none;
+              position: absolute;
+              background: #1c2128;
+              border: 1px solid #30363d;
+              padding: 4px 8px;
+              border-radius: 4px;
+              font-size: 11px;
+              color: #c9d1d9;
+              pointer-events: none;
+              z-index: 100;
+            "
+          ></div>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="details-panel" id="detailsPanel">
+        <div id="detailsContent"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Ended: 29 Jan 2026, 19:48:28</div>
+      <span
+        id="statsLabel"
+        style="
+          color: var(--text-secondary);
+          font-size: 11px;
+          margin-right: 10px;
+        "
+      >
+        245 Events • 157.28s
+      </span>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-container">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-check"
+      >
+        <path d="M20 6 9 17l-5-5" />
+      </svg>
+      <span id="toastMessage">Copied to clipboard</span>
+    </div>
+
+    <!-- Data Script -->
+    <script type="application/json" id="dictionary-data">
+      {"53":"{\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle,\n    9\n}","43":"{\n    .Bunny --[[Nil Parent]]\n}","73":"{\n    \"FireAllClients\",\n    13,\n    {\n        ProjectileGravity = 0,\n        HeadPos = Vector3.new(-10.144617080688, 5.4932632446289, 34.652519226074),\n        Origin = Vector3.new(-12.812271118164, 5.3795762062073, 29.997072219849),\n        Velocity = Vector3.new(-44.601627349854, 280.08441162109, -205.09367370605),\n        ProjectileName = \"Default\"\n    }\n}","63":"{\n    \"FireAllClients\",\n    11,\n    {\n        ProjectileGravity = 0,\n        HeadPos = Vector3.new(-7.6924314498901, 5.459557056427, 36.37727355957),\n        Origin = Vector3.new(-2.345321893692, 5.3458757400513, 36.848201751709),\n        Velocity = Vector3.new(257.08428955078, -0.69446790218353, -237.50199890137),\n        ProjectileName = \"Default\"\n    }\n}","93":"{\n    .Bunny --[[Nil Parent]],\n    game:GetService(\"Players\").LocalPlayer.Inventory[\"Strong Axe\"],\n    \"10_8401342884\",\n    CFrame.new(69.272407531738, 3.2606484889984, -9.0510425567627, 0.9269317984581, 1.8850947469673e-08, -0.37522977590561, -1.1123422183346e-08, 1, 2.2760170637071e-08, 0.37522977590561, -1.6923285883763e-08, 0.9269317984581)\n}","83":"game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestReplicateSound","137":"{\n    80,\n    -1360\n}","159":"{\n    -320,\n    -1320\n}","154":"{\n    -240,\n    -1320\n}","151":"{\n    -160,\n    -1320\n}","138":"{\n    40,\n    -1400\n}","13":"game:GetService(\"ReplicatedStorage\").RemoteEvents.AnalyticsTimeFirstPerson","33":"{\n    \"FireAllClients\",\n    8,\n    {\n        ProjectileGravity = 0,\n        HeadPos = Vector3.new(-17.212057113647, 5.4815969467163, -42.121253967285),\n        Origin = Vector3.new(-15.175363540649, 5.3679203987122, -47.088794708252),\n        Velocity = Vector3.new(-227.29049682617, -27.711242675781, -264.70950317383),\n        ProjectileName = \"Default\"\n    }\n}","23":"RegisterProjectile","42":"game:GetService(\"Players\").LocalPlayer.PlayerScripts.Client.UtilityModules.Events","52":"{\n    {\n        Success = true,\n        Ammo = 1\n    }\n}","62":"{\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle,\n    11\n}","72":"{\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle,\n    13\n}","82":"RequestReplicateSound","92":"{\n    .Bunny --[[Nil Parent]],\n    game:GetService(\"Players\").LocalPlayer.Inventory[\"Strong Axe\"],\n    \"9_8401342884\",\n    CFrame.new(86.663993835449, 3.3192496299744, -34.625129699707, 0.76969558000565, 2.9934675183085e-08, -0.63841104507446, 5.9566569454717e-09, 1, 5.4070941502005e-08, 0.63841104507446, -4.5420961214404e-08, 0.76969558000565)\n}","147":"{\n    \"LargeStructure\",\n    -400,\n    -1160,\n    {\n        Visible = false\n    }\n}","143":"{\n    -40,\n    -1360\n}","122":"game:GetService(\"ReplicatedStorage\").RemoteEvents.MapDrawRemoveFogBlock","140":"{\n    0,\n    -1360\n}","129":"{\n    120,\n    -1240\n}","121":"MapDrawRemoveFogBlock","148":"{\n    \"LargeStructure\",\n    -280,\n    -1200,\n    {\n        Visible = false\n    }\n}","165":"{\n    -440,\n    -1280\n}","12":"AnalyticsTimeFirstPerson","22":"{\n    \"BindableEvent\",\n    \"Fire\",\n    \"RemoteEvent\",\n    \"rawget\",\n    [6] = \"FireAllClients\",\n    [7] = \"FireServer\",\n    [8] = \"warn\",\n    [10] = \"Remote event does not exist for event\",\n    [11] = \"Name\"\n}","32":"game:GetService(\"ReplicatedStorage\").RemoteEvents.ReplicateBullet","95":"{\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle,\n    14\n}","85":"ToolDamageObject","75":"game:GetService(\"ReplicatedStorage\").RemoteEvents.PeltTraderUI","65":"ChangeColorCorrection","55":"{\n    .Bunny --[[Nil Parent]],\n    9,\n    \"3_8401342884\",\n    .Head --[[Nil Parent]]\n}","45":"Unknown","35":"game:GetService(\"ReplicatedStorage\").RemoteEvents.ProjectileDamageEnemy","116":"{\n    \"LargeStructure\",\n    440,\n    -1000,\n    {\n        Visible = false\n    }\n}","132":"{\n    80,\n    -1280\n}","1":"EquipItemHandle","3":"game:GetService(\"ReplicatedStorage\").RemoteEvents.EquipItemHandle","2":"RemoteEvent","5":"game:GetService(\"Players\").LocalPlayer.PlayerScripts.LoadClient","4":"FireServer","7":"FireOtherClients","6":"{\n    \"FireAllClients\",\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle\n}","25":"game:GetService(\"ReplicatedStorage\").RemoteEvents.RegisterProjectile","8":"Players.nsopnet.PlayerScripts.Client.UtilityModules.Events","135":"{\n    40,\n    -1280\n}","110":"{\n    {\n        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.MakeIconOnMap,\n        BindableEvent = {\n            BindableEvent = .Event --[[Nil Parent]]\n        },\n        Name = \"MakeIconOnMap\"\n    }\n}","94":"{\n    \"Day\",\n    6\n}","74":"PeltTraderUI","84":"{\n    \"FireAllClients\",\n    \"WeaponHit\",\n    {\n        Instance = .Head --[[Nil Parent]],\n        Volume = 0.4\n    }\n}","54":"{\n    \"FireAllClients\",\n    9,\n    {\n        ProjectileGravity = 0,\n        HeadPos = Vector3.new(-51.890777587891, 5.5609192848206, -54.496723175049),\n        Origin = Vector3.new(-54.300636291504, 5.4472332000732, -59.28959274292),\n        Velocity = Vector3.new(-84.363151550293, -15.274459838867, -339.33694458008),\n        ProjectileName = \"Default\"\n    }\n}","64":"{\n    .Wolf --[[Nil Parent]],\n    11,\n    \"4_8401342884\",\n    .HumanoidRootPart --[[Nil Parent]]\n}","34":"ProjectileDamageEnemy","44":"Anonymous","126":"{\n    80,\n    -1160\n}","102":"{\n    \"FireAllClients\",\n    15,\n    {\n        ProjectileGravity = 0,\n        HeadPos = Vector3.new(-1.9281703233719, 5.5251803398132, -75.698455810547),\n        Origin = Vector3.new(1.2488443851471, 5.4114952087402, -80.023887634277),\n        Velocity = Vector3.new(-245.1421661377, -7.3800678253174, -249.70155334473),\n        ProjectileName = \"Default\"\n    }\n}","144":"{\n    -80,\n    -1320\n}","101":"{\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle,\n    15\n}","14":"{\n    0,\n    60\n}","24":"RemoteFunction","128":"{\n    120,\n    -1200\n}","145":"{\n    -80,\n    -1360\n}","120":"{\n    \"FireAllClients\",\n    .Part --[[Nil Parent]]\n}","87":"{\n    .Bunny --[[Nil Parent]],\n    game:GetService(\"Players\").LocalPlayer.Inventory.Morningstar,\n    \"6_8401342884\",\n    CFrame.new(27.767412185669, 3.7899854183197, -109.60292816162, 0.47214767336845, -2.6141286468828e-08, -0.88151949644089, 6.9682004610883e-10, 1, -2.9281581603868e-08, 0.88151949644089, 1.3210970095656e-08, 0.47214767336845)\n}","77":"{\n    {\n        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.PeltTraderUI,\n        BindableEvent = {\n            BindableEvent = .Event --[[Nil Parent]]\n        },\n        Name = \"PeltTraderUI\"\n    }\n}","97":"DayDisplay","47":"{\n    {\n        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayDeathAnimation,\n        BindableEvent = {\n            BindableEvent = .Event --[[Nil Parent]]\n        },\n        Name = \"PlayDeathAnimation\"\n    }\n}","37":"OnClientInvoke","67":"{\n    \"Night\",\n    6\n}","57":"{\n    \"FireAllClients\",\n    10,\n    {\n        ProjectileGravity = 0,\n        HeadPos = Vector3.new(-51.532997131348, 5.5692181587219, -56.189624786377),\n        Origin = Vector3.new(-46.878078460693, 5.4555459022522, -53.5133934021),\n        Velocity = Vector3.new(-348.84826660156, 12.167671203613, 25.628429412842),\n        ProjectileName = \"Default\"\n    }\n}","112":"TargettedSound","115":"{\n    \"LargeStructure\",\n    -40,\n    -1000,\n    {\n        Visible = false\n    }\n}","170":"{\n    {\n        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayerDied,\n        BindableEvent = {\n            BindableEvent = .Event --[[Nil Parent]]\n        },\n        Name = \"PlayerDied\"\n    }\n}","111":"{\n    \"LargeStructure\",\n    0,\n    -800,\n    {\n        Visible = false\n    }\n}","114":"{\n    {\n        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.TargettedSound,\n        BindableEvent = {\n            BindableEvent = .Event --[[Nil Parent]]\n        },\n        Name = \"TargettedSound\"\n    }\n}","119":"game:GetService(\"Players\").LocalPlayer.PlayerScripts.Client.EffectModules.FogEffectModule","27":"game:GetService(\"Players\").LocalPlayer.PlayerScripts.Client.InteractionHandler","17":"UnequipItemHandle","107":"MakeIconOnMap","86":"game:GetService(\"ReplicatedStorage\").RemoteEvents.ToolDamageObject","96":"{\n    \"FireAllClients\",\n    14,\n    {\n        ProjectileGravity = 0,\n        HeadPos = Vector3.new(-30.009223937988, 6.0781784057617, -61.775840759277),\n        Origin = Vector3.new(-33.604652404785, 5.9644927978516, -65.757019042969),\n        Velocity = Vector3.new(-53.807537078857, -9.8708715438843, -345.69830322266),\n        ProjectileName = \"Default\"\n    }\n}","36":"{\n    .Bunny --[[Nil Parent]],\n    8,\n    \"2_8401342884\",\n    .Head --[[Nil Parent]]\n}","46":"b59863074110ef6cd2de5475fedf7c990f74608bb25511ed9dd4242b01c20b1d66d38346deaa396d7bd4df562a909adc","103":"{\n    .Bunny --[[Nil Parent]],\n    15,\n    \"11_8401342884\",\n    .Body --[[Nil Parent]]\n}","66":"game:GetService(\"ReplicatedStorage\").RemoteEvents.ChangeColorCorrection","106":"{\n    true\n}","125":"{\n    120,\n    -1160\n}","108":"game:GetService(\"ReplicatedStorage\").RemoteEvents.MakeIconOnMap","167":"{\n    -440,\n    -1240\n}","168":"PlayerDied","169":"game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayerDied","166":"{\n    -400,\n    -1240\n}","164":"{\n    \"LargeStructure\",\n    -400,\n    -1000,\n    {\n        Visible = false\n    }\n}","163":"{\n    -400,\n    -1280\n}","162":"{\n    -400,\n    -1320\n}","124":"{\n    {\n        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.MapDrawRemoveFogBlock,\n        BindableEvent = {\n            BindableEvent = .Event --[[Nil Parent]]\n        },\n        Name = \"MapDrawRemoveFogBlock\"\n    }\n}","16":"{\n    \"RemoteEvent\",\n    \"rawget\",\n    [4] = \"FireServer\",\n    [5] = \"warn\",\n    [7] = \"Remote event does not exist for event\",\n    [8] = \"Name\"\n}","26":"InvokeServer","161":"{\n    -360,\n    -1320\n}","100":"{\n    {\n        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.DayDisplay,\n        BindableEvent = {\n            BindableEvent = .Event --[[Nil Parent]]\n        },\n        Name = \"DayDisplay\"\n    }\n}","160":"{\n    -320,\n    -1360\n}","139":"{\n    0,\n    -1400\n}","71":"{\n    .Wolf --[[Nil Parent]],\n    12,\n    \"5_8401342884\",\n    .HumanoidRootPart --[[Nil Parent]]\n}","61":"{\n    {\n        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.SetPopUpMessage,\n        BindableEvent = {\n            BindableEvent = .Event --[[Nil Parent]]\n        },\n        Name = \"SetPopUpMessage\"\n    }\n}","51":"{\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle\n}","41":"OnClientEvent","157":"{\n    \"you are hungry\",\n    \"warning\"\n}","156":"{\n    -280,\n    -1360\n}","91":"{\n    .Bunny --[[Nil Parent]],\n    game:GetService(\"Players\").LocalPlayer.Inventory[\"Strong Axe\"],\n    \"8_8401342884\",\n    CFrame.new(72.141807556152, 3.1734464168549, -19.898815155029, 0.64457076787949, 3.830059114307e-08, -0.76454466581345, 1.0441749687118e-08, 1, 5.8899161103909e-08, 0.76454466581345, -4.5947860627393e-08, 0.64457076787949)\n}","81":"{\n    \"FireAllClients\",\n    .Bunny --[[Nil Parent]],\n    game:GetService(\"Players\").LocalPlayer.Inventory.Morningstar\n}","59":"game:GetService(\"ReplicatedStorage\").RemoteEvents.SetPopUpMessage","49":"RequestReloadFirearm","39":"PlayDeathAnimation","29":"28ccf5f06f59ba459c891ec5d49a7d4cdac18016b0ffaab2d94d092be58c8608b94406d41acb4a0f1e738db424534b8b","99":"{\n    3,\n    2,\n    {},\n    {\n        npcs = {},\n        berries = 0,\n        rain = 19,\n        plants = {},\n        attack = 15\n    }\n}","89":"{\n    \"FireAllClients\",\n    game:GetService(\"Players\").LocalPlayer.Inventory[\"Strong Axe\"]\n}","79":"PlayEnemyHitSound","69":"{\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle,\n    12\n}","155":"{\n    -240,\n    -1360\n}","150":"{\n    -120,\n    -1320\n}","153":"{\n    -200,\n    -1360\n}","152":"{\n    -200,\n    -1320\n}","19":"FireAllClients","76":"{\n    false\n}","146":"{\n    -120,\n    -1360\n}","142":"{\n    -40,\n    -1320\n}","56":"{\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle,\n    10\n}","158":"{\n    -280,\n    -1320\n}","136":"{\n    40,\n    -1360\n}","134":"{\n    40,\n    -1320\n}","31":"ReplicateBullet","21":"{\n    game:GetService(\"Players\").LocalPlayer\n}","11":"{\n    \"RemoteEvent\",\n    \"rawget\",\n    [4] = \"FireAllClients\",\n    [5] = \"FireServer\",\n    [6] = \"warn\",\n    [8] = \"Remote event does not exist for event\",\n    [9] = \"Name\"\n}","133":"{\n    80,\n    -1320\n}","60":"{\n    \"night is approaching\",\n    \"night\"\n}","70":"{\n    \"FireAllClients\",\n    12,\n    {\n        ProjectileGravity = 0,\n        HeadPos = Vector3.new(-7.6879773139954, 5.4826030731201, 36.377391815186),\n        Origin = Vector3.new(-2.3453216552734, 5.3689217567444, 36.848201751709),\n        Velocity = Vector3.new(257.08422851562, -0.71255493164062, -237.50196838379),\n        ProjectileName = \"Default\"\n    }\n}","40":"game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayDeathAnimation","50":"game:GetService(\"ReplicatedStorage\").RemoteEvents.RequestReloadFirearm","131":"{\n    120,\n    -1280\n}","130":"{\n    80,\n    -1240\n}","80":"game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayEnemyHitSound","90":"{\n    \"FireAllClients\",\n    .Bunny --[[Nil Parent]],\n    game:GetService(\"Players\").LocalPlayer.Inventory[\"Strong Axe\"]\n}","48":"{\n    \"BindableEvent\",\n    \"Fire\"\n}","58":"SetPopUpMessage","28":"{\n    game:GetService(\"Players\").LocalPlayer.Inventory.Rifle,\n    8\n}","38":"{\n    {\n        Success = true\n    }\n}","88":"{\n    .Bunny --[[Nil Parent]],\n    game:GetService(\"Players\").LocalPlayer.Inventory.Morningstar,\n    \"7_8401342884\",\n    CFrame.new(-52.73819732666, 4.2224526405334, 61.681079864502, -0.85998827219009, -9.4891966284649e-08, -0.510313808918, -7.6455016539967e-08, 1, -5.7105154382953e-08, 0.510313808918, -1.0093712532466e-08, -0.85998827219009)\n}","98":"game:GetService(\"ReplicatedStorage\").RemoteEvents.DayDisplay","68":"{\n    {\n        RemoteEvent = game:GetService(\"ReplicatedStorage\").RemoteEvents.ChangeColorCorrection,\n        BindableEvent = {\n            BindableEvent = .Event --[[Nil Parent]]\n        },\n        Name = \"ChangeColorCorrection\"\n    }\n}","78":"{\n    \"FireAllClients\",\n    game:GetService(\"Players\").LocalPlayer.Inventory.Morningstar\n}","127":"{\n    80,\n    -1200\n}","149":"{\n    -160,\n    -1360\n}","105":"game:GetService(\"ReplicatedStorage\").RemoteEvents.PlayerSprinting","123":"{\n    160,\n    -1160\n}","9":"2e33b996824b2fa3923c77a5e8d7e0ce572468b10fcae6dbdd067adefca34b8ccf4a463fada516b603dab7564d4427c8","18":"game:GetService(\"ReplicatedStorage\").RemoteEvents.UnequipItemHandle","113":"game:GetService(\"ReplicatedStorage\").RemoteEvents.TargettedSound","118":"game:GetService(\"ReplicatedStorage\").RemoteEvents.FadeOutFogBlock","117":"FadeOutFogBlock","141":"{\n    0,\n    -1320\n}","109":"{\n    \"LargeStructure\",\n    -80,\n    -720,\n    {\n        Visible = false\n    }\n}","104":"PlayerSprinting","20":"f19ad1fd75b8e83da90012e26252d020d7fbc9767d26e895a9c605c57c35b8fdd14a730ce0adf6fcd7998351b58a1fea","30":"{\n    \"RemoteFunction\",\n    \"rawget\",\n    [4] = \"InvokeServer\",\n    [5] = \"warn\",\n    [7] = \"Remote function does not exist for event\",\n    [8] = \"Name\"\n}","15":"1b2d4949afd8b607ac99af47c0cdec21e269b700bc232c79b3f29be40caf0ed317939211a160381d98d50756ad4d9a57","10":"{}"}
+    </script>
+    <script type="application/json" id="event-data">
+      [[1,2,3,4,1769690759.2861284,5,6,4,7,91,8,0,0,9,10,10,11],[12,2,13,4,1769690760.2534247,5,14,4,4,75,8,0,0,15,10,10,16],[17,2,18,4,1769690761.1560276,5,6,4,19,101,8,0,0,20,21,10,22],[1,2,3,4,1769690761.641727,5,6,4,7,91,8,0,0,9,10,10,11],[23,24,25,26,1769690764.8607264,27,28,26,26,83,8,0,0,29,10,10,30],[31,2,32,4,1769690764.8609944,27,33,4,7,91,8,0,0,9,10,10,11],[34,24,35,26,1769690764.937967,27,36,26,26,83,8,0,0,29,10,10,30],[23,24,25,37,1769690764.9854127,27,38,37,26,83,8,0,0,29,10,10,30],[34,24,35,37,1769690765.0776199,27,38,37,26,83,8,0,0,29,10,10,30],[39,2,40,41,1769690765.0785747,42,43,41,44,-1,45,0,0,46,47,10,48],[49,24,50,26,1769690768.9098097,27,51,26,26,83,8,0,0,29,10,10,30],[49,24,50,37,1769690769.0381516,27,52,37,26,83,8,0,0,29,10,10,30],[23,24,25,26,1769690773.2308748,27,53,26,26,83,8,0,0,29,10,10,30],[31,2,32,4,1769690773.2311416,27,54,4,7,91,8,0,0,9,10,10,11],[23,24,25,37,1769690773.3744055,27,38,37,26,83,8,0,0,29,10,10,30],[34,24,35,26,1769690773.4373668,27,55,26,26,83,8,0,0,29,10,10,30],[34,24,35,37,1769690773.590721,27,38,37,26,83,8,0,0,29,10,10,30],[39,2,40,41,1769690773.5915395,42,43,41,44,-1,45,0,0,46,47,10,48],[49,24,50,26,1769690775.0458458,27,51,26,26,83,8,0,0,29,10,10,30],[49,24,50,37,1769690775.1604849,27,52,37,26,83,8,0,0,29,10,10,30],[23,24,25,26,1769690778.4127317,27,56,26,26,83,8,0,0,29,10,10,30],[31,2,32,4,1769690778.4130786,27,57,4,7,91,8,0,0,9,10,10,11],[23,24,25,37,1769690778.5185474,27,38,37,26,83,8,0,0,29,10,10,30],[49,24,50,26,1769690779.9424475,27,51,26,26,83,8,0,0,29,10,10,30],[49,24,50,37,1769690780.0648416,27,52,37,26,83,8,0,0,29,10,10,30],[58,2,59,41,1769690782.6351274,42,60,41,44,-1,45,0,0,46,61,10,48],[23,24,25,26,1769690793.6325727,27,62,26,26,83,8,0,0,29,10,10,30],[31,2,32,4,1769690793.6332253,27,63,4,7,91,8,0,0,9,10,10,11],[23,24,25,37,1769690793.8000658,27,38,37,26,83,8,0,0,29,10,10,30],[34,24,35,26,1769690794.871599,27,64,26,26,83,8,0,0,29,10,10,30],[34,24,35,37,1769690795.0092867,27,38,37,26,83,8,0,0,29,10,10,30],[49,24,50,26,1769690796.0627654,27,51,26,26,83,8,0,0,29,10,10,30],[49,24,50,37,1769690796.1898735,27,52,37,26,83,8,0,0,29,10,10,30],[65,2,66,41,1769690799.7926462,42,67,41,44,-1,45,0,0,46,68,10,48],[23,24,25,26,1769690801.0359376,27,69,26,26,83,8,0,0,29,10,10,30],[31,2,32,4,1769690801.036823,27,70,4,7,91,8,0,0,9,10,10,11],[23,24,25,37,1769690801.2469519,27,38,37,26,83,8,0,0,29,10,10,30],[34,24,35,26,1769690802.2429746,27,71,26,26,83,8,0,0,29,10,10,30],[49,24,50,26,1769690803.993995,27,51,26,26,83,8,0,0,29,10,10,30],[49,24,50,37,1769690804.1132053,27,52,37,26,83,8,0,0,29,10,10,30],[23,24,25,26,1769690808.2828799,27,72,26,26,83,8,0,0,29,10,10,30],[31,2,32,4,1769690808.2831612,27,73,4,7,91,8,0,0,9,10,10,11],[23,24,25,37,1769690808.4453867,27,38,37,26,83,8,0,0,29,10,10,30],[49,24,50,26,1769690810.0405205,27,51,26,26,83,8,0,0,29,10,10,30],[49,24,50,37,1769690810.1576739,27,52,37,26,83,8,0,0,29,10,10,30],[74,2,75,41,1769690811.7882615,42,76,41,44,-1,45,0,0,46,77,10,48],[17,2,18,4,1769690814.012714,5,6,4,19,101,8,0,0,20,21,10,22],[1,2,3,4,1769690814.9615033,5,78,4,7,91,8,0,0,9,10,10,11],[17,2,18,4,1769690817.124247,5,78,4,19,101,8,0,0,20,21,10,22],[1,2,3,4,1769690817.4617167,5,78,4,7,91,8,0,0,9,10,10,11],[17,2,18,4,1769690819.5762494,5,78,4,19,101,8,0,0,20,21,10,22],[12,2,13,4,1769690820.4129019,5,14,4,4,75,8,0,0,15,10,10,16],[1,2,3,4,1769690832.9880157,5,78,4,7,91,8,0,0,9,10,10,11],[79,2,80,4,1769690835.617865,27,81,4,19,101,8,0,0,20,21,10,22],[82,2,83,4,1769690835.6181312,27,84,4,7,91,8,0,0,9,10,10,11],[85,24,86,26,1769690835.6191703,27,87,26,26,83,8,0,0,29,10,10,30],[85,24,86,37,1769690835.7391937,27,38,37,26,83,8,0,0,29,10,10,30],[39,2,40,41,1769690835.7398782,42,43,41,44,-1,45,0,0,46,47,10,48],[17,2,18,4,1769690840.0296143,5,78,4,19,101,8,0,0,20,21,10,22],[1,2,3,4,1769690865.5736137,5,78,4,7,91,8,0,0,9,10,10,11],[79,2,80,4,1769690872.1840063,27,81,4,19,101,8,0,0,20,21,10,22],[82,2,83,4,1769690872.184159,27,84,4,7,91,8,0,0,9,10,10,11],[85,24,86,26,1769690872.1850548,27,88,26,26,83,8,0,0,29,10,10,30],[85,24,86,37,1769690872.2783015,27,38,37,26,83,8,0,0,29,10,10,30],[39,2,40,41,1769690872.2793275,42,43,41,44,-1,45,0,0,46,47,10,48],[1,2,3,4,1769690873.403955,5,89,4,7,91,8,0,0,9,10,10,11],[17,2,18,4,1769690874.5113624,5,89,4,19,101,8,0,0,20,21,10,22],[1,2,3,4,1769690875.12237,5,89,4,7,91,8,0,0,9,10,10,11],[12,2,13,4,1769690880.6352747,5,14,4,4,75,8,0,0,15,10,10,16],[79,2,80,4,1769690884.8556369,27,90,4,19,101,8,0,0,20,21,10,22],[82,2,83,4,1769690884.8557964,27,84,4,7,91,8,0,0,9,10,10,11],[85,24,86,26,1769690884.856484,27,91,26,26,83,8,0,0,29,10,10,30],[85,24,86,37,1769690885.0062769,27,38,37,26,83,8,0,0,29,10,10,30],[79,2,80,4,1769690887.2432762,27,90,4,19,101,8,0,0,20,21,10,22],[82,2,83,4,1769690887.2436302,27,84,4,7,91,8,0,0,9,10,10,11],[85,24,86,26,1769690887.2450677,27,92,26,26,83,8,0,0,29,10,10,30],[85,24,86,37,1769690887.4014428,27,38,37,26,83,8,0,0,29,10,10,30],[79,2,80,4,1769690891.356998,27,90,4,19,101,8,0,0,20,21,10,22],[82,2,83,4,1769690891.3571108,27,84,4,7,91,8,0,0,9,10,10,11],[85,24,86,26,1769690891.3576036,27,93,26,26,83,8,0,0,29,10,10,30],[85,24,86,37,1769690891.493748,27,38,37,26,83,8,0,0,29,10,10,30],[39,2,40,41,1769690891.4947754,42,43,41,44,-1,45,0,0,46,47,10,48],[17,2,18,4,1769690893.3217519,5,89,4,19,101,8,0,0,20,21,10,22],[65,2,66,41,1769690896.8284939,42,94,41,44,-1,45,0,0,46,68,10,48],[1,2,3,4,1769690900.358213,5,6,4,7,91,8,0,0,9,10,10,11],[23,24,25,26,1769690903.3674277,27,95,26,26,83,8,0,0,29,10,10,30],[31,2,32,4,1769690903.3677803,27,96,4,7,91,8,0,0,9,10,10,11],[23,24,25,37,1769690903.545342,27,38,37,26,83,8,0,0,29,10,10,30],[49,24,50,26,1769690904.6072453,27,51,26,26,83,8,0,0,29,10,10,30],[49,24,50,37,1769690904.7383693,27,52,37,26,83,8,0,0,29,10,10,30],[97,2,98,41,1769690905.7699126,42,99,41,44,-1,45,0,0,46,100,10,48],[23,24,25,26,1769690908.5766702,27,101,26,26,83,8,0,0,29,10,10,30],[31,2,32,4,1769690908.577304,27,102,4,7,91,8,0,0,9,10,10,11],[23,24,25,37,1769690908.702436,27,38,37,26,83,8,0,0,29,10,10,30],[34,24,35,26,1769690908.7533804,27,103,26,26,83,8,0,0,29,10,10,30],[34,24,35,37,1769690908.9195588,27,38,37,26,83,8,0,0,29,10,10,30],[39,2,40,41,1769690908.9216326,42,43,41,44,-1,45,0,0,46,47,10,48],[49,24,50,26,1769690909.9402583,27,51,26,26,83,8,0,0,29,10,10,30],[49,24,50,37,1769690910.045806,27,52,37,26,83,8,0,0,29,10,10,30],[17,2,18,4,1769690914.9498103,5,6,4,19,101,8,0,0,20,21,10,22],[104,2,105,4,1769690917.8177706,5,106,4,4,75,8,0,0,15,10,10,16],[104,2,105,4,1769690917.900869,5,106,4,4,75,8,0,0,15,10,10,16],[107,2,108,41,1769690934.2210057,42,109,41,44,-1,45,0,0,46,110,10,48],[107,2,108,41,1769690934.3655878,42,111,41,44,-1,45,0,0,46,110,10,48],[112,2,113,41,1769690934.6584082,42,10,41,44,-1,45,0,0,46,114,10,48],[112,2,113,41,1769690938.5236512,42,10,41,44,-1,45,0,0,46,114,10,48],[112,2,113,41,1769690939.5466712,42,10,41,44,-1,45,0,0,46,114,10,48],[12,2,13,4,1769690940.887675,5,14,4,4,75,8,0,0,15,10,10,16],[107,2,108,41,1769690942.970946,42,115,41,44,-1,45,0,0,46,110,10,48],[107,2,108,41,1769690946.5424753,42,116,41,44,-1,45,0,0,46,110,10,48],[104,2,105,4,1769690950.0550948,5,76,4,4,75,8,0,0,15,10,10,16],[104,2,105,4,1769690952.3687993,5,106,4,4,75,8,0,0,15,10,10,16],[104,2,105,4,1769690962.8783503,5,76,4,4,75,8,0,0,15,10,10,16],[104,2,105,4,1769690964.3337923,5,106,4,4,75,8,0,0,15,10,10,16],[117,2,118,4,1769690964.7177697,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690964.7948054,42,123,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690964.7949036,42,123,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690964.9087589,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690964.9969547,42,125,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690964.9971259,42,125,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690966.7493952,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690966.806605,42,126,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690966.8067284,42,126,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690968.1540225,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690968.237838,42,127,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690968.2380257,42,127,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690968.5186935,119,120,4,19,101,8,0,0,20,21,10,22],[117,2,118,4,1769690968.5188585,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690968.6093486,42,128,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690968.6096452,42,128,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690969.7591472,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690969.875002,42,129,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690969.8751226,42,129,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690970.3520148,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690970.4736465,42,130,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690970.4737688,42,130,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690971.503945,119,120,4,19,101,8,0,0,20,21,10,22],[117,2,118,4,1769690971.542559,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690971.5697332,42,131,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690971.569922,42,131,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690971.6641458,42,132,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690971.6643508,42,132,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690973.4378646,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690973.6036773,42,133,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690973.603958,42,133,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690973.78366,119,120,4,19,101,8,0,0,20,21,10,22],[117,2,118,4,1769690973.8883105,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690973.9400359,42,134,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690973.9401444,42,134,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690974.0509089,42,135,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690974.051091,42,135,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690976.2418066,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690976.3153299,42,136,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690976.3156119,42,136,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690976.3568617,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690976.4757374,42,137,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690976.4760912,42,137,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690978.415599,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690978.5031307,42,138,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690978.503365,42,138,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690979.1474739,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690979.2458044,42,139,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690979.2460075,42,139,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690979.2809704,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690979.3818138,42,140,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690979.3819426,42,140,41,44,-1,45,0,0,46,124,10,48],[112,2,113,41,1769690980.1821347,42,10,41,44,-1,45,0,0,46,114,10,48],[117,2,118,4,1769690981.0775698,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690981.2071772,42,141,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690981.2072919,42,141,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690981.6372197,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690981.7718609,42,142,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690981.7721136,42,142,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690981.8143097,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690981.94315,42,143,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690981.9433478,42,143,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690983.3294409,119,120,4,19,101,8,0,0,20,21,10,22],[117,2,118,4,1769690983.3716689,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690983.4199458,42,144,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690983.4202448,42,144,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690983.5061517,42,145,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690983.5063804,42,145,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690984.8646379,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690984.9400376,42,146,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690984.9401563,42,146,41,44,-1,45,0,0,46,124,10,48],[107,2,108,41,1769690985.3391884,42,147,41,44,-1,45,0,0,46,110,10,48],[107,2,108,41,1769690985.4352265,42,148,41,44,-1,45,0,0,46,110,10,48],[117,2,118,4,1769690986.6107469,119,120,4,19,101,8,0,0,20,21,10,22],[117,2,118,4,1769690986.6588236,119,120,4,19,101,8,0,0,20,21,10,22],[117,2,118,4,1769690986.659071,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690986.8073326,42,149,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690986.80753,42,149,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690986.9287315,42,150,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690986.9290026,42,150,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690986.9295138,42,151,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690986.9296485,42,151,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690988.6486707,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690988.7504457,42,152,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690988.7506662,42,152,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690988.7873202,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690988.8703244,42,153,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690988.8705195,42,153,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690990.0880528,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690990.17913,42,154,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690990.1793609,42,154,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690990.372105,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690990.4693037,42,155,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690990.4695047,42,155,41,44,-1,45,0,0,46,124,10,48],[104,2,105,4,1769690991.0353606,5,76,4,4,75,8,0,0,15,10,10,16],[104,2,105,4,1769690991.756518,5,106,4,4,75,8,0,0,15,10,10,16],[117,2,118,4,1769690992.5236793,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690992.616694,42,156,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690992.616992,42,156,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690992.846872,119,120,4,19,101,8,0,0,20,21,10,22],[58,2,59,41,1769690992.9029926,42,157,41,44,-1,45,0,0,46,61,10,48],[121,2,122,41,1769690992.969097,42,158,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690992.9693983,42,158,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690994.2317737,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690994.3013993,42,159,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690994.3016265,42,159,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690995.0061398,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690995.265387,42,160,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690995.2655645,42,160,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690996.469636,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690996.5925587,42,161,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690996.5929244,42,161,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690997.9263497,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690998.0208064,42,162,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690998.0210257,42,162,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769690999.0324174,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769690999.1346496,42,163,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769690999.1349779,42,163,41,44,-1,45,0,0,46,124,10,48],[107,2,108,41,1769690999.770964,42,164,41,44,-1,45,0,0,46,110,10,48],[112,2,113,41,1769691000.4118334,42,10,41,44,-1,45,0,0,46,114,10,48],[117,2,118,4,1769691000.8830972,119,120,4,19,101,8,0,0,20,21,10,22],[117,2,118,4,1769691000.931576,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769691000.9759649,42,165,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769691000.9760905,42,165,41,44,-1,45,0,0,46,124,10,48],[117,2,118,4,1769691001.0266803,119,120,4,19,101,8,0,0,20,21,10,22],[121,2,122,41,1769691001.0930675,42,166,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769691001.093356,42,166,41,44,-1,45,0,0,46,124,10,48],[12,2,13,4,1769691001.1635164,5,14,4,4,75,8,0,0,15,10,10,16],[121,2,122,41,1769691001.2237504,42,167,41,44,-1,45,0,0,46,124,10,48],[121,2,122,41,1769691001.2239865,42,167,41,44,-1,45,0,0,46,124,10,48],[168,2,169,41,1769691001.4591139,42,10,41,44,-1,45,0,0,46,170,10,48]]
+    </script>
+
+    <script>
+      // Data Parsing
+      let startTime = 1769690751.471251; // Seconds
+      const totalDuration = 157.28212928771973;
+      const dictionary = JSON.parse(document.getElementById('dictionary-data').textContent);
+      const rawEvents = JSON.parse(document.getElementById('event-data').textContent);
+
+      // Reconstruct Events
+      const allEvents = rawEvents.map(e => ({
+        name: dictionary[e[0]],
+        className: dictionary[e[1]],
+        path: dictionary[e[2]],
+        type: dictionary[e[3]],
+        timestamp: e[4],
+        origin: dictionary[e[5]],
+
+        args: dictionary[e[6]],
+        method: dictionary[e[7]],
+
+        funcName: dictionary[e[8]],
+        funcLine: e[9],
+        funcSource: dictionary[e[10]],
+        isExecutor: e[11] === 1,
+        isActor: e[12] === 1,
+
+        funcHash: dictionary[e[13]],
+        upvalues: dictionary[e[14]],
+        protos: dictionary[e[15]],
+        constants: dictionary[e[16]]
+      }));
+
+      if (allEvents.length > 0) {
+        const minTimestamp = Math.min(...allEvents.map(e => e.timestamp));
+        if (minTimestamp < startTime) {
+          startTime = minTimestamp;
+        }
+      }
+
+      // Preprocess events
+      allEvents.forEach(evt => {
+        evt.relTime = Math.max(0, evt.timestamp - startTime);
+
+        const typeLower = evt.type.toLowerCase();
+        const methodLower = evt.method ? evt.method.toLowerCase() : '';
+
+        if (methodLower.includes('client') || typeLower.includes('client')) {
+          evt.typeClass = 'incoming';
+        } else {
+          evt.typeClass = 'outgoing';
+        }
+      });
+
+      // State
+      let filteredEvents = allEvents;
+      let zoomLevel = 1;
+      let selectedEvent = null;
+      let filterTimeout = null;
+      let filterMinTime = 0;
+      let filterMaxTime = totalDuration;
+
+      // Initialize Time Inputs
+      document.getElementById('minTimeInput').value = "0";
+      document.getElementById('maxTimeInput').value = totalDuration.toFixed(2);
+
+      // Virtual Scroll State
+      let lastStartIndex = -1;
+      let lastEndIndex = -1;
+      let isScrolling = false;
+
+      // DOM Elements
+      const rowsContainer = document.getElementById('rowsContainer');
+      const virtualSpacer = document.getElementById('virtualSpacer');
+      const virtualContent = document.getElementById('virtualContent');
+      const rulerContainer = document.getElementById('ruler');
+      const detailsPanel = document.getElementById('detailsPanel');
+      const detailsContent = document.getElementById('detailsContent');
+      const timelineHeader = document.getElementById('timelineHeader');
+      const statsLabel = document.getElementById('statsLabel');
+
+
+      // Heatmap State
+      let currentView = 'timeline';
+      let heatmapZoom = 1;
+      let detailsWasVisible = false;
+      const heatmapCanvas = document.getElementById('heatmapCanvas');
+      const heatmapTooltip = document.getElementById('heatmapTooltip');
+
+      const timelinePanel = document.getElementById('timelinePanel');
+      const heatmapPanel = document.getElementById('heatmapPanel');
+
+      // Heatmap Interaction
+      heatmapCanvas.addEventListener('wheel', (e) => {
+        if (currentView !== 'heatmap') return;
+        e.preventDefault();
+
+        const delta = e.deltaY > 0 ? 1.1 : 0.9;
+        heatmapZoom = Math.max(1, Math.min(50, heatmapZoom * delta));
+        renderHeatmap();
+      }, { passive: false });
+
+      heatmapCanvas.addEventListener('mousemove', (e) => {
+        if (currentView !== 'heatmap') return;
+        const rect = heatmapCanvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        if (!window.lastHeatmapData) return;
+
+        const { sortedRemotes, rowHeight, binWidth, remotes, maxBinCount, timeBins, binDuration, margin, scrollLeft } = window.lastHeatmapData;
+        const width = heatmapPanel.clientWidth;
+        const height = heatmapPanel.clientHeight;
+
+        if (x < margin.left || x > width - margin.right || y < margin.top || y > height - margin.bottom) {
+          heatmapTooltip.style.display = 'none';
+          return;
+        }
+
+        const rowIndex = Math.floor((y - margin.top) / rowHeight);
+
+        // Calculate colIndex based on virtual position (x + scrollLeft)
+        const colIndex = Math.floor((x - margin.left + scrollLeft) / binWidth);
+
+        if (rowIndex >= 0 && rowIndex < sortedRemotes.length && colIndex >= 0 && colIndex < timeBins) {
+          const remote = sortedRemotes[rowIndex];
+          // Calculate count for this bin
+          let count = 0;
+          remotes[remote].forEach(evt => {
+            const binIndex = Math.min(Math.floor(evt.relTime / binDuration), timeBins - 1);
+            if (binIndex === colIndex) count++;
+          });
+
+          heatmapTooltip.style.display = 'block';
+          heatmapTooltip.innerHTML = `<b>${remote}</b><br>Time: ${(colIndex * binDuration).toFixed(1)}s<br>Count: ${count}`;
+
+          const tooltipWidth = heatmapTooltip.offsetWidth;
+          const panelWidth = heatmapPanel.clientWidth;
+
+          let leftPos = x + 10;
+          if (leftPos + tooltipWidth > panelWidth - 10) {
+            leftPos = x - tooltipWidth - 10;
+          }
+
+          heatmapTooltip.style.left = leftPos + 'px';
+          heatmapTooltip.style.top = (y + 10) + 'px';
+        } else {
+          heatmapTooltip.style.display = 'none';
+        }
+      });
+
+      heatmapCanvas.addEventListener('mouseleave', () => {
+        heatmapTooltip.style.display = 'none';
+      });
+
+      document.getElementById('heatmapScroll').addEventListener('scroll', () => {
+        if (currentView === 'heatmap') {
+          renderHeatmap();
+        }
+      });
+
+      function switchView(view) {
+        currentView = view;
+        document.querySelectorAll('.view-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.innerText.toLowerCase() === view);
+        });
+
+        if (view === 'timeline') {
+          timelinePanel.style.display = 'flex';
+          heatmapPanel.classList.remove('visible');
+
+          if (detailsWasVisible) {
+            detailsPanel.classList.add('visible');
+          }
+
+          renderVirtualRows(true);
+        } else {
+          if (detailsPanel.classList.contains('visible')) {
+            detailsWasVisible = true;
+            detailsPanel.classList.remove('visible');
+          } else {
+            detailsWasVisible = false;
+          }
+
+          timelinePanel.style.display = 'none';
+          heatmapPanel.classList.add('visible');
+          renderHeatmap();
+        }
+      }
+
+      function renderHeatmap() {
+        const ctx = heatmapCanvas.getContext('2d');
+        const containerWidth = heatmapPanel.clientWidth;
+        const height = heatmapPanel.clientHeight;
+        const scrollLeft = document.getElementById('heatmapScroll').scrollLeft;
+
+        // Calculate total virtual width
+        const totalWidth = containerWidth * heatmapZoom;
+
+        // Update Spacer
+        document.getElementById('heatmapSpacer').style.width = totalWidth + 'px';
+
+        const dpr = window.devicePixelRatio || 1;
+
+        // Canvas is always viewport size
+        heatmapCanvas.width = containerWidth * dpr;
+        heatmapCanvas.height = height * dpr;
+        ctx.scale(dpr, dpr);
+
+        ctx.fillStyle = '#0d1117';
+        ctx.fillRect(0, 0, containerWidth, height);
+
+        if (filteredEvents.length === 0) return;
+
+        const remotes = {};
+        filteredEvents.forEach(evt => {
+          if (!remotes[evt.name]) remotes[evt.name] = [];
+          remotes[evt.name].push(evt);
+        });
+
+        const sortedRemotes = Object.keys(remotes).sort((a, b) => remotes[b].length - remotes[a].length);
+
+        const margin = { top: 30, right: 20, bottom: 20, left: 150 };
+
+        // Virtual chart width
+        const chartWidth = totalWidth - margin.left - margin.right;
+        const chartHeight = height - margin.top - margin.bottom;
+
+        // Apply Zoom to time bins
+        const timeBins = Math.floor(100 * heatmapZoom);
+        const binWidth = chartWidth / timeBins;
+        const binDuration = totalDuration / timeBins;
+
+        // Adjust row height to fit
+        const rowHeight = Math.min(30, chartHeight / sortedRemotes.length);
+
+        // Store data for tooltip (adjusted for virtual scroll)
+        window.lastHeatmapData = { sortedRemotes, rowHeight, binWidth, remotes, timeBins, binDuration, margin, scrollLeft };
+
+        ctx.strokeStyle = '#30363d';
+        ctx.lineWidth = 1;
+
+        ctx.font = '11px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+
+        let maxBinCount = 0;
+        sortedRemotes.forEach(remote => {
+          const bins = new Array(timeBins).fill(0);
+          remotes[remote].forEach(evt => {
+            const binIndex = Math.min(Math.floor(evt.relTime / binDuration), timeBins - 1);
+            bins[binIndex]++;
+          });
+          maxBinCount = Math.max(maxBinCount, ...bins);
+        });
+
+        // Update Legend Labels
+        window.lastHeatmapData.maxBinCount = maxBinCount;
+        window.lastHeatmapData.maxBinCount = maxBinCount;
+
+        sortedRemotes.forEach((remote, i) => {
+          const y = margin.top + (i * rowHeight);
+
+          // Draw Label (Fixed position)
+          ctx.fillStyle = '#8b949e';
+          ctx.fillText(remote.length > 20 ? remote.slice(0, 18) + '...' : remote, margin.left - 10, y + rowHeight / 2);
+
+          // Draw Line
+          ctx.beginPath();
+          ctx.moveTo(margin.left, y);
+          ctx.lineTo(containerWidth - margin.right, y);
+          ctx.stroke();
+
+          const bins = new Array(timeBins).fill(0);
+          remotes[remote].forEach(evt => {
+            const binIndex = Math.min(Math.floor(evt.relTime / binDuration), timeBins - 1);
+            bins[binIndex]++;
+          });
+
+          bins.forEach((count, binIndex) => {
+            if (count === 0) return;
+
+            // Calculate virtual X
+            const virtualX = margin.left + (binIndex * binWidth);
+
+            // Apply scroll offset
+            const screenX = virtualX - scrollLeft;
+
+            // Only draw if visible
+            if (screenX + binWidth < margin.left || screenX > containerWidth - margin.right) return;
+
+            // Clamp to chart area
+            const drawX = Math.max(margin.left, screenX);
+            const drawWidth = Math.min(binWidth, (containerWidth - margin.right) - drawX);
+
+            const intensity = count / maxBinCount;
+            const hue = (1 - intensity) * 240;
+            ctx.fillStyle = `hsla(${hue}, 70%, 50%, 0.8)`;
+
+            ctx.fillRect(drawX, y + 2, drawWidth - 1, rowHeight - 4);
+          });
+        });
+
+        ctx.fillStyle = '#8b949e';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'top';
+
+        const numTicks = 5 * Math.ceil(heatmapZoom);
+
+        for (let i = 0; i <= numTicks; i++) {
+          const virtualX = margin.left + (chartWidth * (i / numTicks));
+          const screenX = virtualX - scrollLeft;
+
+          if (screenX < margin.left || screenX > containerWidth - margin.right) continue;
+
+          const time = (totalDuration * (i / numTicks)).toFixed(1) + 's';
+          ctx.fillText(time, screenX, margin.top - 20);
+
+          ctx.beginPath();
+          ctx.moveTo(screenX, margin.top);
+          ctx.lineTo(screenX, height - margin.bottom);
+          ctx.stroke();
+        }
+      }
+
+      // Resize observer for heatmap
+      new ResizeObserver(() => {
+        if (currentView === 'heatmap' && heatmapPanel.classList.contains('visible')) {
+          renderHeatmap();
+        }
+      }).observe(heatmapPanel);
+
+      // Window resize handler for timeline
+      window.addEventListener('resize', () => {
+        if (currentView === 'timeline') {
+          renderVirtualRows(true);
+          renderRuler();
+        }
+      });
+
+      // Virtual Scroll Config
+      const ROW_HEIGHT = 29; // 28px + 1px border
+      const BUFFER_SIZE = 5;
+
+      function formatTime(seconds) {
+        if (seconds < 1) return (seconds * 1000).toFixed(1) + 'ms';
+        return seconds.toFixed(2) + 's';
+      }
+
+      function formatAbsTime(timestamp) {
+        const date = new Date(timestamp * 1000);
+        return date.toLocaleTimeString();
+      }
+
+      function getIconUrl(className) {
+        return `https://robloxapi.github.io/ref/icons/dark/${className}.png`;
+      }
+
+      function escapeHtml(text) {
+        if (!text) return '';
+        return text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function syntaxHighlight(text) {
+        if (!text) return '';
+
+        text = escapeHtml(text);
+        return text
+          .replace(/&quot;((?:[^&]|&(?!(quot;)))*)&quot;/g, '<span class="hl-str">"$1"</span>')
+          .replace(/\b(\d+(\.\d+)?)\b/g, '<span class="hl-num">$1</span>')
+          .replace(/\b(true|false)\b/g, '<span class="hl-bool">$1</span>')
+          .replace(/\b(nil)\b/g, '<span class="hl-nil">$1</span>');
+      }
+
+      // Toast Logic
+      function showToast(message) {
+        const toast = document.getElementById('toast');
+        const msgSpan = document.getElementById('toastMessage');
+        msgSpan.innerText = message;
+        toast.classList.add('visible');
+        setTimeout(() => {
+          toast.classList.remove('visible');
+        }, 2000);
+      }
+
+      function copyText(text, message = "Copied to clipboard") {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(message);
+        });
+      }
+
+      function copyArgs(btn) {
+        if (selectedEvent) {
+          navigator.clipboard.writeText(selectedEvent.args).then(() => {
+            btn.classList.add('copied');
+            setTimeout(() => btn.classList.remove('copied'), 2000);
+          });
+        }
+      }
+
+      function toggleCallerDropdown(e) {
+        e.stopPropagation();
+        const menu = document.getElementById('callerDropdown');
+        if (menu) {
+          menu.classList.toggle('visible');
+        }
+      }
+
+      function copyCallerData(type) {
+        if (!selectedEvent) return;
+        let text = "";
+        let msg = "Copied to clipboard";
+        switch (type) {
+          case 'hash':
+            text = selectedEvent.funcHash || "N/A";
+            msg = "Function Hash copied";
+            break;
+          case 'upvalues':
+            text = selectedEvent.upvalues || "{}";
+            msg = "Upvalues copied";
+            break;
+          case 'protos':
+            text = selectedEvent.protos || "[]";
+            msg = "Protos copied";
+            break;
+          case 'path':
+            text = selectedEvent.origin || "N/A";
+            msg = "Script Path copied";
+            break;
+          case 'source':
+            text = selectedEvent.funcSource || "N/A";
+            msg = "Source copied";
+            break;
+        }
+        copyText(text, msg);
+        document.getElementById('callerDropdown').classList.remove('visible');
+      }
+
+      // Render Ruler
+      function renderRuler() {
+        rulerContainer.innerHTML = '';
+        const tickCount = Math.max(5, Math.floor(5 * zoomLevel));
+        for (let i = 0; i <= tickCount; i++) {
+          const pct = (i / tickCount) * 100;
+          const time = (totalDuration * (i / tickCount));
+          const tick = document.createElement('div');
+          tick.className = 'tick';
+          tick.style.left = pct + '%';
+          tick.innerText = formatTime(time);
+          rulerContainer.appendChild(tick);
+        }
+      }
+
+      // Scroll Sync
+      rowsContainer.addEventListener('scroll', () => {
+        timelineHeader.scrollLeft = rowsContainer.scrollLeft;
+      });
+
+      // Virtual Rendering
+      function renderVirtualRows(force = false) {
+        const scrollTop = rowsContainer.scrollTop;
+        const containerHeight = rowsContainer.clientHeight;
+
+        const totalHeight = filteredEvents.length * ROW_HEIGHT;
+        virtualSpacer.style.height = totalHeight + 'px';
+
+        const startIndex = Math.floor(scrollTop / ROW_HEIGHT);
+        const endIndex = Math.min(filteredEvents.length, Math.ceil((scrollTop + containerHeight) / ROW_HEIGHT) + BUFFER_SIZE);
+
+        if (!force && startIndex === lastStartIndex && endIndex === lastEndIndex) {
+          return;
+        }
+
+        lastStartIndex = startIndex;
+        lastEndIndex = endIndex;
+
+        const visibleEvents = filteredEvents.slice(Math.max(0, startIndex - BUFFER_SIZE), endIndex);
+        const startOffset = Math.max(0, startIndex - BUFFER_SIZE) * ROW_HEIGHT;
+
+        virtualContent.style.transform = `translateY(${startOffset}px)`;
+
+        const fragment = document.createDocumentFragment();
+        const zoomWidth = (100 * zoomLevel) + '%';
+
+        // Sync Ruler Width
+        document.getElementById('ruler').style.width = zoomWidth;
+
+        visibleEvents.forEach((evt) => {
+          const row = document.createElement('div');
+          row.className = 'trace-row';
+          if (selectedEvent === evt) row.classList.add('selected');
+
+          row.evtData = evt;
+          row.onclick = function () { selectRow(this, evt); };
+
+          const listCol = document.createElement('div');
+          listCol.className = 'row-list';
+          listCol.innerHTML = `
+                    <div class="type-icon" style="background-image: url('${getIconUrl(evt.className)}')"></div>
+                    <div class="remote-name" title="${evt.name}">${evt.name}</div>
+                `;
+
+          const timelineCol = document.createElement('div');
+          timelineCol.className = 'row-timeline';
+          timelineCol.style.width = zoomWidth;
+          timelineCol.style.flex = 'none';
+
+          const marker = document.createElement('div');
+          marker.className = `timeline-marker ${evt.typeClass}`;
+
+          let leftPct = ((evt.relTime) / totalDuration) * 100;
+          if (leftPct > 99) leftPct = 99;
+
+          let widthPct = (0.05 / totalDuration) * 100;
+          if (widthPct < 1) widthPct = 1;
+
+          marker.style.left = leftPct + '%';
+          marker.style.width = widthPct + '%';
+
+          timelineCol.appendChild(marker);
+          row.appendChild(listCol);
+          row.appendChild(timelineCol);
+          fragment.appendChild(row);
+        });
+
+        virtualContent.innerHTML = '';
+        virtualContent.appendChild(fragment);
+      }
+
+      // Ctrl+F Handler
+      document.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+          e.preventDefault();
+          const filterInput = document.getElementById('filterInput');
+          filterInput.focus();
+          filterInput.select();
+        }
+      });
+
+      // Initial Render
+      renderVirtualRows();
+      renderRuler();
+
+      function selectRow(el, evt) {
+        const prev = virtualContent.querySelector('.trace-row.selected');
+        if (prev) prev.classList.remove('selected');
+
+        el.classList.add('selected');
+        selectedEvent = evt;
+
+        detailsPanel.classList.add('visible');
+
+        const isIncoming = evt.typeClass === 'incoming';
+        const badgeClass = isIncoming ? 'incoming' : 'outgoing';
+
+        // Flags with Unified Style
+        let flagsHtml = '';
+        if (evt.isExecutor) {
+          flagsHtml += `<div class="badge-pill executor">Executor</div>`;
+        }
+        if (evt.isActor) {
+          flagsHtml += `<div class="badge-pill actor">Actor</div>`;
+        }
+        if (!flagsHtml) flagsHtml = '<span style="color:var(--text-secondary); font-size:11px;">None</span>';
+
+        const highlightedArgs = syntaxHighlight(evt.args);
+
+        // Icons
+        const copyIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy icon-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`;
+        const checkIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check icon-check"><path d="M20 6 9 17l-5-5"/></svg>`;
+        const parenthesesIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-parentheses"><path d="M8 21s-4-3-4-9 4-9 4-9"/><path d="M16 3s4 3 4 9-4 9-4 9"/></svg>`;
+
+        // Dropdown Icons
+        const hashIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hash"><line x1="4" x2="20" y1="9" y2="9"/><line x1="4" x2="20" y1="15" y2="15"/><line x1="10" x2="8" y1="3" y2="21"/><line x1="16" x2="14" y1="3" y2="21"/></svg>`;
+        const upvaluesIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-a-arrow-up"><path d="m14 11 4-4 4 4"/><path d="M18 16V7"/><path d="m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16"/><path d="M3.304 13h6.392"/></svg>`;
+        const protosIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-function"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3"/><path d="M9 11.2h5.7"/></svg>`;
+        const pathIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-route"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>`;
+        const sourceIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>`;
+        const boxIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22v-9"/></svg>`;
+
+        detailsContent.innerHTML = `
+                <div class="details-header-top">
+                    <div class="details-title-group">
+                        <div class="details-icon-large" style="background-image: url('${getIconUrl(evt.className)}')"></div>
+                        <div class="details-name-large">${escapeHtml(evt.name)}</div>
+                    </div>
+                    <div class="details-actions">
+                        <div class="badge-pill ${badgeClass}">${evt.typeClass.toUpperCase()}</div>
+                        <div class="close-btn" onclick="closeDetails()">×</div>
+                    </div>
+                </div>
+
+                <div class="details-path-row" onclick="copyText('${escapeHtml(evt.path).replace(/'/g, "\\'").replace(/"/g, "&quot;")}', 'Remote Path copied')" title="Click to copy path"><span class="clickable-path">${escapeHtml(evt.path)}</span></div>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>Method</h4>
+                        <div>${escapeHtml(evt.method)}</div>
+                    </div>
+                    <div class="info-item">
+                        <h4>Timestamp</h4>
+                        <div>${formatAbsTime(evt.timestamp)} <span style="color:var(--text-secondary)">(+${formatTime(evt.relTime)})</span></div>
+                    </div>
+                    <div class="info-item">
+                        <h4>ClassName</h4>
+                        <div>${escapeHtml(evt.className)}</div>
+                    </div>
+                    <div class="info-item">
+                        <h4>Remote Path</h4>
+                        <div class="remote-path-copy clickable-path" onclick="copyText('${escapeHtml(evt.path).replace(/'/g, "\\'").replace(/"/g, "&quot;")}', 'Remote Path copied')" title="Click to copy path">${escapeHtml(evt.path)}</div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="box-title">Caller Data</div>
+                    <button class="copy-icon-btn" onclick="toggleCallerDropdown(event)" title="Copy Caller Info">${copyIcon}</button>
+
+                    <div id="callerDropdown" class="dropdown-menu">
+                        <div class="dropdown-item" onclick="copyCallerData('hash')">${hashIcon} Function Hash</div>
+                        <div class="dropdown-item" onclick="copyCallerData('upvalues')">${upvaluesIcon} Upvalues</div>
+                        <div class="dropdown-item" onclick="copyCallerData('protos')">${protosIcon} Protos</div>
+                        <div class="dropdown-item" onclick="copyCallerData('constants')">${boxIcon} Constants</div>
+                        <div class="dropdown-item" onclick="copyCallerData('path')">${pathIcon} Script Path</div>
+                        <div class="dropdown-item" onclick="copyCallerData('source')">${sourceIcon} Func Source</div>
+                    </div>
+
+                    <div class="caller-header">
+                        <div class="caller-icon">${parenthesesIcon}</div>
+                        <div class="caller-info">
+                            <div class="caller-name">${escapeHtml(evt.funcName)} <span class="caller-source">:${evt.funcLine}</span></div>
+                            <div class="caller-source">${escapeHtml(evt.funcSource)}</div>
+                        </div>
+                    </div>
+
+                    <div class="info-grid-2" style="margin-bottom:0; gap:10px;">
+                         <div class="info-item-2" style="margin-right: 100px;">
+                            <h4>Flags</h4>
+                            <div class="flags-row">${flagsHtml}</div>
+                         </div>
+                         <div class="info-item-2">
+                            <h4>Origin</h4>
+                            <div class="origin-row clickable-path" onclick="copyText('${escapeHtml(evt.origin).replace(/'/g, "\\'").replace(/"/g, "&quot;")}', 'Origin copied')" title="Click to copy origin">${escapeHtml(evt.origin)}</div>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="box-title">Arguments</div>
+                    <button class="copy-icon-btn" onclick="copyArgs(this)" title="Copy Arguments">
+                        ${copyIcon}
+                        ${checkIcon}
+                    </button>
+                    <div class="args-content">${highlightedArgs}</div>
+                </div>
+            `;
+      }
+
+      function closeDetails() {
+        detailsPanel.classList.remove('visible');
+        const prev = virtualContent.querySelector('.trace-row.selected');
+        if (prev) prev.classList.remove('selected');
+        selectedEvent = null;
+      }
+
+      function handleFilterInput() {
+        if (filterTimeout) clearTimeout(filterTimeout);
+        filterTimeout = setTimeout(applyFilters, 300);
+      }
+
+      function toggleSearchOptions() {
+        const widget = document.getElementById('searchChevron').closest('.search-widget');
+        const options = document.getElementById('searchOptions');
+        const chevron = document.getElementById('searchChevron');
+
+        options.classList.toggle('visible');
+        chevron.classList.toggle('expanded');
+        widget.classList.toggle('expanded');
+      }
+
+      function handleTimeInput() {
+        const minVal = parseFloat(document.getElementById('minTimeInput').value);
+        const maxVal = parseFloat(document.getElementById('maxTimeInput').value);
+        const unit = parseFloat(document.getElementById('timeUnitSelect').value);
+
+        filterMinTime = isNaN(minVal) ? 0 : minVal * unit;
+        filterMaxTime = isNaN(maxVal) ? totalDuration : maxVal * unit;
+
+        if (filterTimeout) clearTimeout(filterTimeout);
+        filterTimeout = setTimeout(applyFilters, 300);
+      }
+
+      function applyFilters() {
+        const query = document.getElementById('filterInput').value.toLowerCase();
+        const checkIncoming = document.getElementById('filterIncoming').checked;
+        const checkOutgoing = document.getElementById('filterOutgoing').checked;
+        const checkActor = document.getElementById('filterActor').checked;
+        const checkNonActor = document.getElementById('filterNonActor').checked;
+        const checkArgs = document.getElementById('filterArgs').checked;
+        const checkProto = document.getElementById('filterProto').checked;
+        const checkConst = document.getElementById('filterConst').checked;
+        const checkHash = document.getElementById('filterHash').checked;
+        const checkSource = document.getElementById('filterSource').checked;
+
+        filteredEvents = allEvents.filter(evt => {
+          // Filter by Type (Incoming/Outgoing)
+          if (checkIncoming || checkOutgoing) {
+            const isIncoming = evt.typeClass === 'incoming';
+            const isOutgoing = evt.typeClass === 'outgoing';
+            if (!((checkIncoming && isIncoming) || (checkOutgoing && isOutgoing))) {
+              return false;
+            }
+          }
+
+          // Filter by Actor Status
+          if (checkActor || checkNonActor) {
+            const isActor = evt.isActor;
+            const isNonActor = !evt.isActor;
+            if (!((checkActor && isActor) || (checkNonActor && isNonActor))) {
+              return false;
+            }
+          }
+
+          let matchesText = !query;
+
+          if (!matchesText) {
+            // Default search: Name and Type
+            if (evt.name.toLowerCase().includes(query) || evt.type.toLowerCase().includes(query)) {
+              matchesText = true;
+            }
+            // Advanced search options
+            else {
+              if (checkArgs && evt.args && evt.args.toLowerCase().includes(query)) matchesText = true;
+              else if (checkProto && evt.protos && evt.protos.toLowerCase().includes(query)) matchesText = true;
+              else if (checkConst && evt.constants && evt.constants.toLowerCase().includes(query)) matchesText = true;
+              else if (checkHash && evt.funcHash && evt.funcHash.toLowerCase().includes(query)) matchesText = true;
+              else if (checkSource && evt.funcSource && evt.funcSource.toLowerCase().includes(query)) matchesText = true;
+            }
+          }
+
+          const matchesTime = evt.relTime >= filterMinTime && evt.relTime <= filterMaxTime;
+
+          return matchesText && matchesTime;
+        });
+
+        // Update Stats
+        statsLabel.innerText = `${filteredEvents.length} Events • ${totalDuration.toFixed(2)}s`;
+
+        // Reset Scroll
+        rowsContainer.scrollTop = 0;
+        lastStartIndex = -1;
+        lastEndIndex = -1;
+
+        if (currentView === 'timeline') {
+          renderVirtualRows(true);
+        } else {
+          renderHeatmap();
+        }
+      } function updateZoom() {
+        const width = (100 * zoomLevel) + '%';
+        rulerContainer.style.width = width;
+        renderRuler();
+        lastStartIndex = -1;
+        renderVirtualRows(true);
+      }
+
+      rowsContainer.addEventListener('wheel', (e) => {
+        if (e.ctrlKey) {
+          e.preventDefault();
+          if (e.deltaY < 0) {
+            zoomLevel = Math.min(zoomLevel * 1.1, 20);
+          } else {
+            zoomLevel = Math.max(zoomLevel / 1.1, 1);
+          }
+          updateZoom();
+        }
+      });
+
+      rowsContainer.addEventListener('scroll', () => {
+        timelineHeader.scrollLeft = rowsContainer.scrollLeft;
+
+        if (!isScrolling) {
+          window.requestAnimationFrame(() => {
+            renderVirtualRows();
+            isScrolling = false;
+          });
+          isScrolling = true;
+        }
+      });
+
+      const sessionInfo = document.querySelector('.session-info');
+      const tooltip = document.querySelector('.session-tooltip');
+
+      sessionInfo.addEventListener('click', (e) => {
+        e.stopPropagation();
+        tooltip.classList.toggle('visible');
+      });
+
+      tooltip.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+
+      document.addEventListener('click', () => {
+        tooltip.classList.remove('visible');
+        const dropdown = document.getElementById('callerDropdown');
+        if (dropdown) dropdown.classList.remove('visible');
+      });
+    </script>
+  </body>
+</html>
