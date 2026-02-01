@@ -44,11 +44,19 @@ end
 
 function GodMode.Stop()
     State.Enabled = false
+    if State.Thread then
+        pcall(function() task.cancel(State.Thread) end)
+        State.Thread = nil
+    end
     print("[OP] GodMode: STOPPED")
 end
 
 function GodMode.IsEnabled()
     return State.Enabled
+end
+
+function GodMode.Cleanup()
+    GodMode.Stop()
 end
 
 return GodMode

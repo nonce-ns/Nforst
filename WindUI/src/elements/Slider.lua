@@ -276,6 +276,10 @@ function Element:New(Config)
                         end
                     end)
                 else
+                    -- Nil check to prevent error
+                    if Value == nil then
+                        Value = LastValue or Slider.Value.Default or Slider.Value.Min or 0
+                    end
                     Value = math.clamp(Value, Slider.Value.Min or 0, Slider.Value.Max or 100)
                     
                     local delta = math.clamp((Value - (Slider.Value.Min or 0)) / ((Slider.Value.Max or 100) - (Slider.Value.Min or 0)), 0, 1)

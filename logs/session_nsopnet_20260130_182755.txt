@@ -1,0 +1,66 @@
+=== WindUI Log Session ===
+Started: 2026-01-30 18:27:55
+User: nsopnet (ID: 8401342884)
+========================================
+
+[09:27:55][Info] Loader: Fetching MainInterface...
+[09:27:57][Info] [OP] Loading modules...
+[09:27:57][Info] [OP] Modules loaded!
+[09:27:57][Info] [OP] Initializing 99 Nights OP Script...
+[09:27:57][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[09:27:57][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[09:27:57][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[09:27:57][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[09:27:58][Info] [OP] Window created. Type: table
+[09:27:59][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[09:27:59][Info] [OP] UI Created! Ready to use.
+[09:27:59][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[09:28:06][Info] [DEBUG] KillAura: No ToolHandle (not holding weapon)
+[09:28:06][Info] [OP] KillAura: ON
+[09:28:10][Info] [Remote][Success] RemoteEvents found: 196 remotes
+[09:28:10][Info] [DEBUG] KillAura: Holding Melee = Old Axe
+[09:28:11][Info] deactivate and unequip
+[09:28:11][Info] [DEBUG] KillAura: No ToolHandle (not holding weapon)
+[09:28:13][Info] [DEBUG] KillAura: Holding Melee = Old Axe
+[09:28:16][Info] deactivate and unequip
+[09:28:16][Info] [DEBUG] KillAura: No ToolHandle (not holding weapon)
+[09:28:20][Info] [DEBUG] KillAura: Holding Melee = Old Axe
+[09:28:23][Info] deactivate and unequip
+[09:28:23][Info] [DEBUG] KillAura: No ToolHandle (not holding weapon)
+[09:28:27][Info] [OP] KillAura: OFF
+[09:28:34][Info] [OP] TreeFarm: Filter ON - Small Tree
+[09:28:40][Info] [DEBUG] TreeFarm: No ToolHandle (not holding weapon)
+[09:28:40][Info] [OP] TreeFarm: ON
+[09:28:44][Info] [DEBUG] TreeFarm: Holding Axe = Old Axe
+[09:28:44][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0
+[09:28:46][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0
+[09:28:48][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0
+[09:28:50][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0
+[09:29:01][Info] deactivate and unequip
+[09:29:01][Info] [DEBUG] TreeFarm: No ToolHandle (not holding weapon)
+[09:29:02][Info] [DEBUG] TreeFarm: Holding Axe = Old Axe
+[09:29:08][Info] deactivate and unequip
+[09:29:08][Info] [DEBUG] TreeFarm: No ToolHandle (not holding weapon)
+[09:29:10][Info] [DEBUG] TreeFarm: Holding Axe = Old Axe
+[09:29:10][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0
+[09:29:13][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0
+[09:29:15][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0
+[09:29:17][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0
+[09:29:29][Info] deactivate and unequip
+[09:29:29][Info] [DEBUG] TreeFarm: No ToolHandle (not holding weapon)
+[09:29:33][Info] [DEBUG] TreeFarm: Holding Axe = Old Axe
+[09:29:43][Info] deactivate and unequip
+[09:29:43][Info] [DEBUG] TreeFarm: No ToolHandle (not holding weapon)
+[09:29:44][Info] [DEBUG] TreeFarm: Holding Axe = Old Axe
+[09:29:46][Info] deactivate and unequip
+[09:29:46][Info] [DEBUG] TreeFarm: No ToolHandle (not holding weapon)
+[09:29:49][Info] [OP] TreeFarm: OFF
+[09:29:50][Info] [OP] TreeFarm: ON
+[09:29:54][Info] [DEBUG] TreeFarm: Holding Axe = Old Axe
+[09:29:57][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=1 | Skipped(Big)=0
+[09:29:58][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=2 | Skipped(Big)=0
+[09:29:59][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=1 | Skipped(Big)=0
+[09:30:02][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=1 | Skipped(Big)=0
+[09:30:04][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=1 | Skipped(Big)=0
+[09:30:08][Info] deactivate and unequip
+[09:30:08][Info] [DEBUG] TreeFarm: No ToolHandle (not holding weapon)

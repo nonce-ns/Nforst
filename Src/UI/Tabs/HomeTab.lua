@@ -47,7 +47,7 @@ end
 function HomeTab.Create(Window, CONFIG, WindUI)
     local Tab = Window:Tab({
         Title = "Home",
-        Icon = "solar:home-2-bold",
+        Icon = "lucide:house",
         IconColor = CONFIG.COLORS.Blue,
     })
 
@@ -69,7 +69,7 @@ function HomeTab.Create(Window, CONFIG, WindUI)
     -- ========================================  
     Tab:Paragraph({
         Title = getExecutor(),
-        Desc = string.format("Script v1.2.1 • WindUI v%s", WindUI.Version or "Latest"),
+        Desc = string.format("Script v2.5.0 • WindUI v%s", WindUI.Version or "Latest"),
         Image = "solar:monitor-bold",
         ImageColor = CONFIG.COLORS.Purple,
     })
@@ -80,8 +80,8 @@ function HomeTab.Create(Window, CONFIG, WindUI)
     -- CHANGELOG
     -- ========================================
     Tab:Paragraph({
-        Title = "v1.2.1 - Dashboard Update",
-        Desc = "• Clean Home tab\n• God Mode (DamagePlayer)\n• Auto Eat with scanner",
+        Title = "v2.5.0 - Bug Fixes & Optimizations",
+        Desc = "• Fixed 14 bugs across all features\n• Added rate limiting & type checks\n• Improved cache validation",
         Image = "solar:star-bold",
         ImageColor = CONFIG.COLORS.Yellow,
     })
@@ -117,7 +117,12 @@ function HomeTab.Create(Window, CONFIG, WindUI)
             if getgenv and getgenv().OP_FEATURES then
                 for name, feature in pairs(getgenv().OP_FEATURES) do
                     pcall(function()
-                        if feature.Stop then 
+                        -- Call Cleanup first (full resource cleanup)
+                        if feature.Cleanup then 
+                            feature.Cleanup() 
+                            print("[OP] Cleanup: " .. tostring(name))
+                        -- Fallback to Stop
+                        elseif feature.Stop then 
                             feature.Stop() 
                             print("[OP] Stopped: " .. tostring(name))
                         end

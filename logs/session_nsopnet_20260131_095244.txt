@@ -1,0 +1,993 @@
+=== WindUI Log Session ===
+Started: 2026-01-31 09:52:44
+User: nsopnet (ID: 8401342884)
+========================================
+
+[00:52:28][Error] RunService:fireRenderStepEarlyFunctions unexpected error while invoking callback: Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule:105: attempt to index nil with 'Rain_Thick'
+[00:52:28][Error] Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule:105: attempt to index nil with 'Rain_Thick'
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 105 - function makeLessRainAndSnow
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 120 - function LessRain
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.CampfireEffectModule', Line 20 - function Enable
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.CampfireEffectModule', Line 55 - function SetEnabled
+    Script 'Players.nsopnet.PlayerScripts.Client.LightHandler', Line 51
+    Stack End
+[00:52:44][Info] Loader: Fetching MainInterface...
+[00:52:44][Error] ImageLabel is not a valid member of Frame "Frame"
+    Stack Begin
+    Script 'Script', Line 12245
+    Stack End
+[00:52:47][Info] [OP] ItemCollector: Finished! Collected 500 items
+[00:52:47][Info] [OP] SoundManager: Cleanup complete
+[00:52:47][Info] [OP] AutoEat: STOPPED
+[00:52:47][Info] [OP] KillAura: OFF
+[00:52:47][Info] [OP] AutoEat: STOPPED
+[00:52:47][Info] [OP] MapRevealer: Cleanup complete
+[00:52:47][Info] [OP] GodMode: STOPPED
+[00:52:47][Info] [OP] Loading modules...
+[00:52:47][Info] [OP] GodMode: STOPPED
+[00:52:49][Warning] Infinite yield possible on 'Frame:WaitForChild("Main")'
+[00:52:49][Info] Stack Begin
+[00:52:49][Info] Stack End
+[00:52:49][Info] Script 'Script', Line 12256
+[00:52:52][Info] [OP] Initializing 99 Nights OP Script...
+[00:52:52][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[00:52:52][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[00:52:52][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[00:52:52][Info] [OP] Modules loaded!
+[00:52:52][Info] [OP] ItemCollector: Initialized
+[00:52:52][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[00:52:53][Info] [OP] Window created. Type: table
+[00:52:54][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[00:52:54][Info] [OP] ItemCollector: Organize Mode = Grid
+[00:52:54][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[00:52:54][Info] [OP] ItemCollector: Speed = Fast
+[00:52:54][Info] [OP] ItemCollector: Selected 0 item types
+[00:52:54][Info] [OP] ItemCollector: Destination = Player
+[00:52:54][Info] [OP] UI Created! Ready to use.
+[00:52:55][Error] Blizzard is not a valid member of SoundService "SoundService"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 336 - function StopRain
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 388
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 407 - function SetWeather
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 637
+    Stack End
+[00:53:03][Info] [OP] SoundManager: SOUND DELETION ACTIVE
+[00:53:03][Info] [OP] SoundManager: DELETING ALL SOUNDS (ANTI-LAG)...
+[00:53:18][Error] Thunder is not a valid member of Part "Workspace.CloudTemplate.LightningWarning"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 487 - function LightningStrike
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 630
+    Stack End
+[00:53:42][Error] Thunder is not a valid member of Part "Workspace.CloudTemplate.LightningWarning"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 487 - function LightningStrike
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 630
+    Stack End
+[00:53:58][Info] [OP] ItemCollector: Scanned 4523 items (34 types)
+[00:53:58][Info] [OP] ItemCollector: Selected 0 item types
+[00:54:05][Info] [OP] ItemCollector: Selected 1 item types
+[00:54:06][Error] Thunder is not a valid member of Part "Workspace.CloudTemplate.LightningWarning"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 487 - function LightningStrike
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 630
+    Stack End
+[00:54:07][Info] [OP] ItemCollector: Global limit = 225
+[00:54:07][Info] [OP] ItemCollector: Global limit = 1275
+[00:54:07][Info] [OP] ItemCollector: Global limit = 1700
+[00:54:07][Info] [OP] ItemCollector: Global limit = 1925
+[00:54:08][Info] [OP] ItemCollector: Global limit = 2000
+[00:54:08][Info] [OP] ItemCollector: Global limit = 1825
+[00:54:08][Info] [OP] ItemCollector: Global limit = 1375
+[00:54:09][Info] [OP] ItemCollector: Global limit = 1250
+[00:54:09][Info] [OP] ItemCollector: Global limit = 1225
+[00:54:10][Info] [OP] ItemCollector: Global limit = 1400
+[00:54:10][Info] [OP] ItemCollector: Global limit = 1725
+[00:54:10][Info] [OP] ItemCollector: Global limit = 2000
+[00:54:14][Info] [OP] ItemCollector: Speed = Instant
+[00:54:18][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Instant, Stack)
+[00:54:18][Info] [OP] ItemCollector: Stack position FIXED at 163.38600158691406, -2.1815855503082275, -150.37969970703125
+[00:54:18][Info] [Remote][Success] RemoteEvents found: 215 remotes
+[00:54:24][Error] Blizzard is not a valid member of SoundService "SoundService"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 336 - function StopRain
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 388
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 407 - function SetWeather
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 637
+    Stack End
+[00:54:30][Error] Thunder is not a valid member of Part "Workspace.CloudTemplate.LightningWarning"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 487 - function LightningStrike
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 630
+    Stack End
+[00:54:41][Error] RunService:fireRenderStepEarlyFunctions unexpected error while invoking callback: Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule:105: attempt to index nil with 'Rain_Thick'
+[00:54:41][Error] Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule:105: attempt to index nil with 'Rain_Thick'
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 105 - function makeLessRainAndSnow
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 120 - function LessRain
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.CampfireEffectModule', Line 20 - function Enable
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.CampfireEffectModule', Line 55 - function SetEnabled
+    Script 'Players.nsopnet.PlayerScripts.Client.LightHandler', Line 51
+    Stack End
+[00:54:45][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:54:46][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:54:48][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:54:54][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:54:59][Info] [OP] ItemCollector: Selected 0 item types
+[00:54:59][Info] [OP] ItemCollector: Selected 0 item types
+[00:55:03][Info] [OP] ItemCollector: Selected 1 item types
+[00:55:03][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:55:13][Info] [OP] ItemCollector: Destination = Scrapper
+[00:55:56][Info] deactivate and unequip
+[00:55:59][Info] [OP] KillAura: ON
+[00:56:00][Info] [OP] GodMode: STARTED
+[00:56:07][Info] deactivate and unequip
+[00:56:13][Error] RunService:fireRenderStepEarlyFunctions unexpected error while invoking callback: Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule:105: attempt to index nil with 'Rain_Thick'
+[00:56:13][Error] Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule:105: attempt to index nil with 'Rain_Thick'
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 105 - function makeLessRainAndSnow
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 120 - function LessRain
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.CampfireEffectModule', Line 20 - function Enable
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.CampfireEffectModule', Line 55 - function SetEnabled
+    Script 'Players.nsopnet.PlayerScripts.Client.LightHandler', Line 51
+    Stack End
+[00:56:50][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:56:50][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:56:50][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:56:51][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:56:53][Info] deactivate and unequip
+[00:56:58][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:56:58][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:56:58][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:03][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:05][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:05][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:05][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:05][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:07][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:10][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:10][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:10][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:12][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:14][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:14][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:14][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:14][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:14][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:14][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:14][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:15][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:16][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:17][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:18][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:19][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:19][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:20][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:20][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:20][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:22][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:22][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:23][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:24][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:25][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:26][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:27][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:28][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:30][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:30][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:32][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:33][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:33][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:33][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:34][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:35][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:35][Error] Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule:105: attempt to index nil with 'Rain_Thick'
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 105 - function makeLessRainAndSnow
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 120 - function LessRain
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.CampfireEffectModule', Line 20 - function Enable
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.CampfireEffectModule', Line 55 - function SetEnabled
+    Script 'Players.nsopnet.PlayerScripts.Client.LightHandler', Line 51
+    Stack End
+[00:57:35][Error] RunService:fireRenderStepEarlyFunctions unexpected error while invoking callback: Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule:105: attempt to index nil with 'Rain_Thick'
+[00:57:35][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:35][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:37][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:38][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:39][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:40][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:41][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:42][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:43][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:43][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:44][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:44][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:45][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:45][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:45][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:46][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:46][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:47][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:47][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:47][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:47][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:48][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:48][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:48][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:49][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:50][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:50][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:50][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:51][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:52][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:52][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:53][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:53][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:53][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:53][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:55][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:56][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:57][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:57:57][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:57][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:57:59][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:00][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:01][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:03][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:05][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:05][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:58:05][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:06][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:08][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:09][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:10][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:10][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:16][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:58:16][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:17][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:58:17][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:19][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:58:19][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:58:19][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:24][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:25][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:27][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:58:31][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:32][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:33][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:58:33][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:33][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:33][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:33][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:37][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:38][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:38][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:43][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:58:47][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:52][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:53][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:53][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:54][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:54][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:56][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:58:58][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:59:00][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:59:01][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:59:01][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[00:59:02][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:59:07][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[00:59:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End

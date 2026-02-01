@@ -1,0 +1,197 @@
+=== WindUI Log Session ===
+Started: 2026-01-31 09:18:57
+User: nsopnet (ID: 8401342884)
+========================================
+
+[00:18:57][Info] Loader: Fetching MainInterface...
+[00:18:59][Info] [OP] Loading modules...
+[00:18:59][Info] [OP] Initializing 99 Nights OP Script...
+[00:18:59][Info] [OP] Modules loaded!
+[00:18:59][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[00:18:59][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[00:18:59][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[00:18:59][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[00:18:59][Info] [OP] ItemCollector: Initialized
+[00:19:00][Info] [OP] Window created. Type: table
+[00:19:01][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[00:19:01][Info] [OP] ItemCollector: Selected 0 item types
+[00:19:01][Info] [OP] ItemCollector: Speed = Fast
+[00:19:01][Info] [OP] ItemCollector: Organize Mode = Grid
+[00:19:01][Info] [OP] ItemCollector: Destination = Player
+[00:19:01][Info] [OP] UI Created! Ready to use.
+[00:19:01][Error] :259: attempt to call a nil value
+    Stack Begin
+    Script 'Script', Line 259
+    Stack End
+[00:19:01][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[00:20:11][Info] Loader: Fetching MainInterface...
+[00:20:14][Info] [OP] SoundManager: Cleanup complete
+[00:20:14][Info] [OP] AutoEat: STOPPED
+[00:20:14][Info] [OP] GodMode: STOPPED
+[00:20:14][Info] [OP] MapRevealer: Cleanup complete
+[00:20:14][Info] [OP] GodMode: STOPPED
+[00:20:14][Info] [OP] AutoEat: STOPPED
+[00:20:14][Info] [OP] Loading modules...
+[00:20:14][Info] [OP] Modules loaded!
+[00:20:14][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[00:20:14][Info] [OP] Initializing 99 Nights OP Script...
+[00:20:14][Info] [OP] ItemCollector: Initialized
+[00:20:14][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[00:20:14][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[00:20:14][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[00:20:15][Info] [OP] Window created. Type: table
+[00:20:15][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[00:20:15][Info] [OP] ItemCollector: Destination = Player
+[00:20:15][Info] [OP] ItemCollector: Organize Mode = Grid
+[00:20:15][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[00:20:15][Info] [OP] ItemCollector: Speed = Fast
+[00:20:15][Info] [OP] ItemCollector: Selected 0 item types
+[00:20:15][Info] [OP] UI Created! Ready to use.
+[00:20:26][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[00:20:26][Info] [OP] GodMode: STARTED
+[00:20:36][Info] [OP] TreeFarm: ON
+[00:20:38][Info] [OP] TreeFarm: Filter ON - Small Tree
+[00:20:55][Info] deactivate and unequip
+[00:21:00][Info] [OP] SoundManager: SOUND DELETION ACTIVE
+[00:21:00][Info] [OP] SoundManager: DELETING ALL SOUNDS (ANTI-LAG)...
+[00:21:40][Info] [OP] AutoPlant: Center = -11.005277633666992, 3.999999761581421, -8.31825065612793 (Player)
+[00:21:40][Info] [OP] AutoPlant: ON
+[00:21:40][Info] [OP] AutoPlant: Found sapling, DebugId = 1_262191
+[00:21:40][Info] [OP] AutoPlant: Generated 1256 plant positions (Circle)
+[00:23:15][Info] function is already waiting :)
+[00:24:36][Info] [OP] AutoPlant: Completed! Planted 1256 saplings
+[00:26:41][Info] [OP] KillAura: ON
+[00:26:57][Info] [OP] SoundManager: STOPPING DELETION (Sounds cannot be restored)
+[00:26:57][Info] [OP] SoundManager: DELETING ALL SOUNDS (ANTI-LAG)...
+[00:26:57][Info] [OP] SoundManager: SOUND DELETION ACTIVE
+[00:28:19][Info] deactivate and unequip
+[00:28:42][Info] deactivate and unequip
+[00:30:22][Info] Loader: Fetching MainInterface...
+[00:30:24][Info] [OP] SoundManager: STOPPING DELETION (Sounds cannot be restored)
+[00:30:24][Info] [OP] KillAura: OFF
+[00:30:24][Info] [OP] SoundManager: Cleanup complete
+[00:30:24][Info] [OP] AutoEat: STOPPED
+[00:30:24][Info] [OP] MapRevealer: Cleanup complete
+[00:30:24][Info] [OP] TreeFarm: OFF
+[00:30:24][Info] [OP] Loading modules...
+[00:30:24][Info] [OP] GodMode: STOPPED
+[00:30:24][Info] [OP] AutoEat: STOPPED
+[00:30:24][Info] [OP] GodMode: STOPPED
+[00:30:26][Info] [OP] Modules loaded!
+[00:30:26][Info] [OP] Initializing 99 Nights OP Script...
+[00:30:26][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[00:30:26][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[00:30:26][Info] [OP] ItemCollector: Initialized
+[00:30:26][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[00:30:26][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[00:30:27][Info] [OP] Window created. Type: table
+[00:30:28][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[00:30:28][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[00:30:28][Info] [OP] ItemCollector: Selected 0 item types
+[00:30:28][Info] [OP] ItemCollector: Organize Mode = Grid
+[00:30:28][Info] [OP] UI Created! Ready to use.
+[00:30:28][Info] [OP] ItemCollector: Destination = Player
+[00:30:28][Info] [OP] ItemCollector: Speed = Fast
+[00:30:31][Info] [Remote][Success] RemoteEvents found: 205 remotes
+[00:30:31][Info] [OP] GodMode: STARTED
+[00:30:38][Info] [OP] SoundManager: SOUND DELETION ACTIVE
+[00:30:38][Info] [OP] SoundManager: DELETING ALL SOUNDS (ANTI-LAG)...
+[00:30:46][Info] [OP] ItemCollector: Selected 0 item types
+[00:30:46][Info] [OP] ItemCollector: Scanned 4990 items (28 types)
+[00:30:54][Info] [OP] ItemCollector: Selected 1 item types
+[00:31:09][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Fast, Stack)
+[00:31:18][Info] [OP] ItemCollector: Finished! Collected 50 items
+[00:31:29][Info] [OP] ItemCollector: Organization Mode ON
+[00:31:31][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Fast, Organize=Grid)
+[00:31:31][Info] [OP] ItemCollector: Grid = 5x10x1 layers (50 cells)
+[00:31:40][Info] [OP] ItemCollector: Finished! Collected 50 items
+[00:32:01][Info] [OP] ItemCollector: Max Layers = 3
+[00:32:02][Info] [OP] ItemCollector: Grid = 1x17x3 layers (51 cells)
+[00:32:08][Info] [OP] ItemCollector: Grid = 1x17x3 layers (51 cells)
+[00:32:08][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Fast, Organize=Grid)
+[00:32:16][Info] [OP] ItemCollector: Finished! Collected 50 items
+[00:32:31][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Fast, Organize=Grid)
+[00:32:31][Info] [OP] ItemCollector: Grid = 1x17x3 layers (51 cells)
+[00:32:33][Info] [OP] ItemCollector: Grid = 1x17x3 layers (51 cells)
+[00:32:33][Info] [OP] ItemCollector: Grid recalculated - destination moved
+[00:32:35][Info] [OP] ItemCollector: Grid = 1x17x3 layers (51 cells)
+[00:32:35][Info] [OP] ItemCollector: Grid recalculated - destination moved
+[00:32:36][Info] [OP] ItemCollector: Grid = 1x17x3 layers (51 cells)
+[00:32:36][Info] [OP] ItemCollector: Grid recalculated - destination moved
+[00:32:38][Info] [OP] ItemCollector: Grid recalculated - destination moved
+[00:32:38][Info] [OP] ItemCollector: Grid = 1x17x3 layers (51 cells)
+[00:32:38][Info] [OP] ItemCollector: Finished! Collected 50 items
+[00:33:56][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Fast, Organize=Grid)
+[00:33:56][Info] [OP] ItemCollector: Grid = 1x17x3 layers (51 cells)
+[00:34:03][Info] [OP] ItemCollector: Finished! Collected 50 items
+[00:36:52][Info] [OP] ItemCollector: Destination = OtherPlayer
+[00:37:34][Info] Loader: Fetching MainInterface...
+[00:37:36][Info] [OP] SoundManager: Cleanup complete
+[00:37:36][Info] [OP] SoundManager: STOPPING DELETION (Sounds cannot be restored)
+[00:37:36][Info] [OP] AutoEat: STOPPED
+[00:37:36][Info] [OP] AutoEat: STOPPED
+[00:37:36][Info] [OP] GodMode: STOPPED
+[00:37:36][Info] [OP] GodMode: STOPPED
+[00:37:36][Info] [OP] MapRevealer: Cleanup complete
+[00:37:36][Info] [OP] Loading modules...
+[00:37:37][Info] [OP] Modules loaded!
+[00:37:37][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[00:37:37][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[00:37:37][Info] [OP] Initializing 99 Nights OP Script...
+[00:37:37][Info] [OP] ItemCollector: Initialized
+[00:37:37][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[00:37:37][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[00:37:38][Info] [OP] Window created. Type: table
+[00:37:39][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[00:37:39][Info] [OP] ItemCollector: Organize Mode = Grid
+[00:37:39][Info] [OP] ItemCollector: Selected 0 item types
+[00:37:39][Info] [OP] ItemCollector: Destination = Player
+[00:37:39][Info] [OP] UI Created! Ready to use.
+[00:37:39][Info] [OP] ItemCollector: Speed = Fast
+[00:37:39][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[00:37:43][Info] [OP] KillAura: ON
+[00:37:45][Info] [OP] TreeFarm: ON
+[00:37:46][Info] [OP] TreeFarm: OFF
+[00:37:49][Info] [Remote][Success] RemoteEvents found: 207 remotes
+[00:37:49][Info] [OP] GodMode: STARTED
+[00:38:06][Info] deactivate and unequip
+[00:38:29][Info] [OP] ItemCollector: Scanned 4995 items (31 types)
+[00:38:29][Info] [OP] ItemCollector: Selected 0 item types
+[00:38:33][Info] [OP] ItemCollector: Selected 1 item types
+[00:38:33][Error] Rain is not a valid member of SoundService "SoundService"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 262 - function StartRain
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 385
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 411 - function SetWeather
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 637
+    Stack End
+[00:38:41][Info] [OP] ItemCollector: Organization Mode ON
+[00:38:43][Info] [OP] ItemCollector: Max Layers = 3
+[00:38:47][Info] [OP] ItemCollector: Grid = 4x5x3 layers (60 cells)
+[00:38:47][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Fast, Organize=Grid)
+[00:38:53][Info] [OP] ItemCollector: Finished! Collected 50 items
+[00:39:01][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Fast, Organize=Grid)
+[00:39:01][Info] [OP] ItemCollector: Grid = 4x5x3 layers (60 cells)
+[00:39:07][Info] [OP] ItemCollector: Finished! Collected 50 items
+[00:39:59][Info] [OP] ItemCollector: Max Layers = 2
+[00:40:03][Error] Blizzard is not a valid member of SoundService "SoundService"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 336 - function StopRain
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 388
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 407 - function SetWeather
+    Script 'Players.nsopnet.PlayerScripts.Client.EffectModules.WeatherEffectModule', Line 637
+    Stack End
+[00:40:04][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Fast, Organize=Grid)
+[00:40:04][Info] [OP] ItemCollector: Grid = 5x5x2 layers (50 cells)
+[00:40:09][Info] [OP] ItemCollector: Finished! Collected 50 items
+[00:41:08][Info] off
+[00:41:12][Info] deactivate and unequip
+[00:41:17][Info] [OP] ItemCollector: Global limit = 101
+[00:41:17][Info] [OP] ItemCollector: Global limit = 309
+[00:41:17][Info] [OP] ItemCollector: Global limit = 500
+[00:41:20][Info] [OP] ItemCollector: ON (Dest=Player, Speed=Fast, Organize=Grid)
+[00:41:20][Info] [OP] ItemCollector: Grid = 16x16x2 layers (512 cells)
+[00:41:30][Error] Typewriter is not a valid member of Folder "ReplicatedStorage.Core.Sounds"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.Interface.PopUpUI', Line 216
+    Stack End

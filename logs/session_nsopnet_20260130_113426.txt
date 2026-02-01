@@ -1,0 +1,47 @@
+=== WindUI Log Session ===
+Started: 2026-01-30 11:34:26
+User: nsopnet (ID: 8401342884)
+========================================
+
+[02:34:26][Info] Loader: Fetching MainInterface...
+[02:34:28][Info] [OP] AutoEat: STOPPED
+[02:34:28][Info] [OP] AutoEat: STOPPED
+[02:34:28][Info] [OP] MapRevealer: Cleanup complete
+[02:34:28][Info] [OP] GodMode: STOPPED
+[02:34:28][Info] [OP] Loading modules...
+[02:34:28][Info] [OP] GodMode: STOPPED
+[02:34:29][Warning] [Loader] Failed to load: Features/AutoPlant.lua - :75: attempt to call a nil value
+[02:34:29][Info] [OP] Initializing 99 Nights OP Script...
+[02:34:29][Info] [OP] Modules loaded!
+[02:34:29][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[02:34:29][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[02:34:29][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[02:34:29][Info] [OP] Window created. Type: table
+[02:34:29][Info] [OP] UI Created! Ready to use.
+[02:36:20][Info] Loader: Fetching MainInterface...
+[02:36:22][Info] [OP] AutoEat: STOPPED
+[02:36:22][Info] [OP] AutoEat: STOPPED
+[02:36:22][Info] [OP] GodMode: STOPPED
+[02:36:22][Info] [OP] MapRevealer: Cleanup complete
+[02:36:22][Info] [OP] GodMode: STOPPED
+[02:36:22][Info] [OP] Loading modules...
+[02:36:22][Info] [OP] Modules loaded!
+[02:36:22][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[02:36:22][Info] [OP] Initializing 99 Nights OP Script...
+[02:36:22][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[02:36:22][Info] [OP] AutoPlant: Initialized (Circle Pattern, Infinite Sapling)
+[02:36:23][Info] [OP] Window created. Type: table
+[02:36:23][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[02:36:23][Info] [OP] UI Created! Ready to use.
+[02:36:29][Info] [OP] GodMode: STARTED
+[02:36:29][Info] [Remote][Success] RemoteEvents found: 208 remotes
+[02:36:59][Info] [OP] AutoPlant: ON
+[02:36:59][Info] [OP] AutoPlant: Center = -28.6270809173584, 7.450068473815918, -3.46923828125 (Player)
+[02:36:59][Info] [OP] AutoPlant: Generated 125 plant positions (Circle)
+[02:36:59][Warning] [OP] AutoPlant: No Sapling found in workspace.Items!
+[02:37:21][Info] [OP] AutoPlant: Center = -51.25120544433594, 3.8528804779052734, -34.325096130371094 (Player)
+[02:37:21][Info] [OP] AutoPlant: ON
+[02:37:21][Info] [OP] AutoPlant: Found sapling, DebugId = 1_271256
+[02:37:21][Info] [OP] AutoPlant: Generated 125 plant positions (Circle)
+[02:37:34][Info] deactivate and unequip
+[02:37:47][Info] [OP] AutoPlant: Completed! Planted 125 saplings

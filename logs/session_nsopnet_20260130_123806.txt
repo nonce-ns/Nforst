@@ -1,0 +1,100 @@
+=== WindUI Log Session ===
+Started: 2026-01-30 12:38:06
+User: nsopnet (ID: 8401342884)
+========================================
+
+[03:38:03][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:59][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:05][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:06][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:51][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:04][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:59][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:06][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:07][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:52][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:04][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:00][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:07][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:52][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:05][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:01][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:08][Info] Loader: Fetching MainInterface...
+[03:38:01][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:53][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:53][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:09][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:02][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:09][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:54][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:02][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:10][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:03][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:54][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:10][Info] [OP] AutoEat: STOPPED
+[03:38:10][Info] [OP] AutoEat: STOPPED
+[03:38:10][Info] [OP] TreeFarm: OFF
+[03:38:10][Info] [OP] GodMode: STOPPED
+[03:38:10][Info] [OP] GodMode: STOPPED
+[03:38:10][Info] [OP] Loading modules...
+[03:38:10][Info] [OP] MapRevealer: Cleanup complete
+[03:37:55][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:11][Info] [OP] Modules loaded!
+[03:38:11][Info] [OP] Initializing 99 Nights OP Script...
+[03:38:11][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[03:38:11][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[03:38:11][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[03:38:11][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[03:37:55][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:11][Info] [OP] Window created. Type: table
+[03:38:11][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[03:37:56][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:11][Info] [OP] UI Created! Ready to use.
+[03:37:56][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:12][Info] off
+[03:37:57][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:57][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:58][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:58][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:38:15][Info] [Remote][Success] RemoteEvents found: 211 remotes
+[03:38:15][Info] [OP] KillAura: ON
+[03:38:29][Info] [OP] KillAura: OFF
+[03:38:34][Info] [OP] TreeFarm: ON
+[03:38:34][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=170 | Skipped(Big)=0 | Folder=Found
+[03:38:51][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=170 | Skipped(Big)=0 | Folder=Found
+[03:39:01][Info] deactivate and unequip
+[03:39:07][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=170 | Skipped(Big)=0 | Folder=Found
+[03:40:59][Info] Loader: Fetching MainInterface...
+[03:41:01][Info] [OP] Loading modules...
+[03:41:01][Info] [OP] Modules loaded!
+[03:41:01][Info] [OP] Initializing 99 Nights OP Script...
+[03:41:01][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[03:41:01][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[03:41:01][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[03:41:01][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[03:41:02][Info] [OP] Window created. Type: table
+[03:41:03][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[03:41:03][Info] [OP] UI Created! Ready to use.
+[03:41:14][Info] [OP] TreeFarm: ON
+[03:41:14][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0 | Folder=Found
+[03:41:14][Info] [Remote][Success] RemoteEvents found: 196 remotes
+[03:41:18][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0 | Folder=Found
+[03:41:22][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0 | Folder=Found
+[03:41:27][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0 | Folder=Found
+[03:41:31][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=2 | Skipped(Big)=0 | Folder=Found
+[03:41:39][Info] deactivate and unequip
+[03:41:57][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=2 | Skipped(Big)=0 | Folder=Found
+[03:41:59][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=3 | Skipped(Big)=0 | Folder=Found
+[03:42:05][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=5 | Skipped(Big)=0 | Folder=Found
+[03:42:21][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=2 | Skipped(Big)=0 | Folder=Found
+[03:42:22][Info] deactivate and unequip
+[03:42:23][Info] [DEBUG] TreeFarm: Axe=Old Axe | Targets=1 | Skipped(Big)=0 | Folder=Found
+[03:42:25][Info] [OP] TreeFarm: OFF
+[03:42:39][Info] [OP] KillAura: ON
+[03:42:52][Info] deactivate and unequip
+[03:43:03][Info] deactivate and unequip
+[03:43:04][Info] [OP] KillAura: OFF
+[03:44:07][Info] [OP] AutoPlant: Center = 49.74675750732422, 4.004020690917969, -16.0825138092041 (Player)
+[03:44:07][Info] [OP] AutoPlant: ON
+[03:44:07][Info] [OP] AutoPlant: Found sapling, DebugId = 1_265622
+[03:44:07][Info] [OP] AutoPlant: Generated 290 plant positions (Spiral)

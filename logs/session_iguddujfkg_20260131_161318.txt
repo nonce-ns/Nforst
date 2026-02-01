@@ -1,0 +1,482 @@
+=== WindUI Log Session ===
+Started: 2026-01-31 16:13:18
+User: iguddujfkg (ID: 10230880383)
+========================================
+
+[07:13:17][Info] Loader: Fetching MainInterface...
+[07:13:19][Info] [OP] Loading modules...
+[07:13:19][Info] [OP] Modules loaded!
+[07:13:19][Info] [OP] Initializing 99 Nights OP Script...
+[07:13:19][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[07:13:19][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[07:13:19][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[07:13:19][Info] [OP] ItemCollector: Initialized
+[07:13:19][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[07:13:19][Info] [OP] Window created. Type: table
+[07:13:20][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[07:13:21][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[07:13:21][Info] [OP] ItemCollector: Destination = Player
+[07:13:21][Info] [OP] ItemCollector: Selected 0 item types
+[07:13:21][Info] [OP] ItemCollector: Speed = Instant
+[07:13:21][Info] [OP] ItemCollector: Organize Mode = Grid
+[07:13:21][Info] [OP] UI Created! Ready to use.
+[07:13:25][Info] [OP] KillAura: ON
+[07:13:33][Info] [Remote][Success] RemoteEvents found: 196 remotes
+[07:13:35][Info] deactivate and unequip
+[07:13:45][Info] deactivate and unequip
+[07:14:00][Info] [OP] TreeFarm: Filter ON - Small Tree
+[07:14:01][Info] [OP] TreeFarm: ON
+[07:14:12][Info] deactivate and unequip
+[07:14:22][Info] [OP] ItemCollector: Scanned 155 items (29 types)
+[07:14:22][Info] [OP] ItemCollector: Selected 0 item types
+[07:14:28][Info] [OP] ItemCollector: Selected 1 item types
+[07:14:35][Info] [OP] ItemCollector: Speed = Fast
+[07:14:47][Info] [OP] ItemCollector: Thread #1 ON (Dest=Player, Speed=Fast, Stack)
+[07:14:47][Info] [OP] ItemCollector: Stack position FIXED at -0.1003040298819542, 6.248653888702393, 0.5875585675239563
+[07:14:50][Info] [OP] ItemCollector: Finished! Collected 24 items
+[07:14:59][Info] [OP] ItemCollector: Selected 1 item types
+[07:14:59][Info] [OP] ItemCollector: Scanned 139 items (29 types)
+[07:15:07][Info] [OP] ItemCollector: Stack position FIXED at -0.10030542314052582, 6.248653888702393, 0.5875585675239563
+[07:15:07][Info] [OP] ItemCollector: Thread #2 ON (Dest=Player, Speed=Fast, Stack)
+[07:15:08][Info] [OP] ItemCollector: Finished! Collected 32 items
+[07:15:10][Info] [OP] ItemCollector: Stack position FIXED at -0.10030557215213776, 13.202688217163086, 0.5875585675239563
+[07:15:10][Info] [OP] ItemCollector: Thread #3 ON (Dest=Player, Speed=Fast, Stack)
+[07:15:10][Info] [OP] ItemCollector: Finished! Collected 32 items
+[07:15:11][Info] [OP] ItemCollector: Thread #4 ON (Dest=Player, Speed=Fast, Stack)
+[07:15:11][Info] [OP] ItemCollector: Stack position FIXED at -0.10030561685562134, 7.113943099975586, 0.5875585675239563
+[07:15:11][Info] [OP] ItemCollector: Finished! Collected 32 items
+[07:15:12][Info] [OP] ItemCollector: Stack position FIXED at -0.10030560195446014, 6.248653888702393, 0.5875585675239563
+[07:15:12][Info] [OP] ItemCollector: Thread #5 ON (Dest=Player, Speed=Fast, Stack)
+[07:15:12][Info] [OP] ItemCollector: Finished! Collected 32 items
+[07:15:16][Info] [OP] ItemCollector: Thread #6 ON (Dest=Player, Speed=Fast, Stack)
+[07:15:16][Info] [OP] ItemCollector: Stack position FIXED at -0.10030508786439896, 6.248653888702393, 0.5875585675239563
+[07:15:16][Info] [OP] ItemCollector: Finished! Collected 32 items
+[07:19:41][Info] Loader: Fetching MainInterface...
+[07:19:42][Info] [OP] Loading modules...
+[07:19:43][Info] [OP] Initializing 99 Nights OP Script...
+[07:19:43][Info] [OP] Modules loaded!
+[07:19:43][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[07:19:43][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[07:19:43][Info] [OP] ItemCollector: Initialized
+[07:19:43][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[07:19:43][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[07:19:43][Info] [OP] Window created. Type: table
+[07:19:45][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[07:19:45][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[07:19:45][Info] [OP] ItemCollector: Destination = Player
+[07:19:45][Info] [OP] ItemCollector: Selected 0 item types
+[07:19:45][Info] [OP] ItemCollector: Organize Mode = Grid
+[07:19:45][Info] [OP] ItemCollector: Speed = Instant
+[07:19:45][Info] [OP] UI Created! Ready to use.
+[07:19:53][Info] [OP] TreeFarm: Filter ON - Small Tree
+[07:20:00][Info] [OP] TreeFarm: ON
+[07:20:02][Info] [Remote][Success] RemoteEvents found: 196 remotes
+[07:20:45][Info] deactivate and unequip
+[07:21:19][Info] [OP] ItemCollector: Scanned 216 items (26 types)
+[07:21:19][Info] [OP] ItemCollector: Selected 0 item types
+[07:21:19][Info] [OP] ItemCollector: Selected 0 item types
+[07:21:24][Info] [OP] ItemCollector: Selected 1 item types
+[07:21:34][Info] [OP] ItemCollector: Global limit = 400
+[07:21:39][Info] [OP] ItemCollector: Destination = Campfire
+[07:21:43][Info] [OP] ItemCollector: Thread #1 ON (Dest=Campfire, Speed=Instant, Stack)
+[07:21:43][Info] [OP] ItemCollector: Stack position FIXED at 0, 15.5, 0
+[07:21:47][Info] [OP] ItemCollector: Finished! Collected 51 items
+[07:21:51][Info] [OP] ItemCollector: Stack position FIXED at 0, 15.5, 0
+[07:21:51][Info] [OP] ItemCollector: Thread #2 ON (Dest=Campfire, Speed=Instant, Stack)
+[07:21:51][Info] [OP] ItemCollector: Finished! Collected 62 items
+[07:21:54][Info] [OP] ItemCollector: Stack position FIXED at 0, 15.5, 0
+[07:21:54][Info] [OP] ItemCollector: Finished! Collected 62 items
+[07:21:54][Info] [OP] ItemCollector: Thread #3 ON (Dest=Campfire, Speed=Instant, Stack)
+[07:21:58][Info] [OP] ItemCollector: Finished! Collected 62 items
+[07:21:58][Info] [OP] ItemCollector: Stack position FIXED at 0, 15.5, 0
+[07:21:58][Info] [OP] ItemCollector: Thread #4 ON (Dest=Campfire, Speed=Instant, Stack)
+[07:22:08][Info] [OP] ItemCollector: Thread #5 ON (Dest=Campfire, Speed=Instant, Stack)
+[07:22:08][Info] [OP] ItemCollector: Finished! Collected 62 items
+[07:22:08][Info] [OP] ItemCollector: Stack position FIXED at 0, 15.5, 0
+[07:25:33][Info] [OP] ItemCollector: STOPPED 5 thread(s) (Collected 62 items)
+[07:25:35][Info] [OP] ItemCollector: Thread #1 ON (Dest=Campfire, Speed=Instant, Stack)
+[07:25:35][Info] [OP] ItemCollector: Finished! Collected 62 items
+[07:25:35][Info] [OP] ItemCollector: Selected 1 item types
+[07:25:35][Info] [OP] ItemCollector: Stack position FIXED at 0, 15.5, 0
+[07:25:35][Info] [OP] ItemCollector: Scanned 165 items (25 types)
+[07:25:35][Info] [OP] ItemCollector: Cache refreshed after collection
+[07:27:22][Info] table: 0xd6346b2995abce24
+[07:33:05][Info] Loader: Fetching MainInterface...
+[07:33:06][Info] [OP] Loading modules...
+[07:33:07][Info] [OP] Modules loaded!
+[07:33:07][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[07:33:07][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[07:33:07][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[07:33:07][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[07:33:07][Info] [OP] Initializing 99 Nights OP Script...
+[07:33:07][Info] [OP] ItemCollector: Initialized
+[07:33:07][Info] [OP] Window created. Type: table
+[07:33:08][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[07:33:08][Info] [OP] ItemCollector: Speed = Instant
+[07:33:08][Info] [OP] UI Created! Ready to use.
+[07:33:08][Info] [OP] ItemCollector: Selected 0 item types
+[07:33:08][Info] [OP] ItemCollector: Organize Mode = Grid
+[07:33:08][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[07:33:08][Info] [OP] ItemCollector: Destination = Player
+[07:33:17][Info] [OP] TreeFarm: Filter ON - Small Tree
+[07:33:21][Info] [OP] TreeFarm: ON
+[07:33:25][Info] [Remote][Success] RemoteEvents found: 196 remotes
+[07:33:35][Info] deactivate and unequip
+[07:33:51][Info] [OP] ItemCollector: Destination = Campfire
+[07:33:57][Info] [OP] ItemCollector: Selected 0 item types
+[07:33:57][Info] [OP] ItemCollector: Scanned 172 items (29 types)
+[07:33:57][Info] [OP] ItemCollector: Selected 0 item types
+[07:34:02][Info] [OP] ItemCollector: Selected 1 item types
+[07:34:18][Info] [OP] ItemCollector: Thread #1 ON (Dest=Campfire, Speed=Instant, Stack)
+[07:34:18][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:34:20][Info] [OP] ItemCollector: Finished! Collected 36 items
+[07:34:28][Info] [OP] ItemCollector: Thread #2 ON (Dest=Campfire, Speed=Instant, Stack)
+[07:34:28][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:34:29][Info] [OP] ItemCollector: Finished! Collected 52 items
+[07:35:02][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:35:02][Info] [OP] ItemCollector: Thread #3 ON (Dest=Campfire, Speed=Instant, Stack)
+[07:35:02][Info] [OP] ItemCollector: Finished! Collected 52 items
+[07:35:50][Info] [OP] AutoPlant: Center = -57.45051193237305, 3.887934446334839, -24.814041137695312 (Player)
+[07:35:50][Info] [OP] AutoPlant: Found sapling, DebugId = 1_256286
+[07:35:50][Info] [OP] AutoPlant: ON
+[07:35:50][Info] [OP] AutoPlant: Generated 125 plant positions (Circle)
+[07:36:04][Info] [OP] AutoPlant: Completed! Planted 125 saplings
+[07:43:03][Info] Loader: Fetching MainInterface...
+[07:43:04][Info] [OP] Loading modules...
+[07:43:05][Info] [OP] Initializing 99 Nights OP Script...
+[07:43:05][Info] [OP] Modules loaded!
+[07:43:05][Info] [OP] ItemCollector: Initialized
+[07:43:05][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[07:43:05][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[07:43:05][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[07:43:05][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[07:43:05][Info] [OP] Window created. Type: table
+[07:43:06][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[07:43:06][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[07:43:06][Info] [OP] ItemCollector: Selected: (none)
+[07:43:06][Info] [OP] ItemCollector: Destination = Player
+[07:43:06][Info] [OP] ItemCollector: Speed = Instant
+[07:43:06][Info] [OP] UI Created! Ready to use.
+[07:43:06][Info] [OP] ItemCollector: Organize Mode = Grid
+[07:43:14][Info] [OP] ItemCollector: Destination = Campfire
+[07:43:18][Info] [Remote][Success] RemoteEvents found: 196 remotes
+[07:43:18][Info] [OP] GodMode: STARTED
+[07:43:23][Info] [OP] TreeFarm: Filter ON - Small Tree
+[07:43:24][Info] [OP] TreeFarm: ON
+[07:43:39][Info] deactivate and unequip
+[07:44:01][Info] deactivate and unequip
+[07:44:12][Info] [OP] ItemCollector: Global limit = 550
+[07:44:19][Info] [OP] ItemCollector: Scanned 196 items (28 types)
+[07:44:19][Info] [OP] ItemCollector: Selected: (none)
+[07:44:19][Info] [OP] ItemCollector: Selected: (none)
+[07:44:24][Info] [OP] ItemCollector: Selected: Log
+[07:44:35][Info] [OP] ItemCollector: Selected: Log, Coal
+[07:44:41][Info] [OP] ItemCollector: Speed = Fast
+[07:44:51][Info]   → Items: Log, Coal
+[07:44:51][Info] [OP] ItemCollector: Thread #1 ON
+[07:44:51][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:44:51][Info]   → Dest: Campfire, Speed: Fast, Mode: Stack
+[07:44:58][Info] [OP] ItemCollector: Finished! Total collected: 58 (Log, Coal)
+[07:45:04][Info] [OP] ItemCollector: Thread #2 ON
+[07:45:04][Info]   → Dest: Campfire, Speed: Fast, Mode: Stack
+[07:45:04][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:45:04][Info]   → Items: Log, Coal
+[07:45:05][Info] [OP] ItemCollector: Finished! Total collected: 70 (Log, Coal)
+[07:45:06][Info]   → Items: Log, Coal
+[07:45:06][Info]   → Dest: Campfire, Speed: Fast, Mode: Stack
+[07:45:06][Info] [OP] ItemCollector: Thread #3 ON
+[07:45:06][Info] [OP] ItemCollector: Finished! Total collected: 70 (Log, Coal)
+[07:45:06][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:45:09][Info] [OP] ItemCollector: Thread #4 ON
+[07:45:09][Info]   → Dest: Campfire, Speed: Fast, Mode: Stack
+[07:45:09][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:45:09][Info]   → Items: Log, Coal
+[07:45:09][Info] [OP] ItemCollector: Finished! Total collected: 70 (Log, Coal)
+[07:45:10][Info] [OP] ItemCollector: Thread #5 ON
+[07:45:10][Info]   → Items: Log, Coal
+[07:45:10][Info] [OP] ItemCollector: Finished! Total collected: 70 (Log, Coal)
+[07:45:10][Info]   → Dest: Campfire, Speed: Fast, Mode: Stack
+[07:45:10][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:46:15][Info] Loader: Fetching MainInterface...
+[07:46:17][Info] [OP] AutoEat: STOPPED
+[07:46:17][Info] [OP] SoundManager: Cleanup complete
+[07:46:17][Info] [OP] ItemCollector: STOPPED 5 thread(s) (Collected 70 items)
+[07:46:17][Info] [OP] AutoEat: STOPPED
+[07:46:17][Info] [OP] TreeFarm: OFF
+[07:46:17][Info] [OP] GodMode: STOPPED
+[07:46:17][Info] [OP] MapRevealer: Cleanup complete
+[07:46:17][Info] [OP] GodMode: STOPPED
+[07:46:17][Info] [OP] Loading modules...
+[07:46:17][Warning] [Loader] Failed to load: Features/ItemCollector.lua - :75: attempt to call a nil value
+[07:46:18][Info] [OP] Modules loaded!
+[07:46:18][Info] [OP] Initializing 99 Nights OP Script...
+[07:46:18][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[07:46:18][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[07:46:18][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[07:46:18][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[07:46:18][Info] [OP] Window created. Type: table
+[07:46:19][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[07:46:20][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[07:46:20][Info] [OP] UI Created! Ready to use.
+[07:46:30][Info] [OP] GodMode: STARTED
+[07:46:30][Info] [Remote][Success] RemoteEvents found: 202 remotes
+[07:46:44][Info] [OP] KillAura: ON
+[07:46:45][Info] [OP] KillAura: OFF
+[07:46:46][Info] [OP] TreeFarm: ON
+[07:46:48][Info] [OP] TreeFarm: Filter ON - Small Tree
+[07:47:05][Info] deactivate and unequip
+[07:47:25][Info] Loader: Fetching MainInterface...
+[07:47:27][Info] [OP] SoundManager: Cleanup complete
+[07:47:27][Info] [OP] AutoEat: STOPPED
+[07:47:27][Info] [OP] TreeFarm: OFF
+[07:47:27][Info] [OP] AutoEat: STOPPED
+[07:47:27][Info] [OP] GodMode: STOPPED
+[07:47:27][Info] [OP] MapRevealer: Cleanup complete
+[07:47:27][Info] [OP] GodMode: STOPPED
+[07:47:27][Info] [OP] Loading modules...
+[07:47:28][Info] [OP] Modules loaded!
+[07:47:28][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[07:47:28][Info] [OP] Initializing 99 Nights OP Script...
+[07:47:28][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[07:47:28][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[07:47:28][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[07:47:28][Info] [OP] ItemCollector: Initialized
+[07:47:29][Info] [OP] Window created. Type: table
+[07:47:29][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[07:47:29][Info] [OP] ItemCollector: Organize Mode = Grid
+[07:47:29][Info] [OP] ItemCollector: Destination = Player
+[07:47:29][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[07:47:29][Info] [OP] ItemCollector: Speed = Instant
+[07:47:29][Info] [OP] UI Created! Ready to use.
+[07:47:29][Info] [OP] ItemCollector: Selected: (none)
+[07:47:36][Info] [OP] ItemCollector: Destination = Campfire
+[07:47:38][Info] [OP] ItemCollector: Scanned 153 items (28 types)
+[07:47:38][Info] [OP] ItemCollector: Selected: (none)
+[07:47:38][Info] [OP] ItemCollector: Selected: (none)
+[07:47:45][Info] [OP] ItemCollector: Selected: Fuel Canister
+[07:47:46][Info] [OP] ItemCollector: Selected: Fuel Canister, Log
+[07:47:46][Info] [OP] ItemCollector: Selected: Log
+[07:47:48][Info] [OP] ItemCollector: Selected: (none)
+[07:47:49][Info] [OP] ItemCollector: Selected: Log
+[07:48:05][Info] [OP] ItemCollector: Thread #1 ON | Items: Log | Dest: Campfire, Speed: Instant, Mode: Stack
+[07:48:05][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:48:05][Info] [Remote][Success] RemoteEvents found: 204 remotes
+[07:48:05][Info] [OP] ItemCollector: Finished! Total collected: 6 (Log)
+[07:48:09][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:48:09][Info] [OP] ItemCollector: Thread #2 ON | Items: Log | Dest: Campfire, Speed: Instant, Mode: Stack
+[07:48:09][Info] [OP] ItemCollector: Finished! Total collected: 6 (Log)
+[07:48:10][Info] [OP] ItemCollector: Thread #3 ON | Items: Log | Dest: Campfire, Speed: Instant, Mode: Stack
+[07:48:10][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:48:10][Info] [OP] ItemCollector: Finished! Total collected: 6 (Log)
+[07:48:11][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:48:11][Info] [OP] ItemCollector: Thread #4 ON | Items: Log | Dest: Campfire, Speed: Instant, Mode: Stack
+[07:48:11][Info] [OP] ItemCollector: Finished! Total collected: 6 (Log)
+[07:50:46][Info] table: 0xef439d46881f8c25
+[07:50:50][Info] [OP] AutoPlant: Generated 125 plant positions (Circle)
+[07:50:50][Info] [OP] AutoPlant: ON
+[07:50:50][Info] [OP] AutoPlant: Found sapling, DebugId = 1_250808
+[07:50:50][Info] [OP] AutoPlant: Center = 14.988954544067383, 4.0075764656066895, 36.79573059082031 (Player)
+[07:51:07][Info] [OP] AutoPlant: Completed! Planted 125 saplings
+[07:54:18][Info] deactivate and unequip
+[07:54:43][Info] deactivate and unequip
+[07:55:31][Info] table: 0x0e083e2b1f3aeee5
+[07:56:02][Info] [OP] GodMode: STARTED
+[07:57:19][Info] [OP] TreeFarm: Filter ON - Small Tree
+[07:57:20][Info] [OP] TreeFarm: ON
+[07:57:29][Info] deactivate and unequip
+[07:57:46][Info] Loader: Fetching MainInterface...
+[07:57:48][Info] [OP] SoundManager: Cleanup complete
+[07:57:48][Info] [OP] ItemCollector: STOPPED 4 thread(s) (Collected 6 items)
+[07:57:48][Info] [OP] AutoEat: STOPPED
+[07:57:48][Info] [OP] Loading modules...
+[07:57:48][Info] [OP] MapRevealer: Cleanup complete
+[07:57:48][Info] [OP] GodMode: STOPPED
+[07:57:48][Info] [OP] AutoEat: STOPPED
+[07:57:48][Info] [OP] TreeFarm: OFF
+[07:57:48][Info] [OP] GodMode: STOPPED
+[07:57:48][Info] [OP] Modules loaded!
+[07:57:48][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[07:57:48][Info] [OP] Initializing 99 Nights OP Script...
+[07:57:48][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[07:57:48][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[07:57:48][Info] [OP] ItemCollector: Initialized
+[07:57:48][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[07:57:49][Info] [OP] Window created. Type: table
+[07:57:50][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[07:57:50][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[07:57:50][Info] [OP] ItemCollector: Destination = Player
+[07:57:50][Info] [OP] ItemCollector: Speed = Instant
+[07:57:50][Info] [OP] ItemCollector: Organize Mode = Grid
+[07:57:50][Info] [OP] UI Created! Ready to use.
+[07:57:50][Info] [OP] ItemCollector: Selected: (none)
+[07:57:56][Info] [OP] ItemCollector: Destination = Campfire
+[07:58:00][Info] [OP] ItemCollector: Selected: (none)
+[07:58:00][Info] [OP] ItemCollector: Selected: (none)
+[07:58:00][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:02][Info] [OP] ItemCollector: Auto Rescan ON (3s interval)
+[07:58:05][Info] [OP] ItemCollector: Selected: (none)
+[07:58:05][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:09][Info] [OP] ItemCollector: Selected: (none)
+[07:58:09][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:12][Info] [OP] ItemCollector: Selected: (none)
+[07:58:12][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:12][Info] [OP] ItemCollector: Selected: Berry
+[07:58:13][Info] [OP] ItemCollector: Auto Rescan OFF
+[07:58:16][Info] [OP] ItemCollector: Selected: (none)
+[07:58:16][Info] [OP] ItemCollector: Selected: (none)
+[07:58:19][Info] [OP] ItemCollector: Selected: Log
+[07:58:21][Info] [OP] ItemCollector: Auto Rescan ON (3s interval)
+[07:58:24][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:24][Info] [OP] ItemCollector: Selected: Log
+[07:58:27][Info] [OP] ItemCollector: Selected: Log
+[07:58:27][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:29][Info] [OP] ItemCollector: Global limit = 225
+[07:58:29][Info] [OP] ItemCollector: Global limit = 975
+[07:58:29][Info] [OP] ItemCollector: Global limit = 2000
+[07:58:31][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:31][Info] [OP] ItemCollector: Selected: Log
+[07:58:34][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:34][Info] [OP] ItemCollector: Selected: Log
+[07:58:38][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:38][Info] [OP] ItemCollector: Selected: Log
+[07:58:41][Info] [OP] ItemCollector: Scanned 618 items (28 types)
+[07:58:41][Info] [OP] ItemCollector: Selected: Log
+[07:58:43][Info] [OP] ItemCollector: Thread #1 ON | Items: Log | Dest: Campfire, Speed: Instant, Mode: Stack
+[07:58:43][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:58:43][Info] [Remote][Success] RemoteEvents found: 209 remotes
+[07:58:45][Info] [OP] ItemCollector: Selected: Log
+[07:58:45][Info] [OP] ItemCollector: Scanned 617 items (28 types)
+[07:58:48][Info] [OP] ItemCollector: Scanned 615 items (28 types)
+[07:58:48][Info] [OP] ItemCollector: Selected: Log
+[07:58:52][Info] [OP] ItemCollector: Selected: Log
+[07:58:52][Info] [OP] ItemCollector: Scanned 611 items (28 types)
+[07:58:55][Info] [OP] ItemCollector: Selected: Log
+[07:58:55][Info] [OP] ItemCollector: Scanned 609 items (28 types)
+[07:58:59][Info] [OP] ItemCollector: Scanned 605 items (28 types)
+[07:58:59][Info] [OP] ItemCollector: Selected: Log
+[07:59:03][Info] [OP] ItemCollector: Selected: Log
+[07:59:03][Info] [OP] ItemCollector: Scanned 602 items (28 types)
+[07:59:06][Info] [OP] ItemCollector: Selected: Log
+[07:59:06][Info] [OP] ItemCollector: Scanned 599 items (28 types)
+[07:59:10][Info] [OP] ItemCollector: Selected: Log
+[07:59:10][Info] [OP] ItemCollector: Scanned 597 items (28 types)
+[07:59:13][Info] [OP] ItemCollector: STOPPED 1 thread(s) (Collected 157 items)
+[07:59:14][Info] [OP] ItemCollector: Scanned 594 items (28 types)
+[07:59:14][Info] [OP] ItemCollector: Selected: Log
+[07:59:18][Info] [OP] ItemCollector: Scanned 594 items (28 types)
+[07:59:18][Info] [OP] ItemCollector: Selected: Log
+[07:59:21][Info] [OP] ItemCollector: Selected: Log
+[07:59:21][Info] [OP] ItemCollector: Scanned 594 items (28 types)
+[07:59:23][Info] [OP] ItemCollector: Speed = Fast
+[07:59:25][Info] [OP] ItemCollector: Selected: Log
+[07:59:25][Info] [OP] ItemCollector: Scanned 594 items (28 types)
+[07:59:26][Info] [OP] ItemCollector: Stack position FIXED at 0, 13.5, 0
+[07:59:26][Info] [OP] ItemCollector: Thread #1 ON | Items: Log | Dest: Campfire, Speed: Fast, Mode: Stack
+[07:59:29][Info] [OP] ItemCollector: Selected: Log
+[07:59:29][Info] [OP] ItemCollector: Scanned 584 items (28 types)
+[07:59:33][Info] [OP] ItemCollector: Selected: Log
+[07:59:33][Info] [OP] ItemCollector: Scanned 564 items (28 types)
+[07:59:37][Info] [OP] ItemCollector: Selected: Log
+[07:59:37][Info] [OP] ItemCollector: Scanned 547 items (28 types)
+[07:59:40][Info] [OP] ItemCollector: Scanned 529 items (28 types)
+[07:59:40][Info] [OP] ItemCollector: Selected: Log
+[07:59:44][Info] [OP] ItemCollector: Scanned 512 items (28 types)
+[07:59:44][Info] [OP] ItemCollector: Selected: Log
+[07:59:48][Info] [OP] ItemCollector: Selected: Log
+[07:59:48][Info] [OP] ItemCollector: Scanned 494 items (28 types)
+[07:59:52][Info] [OP] ItemCollector: Scanned 476 items (28 types)
+[07:59:52][Info] [OP] ItemCollector: Selected: Log
+[07:59:56][Info] [OP] ItemCollector: Scanned 460 items (28 types)
+[07:59:56][Info] [OP] ItemCollector: Selected: Log
+[08:00:00][Info] [OP] ItemCollector: Selected: Log
+[08:00:00][Info] [OP] ItemCollector: Scanned 444 items (28 types)
+[08:00:04][Info] [OP] ItemCollector: Scanned 435 items (28 types)
+[08:00:04][Info] [OP] ItemCollector: Selected: Log
+[08:00:08][Info] [OP] ItemCollector: Selected: Log
+[08:00:08][Info] [OP] ItemCollector: Scanned 432 items (28 types)
+[08:00:09][Info] table: 0x4d1e393b89e57ae5
+[08:00:12][Info] [OP] ItemCollector: Selected: Log
+[08:00:12][Info] [OP] ItemCollector: Scanned 427 items (28 types)
+[08:00:16][Info] [OP] ItemCollector: Selected: Log
+[08:00:16][Info] [OP] ItemCollector: Scanned 421 items (28 types)
+[08:00:20][Info] [OP] ItemCollector: Scanned 416 items (28 types)
+[08:00:20][Info] [OP] ItemCollector: Selected: Log
+[08:00:24][Info] [OP] ItemCollector: Selected: Log
+[08:00:24][Info] [OP] ItemCollector: Scanned 413 items (28 types)
+[08:00:29][Info] [OP] ItemCollector: Scanned 412 items (28 types)
+[08:00:29][Info] [OP] ItemCollector: Selected: Log
+[08:00:30][Info] [OP] ItemCollector: STOPPED 1 thread(s) (Collected 463 items)
+[08:00:33][Info] [OP] ItemCollector: Selected: Log
+[08:00:33][Info] [OP] ItemCollector: Scanned 412 items (28 types)
+[08:00:37][Info] [OP] ItemCollector: Selected: Log
+[08:00:37][Info] [OP] ItemCollector: Scanned 412 items (28 types)
+[08:00:38][Info] [OP] ItemCollector: Thread #1 ON | Items: Log | Dest: Campfire, Speed: Fast, Mode: Stack
+[08:00:38][Info] [OP] ItemCollector: Stack position FIXED at 0, 17.5, 0
+[08:00:41][Info] [OP] ItemCollector: Selected: Log
+[08:00:41][Info] [OP] ItemCollector: Scanned 409 items (28 types)
+[08:00:46][Info] [OP] ItemCollector: Scanned 408 items (28 types)
+[08:00:46][Info] [OP] ItemCollector: Selected: Log
+[08:00:50][Info] [OP] ItemCollector: Scanned 406 items (28 types)
+[08:00:50][Info] [OP] ItemCollector: Selected: Log
+[08:00:54][Info] [OP] ItemCollector: Scanned 387 items (28 types)
+[08:00:54][Info] [OP] ItemCollector: Selected: Log
+[08:00:59][Info] [OP] ItemCollector: Scanned 368 items (28 types)
+[08:00:59][Info] [OP] ItemCollector: Selected: Log
+[08:01:03][Info] [OP] ItemCollector: Scanned 348 items (28 types)
+[08:01:03][Info] [OP] ItemCollector: Selected: Log
+[08:01:08][Info] [OP] ItemCollector: Scanned 331 items (28 types)
+[08:01:08][Info] [OP] ItemCollector: Selected: Log
+[08:01:12][Info] [OP] ItemCollector: Selected: Log
+[08:01:12][Info] [OP] ItemCollector: Scanned 312 items (28 types)
+[08:01:17][Info] [OP] ItemCollector: Selected: Log
+[08:01:17][Info] [OP] ItemCollector: Scanned 294 items (28 types)
+[08:01:18][Info] [OP] ItemCollector: Finished! Total collected: 632 (Log)
+[08:01:21][Info] [OP] ItemCollector: Selected: Log
+[08:01:21][Info] [OP] ItemCollector: Scanned 284 items (28 types)
+[08:01:26][Info] [OP] ItemCollector: Selected: Log
+[08:01:26][Info] [OP] ItemCollector: Scanned 284 items (28 types)
+[08:01:28][Info] [OP] ItemCollector: Thread #2 ON | Items: Log | Dest: Campfire, Speed: Fast, Mode: Stack
+[08:01:28][Info] [OP] ItemCollector: Stack position FIXED at 0, 17.5, 0
+[08:01:30][Info] [OP] ItemCollector: Scanned 280 items (28 types)
+[08:01:30][Info] [OP] ItemCollector: Selected: Log
+[08:01:34][Info] [OP] ItemCollector: Scanned 257 items (28 types)
+[08:01:34][Info] [OP] ItemCollector: Selected: Log
+[08:01:36][Info] [OP] ItemCollector: Finished! Total collected: 673 (Log)
+[08:01:39][Info] [OP] ItemCollector: Selected: Log
+[08:01:39][Info] [OP] ItemCollector: Scanned 243 items (27 types)
+[08:01:43][Info] [OP] ItemCollector: Scanned 243 items (27 types)
+[08:01:43][Info] [OP] ItemCollector: Selected: Log
+[08:01:48][Info] [OP] ItemCollector: Scanned 243 items (27 types)
+[08:01:48][Info] [OP] ItemCollector: Selected: Log
+[08:01:52][Info] [OP] ItemCollector: Scanned 243 items (27 types)
+[08:01:52][Info] [OP] ItemCollector: Selected: Log
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:52][Info] made smaller
+[08:01:57][Info] [OP] ItemCollector: Selected: Log
+[08:01:57][Info] [OP] ItemCollector: Scanned 243 items (27 types)
+[08:01:59][Info] [OP] ItemCollector: Auto Rescan OFF

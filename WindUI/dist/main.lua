@@ -6743,7 +6743,7 @@ ai=true
 
 local b=am and aB.Position.X or ac:GetMouseLocation().X
 local d=math.clamp((b-al.UIElements.SliderIcon.AbsolutePosition.X)/al.UIElements.SliderIcon.AbsoluteSize.X,0,1)
-aA=CalculateValue(al.Value.Min+d*(al.Value.Max-al.Value.Min))
+aA=CalculateValue((al.Value.Min or 0)+d*((al.Value.Max or 100)-(al.Value.Min or 0)))
 aA=math.clamp(aA,al.Value.Min or 0,al.Value.Max or 100)
 
 if aA~=aq then
@@ -6758,7 +6758,7 @@ end
 an=ad.RenderStepped:Connect(function()
 local f=am and aB.Position.X or ac:GetMouseLocation().X
 local g=math.clamp((f-al.UIElements.SliderIcon.AbsolutePosition.X)/al.UIElements.SliderIcon.AbsoluteSize.X,0,1)
-aA=CalculateValue(al.Value.Min+g*(al.Value.Max-al.Value.Min))
+aA=CalculateValue((al.Value.Min or 0)+g*((al.Value.Max or 100)-(al.Value.Min or 0)))
 
 if aA~=aq then
 ag(al.UIElements.SliderIcon.Frame,0.05,{Size=UDim2.new(g,0,1,0)}):Play()
@@ -6785,10 +6785,11 @@ if ax then ax:Close(false)end
 end
 end)
 else
+if aA==nil then aA=aq or al.Value.Default or al.Value.Min or 0 end
 aA=math.clamp(aA,al.Value.Min or 0,al.Value.Max or 100)
 
 local b=math.clamp((aA-(al.Value.Min or 0))/((al.Value.Max or 100)-(al.Value.Min or 0)),0,1)
-aA=CalculateValue(al.Value.Min+b*(al.Value.Max-al.Value.Min))
+aA=CalculateValue((al.Value.Min or 0)+b*((al.Value.Max or 100)-(al.Value.Min or 0)))
 
 if aA~=aq then
 ag(al.UIElements.SliderIcon.Frame,0.05,{Size=UDim2.new(b,0,1,0)}):Play()

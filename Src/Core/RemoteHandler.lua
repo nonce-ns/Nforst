@@ -242,6 +242,10 @@ function RemoteHandler.RequestOpenItemChest(chest)
 	return RemoteHandler.Fire("RequestOpenItemChest", chest)
 end
 
+function RemoteHandler.FadeOutFogBlock(mode, part)
+    return RemoteHandler.Fire("FadeOutFogBlock", mode, part)
+end
+
 -- ============================================
 -- LIST ALL REMOTES (for debugging)
 -- ============================================

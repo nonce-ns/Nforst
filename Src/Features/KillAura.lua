@@ -47,28 +47,22 @@ local function isMelee(name)
     return false
 end
 
+-- Get equipped melee via ToolHandle system
 local function getEquippedMelee()
     local char = LocalPlayer.Character
     if not char then return nil end
     
-    -- Check currently equipped tool (in character)
-    for _, item in ipairs(char:GetChildren()) do
-        if item:IsA("Tool") and isMelee(item.Name) then
-            return item
-        end
-    end
-    return nil
-end
-
-local function getAnyMelee()
-    -- Fallback: get from inventory if nothing equipped
-    local inv = LocalPlayer:FindFirstChild("Inventory")
-    if not inv then return nil end
+    -- Check ToolHandle (weapon sedang dipegang)
+    local toolHandle = char:FindFirstChild("ToolHandle")
+    if not toolHandle then return nil end
     
-    for _, item in ipairs(inv:GetChildren()) do
-        if isMelee(item.Name) then
-            return item
-        end
+    -- Get actual weapon reference from OriginalItem
+    local originalItem = toolHandle:FindFirstChild("OriginalItem")
+    if not originalItem or not originalItem.Value then return nil end
+    
+    local weapon = originalItem.Value
+    if isMelee(weapon.Name) then
+        return weapon
     end
     return nil
 end
@@ -80,38 +74,56 @@ end
 
 local function getTargets()
     local targets = {}
-    local chars = Workspace:FindFirstChild("Characters")
-    if not chars then return targets end
     
     local root = Utils and Utils.getRoot()
     if not root then return targets end
     
-    for _, char in ipairs(chars:GetChildren()) do
-        -- Skip players
-        if Players:GetPlayerFromCharacter(char) then
-            continue
-        end
+    -- Scan both Characters and Items folders
+    local foldersToScan = {
+        Workspace:FindFirstChild("Characters"),
+        Workspace:FindFirstChild("Items")
+    }
+    
+    for _, folder in ipairs(foldersToScan) do
+        if not folder then continue end
         
-        -- Skip dead
-        local hum = char:FindFirstChildOfClass("Humanoid")
-        if not hum or hum.Health <= 0 then
-            continue
-        end
-        
-        -- Get position
-        local charRoot = char:FindFirstChild("HumanoidRootPart") or char:FindFirstChildWhichIsA("BasePart")
-        if not charRoot then
-            continue
-        end
-        
-        -- Check range
-        local dist = (charRoot.Position - root.Position).Magnitude
-        if dist <= RANGE then
-            table.insert(targets, {
-                Model = char,
-                Distance = dist,
-                HitPart = charRoot,
-            })
+        for _, entity in ipairs(folder:GetChildren()) do
+            -- Skip if it's any player's character (multiplayer safe)
+            if Players:GetPlayerFromCharacter(entity) then
+                continue
+            end
+            
+            -- Also skip by checking all player names (extra safety)
+            local isPlayer = false
+            for _, player in ipairs(Players:GetPlayers()) do
+                if entity.Name == player.Name or entity.Name == player.DisplayName then
+                    isPlayer = true
+                    break
+                end
+            end
+            if isPlayer then continue end
+            
+            -- Must have Humanoid with health > 0 (skip objects & dead)
+            local hum = entity:FindFirstChildOfClass("Humanoid")
+            if not hum or hum.Health <= 0 then
+                continue
+            end
+            
+            -- Get position with type validation
+            local entityRoot = entity:FindFirstChild("HumanoidRootPart") or entity:FindFirstChildWhichIsA("BasePart")
+            if not entityRoot or not entityRoot:IsA("BasePart") then
+                continue
+            end
+            
+            -- Check range
+            local dist = (entityRoot.Position - root.Position).Magnitude
+            if dist <= RANGE then
+                table.insert(targets, {
+                    Model = entity,
+                    Distance = dist,
+                    HitPart = entityRoot,
+                })
+            end
         end
     end
     
@@ -143,6 +155,7 @@ local function cleanup()
         State.Thread = nil
     end
     State.Enabled = false
+    State.HitCounter = 0  -- Reset counter to prevent overflow
 end
 
 -- ============================================
@@ -164,20 +177,23 @@ function KillAura.Start()
     
     State.Thread = task.spawn(function()
         while State.Enabled do
-            -- Auto-detect equipped melee weapon
-            local weapon = getEquippedMelee() or getAnyMelee()
+            -- Get equipped melee via ToolHandle
+            local weapon = getEquippedMelee()
             
             if weapon then
+                -- Scan and attack all targets (PARALLEL)
                 local targets = getTargets()
                 
                 for _, target in ipairs(targets) do
                     if not State.Enabled then break end
                     task.spawn(function()
-                        if not State.Enabled then return end  -- Double check before attack
-                        attackTarget(target, weapon)
+                        if State.Enabled then
+                            attackTarget(target, weapon)
+                        end
                     end)
                 end
             end
+            -- No weapon = idle (tidak scan, tidak attack)
             
             task.wait(CYCLE_DELAY)
         end
@@ -193,6 +209,11 @@ end
 
 function KillAura.IsEnabled()
     return State.Enabled
+end
+
+-- Full cleanup (for unload)
+function KillAura.Cleanup()
+    cleanup()
 end
 
 return KillAura

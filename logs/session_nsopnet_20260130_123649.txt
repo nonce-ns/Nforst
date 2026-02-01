@@ -1,0 +1,83 @@
+=== WindUI Log Session ===
+Started: 2026-01-30 12:36:49
+User: nsopnet (ID: 8401342884)
+========================================
+
+[03:36:46][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:33][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:48][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:41][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:49][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:46][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:48][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:34][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:42][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:49][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:47][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:42][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:34][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:50][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:47][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:35][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:43][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:50][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:43][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:35][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:51][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:44][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:36][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:51][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:44][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:36][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:52][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:37][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:45][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:52][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:52][Info] Loader: Fetching MainInterface...
+[03:36:37][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:53][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:38][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:53][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:38][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:54][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:39][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:54][Info] [OP] AutoEat: STOPPED
+[03:36:54][Info] [OP] MapRevealer: Cleanup complete
+[03:36:54][Info] [OP] GodMode: STOPPED
+[03:36:54][Info] [OP] GodMode: STOPPED
+[03:36:54][Info] [OP] TreeFarm: OFF
+[03:36:54][Info] [OP] AutoEat: STOPPED
+[03:36:54][Info] [OP] Loading modules...
+[03:36:39][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:55][Info] [OP] Modules loaded!
+[03:36:55][Info] [OP] Initializing 99 Nights OP Script...
+[03:36:55][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[03:36:55][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[03:36:55][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[03:36:55][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[03:36:40][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:56][Info] [OP] Window created. Type: table
+[03:36:56][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[03:36:40][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:36:56][Info] [OP] UI Created! Ready to use.
+[03:36:41][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:00][Info] [OP] TreeFarm: ON
+[03:37:00][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:01][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:01][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:02][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:02][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:03][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:03][Info] deactivate and unequip
+[03:37:03][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:04][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:04][Info] deactivate and unequip
+[03:37:05][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:05][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:06][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:06][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:07][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:07][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:08][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:08][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)
+[03:37:09][Info] [DEBUG] TreeFarm: No EQUPPED Axe found! (Please hold axe)

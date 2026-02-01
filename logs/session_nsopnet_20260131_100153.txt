@@ -1,0 +1,975 @@
+=== WindUI Log Session ===
+Started: 2026-01-31 10:01:53
+User: nsopnet (ID: 8401342884)
+========================================
+
+[01:01:53][Info] Loader: Fetching MainInterface...
+[01:01:55][Info] [OP] Loading modules...
+[01:01:56][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[01:01:56][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[01:01:56][Info] [OP] Initializing 99 Nights OP Script...
+[01:01:56][Info] [OP] Modules loaded!
+[01:01:56][Info] [OP] ItemCollector: Initialized
+[01:01:56][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[01:01:56][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[01:01:56][Info] [OP] Window created. Type: table
+[01:01:57][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[01:01:57][Info] [OP] ItemCollector: Selected 0 item types
+[01:01:57][Info] [OP] ItemCollector: Destination = Player
+[01:01:57][Info] [OP] ItemCollector: Organize Mode = Grid
+[01:01:57][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[01:01:57][Info] [OP] ItemCollector: Speed = Instant
+[01:01:57][Info] [OP] UI Created! Ready to use.
+[01:02:06][Info] [OP] TreeFarm: Filter ON - Small Tree
+[01:02:07][Info] [OP] TreeFarm: ON
+[01:02:08][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[01:02:20][Info] deactivate and unequip
+[01:02:31][Info] [OP] AutoPlant: ON
+[01:02:31][Info] [OP] AutoPlant: Center = -42.535850524902344, 3.2954838275909424, -75.15375518798828 (Player)
+[01:02:31][Info] [OP] AutoPlant: Generated 125 plant positions (Circle)
+[01:02:31][Info] [OP] AutoPlant: Found sapling, DebugId = 1_260299
+[01:02:46][Info] [OP] GodMode: STARTED
+[01:02:48][Info] [OP] AutoPlant: Completed! Planted 125 saplings
+[01:04:12][Info] deactivate and unequip
+[01:04:20][Info] [OP] ItemCollector: Destination = Campfire
+[01:04:22][Info] [OP] ItemCollector: Selected 0 item types
+[01:04:22][Info] [OP] ItemCollector: Scanned 252 items (24 types)
+[01:04:28][Info] [OP] ItemCollector: Selected 1 item types
+[01:04:38][Info] [OP] ItemCollector: Stack position FIXED at 0, 9.5, 0
+[01:04:38][Info] [OP] ItemCollector: Thread #1 ON (Dest=Campfire, Speed=Instant, Stack)
+[01:04:41][Info] [OP] ItemCollector: Finished! Collected 48 items
+[01:04:50][Info] [OP] SoundManager: DELETING ALL SOUNDS (ANTI-LAG)...
+[01:04:50][Info] [OP] SoundManager: SOUND DELETION ACTIVE
+[01:05:01][Info] [OP] ItemCollector: Scanned 215 items (24 types)
+[01:05:01][Info] [OP] ItemCollector: Selected 1 item types
+[01:05:03][Info] [OP] ItemCollector: Selected 0 item types
+[01:05:03][Info] [OP] ItemCollector: Selected 0 item types
+[01:05:08][Info] [OP] ItemCollector: Selected 1 item types
+[01:05:13][Info] [OP] ItemCollector: Thread #2 ON (Dest=Campfire, Speed=Instant, Stack)
+[01:05:13][Info] [OP] ItemCollector: Stack position FIXED at 0, 9.5, 0
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:13][Info] [OP] ItemCollector: Finished! Collected 59 items
+[01:05:13][Error] FuelAdded is not a valid member of Part "Workspace.Map.Campground.MainFire.Center"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 452 - function BurnItem
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 499 - function CheckInnerTouch
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.FireSourceModule', Line 577
+    Stack End
+[01:05:21][Info] [OP] ItemCollector: Speed = Fast
+[01:05:29][Info] [OP] ItemCollector: Scanned 204 items (23 types)
+[01:05:29][Info] [OP] ItemCollector: Selected 1 item types
+[01:05:30][Info] [OP] ItemCollector: Selected 0 item types
+[01:05:30][Info] [OP] ItemCollector: Selected 0 item types
+[01:06:34][Info] deactivate and unequip
+[01:06:41][Info] [OP] ItemCollector: Scanned 675 items (24 types)
+[01:06:41][Info] [OP] ItemCollector: Selected 0 item types
+[01:06:45][Info] [OP] ItemCollector: Selected 1 item types
+[01:06:48][Info] [OP] ItemCollector: Global limit = 675
+[01:06:48][Info] [OP] ItemCollector: Global limit = 1350
+[01:06:48][Info] [OP] ItemCollector: Global limit = 2000
+[01:06:54][Info] [OP] ItemCollector: Destination = Scrapper
+[01:06:59][Info] [OP] ItemCollector: Stack position FIXED at 20.953277587890625, 9.200000762939453, -5.237123012542725
+[01:06:59][Info] [OP] ItemCollector: Thread #3 ON (Dest=Scrapper, Speed=Fast, Stack)
+[01:06:59][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:06:59][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:06:59][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:06:59][Info] not success
+[01:06:59][Info] not success
+[01:06:59][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:00][Info] not success
+[01:07:00][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:00][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:00][Info] not success
+[01:07:00][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:00][Info] not success
+[01:07:00][Info] not success
+[01:07:01][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:01][Info] not success
+[01:07:01][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:01][Info] not success
+[01:07:01][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:01][Info] not success
+[01:07:01][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:01][Info] not success
+[01:07:01][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:01][Info] not success
+[01:07:01][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:01][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:02][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:02][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:02][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:02][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:02][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:02][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:02][Info] not success
+[01:07:02][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:02][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:03][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:03][Info] not success
+[01:07:03][Info] not success
+[01:07:03][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:03][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:03][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:03][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:03][Info] not success
+[01:07:03][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:03][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:03][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:03][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:04][Info] not success
+[01:07:04][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:04][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:04][Info] not success
+[01:07:05][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:05][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:05][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:05][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:05][Info] not success
+[01:07:06][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:06][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:06][Info] not success
+[01:07:06][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:06][Info] not success
+[01:07:06][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:07][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:08][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:08][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:08][Info] not success
+[01:07:08][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:09][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:10][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:11][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:11][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:12][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:12][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:14][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:14][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:15][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:18][Info] [OP] ItemCollector: STOPPED 3 thread(s) (Collected 207 items)
+[01:07:18][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:18][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:33][Info] [OP] ItemCollector: Thread #1 ON (Dest=Scrapper, Speed=Fast, Stack)
+[01:07:33][Info] [OP] ItemCollector: Stack position FIXED at 20.953277587890625, 16.200000762939453, -5.237123012542725
+[01:07:33][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:33][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:34][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:34][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:34][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:34][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:34][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:34][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:34][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:35][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:35][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:35][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:35][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:35][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:35][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:36][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:36][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:36][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:36][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:36][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:36][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:36][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:37][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:38][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:38][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:38][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:38][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:38][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:38][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:39][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:40][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:40][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:40][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:40][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:40][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:40][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:41][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:41][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:41][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:41][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:41][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:42][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:42][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:42][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:42][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:43][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:43][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:43][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:43][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:44][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:45][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:46][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:46][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:46][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:46][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:46][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:46][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:47][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:47][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:47][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:47][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:47][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:47][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:47][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:48][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:48][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:48][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:48][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:48][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:48][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:48][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:48][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:49][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:49][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:49][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:49][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:49][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End
+[01:07:49][Error] Grinder is not a valid member of Part "Workspace.Map.Campground.Scrapper.DashedLine"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 131 - function TweenDownAndRattle
+    Script 'Players.nsopnet.PlayerScripts.Client.CampsiteModules.CraftingGrinderModule', Line 356
+    Stack End

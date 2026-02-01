@@ -8,7 +8,7 @@ local CombatTab = {}
 function CombatTab.Create(Window, Features, CONFIG)
     local Tab = Window:Tab({
         Title = "Combat",
-        Icon = "solar:sword-bold",
+        Icon = "lucide:sword",
         IconColor = CONFIG.COLORS.Red,
     })
     
@@ -17,7 +17,7 @@ function CombatTab.Create(Window, Features, CONFIG)
     -- ========================================
     local AuraSection = Tab:Section({
         Title = "Kill Aura",
-        Icon = "solar:target-bold",
+        Icon = "solar:danger-bold",
         Box = true,
         BoxBorder = true,
         Opened = true,

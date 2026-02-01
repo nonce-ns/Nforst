@@ -107,12 +107,21 @@ local Remote = loadModule("Core/RemoteHandler.lua")
 local AutoEat = loadModule("Features/AutoEat.lua")
 local GodMode = loadModule("Features/GodMode.lua")
 local KillAura = loadModule("Features/KillAura.lua")
+local MapRevealer = loadModule("Features/MapRevealer.lua")
+local TreeFarm = loadModule("Features/TreeFarm.lua")
+local AutoPlant = loadModule("Features/AutoPlant.lua")
+local SoundManager = loadModule("Features/SoundManager.lua")
+local ItemCollector = loadModule("Features/ItemCollector.lua")
 
 -- UI Tabs
 local HomeTab = loadModule("UI/Tabs/HomeTab.lua")
 local SurvivalTab = loadModule("UI/Tabs/SurvivalTab.lua")
 local CombatTab = loadModule("UI/Tabs/CombatTab.lua")
+local FarmingTab = loadModule("UI/Tabs/FarmingTab.lua")
 local SettingsTab = loadModule("UI/Tabs/SettingsTab.lua")
+local ExplorerTab = loadModule("UI/Tabs/ExplorerTab.lua")
+local MiscTab = loadModule("UI/Tabs/MiscTab.lua")
+local AutoCollectTab = loadModule("UI/Tabs/AutoCollectTab.lua")
 
 print("[OP] Modules loaded!")
 
@@ -122,6 +131,11 @@ if getgenv then
         AutoEat = AutoEat,
         GodMode = GodMode,
         KillAura = KillAura,
+        MapRevealer = MapRevealer,
+        TreeFarm = TreeFarm,
+        AutoPlant = AutoPlant,
+        SoundManager = SoundManager,
+        ItemCollector = ItemCollector,
     }
 end
 
@@ -132,6 +146,11 @@ local Features = {
     AutoEat = AutoEat,
     GodMode = GodMode,
     KillAura = KillAura,
+    MapRevealer = MapRevealer,
+    TreeFarm = TreeFarm,
+    AutoPlant = AutoPlant,
+    SoundManager = SoundManager,
+    ItemCollector = ItemCollector,
 }
 
 -- ============================================
@@ -158,6 +177,38 @@ local function createUI(WindUI)
             Utils = Utils,
             Remote = Remote,
             WindUI = WindUI,
+        })
+    end
+
+    if MapRevealer then
+        MapRevealer.Init({
+            Remote = Remote,
+        })
+    end
+    
+    if TreeFarm then
+        TreeFarm.Init({
+            Utils = Utils,
+            Remote = Remote,
+        })
+    end
+    
+    if AutoPlant then
+        AutoPlant.Init({
+            Utils = Utils,
+            Remote = Remote,
+        })
+    end
+
+    if SoundManager then
+        SoundManager.Init({
+            Utils = Utils,
+        })
+    end
+
+    if ItemCollector then
+        ItemCollector.Init({
+            Remote = Remote,
         })
     end
     
@@ -197,16 +248,29 @@ local function createUI(WindUI)
         homeTabRef = HomeTab.Create(Window, CONFIG, WindUI)
     end
     
-    -- Create Features Section (Optional Divider)
-    -- local MainSection = Window:Section({ Title = "Features" }) -- Removed causing error
-    
-    -- Create tabs
+    -- Create Tabs
     if SurvivalTab then
         SurvivalTab.Create(Window, Features, CONFIG)
     end
     
     if CombatTab then
         CombatTab.Create(Window, Features, CONFIG)
+    end
+    
+    if FarmingTab then
+        FarmingTab.Create(Window, Features, CONFIG)
+    end
+    
+    if ExplorerTab then
+        ExplorerTab.Create(Window, Features, CONFIG, WindUI)
+    end
+
+    if MiscTab then
+        MiscTab.Create(Window, Utils, Remote, CONFIG, Features)
+    end
+
+    if AutoCollectTab then
+        AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
     end
     
     if SettingsTab then

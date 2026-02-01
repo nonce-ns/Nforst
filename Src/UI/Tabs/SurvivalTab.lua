@@ -8,7 +8,7 @@ local SurvivalTab = {}
 function SurvivalTab.Create(Window, Features, CONFIG)
     local Tab = Window:Tab({
         Title = "Survival",
-        Icon = "solar:heart-bold",
+        Icon = "lucide:heart",
         IconColor = CONFIG.COLORS.Red,
     })
     

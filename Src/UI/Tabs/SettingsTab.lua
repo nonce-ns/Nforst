@@ -8,7 +8,7 @@ local SettingsTab = {}
 function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
     local Tab = Window:Tab({
         Title = "Settings",
-        Icon = "solar:settings-bold",
+        Icon = "lucide:settings",
         IconColor = CONFIG.COLORS.Grey,
     })
 
@@ -34,17 +34,7 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
         end,
     })
 
-    Tab:Toggle({
-        Flag = "System.DisableNotifications",
-        Title = "Disable Notifications",
-        Desc = "Disable to hide all popup info (e.g. scan results)",
-        Value = false,
-        Callback = function(state)
-            if getgenv then
-                getgenv().OP_DISABLE_NOTIF = state
-            end
-        end,
-    })
+
 
     Tab:Space({ Size = 12 })
 
@@ -184,6 +174,7 @@ function SettingsTab.Create(Window, Utils, Remote, CONFIG, WindUI)
             end
         end,
     })
+
 
     return Tab
 end

@@ -1,0 +1,27 @@
+=== WindUI Log Session ===
+Started: 2026-01-30 12:32:40
+User: nsopnet (ID: 8401342884)
+========================================
+
+[03:32:40][Info] Loader: Fetching MainInterface...
+[03:32:26][Error] Typewriter is not a valid member of Folder "ReplicatedStorage.Core.Sounds"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.Interface.PopUpUI', Line 216
+    Stack End
+[03:32:43][Info] [OP] AutoEat: STOPPED
+[03:32:43][Info] [OP] AutoEat: STOPPED
+[03:32:43][Info] [OP] MapRevealer: Cleanup complete
+[03:32:43][Info] [OP] GodMode: STOPPED
+[03:32:43][Info] [OP] Loading modules...
+[03:32:43][Info] [OP] GodMode: STOPPED
+[03:32:44][Info] [OP] Modules loaded!
+[03:32:44][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[03:32:44][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[03:32:44][Info] [OP] Initializing 99 Nights OP Script...
+[03:32:44][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[03:32:44][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[03:32:44][Info] [OP] Window created. Type: table
+[03:32:44][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[03:32:44][Info] [OP] UI Created! Ready to use.
+[03:32:52][Info] [OP] TreeFarm: ON
+[03:32:55][Info] deactivate and unequip

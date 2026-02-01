@@ -171,15 +171,28 @@ local function collectAvailableFood()
     if worldItems and playerPos then
         for _, item in ipairs(worldItems:GetChildren()) do
             if isFood(item.Name) and isFoodAllowed(item.Name) then
-                local itemPos = item:GetPivot().Position
-                local dist = (itemPos - playerPos).Magnitude
-                table.insert(foods, {
-                    Item = item,
-                    Name = item.Name,
-                    Value = getFoodValue(item.Name),
-                    Source = "World",
-                    Distance = dist,
-                })
+                -- Safe position getter with fallback
+                local itemPos
+                local success = pcall(function()
+                    itemPos = item:GetPivot().Position
+                end)
+                if not success then
+                    local part = item:FindFirstChildWhichIsA("BasePart")
+                    if part then
+                        itemPos = part.Position
+                    end
+                end
+                
+                if itemPos then
+                    local dist = (itemPos - playerPos).Magnitude
+                    table.insert(foods, {
+                        Item = item,
+                        Name = item.Name,
+                        Value = getFoodValue(item.Name),
+                        Source = "World",
+                        Distance = dist,
+                    })
+                end
             end
         end
     end
@@ -368,6 +381,10 @@ end
 
 function AutoEat.Stop()
     State.Enabled = false
+    if State.Thread then
+        pcall(function() task.cancel(State.Thread) end)
+        State.Thread = nil
+    end
     print("[OP] AutoEat: STOPPED")
 end
 
@@ -411,6 +428,10 @@ end
 
 function AutoEat.IsEnabled()
     return State.Enabled
+end
+
+function AutoEat.Cleanup()
+    AutoEat.Stop()
 end
 
 return AutoEat

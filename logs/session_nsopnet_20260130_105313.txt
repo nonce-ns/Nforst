@@ -1,0 +1,55 @@
+=== WindUI Log Session ===
+Started: 2026-01-30 10:53:13
+User: nsopnet (ID: 8401342884)
+========================================
+
+[01:52:57][Info] [OP] GodMode: STARTED
+[01:53:13][Info] Loader: Fetching MainInterface...
+[01:53:14][Info] Loader: Fetching MainInterface...
+[01:53:15][Info] [OP] Loading modules...
+[01:53:00][Info] [OP] TreeFarm DEBUG: Map=true, Foliage=true
+[01:53:00][Info] [OP] TreeFarm DEBUG: Foliage children: StoneSmall, TreeBig2, Flower, Grass1, Carrot Patch, Carrot Patch, TreeBig2, Small Tree, TreeBig1, Bush, TreeBig1, Bush, Bush, TreeBig2, Carrot Patch, Bush, StoneSmall, Grass1, FireflyZone, TreeBig2, Bush, Small Tree, Small Tree, Carrot Patch, TreeBig3, TreeBig3, Carrot Patch, Grass1, Grass2, Flower, Bush, TreeBig2, TreeBig2, StoneSmall, Bush, Carrot Patch, Dead Brush Tall, Dead Shrub, Dead Brush Tall, Basalt Pillar3, Dead Brush Tall, Dead Brush Tall, Dead Brush Tall, Dead Shrub, Dead Tree3, Dead Brush, Dead Tree3, Dead Shrub, Basalt Pillar3, Dead Shrub Small, Basalt Pile2, Dead Brush, Basalt Pile1, Dead Shrub, Dead Shrub, Basalt Pile2, Basalt Pile1, Dead Shrub Small, Dead Brush Tall, Basalt Pile1, Dead Shrub Small, Basalt Pile1, Dead Brush Tall, Basalt Pile1, Basalt Pile2, Dead Brush Tall, TreeBig2, TreeBig3, Bush, Small Tree, Small Tree, TreeBig1, StoneSmall, StoneSmall, Bush, Grass2, Bush, Small Tree, Bush, Small Tree, Grass1, Grass2, TreeBig1, Bush, StoneSmall, Grass1, TreeBig3, Bush, StoneTall, Small Tree, Grass1, Flower, Bush, Small Tree, Grass1, Grass1, Grass1, TreeBig3, TreeBig3, Grass2, Grass1, StoneSmall, Flower, Flower, Grass2, TreeBig2, Small Tree, Bush, Small Tree, Flower, Grass2, TreeBig2, TreeBig2, Bush, StoneSmall, Basalt Pile1, Basalt Pile1, Basalt Pile1, Basalt Pile1, Basalt Pile2, Basalt Pile2, Basalt Pillar2, Dead Brush, Dead Brush, Basalt Pile1, Basalt Pile1, Dead Brush Tall, Basalt Pile1, Grass2, TreeBig3, Small Tree, Grass2, StoneSmall, Bush, StoneSmall, Small Tree, TreeBig3, Grass1, StoneTall, Grass1, Bush, StoneTall, Grass2, Grass1, Grass2, StoneSmall, Grass1, Small Tree, TreeBig2, Small Tree, Grass1, Small Tree, Bush, Small Tree, Grass1, TreeBig1, Small Tree, Grass1, TreeBig1, TreeBig2, Grass2, Dead Brush, Basalt Pile1, Basalt Pile1, Dead Shrub Small, Basalt Pile1, Dead Brush, Dead Tree2, Dead Brush, Dead Tree2, Dead Tree3, Dead Shrub, Basalt Pile1, Basalt Pile1, Dead Tree3, Dead Shrub Small, Dead Brush Tall, Dead Brush Tall, Basalt Pile1, Dead Brush Tall, Basalt Pile2, Dead Brush Tall, Dead Brush Tall, Dead Brush Tall, Dead Brush Tall, Dead Brush, Basalt Pile1, Basalt Pile1, Dead Shrub Small, Grass1, Fairy StoneTall, FairyTreeBig3, Grass2, Fairy Small Tree, Grass1, Fairy StoneSmall, Fairy Small Tree, Grass2, Grass2, FairyTreeBig2, FairyTreeBig2, FairyTreeBig2, Fairy StoneTall, Fairy Bush, Fairy Bush, Fairy StoneSmall, Grass1, Fairy Bush, Grass1, Fairy Bush, FairyTreeBig1, Flower, Grass1, Fairy Small Tree, Fairy Bush, Grass2, Fairy StoneSmall, Fairy Bush, FairyTreeBig3, Fairy Bush, FairyTreeBig1, Grass2, Flower, Bush, TreeBig3, Flower, Grass2, StoneSmall, Bush, Flower, Bush, TreeBig2, Grass1, Grass1, StoneSmall, TreeBig3, Small Tree, Small Tree, TreeBig3, StoneTall, Bush, TreeBig3, TreeBig1, TreeBig3, TreeBig3, Bush, Flower, Grass2, Small Tree, Bush, Bush, Flower, StoneSmall, Grass2, Bush, Small Tree, Flower, Grass2, Small Tree, FairyTreeBig1, Fairy StoneTall, Fairy StoneTall, Toadstool5, Grass2, Toadstool5, Grass1, Toadstool5, FairyTreeBig3, Fairy StoneSmall, FairyTreeBig3, Grass2, FairyTreeBig1, Fairy Small Tree, Toadstool1, FairyTreeBig2, Fairy StoneTall, Grass1, Fairy Bush, Grass1, Fairy StoneSmall, Grass1, Grass1, FairyTreeBig2, Grass1, Grass2, Fairy Small Tree, Basalt Pile2, Dead Brush, Dead Brush Tall, Basalt Pile2, Dead Shrub, Basalt Pillar2, Basalt Pile1, Small Tree, TreeBig2, Bush, Grass2, Bush, Grass1, StoneSmall, StoneSmall, Grass2, Grass1, Grass2, Grass2, Grass2, Small Tree, Bush, StoneSmall, Small Tree, Grass2, TreeBig1, Grass1, TreeBig3, Grass2, TreeBig3, Grass1, Small Tree, Grass1, Small Tree, Grass1, Bush, Small Tree, Grass1, Flower, Grass1, Grass2, Grass1, Small Tree, Grass1, TreeBig2, Carrot Patch, Bush, Small Tree, Grass1, TreeBig1, Flower, Flower, Flower, Bush, Grass2, Small Tree, Carrot Patch, TreeBig3, Bush, Grass2, Small Tree, Grass1, Small Tree, Flower, Flower, Small Tree, TreeBig3, Bush, Grass2, Grass2, TreeBig3, Small Tree, Grass1, TreeBig1, StoneTall, Grass2, TreeBig1, StoneSmall, TreeBig1, TreeBig1, Flower, Grass1, StoneSmall, Grass1, Flower, Flower, Grass1, Grass2, Carrot Patch, Grass1, Flower, Bush, Flower, TreeBig1, TreeBig3, Small Tree, Bush, Flower, Bush, Small Tree, Carrot Patch, Bush, Small Tree, Flower, StoneSmall, Bush, Grass1, Small Tree, Flower, TreeBig1, Grass1, Flower, StoneTall, Carrot Patch, Grass1, Small Tree, Grass2, Grass2, TreeBig3, Grass1, Grass2, Flower, Carrot Patch, Grass2, Bush, Grass2, Grass2, TreeBig1, Flower, Flower, Bush, StoneSmall, Bush, Bush, TreeBig1, Grass1, TreeBig3, Bush, StoneSmall, Bush, StoneSmall, Grass2, TreeBig2, TreeBig2, Grass2, Grass1, StoneSmall, Dead Brush Tall, Basalt Pile2, Dead Shrub Small, Basalt Pile2, Grass1, StoneTall, Bush, Dead Shrub, Dead Brush, Dead Tree1, Dead Brush Tall, Basalt Pillar1, Basalt Pillar3, Dead Shrub, Grass1, Small Tree, Flower, Grass2, TreeBig3, Grass1, TreeBig1, Bush, Grass1, StoneSmall, TreeBig2, Bush, Grass2, Grass2, Small Tree, Flower, Bush, TreeBig2, Bush, StoneSmall, Grass2, TreeBig1, Flower, Bush, Grass1, Bush, Grass1, Grass1, Small Tree, Grass2, TreeBig3, Grass1, Grass2, Flower, Carrot Patch, Small Tree, Bush, Grass1, Flower, Carrot Patch, Grass2, Small Tree, Flower, Small Tree, Bush, Flower, Small Tree, Grass1, Grass2, Flower, Bush, Carrot Patch, Grass2, Grass1, Bush, TreeBig2, Small Tree, Small Tree, Carrot Patch, Grass1, Grass1, Grass2, Grass1, Small Tree, Small Tree, TreeBig2, Carrot Patch, Grass2, Flower, Grass1, Flower, TreeBig3, Grass1, TreeBig1, StoneTall, Small Tree, StoneSmall, Grass2, Grass2, StoneSmall, Small Tree, TreeBig1, Small Tree, Flower, Grass2, Flower, Flower, Grass2, Flower, Bush, Grass2, Grass2, StoneSmall, TreeBig2, Small Tree, TreeBig1, StoneSmall, Flower, Grass1, StoneSmall, StoneSmall, Grass1, Grass2, Small Tree, TreeBig1, TreeBig1, Grass2, TreeBig1, Small Tree, StoneTall, Grass1, Small Tree, Grass1, TreeBig2, Flower, Grass2, TreeBig3, Flower, Grass2, Flower, Flower, Small Tree, TreeBig3, Flower, Grass2, StoneSmall, Bush, StoneSmall, Small Tree, Grass2, StoneSmall, Flower, Carrot Patch, TreeBig3, TreeBig2, Flower, Carrot Patch, Small Tree, StoneSmall, Grass1, Carrot Patch, Bush, TreeBig3, Grass2, StoneSmall, Flower, Flower, Bush, Grass2, Grass2, TreeBig3, Grass1, Flower, Grass2, Bush, TreeBig2, Flower, Flower, StoneSmall, Grass2, StoneSmall, Grass2, TreeBig2, Bush, Flower, Small Tree, TreeBig1, TreeBig2, Grass1, StoneSmall, Bush, Small Tree, StoneTall, TreeBig3, Small Tree, StoneSmall, Bush, Small Tree, Bush, Small Tree, Grass2, Grass2, Grass2, TreeBig1, TreeBig2, Grass1, Grass2, Small Tree, Bush, Small Tree, StoneSmall, Small Tree, Grass2, TreeBig3, TreeBig3, Small Tree, Grass2, Bush, Grass1, TreeBig2, TreeBig3, Bush, Bush, Grass1, Small Tree, TreeBig3, TreeBig1, Small Tree, Grass2, Bush, Grass1, Grass1, Small Tree, TreeBig3, Small Tree, TreeBig1, Carrot Patch, Bush, Grass2, TreeBig2, Small Tree, Flower, Grass1, Carrot Patch, Small Tree, Grass1, Flower, Bush, Flower, Flower, Small Tree, Bush, Grass1, Grass1, Bush, Small Tree, Grass2, StoneSmall, Grass2, Small Tree, Flower, Grass2, Grass2, StoneSmall, Bush, Flower, Bush, StoneSmall, Flower, Grass1, Grass2, Bush, Grass2, Bush, Bush, Grass1, StoneSmall, TreeBig1, Grass2, Flower, Grass2, TreeBig2, TreeBig2, TreeBig1, Grass2, Small Tree, Small Tree, TreeBig3, TreeBig3, TreeBig3, Flower, TreeBig3, TreeBig1, Grass2, Flower, Grass2, StoneSmall, TreeBig3, Grass1, Small Tree, Flower, Bush, Flower, Grass1, Flower, Bush, StoneTall, Bush, Small Tree, Bush, Bush, Flower, TreeBig3, StoneSmall, TreeBig3, StoneSmall, TreeBig2, Carrot Patch, Grass1, Grass1, Grass2, StoneTall, Grass1, StoneSmall, StoneTall, StoneTall, StoneSmall, TreeBig1, TreeBig2, Grass2, Flower, StoneSmall, Small Tree, TreeBig2, Small Tree, Flower, Small Tree, TreeBig3, Flower, Bush, Flower, Bush, Grass2, StoneSmall, Flower, Flower, Flower, Grass2, Small Tree, Grass2, Flower, Flower, StoneSmall, Grass1, Grass2, Grass2, Bush, TreeBig1, TreeBig1, Grass2, StoneSmall, Flower, Flower, Flower, TreeBig1, Grass1, TreeBig3, TreeBig2, Grass1, Bush, Small Tree, TreeBig1, TreeBig3, Small Tree, Grass1, Small Tree, Grass2, StoneSmall, Flower, Small Tree, Grass2, Grass2, StoneSmall, Flower, Bush, Small Tree, Small Tree, Small Tree, Small Tree, Bush, TreeBig2, TreeBig2, Small Tree, Carrot Patch, StoneSmall, Small Tree, Small Tree, StoneSmall, Small Tree, Small Tree
+[01:53:00][Info] [OP] TreeFarm DEBUG: Axe=Old Axe, Targets=0, Skipped=0
+[01:53:15][Info] [OP] Modules loaded!
+[01:53:15][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[01:53:15][Info] [OP] Initializing 99 Nights OP Script...
+[01:53:15][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[01:53:16][Info] [OP] AutoEat: STOPPED
+[01:53:16][Info] [OP] AutoEat: STOPPED
+[01:53:16][Info] [OP] GodMode: STOPPED
+[01:53:16][Info] [OP] MapRevealer: Cleanup complete
+[01:53:16][Info] [OP] GodMode: STOPPED
+[01:53:16][Info] [OP] Loading modules...
+[01:53:16][Info] [OP] Window created. Type: table
+[01:53:16][Info] [OP] Modules loaded!
+[01:53:16][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[01:53:16][Info] [OP] Initializing 99 Nights OP Script...
+[01:53:16][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[01:53:16][Info] [OP] Window created. Type: table
+[01:53:17][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[01:53:02][Info] [OP] TreeFarm: OFF
+[01:53:17][Info] [OP] UI Created! Ready to use.
+[01:53:17][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[01:53:17][Info] [OP] UI Created! Ready to use.
+[01:53:25][Info] [OP] MapRevealer: Cleanup complete
+[01:53:25][Info] [OP] Cleanup: KillAura
+[01:53:25][Info] [OP] Cleanup: AutoEat
+[01:53:25][Info] [OP] AutoEat: STOPPED
+[01:53:25][Info] [OP] Cleanup: MapRevealer
+[01:53:25][Info] [OP] Cleanup: GodMode
+[01:53:25][Info] [OP] GodMode: STOPPED
+[01:53:25][Info] [OP] Script unloaded successfully! All features stopped.
+[01:53:25][Info] [OP] Cleanup: TreeFarm
+[01:53:32][Info] [Remote][Success] RemoteEvents found: 206 remotes
+[01:53:32][Info] [OP] GodMode: STARTED
+[01:54:10][Error] [Cobalt].cobalt:8486: attempt to iterate over a nil value
+    Stack Begin
+    Script 'Script', Line 10302 - function LoadScript
+    Stack End
+[01:54:13][Error] :1: attempt to call a nil value
+    Stack Begin
+    Script 'Script', Line 1
+    Script 'Script', Line 1
+    Script 'Script', Line 1
+    Script 'Script', Line 1
+    Stack End

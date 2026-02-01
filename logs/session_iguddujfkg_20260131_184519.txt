@@ -1,0 +1,105 @@
+=== WindUI Log Session ===
+Started: 2026-01-31 18:45:19
+User: iguddujfkg (ID: 10230880383)
+========================================
+
+[09:45:18][Info] Loader: Fetching MainInterface...
+[09:45:20][Info] [OP] SoundManager: Cleanup complete
+[09:45:20][Info] [OP] AutoEat: STOPPED
+[09:45:20][Info] [OP] GodMode: STOPPED
+[09:45:20][Info] [OP] GodMode: STOPPED
+[09:45:20][Info] [OP] Loading modules...
+[09:45:20][Info] [OP] AutoEat: STOPPED
+[09:45:20][Info] [OP] MapRevealer: Cleanup complete
+[09:45:21][Info] [OP] Initializing 99 Nights OP Script...
+[09:45:21][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[09:45:21][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[09:45:21][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[09:45:21][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[09:45:21][Info] [OP] Modules loaded!
+[09:45:21][Info] [OP] ItemCollector: Initialized
+[09:45:22][Info] [OP] Window created. Type: table
+[09:45:23][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[09:45:23][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[09:45:23][Info] [OP] ItemCollector: Selected: (none)
+[09:45:23][Info] [OP] ItemCollector: Speed = Fast
+[09:45:23][Info] [OP] UI Created! Ready to use.
+[09:45:23][Info] [OP] ItemCollector: Destination = Player
+[09:45:23][Info] [OP] ItemCollector: Organize Mode = Grid
+[09:45:38][Info] [OP] ItemCollector: Scanned 1093 items (72 types)
+[09:45:38][Info] [OP]
+=== ALL ITEMS (72 types) ===
+01. Acorn (5)
+02. Air Rifle (5)
+03. Alpha Wolf Corpse (2)
+04. Alpha Wolf Pelt (3)
+05. Anvil Back (1)
+06. Anvil Base (1)
+07. Anvil Front (1)
+08. Apple (3)
+09. Bandage (11)
+10. Basketball (3)
+11. Bear Pelt (1)
+12. Berry (47)
+13. Bolt (18)
+14. Broken Fan (27)
+15. Broken Microwave (47)
+16. Bunny Foot (2)
+17. Cake (21)
+18. Carnival Basketball (4)
+19. Carnival Ring (5)
+20. Carrot (36)
+21. Chair (27)
+22. Coal (32)
+23. Coin Stack (78)
+24. Corn (1)
+25. Crossbow Cultist (5)
+26. Cultist (6)
+27. Cultist Experiment (1)
+28. Cultist Gem (2)
+29. Cultist Prototype (1)
+30. Dynamite (5)
+31. Fuel Canister (58)
+32. Gem of the Forest Fragment (1)
+33. Giant Sack (1)
+34. Halloween Chest1 (4)
+35. Halloween Maze Chest (1)
+36. Hardmode Crate (4)
+37. Iron Body (16)
+38. Item Chest (4)
+39. Item Chest2 (5)
+40. Item Chest3 (15)
+41. Item Chest4 (27)
+42. Item Chest5 (21)
+43. Item Chest6 (3)
+44. Leather Body (18)
+45. Log (105)
+46. MedKit (2)
+47. Metal Chair (2)
+48. Morsel (60)
+49. Mossy Chest (1)
+50. Oil Barrel (23)
+51. Old Car Engine (18)
+52. Old Flashlight (4)
+53. Old Radio (52)
+54. Old Rod (20)
+55. Old Taming Flute (5)
+56. Pumpkin (6)
+57. Revolver Ammo (17)
+58. Rifle (18)
+59. Rifle Ammo (36)
+60. Seed Box (1)
+61. Sheet Metal (16)
+62. Steak (52)
+63. StoneChest1 (12)
+64. StoneChest2 (1)
+65. Strong Flashlight (1)
+66. Stronghold Diamond Chest (1)
+67. Tyre (27)
+68. Volcanic Chest1 (11)
+69. Volcanic Chest2 (2)
+70. Washing Machine (16)
+71. Wolf Corpse (3)
+72. Wolf Pelt (2)
+=== END LIST ===
+[09:45:38][Info] [OP] ItemCollector: Selected: (none)
