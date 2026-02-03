@@ -17,7 +17,7 @@ local LocalPlayer = Players.LocalPlayer
 -- CONFIGURATION
 -- ============================================
 local CONFIG = {
-    BASE_URL = (getgenv and getgenv().OP_BASE_URL) or "http://192.168.1.5:8000/",
+    BASE_URL = (getgenv and getgenv().OP_BASE_URL) or "http://192.168.1.8:8000/",
     WINDOW = {
         Title = "99 Nights OP",
         Folder = "99NightsOP",
@@ -31,6 +31,9 @@ local CONFIG = {
         Yellow = Color3.fromHex("#ECA201"),
         Red = Color3.fromHex("#EF4F1D"),
         Grey = Color3.fromHex("#83889E"),
+    },
+    SETTINGS = {
+        ToggleKey = Enum.KeyCode.P
     }
 }
 
@@ -112,6 +115,11 @@ local TreeFarm = loadModule("Features/TreeFarm.lua")
 local AutoPlant = loadModule("Features/AutoPlant.lua")
 local SoundManager = loadModule("Features/SoundManager.lua")
 local ItemCollector = loadModule("Features/ItemCollector.lua")
+local ChestExplorer = loadModule("Features/ChestExplorer.lua")
+local Fly = loadModule("Features/Fly.lua")
+local Speed = loadModule("Features/Speed.lua")
+if not Speed then warn("[MainInterface] CRITICAL: Speed module failed to load!") else print("[MainInterface] Speed module loaded table: " .. tostring(Speed)) end
+local Teleport = loadModule("Features/Teleport.lua") -- [NEW]
 
 -- UI Tabs
 local HomeTab = loadModule("UI/Tabs/HomeTab.lua")
@@ -122,6 +130,7 @@ local SettingsTab = loadModule("UI/Tabs/SettingsTab.lua")
 local ExplorerTab = loadModule("UI/Tabs/ExplorerTab.lua")
 local MiscTab = loadModule("UI/Tabs/MiscTab.lua")
 local AutoCollectTab = loadModule("UI/Tabs/AutoCollectTab.lua")
+local TeleportTab = loadModule("UI/Tabs/TeleportTab.lua") -- [NEW]
 
 print("[OP] Modules loaded!")
 
@@ -135,7 +144,11 @@ if getgenv then
         TreeFarm = TreeFarm,
         AutoPlant = AutoPlant,
         SoundManager = SoundManager,
+        SoundManager = SoundManager,
         ItemCollector = ItemCollector,
+        ChestExplorer = ChestExplorer,
+        Fly = Fly,
+        Speed = Speed,
     }
 end
 
@@ -150,7 +163,12 @@ local Features = {
     TreeFarm = TreeFarm,
     AutoPlant = AutoPlant,
     SoundManager = SoundManager,
+    SoundManager = SoundManager,
     ItemCollector = ItemCollector,
+    ChestExplorer = ChestExplorer,
+    Fly = Fly,
+    Speed = Speed, -- [FIX] Added missing registration
+    Teleport = Teleport, -- [NEW]
 }
 
 -- ============================================
@@ -203,7 +221,7 @@ local function createUI(WindUI)
     if SoundManager then
         SoundManager.Init({
             Utils = Utils,
-        })
+            })
     end
 
     if ItemCollector then
@@ -211,6 +229,16 @@ local function createUI(WindUI)
             Remote = Remote,
         })
     end
+    
+    if ChestExplorer then
+        ChestExplorer.Init({
+            Remote = Remote,
+        })
+    end
+
+    if Fly then Fly.Init() end
+    if Speed then Speed.Init() end
+    if Teleport then Teleport.Init() end -- [NEW]
     
     -- Create window
     local Window = WindUI:CreateWindow({
@@ -223,6 +251,7 @@ local function createUI(WindUI)
         Transparent = true,
         SideBarWidth = 200,
         NewElements = true,
+        ToggleKey = CONFIG.SETTINGS.ToggleKey, -- [FIX] Added ToggleKey
         Topbar = {
             Height = 44,
             ButtonsType = "Mac",
@@ -249,6 +278,10 @@ local function createUI(WindUI)
     end
     
     -- Create Tabs
+    if TeleportTab then
+        TeleportTab.Create(Window, Features, CONFIG, WindUI) -- [NEW] Placed early for visibility
+    end
+
     if SurvivalTab then
         SurvivalTab.Create(Window, Features, CONFIG)
     end

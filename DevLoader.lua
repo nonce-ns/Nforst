@@ -5,7 +5,7 @@
     - Integrates Reload button into Logger UI
 ]]
 
-local LOCAL_SERVER = (getgenv and getgenv().OP_BASE_URL) or "http://192.168.1.5:8000/"
+local LOCAL_SERVER = (getgenv and getgenv().OP_BASE_URL) or "http://192.168.1.8:8000/"
 
 local function normalizeBasePath(base)
 	if not base or base == "" then

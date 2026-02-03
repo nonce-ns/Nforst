@@ -25,7 +25,8 @@ SERVE_FILES = True  # Also serve lua files
 
 # Files that need IP update
 LUA_FILES_TO_UPDATE = [
-    "Src/DevLoader.lua",
+    "DevLoader.lua",
+    "main.lua",
     "WindUI/dist/main.lua",
     "Src/UI/MainInterface.lua",
     "Libs/Logger.lua",

@@ -91,6 +91,23 @@ function HomeTab.Create(Window, CONFIG, WindUI)
     -- ========================================
     -- QUICK ACTIONS
     -- ========================================
+    Tab:Keybind({
+        Title = "Toggle UI Keybind",
+        Desc = "Set key to hide/show menu",
+        Value = CONFIG.SETTINGS.ToggleKey or Enum.KeyCode.RightControl,
+        Flag = "Settings.ToggleKey",
+        Callback = function(keyName)
+            -- Convert string key name to Enum.KeyCode (WindUI sends string, but Window.ToggleKey expects EnumItem)
+            local success, keyCode = pcall(function()
+                return Enum.KeyCode[keyName]
+            end)
+            if success and keyCode then
+                Window.ToggleKey = keyCode
+            end
+        end,
+    })
+
+    Tab:Space({ Size = 8 })
     Tab:Button({
         Title = "Copy Discord Invite",
         Icon = "solar:link-bold",

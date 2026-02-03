@@ -20,6 +20,70 @@ local SPEED_PRESETS = {
     Slow = 0.3,      -- 300ms, ~3 items/sec
 }
 
+-- Item Categories with pattern matching
+local ITEM_CATEGORIES = {
+    {
+        name = "Campfire",
+        icon = "lucide:flame",
+        patterns = {"Log", "Oil Barrel", "Fuel Canister", "Fuel", "Corpse"},
+        exactMatch = {"Log", "Chair", "Cultist"}
+    },
+    {
+        name = "Scrapper",
+        icon = "lucide:recycle",
+        patterns = {"Broken", "Metal", "Engine", "Radio", "Washing", "Tyre", "Bolt"},
+        exactMatch = {"Cultist Gem"}
+    },
+    {
+        name = "Anvil",
+        icon = "lucide:hammer",
+        patterns = {"Anvil"},
+        exactMatch = {}
+    },
+    {
+        name = "Armor",
+        icon = "lucide:shield",
+        patterns = {"Body"},
+        exactMatch = {}
+    },
+    {
+        name = "Weapons",
+        icon = "lucide:sword",
+        patterns = {"Rifle", "Ammo", "Axe", "Gun", "Sword", "Canon", "Morningstar", "Crossbow", "Chainsaw", "Raygun", "Spear", "Shotgun"},
+        exactMatch = {}
+    },
+    {
+        name = "Tools",
+        icon = "lucide:wrench",
+        patterns = {"Rod", "Flashlight", "Flute"},
+        exactMatch = {}
+    },
+    {
+        name = "Food",
+        icon = "lucide:drumstick",
+        patterns = {},
+        exactMatch = {"Apple", "Berry", "Steak", "Morsel", "Cake", "Carrot", "Corn", "Pumpkin", "Acorn", "Bandage", "MedKit"}
+    },
+    {
+        name = "Animal Parts",
+        icon = "lucide:paw-print",
+        patterns = {"Pelt", "Foot"},
+        exactMatch = {}
+    },
+    {
+        name = "Containers",
+        icon = "lucide:package",
+        patterns = {},
+        exactMatch = {"Seed Box", "Giant Sack"}
+    },
+    {
+        name = "Blacklist",
+        icon = "lucide:ban",
+        patterns = {"Chest", "Crate", "StoneChest"},
+        exactMatch = {}
+    },
+}
+
 -- Dependencies (injected)
 local Remote = nil
 
@@ -418,21 +482,6 @@ function ItemCollector.ScanItems()
     
     print("[OP] ItemCollector: Scanned " .. totalItems .. " items (" .. totalTypes .. " types)")
     
-    -- Debug: Print all item names sorted alphabetically (combined to avoid scramble)
-    local sortedNames = {}
-    for name, _ in pairs(State.ItemCache) do
-        table.insert(sortedNames, name)
-    end
-    table.sort(sortedNames)
-    
-    local lines = {"=== ALL ITEMS (" .. #sortedNames .. " types) ==="}
-    for i, name in ipairs(sortedNames) do
-        local count = State.ItemCache[name].count
-        table.insert(lines, string.format("%02d. %s (%d)", i, name, count))
-    end
-    table.insert(lines, "=== END LIST ===")
-    print("[OP]\n" .. table.concat(lines, "\n"))
-    
     -- Trigger callback if set
     if State.OnScanCallback then
         task.spawn(function()
@@ -443,14 +492,48 @@ function ItemCollector.ScanItems()
     return State.ItemCache
 end
 
+-- Check if item is in blacklist
+local function isBlacklisted(itemName)
+    -- Find blacklist category
+    local blacklist = nil
+    for _, cat in ipairs(ITEM_CATEGORIES) do
+        if cat.name == "Blacklist" then
+            blacklist = cat
+            break
+        end
+    end
+    if not blacklist then return false end
+    
+    -- Check exact match
+    for _, exact in ipairs(blacklist.exactMatch or {}) do
+        if itemName == exact then
+            return true
+        end
+    end
+    
+    -- Check pattern match
+    local nameLower = itemName:lower()
+    for _, pattern in ipairs(blacklist.patterns or {}) do
+        if nameLower:find(pattern:lower()) then
+            return true
+        end
+    end
+    
+    return false
+end
+
 -- Get formatted list for dropdown: {"Log (1000)", "Coal (500)"}
+-- Filters out blacklisted items
 function ItemCollector.GetItemList()
     local list = {}
     
     -- Sort by name
     local names = {}
     for name, _ in pairs(State.ItemCache) do
-        table.insert(names, name)
+        -- Skip blacklisted items
+        if not isBlacklisted(name) then
+            table.insert(names, name)
+        end
     end
     table.sort(names)
     
@@ -463,13 +546,89 @@ function ItemCollector.GetItemList()
 end
 
 -- Get raw item names (without count)
+-- Filters out blacklisted items
 function ItemCollector.GetItemNames()
     local names = {}
     for name, _ in pairs(State.ItemCache) do
-        table.insert(names, name)
+        if not isBlacklisted(name) then
+            table.insert(names, name)
+        end
     end
     table.sort(names)
     return names
+end
+
+-- Get item cache (for UI to access counts)
+function ItemCollector.GetCache()
+    return State.ItemCache
+end
+
+-- Get list of categories with icons
+function ItemCollector.GetCategories()
+    local categories = {}
+    for _, cat in ipairs(ITEM_CATEGORIES) do
+        table.insert(categories, {
+            name = cat.name,
+            icon = cat.icon or "lucide:box"
+        })
+    end
+    return categories
+end
+
+-- Check if item matches a category
+local function itemMatchesCategory(itemName, category)
+    -- Check exact matches first
+    for _, exact in ipairs(category.exactMatch or {}) do
+        if itemName == exact then
+            return true
+        end
+    end
+    
+    -- Check pattern matches
+    local nameLower = itemName:lower()
+    for _, pattern in ipairs(category.patterns or {}) do
+        if nameLower:find(pattern:lower()) then
+            return true
+        end
+    end
+    
+    return false
+end
+
+-- Get items from cache that match a category
+-- Returns formatted list: {"Log (105)", "Chair (27)"}
+function ItemCollector.GetItemsByCategory(categoryName)
+    local result = {}
+    
+    -- Find category
+    local category = nil
+    for _, cat in ipairs(ITEM_CATEGORIES) do
+        if cat.name == categoryName then
+            category = cat
+            break
+        end
+    end
+    
+    if not category then return result end
+    
+    -- Filter items
+    local names = {}
+    for name, _ in pairs(State.ItemCache) do
+        if itemMatchesCategory(name, category) then
+            table.insert(names, name)
+        end
+    end
+    table.sort(names)
+    
+    -- Format with counts
+    for _, name in ipairs(names) do
+        local data = State.ItemCache[name]
+        if data then
+            table.insert(result, name .. " (" .. data.count .. ")")
+        end
+    end
+    
+    return result
 end
 
 -- Parse "Log (1000)" to "Log"
@@ -505,6 +664,42 @@ function ItemCollector.SetSelectedItems(selected)
     else
         print("[OP] ItemCollector: Selected: (none)")
     end
+end
+
+-- Add single item to selection (without replacing)
+function ItemCollector.AddToSelection(itemName)
+    if not itemName then return false end
+    
+    -- Check if already selected
+    for _, name in ipairs(State.SelectedItems) do
+        if name == itemName then
+            return false -- Already selected
+        end
+    end
+    
+    table.insert(State.SelectedItems, itemName)
+    print("[OP] ItemCollector: Added to selection: " .. itemName)
+    return true
+end
+
+-- Remove single item from selection
+function ItemCollector.RemoveFromSelection(itemName)
+    if not itemName then return false end
+    
+    for i, name in ipairs(State.SelectedItems) do
+        if name == itemName then
+            table.remove(State.SelectedItems, i)
+            print("[OP] ItemCollector: Removed from selection: " .. itemName)
+            return true
+        end
+    end
+    return false
+end
+
+-- Clear all selected items
+function ItemCollector.ClearSelection()
+    State.SelectedItems = {}
+    print("[OP] ItemCollector: Selection cleared")
 end
 
 -- Set quantity limit for specific item
@@ -727,8 +922,8 @@ local function collectItem(item, targetPos)
         itemPart.CFrame = CFrame.new(destPos)
     end
     
-    -- Delay for server processing (0.03s more reliable than 0.01s)
-    task.wait(0.08)
+    -- Delay for server processing (0.03s more reliable than 0.1s)
+    task.wait(0.1)
     
     -- Stop dragging
     Remote.StopDraggingItem(item)
@@ -996,6 +1191,13 @@ end
 function ItemCollector.Init(deps)
     deps = deps or {}
     Remote = deps.Remote
+    
+    -- Cleanup any leftover preview folder from previous sessions
+    local existing = workspace:FindFirstChild("ItemCollectorPreview")
+    if existing then
+        existing:Destroy()
+    end
+    
     print("[OP] ItemCollector: Initialized")
 end
 

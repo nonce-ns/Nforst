@@ -23,7 +23,7 @@ local CYCLE_DELAY = 0.1
 
 -- Melee weapon keywords
 local MELEE_KEYWORDS = {
-    "chainsaw", "axe", "sword", "morningstar", "spear",
+    "chainsaw", "axe", "sword", "morningstar", "spear", "scythe",
 }
 
 -- State

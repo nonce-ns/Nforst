@@ -1,0 +1,283 @@
+local module_upvr = {}
+module_upvr.__index = module_upvr
+module_upvr.MagazineSize = 1
+module_upvr.ProjectileSpeed = 80
+module_upvr.ProjectileGravity = 35
+module_upvr.ProjectileDamage = 35
+module_upvr.ProjectileRotSpeed = -1600
+module_upvr.ProjectileRadius = 1.5
+module_upvr.LeaveHandle = true
+module_upvr.FireRate = 0.2
+local LocalPlayer_upvr = game.Players.LocalPlayer
+local Client_upvr = require(LocalPlayer_upvr.PlayerScripts.Client)
+local AmmoLabel_upvr = Client_upvr.Interface.AmmoLabel
+function module_upvr.new(arg1, arg2) -- Line 23
+	--[[ Upvalues[1]:
+		[1]: module_upvr (readonly)
+	]]
+	local setmetatable_result1 = setmetatable({}, module_upvr)
+	setmetatable_result1.Model = arg1
+	setmetatable_result1.RealModel = arg2
+	setmetatable_result1.LastFired = 0
+	setmetatable_result1.Reloading = false
+	setmetatable_result1.ProjectileName = setmetatable_result1.RealModel.Name
+	for i, v in pairs(setmetatable_result1.RealModel:GetAttributes()) do
+		setmetatable_result1[i] = v
+	end
+	return setmetatable_result1
+end
+function module_upvr.Break(arg1) -- Line 41
+	--[[ Upvalues[1]:
+		[1]: Client_upvr (readonly)
+	]]
+	print("time to break locally")
+	arg1.Broken = true
+	Client_upvr.InventoryHandler.ClearItemFromInventory(arg1.RealModel)
+end
+local mouse_upvr = LocalPlayer_upvr:GetMouse()
+local random_state_upvr = Random.new()
+function module_upvr.Fire(arg1, arg2) -- Line 47
+	--[[ Upvalues[3]:
+		[1]: Client_upvr (readonly)
+		[2]: mouse_upvr (readonly)
+		[3]: random_state_upvr (readonly)
+	]]
+	-- KONSTANTWARNING: Variable analysis failed. Output will have some incorrect variable assignments
+	if arg1.Reloading then
+	else
+		local ReloadFinishTime = arg1.RealModel:GetAttribute("ReloadFinishTime")
+		local var35
+		if ReloadFinishTime and time() < ReloadFinishTime then return end
+		if arg1.RealModel:GetAttribute("ServerReloading") then return end
+		var35 = Client_upvr.PlayerHandler
+		if not var35.Alive then return end
+		var35 = 0
+		if arg1.Ammo <= var35 then
+			if arg1.AmmoType == "Infinite" then
+				arg1:Reload()
+			end
+			return
+		end
+		var35 = arg1.LastFired + arg1.FireRate
+		if time() < var35 then return end
+		arg1.LastFired = time()
+		var35 = arg1.Model:GetPivot()
+		local Position_2 = var35.Position
+		var35 = Client_upvr.FirstPersonModule.IsVisible()
+		if var35 then
+			var35 = Client_upvr.FirstPersonModule.GetTool()
+			if var35 then
+				Position_2 = arg1.Model:GetPivot().Position
+			end
+		end
+		var35 = arg2
+		if not var35 then
+			var35 = mouse_upvr.UnitRay
+		end
+		local var37
+		local workspace_Raycast_result1_2 = workspace:Raycast(var35.Origin, var35.Direction * 500, Client_upvr.CollisionUtility.ProjectileParams)
+		if workspace_Raycast_result1_2 then
+			var37 = workspace_Raycast_result1_2.Position
+		else
+			var37 = var35.Origin + var35.Direction * 500
+		end
+		if arg1.BulletStray then
+			local radians = math.rad(arg1.BulletStray)
+		end
+		local var40 = CFrame.lookAlong(Vector3.new(), Client_upvr.AimAssistClient.GetAimAssistDir(Position_2, (var37 - Position_2).Unit)) * CFrame.Angles(0.10471975511965978, 0, 0)
+		if arg1.BulletStray then
+		end
+		local any_new_result1_upvr_2 = Client_upvr.ProjectileClass.new(arg1, Position_2, (var40 * CFrame.Angles(radians * (random_state_upvr:NextNumber() - 0.5), radians * (random_state_upvr:NextNumber() - 0.5), 0)).LookVector * arg1.ProjectileSpeed)
+		task.spawn(function() -- Line 127
+			--[[ Upvalues[3]:
+				[1]: Client_upvr (copied, readonly)
+				[2]: arg1 (readonly)
+				[3]: any_new_result1_upvr_2 (readonly)
+			]]
+		end)
+		arg1.Ammo -= 1
+		arg1:UpdateAmmo()
+		Client_upvr.Sound.Play("Swing", {
+			Volume = 1;
+		})
+		any_new_result1_upvr_2:Fire()
+		if arg1.ShotCount and 1 < arg1.ShotCount then
+			for _ = 1, arg1.ShotCount - 1 do
+				local var44
+				if arg1.BulletStray then
+					var44 = (var40 * CFrame.Angles(radians * (random_state_upvr:NextNumber() - 0.5), radians * (random_state_upvr:NextNumber() - 0.5), 0)).LookVector * (arg1.ProjectileSpeed + random_state_upvr:NextInteger(-15, 15))
+				end
+				Client_upvr.ProjectileClass.new(arg1, Position_2, var44, any_new_result1_upvr_2.ProjectileId):Fire()
+			end
+		end
+	end
+end
+function module_upvr.Activate(arg1, arg2) -- Line 156
+	arg1:Fire(arg2)
+end
+function module_upvr.Reload(arg1) -- Line 160
+	--[[ Upvalues[1]:
+		[1]: Client_upvr (readonly)
+	]]
+	if arg1.Reloading then
+	else
+		if arg1.RealModel:GetAttribute("ServerReloading") then return end
+		local ReloadFinishTime_4 = arg1.RealModel:GetAttribute("ReloadFinishTime")
+		if ReloadFinishTime_4 and time() < ReloadFinishTime_4 then return end
+		if arg1.Ammo == arg1.MagazineSize then return end
+		arg1.Reloading = true
+		arg1.RealModel:SetAttribute("ReloadFinishTime", time() + arg1.ReloadTime)
+		arg1:UpdateAmmo()
+		print("request reload")
+		local any_InvokeServer_result1 = Client_upvr.Events.RequestReloadFirearm:InvokeServer(arg1.RealModel)
+		print(any_InvokeServer_result1)
+		if any_InvokeServer_result1.Success and arg1.Equipped then
+			local var47 = time() - time()
+			if var47 < arg1.ReloadTime then
+				task.wait(arg1.ReloadTime - var47)
+			end
+			if not arg1.Equipped then return end
+			arg1.Ammo = any_InvokeServer_result1.Ammo
+			arg1:UpdateAmmo()
+		end
+		arg1.Reloading = false
+	end
+end
+function module_upvr.Deactivate(arg1) -- Line 207
+end
+local tbl_2_upvr = {}
+local tbl_upvr = {}
+function module_upvr.UpdateParticles(arg1) -- Line 214
+	--[[ Upvalues[3]:
+		[1]: tbl_2_upvr (readonly)
+		[2]: Client_upvr (readonly)
+		[3]: tbl_upvr (readonly)
+	]]
+	-- KONSTANTERROR: [0] 1. Error Block 1 start (CF ANALYSIS FAILED)
+	-- KONSTANTERROR: [0] 1. Error Block 1 end (CF ANALYSIS FAILED)
+	-- KONSTANTERROR: [106] 78. Error Block 19 start (CF ANALYSIS FAILED)
+	-- KONSTANTERROR: [106] 78. Error Block 19 end (CF ANALYSIS FAILED)
+end
+function module_upvr.UpdateAmmo(arg1) -- Line 246
+	--[[ Upvalues[1]:
+		[1]: AmmoLabel_upvr (readonly)
+	]]
+	local ReloadFinishTime_5 = arg1.RealModel:GetAttribute("ReloadFinishTime")
+	if ReloadFinishTime_5 and time() < ReloadFinishTime_5 then
+		AmmoLabel_upvr.Text = "Reloading..."
+		if arg1.Model and arg1.Model:FindFirstChild("Contents") then
+			arg1.Model.Contents.Transparency = 1
+			-- KONSTANTWARNING: GOTO [62] #42
+		end
+	else
+		AmmoLabel_upvr.Text = arg1.Ammo
+		if arg1.Model and arg1.Model:FindFirstChild("Contents") then
+			local Model = arg1.Model
+			if arg1.Ammo == 0 then
+				Model = 1
+			else
+				Model = 0
+			end
+			Model.Contents.Transparency = Model
+		end
+	end
+	if arg1.RealModel:GetAttribute("CorruptionStability") then
+		AmmoLabel_upvr.TextColor3 = Color3.fromRGB(115, 0, 255)
+		AmmoLabel_upvr.SpecialAmmoAmount.TextColor3 = Color3.fromRGB(115, 0, 255)
+		AmmoLabel_upvr.SpecialAmmo.Image = "rbxassetid://134896537251897"
+		AmmoLabel_upvr.SpecialAmmo.Visible = true
+		AmmoLabel_upvr.SpecialAmmoAmount.Visible = true
+		AmmoLabel_upvr.SpecialAmmoAmount.Text = (100 - (arg1.RealModel:GetAttribute("CorruptionStability") or 100))..'%'
+		AmmoLabel_upvr.Text = ""
+		arg1:UpdateParticles()
+	else
+		AmmoLabel_upvr.TextColor3 = Color3.fromRGB(255, 255, 255)
+		AmmoLabel_upvr.SpecialAmmo.Visible = false
+		AmmoLabel_upvr.SpecialAmmoAmount.Visible = false
+	end
+end
+local ContextActionService_upvr = game:GetService("ContextActionService")
+function module_upvr.OnEquip(arg1) -- Line 285
+	--[[ Upvalues[5]:
+		[1]: Client_upvr (readonly)
+		[2]: LocalPlayer_upvr (readonly)
+		[3]: module_upvr (readonly)
+		[4]: AmmoLabel_upvr (readonly)
+		[5]: ContextActionService_upvr (readonly)
+	]]
+	arg1.Equipped = true
+	Client_upvr.GuiButtonHandler.ShowButton("Shoot")
+	LocalPlayer_upvr:GetMouse().Icon = "rbxassetid://107221172731109"
+	module_upvr.UpdateAmmoEvent = Client_upvr.Events.UpdateToolAmmo:Connect(function(arg1_2) -- Line 293
+		--[[ Upvalues[1]:
+			[1]: arg1 (readonly)
+		]]
+		local var54 = arg1
+		var54.Ammo += arg1_2
+		arg1:UpdateAmmo()
+	end)
+	arg1.AmmoChangedEvent3 = arg1.RealModel:GetAttributeChangedSignal("CorruptionStability"):Connect(function() -- Line 297
+		--[[ Upvalues[1]:
+			[1]: arg1 (readonly)
+		]]
+		arg1:UpdateAmmo()
+	end)
+	arg1:UpdateAmmo()
+	AmmoLabel_upvr.Visible = true
+	if arg1.SplashDamage == "HalloweenPotion" then
+		Client_upvr.PopUpUI.AddPopUp("Click to throw splash potion", "green")
+	end
+	if arg1.AmmoType == "Infinite" then
+		ContextActionService_upvr:BindActionAtPriority("ReloadFirearm", function(arg1_3, arg2, arg3) -- Line 309
+			--[[ Upvalues[2]:
+				[1]: Client_upvr (copied, readonly)
+				[2]: arg1 (readonly)
+			]]
+			if not Client_upvr.PlayerHandler.Alive then
+				return Enum.ContextActionResult.Pass
+			end
+			if arg2 == Enum.UserInputState.Begin then
+				arg1:Reload()
+				return Enum.ContextActionResult.Sink
+			end
+		end, false, Enum.ContextActionPriority.High.Value, Enum.KeyCode.R, Enum.KeyCode.ButtonY)
+		arg1.ReloadListener = Client_upvr.Events.RequestReloadWeapon:Connect(function() -- Line 320
+			--[[ Upvalues[1]:
+				[1]: arg1 (readonly)
+			]]
+			arg1:Reload()
+		end)
+		task.spawn(function() -- Line 324
+			--[[ Upvalues[1]:
+				[1]: arg1 (readonly)
+			]]
+			local ReloadFinishTime_2 = arg1.RealModel:GetAttribute("ReloadFinishTime")
+			if ReloadFinishTime_2 and time() < ReloadFinishTime_2 then
+				task.wait(ReloadFinishTime_2 - time() + 0.01)
+				arg1:UpdateAmmo()
+			end
+		end)
+		Client_upvr.GuiButtonHandler.ShowButton("Reload")
+	end
+	if arg1.Lifesteal then
+		Client_upvr.LifestealClient.EnableBar()
+	end
+end
+function module_upvr.OnUnequip(arg1) -- Line 341
+	--[[ Upvalues[4]:
+		[1]: Client_upvr (readonly)
+		[2]: module_upvr (readonly)
+		[3]: LocalPlayer_upvr (readonly)
+		[4]: AmmoLabel_upvr (readonly)
+	]]
+	arg1.Equipped = false
+	Client_upvr.GuiButtonHandler.HideButton("Shoot")
+	Client_upvr.GuiButtonHandler.HideButton("Reload")
+	module_upvr.UpdateAmmoEvent:Disconnect()
+	if arg1.AmmoChangedEvent3 then
+		arg1.AmmoChangedEvent3:Disconnect()
+	end
+	LocalPlayer_upvr:GetMouse().Icon = ""
+	AmmoLabel_upvr.Visible = false
+end
+return module_upvr

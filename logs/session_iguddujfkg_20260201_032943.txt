@@ -1,0 +1,114 @@
+=== WindUI Log Session ===
+Started: 2026-02-01 03:29:43
+User: iguddujfkg (ID: 10230880383)
+========================================
+
+[18:29:42][Info] Loader: Fetching MainInterface...
+[18:29:44][Info] [OP] Loading modules...
+[18:29:45][Info] [OP] Modules loaded!
+[18:29:45][Info] [OP] Initializing 99 Nights OP Script...
+[18:29:45][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:29:45][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:29:45][Info] [OP] ItemCollector: Initialized
+[18:29:45][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:29:45][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[18:29:45][Info] [Fly] Initialized
+[18:29:45][Info] [Speed] Initialized
+[18:29:45][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:29:45][Info] [OP] Window created. Type: table
+[18:29:47][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:29:47][Info] [OP] ItemCollector: Organize Mode = Grid
+[18:29:47][Info] [OP] ItemCollector: Selected: (none)
+[18:29:47][Info] [OP] ItemCollector: Destination = Player
+[18:29:47][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:29:47][Info] [OP] UI Created! Ready to use.
+[18:29:47][Info] [OP] ItemCollector: Speed = Fast
+[18:29:51][Info] [Fly] Enabled
+[18:30:07][Info] [Fly] Disabled
+[18:30:31][Info] [Fly] Enabled
+[18:30:39][Info] [Fly] Disabled
+[18:31:01][Info] Loader: Fetching MainInterface...
+[18:31:03][Info] [ChestExplorer] Stopped/Finished
+[18:31:03][Info] [ChestExplorer] Stopped/Finished
+[18:31:03][Info] [OP] GodMode: STOPPED
+[18:31:03][Info] [ChestExplorer] Cleaned up resources
+[18:31:03][Info] [OP] GodMode: STOPPED
+[18:31:03][Info] [OP] Loading modules...
+[18:31:03][Info] [OP] AutoEat: STOPPED
+[18:31:03][Info] [OP] MapRevealer: Cleanup complete
+[18:31:03][Info] [OP] SoundManager: Cleanup complete
+[18:31:03][Info] [OP] AutoEat: STOPPED
+[18:31:03][Info] [OP] Modules loaded!
+[18:31:03][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:31:03][Info] [OP] Initializing 99 Nights OP Script...
+[18:31:03][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[18:31:03][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:31:03][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:31:03][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:31:03][Info] [OP] ItemCollector: Initialized
+[18:31:03][Info] [Teleport] Initialized
+[18:31:03][Info] [Fly] Initialized
+[18:31:03][Info] [Speed] Initialized
+[18:31:05][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:31:05][Info] [OP] Window created. Type: table
+[18:31:05][Info] [OP] ItemCollector: Destination = Player
+[18:31:05][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:31:05][Info] [OP] ItemCollector: Selected: (none)
+[18:31:05][Info] [OP] ItemCollector: Speed = Fast
+[18:31:05][Info] [OP] ItemCollector: Organize Mode = Grid
+[18:31:05][Info] [OP] UI Created! Ready to use.
+[18:31:28][Info] [OP] GodMode: STARTED
+[18:31:28][Info] [Remote][Success] RemoteEvents found: 198 remotes
+[18:31:33][Info] [OP] ItemCollector: Destination = Campfire
+[18:31:38][Info] [OP] ItemCollector: Scanned 199 items (33 types)
+[18:31:42][Info] [OP] ItemCollector: Selection cleared
+[18:31:43][Info] [OP] ItemCollector: Added to selection: Chair
+[18:31:43][Info] [OP] ItemCollector: Added to selection: Cultist
+[18:31:43][Info] [OP] ItemCollector: Added to selection: Fuel Canister
+[18:31:43][Info] [OP] ItemCollector: Added to selection: Log
+[18:31:45][Info] [OP] ItemCollector: Stack position FIXED at 0, 21.5, 0
+[18:31:45][Info] [OP] ItemCollector: Thread #1 ON | Items: Chair, Cultist, Fuel Canister, Log | Dest: Campfire, Speed: Fast, Mode: Stack
+[18:31:49][Info] [OP] ItemCollector: Finished! Total collected: 26 (Chair, Cultist, Fuel Canister, Log)
+[18:31:52][Info] [OP] ItemCollector: Thread #2 ON | Items: Chair, Cultist, Fuel Canister, Log | Dest: Campfire, Speed: Fast, Mode: Stack
+[18:31:52][Info] [OP] ItemCollector: Stack position FIXED at 0, 21.5, 0
+[18:31:52][Info] [OP] ItemCollector: Finished! Total collected: 27 (Chair, Cultist, Fuel Canister, Log)
+[18:34:10][Info] Loader: Fetching MainInterface...
+[18:34:13][Info] [ChestExplorer] Cleaned up resources
+[18:34:13][Info] [OP] GodMode: STOPPED
+[18:34:13][Info] [OP] AutoEat: STOPPED
+[18:34:13][Info] [ChestExplorer] Stopped/Finished
+[18:34:13][Info] [ChestExplorer] Stopped/Finished
+[18:34:13][Info] [OP] MapRevealer: Cleanup complete
+[18:34:13][Info] [OP] GodMode: STOPPED
+[18:34:13][Info] [OP] AutoEat: STOPPED
+[18:34:13][Info] [OP] ItemCollector: STOPPED 2 thread(s) (Collected 27 items)
+[18:34:13][Info] [OP] SoundManager: Cleanup complete
+[18:34:13][Info] [OP] Loading modules...
+[18:34:14][Info] [OP] Initializing 99 Nights OP Script...
+[18:34:14][Info] [OP] Modules loaded!
+[18:34:14][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:34:14][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[18:34:14][Info] [OP] ItemCollector: Initialized
+[18:34:14][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:34:14][Info] [Fly] Initialized
+[18:34:14][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:34:14][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:34:14][Info] [Speed] Initialized
+[18:34:14][Info] [Teleport] Initialized
+[18:34:15][Info] [OP] Window created. Type: table
+[18:34:17][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:34:17][Info] [OP] ItemCollector: Destination = Player
+[18:34:17][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:34:17][Info] [OP] ItemCollector: Speed = Fast
+[18:34:17][Info] [OP] ItemCollector: Organize Mode = Grid
+[18:34:17][Info] [OP] UI Created! Ready to use.
+[18:34:17][Info] [OP] ItemCollector: Selected: (none)
+[18:34:24][Info] [Teleport Debug] Scanning folder: Workspace.Characters | Children: 69
+[18:34:24][Info] [Teleport Debug] Scan complete. Found: 0
+[18:34:24][Info] [Teleport Debug] Scanning for Lost Children...
+[18:34:29][Info] [Teleport Debug] Scanning for Lost Children...
+[18:34:29][Info] [Teleport Debug] Scan complete. Found: 0
+[18:34:29][Info] [Teleport Debug] Scanning folder: Workspace.Characters | Children: 69
+[18:36:09][Info] [Fly] Enabled
+[18:36:11][Info] don't play cutscene unless safe in fire range
+[18:36:12][Info] [Fly] Disabled

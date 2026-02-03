@@ -147,8 +147,81 @@ function ExplorerTab.Create(Window, Features, CONFIG, WindUI)
     Tab:Space({ Size = 8 })
     
     -- ========================================
-    -- INFO
+    -- CHEST EXPLORER
     -- ========================================
+    local ChestExplorer = Features and Features.ChestExplorer
+    
+    local ChestSection = Tab:Section({
+        Title = "Chest Explorer",
+        Icon = "lucide:treasure", 
+        Box = true,
+        BoxBorder = true,
+        Opened = true,
+    })
+    
+    local ChestStatus = ChestSection:Paragraph({
+        Title = "Status",
+        Desc = "Idle",
+    })
+    
+    ChestSection:Button({
+        Title = "🔍 Scan Chests",
+        Desc = "Find unopened chests in map",
+        Icon = "lucide:search",
+        Callback = function()
+            if ChestExplorer and ChestExplorer.ScanChests then
+                local chests = ChestExplorer.ScanChests()
+                local count = #chests
+                
+                if ChestStatus then
+                    ChestStatus:SetDesc("Found " .. count .. " chests nearby")
+                end
+                
+                WindUI:Notify({
+                    Title = "Chest Exporer",
+                    Content = "Found " .. count .. " chests!",
+                    Duration = 2,
+                })
+            else
+                WindUI:Notify({
+                    Title = "Error",
+                    Content = "ChestExplorer feature missing",
+                    Duration = 2,
+                })
+            end
+        end,
+    })
+    
+    ChestSection:Button({
+        Title = "🗝️ Open All Chests",
+        Desc = "Teleport & open found chests",
+        Icon = "lucide:key",
+        Callback = function()
+            if ChestExplorer and ChestExplorer.StartOpenAll then
+                ChestExplorer.StartOpenAll(function(statusMsg)
+                    if ChestStatus then
+                        ChestStatus:SetDesc(statusMsg)
+                    end
+                end)
+            end
+        end,
+    })
+    
+    ChestSection:Button({
+        Title = "⏹ Stop Opening",
+        Icon = "lucide:stop-circle",
+        Color = CONFIG.COLORS.Red,
+        Callback = function()
+            if ChestExplorer and ChestExplorer.Stop then
+                ChestExplorer.Stop()
+                if ChestStatus then
+                    ChestStatus:SetDesc("Stopped by user")
+                end
+            end
+        end,
+    })
+    
+    Tab:Space({ Size = 12 })
     Tab:Paragraph({
         Title = "How It Works",
         Desc = "1. Finds Campfire & starts flying\n2. Spirals outward to clear fog\n3. Use Satellite Cam 🛰️ to avoid dizziness\n4. Auto-teleports safely when done 🛡️",

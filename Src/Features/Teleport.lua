@@ -1,0 +1,163 @@
+--[[
+    Features/Teleport.lua
+    Teleport System for Rescue Missions
+    - Scans for "Lost Child" entities
+    - Handles Safe Teleport (Anti-Void + Streaming Support)
+]]
+
+local Teleport = {}
+
+-- Services
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+
+-- Configuration
+local CONFIG = {
+    CampfirePath = "Map.Campground.MainFire.InnerTouchZone",
+    ScanPath = "Characters", -- workspace.Characters
+    ChildNamePattern = "Lost Child",
+}
+
+-- State
+local State = {
+    IsTeleporting = false,
+}
+
+function Teleport.GetStaticTargets()
+    return CONFIG.StaticTargets
+end
+
+-- Helper: Get Instance from Path String
+local function getInstance(pathStr)
+    local segments = string.split(pathStr, ".")
+    local current = Workspace
+    for _, name in ipairs(segments) do
+        current = current:FindFirstChild(name)
+        if not current then return nil end
+    end
+    return current
+end
+
+function Teleport.ScanChildren(doPreload)
+    -- Pre-load known locations if requested (Bypasses StreamingEnabled)
+    if doPreload then
+        local player = Players.LocalPlayer
+        for i, pos in ipairs(CONFIG.StaticTargets) do -- Use StaticTargets for preload
+            pcall(function()
+                player:RequestStreamAroundAsync(pos.Position) -- Access Position field
+            end)
+            task.wait(0.1)
+        end
+        task.wait(1)
+    end
+
+    local found = {}
+    local charFolder = Workspace:FindFirstChild(CONFIG.ScanPath)
+    
+    if not charFolder then
+        return found
+    end
+    
+    for _, model in ipairs(charFolder:GetChildren()) do
+        if string.find(model.Name, CONFIG.ChildNamePattern) then
+            local isLost = model:GetAttribute("Lost")
+            local kidId = model:GetAttribute("KidId") or "Unknown"
+            local root = model:FindFirstChild("HumanoidRootPart") or model.PrimaryPart
+            
+            if isLost == true and root then
+                 table.insert(found, {
+                    Name = model.Name .. " (" .. kidId .. ")",
+                    Value = model, 
+                    Position = root.Position
+                })
+            end
+        end
+    end
+    
+    return found
+end
+
+function Teleport.TeleportTo(targetInstanceOrCFrame, heightOffset)
+    if State.IsTeleporting then return end
+    State.IsTeleporting = true
+    
+    local player = Players.LocalPlayer
+    local char = player.Character
+    local root = char and char:FindFirstChild("HumanoidRootPart")
+    
+    if not root then 
+        State.IsTeleporting = false
+        return 
+    end
+    
+    -- Resolve Target
+    local targetPos
+    if typeof(targetInstanceOrCFrame) == "Vector3" then
+        targetPos = targetInstanceOrCFrame
+    elseif typeof(targetInstanceOrCFrame) == "CFrame" then
+        targetPos = targetInstanceOrCFrame.Position
+    elseif typeof(targetInstanceOrCFrame) == "Instance" then
+        if targetInstanceOrCFrame:IsA("Model") then
+            if targetInstanceOrCFrame.PrimaryPart then
+                targetPos = targetInstanceOrCFrame.PrimaryPart.Position
+            elseif targetInstanceOrCFrame:FindFirstChild("HumanoidRootPart") then
+                targetPos = targetInstanceOrCFrame.HumanoidRootPart.Position
+            end
+        elseif targetInstanceOrCFrame:IsA("BasePart") then
+            targetPos = targetInstanceOrCFrame.Position
+        end
+    elseif typeof(targetInstanceOrCFrame) == "Vector3" then
+        targetPos = targetInstanceOrCFrame
+    end
+    
+    if not targetPos then
+        warn("[Teleport] Invalid target")
+        State.IsTeleporting = false
+        return
+    end
+    
+    -- Default height offset if not provided
+    heightOffset = heightOffset or 3
+    
+    -- Safe Teleport Sequence
+    task.spawn(function()
+        -- 1. Freeze
+        if root.Anchored == false then
+            root.Anchored = true
+        end
+        
+        -- 2. Request Stream (Critical for large maps)
+        pcall(function()
+            player:RequestStreamAroundAsync(targetPos)
+        end)
+        
+        -- 3. Teleport (With custom height offset)
+        root.CFrame = CFrame.new(targetPos + Vector3.new(0, heightOffset, 0))
+        
+        -- 4. Wait for ground/geometry
+        task.wait(0.5)
+        
+        -- 5. Unfreeze
+        root.Anchored = false
+        State.IsTeleporting = false
+    end)
+end
+
+function Teleport.TeleportToCampfire()
+    local campfire = getInstance(CONFIG.CampfirePath)
+    if campfire then
+        -- Teleport with +5 studs height offset
+        Teleport.TeleportTo(campfire, 5)
+        return true
+    else
+        warn("[Teleport] Campfire not found at: " .. CONFIG.CampfirePath)
+        return false
+    end
+end
+
+function Teleport.Init()
+    print("[Teleport] Initialized")
+end
+
+return Teleport

@@ -1,8 +1,8 @@
 # 99 Nights In The Forest - OP Script
 
 > **🎮 Game:** 99 Nights In The Forest (Roblox)  
-> **📅 Last Updated:** 2026-01-30  
-> **🔧 Version:** 2.5.0
+> **📅 Last Updated:** 2026-02-01  
+> **🔧 Version:** 2.6.0
 
 Modular survival script dengan WindUI, clean architecture, dan config persistence.
 
@@ -25,15 +25,26 @@ Modular survival script dengan WindUI, clean architecture, dan config persistenc
 | Feature | Category | Description |
 |---------|----------|-------------|
 | **Dashboard** | 🏠 UI | Home tab dengan User Info & Changelog |
+| **Chest Explorer** | 🗺️ Explorer | **NEW!** Auto Scan & Open Chests (Fly Stabilizer + Teleport) |
 | **Map Revealer** | 🗺️ Explorer | Spiral fly untuk remove fog + Satellite Camera |
+| **Universal Fly** | 🚀 Movement | **NEW!** PC/Mobile Fly (NoClip, Camera Aim Assist) |
+| **Walk Speed** | 🚀 Movement | **NEW!** Persistent Speed Hack (Anti-Slow) |
 | **God Mode** | 🛡️ Survival | Infinite health |
 | **Auto Eat** | 🛡️ Survival | Smart food consumption system |
 | **Kill Aura** | ⚔️ Combat | Auto melee nearby enemies (75 studs) |
 | **Tree Farm** | 🌲 Farming | Burst chopping (instant), smart tier check |
 | **Auto Plant** | 🌲 Farming | 6 Patterns (Heart, Star, etc) + Preview |
+| **Item Collector** | 🎒 Inventory | Auto collect items with optimized filtering |
 | **Anti-Lag** | 🔧 System | Delete All Sounds mode for max FPS |
-| **Config System** | 🔧 System | Save & Load settings dengan Flag system |
-| **Theme Selector** | 🎨 UI | 16 WindUI themes |
+
+### New Features (v2.6.0)
+- **Chest Explorer v2.1**: Menggunakan sistem **Hybrid Teleport + Fly Stabilizer**. Karakter tidak akan jatuh ke void atau nyangkut. Aman reload script (Auto Cleanup).
+- **Universal Fly**:
+  - **PC**: WASD + Spasi (Naik) + Ctrl (Turun).
+  - **Mobile**: Gunakan Joystick + Arahkan Kamera ke Atas/Bawah saat bergerak maju untuk terbang.
+  - **NoClip**: Otomatis aktif.
+- **Walk Speed**: Slider 16-200. Kecepatan **Persistent** (tidak akan reset saat respawn/efek slow).
+- **Kill Aura**: Support senjata **Scythe**.
 
 ### Map Revealer Details
 - **Spiral Fly**: Otomatis terbang spiral dari Campfire ke radius max
@@ -43,7 +54,7 @@ Modular survival script dengan WindUI, clean architecture, dan config persistenc
 - **Clean Unload**: Full resource cleanup saat stop/unload
 
 ### Combat & Farming
-- **Kill Aura**: Auto-detect equipped melee weapon, 75 studs range
+- **Kill Aura**: Auto-detect equipped melee (Sword, Axe, **Scythe**, etc), 75 studs range
 - **Tree Farm**: Auto-detect equipped axe, scans `Workspace.Map` only (optimized)
 - Both features idle when no tool equipped (saves CPU)
 
@@ -78,7 +89,11 @@ Nforst/
 │   │   ├── TreeFarm.lua      # Burst chop (v2.5)
 │   │   ├── MapRevealer.lua   # Spiral fly + ESP
 │   │   ├── AutoPlant.lua     # Pattern planting (v2.5)
-│   │   └── SoundManager.lua  # Anti-Lag / Delete Mode (v2.5)
+│   │   ├── SoundManager.lua  # Anti-Lag / Delete Mode (v2.5)
+│   │   ├── ItemCollector.lua # Optimized Item Scan (v2.6)
+│   │   ├── ChestExplorer.lua # Chest Auto-Open (v2.6)
+│   │   ├── Fly.lua           # Universal Fly (v2.6)
+│   │   └── Speed.lua         # Persistent Speed (v2.6)
 │   └── UI/                   # User Interface
 │       ├── MainInterface.lua # Main Window
 │       └── Tabs/             
@@ -86,18 +101,12 @@ Nforst/
 │           ├── SurvivalTab.lua 
 │           ├── CombatTab.lua 
 │           ├── FarmingTab.lua # Tree Farm & Auto Plant
-│           ├── ExplorerTab.lua # Map Revealer controls
-│           ├── MiscTab.lua   # Utilities (Anti-Lag, Notifs)
+│           ├── ExplorerTab.lua # Map Revealer & Chest Explorer
+│           ├── MiscTab.lua   # Movement (Fly/Speed) & Utilities
+│           ├── AutoCollectTab.lua # Item Collector Control
 │           └── SettingsTab.lua 
 ├── WindUI/                   # UI Library (local)
-├── CobaltLogCleaner/         # Log analysis tool
-│   ├── cleaner.py            # v3.0 - Single-line output
-│   ├── input/                # Place .log files here
-│   └── output/               # Cleaned output
-└── CobaltHTMLCleaner/        # HTML log analysis tool
-    ├── cleaner.py            
-    ├── input/                # Place .html files here
-    └── output/               # Cleaned output
+└── CobaltLogCleaner/         # Log analysis tool
 
 ---
 
@@ -124,16 +133,6 @@ python cleaner.py
 **Sample Output:**
 ```lua
 game:GetService("ReplicatedStorage").RemoteEvents.ToolDamageObject:InvokeServer(workspace.Map.Foliage["Small Tree"], game:GetService("Players").LocalPlayer.Inventory["Old Axe"], "1_8401342884", CFrame.new(...))
-```
-
-### Cobalt HTML Cleaner
-
-Tool untuk membersihkan Cobalt session HTML exports.
-
-**Usage:**
-```bash
-cd CobaltHTMLCleaner
-python cleaner.py
 ```
 
 ---
@@ -279,13 +278,20 @@ loadstring(game:HttpGet("http://localhost:8000/main.lua"))()
 
 ## 📜 Changelog
 
+### v2.6.0 (2026-02-01)
+- **Chest Explorer**: Upgraded to v2.1 with Teleport + Fly Stabilizer (Anti-Void)
+- **Features**: Added **Universal Fly** (PC/Mobile NoClip) in Misc Tab
+- **Features**: Added **Walk Speed** (Persistent) in Misc Tab
+- **Combat**: Added Scythe support to Kill Aura
+- **Optimization**: Reduced Item Collector scan lag
+- **Docs**: Updated README.md
+
 ### v2.5.0 (2026-01-30)
 - **AutoPlant**: Added pattern generator (Circle, Square, Triangle, Heart, Star, Spiral)
 - **AutoPlant**: Added part pooling for efficient previews
 - **TreeFarm**: Burst Logic (Instant sequential chopping) with smart tier detection
 - **SoundManager**: Added Sound Mute feature with "Delete Mode" for extreme anti-lag
 - **UI**: Added **Misc** tab for generic utilities (Mute, Notifs)
-- **UI**: Improved Pattern & Center Mode selection in Farming tab
 
 ### v2.4.0 (2026-01-30)
 - **TreeFarm**: Optimized to scan `Workspace.Map` only (10x faster)
@@ -301,14 +307,9 @@ loadstring(game:HttpGet("http://localhost:8000/main.lua"))()
 - **Code Cleanup**: Removed unused functions, consolidated configs
 
 ### v2.2.0 (2026-01-29)
-- Map Revealer with Spiral Fly
-- Satellite Camera mode
-- Streaming-aware teleport
-
-### v1.2.2 (2026-01-28)
-- Dashboard Update
-- God Mode (DamagePlayer)
-- Auto Eat with scanner
+- **MapRevealer**: with Spiral Fly
+- **Satellite Camera**: mode
+- **Streaming-aware**: teleport
 
 ---
 
@@ -325,6 +326,6 @@ Script untuk edukasi. Penggunaan exploit melanggar ToS dan berisiko ban.
 ---
 
 <p align="center">
-  <b>99 Nights OP Script v2.4.0</b><br>
+  <b>99 Nights OP Script v2.6.0</b><br>
   Built with ❤️ using WindUI
 </p>

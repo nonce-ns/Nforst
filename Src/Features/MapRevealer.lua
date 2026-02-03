@@ -262,7 +262,7 @@ local function enableOverheadCamera(rootPart)
 
     camera.CameraType = Enum.CameraType.Scriptable
     
-    local CAM_HEIGHT = 400
+    local CAM_HEIGHT = 200  -- Lowered from 400 to reduce StreamingEnabled issues
     local UP_VECTOR = Vector3.new(0, 0, -1)
     
     CamState.Connection = RunService.RenderStepped:Connect(function()
@@ -284,6 +284,33 @@ local function disableOverheadCamera()
 
     local camera = Workspace.CurrentCamera
     if camera then
+        -- IMPORTANT: Reset CameraSubject BEFORE changing CameraType
+        -- This prevents "Gameplay Paused" from StreamingEnabled
+        local player = Players.LocalPlayer
+        local character = player and player.Character
+        if not character then
+            -- Try Living folder (game-specific)
+            local living = Workspace:FindFirstChild("Living")
+            character = living and living:FindFirstChild(player.Name)
+        end
+        
+        local humanoid = character and character:FindFirstChild("Humanoid")
+        local rootPart = character and character:FindFirstChild("HumanoidRootPart")
+        
+        -- Force streaming to load content around player position
+        if rootPart then
+            pcall(function()
+                player:RequestStreamAroundAsync(rootPart.Position, 0.5)  -- 0.5 second timeout
+            end)
+        end
+        
+        if humanoid then
+            camera.CameraSubject = humanoid
+        end
+        
+        -- Small delay to let streaming fully catch up
+        task.wait(0.15)
+        
         camera.CameraType = Enum.CameraType.Custom
     end
 end
