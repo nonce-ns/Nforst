@@ -1,0 +1,265 @@
+=== WindUI Log Session ===
+Started: 2026-02-02 22:10:30
+User: nsopnet (ID: 8401342884)
+========================================
+
+[13:10:30][Info] Loader: Fetching MainInterface...
+[13:10:32][Info] [ChestExplorer] Stopped/Finished
+[13:10:32][Info] [ChestExplorer] Stopped/Finished
+[13:10:32][Info] [ChestExplorer] Cleaned up resources
+[13:10:32][Info] [OP] MapRevealer: Cleanup complete
+[13:10:32][Info] [OP] GodMode: STOPPED
+[13:10:32][Info] [OP] GodMode: STOPPED
+[13:10:32][Info] [OP] SoundManager: Cleanup complete
+[13:10:32][Info] [OP] AutoEat: STOPPED
+[13:10:32][Info] [OP] Loading modules...
+[13:10:32][Info] [OP] AutoEat: STOPPED
+[13:10:33][Info] [MainInterface] Speed module loaded table: table: 0x678b5a7e766d89d6
+[13:10:33][Info] [OP] Initializing 99 Nights OP Script...
+[13:10:33][Info] [OP] Modules loaded!
+[13:10:33][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[13:10:33][Info] [OP] RangedAura: Initialized (Crossbow, 200 studs)
+[13:10:33][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[13:10:33][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[13:10:33][Info] [OP] ItemCollector: Initialized
+[13:10:33][Info] [Fly] Initialized
+[13:10:33][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[13:10:33][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[13:10:33][Info] [Teleport] Initialized
+[13:10:33][Info] [Speed] Initialized
+[13:10:34][Info] [OP] Window created. Type: table
+[13:10:36][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[13:10:36][Info] [OP] ItemCollector: Destination = Player
+[13:10:36][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[13:10:36][Info] [OP] ItemCollector: Speed = Fast
+[13:10:36][Info] [OP] UI Created! Ready to use.
+[13:10:36][Info] [OP] ItemCollector: Selected: (none)
+[13:10:36][Info] [OP] ItemCollector: Organize Mode = Grid
+[13:10:38][Info] [Remote][Success] RemoteEvents found: 221 remotes
+[13:10:38][Info] [OP] GodMode: STARTED
+[13:10:40][Info] [OP] RangedAura: ON
+[13:10:42][Info] [RangedAura] 🔓 Reload Bypass STARTED for: Infernal Crossbow
+[13:10:42][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:42][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 1 | Dist: 2
+[13:10:42][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:42][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:10:42][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:42][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:43][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:43][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:43][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:43][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 2 | Dist: 2
+[13:10:43][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:43][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:43][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:44][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:44][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:44][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 3 | Dist: 2
+[13:10:44][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:44][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:44][Error] ReplicatedStorage.Tools.Firearm:341: attempt to index nil with 'Success'
+    Stack Begin
+    Script 'ReplicatedStorage.Tools.Firearm', Line 341 - function Reload
+    Script 'ReplicatedStorage.Tools.Firearm', Line 414
+    Stack End
+[13:10:44][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:44][Info] [RangedAura]   → RegisterProjectile: true
+[13:10:45][Info] [RangedAura]   → ProjectileDamageEnemy: true
+[13:10:45][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:45][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:45][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 4 | Dist: 4
+[13:10:45][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:10:45][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:45][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:46][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:46][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:46][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:46][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 5 | Dist: 2
+[13:10:46][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:46][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:46][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:47][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:47][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:47][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:47][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 6 | Dist: 2
+[13:10:47][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:47][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:47][Info] [RangedAura]   → RegisterProjectile: true
+[13:10:47][Info] [RangedAura]   → ProjectileDamageEnemy: true
+[13:10:48][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:48][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:48][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 7 | Dist: 2
+[13:10:48][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:10:48][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:48][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:49][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:49][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:49][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 8 | Dist: 6
+[13:10:49][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:49][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:49][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:49][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:50][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:50][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:50][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:50][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 9 | Dist: 2
+[13:10:50][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:50][Info] [RangedAura]   → RegisterProjectile: true
+[13:10:50][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:50][Info] [RangedAura]   → ProjectileDamageEnemy: true
+[13:10:50][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:50][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:50][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 10 | Dist: 2
+[13:10:50][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:10:51][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:51][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:51][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:51][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:51][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:51][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 11 | Dist: 2
+[13:10:52][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:52][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:52][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:52][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:53][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:53][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:53][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 12 | Dist: 11
+[13:10:53][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:53][Info] [RangedAura]   → RegisterProjectile: true
+[13:10:53][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:53][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:53][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:53][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:53][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 13 | Dist: 13
+[13:10:53][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:10:53][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:53][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:54][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:54][Info] [RangedAura] 🎯 Found 11 targets in range
+[13:10:54][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 14 | Dist: 15
+[13:10:54][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:54][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:55][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:55][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:55][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:55][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:55][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:55][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 15 | Dist: 15
+[13:10:55][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:55][Info] [RangedAura]   → RegisterProjectile: true
+[13:10:55][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:56][Info] [RangedAura]   → ProjectileDamageEnemy: true
+[13:10:56][Info] off
+[13:10:56][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:56][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:56][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 16 | Dist: 11
+[13:10:56][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:10:56][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:56][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:57][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:57][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:57][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:57][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 17 | Dist: 14
+[13:10:57][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:57][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:57][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:58][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:58][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:58][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:58][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 18 | Dist: 14
+[13:10:58][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:10:58][Info] [RangedAura]   → RegisterProjectile: true
+[13:10:58][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:58][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:58][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:58][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:10:58][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 19 | Dist: 17
+[13:10:58][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:10:59][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:10:59][Info] [RangedAura]   → RegisterProjectile: nil
+[13:10:59][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:10:59][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:10:59][Info] [RangedAura] 🎯 Found 11 targets in range
+[13:10:59][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 20 | Dist: 30
+[13:11:00][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:11:00][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:00][Info] [RangedAura]   → RegisterProjectile: nil
+[13:11:01][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:11:01][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:01][Info] [RangedAura] 🎯 Found 12 targets in range
+[13:11:01][Info] [RangedAura] ⚔️ Attacking: Bunny | ProjID: 21 | Dist: 29
+[13:11:01][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:11:01][Info] [RangedAura]   → RegisterProjectile: true
+[13:11:01][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:01][Info] [RangedAura]   → ProjectileDamageEnemy: true
+[13:11:01][Info] [RangedAura] 🎯 Found 11 targets in range
+[13:11:01][Info] [RangedAura] ⚔️ Attacking: Bunny | ProjID: 22 | Dist: 29
+[13:11:01][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:01][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:11:01][Info] [RangedAura]   → RegisterProjectile: nil
+[13:11:01][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:02][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:11:02][Info] [RangedAura] ⚔️ Attacking: Bunny | ProjID: 23 | Dist: 41
+[13:11:02][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:02][Info] [RangedAura] 🎯 Found 11 targets in range
+[13:11:02][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:11:03][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:03][Info] [RangedAura]   → RegisterProjectile: nil
+[13:11:03][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:11:03][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:11:03][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:03][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 24 | Dist: 41
+[13:11:03][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:11:04][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:04][Info] [RangedAura]   → RegisterProjectile: true
+[13:11:04][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:11:04][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:04][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:11:04][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 25 | Dist: 41
+[13:11:04][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:11:04][Info] [RangedAura]   → RegisterProjectile: nil
+[13:11:04][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:05][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:11:05][Info] [RangedAura] ⚔️ Attacking: Bunny | ProjID: 26 | Dist: 36
+[13:11:05][Info] [RangedAura] 🎯 Found 11 targets in range
+[13:11:05][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:05][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:11:05][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:05][Info] [RangedAura]   → RegisterProjectile: nil
+[13:11:06][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:11:06][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:06][Info] [RangedAura] 🎯 Found 11 targets in range
+[13:11:06][Info] [RangedAura] ⚔️ Attacking: Bunny | ProjID: 27 | Dist: 32
+[13:11:06][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:11:06][Info] [RangedAura]   → RegisterProjectile: true
+[13:11:06][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:06][Info] [RangedAura]   → ProjectileDamageEnemy: true
+[13:11:06][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:06][Info] [RangedAura] ⚔️ Attacking: Bunny | ProjID: 28 | Dist: 28
+[13:11:06][Info] [RangedAura] 🎯 Found 11 targets in range
+[13:11:07][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:11:07][Info] [RangedAura]   → RegisterProjectile: nil
+[13:11:07][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:07][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:11:08][Info] [RangedAura] 🎯 Found 9 targets in range
+[13:11:08][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:08][Info] [RangedAura] ⚔️ Attacking: Bunny | ProjID: 29 | Dist: 41
+[13:11:08][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:11:08][Info] [RangedAura]   → RegisterProjectile: nil
+[13:11:08][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:09][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:11:09][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:09][Info] [RangedAura] 🎯 Found 8 targets in range
+[13:11:09][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 30 | Dist: 52
+[13:11:09][Info] [RangedAura]   → RequestReloadFirearm: nil
+[13:11:09][Info] [RangedAura]   → RegisterProjectile: true
+[13:11:09][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:09][Info] [RangedAura]   → ProjectileDamageEnemy: nil
+[13:11:09][Info] [RangedAura] 🎯 Found 8 targets in range
+[13:11:09][Info] [RangedAura] ⚔️ Attacking: Cultist | ProjID: 31 | Dist: 52
+[13:11:09][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:11:09][Info] [RangedAura]   → RequestReloadFirearm: true
+[13:11:10][Info] [RangedAura]   → RegisterProjectile: nil
+[13:11:10][Info] [RangedAura]   → ReplicateBullet: Sent
+[13:11:10][Info] deactivate and unequip
+[13:11:10][Info] [RangedAura]   → ProjectileDamageEnemy: nil

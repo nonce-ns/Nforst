@@ -1,0 +1,572 @@
+=== WindUI Log Session ===
+Started: 2026-02-03 18:38:12
+User: nsopnet (ID: 8401342884)
+========================================
+
+[09:38:13][Info] Loader: Fetching MainInterface...
+[09:38:14][Info] [OP] Loading modules...
+[09:38:15][Info] [MainInterface] Speed module loaded table: table: 0xd3cc1147866ee4a8
+[09:38:16][Info] [OP] Modules loaded!
+[09:38:16][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[09:38:16][Info] [OP] Initializing 99 Nights OP Script...
+[09:38:16][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[09:38:16][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[09:38:16][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[09:38:16][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[09:38:16][Info] [Fly] Initialized
+[09:38:16][Info] [Speed] Initialized
+[09:38:16][Info] [PhysicsOptimizer] Initialized
+[09:38:16][Info] [Teleport] Initialized
+[09:38:16][Info] [OP] Window created. Type: table
+[09:38:18][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[09:38:18][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[09:38:18][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:38:18][Info] [OP] UI Created! Ready to use.
+[09:38:29][Info] [PhysicsOptimizer] Storage box created at -7.230545997619629, 2004, 7.563447952270508 (High above player)
+[09:38:40][Info] [OP] TreeFarm: Filter ON - Small Tree
+[09:38:40][Info] [OP] TreeFarm: ON
+[09:38:42][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[09:38:53][Info] deactivate and unequip
+[09:39:00][Info] [PhysicsOptimizer] No item types selected for storage
+[09:39:02][Info] [PhysicsOptimizer] Teleported to storage at -107.23054504394531, 1964, -92.43655395507812
+[09:39:09][Info] [PhysicsOptimizer] Teleported to storage at -107.23054504394531, 1964, -92.43655395507812
+[09:39:36][Info] [PhysicsOptimizer] Moved 36 items to storage at -7.230545997619629, 1959, 7.563447952270508
+[09:40:01][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:40:01][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:40:01][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:40:10][Info] [ItemCollector] Started Collection Thread.
+[09:40:11][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:11][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:11][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:11][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:11][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:11][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:11][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:11][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:15][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:15][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:15][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:15][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:15][Warning] [ItemCollector] No matching items found in map!
+[09:40:15][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[09:40:20][Info] [ItemCollector] Started Collection Thread.
+[09:40:20][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:20][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:20][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:23][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:23][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:23][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:23][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:23][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:23][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:23][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:23][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:23][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:24][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:24][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:24][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:24][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:24][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:24][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:24][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:40:24][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[09:40:24][Warning] [ItemCollector] No matching items found in map!
+[09:40:24][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:42][Info] [ItemCollector UI] Cleared ALL selections via UI.
+[09:41:42][Info] [ItemCollector] Cleared selection (removed 1 items).
+[09:41:42][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:41:45][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:41:48][Info] [ItemCollector] Started Collection Thread.
+[09:41:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:50][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:50][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:50][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:50][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:50][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:50][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:50][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:50][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:51][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:51][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:51][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:51][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:51][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:51][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:51][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:51][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:52][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:52][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:52][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:52][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:52][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:52][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:52][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:52][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:53][Warning] [ItemCollector] No matching items found in map!
+[09:41:53][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:41:53][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[09:42:34][Info] function is already waiting :)
+[09:42:45][Info] [ItemCollector] Started Collection Thread.
+[09:42:45][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:45][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:45][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:45][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:45][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:45][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:45][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:46][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:46][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:46][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:46][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:46][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:46][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:46][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:46][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:47][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:47][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:47][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:47][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:47][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:47][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:47][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:47][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:48][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:49][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:42:49][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[09:42:49][Warning] [ItemCollector] No matching items found in map!
+[09:44:03][Info] Loader: Fetching MainInterface...
+[09:44:05][Info] [ChestExplorer] Stopped/Finished
+[09:44:05][Info] [ChestExplorer] Stopped/Finished
+[09:44:05][Info] [ChestExplorer] Cleaned up resources
+[09:44:05][Info] [OP] MapRevealer: Cleanup complete
+[09:44:05][Info] [OP] GodMode: STOPPED
+[09:44:05][Info] [PhysicsOptimizer] Storage box destroyed
+[09:44:05][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[09:44:05][Info] [OP] GodMode: STOPPED
+[09:44:05][Info] [OP] Loading modules...
+[09:44:05][Info] [OP] TreeFarm: OFF
+[09:44:05][Info] [OP] AutoEat: STOPPED
+[09:44:05][Info] [OP] AutoEat: STOPPED
+[09:44:05][Info] [OP] SoundManager: Cleanup complete
+[09:44:05][Info] [MainInterface] Speed module loaded table: table: 0xdbf5fc1fc77b90e8
+[09:44:06][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[09:44:06][Info] [OP] Modules loaded!
+[09:44:06][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[09:44:06][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[09:44:06][Info] [Teleport] Initialized
+[09:44:06][Info] [PhysicsOptimizer] Initialized
+[09:44:06][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[09:44:06][Info] [Speed] Initialized
+[09:44:06][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[09:44:06][Info] [OP] Initializing 99 Nights OP Script...
+[09:44:06][Info] [Fly] Initialized
+[09:44:06][Info] [OP] Window created. Type: table
+[09:44:07][Info] anti-fling
+[09:44:09][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[09:44:09][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[09:44:09][Info] [OP] UI Created! Ready to use.
+[09:44:09][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:44:10][Info] anti-fling
+[09:44:11][Info] anti-fling
+[09:44:24][Info] [PhysicsOptimizer] Storage box created at -1.7962271670057817e-09, 2006.3182373046875, -5.8077969100622795e-09 (High above player)
+[09:44:25][Info] [PhysicsOptimizer] Teleported to storage at -100, 1966.3182373046875, -100
+[09:44:52][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:44:55][Info] [ItemCollector] Started Collection Thread.
+[09:44:57][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[09:44:57][Info] [ItemCollector] Collected 42 items.
+[09:45:19][Info] [PhysicsOptimizer] No item types selected for storage
+[09:45:31][Info] [PhysicsOptimizer] Moved 42 items to storage at -1.7962271670057817e-09, 1961.3182373046875, -5.8077969100622795e-09
+[09:47:16][Info] Loader: Fetching MainInterface...
+[09:47:17][Info] [ChestExplorer] Stopped/Finished
+[09:47:17][Info] [ChestExplorer] Stopped/Finished
+[09:47:17][Info] [ChestExplorer] Cleaned up resources
+[09:47:18][Info] [OP] MapRevealer: Cleanup complete
+[09:47:18][Info] [PhysicsOptimizer] Storage box destroyed
+[09:47:18][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[09:47:18][Info] [OP] GodMode: STOPPED
+[09:47:18][Info] [OP] GodMode: STOPPED
+[09:47:18][Info] [OP] AutoEat: STOPPED
+[09:47:18][Info] [OP] AutoEat: STOPPED
+[09:47:18][Info] [OP] Loading modules...
+[09:47:18][Info] [OP] SoundManager: Cleanup complete
+[09:47:18][Info] [MainInterface] Speed module loaded table: table: 0xc823e7b974ac8118
+[09:47:18][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[09:47:18][Info] [OP] Initializing 99 Nights OP Script...
+[09:47:18][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[09:47:18][Info] [Fly] Initialized
+[09:47:18][Info] [OP] Modules loaded!
+[09:47:18][Info] [Teleport] Initialized
+[09:47:18][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[09:47:18][Info] [PhysicsOptimizer] Initialized
+[09:47:18][Info] [Speed] Initialized
+[09:47:18][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[09:47:18][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[09:47:19][Info] [OP] Window created. Type: table
+[09:47:19][Info] anti-fling
+[09:47:21][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[09:47:22][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[09:47:22][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:47:22][Info] [OP] UI Created! Ready to use.
+[09:47:23][Info] anti-fling
+[09:47:24][Info] anti-fling
+[09:47:25][Info] anti-fling
+[09:47:31][Warning] Infinite yield possible on 'Workspace.Map.Landmarks.Research Outpost.Terminals.VoteTerminal1.Lever:WaitForChild("ProximityAttachment")'
+[09:47:31][Info] Stack End
+[09:47:31][Info] Script 'Players.nsopnet.PlayerScripts.Client.HardModeClient.ResearchOutpostClient', Line 180 - function VoteTerminalAdded
+[09:47:31][Info] Stack Begin
+[09:47:31][Info] Script 'Players.nsopnet.PlayerScripts.Client.HardModeClient.ResearchOutpostClient', Line 169 - function update
+[09:47:34][Info] [PhysicsOptimizer] Storage box created at 2.970414136882482e-09, 2006.3182373046875, 9.604855577549642e-09 (High above player)
+[09:47:36][Info] [PhysicsOptimizer] Teleported to storage at -100, 1966.3182373046875, -100
+[09:47:56][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:48:01][Info] [ItemCollector] Started Collection Thread.
+[09:48:02][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[09:48:02][Info] [ItemCollector] Collected 42 items.
+[09:48:36][Info] [Remote][Success] RemoteEvents found: 205 remotes
+[09:48:36][Info] [ItemCollector] Started Collection Thread.
+[09:48:36][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:36][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:36][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:36][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:36][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:37][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:37][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:37][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:37][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:37][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:37][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:37][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:37][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:38][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:38][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:38][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:38][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:38][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:38][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:38][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:38][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:39][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:39][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:39][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:39][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:39][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:39][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:39][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:39][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:40][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:40][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:40][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:40][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:40][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:40][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:40][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:40][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:41][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[09:48:41][Warning] [ItemCollector] No matching items found in map!
+[09:48:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:47][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[09:48:51][Info] [ItemCollector] Selected: Bandage
+[09:48:51][Info] [ItemCollector] Selected: Broken Microwave
+[09:48:51][Info] [ItemCollector] Selected: Berry
+[09:48:51][Info] [ItemCollector] Selected: Bolt
+[09:48:51][Info] [ItemCollector] Selected: Carrot
+[09:48:51][Info] [ItemCollector] Selected: Broken Fan
+[09:48:51][Info] [ItemCollector] Selected: Cake
+[09:48:51][Info] [ItemCollector] Selected: Chair
+[09:48:51][Info] [ItemCollector] Selected: Coal
+[09:48:51][Info] [ItemCollector] Selected: Meat? Sandwich
+[09:48:51][Info] [ItemCollector] Selected: Basketball
+[09:48:51][Info] [ItemCollector] Selected: Old Radio
+[09:48:51][Info] [ItemCollector] Selected: Sapling
+[09:48:51][Info] [ItemCollector] Selected: Washing Machine
+[09:48:51][Info] [ItemCollector] Selected: Wolf Corpse
+[09:48:51][Info] [ItemCollector] Selected: Alpha Wolf Corpse
+[09:48:51][Info] [ItemCollector] Selected: Rifle Ammo
+[09:48:51][Info] [ItemCollector] Selected: Fuel Canister
+[09:48:51][Info] [ItemCollector] Selected: Old Car Engine
+[09:48:51][Info] [ItemCollector] Selected: Leather Body
+[09:48:51][Info] [ItemCollector] Selected: Coin Stack
+[09:48:51][Info] [ItemCollector] Selected: Sheet Metal
+[09:48:51][Info] [ItemCollector] Selected: Log
+[09:48:51][Info] [ItemCollector] Selected: Strong Flashlight
+[09:48:51][Info] [ItemCollector] Selected: MedKit
+[09:48:51][Info] [ItemCollector] Selected: Revolver Ammo
+[09:48:51][Info] [ItemCollector] Selected: Old Flashlight
+[09:48:51][Info] [ItemCollector] Selected: Tyre
+[09:48:51][Info] [ItemCollector] Selected: UFO Junk
+[09:48:52][Info] [ItemCollector] Started Collection Thread.
+[09:48:52][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:52][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:53][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:53][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:48:53][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:48:53][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:48:53][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:48:53][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:48:53][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:48:53][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:54][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:54][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:54][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:54][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:54][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:54][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:54][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:54][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:55][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:55][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:55][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:48:55][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:48:55][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:48:55][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:55][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:55][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:56][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[09:48:56][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:48:56][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:48:56][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:48:56][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:48:56][Warning] [ItemCollector] Failed to collect: Tyre after 3 attempts.
+[09:48:56][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[09:48:56][Warning] [ItemCollector] Failed to collect: MedKit after 3 attempts.
+[09:48:57][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:48:57][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:48:57][Warning] [ItemCollector] Failed to collect: Bandage after 3 attempts.
+[09:48:57][Warning] [ItemCollector] Failed to collect: Old Radio after 3 attempts.
+[09:48:57][Warning] [ItemCollector] Failed to collect: MedKit after 3 attempts.
+[09:48:57][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:48:57][Warning] [ItemCollector] Failed to collect: Old Car Engine after 3 attempts.
+[09:48:57][Warning] [ItemCollector] Failed to collect: Broken Fan after 3 attempts.
+[09:48:58][Warning] [ItemCollector] Failed to collect: Old Radio after 3 attempts.
+[09:48:58][Warning] [ItemCollector] Failed to collect: Revolver Ammo after 3 attempts.
+[09:48:58][Warning] [ItemCollector] Failed to collect: Revolver Ammo after 3 attempts.
+[09:48:58][Warning] [ItemCollector] Failed to collect: Broken Fan after 3 attempts.
+[09:48:58][Warning] [ItemCollector] Failed to collect: Broken Microwave after 3 attempts.
+[09:48:58][Warning] [ItemCollector] Failed to collect: Broken Fan after 3 attempts.
+[09:48:58][Warning] [ItemCollector] Failed to collect: Cake after 3 attempts.
+[09:48:59][Warning] [ItemCollector] Failed to collect: Leather Body after 3 attempts.
+[09:48:59][Warning] [ItemCollector] Failed to collect: Rifle Ammo after 3 attempts.
+[09:48:59][Warning] [ItemCollector] Failed to collect: Washing Machine after 3 attempts.
+[09:48:59][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:48:59][Warning] [ItemCollector] Failed to collect: Old Radio after 3 attempts.
+[09:48:59][Warning] [ItemCollector] Failed to collect: Tyre after 3 attempts.
+[09:48:59][Warning] [ItemCollector] Failed to collect: Old Radio after 3 attempts.
+[09:48:59][Warning] [ItemCollector] Failed to collect: Old Radio after 3 attempts.
+[09:49:00][Warning] [ItemCollector] Failed to collect: Broken Microwave after 3 attempts.
+[09:49:00][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:00][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:49:00][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:00][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[09:49:00][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:00][Warning] [ItemCollector] Failed to collect: Leather Body after 3 attempts.
+[09:49:00][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:01][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:49:01][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:01][Warning] [ItemCollector] Failed to collect: Broken Fan after 3 attempts.
+[09:49:01][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:01][Warning] [ItemCollector] Failed to collect: Tyre after 3 attempts.
+[09:49:01][Warning] [ItemCollector] Failed to collect: Leather Body after 3 attempts.
+[09:49:01][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:01][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:01][Warning] [ItemCollector] Failed to collect: Old Radio after 3 attempts.
+[09:49:02][Warning] [ItemCollector] Failed to collect: Broken Microwave after 3 attempts.
+[09:49:02][Warning] [ItemCollector] Failed to collect: Strong Flashlight after 3 attempts.
+[09:49:02][Warning] [ItemCollector] Failed to collect: Bandage after 3 attempts.
+[09:49:02][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:02][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:02][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:02][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:03][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:03][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:03][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:03][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:03][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:03][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:03][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:03][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:04][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:04][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:04][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:04][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:04][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:04][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:04][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:04][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:05][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:05][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:05][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:05][Warning] [ItemCollector] Failed to collect: Basketball after 3 attempts.
+[09:49:05][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:05][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:05][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:05][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:06][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:06][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:06][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:06][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:06][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:06][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:06][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:06][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:07][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:07][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:07][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:07][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:07][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:49:07][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:07][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:07][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:08][Warning] [ItemCollector] Failed to collect: Old Radio after 3 attempts.
+[09:49:08][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:49:08][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:49:08][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:08][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:08][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:08][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:08][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:49:09][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:09][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:09][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:09][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:09][Warning] [ItemCollector] Failed to collect: Broken Fan after 3 attempts.
+[09:49:09][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:09][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:09][Warning] [ItemCollector] Failed to collect: Revolver Ammo after 3 attempts.
+[09:49:10][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:10][Warning] [ItemCollector] Failed to collect: Old Flashlight after 3 attempts.
+[09:49:10][Warning] [ItemCollector] Failed to collect: Old Flashlight after 3 attempts.
+[09:49:10][Warning] [ItemCollector] Failed to collect: Old Flashlight after 3 attempts.
+[09:49:10][Warning] [ItemCollector] Failed to collect: Old Flashlight after 3 attempts.
+[09:49:10][Warning] [ItemCollector] Failed to collect: Revolver Ammo after 3 attempts.
+[09:49:10][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:49:10][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:11][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:11][Warning] [ItemCollector] Failed to collect: Revolver Ammo after 3 attempts.
+[09:49:11][Warning] [ItemCollector] Failed to collect: Old Radio after 3 attempts.
+[09:49:11][Warning] [ItemCollector] Failed to collect: Bolt after 3 attempts.
+[09:49:11][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:11][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:11][Warning] [ItemCollector] Failed to collect: Sapling after 3 attempts.
+[09:49:11][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:12][Warning] [ItemCollector] Failed to collect: Sapling after 3 attempts.
+[09:49:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:12][Warning] [ItemCollector] Failed to collect: Sapling after 3 attempts.
+[09:49:12][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:13][Warning] [ItemCollector] Failed to collect: Sapling after 3 attempts.
+[09:49:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:13][Warning] [ItemCollector] Failed to collect: Sapling after 3 attempts.
+[09:49:13][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:14][Warning] [ItemCollector] Failed to collect: Sapling after 3 attempts.
+[09:49:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:14][Warning] [ItemCollector] Failed to collect: Sapling after 3 attempts.
+[09:49:14][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:15][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:15][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:15][Warning] [ItemCollector] Failed to collect: Meat? Sandwich after 3 attempts.
+[09:49:15][Warning] [ItemCollector] Failed to collect: Meat? Sandwich after 3 attempts.
+[09:49:15][Warning] [ItemCollector] Failed to collect: UFO Junk after 3 attempts.
+[09:49:15][Warning] [ItemCollector] Failed to collect: UFO Junk after 3 attempts.
+[09:49:15][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:15][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:16][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:16][Warning] [ItemCollector] Failed to collect: Coin Stack after 3 attempts.
+[09:49:16][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:16][Warning] [ItemCollector] Failed to collect: Broken Fan after 3 attempts.
+[09:49:16][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[09:49:16][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:16][Warning] [ItemCollector] Failed to collect: Alpha Wolf Corpse after 3 attempts.
+[09:49:16][Warning] [ItemCollector] Failed to collect: Alpha Wolf Corpse after 3 attempts.
+[09:49:17][Warning] [ItemCollector] Failed to collect: Wolf Corpse after 3 attempts.
+[09:49:17][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:17][Warning] [ItemCollector] Failed to collect: Carrot after 3 attempts.
+[09:49:17][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:17][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:17][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:17][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:17][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:17][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[09:49:18][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:18][Warning] [ItemCollector] Failed to collect: Berry after 3 attempts.
+[09:49:18][Warning] [ItemCollector] Failed to collect: Old Radio after 3 attempts.
+[09:49:18][Warning] [ItemCollector] Failed to collect: Broken Fan after 3 attempts.
+[09:49:18][Warning] [ItemCollector] Failed to collect: Sheet Metal after 3 attempts.
+[09:49:18][Warning] [ItemCollector] Failed to collect: Broken Fan after 3 attempts.
+[09:49:18][Warning] [ItemCollector] No matching items found in map!
+[09:49:18][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[09:49:18][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.

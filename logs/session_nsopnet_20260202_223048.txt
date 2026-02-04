@@ -1,0 +1,85 @@
+=== WindUI Log Session ===
+Started: 2026-02-02 22:30:48
+User: nsopnet (ID: 8401342884)
+========================================
+
+[13:30:48][Info] Arrow nil
+[13:30:33][Info] Arrow nil
+[13:30:46][Info] Arrow nil
+[13:30:42][Info] Arrow nil
+[13:30:50][Info] Loader: Fetching MainInterface...
+[13:30:50][Info] Arrow nil
+[13:30:36][Info] Arrow nil
+[13:30:44][Info] Arrow nil
+[13:30:52][Info] [ChestExplorer] Stopped/Finished
+[13:30:52][Info] [ChestExplorer] Stopped/Finished
+[13:30:52][Info] [ChestExplorer] Cleaned up resources
+[13:30:52][Info] Arrow nil
+[13:30:52][Info] [OP] GodMode: STOPPED
+[13:30:52][Info] [OP] MapRevealer: Cleanup complete
+[13:30:52][Info] [OP] GodMode: STOPPED
+[13:30:52][Info] [OP] AutoEat: STOPPED
+[13:30:52][Info] [OP] SoundManager: Cleanup complete
+[13:30:52][Info] [OP] AutoEat: STOPPED
+[13:30:52][Info] [OP] Loading modules...
+[13:30:53][Info] [MainInterface] Speed module loaded table: table: 0x2b0746d8305385f6
+[13:30:38][Info] Arrow nil
+[13:30:53][Info] [OP] Modules loaded!
+[13:30:53][Info] [OP] Initializing 99 Nights OP Script...
+[13:30:53][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[13:30:53][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[13:30:53][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[13:30:53][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[13:30:53][Info] [OP] ItemCollector: Initialized
+[13:30:53][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[13:30:53][Info] [Fly] Initialized
+[13:30:53][Info] [Speed] Initialized
+[13:30:53][Info] [Teleport] Initialized
+[13:30:54][Info] [OP] Window created. Type: table
+[13:30:54][Info] Arrow nil
+[13:30:40][Info] Arrow nil
+[13:30:56][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[13:30:56][Info] [OP] ItemCollector: Destination = Player
+[13:30:56][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[13:30:56][Info] [OP] ItemCollector: Organize Mode = Grid
+[13:30:56][Info] [OP] ItemCollector: Speed = Fast
+[13:30:56][Info] [OP] UI Created! Ready to use.
+[13:30:56][Info] [OP] ItemCollector: Selected: (none)
+[13:30:56][Info] Arrow nil
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:57][Info] made smaller
+[13:30:58][Info] Arrow nil
+[13:31:00][Info] Arrow nil
+[13:31:03][Info] Arrow nil
+[13:31:05][Info] Arrow nil
+[13:31:07][Info] Arrow nil
+[13:31:09][Info] [OP] KillAura: ON
+[13:31:09][Info] Arrow nil
+[13:31:11][Info] Arrow nil
+[13:31:12][Info] [Remote][Success] RemoteEvents found: 222 remotes
+[13:31:13][Info] deactivate and unequip

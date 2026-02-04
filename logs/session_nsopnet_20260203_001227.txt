@@ -1,0 +1,68 @@
+=== WindUI Log Session ===
+Started: 2026-02-03 00:12:27
+User: nsopnet (ID: 8401342884)
+========================================
+
+[15:12:27][Info] Loader: Fetching MainInterface...
+[15:12:28][Info] [OP] Loading modules...
+[15:12:29][Info] [MainInterface] Speed module loaded table: table: 0x38f155f57089cd56
+[15:12:29][Info] [OP] Initializing 99 Nights OP Script...
+[15:12:29][Info] [OP] Modules loaded!
+[15:12:29][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:12:29][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:12:29][Info] [Teleport] Initialized
+[15:12:29][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:12:29][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[15:12:29][Info] [Fly] Initialized
+[15:12:29][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:12:29][Info] [Speed] Initialized
+[15:12:29][Info] [OP] Window created. Type: table
+[15:12:31][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:12:31][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:12:31][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:12:31][Info] [OP] UI Created! Ready to use.
+[15:12:33][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[15:12:33][Info] [OP] GodMode: STARTED
+[15:12:45][Info] [ItemCollector] Selected: Bandage
+[15:12:45][Info] [ItemCollector] Selected: Bolt
+[15:12:45][Info] [ItemCollector] Selected: Broken Fan
+[15:12:45][Info] [ItemCollector] Selected: Berry
+[15:12:45][Info] [ItemCollector] Selected: Chair
+[15:12:45][Info] [ItemCollector] Selected: Coin Stack
+[15:12:45][Info] [ItemCollector] Selected: Coal
+[15:12:45][Info] [ItemCollector] Selected: Carrot
+[15:12:45][Info] [ItemCollector] Selected: Fuel Canister
+[15:12:45][Info] [ItemCollector] Selected: Log
+[15:12:45][Info] [ItemCollector] Selected: Old Car Engine
+[15:12:45][Info] [ItemCollector] Selected: Rifle
+[15:12:45][Info] [ItemCollector] Selected: Sheet Metal
+[15:12:45][Info] [ItemCollector] Selected: Tyre
+[15:12:45][Info] [ItemCollector UI] Selected ALL items (20 types)
+[15:12:45][Info] [ItemCollector] Selected: Dynamite
+[15:12:45][Info] [ItemCollector] Selected: Old Flashlight
+[15:12:45][Info] [ItemCollector] Selected: Revolver Ammo
+[15:12:45][Info] [ItemCollector] Selected: Leather Body
+[15:12:45][Info] [ItemCollector] Selected: Old Radio
+[15:12:45][Info] [ItemCollector] Selected: Rifle Ammo
+[15:12:49][Info] [ItemCollector UI] Cleared ALL selections via UI.
+[15:12:49][Info] [ItemCollector] Cleared selection (removed 20 items).
+[15:12:49][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:13:02][Info] [ItemCollector] Selected: Chair
+[15:13:03][Info] [ItemCollector] Unselected: Chair
+[15:13:05][Info] [ItemCollector] Selected: Log
+[15:13:05][Info] [ItemCollector] Selected: Fuel Canister
+[15:13:05][Info] [ItemCollector] Selected: Chair
+[15:13:13][Info] [ItemCollector] Selected: Broken Fan
+[15:13:13][Info] [ItemCollector] Selected: Bolt
+[15:13:13][Info] [ItemCollector] Selected: Sheet Metal
+[15:13:13][Info] [ItemCollector] Selected: Old Car Engine
+[15:13:13][Info] [ItemCollector] Selected: Tyre
+[15:13:13][Info] [ItemCollector] Selected: Old Radio
+[15:13:18][Info] [ItemCollector] Selected: Leather Body
+[15:13:19][Info] [ItemCollector] Selected: Revolver Ammo
+[15:13:19][Info] [ItemCollector] Selected: Rifle Ammo
+[15:13:19][Info] [ItemCollector] Selected: Rifle
+[15:13:21][Info] [ItemCollector] Selected: Old Flashlight
+[15:13:23][Info] [ItemCollector] Selected: Bandage
+[15:13:23][Info] [ItemCollector] Selected: Berry
+[15:13:23][Info] [ItemCollector] Selected: Carrot

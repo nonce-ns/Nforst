@@ -120,6 +120,7 @@ local Fly = loadModule("Features/Fly.lua")
 local Speed = loadModule("Features/Speed.lua")
 if not Speed then warn("[MainInterface] CRITICAL: Speed module failed to load!") else print("[MainInterface] Speed module loaded table: " .. tostring(Speed)) end
 local Teleport = loadModule("Features/Teleport.lua") -- [NEW]
+local PhysicsOptimizer = loadModule("Features/PhysicsOptimizer.lua") -- [NEW]
 
 -- UI Tabs
 local HomeTab = loadModule("UI/Tabs/HomeTab.lua")
@@ -144,11 +145,11 @@ if getgenv then
         TreeFarm = TreeFarm,
         AutoPlant = AutoPlant,
         SoundManager = SoundManager,
-        SoundManager = SoundManager,
         ItemCollector = ItemCollector,
         ChestExplorer = ChestExplorer,
         Fly = Fly,
         Speed = Speed,
+        PhysicsOptimizer = PhysicsOptimizer,
     }
 end
 
@@ -163,12 +164,12 @@ local Features = {
     TreeFarm = TreeFarm,
     AutoPlant = AutoPlant,
     SoundManager = SoundManager,
-    SoundManager = SoundManager,
     ItemCollector = ItemCollector,
     ChestExplorer = ChestExplorer,
     Fly = Fly,
     Speed = Speed, -- [FIX] Added missing registration
     Teleport = Teleport, -- [NEW]
+    PhysicsOptimizer = PhysicsOptimizer, -- [NEW]
 }
 
 -- ============================================
@@ -239,6 +240,7 @@ local function createUI(WindUI)
     if Fly then Fly.Init() end
     if Speed then Speed.Init() end
     if Teleport then Teleport.Init() end -- [NEW]
+    if PhysicsOptimizer then PhysicsOptimizer.Init() end -- [NEW]
     
     -- Create window
     local Window = WindUI:CreateWindow({
@@ -299,7 +301,7 @@ local function createUI(WindUI)
     end
 
     if MiscTab then
-        MiscTab.Create(Window, Utils, Remote, CONFIG, Features)
+        MiscTab.Create(Window, Utils, Remote, CONFIG, Features, WindUI)
     end
 
     if AutoCollectTab then

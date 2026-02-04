@@ -1,0 +1,50 @@
+=== WindUI Log Session ===
+Started: 2026-02-03 19:37:45
+User: nsopnet (ID: 8401342884)
+========================================
+
+[19:37:45][Info] Loader: Fetching MainInterface...
+[19:37:46][Info] you
+[19:37:59][Info] 2
+[19:38:03][Info] [OP] Loading modules...
+[19:38:04][Info] [MainInterface] Speed module loaded table: table: 0x331d2d9feaec6827
+[19:38:04][Info] [OP] Modules loaded!
+[19:38:04][Info] [OP] Initializing 99 Nights OP Script...
+[19:38:04][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[19:38:04][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[19:38:04][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[19:38:04][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[19:38:04][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[19:38:04][Info] [Fly] Initialized
+[19:38:04][Info] [Teleport] Initialized
+[19:38:04][Info] [PhysicsOptimizer] Initialized
+[19:38:04][Info] [Speed] Initialized
+[19:38:05][Info] [OP] Window created. Type: table
+[19:38:13][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[19:38:13][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[19:38:13][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[19:38:13][Info] [OP] UI Created! Ready to use.
+[19:38:27][Info] 👋  it's  me  ofa
+[19:38:35][Info] [PhysicsOptimizer] No item types selected
+[19:38:46][Info] [ChestExplorer] Stopped/Finished
+[19:38:46][Info] [ChestExplorer] Cleaned up resources
+[19:38:46][Info] [OP] Cleanup: ChestExplorer
+[19:38:49][Info] [OP] Cleanup: MapRevealer
+[19:38:49][Info] [PhysicsOptimizer] Storage box destroyed
+[19:38:49][Info] [OP] MapRevealer: Cleanup complete
+[19:38:49][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[19:38:49][Info] [OP] Cleanup: PhysicsOptimizer
+[19:38:49][Info] [OP] GodMode: STOPPED
+[19:38:49][Info] [OP] Cleanup: GodMode
+[19:38:49][Info] [OP] Cleanup: AutoPlant
+[19:38:49][Info] [OP] Cleanup: Speed
+[19:38:49][Info] [OP] Cleanup: KillAura
+[19:38:49][Info] [OP] Cleanup: Fly
+[19:38:49][Info] [OP] AutoEat: STOPPED
+[19:38:49][Info] [OP] Cleanup: AutoEat
+[19:38:49][Info] [OP] Cleanup: SoundManager
+[19:38:49][Info] [OP] Cleanup: TreeFarm
+[19:38:49][Info] [OP] Script unloaded successfully! All features stopped.
+[19:38:49][Info] [OP] Cleanup: ItemCollector
+[19:38:49][Info] [OP] SoundManager: Cleanup complete
+[19:38:54][Info] MAKING INVIS!

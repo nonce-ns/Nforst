@@ -1,0 +1,27 @@
+=== WindUI Log Session ===
+Started: 2026-02-03 19:32:30
+User: nsopnet (ID: 8401342884)
+========================================
+
+[19:32:30][Info] Loader: Fetching MainInterface...
+[19:32:32][Info] ?
+[19:32:35][Info] [OP] Loading modules...
+[19:32:36][Info] [MainInterface] Speed module loaded table: table: 0xac538cdfad5d71f3
+[19:32:37][Warning] [Loader] Failed to load: UI/Tabs/MiscTab.lua - CoreGui.7480.Loadstring.loadstring:641223:78: attempt to call a nil value
+[19:32:37][Info] [OP] Modules loaded!
+[19:32:37][Info] [OP] Initializing 99 Nights OP Script...
+[19:32:37][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[19:32:37][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[19:32:37][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[19:32:37][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[19:32:37][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[19:32:37][Info] [Fly] Initialized
+[19:32:37][Info] [Speed] Initialized
+[19:32:37][Info] [Teleport] Initialized
+[19:32:37][Info] [PhysicsOptimizer] Initialized
+[19:32:44][Info] [OP] Window created. Type: table
+[19:32:44][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[19:32:44][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[19:32:44][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[19:32:44][Info] [OP] UI Created! Ready to use.
+[19:32:45][Info] I'm better then u

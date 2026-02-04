@@ -101,6 +101,114 @@ function TeleportTab.Create(Window, Features, CONFIG, WindUI)
         })
     end
     
+    Tab:Space({ Size = 10 })
+
+    -- ========================================
+    -- PLAYER TELEPORT
+    -- ========================================
+    local PlayerSection = Tab:Section({
+        Title = "Teleport to Player",
+        Icon = "solar:users-group-rounded-bold",
+        Box = true,
+        BoxBorder = true,
+        Opened = true,
+    })
+    
+    local SelectedPlayer = nil
+    
+    -- Player Dropdown
+    local PlayerDropdown = PlayerSection:Dropdown({
+        Flag = "Teleport.TargetPlayer",
+        Title = "Select Player",
+        Desc = "Choose a player to teleport to",
+        Multi = false,
+        AllowNone = true,
+        Value = nil,
+        Values = {"(Click Refresh)"},
+        Callback = function(selected)
+            SelectedPlayer = selected
+        end,
+    })
+    
+    -- Refresh Players Button
+    PlayerSection:Button({
+        Title = "🔄 Refresh Players",
+        Desc = "Update player list",
+        Callback = function()
+            if Features.Teleport then
+                local players = Features.Teleport.GetOtherPlayers()
+                if PlayerDropdown and PlayerDropdown.Refresh then
+                    pcall(function()
+                        PlayerDropdown:Refresh(#players > 0 and players or {"(No other players)"})
+                    end)
+                end
+                if WindUI then
+                    WindUI:Notify({
+                        Title = "Teleport",
+                        Content = "Found " .. #players .. " other players",
+                        Duration = 2,
+                    })
+                end
+            end
+        end,
+    })
+    
+    -- Teleport Button
+    PlayerSection:Button({
+        Title = "📍 Teleport to Player",
+        Desc = "Teleport to selected player",
+        Callback = function()
+            if not SelectedPlayer or SelectedPlayer == "" or SelectedPlayer == "(No other players)" or SelectedPlayer == "(Click Refresh)" then
+                if WindUI then
+                    WindUI:Notify({
+                        Title = "Error",
+                        Content = "Please select a player first!",
+                        Icon = "alert-triangle",
+                        Duration = 3,
+                    })
+                end
+                return
+            end
+            
+            if Features.Teleport then
+                local success = Features.Teleport.TeleportToPlayer(SelectedPlayer)
+                if success then
+                    if WindUI then
+                        WindUI:Notify({
+                            Title = "Teleporting",
+                            Content = "Teleporting to " .. SelectedPlayer .. "...",
+                            Icon = "map",
+                            Duration = 2,
+                        })
+                    end
+                else
+                    if WindUI then
+                        WindUI:Notify({
+                            Title = "Error",
+                            Content = "Failed to teleport to " .. SelectedPlayer,
+                            Icon = "alert-triangle",
+                            Duration = 3,
+                        })
+                    end
+                end
+            end
+        end,
+    })
+    
+    -- Auto-refresh on player join/leave
+    local Players = game:GetService("Players")
+    local function refreshPlayers()
+        if Features.Teleport and PlayerDropdown and PlayerDropdown.Refresh then
+            local players = Features.Teleport.GetOtherPlayers()
+            pcall(function()
+                PlayerDropdown:Refresh(#players > 0 and players or {"(No other players)"})
+            end)
+        end
+    end
+    
+    Players.PlayerAdded:Connect(refreshPlayers)
+    Players.PlayerRemoving:Connect(refreshPlayers)
+    
     return Tab
 end
 

@@ -5,7 +5,7 @@
 
 local MiscTab = {}
 
-function MiscTab.Create(Window, Utils, Remote, CONFIG, Features)
+function MiscTab.Create(Window, Utils, Remote, CONFIG, Features, WindUI)
     local Tab = Window:Tab({
         Title = "Misc",
         Icon = "solar:settings-bold", -- Or similar generic settings icon
@@ -130,6 +130,280 @@ function MiscTab.Create(Window, Utils, Remote, CONFIG, Features)
         Callback = function(val)
             if Features.Speed then
                 Features.Speed.SetSpeed(val)
+            end
+        end,
+    })
+
+    Tab:Space({ Size = 10 })
+
+    -- ========================================
+    -- LIGHTING / VISUAL
+    -- ========================================
+    local LightingSection = Tab:Section({
+        Title = "💡 Lighting",
+        Icon = "lucide:sun",
+        Box = true,
+        BoxBorder = true,
+        Opened = false,
+    })
+    
+    -- Store original lighting values
+    local Lighting = game:GetService("Lighting")
+    local OriginalLighting = {
+        Ambient = Lighting.Ambient,
+        Brightness = Lighting.Brightness,
+        OutdoorAmbient = Lighting.OutdoorAmbient,
+        FogEnd = Lighting.FogEnd,
+        FogStart = Lighting.FogStart,
+        GlobalShadows = Lighting.GlobalShadows,
+    }
+    
+    -- Fullbright Toggle
+    LightingSection:Toggle({
+        Flag = "Lighting.Fullbright",
+        Title = "☀️ Fullbright",
+        Desc = "Make everything bright (no darkness)",
+        Value = false,
+        Callback = function(enabled)
+            if enabled then
+                Lighting.Ambient = Color3.fromRGB(200, 200, 200)
+                Lighting.Brightness = 2
+                Lighting.OutdoorAmbient = Color3.fromRGB(200, 200, 200)
+            else
+                Lighting.Ambient = OriginalLighting.Ambient
+                Lighting.Brightness = OriginalLighting.Brightness
+                Lighting.OutdoorAmbient = OriginalLighting.OutdoorAmbient
+            end
+        end,
+    })
+    
+    -- Remove Shadows Toggle
+    LightingSection:Toggle({
+        Flag = "Lighting.NoShadows",
+        Title = "🌫️ Remove Shadows",
+        Desc = "Disable global shadows",
+        Value = false,
+        Callback = function(enabled)
+            Lighting.GlobalShadows = not enabled
+        end,
+    })
+    
+    -- Remove Fog Toggle
+    LightingSection:Toggle({
+        Flag = "Lighting.NoFog",
+        Title = "🌁 Remove Fog",
+        Desc = "Remove fog effects",
+        Value = false,
+        Callback = function(enabled)
+            if enabled then
+                Lighting.FogEnd = 1000000
+                Lighting.FogStart = 1000000
+                -- Remove Atmosphere
+                for _, child in ipairs(Lighting:GetChildren()) do
+                    if child:IsA("Atmosphere") then
+                        child.Density = 0
+                    end
+                end
+            else
+                Lighting.FogEnd = OriginalLighting.FogEnd
+                Lighting.FogStart = OriginalLighting.FogStart
+                -- Restore Atmosphere (can't fully restore, just set to low density)
+                for _, child in ipairs(Lighting:GetChildren()) do
+                    if child:IsA("Atmosphere") then
+                        child.Density = 0.3 -- Default-ish value
+                    end
+                end
+            end
+        end,
+    })
+
+    Tab:Space({ Size = 10 })
+
+    -- ========================================
+    -- PHYSICS OPTIMIZER
+    -- ========================================
+    local PhysicsSection = Tab:Section({
+        Title = "📦 Physics Optimizer",
+        Icon = "lucide:cpu",
+        Box = true,
+        BoxBorder = true,
+        Opened = false,
+    })
+    
+    local PhysicsOptimizer = Features.PhysicsOptimizer
+    local SelectedPhysicsTypes = {}
+    
+    -- Item Type Multi-Dropdown
+    local PhysicsTypeDropdown = PhysicsSection:Dropdown({
+        Flag = "Physics.SelectedTypes",
+        Title = "Select Item Types",
+        Desc = "Choose which items to optimize",
+        Multi = true,
+        AllowNone = true,
+        Value = {},
+        Values = {"(Click Scan first)"},
+        Callback = function(selected)
+            SelectedPhysicsTypes = {}
+            for k, v in pairs(selected) do
+                if type(k) == "string" and v == true then
+                    table.insert(SelectedPhysicsTypes, k)
+                elseif type(v) == "string" then
+                    table.insert(SelectedPhysicsTypes, v)
+                end
+            end
+            if PhysicsOptimizer then
+                PhysicsOptimizer.SetSelectedTypes(SelectedPhysicsTypes)
+            end
+        end,
+    })
+    
+    -- Scan Types Button
+    PhysicsSection:Button({
+        Title = "🔄 Scan Item Types",
+        Desc = "Find all item types in map",
+        Callback = function()
+            if PhysicsOptimizer then
+                local types = PhysicsOptimizer.ScanItemTypes()
+                if PhysicsTypeDropdown and PhysicsTypeDropdown.Refresh then
+                    pcall(function()
+                        PhysicsTypeDropdown:Refresh(#types > 0 and types or {"(No items)"})
+                    end)
+                end
+            end
+        end,
+    })
+    
+    Tab:Space({ Size = 5 })
+    
+    -- Toggle 1: Anchor
+    PhysicsSection:Toggle({
+        Flag = "Physics.Anchor",
+        Title = "🔒 Anchor Items",
+        Desc = "Disable gravity & physics (items can't move)",
+        Value = false,
+        Callback = function(v)
+            if PhysicsOptimizer then
+                if v then
+                    if PhysicsOptimizer.SetAnchor then
+                        PhysicsOptimizer.SetAnchor(true)
+                    end
+                else
+                    if PhysicsOptimizer.Revert then
+                        PhysicsOptimizer.Revert("Anchored")
+                    end
+                end
+            end
+        end,
+    })
+    
+    -- Apply Button
+    PhysicsSection:Button({
+        Title = "✅ Apply to All",
+        Desc = "Apply current settings to all selected items",
+        Callback = function()
+            if PhysicsOptimizer and PhysicsOptimizer.Apply then
+                local count = PhysicsOptimizer.Apply()
+                if WindUI then
+                    WindUI:Notify({
+                        Title = "Physics Optimizer",
+                        Content = "Applied to " .. count .. " items",
+                        Duration = 3,
+                    })
+                end
+            end
+        end,
+    })
+    
+    -- Yeet Button
+    PhysicsSection:Button({
+        Title = "🗑️ Yeet Items (Far Away)",
+        Desc = "Move selected items to (99999, 99999, 99999) - out of view",
+        Callback = function()
+            if PhysicsOptimizer then
+                local count = PhysicsOptimizer.YeetItems()
+                if WindUI then
+                    WindUI:Notify({
+                        Title = "Physics Optimizer",
+                        Content = "Yeeted " .. count .. " items far away!",
+                        Duration = 3,
+                    })
+                end
+            end
+        end,
+    })
+    
+    Tab:Space({ Size = 5 })
+    
+    -- Storage Position Paragraph
+    local StorageParagraph = PhysicsSection:Paragraph({
+        Title = "📍 Storage Location",
+        Desc = "(Platform not created)",
+    })
+    
+    -- Create Storage Box Button (AUTO)
+    PhysicsSection:Button({
+        Title = "🏗️ Create Storage Box",
+        Desc = "Create 300x300x100 box HIGH above your position (+1500 Y)",
+        Callback = function()
+            if PhysicsOptimizer then
+                local pos = PhysicsOptimizer.CreatePlatform()
+                if pos and StorageParagraph then
+                    StorageParagraph:SetDesc(string.format("Box at (%.0f, %.0f, %.0f)", pos.X, pos.Y, pos.Z))
+                end
+                if WindUI and pos then
+                    WindUI:Notify({
+                        Title = "Physics Optimizer",
+                        Content = "Storage box created in the sky!",
+                        Duration = 3,
+                    })
+                end
+            end
+        end,
+    })
+    
+    -- Move to Storage Button
+    PhysicsSection:Button({
+        Title = "📦 Move to Storage",
+        Desc = "Move selected items to storage box (grid layout)",
+        Callback = function()
+            if PhysicsOptimizer then
+                local count = PhysicsOptimizer.MoveToStorage()
+                if WindUI then
+                    WindUI:Notify({
+                        Title = "Physics Optimizer",
+                        Content = "Moved " .. count .. " items to storage!",
+                        Duration = 3,
+                    })
+                end
+            end
+        end,
+    })
+    
+    -- Teleport to Storage Button
+    PhysicsSection:Button({
+        Title = "🚀 Teleport to Storage",
+        Desc = "Teleport yourself into the storage box",
+        Callback = function()
+            if PhysicsOptimizer then
+                local success = PhysicsOptimizer.TeleportToStorage()
+                if success then
+                    if WindUI then
+                        WindUI:Notify({
+                            Title = "Physics Optimizer",
+                            Content = "Teleported to storage box!",
+                            Duration = 2,
+                        })
+                    end
+                else
+                    if WindUI then
+                        WindUI:Notify({
+                            Title = "Error",
+                            Content = "Create storage box first!",
+                            Icon = "alert-triangle",
+                            Duration = 3,
+                        })
+                    end
+                end
             end
         end,
     })

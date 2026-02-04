@@ -1,0 +1,351 @@
+=== WindUI Log Session ===
+Started: 2026-02-03 17:02:10
+User: nsopnet (ID: 8401342884)
+========================================
+
+[08:02:11][Info] Loader: Fetching MainInterface...
+[08:02:13][Info] [OP] Loading modules...
+[08:02:13][Info] [MainInterface] Speed module loaded table: table: 0x034802b877d2712a
+[08:02:14][Info] [OP] Modules loaded!
+[08:02:14][Info] [OP] Initializing 99 Nights OP Script...
+[08:02:14][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[08:02:14][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[08:02:14][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[08:02:14][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[08:02:14][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[08:02:14][Info] [Fly] Initialized
+[08:02:14][Info] [Speed] Initialized
+[08:02:14][Info] [Teleport] Initialized
+[08:02:14][Info] [OP] Window created. Type: table
+[08:02:16][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[08:02:16][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[08:02:16][Info] [OP] UI Created! Ready to use.
+[08:02:16][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[08:02:42][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[08:02:42][Info] [OP] GodMode: STARTED
+[08:02:54][Info] [OP] TreeFarm: Filter ON - Small Tree
+[08:02:54][Info] [OP] TreeFarm: ON
+[08:03:05][Info] deactivate and unequip
+[08:03:20][Info] [OP] AutoPlant: ON
+[08:03:20][Info] [OP] AutoPlant: Generated 125 plant positions (Circle)
+[08:03:20][Info] [OP] AutoPlant: Center = 0, 1.5, 0 (Campfire)
+[08:03:20][Info] [OP] AutoPlant: Found sapling, DebugId = 1_260148
+[08:03:34][Info] [OP] AutoPlant: Completed! Planted 125 saplings
+[08:03:43][Info] [OP] AutoPlant: Center = 0, 1.5, 0 (Campfire)
+[08:03:43][Info] [OP] AutoPlant: ON
+[08:03:43][Info] [OP] AutoPlant: Generated 314 plant positions (Circle)
+[08:03:43][Info] [OP] AutoPlant: Found sapling, DebugId = 1_260197
+[08:04:19][Info] [OP] AutoPlant: Completed! Planted 314 saplings
+[08:05:02][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[08:05:15][Info] [ItemCollector] Started Collection Thread.
+[08:05:15][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[08:05:15][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[08:05:16][Info] [ItemCollector] Collected 6 items.
+[08:05:16][Info] [ItemCollector] Collection Thread Finished.
+[08:05:29][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[08:05:35][Info] [ItemCollector] Selected: Chair
+[08:05:35][Info] [ItemCollector] Selected: Oil Barrel
+[08:05:35][Info] [ItemCollector] Selected: Coal
+[08:05:35][Info] [ItemCollector] Selected: Cultist
+[08:05:35][Info] [ItemCollector] Selected: Log
+[08:05:40][Info] [ItemCollector] Started Collection Thread.
+[08:05:44][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[08:05:44][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[08:05:44][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[08:05:44][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[08:05:45][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:05:45][Info] [ItemCollector] Collected 31 items.
+[08:05:45][Info] [ItemCollector] Collection Thread Finished.
+[08:05:48][Info] [ItemCollector] Started Collection Thread.
+[08:05:48][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[08:05:49][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[08:05:49][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[08:05:49][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[08:05:49][Warning] [ItemCollector] No matching items found in map!
+[08:05:49][Info] [ItemCollector] Collection Thread Finished.
+[08:05:51][Warning] [ItemCollector] Max 3 threads! Please wait for one to finish.
+[08:07:30][Info] Loader: Fetching MainInterface...
+[08:07:32][Info] [ChestExplorer] Stopped/Finished
+[08:07:32][Info] [ChestExplorer] Stopped/Finished
+[08:07:32][Info] [ChestExplorer] Cleaned up resources
+[08:07:32][Info] [OP] GodMode: STOPPED
+[08:07:32][Info] [OP] AutoEat: STOPPED
+[08:07:32][Info] [OP] TreeFarm: OFF
+[08:07:32][Info] [OP] Loading modules...
+[08:07:32][Info] [OP] MapRevealer: Cleanup complete
+[08:07:32][Info] [OP] GodMode: STOPPED
+[08:07:32][Info] [OP] AutoEat: STOPPED
+[08:07:32][Info] [OP] SoundManager: Cleanup complete
+[08:07:33][Info] [MainInterface] Speed module loaded table: table: 0x4d1cb24cb9dcd6aa
+[08:07:33][Info] [OP] Modules loaded!
+[08:07:33][Info] [OP] Initializing 99 Nights OP Script...
+[08:07:33][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[08:07:33][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[08:07:33][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[08:07:33][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[08:07:33][Info] [Fly] Initialized
+[08:07:33][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[08:07:33][Info] [Speed] Initialized
+[08:07:33][Info] [Teleport] Initialized
+[08:07:34][Info] [OP] Window created. Type: table
+[08:07:36][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[08:07:36][Info] [OP] UI Created! Ready to use.
+[08:07:36][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[08:07:36][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[08:08:02][Info] [OP] GodMode: STARTED
+[08:08:02][Info] [Remote][Success] RemoteEvents found: 205 remotes
+[08:08:09][Info] [OP] TreeFarm: Filter ON - Small Tree
+[08:08:09][Info] [OP] TreeFarm: ON
+[08:08:20][Info] deactivate and unequip
+[08:12:02][Info] [ChestExplorer] Stopped/Finished
+[08:12:02][Info] [ChestExplorer] Cleaned up resources
+[08:12:02][Info] [OP] Cleanup: ChestExplorer
+[08:12:02][Info] [OP] MapRevealer: Cleanup complete
+[08:12:02][Info] [OP] Cleanup: ItemCollector
+[08:12:02][Info] [OP] Cleanup: GodMode
+[08:12:02][Info] [OP] Cleanup: MapRevealer
+[08:12:02][Info] [OP] GodMode: STOPPED
+[08:12:02][Info] [OP] Cleanup: TreeFarm
+[08:12:02][Info] [OP] Cleanup: AutoPlant
+[08:12:02][Info] [OP] Cleanup: Speed
+[08:12:02][Info] [OP] Cleanup: SoundManager
+[08:12:02][Info] [OP] AutoEat: STOPPED
+[08:12:02][Info] [OP] Script unloaded successfully! All features stopped.
+[08:12:02][Info] [OP] Cleanup: KillAura
+[08:12:02][Info] [OP] Cleanup: Fly
+[08:12:02][Info] [OP] Cleanup: AutoEat
+[08:12:02][Info] [OP] SoundManager: Cleanup complete
+[08:12:12][Info] Loader: Fetching MainInterface...
+[08:12:14][Info] [OP] Loading modules...
+[08:12:15][Info] [MainInterface] Speed module loaded table: table: 0x0f84c65d161578ba
+[08:12:15][Info] [OP] Initializing 99 Nights OP Script...
+[08:12:15][Info] [OP] Modules loaded!
+[08:12:15][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[08:12:15][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[08:12:15][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[08:12:15][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[08:12:15][Info] [Fly] Initialized
+[08:12:15][Info] [Speed] Initialized
+[08:12:15][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[08:12:15][Info] [Teleport] Initialized
+[08:12:16][Info] [OP] Window created. Type: table
+[08:12:17][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[08:12:18][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[08:12:18][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[08:12:18][Info] [OP] UI Created! Ready to use.
+[08:12:22][Info] [Remote][Success] RemoteEvents found: 206 remotes
+[08:12:22][Info] [OP] GodMode: STARTED
+[08:12:28][Info] [ItemCollector] SetExcludeNearbyEnabled: true
+[08:12:28][Info] [ItemCollector] ShowExcludeCircle called
+[08:12:28][Info] [ItemCollector] ExcludeCircle created: ExcludeRadiusCircle
+[08:13:45][Info] [ChestExplorer] Cleaned up resources
+[08:13:45][Info] [OP] Cleanup: ChestExplorer
+[08:13:45][Info] [ChestExplorer] Stopped/Finished
+[08:13:46][Info] [OP] MapRevealer: Cleanup complete
+[08:13:46][Info] [OP] Cleanup: KillAura
+[08:13:46][Info] [OP] Cleanup: AutoPlant
+[08:13:46][Info] [OP] Cleanup: GodMode
+[08:13:46][Info] [OP] Cleanup: MapRevealer
+[08:13:46][Info] [OP] Cleanup: Speed
+[08:13:46][Info] [OP] GodMode: STOPPED
+[08:13:46][Info] [OP] Cleanup: Fly
+[08:13:46][Info] [OP] SoundManager: Cleanup complete
+[08:13:46][Info] [OP] Cleanup: AutoEat
+[08:13:46][Info] [OP] Script unloaded successfully! All features stopped.
+[08:13:46][Info] [OP] Cleanup: TreeFarm
+[08:13:46][Info] [OP] AutoEat: STOPPED
+[08:13:46][Info] [OP] Cleanup: ItemCollector
+[08:13:46][Info] [OP] Cleanup: SoundManager
+[08:13:49][Info] Loader: Fetching MainInterface...
+[08:13:51][Info] [OP] Loading modules...
+[08:13:51][Info] [MainInterface] Speed module loaded table: table: 0x420cc7d14fa26efa
+[08:13:51][Info] [OP] Modules loaded!
+[08:13:51][Info] [OP] Initializing 99 Nights OP Script...
+[08:13:51][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[08:13:51][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[08:13:51][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[08:13:51][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[08:13:51][Info] [Fly] Initialized
+[08:13:51][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[08:13:51][Info] [Speed] Initialized
+[08:13:51][Info] [Teleport] Initialized
+[08:13:53][Info] [OP] Window created. Type: table
+[08:13:53][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[08:13:53][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[08:13:53][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[08:13:53][Info] [OP] UI Created! Ready to use.
+[08:13:59][Info] [ItemCollector] ShowExcludeCircle called
+[08:13:59][Info] [ItemCollector] SetExcludeNearbyEnabled: true
+[08:13:59][Info] [ItemCollector] ExcludeCircle created: ExcludeRadiusCircle
+[08:15:03][Info] [ItemCollector] SetExcludeNearbyEnabled: false
+[08:15:03][Info] [ItemCollector] HideExcludeCircle called
+[08:15:07][Info] Loader: Fetching MainInterface...
+[08:15:08][Info] [ChestExplorer] Cleaned up resources
+[08:15:08][Info] [ChestExplorer] Stopped/Finished
+[08:15:08][Info] [ChestExplorer] Stopped/Finished
+[08:15:09][Info] [OP] MapRevealer: Cleanup complete
+[08:15:09][Info] [OP] GodMode: STOPPED
+[08:15:09][Info] [OP] AutoEat: STOPPED
+[08:15:09][Info] [OP] SoundManager: Cleanup complete
+[08:15:09][Info] [OP] AutoEat: STOPPED
+[08:15:09][Info] [OP] Loading modules...
+[08:15:09][Info] [OP] GodMode: STOPPED
+[08:15:10][Info] [MainInterface] Speed module loaded table: table: 0xb1665b3d31ac4bfa
+[08:15:10][Info] [OP] Modules loaded!
+[08:15:10][Info] [OP] Initializing 99 Nights OP Script...
+[08:15:10][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[08:15:10][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[08:15:10][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[08:15:10][Info] [Fly] Initialized
+[08:15:10][Info] [Teleport] Initialized
+[08:15:10][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[08:15:10][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[08:15:10][Info] [Speed] Initialized
+[08:15:12][Info] [OP] Window created. Type: table
+[08:15:12][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[08:15:12][Info] [OP] UI Created! Ready to use.
+[08:15:12][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[08:15:12][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[08:15:16][Info] [ItemCollector] SetExcludeNearbyEnabled: true
+[08:15:16][Info] [ItemCollector] ShowExcludeCircle called
+[08:15:16][Info] [ItemCollector] ExcludeCircle created: ExcludeRadiusCircle
+[08:15:30][Info] [ItemCollector] SetExcludeNearbyEnabled: false
+[08:15:30][Info] [ItemCollector] HideExcludeCircle called
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:20:58][Info] made smaller
+[08:21:24][Info] [ItemCollector] Selected: Log
+[08:21:27][Info] [Remote][Success] RemoteEvents found: 208 remotes
+[08:21:27][Info] [ItemCollector] Started Collection Thread.
+[08:21:28][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:29][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:30][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:31][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:32][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:33][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:33][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:33][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:35][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:36][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:36][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:37][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:38][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:38][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:39][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:39][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:21:41][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[08:21:41][Info] [ItemCollector] Collected 50 items.
+[08:21:55][Info] [ItemCollector] Started Collection Thread.
+[08:22:05][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:06][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:06][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:07][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:08][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:09][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:15][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:17][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:17][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:18][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:20][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:20][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:21][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:21][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:23][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:23][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:23][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:23][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:24][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:25][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:26][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:26][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:27][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:28][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:29][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:29][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:29][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:30][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:32][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:32][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:33][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:34][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:36][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:38][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:38][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:40][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:42][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:43][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:45][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:45][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:46][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:47][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:48][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:49][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:50][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:52][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:53][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:53][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:54][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:55][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:55][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:57][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:57][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:57][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:58][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:58][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:22:59][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:01][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:02][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:03][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:03][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:04][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:05][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:06][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:06][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:07][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:07][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:08][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:08][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:08][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:09][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:09][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:09][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:10][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:10][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:11][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:11][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:12][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:12][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:12][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[08:23:13][Info] [ItemCollector] Collected 375 items.
+[08:23:13][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[08:23:46][Info] [ItemCollector] SetExcludeNearbyEnabled: true
+[08:23:46][Info] [ItemCollector] ShowExcludeCircle called
+[08:23:46][Info] [ItemCollector] ExcludeCircle created: ExcludeRadiusCircle
+[08:23:56][Info] [ItemCollector] Started Collection Thread.
+[08:24:50][Info] function is already waiting :)
+[08:24:54][Info] [ItemCollector] Collected 332 items. (Skipped 31 nearby)
+[08:24:54][Info] [ItemCollector] Collection Thread Finished. Active threads: 0

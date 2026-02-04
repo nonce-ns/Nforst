@@ -160,4 +160,48 @@ function Teleport.Init()
     print("[Teleport] Initialized")
 end
 
+-- ============================================
+-- PLAYER TELEPORT
+-- ============================================
+
+-- Get list of other players (excluding LocalPlayer)
+function Teleport.GetOtherPlayers()
+    local list = {}
+    local localPlayer = Players.LocalPlayer
+    
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= localPlayer then
+            table.insert(list, player.Name)
+        end
+    end
+    
+    table.sort(list)
+    return list
+end
+
+-- Teleport to another player by name
+function Teleport.TeleportToPlayer(playerName)
+    if not playerName or playerName == "" then
+        warn("[Teleport] No player name provided")
+        return false
+    end
+    
+    local targetPlayer = Players:FindFirstChild(playerName)
+    if not targetPlayer then
+        warn("[Teleport] Player not found: " .. playerName)
+        return false
+    end
+    
+    local targetChar = targetPlayer.Character
+    local targetHRP = targetChar and targetChar:FindFirstChild("HumanoidRootPart")
+    
+    if not targetHRP then
+        warn("[Teleport] Target player has no character: " .. playerName)
+        return false
+    end
+    
+    Teleport.TeleportTo(targetHRP.Position, 3)
+    return true
+end
+
 return Teleport

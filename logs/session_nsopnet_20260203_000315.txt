@@ -1,0 +1,129 @@
+=== WindUI Log Session ===
+Started: 2026-02-03 00:03:15
+User: nsopnet (ID: 8401342884)
+========================================
+
+[15:03:15][Info] Loader: Fetching MainInterface...
+[15:03:16][Info] [OP] Loading modules...
+[15:03:17][Info] [MainInterface] Speed module loaded table: table: 0x1f2972c7879d9d49
+[15:03:17][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:03:17][Info] [OP] Modules loaded!
+[15:03:17][Info] [OP] Initializing 99 Nights OP Script...
+[15:03:17][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:03:17][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[15:03:17][Info] [Fly] Initialized
+[15:03:17][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:03:17][Info] [Speed] Initialized
+[15:03:17][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:03:17][Info] [Teleport] Initialized
+[15:03:17][Info] [OP] Window created. Type: table
+[15:03:19][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:03:19][Info] [OP] UI Created! Ready to use.
+[15:03:19][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:04:03][Info] Loader: Fetching MainInterface...
+[15:04:04][Info] [OP] Loading modules...
+[15:04:05][Info] [MainInterface] Speed module loaded table: table: 0xb7897dc553a8553f
+[15:04:05][Info] [OP] Initializing 99 Nights OP Script...
+[15:04:05][Info] [OP] Modules loaded!
+[15:04:05][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:04:05][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[15:04:05][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:04:05][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:04:05][Info] [Speed] Initialized
+[15:04:05][Info] [Fly] Initialized
+[15:04:05][Info] [Teleport] Initialized
+[15:04:05][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:04:05][Info] [OP] Window created. Type: table
+[15:04:07][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:04:07][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:04:07][Info] [OP] UI Created! Ready to use.
+[15:04:48][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[15:05:54][Info] [OP] MapRevealer: Radius set to 542
+[15:05:54][Info] [OP] MapRevealer: Radius set to 682
+[15:05:54][Info] [OP] MapRevealer: Radius set to 1297
+[15:05:54][Info] [OP] MapRevealer: Radius set to 1500
+[15:05:55][Info] [OP] MapRevealer: Radius set to 1500
+[15:05:55][Info] [OP] MapRevealer: Found Campfire at 0, 1.5, 0 (Dist: 20.3)
+[15:05:55][Info] [OP] MapRevealer: Spiral from 0, 1.5, 0 at height 40
+[15:05:56][Info] [OP] MapRevealer: Starting (speed=170)
+[15:06:00][Info] [OP] GodMode: STARTED
+[15:06:18][Info] Snow
+[15:06:18][Info] Entered biome Snow
+[15:06:19][Info] Entered biome nil
+[15:06:19][Info] nil
+[15:06:34][Info] Entered biome Snow
+[15:06:34][Info] Snow
+[15:06:36][Info] Entered biome nil
+[15:06:36][Info] nil
+[15:06:43][Info] Entered biome Fairy
+[15:06:43][Info] Fairy
+[15:06:44][Info] Entered biome nil
+[15:06:44][Info] nil
+[15:06:52][Info] Snow
+[15:06:52][Info] Entered biome Snow
+[15:06:57][Info] Entered biome nil
+[15:06:57][Info] nil
+[15:07:04][Info] Fairy
+[15:07:04][Info] Entered biome Fairy
+[15:07:04][Info] Lionfish true
+[15:07:04][Info] Clownfish true
+[15:07:04][Info] Mackerel true
+[15:07:04][Info] Salmon true
+[15:07:04][Info] Swordfish true
+[15:07:04][Info] Lava Eel true
+[15:07:06][Info] Entered biome nil
+[15:07:06][Info] nil
+[15:07:15][Info] Entered biome Snow
+[15:07:15][Info] Snow
+[15:07:19][Info] Entered biome nil
+[15:07:19][Info] nil
+[15:07:27][Info] Entered biome Fairy
+[15:07:27][Info] Fairy
+[15:07:31][Info] nil
+[15:07:31][Info] Entered biome nil
+[15:07:41][Info] Entered biome Snow
+[15:07:41][Info] Snow
+[15:07:47][Info] Entered biome nil
+[15:07:47][Info] nil
+[15:07:49][Error] Sign is not a valid member of Model "Workspace.Map.Landmarks.Fishing Hut.FishPoster"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.StructureModules.FishPosterClient', Line 16 - function NewFishPoster
+    Stack End
+[15:07:57][Info] Fairy
+[15:07:57][Info] Entered biome Fairy
+[15:08:03][Info] Entered biome nil
+[15:08:03][Info] nil
+[15:08:15][Info] Snow
+[15:08:15][Info] Entered biome Snow
+[15:08:20][Info] [OP] MapRevealer: Stop requested
+[15:08:20][Info] Entered biome nil
+[15:08:20][Info] [OP] MapRevealer: Done!
+[15:08:20][Info] nil
+[15:08:20][Info] [OP] MapRevealer: Teleported to campfire
+[15:08:32][Info] Loader: Fetching MainInterface...
+[15:08:34][Info] [ChestExplorer] Stopped/Finished
+[15:08:34][Info] [ChestExplorer] Stopped/Finished
+[15:08:34][Info] [ChestExplorer] Cleaned up resources
+[15:08:34][Info] [OP] MapRevealer: Cleanup complete
+[15:08:34][Info] [OP] GodMode: STOPPED
+[15:08:34][Info] [OP] AutoEat: STOPPED
+[15:08:34][Info] [OP] AutoEat: STOPPED
+[15:08:34][Info] [OP] SoundManager: Cleanup complete
+[15:08:34][Info] [OP] Loading modules...
+[15:08:34][Info] [OP] GodMode: STOPPED
+[15:08:35][Info] [MainInterface] Speed module loaded table: table: 0x3c71420b9456a10f
+[15:08:35][Info] [OP] Initializing 99 Nights OP Script...
+[15:08:35][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:08:35][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[15:08:35][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:08:35][Info] [Speed] Initialized
+[15:08:35][Info] [OP] Modules loaded!
+[15:08:35][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:08:35][Info] [Fly] Initialized
+[15:08:35][Info] [Teleport] Initialized
+[15:08:35][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:08:36][Info] [OP] Window created. Type: table
+[15:08:37][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:08:38][Info] [OP] UI Created! Ready to use.
+[15:08:38][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:08:38][Info] [OP] TreeFarm: Filter OFF - All trees allowed

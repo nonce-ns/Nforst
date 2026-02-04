@@ -1,0 +1,119 @@
+=== WindUI Log Session ===
+Started: 2026-02-02 22:14:33
+User: nsopnet (ID: 8401342884)
+========================================
+
+[13:14:33][Info] Loader: Fetching MainInterface...
+[13:14:35][Info] [ChestExplorer] Stopped/Finished
+[13:14:35][Info] [ChestExplorer] Stopped/Finished
+[13:14:35][Info] [ChestExplorer] Cleaned up resources
+[13:14:35][Info] [OP] MapRevealer: Cleanup complete
+[13:14:35][Info] [OP] AutoEat: STOPPED
+[13:14:35][Info] [OP] GodMode: STOPPED
+[13:14:35][Info] [OP] GodMode: STOPPED
+[13:14:35][Info] [OP] AutoEat: STOPPED
+[13:14:35][Info] [OP] Loading modules...
+[13:14:35][Info] [OP] SoundManager: Cleanup complete
+[13:14:36][Info] [MainInterface] Speed module loaded table: table: 0xb78fe6055b74c0d6
+[13:14:36][Info] [OP] Initializing 99 Nights OP Script...
+[13:14:36][Info] [OP] Modules loaded!
+[13:14:36][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[13:14:36][Info] [OP] RangedAura: Initialized (Crossbow, 200 studs)
+[13:14:36][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[13:14:36][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[13:14:36][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[13:14:36][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[13:14:36][Info] [Speed] Initialized
+[13:14:36][Info] [Teleport] Initialized
+[13:14:36][Info] [OP] ItemCollector: Initialized
+[13:14:36][Info] [Fly] Initialized
+[13:14:37][Info] [OP] Window created. Type: table
+[13:14:39][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[13:14:39][Info] [OP] ItemCollector: Organize Mode = Grid
+[13:14:39][Info] [OP] ItemCollector: Selected: (none)
+[13:14:39][Info] [OP] ItemCollector: Destination = Player
+[13:14:39][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[13:14:39][Info] [OP] ItemCollector: Speed = Fast
+[13:14:39][Info] [OP] UI Created! Ready to use.
+[13:14:43][Info] [OP] RangedAura: ON
+[13:14:46][Info] [RangedAura] 🔓 Reload Bypass STARTED for: Infernal Crossbow
+[13:14:46][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:46][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:46][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 1_8401342884 | Dist: 23
+[13:14:46][Info] [Remote][Success] RemoteEvents found: 221 remotes
+[13:14:46][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:46][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:46][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:46][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 2_8401342884 | Dist: 23
+[13:14:46][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:46][Info] [Remote][Error] Invoke failed for ToolDamageObject: ServerScriptService.Server.ToolHandler:985: attempt to perform arithmetic (sub) on nil and number
+[13:14:46][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:46][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:46][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 3_8401342884 | Dist: 23
+[13:14:46][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:46][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:47][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 4_8401342884 | Dist: 23
+[13:14:46][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:47][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:47][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:47][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:47][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 5_8401342884 | Dist: 23
+[13:14:47][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:47][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:47][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 6_8401342884 | Dist: 23
+[13:14:47][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:47][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:47][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:47][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:47][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 7_8401342884 | Dist: 23
+[13:14:47][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:47][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:47][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 8_8401342884 | Dist: 21
+[13:14:47][Info] [RangedAura] 🎯 Found 11 targets in range
+[13:14:47][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:48][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:48][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 9_8401342884 | Dist: 21
+[13:14:48][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:48][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:48][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 10_8401342884 | Dist: 21
+[13:14:48][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:48][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:48][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:48][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:48][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 11_8401342884 | Dist: 21
+[13:14:48][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:48][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:48][Info] deactivate and unequip
+[13:14:49][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:49][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:49][Info] [RangedAura] 🔓 Reload Bypass STARTED for: Infernal Crossbow
+[13:14:49][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 12_8401342884 | Dist: 21
+[13:14:49][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:49][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:14:49][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:14:49][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 13_8401342884 | Dist: 21
+[13:14:49][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:14:49][Info] deactivate and unequip
+[13:15:02][Info] [RangedAura] 🔓 Reload Bypass STARTED for: Infernal Crossbow
+[13:15:02][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:15:02][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 14_8401342884 | Dist: 40
+[13:15:02][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:15:02][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:15:02][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:15:02][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 15_8401342884 | Dist: 40
+[13:15:02][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:15:02][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:15:02][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:15:02][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 16_8401342884 | Dist: 40
+[13:15:02][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:15:02][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:15:02][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:15:02][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:15:02][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 17_8401342884 | Dist: 40
+[13:15:03][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:15:03][Info] [RangedAura] ✅ Weapon detected: Infernal Crossbow
+[13:15:03][Info] [RangedAura] ⚔️ Attacking: Bunny | HitID: 18_8401342884 | Dist: 40
+[13:15:03][Info] [RangedAura] 🎯 Found 10 targets in range
+[13:15:03][Info] deactivate and unequip
+[13:15:03][Info] [RangedAura]   → ToolDamageObject: ❌ nil
+[13:15:08][Info] [OP] RangedAura: OFF

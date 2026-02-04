@@ -1,6 +1,7 @@
 --[[
     UI/Tabs/AutoCollectTab.lua
     Auto Collect tab UI - Collect items from workspace.Items
+    REWRITTEN: Fix UI Sync (Clear All), Smart Refresh
 ]]
 
 local AutoCollectTab = {}
@@ -78,7 +79,7 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
         Title = "Destination",
         Desc = "Where to drag collected items",
         Value = "Player",
-        Values = {"Player", "Campfire", "Scrapper", "OtherPlayer"},
+        Values = {"Player", "Campfire", "Scrapper", "OtherPlayer", "StorageBox"},
         Callback = function(value)
             if ItemCollector then
                 ItemCollector.SetDestination(value)
@@ -122,10 +123,52 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
         end,
     })
     
+    -- Exclude Nearby Section
+    DestSection:Toggle({
+        Flag = "AutoCollect.ExcludeNearby",
+        Title = "⭕ Exclude Nearby Items",
+        Icon = "lucide:circle-off",
+        Desc = "Skip items within radius of player (Player/OtherPlayer only)",
+        Value = false,
+        Callback = function(v)
+            if ItemCollector and ItemCollector.SetExcludeNearbyEnabled then
+                ItemCollector.SetExcludeNearbyEnabled(v)
+            end
+        end,
+    })
+    
+    DestSection:Slider({
+        Flag = "AutoCollect.ExcludeRadius",
+        Title = "Exclude Radius",
+        Desc = "Items within this distance are skipped (studs)",
+        Value = {Min = 5, Max = 100, Default = 20},
+        Step = 5,
+        Callback = function(v)
+            if ItemCollector and ItemCollector.SetExcludeRadius then
+                ItemCollector.SetExcludeRadius(v)
+            end
+        end,
+    })
+    
+    DestSection:Toggle({
+        Flag = "AutoCollect.FixedPosition",
+        Title = "📍 Fixed Position",
+        Icon = "lucide:pin",
+        Desc = "Lock drop position at start (Player/OtherPlayer only)",
+        Value = false,
+        Callback = function(v)
+            if ItemCollector and ItemCollector.SetFixedPosition then
+                ItemCollector.SetFixedPosition(v)
+            end
+        end,
+    })
+    
     Tab:Space({ Size = 10 })
     
-    -- Forward declarations for elements used by category callbacks
-    local SelectedParagraph = nil -- Will be assigned later
+    -- Forward declarations
+    local SelectedParagraph = nil 
+    local CategorySelectedParagraph = nil -- Declare here to be safe
+    local CategoryDropdowns = {} -- Store references
     
     -- ========================================
     -- QUICK SELECT CATEGORY SECTION
@@ -138,9 +181,6 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
         Opened = false, -- Start collapsed
     })
     
-    -- Store category dropdowns for refresh
-    local CategoryDropdowns = {}
-    
     -- Scan button in category section
     CategorySection:Button({
         Title = "Scan Items",
@@ -149,28 +189,16 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
         Callback = function()
             if ItemCollector then
                 local cache = ItemCollector.ScanItems()
-                
-                -- Update category dropdowns
-                if ItemCollector.GetItemsByCategory then
-                    for catName, dropdown in pairs(CategoryDropdowns) do
-                        local catItems = ItemCollector.GetItemsByCategory(catName)
-                        if dropdown and dropdown.Refresh then
-                            local items = #catItems > 0 and catItems or {"(No items)"}
-                            pcall(function() dropdown:Refresh(items) end)
-                        end
-                    end
-                end
+                -- (Note: Auto-refresh logic runs in SetOnScanCallback below)
                 
                 if WindUI then
-                    local totalItems = 0
                     local totalTypes = 0
-                    for _, data in pairs(cache) do
-                        totalItems = totalItems + data.count
+                    for _ in pairs(cache) do
                         totalTypes = totalTypes + 1
                     end
                     WindUI:Notify({
                         Title = "Auto Collect",
-                        Content = "Scanned " .. totalItems .. " items (" .. totalTypes .. " types)",
+                        Content = "Found " .. totalTypes .. " item types",
                         Duration = 3,
                     })
                 end
@@ -178,21 +206,8 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
         end,
     })
     
-    -- Auto Rescan toggle for category section
-    CategorySection:Toggle({
-        Title = "Auto Rescan",
-        Icon = "lucide:refresh-cw",
-        Desc = "Update counts after each collection",
-        Value = false,
-        Callback = function(v)
-            if ItemCollector and ItemCollector.SetAutoRescan then
-                ItemCollector.SetAutoRescan(v)
-            end
-        end,
-    })
     
-    -- Selected items display in category section
-    local CategorySelectedParagraph = CategorySection:Paragraph({
+    CategorySelectedParagraph = CategorySection:Paragraph({
         Title = "📋 Selected Items",
         Desc = "(none)",
     })
@@ -206,7 +221,14 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
             if ItemCollector and ItemCollector.ClearSelection then
                 ItemCollector.ClearSelection()
                 
-                -- Update both paragraphs
+                -- 1. Visually clear ALL Category Dropdowns (FIXED)
+                for catName, dropdown in pairs(CategoryDropdowns) do
+                    if dropdown and dropdown.Select then
+                        pcall(function() dropdown:Select({}) end)
+                    end
+                end
+                
+                -- 2. Update both paragraphs
                 if CategorySelectedParagraph and CategorySelectedParagraph.SetDesc then
                     CategorySelectedParagraph:SetDesc("(none)")
                 end
@@ -225,11 +247,9 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
         end,
     })
     
-    -- Helper function to create category dropdown with icon
     local function createCategoryDropdown(categoryName, categoryIcon)
-        -- Track previous selection for this dropdown
         local previousSelected = {}
-        local isInitializing = true -- Flag to skip callback during creation
+        local isInitializing = true
         
         local dropdown = CategorySection:Dropdown({
             Title = categoryName,
@@ -240,11 +260,9 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
             Value = {},
             Values = {"(Click Scan first)"},
             Callback = function(selected)
-                -- Skip callback during initialization
                 if isInitializing then return end
                 if not ItemCollector then return end
                 
-                -- Convert selected to normalized format {["Item Name"] = true}
                 local normalizedSelected = {}
                 for key, value in pairs(selected) do
                     local itemKey = nil
@@ -253,62 +271,51 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
                     elseif type(key) == "string" and value == true then
                         itemKey = key
                     end
-                    if itemKey then
-                        normalizedSelected[itemKey] = true
-                    end
+                    if itemKey then normalizedSelected[itemKey] = true end
                 end
                 
-                -- Find newly added items
+                -- Add newly selected
                 for itemKey, _ in pairs(normalizedSelected) do
                     if not previousSelected[itemKey] then
                         local itemName = ItemCollector.ParseItemName(itemKey)
-                        if itemName then
-                            ItemCollector.AddToSelection(itemName)
-                        end
+                        if itemName then ItemCollector.AddToSelection(itemName) end
                     end
                 end
                 
-                -- Find removed items
+                -- Remove deselected
                 for itemKey, _ in pairs(previousSelected) do
                     if not normalizedSelected[itemKey] then
+                         -- CHECK: Is this item actually deselected, or did the name just change?
+                         -- For now, explicit deselect removes it.
                         local itemName = ItemCollector.ParseItemName(itemKey)
-                        if itemName then
-                            ItemCollector.RemoveFromSelection(itemName)
-                        end
+                        if itemName then ItemCollector.RemoveFromSelection(itemName) end
                     end
                 end
                 
-                -- Update previous selection tracking
-                previousSelected = normalizedSelected
+                -- Create a COPY of normalizedSelected to avoid reference issues (Bug #9 fix)
+                local previousCopy = {}
+                for k, v in pairs(normalizedSelected) do previousCopy[k] = v end
+                previousSelected = previousCopy
                 
-                -- Update both SelectedParagraph displays
+                -- Update Paragraphs (names only, no counts)
                 local items = ItemCollector.GetSelectedItems()
                 local displayText = "(none)"
                 if items and #items > 0 then
-                    local displayList = {}
-                    local cache = ItemCollector.GetCache()
-                    for _, name in ipairs(items) do
-                        local count = cache[name] and cache[name].count or 0
-                        table.insert(displayList, name .. " (" .. count .. ")")
-                    end
-                    displayText = "• " .. table.concat(displayList, "\n• ")
+                    displayText = "• " .. table.concat(items, "\n• ")
                 end
                 
-                -- Update Category section paragraph
                 if CategorySelectedParagraph and CategorySelectedParagraph.SetDesc then
                     CategorySelectedParagraph:SetDesc(displayText)
                 end
-                
-                -- Update Item section paragraph
                 if SelectedParagraph and SelectedParagraph.SetDesc then
                     SelectedParagraph:SetDesc(displayText)
                 end
             end,
         })
         CategoryDropdowns[categoryName] = dropdown
-        isInitializing = false -- Now safe for callbacks
+        isInitializing = false
         
-        -- Add Select All button for this category
+        -- Add Select All button
         CategorySection:Button({
             Title = "Select All " .. categoryName,
             Icon = "lucide:check-square",
@@ -319,71 +326,16 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
                     local added = 0
                     for _, formattedName in ipairs(categoryItems) do
                         local itemName = ItemCollector.ParseItemName(formattedName)
-                        if itemName then
-                            if ItemCollector.AddToSelection(itemName) then
-                                added = added + 1
-                            end
+                        if itemName and ItemCollector.AddToSelection(itemName) then
+                             added = added + 1
                         end
                     end
                     
-                    -- Update both SelectedParagraphs
-                    local items = ItemCollector.GetSelectedItems()
-                    if items and #items > 0 then
-                        local displayList = {}
-                        local cache = ItemCollector.GetCache()
-                        for _, name in ipairs(items) do
-                            local count = cache[name] and cache[name].count or 0
-                            table.insert(displayList, name .. " (" .. count .. ")")
-                        end
-                        local displayText = "• " .. table.concat(displayList, "\n• ")
-                        if CategorySelectedParagraph and CategorySelectedParagraph.SetDesc then
-                            CategorySelectedParagraph:SetDesc(displayText)
-                        end
-                        if SelectedParagraph and SelectedParagraph.SetDesc then
-                            SelectedParagraph:SetDesc(displayText)
-                        end
-                    end
-                    
-                    if WindUI and added > 0 then
-                        WindUI:Notify({
-                            Title = categoryName,
-                            Content = "Added " .. added .. " items",
-                            Duration = 2,
-                        })
-                    end
-                end
-            end,
-        })
-        
-        -- Add Clear button for this category
-        CategorySection:Button({
-            Title = "Clear " .. categoryName,
-            Icon = "lucide:x-square",
-            Desc = "Deselect all " .. categoryName .. " items",
-            Callback = function()
-                if ItemCollector and ItemCollector.GetItemsByCategory then
-                    local categoryItems = ItemCollector.GetItemsByCategory(categoryName)
-                    local removed = 0
-                    for _, formattedName in ipairs(categoryItems) do
-                        local itemName = ItemCollector.ParseItemName(formattedName)
-                        if itemName then
-                            if ItemCollector.RemoveFromSelection(itemName) then
-                                removed = removed + 1
-                            end
-                        end
-                    end
-                    
-                    -- Update both SelectedParagraphs
+                    -- UPDATE PARAGRAPHS (names only, no counts)
                     local items = ItemCollector.GetSelectedItems()
                     local displayText = "(none)"
                     if items and #items > 0 then
-                        local displayList = {}
-                        local cache = ItemCollector.GetCache()
-                        for _, name in ipairs(items) do
-                            local count = cache[name] and cache[name].count or 0
-                            table.insert(displayList, name .. " (" .. count .. ")")
-                        end
-                        displayText = "• " .. table.concat(displayList, "\n• ")
+                        displayText = "• " .. table.concat(items, "\n• ")
                     end
                     if CategorySelectedParagraph and CategorySelectedParagraph.SetDesc then
                         CategorySelectedParagraph:SetDesc(displayText)
@@ -392,13 +344,21 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
                         SelectedParagraph:SetDesc(displayText)
                     end
                     
-                    if WindUI and removed > 0 then
-                        WindUI:Notify({
-                            Title = categoryName,
-                            Content = "Removed " .. removed .. " items",
-                            Duration = 2,
-                        })
-                    end
+                    -- Trigger visual refresh via main callback loop later
+                    if WindUI then WindUI:Notify({Title=categoryName, Content="Added "..added.." items", Duration=2}) end
+                end
+            end,
+        })
+        
+        -- Add Start Collect button (quick access)
+        CategorySection:Button({
+            Title = "▶️ Start Collect",
+            Icon = "lucide:play",
+            Desc = "Start collecting selected items",
+            Callback = function()
+                if ItemCollector then
+                    ItemCollector.Start()
+                    if WindUI then WindUI:Notify({Title="Auto Collect", Content="Collection started!", Duration=2}) end
                 end
             end,
         })
@@ -406,25 +366,10 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
         return dropdown
     end
     
-    -- Create dropdown for each category (except Blacklist)
     if ItemCollector and ItemCollector.GetCategories then
-        local categories = ItemCollector.GetCategories()
-        for _, cat in ipairs(categories) do
-            if cat.name ~= "Blacklist" then -- Skip blacklist
-                createCategoryDropdown(cat.name, cat.icon)
-            end
+        for _, cat in ipairs(ItemCollector.GetCategories()) do
+            if cat.name ~= "Blacklist" then createCategoryDropdown(cat.name, cat.icon) end
         end
-    else
-        -- Fallback if GetCategories not available yet
-        createCategoryDropdown("Campfire", "lucide:flame")
-        createCategoryDropdown("Scrapper", "lucide:recycle")
-        createCategoryDropdown("Anvil", "lucide:hammer")
-        createCategoryDropdown("Armor", "lucide:shield")
-        createCategoryDropdown("Weapons", "lucide:sword")
-        createCategoryDropdown("Tools", "lucide:wrench")
-        createCategoryDropdown("Food", "lucide:drumstick")
-        createCategoryDropdown("Animal Parts", "lucide:paw-print")
-        createCategoryDropdown("Containers", "lucide:package")
     end
     
     Tab:Space({ Size = 10 })
@@ -440,145 +385,70 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
         Opened = true,
     })
     
-    -- Stats paragraph
     local StatsParagraph = ItemSection:Paragraph({
         Title = "📊 Scan Status",
         Desc = "Click 'Scan Items' to refresh",
     })
     
-    -- Store dropdown reference
     local ItemsDropdown = nil
     local AvailableItems = {"(Click Scan Items)"}
-    local isAutoRefreshing = false -- Flag to prevent callback loop during auto-refresh
+    local isAutoRefreshing = false
     
-    -- Scan button
     ItemSection:Button({
         Title = "🔄 Scan Items",
         Desc = "Refresh item list from workspace",
         Callback = function()
-            if ItemCollector then
-                local cache = ItemCollector.ScanItems()
-                local list = ItemCollector.GetItemList()
-                AvailableItems = #list > 0 and list or {"No items found"}
-                
-                -- Update main dropdown
-                if ItemsDropdown and ItemsDropdown.Refresh then
-                    pcall(function() ItemsDropdown:Refresh(AvailableItems) end)
-                end
-                
-                -- Update category dropdowns
-                if ItemCollector.GetItemsByCategory then
-                    for catName, dropdown in pairs(CategoryDropdowns) do
-                        local catItems = ItemCollector.GetItemsByCategory(catName)
-                        if dropdown and dropdown.Refresh then
-                            local items = #catItems > 0 and catItems or {"(No items)"}
-                            pcall(function() dropdown:Refresh(items) end)
-                        end
-                    end
-                end
-                
-                -- Update stats
-                local totalItems = 0
-                local totalTypes = 0
-                for name, data in pairs(cache) do
-                    totalItems = totalItems + data.count
-                    totalTypes = totalTypes + 1
-                end
-                
-                if StatsParagraph and StatsParagraph.SetDesc then
-                    StatsParagraph:SetDesc("Found " .. totalItems .. " items (" .. totalTypes .. " types)")
-                end
-                
-                if WindUI then
-                    WindUI:Notify({
-                        Title = "Auto Collect",
-                        Content = "Scanned " .. totalItems .. " items (" .. totalTypes .. " types)",
-                        Duration = 3,
-                    })
-                end
-            end
+            if ItemCollector then ItemCollector.ScanItems() end
         end,
     })
     
-    -- Auto Rescan toggle
-    ItemSection:Toggle({
-        Title = "🔁 Auto Rescan",
-        Desc = "Update counts after each collection",
-        Value = false,
-        Callback = function(v)
-            if ItemCollector and ItemCollector.SetAutoRescan then
-                ItemCollector.SetAutoRescan(v)
-            end
-        end,
-    })
-    
-    -- Select All button for Item Section
+    -- Select All (Global)
     ItemSection:Button({
         Title = "✅ Select All",
         Desc = "Select all available items",
         Callback = function()
             if ItemCollector then
                 local allItems = ItemCollector.GetItemNames()
-                for _, name in ipairs(allItems) do
-                    ItemCollector.AddToSelection(name)
-                end
-                
-                -- Update SelectedParagraph
-                if SelectedParagraph and SelectedParagraph.SetDesc then
-                    local items = ItemCollector.GetSelectedItems()
-                    if items and #items > 0 then
-                        local displayList = {}
-                        local cache = ItemCollector.GetCache()
-                        for _, name in ipairs(items) do
-                            local count = cache[name] and cache[name].count or 0
-                            table.insert(displayList, name .. " (" .. count .. ")")
-                        end
-                        SelectedParagraph:SetDesc("• " .. table.concat(displayList, "\n• "))
+                local count = 0
+                for _, name in ipairs(allItems) do 
+                    if ItemCollector.AddToSelection(name) then
+                        count = count + 1
                     end
                 end
                 
-                if WindUI then
-                    WindUI:Notify({
-                        Title = "Auto Collect",
-                        Content = "Selected all " .. #allItems .. " items",
-                        Duration = 2,
-                    })
-                end
+                if WindUI then WindUI:Notify({Title="Auto Collect", Content="Selected " .. count .. " items", Duration=2}) end
             end
         end,
     })
-    
-    -- Clear All button for Item Section
+
+    -- Clear All (Global)
     ItemSection:Button({
         Title = "❌ Clear All",
         Desc = "Deselect all items",
         Callback = function()
             if ItemCollector and ItemCollector.ClearSelection then
                 ItemCollector.ClearSelection()
-                
-                -- Update SelectedParagraph
-                if SelectedParagraph and SelectedParagraph.SetDesc then
-                    SelectedParagraph:SetDesc("(none)")
+                 -- Visually clear ALL dropdowns
+                for _, dropdown in pairs(CategoryDropdowns) do
+                    if dropdown and dropdown.Select then pcall(function() dropdown:Select({}) end) end
                 end
+                if ItemsDropdown and ItemsDropdown.Select then pcall(function() ItemsDropdown:Select({}) end) end
                 
-                if WindUI then
-                    WindUI:Notify({
-                        Title = "Auto Collect",
-                        Content = "Selection cleared",
-                        Duration = 2,
-                    })
-                end
+                -- Update Paragraphs
+                if CategorySelectedParagraph and CategorySelectedParagraph.SetDesc then CategorySelectedParagraph:SetDesc("(none)") end
+                if SelectedParagraph and SelectedParagraph.SetDesc then SelectedParagraph:SetDesc("(none)") end
+                
+                print("[ItemCollector UI] Cleared ALL selections via UI.")
+                if WindUI then WindUI:Notify({Title="Auto Collect", Content="Selection cleared", Duration=2}) end
             end
         end,
     })
     
-    -- Selected items paragraph (assign to forward-declared variable)
     SelectedParagraph = ItemSection:Paragraph({
         Title = "📋 Selected Items",
         Desc = "(none)",
     })
     
-    -- Items dropdown (multi-select)
     ItemsDropdown = ItemSection:Dropdown({
         Flag = "AutoCollect.SelectedItems",
         Title = "Select Items",
@@ -588,42 +458,22 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
         Value = {},
         Values = AvailableItems,
         Callback = function(selected)
-            -- Skip callback during auto-refresh to prevent loop
             if isAutoRefreshing then return end
-            
             if ItemCollector then
+                -- Debug: Track manual selection changes
+                local count = 0
+                for k, v in pairs(selected) do if v == true then count = count + 1 end end
+                print("[ItemCollector UI] Selection updated manually. Count: " .. count)
+
                 ItemCollector.SetSelectedItems(selected)
-                
-                -- Update selected paragraph
+                -- Update paragraph
                 local list = {}
-                for k, v in pairs(selected) do
-                    if v == true then
-                        table.insert(list, k)
-                    elseif type(k) == "number" and type(v) == "string" then
-                        table.insert(list, v)
-                    end
+                 for k, v in pairs(selected) do
+                    if v == true then table.insert(list, k)
+                    elseif type(k) == "number" and type(v) == "string" then table.insert(list, v) end
                 end
-                
                 local text = #list > 0 and ("• " .. table.concat(list, "\n• ")) or "(none)"
-                if SelectedParagraph and SelectedParagraph.SetDesc then
-                    SelectedParagraph:SetDesc(text)
-                end
-            end
-        end,
-    })
-    
-    -- Clear selection button
-    ItemSection:Button({
-        Title = "❌ Clear Selection",
-        Callback = function()
-            if ItemsDropdown and ItemsDropdown.Select then
-                pcall(function() ItemsDropdown:Select() end)
-            end
-            if ItemCollector then
-                ItemCollector.SetSelectedItems({})
-            end
-            if SelectedParagraph and SelectedParagraph.SetDesc then
-                SelectedParagraph:SetDesc("(none)")
+                if SelectedParagraph and SelectedParagraph.SetDesc then SelectedParagraph:SetDesc(text) end
             end
         end,
     })
@@ -631,229 +481,87 @@ function AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
     Tab:Space({ Size = 10 })
     
     -- ========================================
-    -- QUANTITY SETTINGS
+    -- QUANTITY & ORG SECTIONS (Kept compact)
     -- ========================================
-    local QuantitySection = Tab:Section({
-        Title = "Quantity",
-        Icon = "lucide:hash",
-        Box = true,
-        BoxBorder = true,
-        Opened = true,
-    })
-    
-    QuantitySection:Slider({
-        Flag = "AutoCollect.GlobalLimit",
-        Title = "Max Per Type",
-        Desc = "Maximum items to collect per type",
-        Value = { Min = 25, Max = 2000, Default = 50 },
-        Step = 25,
-        Callback = function(value)
-            if ItemCollector then
-                ItemCollector.SetGlobalLimit(value)
-            end
-        end,
-    })
-    
-    QuantitySection:Slider({
-        Flag = "AutoCollect.DropHeight",
-        Title = "Drop Height",
-        Desc = "Height offset for dropping items (studs)",
-        Value = { Min = 0, Max = 20, Default = 0 },
-        Step = 1,
-        Callback = function(value)
-            if ItemCollector then
-                ItemCollector.SetDropHeight(value)
-            end
-        end,
-    })
+    local QuantitySection = Tab:Section({Title = "Quantity", Icon = "lucide:hash", Box = true, BoxBorder = true, Opened = true})
+    QuantitySection:Slider({Flag = "AutoCollect.GlobalLimit", Title = "Max Per Type", Desc = "Maximum items to collect per type", Value = {Min=25, Max=2000, Default=50}, Step=25, Callback = function(v) if ItemCollector then ItemCollector.SetGlobalLimit(v) end end})
+    QuantitySection:Slider({Flag = "AutoCollect.DropHeight", Title = "Drop Height", Desc = "Height offset (studs)", Value = {Min=0, Max=20, Default=0}, Step=1, Callback = function(v) if ItemCollector then ItemCollector.SetDropHeight(v) end end})
     
     Tab:Space({ Size = 10 })
     
+    local SpeedSection = Tab:Section({Title = "Speed", Icon = "lucide:zap", Box = true, BoxBorder = true, Opened = true})
+    SpeedSection:Dropdown({Flag = "AutoCollect.Speed", Title = "Collection Speed", Desc = "Delay between item drags", Value = "Fast", Values = {"Instant", "Fast", "Normal", "Slow"}, Callback = function(v) if ItemCollector then ItemCollector.SetSpeed(v) end end})
+    SpeedSection:Paragraph({Title = "ℹ️ Speed Info", Desc = "Instant: ~60/sec | Fast: ~33/sec | Normal: 10/sec | Slow: ~3/sec"})
+
     -- ========================================
-    -- ORGANIZATION SECTION
+    -- SCAN CALLBACK (SIMPLIFIED - NO COUNTS)
     -- ========================================
-    local OrgSection = Tab:Section({
-        Title = "Organization",
-        Icon = "lucide:layout-grid",
-        Box = true,
-        BoxBorder = true,
-        Opened = false,
-    })
-    
-    OrgSection:Toggle({
-        Flag = "AutoCollect.OrganizeEnabled",
-        Title = "Enable Organization",
-        Desc = "Arrange items in grid/line pattern instead of stacking",
-        Value = false,
-        Callback = function(state)
-            if ItemCollector then
-                ItemCollector.SetOrganizeEnabled(state)
-            end
-        end,
-    })
-    
-    OrgSection:Dropdown({
-        Flag = "AutoCollect.OrganizeMode",
-        Title = "Organization Mode",
-        Desc = "Pattern for arranging items",
-        Value = "Grid",
-        Values = {"Grid", "Line"},
-        Callback = function(value)
-            if ItemCollector then
-                ItemCollector.SetOrganizeMode(value)
-            end
-        end,
-    })
-    
-    OrgSection:Slider({
-        Flag = "AutoCollect.GridSpacing",
-        Title = "Spacing",
-        Desc = "Gap between items (studs)",
-        Value = { Min = 0, Max = 10, Default = 1 },
-        Step = 0.5,
-        Callback = function(value)
-            if ItemCollector then
-                ItemCollector.SetGridSpacing(value)
-            end
-        end,
-    })
-    
-    OrgSection:Slider({
-        Flag = "AutoCollect.MaxLayers",
-        Title = "Stack Layers",
-        Desc = "Vertical layers (1-2) for 3D stacking",
-        Value = { Min = 1, Max = 2, Default = 1 },
-        Step = 1,
-        Callback = function(value)
-            if ItemCollector then
-                ItemCollector.SetMaxLayers(value)
-            end
-        end,
-    })
-    
-    OrgSection:Toggle({
-        Flag = "AutoCollect.ShowPreview",
-        Title = "Show Preview",
-        Desc = "Display where items will be placed",
-        Value = false,
-        Callback = function(state)
-            if ItemCollector then
-                ItemCollector.TogglePreview(state)
-            end
-        end,
-    })
-    
-    Tab:Space({ Size = 10 })
-    
-    -- ========================================
-    -- SPEED SETTINGS
-    -- ========================================
-    local SpeedSection = Tab:Section({
-        Title = "Speed",
-        Icon = "lucide:zap",
-        Box = true,
-        BoxBorder = true,
-        Opened = true,
-    })
-    
-    SpeedSection:Dropdown({
-        Flag = "AutoCollect.Speed",
-        Title = "Collection Speed",
-        Desc = "Delay between item drags",
-        Value = "Fast",
-        Values = {"Instant", "Fast", "Normal", "Slow"},
-        Callback = function(value)
-            if ItemCollector then
-                ItemCollector.SetSpeed(value)
-            end
-        end,
-    })
-    
-    SpeedSection:Paragraph({
-        Title = "ℹ️ Speed Info",
-        Desc = "Instant: ~60/sec | Fast: ~33/sec | Normal: 10/sec | Slow: ~3/sec",
-    })
-    
-    -- Register callback for auto-refresh
     if ItemCollector and ItemCollector.SetOnScanCallback then
-        ItemCollector.SetOnScanCallback(function(cache, itemsWereRemoved)
-            -- This runs when ItemCollector.ScanItems() or ScanSelectedOnly() finishes
-            
-            -- Update stats (only count selected items in lightweight mode)
-            local totalItems = 0
+        ItemCollector.SetOnScanCallback(function(cache)
+            -- Count unique item types (cache is now just {name = true, ...})
             local totalTypes = 0
-            for name, data in pairs(cache) do
-                totalItems = totalItems + data.count
+            for _ in pairs(cache) do
                 totalTypes = totalTypes + 1
             end
-            
-            if StatsParagraph and StatsParagraph.SetDesc then
-                StatsParagraph:SetDesc("Found " .. totalItems .. " items (" .. totalTypes .. " types)")
+            if StatsParagraph and StatsParagraph.SetDesc then 
+                StatsParagraph:SetDesc("Found " .. totalTypes .. " item types") 
             end
             
-            -- Update SelectedParagraph with CURRENT counts from cache
-            if SelectedParagraph and SelectedParagraph.SetDesc and ItemCollector.GetSelectedItems then
-                local selectedItems = ItemCollector.GetSelectedItems()
-                if #selectedItems > 0 then
-                    local displayList = {}
-                    for _, itemName in ipairs(selectedItems) do
-                        local cacheEntry = cache[itemName]
-                        local count = cacheEntry and cacheEntry.count or 0
-                        table.insert(displayList, itemName .. " (" .. count .. ")")
-                    end
-                    SelectedParagraph:SetDesc("• " .. table.concat(displayList, "\n• "))
-                else
-                    SelectedParagraph:SetDesc("(none)")
-                end
-            end
+            -- Get currently selected names
+            local selectedItems = ItemCollector.GetSelectedItems()
+            local selectedLookup = {}
+            for _, name in ipairs(selectedItems) do selectedLookup[name] = true end
             
-            -- Refresh Category Dropdowns
+            -- Update paragraphs (names only)
+            local displayText = #selectedItems > 0 and ("• " .. table.concat(selectedItems, "\n• ")) or "(none)"
+            if SelectedParagraph and SelectedParagraph.SetDesc then SelectedParagraph:SetDesc(displayText) end
+            if CategorySelectedParagraph and CategorySelectedParagraph.SetDesc then CategorySelectedParagraph:SetDesc(displayText) end
+            
+            -- REFRESH CATEGORY DROPDOWNS
             if ItemCollector.GetItemsByCategory then
                 for catName, dropdown in pairs(CategoryDropdowns) do
                     local catItems = ItemCollector.GetItemsByCategory(catName)
-                    -- Only refresh if we have a refresh method
                     if dropdown and dropdown.Refresh then
                         local items = #catItems > 0 and catItems or {"(No items)"}
-                        pcall(function() dropdown:Refresh(items) end)
+                        
+                        -- Re-select items that are currently selected
+                        local newVisualSelection = {}
+                        for _, itemName in ipairs(items) do
+                            if selectedLookup[itemName] then
+                                table.insert(newVisualSelection, itemName)
+                            end
+                        end
+                        
+                        pcall(function() 
+                            dropdown:Refresh(items)
+                            if #newVisualSelection > 0 then
+                                dropdown:Select(newVisualSelection)
+                            end
+                        end)
                     end
                 end
             end
             
-            -- Update CategorySelectedParagraph with CURRENT counts
-            if CategorySelectedParagraph and CategorySelectedParagraph.SetDesc and ItemCollector.GetSelectedItems then
-                local selectedItems = ItemCollector.GetSelectedItems()
-                local displayText = "(none)"
-                if #selectedItems > 0 then
-                    local displayList = {}
-                    for _, itemName in ipairs(selectedItems) do
-                        local cacheEntry = cache[itemName]
-                        local count = cacheEntry and cacheEntry.count or 0
-                        table.insert(displayList, itemName .. " (" .. count .. ")")
-                    end
-                    displayText = "• " .. table.concat(displayList, "\n• ")
-                end
-                CategorySelectedParagraph:SetDesc(displayText)
-            end
-            
-            -- Refresh dropdown ONLY when items were removed (to clear 0-count items)
-            if itemsWereRemoved then
+            -- REFRESH MAIN ITEM DROPDOWN
+            if ItemsDropdown then
                 local list = ItemCollector.GetItemList()
                 AvailableItems = #list > 0 and list or {"No items found"}
-                if ItemsDropdown then
-                    isAutoRefreshing = true  -- Prevent callback loop
-                    
-                    -- Refresh the list
-                    if ItemsDropdown.Refresh then
-                        pcall(function() ItemsDropdown:Refresh(AvailableItems) end)
+                
+                local newVisualSelection = {}
+                for _, itemName in ipairs(list) do
+                    if selectedLookup[itemName] then
+                        table.insert(newVisualSelection, itemName)
                     end
-                    
-                    -- Update display text (clear selection since items were removed)
-                    if ItemsDropdown.Select then
-                        pcall(function() ItemsDropdown:Select({}) end)
-                    end
-                    
-                    isAutoRefreshing = false
                 end
+                
+                isAutoRefreshing = true 
+                pcall(function()
+                    ItemsDropdown:Refresh(AvailableItems)
+                    if #newVisualSelection > 0 then
+                        ItemsDropdown:Select(newVisualSelection)
+                    end
+                end)
+                isAutoRefreshing = false
             end
         end)
     end
