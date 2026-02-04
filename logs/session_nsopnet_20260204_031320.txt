@@ -1,0 +1,179 @@
+=== WindUI Log Session ===
+Started: 2026-02-04 03:13:20
+User: nsopnet (ID: 8401342884)
+========================================
+
+[18:13:22][Info] [OP] Loading modules...
+[18:13:22][Info] [MainInterface] Speed module loaded table: table: 0xa2972d8a4e472df6
+[18:13:22][Info] [OP] Modules loaded!
+[18:13:22][Info] [OP] Initializing 99 Nights OP Script...
+[18:13:22][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:13:22][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:13:22][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:13:22][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[18:13:22][Info] [Fly] Initialized
+[18:13:22][Info] [Speed] Initialized
+[18:13:22][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:13:22][Info] [Teleport] Initialized
+[18:13:22][Info] [PhysicsOptimizer] Initialized
+[18:13:22][Info] Loader: Fetching MainInterface...
+[18:13:23][Info] [OP] Window created. Type: table
+[18:13:25][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:13:25][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[18:13:25][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:13:25][Info] [OP] UI Created! Ready to use.
+[18:13:26][Info] [ChestExplorer] Stopped/Finished
+[18:13:26][Info] [ChestExplorer] Cleaned up resources
+[18:13:26][Info] [ChestExplorer] Stopped/Finished
+[18:13:27][Info] [OP] MapRevealer: Cleanup complete
+[18:13:27][Info] [PhysicsOptimizer] Storage box destroyed
+[18:13:27][Info] [OP] AutoEat: STOPPED
+[18:13:27][Info] [OP] AutoEat: STOPPED
+[18:13:27][Info] [OP] SoundManager: Cleanup complete
+[18:13:27][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[18:13:27][Info] [OP] GodMode: STOPPED
+[18:13:27][Info] [OP] GodMode: STOPPED
+[18:13:27][Info] [OP] Loading modules...
+[18:13:27][Info] [MainInterface] Speed module loaded table: table: 0x14188dba6200ff46
+[18:13:27][Info] [OP] Initializing 99 Nights OP Script...
+[18:13:27][Info] [OP] Modules loaded!
+[18:13:27][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:13:27][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:13:27][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[18:13:27][Info] [PhysicsOptimizer] Initialized
+[18:13:27][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:13:27][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:13:27][Info] [Speed] Initialized
+[18:13:27][Info] [Fly] Initialized
+[18:13:27][Info] [Teleport] Initialized
+[18:13:29][Info] [OP] Window created. Type: table
+[18:13:29][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:13:30][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[18:13:30][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:13:30][Info] [OP] UI Created! Ready to use.
+[18:14:05][Info] [Remote][Success] RemoteEvents found: 205 remotes
+[18:14:05][Info] [OP] GodMode: STARTED
+[18:14:11][Info] [Teleport] Attempting to teleport to landmark: Enter HardMode
+[18:14:11][Info] [Teleport] Found target: Workspace.Map.Landmarks.Research Outpost.Functional.Screens3
+[18:14:11][Info] [Teleport] Using safe position: -230.76702880859375, -13.511771202087402, 181.739990234375
+[18:14:11][Info] [Teleport] Calculating safe position...
+[18:14:18][Info] [Teleport] Attempting to teleport to landmark: Stronghold
+[18:14:18][Warning] [Teleport] Path failed, trying fallback search for: Stronghold
+[18:14:18][Warning] [Teleport] getInstance failed at segment 3: 'Stronghold' not found in Workspace.Map.Landmarks
+[18:14:18][Warning] [Teleport] Trying parent folder name: Stronghold
+[18:14:18][Warning] [Teleport] ALL search methods failed for: Stronghold
+[18:14:22][Warning] [Teleport] getInstance failed at segment 4: 'Fairy' not found in Workspace.Map.Landmarks.Fairy House
+[18:14:22][Warning] [Teleport] Path failed, trying fallback search for: Fairy House
+[18:14:22][Info] [Teleport] Attempting to teleport to landmark: Fairy House
+[18:14:22][Info] [Teleport] Found landmark via search: Workspace.Map.Landmarks.Fairy House
+[18:14:22][Info] [Teleport] Found target: Workspace.Map.Landmarks.Fairy House
+[18:14:22][Info] [Teleport] Target is Model, using primary part position: 880, 2.872811794281006, -600
+[18:14:22][Info] [Teleport] Requesting stream around position...
+[18:14:22][Info] [Teleport] Calculating safe position...
+[18:14:22][Info] [Teleport] Using safe position: 881.2174072265625, 13.566682815551758, -598.2144775390625
+[18:14:23][Info] Entered biome Fairy
+[18:14:23][Info] Fairy
+[18:14:31][Info] [Teleport] Attempting to teleport to landmark: Tool Workshop
+[18:14:31][Warning] [Teleport] getInstance failed at segment 3: 'ToolWorkshop' not found in Workspace.Map.Landmarks
+[18:14:31][Warning] [Teleport] Path failed, trying fallback search for: Tool Workshop
+[18:14:31][Warning] [Teleport] ALL search methods failed for: Tool Workshop
+[18:14:31][Warning] [Teleport] Trying parent folder name: ToolWorkshop
+[18:14:34][Info] [OP] MapRevealer: Radius set to 554
+[18:14:34][Info] [OP] MapRevealer: Radius set to 627
+[18:14:34][Info] [OP] MapRevealer: Radius set to 1500
+[18:14:35][Info] [OP] MapRevealer: Found Campfire at 240, -1.0398585796356201, -360 (Dist: 432.6)
+[18:14:35][Info] [OP] MapRevealer: Radius set to 1500
+[18:14:35][Info] [OP] MapRevealer: Spiral from 240, -1.0398585796356201, -360 at height 40
+[18:14:35][Info] [OP] MapRevealer: Starting (speed=170)
+[18:14:37][Info] Entered biome nil
+[18:14:37][Info] nil
+[18:14:38][Info] function is already waiting :)
+[18:14:42][Info] Entered biome Fairy
+[18:14:42][Info] Fairy
+[18:14:44][Info] Entered biome nil
+[18:14:44][Info] nil
+[18:14:51][Info] Fairy
+[18:14:51][Info] Entered biome Fairy
+[18:14:54][Info] Entered biome nil
+[18:14:54][Info] nil
+[18:14:56][Info] [ItemCollector] Selected: Bear Corpse
+[18:14:56][Info] [ItemCollector] Selected: Chair
+[18:14:56][Info] [ItemCollector] Selected: Fuel Canister
+[18:14:56][Info] [ItemCollector] Selected: Coal
+[18:14:56][Info] [ItemCollector] Selected: Log
+[18:14:57][Info] [ItemCollector] Started Collection Thread.
+[18:15:04][Info] Fairy
+[18:15:04][Info] Entered biome Fairy
+[18:15:06][Info] [ItemCollector] Retrying item: Fuel Canister (Attempt 2/3)
+[18:15:08][Info] Entered biome nil
+[18:15:08][Info] nil
+[18:15:08][Info] [ItemCollector] Collected 61 items.
+[18:15:08][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:15:20][Info] Entered biome Fairy
+[18:15:20][Info] Fairy
+[18:15:25][Info] Entered biome nil
+[18:15:25][Info] nil
+[18:15:30][Info] [OP] MapRevealer: Stop requested
+[18:15:30][Info] [OP] MapRevealer: Done!
+[18:15:30][Info] [OP] MapRevealer: Teleported to campfire
+[18:15:38][Info] [OP] MapRevealer: Found Campfire at 0, 1.5, 0 (Dist: 9.4)
+[18:15:38][Info] [OP] MapRevealer: Radius set to 1500
+[18:15:38][Info] [OP] MapRevealer: Spiral from 0, 1.5, 0 at height 40
+[18:15:39][Info] [OP] MapRevealer: Starting (speed=170)
+[18:15:58][Warning] item is no longer in workspace
+[18:16:15][Info] Snow
+[18:16:15][Info] Entered biome Snow
+[18:16:18][Info] Entered biome nil
+[18:16:18][Info] nil
+[18:16:23][Info] Entered biome Fairy
+[18:16:23][Info] Fairy
+[18:16:24][Info] nil
+[18:16:24][Info] Entered biome nil
+[18:16:34][Info] Entered biome Snow
+[18:16:34][Info] Snow
+[18:16:37][Info] Entered biome nil
+[18:16:37][Info] nil
+[18:16:43][Info] Entered biome Fairy
+[18:16:43][Info] Fairy
+[18:16:46][Info] Entered biome nil
+[18:16:46][Info] nil
+[18:16:55][Info] [OP] MapRevealer: Stop requested
+[18:16:55][Info] [OP] MapRevealer: Done!
+[18:16:55][Info] [OP] MapRevealer: Teleported to campfire
+[18:16:58][Info] [Teleport] Attempting to teleport to landmark: Stronghold
+[18:16:58][Info] [Teleport] Found target: Workspace.Map.Landmarks.Stronghold.Functional.EntryDoors
+[18:16:58][Info] [Teleport] Target is Model, using primary part position: 62.75, 17.331512451171875, 622.4000244140625
+[18:16:58][Info] [Teleport] Requesting stream around position...
+[18:16:58][Info] [Teleport] Using safe position: 65.49998474121094, 17.331459045410156, 622.3997802734375
+[18:16:58][Info] [Teleport] Calculating safe position...
+[18:17:05][Info] [Teleport] Target is Model, using primary part position: -200, 0.5443194508552551, 680
+[18:17:05][Info] [Teleport] Found target: Workspace.Map.Landmarks.ToolWorkshop
+[18:17:05][Info] [Teleport] Requesting stream around position...
+[18:17:05][Info] [Teleport] Attempting to teleport to landmark: Tool Workshop
+[18:17:06][Info] [Teleport] Calculating safe position...
+[18:17:06][Info] [Teleport] Using safe position: -220, 12.193416595458984, 660
+[18:17:07][Info] Arrow nil
+[18:17:10][Info] Arrow nil
+[18:17:12][Info] Arrow nil
+[18:17:12][Info] [Teleport] Attempting to teleport to landmark: Tool Workshop
+[18:17:12][Info] [Teleport] Target is Model, using primary part position: -200, 0.5443194508552551, 680
+[18:17:12][Info] [Teleport] Requesting stream around position...
+[18:17:12][Info] [Teleport] Found target: Workspace.Map.Landmarks.ToolWorkshop
+[18:17:13][Info] [Teleport] Using safe position: -220, 12.193416595458984, 660
+[18:17:13][Info] [Teleport] Calculating safe position...
+[18:17:13][Info] Arrow nil
+[18:17:15][Info] [Teleport] Attempting to teleport to landmark: Fairy Tree
+[18:17:15][Info] [Teleport] Found target: Workspace.Map.Landmarks.Fairy Tree.Sign
+[18:17:15][Info] [Teleport] Requesting stream around position...
+[18:17:15][Info] [Teleport] Target is Model, using primary part position: 658.3350219726562, 6.266848564147949, -434.4800109863281
+[18:17:15][Info] [Teleport] Calculating safe position...
+[18:17:15][Info] [Teleport] Using safe position: 658.3236083984375, 6.266849994659424, -434.45025634765625
+[18:17:15][Info] Entered biome Fairy
+[18:17:15][Info] Fairy
+[18:17:16][Info] Arrow nil
+[18:17:24][Info] [Teleport] Found target: Workspace.Map.Landmarks.Fairy House.Fairy
+[18:17:24][Info] [Teleport] Attempting to teleport to landmark: Fairy House
+[18:17:24][Info] [Teleport] Target is Model, using primary part position: 879.2789306640625, 8.049283981323242, -589.5717163085938
+[18:17:24][Info] [Teleport] Requesting stream around position...
+[18:17:24][Info] [Teleport] Using safe position: 879.8134155273438, 6.618414878845215, -589.947021484375
+[18:17:24][Info] [Teleport] Calculating safe position...

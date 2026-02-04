@@ -58,10 +58,35 @@ local function getInstance(pathStr)
     local segments = string.split(pathStr, ".")
     local current = Workspace
     for _, name in ipairs(segments) do
-        current = current:FindFirstChild(name)
-        if not current then return nil end
+        local next = current:FindFirstChild(name)
+        if not next then return nil end
+        current = next
     end
     return current
+end
+
+-- Helper: Search for landmark by name in workspace.Map.Landmarks
+local function findLandmarkByName(landmarkName)
+    local mapFolder = Workspace:FindFirstChild("Map")
+    if not mapFolder then return nil end
+    
+    local landmarksFolder = mapFolder:FindFirstChild("Landmarks")
+    if not landmarksFolder then return nil end
+    
+    -- Search for matching landmark
+    for _, child in ipairs(landmarksFolder:GetDescendants()) do
+        if string.find(child.Name, landmarkName, 1, true) then
+            if child:IsA("BasePart") or child:IsA("Model") then
+                return child
+            end
+        end
+    end
+    
+    -- Try direct child
+    local directChild = landmarksFolder:FindFirstChild(landmarkName)
+    if directChild then return directChild end
+    
+    return nil
 end
 
 function Teleport.ScanChildren(doPreload)
@@ -229,61 +254,34 @@ function Teleport.TeleportToPlayer(playerName)
     return true
 end
 
--- ============================================
--- LANDMARK TELEPORT
--- ============================================
-
 -- Get safe position near a Part/Model (anti-stuck)
 local function getSafeTeleportPosition(targetInstance)
     if not targetInstance then return nil end
     
-    local targetPos, targetSize
+    local targetPos
     
-    -- 1. Get target position & size
+    -- 1. Get target position
     if targetInstance:IsA("Model") then
         local success, cf, size = pcall(function()
             return targetInstance:GetBoundingBox()
         end)
-        if success then
+        if success and cf then
             targetPos = cf.Position
-            targetSize = size
         else
             -- Fallback for models without bounding box
             local primary = targetInstance.PrimaryPart or targetInstance:FindFirstChildWhichIsA("BasePart")
             if primary then
                 targetPos = primary.Position
-                targetSize = primary.Size
             end
         end
     elseif targetInstance:IsA("BasePart") then
         targetPos = targetInstance.Position
-        targetSize = targetInstance.Size
     end
     
     if not targetPos then return nil end
-    if not targetSize then targetSize = Vector3.new(4, 4, 4) end -- Default size
     
-    -- 2. Calculate safe offset (di DEPAN target, bukan di atas)
-    local lookVector = targetInstance.CFrame and targetInstance.CFrame.LookVector or Vector3.new(0, 0, 1)
-    local frontOffset = lookVector * (targetSize.Z / 2 + 6)
-    local safePos = targetPos + frontOffset + Vector3.new(0, 5, 0)
-    
-    -- 3. Raycast down untuk cari ground
-    local rayParams = RaycastParams.new()
-    rayParams.FilterType = Enum.RaycastFilterType.Exclude
-    rayParams.FilterDescendantsInstances = {Players.LocalPlayer.Character}
-    
-    local rayResult = Workspace:Raycast(
-        safePos + Vector3.new(0, 10, 0),
-        Vector3.new(0, -50, 0),
-        rayParams
-    )
-    
-    if rayResult then
-        return rayResult.Position + Vector3.new(0, 3, 0)
-    end
-    
-    return safePos
+    -- 2. For indoor landmarks, teleport directly to target
+    return targetPos
 end
 
 -- Get list of landmarks for UI
@@ -295,23 +293,77 @@ end
 function Teleport.TeleportToLandmark(landmarkName)
     for _, landmark in ipairs(CONFIG.LANDMARKS) do
         if landmark.Name == landmarkName then
+            -- 1. Try configured path first
             local target = getInstance(landmark.Path)
-            if target then
-                -- Use safe position calculation
-                local safePos = getSafeTeleportPosition(target)
-                if safePos then
-                    Teleport.TeleportTo(safePos, 0) -- Already calculated height
-                else
-                    -- Fallback to direct teleport with offset
-                    Teleport.TeleportTo(target, 8)
+            
+            -- 2. If path fails, try fallback search by name
+            if not target then
+                target = findLandmarkByName(landmark.Name)
+            end
+            
+            -- 3. If still not found, try searching parent folder name
+            if not target then
+                local pathParts = string.split(landmark.Path, ".")
+                if #pathParts >= 3 then
+                    local parentName = pathParts[3]
+                    target = findLandmarkByName(parentName)
                 end
+            end
+            
+            if target then
+                -- Wrap in pcall to catch any errors
+                local success, err = pcall(function()
+                    -- Get position for streaming
+                    local targetPos
+                    if target:IsA("BasePart") then
+                        targetPos = target.Position
+                    elseif target:IsA("Model") then
+                        local primary = target.PrimaryPart or target:FindFirstChildWhichIsA("BasePart")
+                        if primary then
+                            targetPos = primary.Position
+                        end
+                    end
+                    
+                    -- Request stream (like Lost Child teleport)
+                    if targetPos then
+                        pcall(function()
+                            Players.LocalPlayer:RequestStreamAroundAsync(targetPos)
+                        end)
+                        task.wait(0.2)
+                    end
+                    
+                    -- Use safe position calculation
+                    local safePos = getSafeTeleportPosition(target)
+                    if safePos then
+                        Teleport.TeleportTo(safePos, 0)
+                    else
+                        Teleport.TeleportTo(target, 8)
+                    end
+                end)
+                
+                if not success then
+                    -- Emergency fallback - teleport directly to target position
+                    pcall(function()
+                        local pos
+                        if target:IsA("BasePart") then
+                            pos = target.Position
+                        elseif target:IsA("Model") then
+                            local part = target:FindFirstChildWhichIsA("BasePart")
+                            if part then pos = part.Position end
+                        end
+                        if pos then
+                            Teleport.TeleportTo(pos + Vector3.new(0, 5, 0), 0)
+                        end
+                    end)
+                end
+                
                 return true, nil
             else
-                return false, "Location not loaded (try moving closer)"
+                return false, "Location not found"
             end
         end
     end
-    return false, "Landmark not found"
+    return false, "Landmark not in config"
 end
 
 return Teleport

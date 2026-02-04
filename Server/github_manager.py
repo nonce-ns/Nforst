@@ -66,8 +66,8 @@ class Colors:
 def print_header():
     print(f"""
 {Colors.CYAN}╔══════════════════════════════════════════════════╗
-║         TheForge GitHub Manager v1.0             ║
-║     github.com/{GITHUB_USER}/{GITHUB_REPO}              ║
+║          Nforst GitHub Manager v1.0              ║
+║       github.com/{GITHUB_USER}/{GITHUB_REPO}                 ║
 ╚══════════════════════════════════════════════════╝{Colors.RESET}
 """)
 
