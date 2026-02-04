@@ -23,11 +23,11 @@ end
 -- ============================================
 local CONFIG = {
     -- Remote URL for loading modules
-    BASE_URL = "http://192.168.1.8:8000/",
+    BASE_URL = "https://raw.githubusercontent.com/nonce-ns/Nforst/main/",
     
     -- WindUI source (change to local path if needed)
     -- WINDUI_URL = "https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua",
-    WINDUI_URL = "http://192.168.1.8:8000/WindUI/dist/main.lua",
+    WINDUI_URL = "https://raw.githubusercontent.com/nonce-ns/Nforst/main/WindUI/dist/main.lua",
 }
 
 -- Allow override via getgenv

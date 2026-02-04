@@ -15,7 +15,7 @@ local Workspace = game:GetService("Workspace")
 
 -- Constants
 local STORAGE_HEIGHT_OFFSET = 1500  -- How high above player (Y offset) - far from physics
-local BOX_SIZE = 300       -- 300x300 interior space
+local BOX_SIZE = 1000       -- 1000x1000 interior space
 local WALL_THICKNESS = 5   -- Wall thickness
 local BOX_HEIGHT = 100     -- Height of the box
 
@@ -443,8 +443,8 @@ function PhysicsOptimizer.GetStorageCenter()
     return State.StorageCenter
 end
 
--- Move items to storage CENTER (with grid layout)
-function PhysicsOptimizer.MoveToStorage()
+-- Move items to storage CENTER (with grid layout) using Batch Processing & Smart Teleport
+function PhysicsOptimizer.BatchMoveToStorage(limit)
     if not State.StorageCenter then
         warn("[PhysicsOptimizer] No storage box created! Create one first.")
         return 0
@@ -465,41 +465,85 @@ function PhysicsOptimizer.MoveToStorage()
         print("[PhysicsOptimizer] No item types selected for storage")
         return 0
     end
-    
+
+    limit = limit or 50
     local count = 0
-    local basePos = State.StorageCenter  -- Use CENTER of box, not corner
-    local spacing = 3 -- Spacing between items in grid
+    local basePos = State.StorageCenter
+    local spacing = 3
     local gridSize = 10 -- Items per row
+
+    -- 1. SAVE PLAYER POSITION & PREPARE TELEPORT
+    local Players = game:GetService("Players")
+    local LocalPlayer = Players.LocalPlayer
+    local char = LocalPlayer and LocalPlayer.Character
+    local hrp = char and char:FindFirstChild("HumanoidRootPart")
     
+    local originalCFrame = nil
+    local didTeleport = false
+    
+    if hrp then
+        local dist = (hrp.Position - basePos).Magnitude
+        if dist > 300 then -- If far away, teleport to ensure streaming
+            originalCFrame = hrp.CFrame
+            print("[PhysicsOptimizer] Teleporting to box for streaming (Distance: " .. math.floor(dist) .. ")")
+            
+            -- Freeze & Teleport
+            hrp.Anchored = true
+            pcall(function() LocalPlayer:RequestStreamAroundAsync(basePos) end)
+            hrp.CFrame = CFrame.new(basePos + Vector3.new(0, 10, 0)) -- Teleport slightly above center
+            task.wait(0.5) -- Wait for load
+            didTeleport = true
+        end
+    end
+
+    -- 2. MOVE ITEMS
     for _, item in ipairs(items:GetChildren()) do
+        if count >= limit then break end
+
         if selectedLookup[item.Name] then
-            pcall(function()
+            local success = pcall(function()
                 -- Calculate grid position
                 local row = math.floor(count / gridSize)
                 local col = count % gridSize
                 local offset = Vector3.new(col * spacing, 2, row * spacing)
                 local targetCFrame = CFrame.new(basePos + offset)
                 
-                -- Move item
+                -- Reset Physics first (Stop fling)
+                for _, part in ipairs(item:GetDescendants()) do
+                    if part:IsA("BasePart") then
+                        part.AssemblyLinearVelocity = Vector3.zero
+                        part.AssemblyAngularVelocity = Vector3.zero
+                        part.CFrame = targetCFrame
+                    end
+                end
+                 -- Handle Model primary part if exists
                 if item:IsA("Model") and item.PrimaryPart then
                     item:SetPrimaryPartCFrame(targetCFrame)
                 elseif item:IsA("BasePart") then
-                    item.CFrame = targetCFrame
-                else
-                    for _, part in ipairs(item:GetDescendants()) do
-                        if part:IsA("BasePart") then
-                            part.CFrame = targetCFrame
-                            break -- Only move first part, rest will follow
-                        end
-                    end
+                     item.CFrame = targetCFrame
                 end
+                
                 count = count + 1
             end)
         end
     end
     
-    print("[PhysicsOptimizer] Moved " .. count .. " items to storage at " .. tostring(basePos))
+    -- 3. RETURN PLAYER
+    if didTeleport and hrp and originalCFrame then
+        hrp.CFrame = originalCFrame
+        hrp.Anchored = false
+        print("[PhysicsOptimizer] Returned to original position")
+    elseif hrp then
+         hrp.Anchored = false
+    end
+    
+    print("[PhysicsOptimizer] Batch moved " .. count .. " items to storage.")
     return count
+end
+
+-- Wrapper for backward compatibility or direct calls
+function PhysicsOptimizer.MoveToStorage(limit)
+    return PhysicsOptimizer.BatchMoveToStorage(limit or 50)
 end
 
 -- ============================================

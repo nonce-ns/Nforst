@@ -18,7 +18,7 @@ local RunService = game:GetService("RunService")
 local REMOTE_NAME = "RequestOpenItemChest"
 local CHEST_PATTERNS = {"Chest", "Crate", "Box", "Safe", "Container"} 
 local INTERACTION_DELAY = 0.5 
-local OPEN_DELAY = 1.0 
+local OPEN_DELAY = 0.5
 
 -- State
 local State = {

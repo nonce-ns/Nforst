@@ -927,6 +927,37 @@ function ItemCollector.Start()
         end
         
         local dest = getDestinationObject()
+        
+        -- STORAGE BOX VALIDATION
+        if State.Destination == "StorageBox" then
+            if not dest then
+                warn("[ItemCollector] Storage Box not found! Please create one in Misc Tab first.")
+                if getgenv().WindUI then
+                    getgenv().WindUI:Notify({
+                        Title = "Missing Storage Box",
+                        Content = "Create a box in Misc Tab first!",
+                        Icon = "alert-circle",
+                        Duration = 5,
+                    })
+                end
+                State.Enabled = false
+                return
+            end
+            
+            -- Warn if too far (Streaming issues)
+            local char = LocalPlayer.Character
+            local destPos = getCenterPosition(dest)
+            if char and destPos and (char.GetPivot(char).Position - destPos).Magnitude > 300 then
+                 -- Just a notification, don't stop (user might know what they're doing)
+                if getgenv().WindUI then
+                     getgenv().WindUI:Notify({
+                        Title = "Distance Warning",
+                        Content = "You are far from the box! Items might fail to land.",
+                        Duration = 4,
+                    })
+                end
+            end
+        end
         local canUseOrganizedMode = (State.Destination == "Player" or State.Destination == "OtherPlayer")
         local useOrganizedMode = State.OrganizeEnabled and canUseOrganizedMode
         

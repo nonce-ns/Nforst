@@ -40,8 +40,6 @@ function MiscTab.Create(Window, Utils, Remote, CONFIG, Features, WindUI)
             end
         end,
     })
-    
-    Tab:Space({ Size = 10 })
 
     -- ========================================
     -- NOTIFICATION SETTINGS
@@ -361,13 +359,30 @@ function MiscTab.Create(Window, Utils, Remote, CONFIG, Features, WindUI)
         end,
     })
     
+    -- Move to Storage Slider
+    local MoveLimit = 50 -- Default
+    PhysicsSection:Slider({
+        Flag = "Physics.MoveLimit",
+        Title = "Move Quantity (Batch)",
+        Desc = "How many items to move per click (Prevent lag)",
+        Value = {
+            Min = 5,
+            Max = 2000,
+            Default = 50,
+        },
+        Step = 5,
+        Callback = function(val)
+            MoveLimit = val
+        end,
+    })
+
     -- Move to Storage Button
     PhysicsSection:Button({
         Title = "📦 Move to Storage",
-        Desc = "Move selected items to storage box (grid layout)",
+        Desc = "Move selected items to storage box (Smart Teleport)",
         Callback = function()
             if PhysicsOptimizer then
-                local count = PhysicsOptimizer.MoveToStorage()
+                local count = PhysicsOptimizer.MoveToStorage(MoveLimit)
                 if WindUI then
                     WindUI:Notify({
                         Title = "Physics Optimizer",

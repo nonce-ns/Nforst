@@ -41,7 +41,51 @@ function TeleportTab.Create(Window, Features, CONFIG, WindUI)
 
     Tab:Space({ Size = 10 })
 
-    -- 2. Rescue Section
+    -- 2. Landmarks Section (Points of Interest)
+    local LandmarkSection = Tab:Section({
+        Title = "Landmarks",
+        Icon = "solar:map-point-wave-bold",
+        Box = true,
+        BoxBorder = true,
+        Opened = true,
+    })
+    
+    -- Dynamic buttons from config
+    if Features.Teleport and Features.Teleport.GetLandmarks then
+        for _, landmark in ipairs(Features.Teleport.GetLandmarks()) do
+            local desc = "Teleport to " .. landmark.Name
+            if landmark.HardMode then
+                desc = "⚠️ " .. desc .. " (Hard Mode)"
+            end
+            
+            LandmarkSection:Button({
+                Title = landmark.Name,
+                Desc = desc,
+                Callback = function()
+                    local success, err = Features.Teleport.TeleportToLandmark(landmark.Name)
+                    if success then
+                        WindUI:Notify({
+                            Title = "Teleporting",
+                            Content = "Going to " .. landmark.Name .. "...",
+                            Icon = "map",
+                            Duration = 2,
+                        })
+                    else
+                        WindUI:Notify({
+                            Title = "Error",
+                            Content = err or "Failed to teleport",
+                            Icon = "alert-triangle",
+                            Duration = 3,
+                        })
+                    end
+                end,
+            })
+        end
+    end
+
+    Tab:Space({ Size = 10 })
+
+    -- 3. Rescue Section
     local RescueSection = Tab:Section({
         Title = "Rescue Mission",
         Icon = "solar:user-hand-up-bold",

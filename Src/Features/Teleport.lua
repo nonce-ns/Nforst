@@ -17,6 +17,31 @@ local CONFIG = {
     CampfirePath = "Map.Campground.MainFire.InnerTouchZone",
     ScanPath = "Characters", -- workspace.Characters
     ChildNamePattern = "Lost Child",
+    
+    -- Landmark Teleport Locations
+    LANDMARKS = {
+        { 
+            Name = "Stronghold", 
+            Path = "Map.Landmarks.Stronghold.Functional.EntryDoors",
+        },
+        { 
+            Name = "Fairy House", 
+            Path = "Map.Landmarks.Fairy House.Fairy",
+        },
+        { 
+            Name = "Enter HardMode", 
+            Path = "Map.Landmarks.Research Outpost.Functional.Screens3",
+            HardMode = true,
+        },
+        { 
+            Name = "Tool Workshop", 
+            Path = "Map.Landmarks.ToolWorkshop",
+        },
+        { 
+            Name = "Fairy Tree", 
+            Path = "Map.Landmarks.Fairy Tree.Sign",
+        },
+    },
 }
 
 -- State
@@ -202,6 +227,91 @@ function Teleport.TeleportToPlayer(playerName)
     
     Teleport.TeleportTo(targetHRP.Position, 3)
     return true
+end
+
+-- ============================================
+-- LANDMARK TELEPORT
+-- ============================================
+
+-- Get safe position near a Part/Model (anti-stuck)
+local function getSafeTeleportPosition(targetInstance)
+    if not targetInstance then return nil end
+    
+    local targetPos, targetSize
+    
+    -- 1. Get target position & size
+    if targetInstance:IsA("Model") then
+        local success, cf, size = pcall(function()
+            return targetInstance:GetBoundingBox()
+        end)
+        if success then
+            targetPos = cf.Position
+            targetSize = size
+        else
+            -- Fallback for models without bounding box
+            local primary = targetInstance.PrimaryPart or targetInstance:FindFirstChildWhichIsA("BasePart")
+            if primary then
+                targetPos = primary.Position
+                targetSize = primary.Size
+            end
+        end
+    elseif targetInstance:IsA("BasePart") then
+        targetPos = targetInstance.Position
+        targetSize = targetInstance.Size
+    end
+    
+    if not targetPos then return nil end
+    if not targetSize then targetSize = Vector3.new(4, 4, 4) end -- Default size
+    
+    -- 2. Calculate safe offset (di DEPAN target, bukan di atas)
+    local lookVector = targetInstance.CFrame and targetInstance.CFrame.LookVector or Vector3.new(0, 0, 1)
+    local frontOffset = lookVector * (targetSize.Z / 2 + 6)
+    local safePos = targetPos + frontOffset + Vector3.new(0, 5, 0)
+    
+    -- 3. Raycast down untuk cari ground
+    local rayParams = RaycastParams.new()
+    rayParams.FilterType = Enum.RaycastFilterType.Exclude
+    rayParams.FilterDescendantsInstances = {Players.LocalPlayer.Character}
+    
+    local rayResult = Workspace:Raycast(
+        safePos + Vector3.new(0, 10, 0),
+        Vector3.new(0, -50, 0),
+        rayParams
+    )
+    
+    if rayResult then
+        return rayResult.Position + Vector3.new(0, 3, 0)
+    end
+    
+    return safePos
+end
+
+-- Get list of landmarks for UI
+function Teleport.GetLandmarks()
+    return CONFIG.LANDMARKS
+end
+
+-- Teleport to a landmark by name
+function Teleport.TeleportToLandmark(landmarkName)
+    for _, landmark in ipairs(CONFIG.LANDMARKS) do
+        if landmark.Name == landmarkName then
+            local target = getInstance(landmark.Path)
+            if target then
+                -- Use safe position calculation
+                local safePos = getSafeTeleportPosition(target)
+                if safePos then
+                    Teleport.TeleportTo(safePos, 0) -- Already calculated height
+                else
+                    -- Fallback to direct teleport with offset
+                    Teleport.TeleportTo(target, 8)
+                end
+                return true, nil
+            else
+                return false, "Location not loaded (try moving closer)"
+            end
+        end
+    end
+    return false, "Landmark not found"
 end
 
 return Teleport
