@@ -121,6 +121,7 @@ local Speed = loadModule("Features/Speed.lua")
 if not Speed then warn("[MainInterface] CRITICAL: Speed module failed to load!") else print("[MainInterface] Speed module loaded table: " .. tostring(Speed)) end
 local Teleport = loadModule("Features/Teleport.lua") -- [NEW]
 local PhysicsOptimizer = loadModule("Features/PhysicsOptimizer.lua") -- [NEW]
+local Tools = loadModule("Features/Tools.lua") -- [NEW] Free Camera & Spectator
 
 -- UI Tabs
 local HomeTab = loadModule("UI/Tabs/HomeTab.lua")
@@ -132,6 +133,7 @@ local ExplorerTab = loadModule("UI/Tabs/ExplorerTab.lua")
 local MiscTab = loadModule("UI/Tabs/MiscTab.lua")
 local AutoCollectTab = loadModule("UI/Tabs/AutoCollectTab.lua")
 local TeleportTab = loadModule("UI/Tabs/TeleportTab.lua") -- [NEW]
+local ToolsTab = loadModule("UI/Tabs/ToolsTab.lua") -- [NEW] Free Camera & Spectator
 
 print("[OP] Modules loaded!")
 
@@ -150,6 +152,7 @@ if getgenv then
         Fly = Fly,
         Speed = Speed,
         PhysicsOptimizer = PhysicsOptimizer,
+        Tools = Tools,
     }
 end
 
@@ -170,6 +173,7 @@ local Features = {
     Speed = Speed, -- [FIX] Added missing registration
     Teleport = Teleport, -- [NEW]
     PhysicsOptimizer = PhysicsOptimizer, -- [NEW]
+    Tools = Tools, -- [NEW] Free Camera & Spectator
 }
 
 -- ============================================
@@ -241,6 +245,7 @@ local function createUI(WindUI)
     if Speed then Speed.Init() end
     if Teleport then Teleport.Init() end -- [NEW]
     if PhysicsOptimizer then PhysicsOptimizer.Init() end -- [NEW]
+    if Tools then Tools.Init() end -- [NEW] Free Camera & Spectator
     
     -- Create window
     local Window = WindUI:CreateWindow({
@@ -306,6 +311,10 @@ local function createUI(WindUI)
 
     if AutoCollectTab then
         AutoCollectTab.Create(Window, Features, CONFIG, WindUI)
+    end
+
+    if ToolsTab then
+        ToolsTab.Create(Window, Features, CONFIG, WindUI) -- [NEW] Free Camera & Spectator
     end
     
     if SettingsTab then

@@ -1,0 +1,204 @@
+=== WindUI Log Session ===
+Started: 2026-02-05 00:00:36
+User: nsopnet (ID: 8401342884)
+========================================
+
+[15:00:38][Info] Loader: Fetching MainInterface...
+[15:00:39][Info] [OP] Loading modules...
+[15:00:40][Info] [MainInterface] Speed module loaded table: table: 0x9aa3aeede3189958
+[15:00:40][Info] [OP] Modules loaded!
+[15:00:40][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:00:40][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:00:40][Info] [OP] Initializing 99 Nights OP Script...
+[15:00:40][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:00:40][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:00:40][Info] [Fly] Initialized
+[15:00:40][Info] [Teleport] Initialized
+[15:00:40][Info] [OP] SoundManager: Initialized (DELETE MODE)
+[15:00:40][Info] [PhysicsOptimizer] Initialized
+[15:00:40][Info] [Tools] Initialized
+[15:00:40][Info] [Speed] Initialized
+[15:00:40][Info] [OP] Window created. Type: table
+[15:00:43][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:00:43][Info] [OP] UI Created! Ready to use.
+[15:00:43][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:00:43][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:01:19][Info] [OP] GodMode: STARTED
+[15:01:19][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[15:01:56][Info] deactivate and unequip
+[15:05:01][Info] function is already waiting :)
+[15:05:19][Info] deactivate and unequip
+[15:08:03][Info] [Tools][DEBUG] SpectatorMode.Start called
+[15:08:03][Info] [Tools][DEBUG] - targetType: Self
+[15:08:03][Info] [Tools][DEBUG] - target: nil
+[15:08:03][Info] [Tools][DEBUG] - TargetType set to: Self
+[15:08:03][Info] [Tools][DEBUG] - Self mode, character: nsopnet
+[15:08:03][Info] [Tools][DEBUG] - Camera: exists
+[15:08:03][Info] [Tools][DEBUG] - ActiveMode set to: Spectator
+[15:08:03][Info] [Tools] Spectator: Following Self (Self)
+[15:08:03][Info] [Tools][DEBUG] - Camera backed up
+[15:08:03][Info] [Tools][DEBUG] Update loop #1
+[15:08:03][Info] [Tools][DEBUG] - elapsed: 0.05s
+[15:08:03][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:04][Info] [Tools][DEBUG] - elapsed: 1.06s
+[15:08:04][Info] [Tools][DEBUG] Update loop #61
+[15:08:04][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:05][Info] [Tools] Spectator: Disabled
+[15:08:09][Info] [Tools][DEBUG] - targetType: NPCs
+[15:08:09][Info] [Tools][DEBUG] - TargetType set to: NPCs
+[15:08:09][Info] [Tools][DEBUG] SpectatorMode.Start called
+[15:08:09][Info] [Tools][DEBUG] - target: Bunny
+[15:08:09][Info] [Tools][DEBUG] - NPCs mode, target: Bunny
+[15:08:09][Info] [Tools][DEBUG] - NPC Humanoid: exists, HP=30
+[15:08:09][Info] [Tools][DEBUG] - Camera: exists
+[15:08:09][Info] [Tools][DEBUG] - NPC HumanoidRootPart: exists
+[15:08:09][Info] [Tools][DEBUG] - ActiveMode set to: Spectator
+[15:08:09][Info] [Tools] Spectator: Following Bunny (NPCs)
+[15:08:09][Info] [Tools][DEBUG] - Camera backed up
+[15:08:09][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:09][Info] [Tools][DEBUG] Update loop #1
+[15:08:09][Info] [Tools][DEBUG] - elapsed: 0.02s
+[15:08:10][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:10][Info] [Tools][DEBUG] - elapsed: 1.03s
+[15:08:10][Info] [Tools][DEBUG] Update loop #61
+[15:08:11][Info] [Tools][DEBUG] - elapsed: 2.04s
+[15:08:11][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:11][Info] [Tools][DEBUG] Update loop #121
+[15:08:12][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:12][Info] [Tools][DEBUG] - elapsed: 3.04s
+[15:08:12][Info] [Tools][DEBUG] Update loop #181
+[15:08:13][Info] [Tools][DEBUG] Update loop #241
+[15:08:13][Info] [Tools][DEBUG] - elapsed: 4.06s
+[15:08:13][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:14][Info] [Tools][DEBUG] Update loop #301
+[15:08:14][Info] [Tools][DEBUG] - elapsed: 5.06s
+[15:08:14][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:15][Info] [Tools][DEBUG] Update loop #361
+[15:08:15][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:15][Info] [Tools][DEBUG] - elapsed: 6.05s
+[15:08:16][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:16][Info] [Tools][DEBUG] - elapsed: 7.06s
+[15:08:16][Info] [Tools][DEBUG] Update loop #421
+[15:08:17][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:17][Info] [Tools][DEBUG] - elapsed: 8.09s
+[15:08:17][Info] [Tools][DEBUG] Update loop #481
+[15:08:18][Info] [Tools][DEBUG] - elapsed: 9.11s
+[15:08:18][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:18][Info] [Tools][DEBUG] Update loop #541
+[15:08:19][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:19][Info] [Tools][DEBUG] Update loop #601
+[15:08:19][Info] [Tools][DEBUG] - elapsed: 10.10s
+[15:08:20][Info] [Tools][DEBUG] Update loop #661
+[15:08:20][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:20][Info] [Tools][DEBUG] - elapsed: 11.12s
+[15:08:21][Info] [Tools][DEBUG] Update loop #721
+[15:08:21][Info] [Tools][DEBUG] - elapsed: 12.11s
+[15:08:21][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:22][Info] [Tools][DEBUG] Update loop #781
+[15:08:22][Info] [Tools][DEBUG] - elapsed: 13.11s
+[15:08:22][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:23][Info] [Tools][DEBUG] Update loop #841
+[15:08:23][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:23][Info] [Tools][DEBUG] - elapsed: 14.13s
+[15:08:24][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:24][Info] [Tools][DEBUG] Update loop #901
+[15:08:24][Info] [Tools][DEBUG] - elapsed: 15.15s
+[15:08:25][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:25][Info] [Tools][DEBUG] - elapsed: 16.15s
+[15:08:25][Info] [Tools][DEBUG] Update loop #961
+[15:08:26][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:26][Info] [Tools][DEBUG] - elapsed: 17.16s
+[15:08:26][Info] [Tools][DEBUG] Update loop #1021
+[15:08:27][Info] [Tools][DEBUG] Update loop #1081
+[15:08:27][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:27][Info] [Tools][DEBUG] - elapsed: 18.16s
+[15:08:28][Info] [Tools][DEBUG] Update loop #1141
+[15:08:28][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:28][Info] [Tools][DEBUG] - elapsed: 19.16s
+[15:08:29][Info] [Tools][DEBUG] - elapsed: 20.16s
+[15:08:29][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:29][Info] [Tools][DEBUG] Update loop #1201
+[15:08:30][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:30][Info] [Tools][DEBUG] - elapsed: 21.16s
+[15:08:30][Info] [Tools][DEBUG] Update loop #1261
+[15:08:31][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:31][Info] [Tools][DEBUG] Update loop #1321
+[15:08:31][Info] [Tools][DEBUG] - elapsed: 22.16s
+[15:08:32][Info] [Tools][DEBUG] - elapsed: 23.16s
+[15:08:32][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:32][Info] [Tools][DEBUG] Update loop #1381
+[15:08:33][Info] [Tools][DEBUG] - elapsed: 24.16s
+[15:08:33][Info] [Tools][DEBUG] Update loop #1441
+[15:08:33][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:34][Info] [Tools][DEBUG] Update loop #1501
+[15:08:34][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:34][Info] [Tools][DEBUG] - elapsed: 25.16s
+[15:08:35][Info] [Tools][DEBUG] - elapsed: 26.16s
+[15:08:35][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:35][Info] [Tools][DEBUG] Update loop #1561
+[15:08:36][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:36][Info] [Tools][DEBUG] Update loop #1621
+[15:08:36][Info] [Tools][DEBUG] - elapsed: 27.16s
+[15:08:37][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:37][Info] [Tools][DEBUG] Update loop #1681
+[15:08:37][Info] [Tools][DEBUG] - elapsed: 28.16s
+[15:08:38][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:38][Info] [Tools][DEBUG] Update loop #1741
+[15:08:38][Info] [Tools][DEBUG] - elapsed: 29.16s
+[15:08:39][Info] [Tools][DEBUG] - elapsed: 30.18s
+[15:08:39][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:39][Info] [Tools][DEBUG] Update loop #1801
+[15:08:40][Info] [Tools][DEBUG] - elapsed: 31.18s
+[15:08:40][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:40][Info] [Tools][DEBUG] Update loop #1861
+[15:08:41][Info] [Tools][DEBUG] Update loop #1921
+[15:08:41][Info] [Tools][DEBUG] - elapsed: 32.18s
+[15:08:41][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:42][Info] [Tools][DEBUG] Update loop #1981
+[15:08:42][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:42][Info] [Tools][DEBUG] - elapsed: 33.18s
+[15:08:43][Info] [Tools][DEBUG] Update loop #2041
+[15:08:43][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:43][Info] [Tools][DEBUG] - elapsed: 34.17s
+[15:08:44][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:44][Info] [Tools][DEBUG] - elapsed: 35.18s
+[15:08:44][Info] [Tools][DEBUG] Update loop #2101
+[15:08:45][Info] [Tools][DEBUG] Update loop #2161
+[15:08:45][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:45][Info] [Tools][DEBUG] - elapsed: 36.20s
+[15:08:46][Info] [Tools][DEBUG] Update loop #2221
+[15:08:46][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:46][Info] [Tools][DEBUG] - elapsed: 37.22s
+[15:08:47][Info] [Tools][DEBUG] Update loop #2281
+[15:08:47][Info] [Tools][DEBUG] - elapsed: 38.22s
+[15:08:47][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:48][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:48][Info] [Tools][DEBUG] - elapsed: 39.23s
+[15:08:48][Info] [Tools][DEBUG] Update loop #2341
+[15:08:49][Info] [Tools][DEBUG] Update loop #2401
+[15:08:49][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:49][Info] [Tools][DEBUG] - elapsed: 40.23s
+[15:08:50][Info] [Tools][DEBUG] - elapsed: 41.25s
+[15:08:50][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:50][Info] [Tools][DEBUG] Update loop #2461
+[15:08:51][Info] [Tools][DEBUG] Update loop #2521
+[15:08:51][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:51][Info] [Tools][DEBUG] - elapsed: 42.25s
+[15:08:52][Info] [Tools][DEBUG] Update loop #2581
+[15:08:52][Info] [Tools][DEBUG] - elapsed: 43.25s
+[15:08:52][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:53][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:53][Info] [Tools][DEBUG] Update loop #2641
+[15:08:53][Info] [Tools][DEBUG] - elapsed: 44.24s
+[15:08:54][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:54][Info] [Tools][DEBUG] Update loop #2701
+[15:08:54][Info] [Tools][DEBUG] - elapsed: 45.25s
+[15:08:55][Info] [Tools][DEBUG] Update loop #2761
+[15:08:55][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:55][Info] [Tools][DEBUG] - elapsed: 46.25s
+[15:08:56][Info] [Tools][DEBUG] Update loop #2821
+[15:08:56][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[15:08:56][Info] [Tools][DEBUG] - elapsed: 47.37s
+[15:08:57][Info] [Tools] Spectator: Disabled
+[15:09:52][Info] deactivate and unequip
+[15:10:11][Info] deactivate and unequip

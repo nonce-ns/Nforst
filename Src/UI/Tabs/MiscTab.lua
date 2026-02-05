@@ -135,7 +135,7 @@ function MiscTab.Create(Window, Utils, Remote, CONFIG, Features, WindUI)
     Tab:Space({ Size = 10 })
 
     -- ========================================
-    -- LIGHTING / VISUAL
+    -- LIGHTING / VISUAL (Persistent)
     -- ========================================
     local LightingSection = Tab:Section({
         Title = "💡 Lighting",
@@ -156,59 +156,150 @@ function MiscTab.Create(Window, Utils, Remote, CONFIG, Features, WindUI)
         GlobalShadows = Lighting.GlobalShadows,
     }
     
-    -- Fullbright Toggle
+    -- Connection storage for persistent enforcement
+    local LightingConnections = {
+        Fullbright = {},
+        NoShadows = nil,
+        NoFog = {},
+    }
+    
+    -- Helper to disconnect all connections in a table
+    local function disconnectLightingConns(connTable)
+        if type(connTable) == "table" then
+            for _, conn in pairs(connTable) do
+                pcall(function() conn:Disconnect() end)
+            end
+        elseif connTable then
+            pcall(function() connTable:Disconnect() end)
+        end
+    end
+    
+    local FULLBRIGHT = {
+        Ambient = Color3.new(1, 1, 1), -- pure white
+        Brightness = 3,
+        OutdoorAmbient = Color3.new(1, 1, 1),
+        ClockTime = 12, -- noon = brightest
+        EnvironmentDiffuseScale = 1,
+        EnvironmentSpecularScale = 1,
+    }
+    
+    -- Store original ClockTime
+    OriginalLighting.ClockTime = Lighting.ClockTime
+    OriginalLighting.EnvironmentDiffuseScale = Lighting.EnvironmentDiffuseScale
+    OriginalLighting.EnvironmentSpecularScale = Lighting.EnvironmentSpecularScale
+    
+    -- Fullbright Toggle (Persistent)
     LightingSection:Toggle({
         Flag = "Lighting.Fullbright",
-        Title = "☀️ Fullbright",
-        Desc = "Make everything bright (no darkness)",
+        Title = "☀️ Fullbright (Persistent)",
+        Desc = "Max brightness + lock time to noon",
         Value = false,
         Callback = function(enabled)
+            -- Disconnect existing connections
+            disconnectLightingConns(LightingConnections.Fullbright)
+            LightingConnections.Fullbright = {}
+            
             if enabled then
-                Lighting.Ambient = Color3.fromRGB(200, 200, 200)
-                Lighting.Brightness = 2
-                Lighting.OutdoorAmbient = Color3.fromRGB(200, 200, 200)
+                -- Apply immediately
+                Lighting.Ambient = FULLBRIGHT.Ambient
+                Lighting.Brightness = FULLBRIGHT.Brightness
+                Lighting.OutdoorAmbient = FULLBRIGHT.OutdoorAmbient
+                Lighting.ClockTime = FULLBRIGHT.ClockTime
+                Lighting.EnvironmentDiffuseScale = FULLBRIGHT.EnvironmentDiffuseScale
+                Lighting.EnvironmentSpecularScale = FULLBRIGHT.EnvironmentSpecularScale
+                
+                -- Connect PropertyChanged to enforce values
+                LightingConnections.Fullbright.Ambient = Lighting:GetPropertyChangedSignal("Ambient"):Connect(function()
+                    Lighting.Ambient = FULLBRIGHT.Ambient
+                end)
+                LightingConnections.Fullbright.Brightness = Lighting:GetPropertyChangedSignal("Brightness"):Connect(function()
+                    Lighting.Brightness = FULLBRIGHT.Brightness
+                end)
+                LightingConnections.Fullbright.OutdoorAmbient = Lighting:GetPropertyChangedSignal("OutdoorAmbient"):Connect(function()
+                    Lighting.OutdoorAmbient = FULLBRIGHT.OutdoorAmbient
+                end)
+                LightingConnections.Fullbright.ClockTime = Lighting:GetPropertyChangedSignal("ClockTime"):Connect(function()
+                    Lighting.ClockTime = FULLBRIGHT.ClockTime
+                end)
             else
+                -- Restore original values
                 Lighting.Ambient = OriginalLighting.Ambient
                 Lighting.Brightness = OriginalLighting.Brightness
                 Lighting.OutdoorAmbient = OriginalLighting.OutdoorAmbient
+                Lighting.ClockTime = OriginalLighting.ClockTime
+                Lighting.EnvironmentDiffuseScale = OriginalLighting.EnvironmentDiffuseScale
+                Lighting.EnvironmentSpecularScale = OriginalLighting.EnvironmentSpecularScale
             end
         end,
     })
     
-    -- Remove Shadows Toggle
+    -- Remove Shadows Toggle (Persistent)
     LightingSection:Toggle({
         Flag = "Lighting.NoShadows",
-        Title = "🌫️ Remove Shadows",
-        Desc = "Disable global shadows",
+        Title = "🌫️ Remove Shadows (Persistent)",
+        Desc = "Disable global shadows - stays disabled",
         Value = false,
         Callback = function(enabled)
-            Lighting.GlobalShadows = not enabled
+            -- Disconnect existing
+            if LightingConnections.NoShadows then
+                pcall(function() LightingConnections.NoShadows:Disconnect() end)
+                LightingConnections.NoShadows = nil
+            end
+            
+            if enabled then
+                Lighting.GlobalShadows = false
+                LightingConnections.NoShadows = Lighting:GetPropertyChangedSignal("GlobalShadows"):Connect(function()
+                    Lighting.GlobalShadows = false
+                end)
+            else
+                Lighting.GlobalShadows = OriginalLighting.GlobalShadows
+            end
         end,
     })
     
-    -- Remove Fog Toggle
+    -- Remove Fog Toggle (Persistent)
     LightingSection:Toggle({
         Flag = "Lighting.NoFog",
-        Title = "🌁 Remove Fog",
-        Desc = "Remove fog effects",
+        Title = "🌁 Remove Fog (Persistent)",
+        Desc = "Remove fog effects - stays removed",
         Value = false,
         Callback = function(enabled)
+            -- Disconnect existing
+            disconnectLightingConns(LightingConnections.NoFog)
+            LightingConnections.NoFog = {}
+            
             if enabled then
                 Lighting.FogEnd = 1000000
                 Lighting.FogStart = 1000000
+                
+                -- Enforce fog values
+                LightingConnections.NoFog.FogEnd = Lighting:GetPropertyChangedSignal("FogEnd"):Connect(function()
+                    Lighting.FogEnd = 1000000
+                end)
+                LightingConnections.NoFog.FogStart = Lighting:GetPropertyChangedSignal("FogStart"):Connect(function()
+                    Lighting.FogStart = 1000000
+                end)
+                
                 -- Remove Atmosphere
                 for _, child in ipairs(Lighting:GetChildren()) do
                     if child:IsA("Atmosphere") then
                         child.Density = 0
                     end
                 end
+                
+                -- Watch for new Atmosphere added
+                LightingConnections.NoFog.ChildAdded = Lighting.ChildAdded:Connect(function(child)
+                    if child:IsA("Atmosphere") then
+                        child.Density = 0
+                    end
+                end)
             else
                 Lighting.FogEnd = OriginalLighting.FogEnd
                 Lighting.FogStart = OriginalLighting.FogStart
-                -- Restore Atmosphere (can't fully restore, just set to low density)
+                -- Restore Atmosphere
                 for _, child in ipairs(Lighting:GetChildren()) do
                     if child:IsA("Atmosphere") then
-                        child.Density = 0.3 -- Default-ish value
+                        child.Density = 0.3
                     end
                 end
             end

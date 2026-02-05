@@ -1,8 +1,8 @@
 # 99 Nights In The Forest - OP Script
 
 > **🎮 Game:** 99 Nights In The Forest (Roblox)  
-> **📅 Last Updated:** 2026-02-01  
-> **🔧 Version:** 2.6.0
+> **📅 Last Updated:** 2026-02-05  
+> **🔧 Version:** 2.7.0
 
 Modular survival script dengan WindUI, clean architecture, dan config persistence.
 
@@ -35,9 +35,22 @@ Modular survival script dengan WindUI, clean architecture, dan config persistenc
 | **Tree Farm** | 🌲 Farming | Burst chopping (instant), smart tier check |
 | **Auto Plant** | 🌲 Farming | 6 Patterns (Heart, Star, etc) + Preview |
 | **Item Collector** | 🎒 Inventory | Auto collect items with optimized filtering |
+| **Free Camera** | 🎥 Tools | **NEW!** Cinematic mode, WASD+QE, mobile support |
+| **Spectator Mode** | 🎥 Tools | **NEW!** Follow players, zoom control, orbit camera |
 | **Anti-Lag** | 🔧 System | Delete All Sounds mode for max FPS |
 
-### New Features (v2.6.0)
+### New Features (v2.7.0)
+- **Free Camera**:
+  - **PC**: WASD + Q/E (naik/turun) + Shift (speed) + Right-click (rotate)
+  - **Mobile**: Virtual joystick (left) + Up/Down/Speed buttons (right)
+  - Camera movement independen dari character
+- **Spectator Mode**:
+  - Pilih player dari dropdown, orbit camera dengan right-click drag
+  - **Zoom Control**: Slider 5-100 studs, scroll mouse (PC), atau +/- buttons (Mobile)
+  - Auto-detect jika player target keluar dari game
+  - Next/Previous player buttons
+
+### Features (v2.6.0)
 - **Chest Explorer v2.1**: Menggunakan sistem **Hybrid Teleport + Fly Stabilizer**. Karakter tidak akan jatuh ke void atau nyangkut. Aman reload script (Auto Cleanup).
 - **Universal Fly**:
   - **PC**: WASD + Spasi (Naik) + Ctrl (Turun).
@@ -93,7 +106,8 @@ Nforst/
 │   │   ├── ItemCollector.lua # Optimized Item Scan (v2.6)
 │   │   ├── ChestExplorer.lua # Chest Auto-Open (v2.6)
 │   │   ├── Fly.lua           # Universal Fly (v2.6)
-│   │   └── Speed.lua         # Persistent Speed (v2.6)
+│   │   ├── Speed.lua         # Persistent Speed (v2.6)
+│   │   └── Tools.lua         # Free Camera & Spectator (v2.7)
 │   └── UI/                   # User Interface
 │       ├── MainInterface.lua # Main Window
 │       └── Tabs/             
@@ -104,6 +118,7 @@ Nforst/
 │           ├── ExplorerTab.lua # Map Revealer & Chest Explorer
 │           ├── MiscTab.lua   # Movement (Fly/Speed) & Utilities
 │           ├── AutoCollectTab.lua # Item Collector Control
+│           ├── ToolsTab.lua  # Free Camera & Spectator (v2.7)
 │           └── SettingsTab.lua 
 ├── WindUI/                   # UI Library (local)
 └── CobaltLogCleaner/         # Log analysis tool
@@ -277,6 +292,12 @@ loadstring(game:HttpGet("http://localhost:8000/main.lua"))()
 ---
 
 ## 📜 Changelog
+
+### v2.7.0 (2026-02-05)
+- **Tools Tab**: Added **Free Camera** (WASD+QE, mobile joystick, Shift for speed)
+- **Tools Tab**: Added **Spectator Mode** (orbit camera, zoom 5-100 studs, next/prev player)
+- **Mobile Support**: Full touch controls for both features
+- **Clean Cleanup**: Camera restores perfectly on disable
 
 ### v2.6.0 (2026-02-01)
 - **Chest Explorer**: Upgraded to v2.1 with Teleport + Fly Stabilizer (Anti-Void)
