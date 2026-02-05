@@ -122,6 +122,7 @@ if not Speed then warn("[MainInterface] CRITICAL: Speed module failed to load!")
 local Teleport = loadModule("Features/Teleport.lua") -- [NEW]
 local PhysicsOptimizer = loadModule("Features/PhysicsOptimizer.lua") -- [NEW]
 local Tools = loadModule("Features/Tools.lua") -- [NEW] Free Camera & Spectator
+local KillTarget = loadModule("Features/KillTarget.lua") -- [NEW] Teleport Kill
 
 -- UI Tabs
 local HomeTab = loadModule("UI/Tabs/HomeTab.lua")
@@ -153,6 +154,7 @@ if getgenv then
         Speed = Speed,
         PhysicsOptimizer = PhysicsOptimizer,
         Tools = Tools,
+        KillTarget = KillTarget,
     }
 end
 
@@ -174,6 +176,7 @@ local Features = {
     Teleport = Teleport, -- [NEW]
     PhysicsOptimizer = PhysicsOptimizer, -- [NEW]
     Tools = Tools, -- [NEW] Free Camera & Spectator
+    KillTarget = KillTarget, -- [NEW] Teleport Kill
 }
 
 -- ============================================
@@ -200,6 +203,13 @@ local function createUI(WindUI)
             Utils = Utils,
             Remote = Remote,
             WindUI = WindUI,
+        })
+    end
+    
+    if KillTarget then
+        KillTarget.Init({
+            Utils = Utils,
+            Remote = Remote,
         })
     end
 
@@ -294,7 +304,7 @@ local function createUI(WindUI)
     end
     
     if CombatTab then
-        CombatTab.Create(Window, Features, CONFIG)
+        CombatTab.Create(Window, Features, CONFIG, WindUI)
     end
     
     if FarmingTab then
