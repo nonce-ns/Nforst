@@ -1,0 +1,142 @@
+=== WindUI Log Session ===
+Started: 2026-02-06 04:26:49
+User: nsopnet (ID: 8401342884)
+========================================
+
+[19:26:50][Info] Loader: Fetching MainInterface...
+[19:26:52][Info] [OP] Loading modules...
+[19:26:52][Info] [MainInterface] Speed module loaded table: table: 0x52570b27937267eb
+[19:26:52][Warning] [Loader] Failed to load: Features/FishFarm.lua - :78: attempt to call a nil value
+[19:26:53][Info] [OP] Modules loaded!
+[19:26:53][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[19:26:53][Info] [OP] Initializing 99 Nights OP Script...
+[19:26:53][Info] [OP] KillTarget: Initialized
+[19:26:53][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[19:26:53][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[19:26:53][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[19:26:53][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[19:26:53][Info] [Fly] Initialized
+[19:26:53][Info] [Speed] Initialized
+[19:26:53][Info] [Teleport] Initialized
+[19:26:53][Info] [PhysicsOptimizer] Initialized
+[19:26:53][Info] [Tools] Initialized
+[19:26:53][Info] [OP] Window created. Type: table
+[19:26:57][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[19:26:57][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[19:26:57][Info] [OP] UI Created! Ready to use.
+[19:26:57][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[19:29:26][Info] Stack Begin
+[19:29:26][Info] Script 'Players.nsopnet.PlayerScripts.Client.NpcModules.NPCModuleClient', Line 29 - function NPCAdded
+[19:29:26][Warning] Infinite yield possible on 'Deer:WaitForChild("Animations")'
+[19:29:26][Info] Stack End
+[19:29:39][Info] Loader: Fetching MainInterface...
+[19:29:40][Info] [ChestExplorer] Stopped/Finished
+[19:29:40][Info] [ChestExplorer] Stopped/Finished
+[19:29:40][Info] [ChestExplorer] Cleaned up resources
+[19:29:41][Info] [OP] MapRevealer: Cleanup complete
+[19:29:41][Info] [Tools] Cleanup complete
+[19:29:41][Info] [PhysicsOptimizer] Storage box destroyed
+[19:29:41][Info] [OP] GodMode: STOPPED
+[19:29:41][Info] [OP] GodMode: STOPPED
+[19:29:41][Info] [OP] AutoEat: STOPPED
+[19:29:41][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[19:29:41][Info] [OP] AutoEat: STOPPED
+[19:29:41][Info] [OP] Loading modules...
+[19:29:41][Info] [OP] SoundManager: Cleanup complete
+[19:29:42][Info] [MainInterface] Speed module loaded table: table: 0xfb8708bba8254e5b
+[19:29:42][Info] [OP] Initializing 99 Nights OP Script...
+[19:29:42][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[19:29:42][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[19:29:42][Info] [OP] KillTarget: Initialized
+[19:29:42][Info] [OP] Modules loaded!
+[19:29:42][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[19:29:42][Info] [Speed] Initialized
+[19:29:42][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[19:29:42][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[19:29:42][Info] [Fly] Initialized
+[19:29:42][Info] [PhysicsOptimizer] Initialized
+[19:29:42][Info] [Teleport] Initialized
+[19:29:42][Info] [Tools] Initialized
+[19:29:46][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[19:29:46][Info] [OP] Window created. Type: table
+[19:29:46][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[19:29:46][Info] [OP] UI Created! Ready to use.
+[19:29:46][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[19:30:30][Info] function is already waiting :)
+[19:31:06][Info] [OP] MapRevealer: Radius set to 443
+[19:31:06][Info] [OP] MapRevealer: Radius set to 1239
+[19:31:06][Info] [OP] MapRevealer: Radius set to 1500
+[19:31:15][Info] [ItemCollector] Selected: Chair
+[19:31:15][Info] [ItemCollector] Selected: Coal
+[19:31:15][Info] [ItemCollector] Selected: Fuel Canister
+[19:31:15][Info] [ItemCollector] Selected: Cultist
+[19:31:15][Info] [ItemCollector] Selected: Log
+[19:31:21][Info] [Remote][Success] RemoteEvents found: 202 remotes
+[19:31:21][Info] [ItemCollector] Started Collection Thread.
+[19:31:26][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[19:31:28][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[19:31:28][Info] [ItemCollector] Collected 53 items.
+[19:31:48][Info] deactivate and unequip
+[19:32:05][Info] [OP] MapRevealer: Found Campfire at 0, 1.5, 0 (Dist: 106.0)
+[19:32:05][Info] [OP] MapRevealer: Radius set to 1500
+[19:32:05][Info] [OP] MapRevealer: Spiral from 0, 1.5, 0 at height 40
+[19:32:05][Info] [OP] MapRevealer: Starting (speed=170)
+[19:32:25][Info] Entered biome Volcanic
+[19:32:25][Info] Volcanic
+[19:32:26][Info] Entered biome nil
+[19:32:26][Info] nil
+[19:32:27][Info] Found touch zone...
+[19:32:27][Info] BULLET THING ADDED
+[19:32:30][Warning] item is no longer in workspace
+[19:32:38][Info] Arrow nil
+[19:32:38][Info] Entered biome Volcanic
+[19:32:38][Info] Volcanic
+[19:32:42][Info] Entered biome nil
+[19:32:42][Info] nil
+[19:32:57][Info] Volcanic
+[19:32:57][Info] Entered biome Volcanic
+[19:33:00][Info] nil
+[19:33:00][Info] Entered biome nil
+[19:33:04][Info] Entered biome Fairy
+[19:33:04][Info] Fairy
+[19:33:06][Info] nil
+[19:33:06][Info] Entered biome nil
+[19:33:09][Info] Lionfish true
+[19:33:09][Info] Old Boot true
+[19:33:09][Info] Salmon true
+[19:33:09][Info] Shark true
+[19:33:09][Info] Clownfish true
+[19:33:09][Info] Lava Eel true
+[19:33:09][Info] Mackerel true
+[19:33:09][Info] Jellyfish true
+[19:33:09][Info] Swordfish true
+[19:33:18][Info] Entered biome Volcanic
+[19:33:18][Info] Volcanic
+[19:33:23][Info] Entered biome nil
+[19:33:23][Info] nil
+[19:33:26][Info] Entered biome Fairy
+[19:33:26][Info] Fairy
+[19:33:30][Info] Entered biome nil
+[19:33:30][Info] nil
+[19:33:34][Error] Sign is not a valid member of Model "Workspace.Map.Landmarks.Fishing Hut.FishPoster"
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.StructureModules.FishPosterClient', Line 16 - function NewFishPoster
+    Stack End
+[19:33:43][Info] Volcanic
+[19:33:43][Info] Entered biome Volcanic
+[19:33:49][Info] nil
+[19:33:49][Info] Entered biome nil
+[19:33:54][Info] Entered biome Fairy
+[19:33:54][Info] Fairy
+[19:33:55][Info] [OP] MapRevealer: Stop requested
+[19:33:55][Info] [OP] MapRevealer: Done!
+[19:33:55][Info] [OP] MapRevealer: Teleported to campfire
+[19:33:55][Info] Entered biome nil
+[19:33:55][Info] nil
+[19:34:02][Info] [ItemCollector] Started Collection Thread.
+[19:34:06][Info] [ItemCollector] Process Stopped by User.
+[19:35:01][Info] Cast rod
+[19:35:02][Info] collision with land
+[19:35:03][Info] new input type Touch
+[19:35:10][Info] [OP] GodMode: STARTED
+[19:36:46][Info] deactivate and unequip

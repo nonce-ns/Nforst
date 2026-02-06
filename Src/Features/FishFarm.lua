@@ -73,6 +73,10 @@ local Settings = {
 -- ============================================
 local function isRod(name)
     if not name then return false end
+    if not ROD_KEYWORD then return false end
+    -- Check string library just in case
+    if not string or not string.lower or not string.find then return false end
+    
     return string.find(string.lower(name), ROD_KEYWORD) ~= nil
 end
 
@@ -245,12 +249,15 @@ local function getGlobalActiveHotspot()
             local hotspots = zone:FindFirstChild("Hotspots")
             if hotspots then
                 for _, hotspot in ipairs(hotspots:GetChildren()) do
-                    -- SAFETY: Ensure it's a Part before checking Position
-                    if hotspot:IsA("BasePart") then
+                    -- SUPPORT: Handle both Parts and Models safely
+                    local isPart = hotspot:IsA("BasePart")
+                    local isModel = hotspot:IsA("Model")
+                    
+                    if isPart or isModel then
                         local bubbles = hotspot:FindFirstChild("Bubbles")
                         -- STRICT CHECK: Must be Enabled=true
                         if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
-                            local pos = hotspot.Position
+                            local pos = isPart and hotspot.Position or hotspot:GetPivot().Position
                             local dist = (pos - root.Position).Magnitude
                             
                             if dist < shortestDist then
@@ -284,11 +291,16 @@ local function getNearestHotspot()
             local hotspots = zone:FindFirstChild("Hotspots")
             if hotspots then
                 for _, hotspot in ipairs(hotspots:GetChildren()) do
-                    if hotspot:IsA("BasePart") then
+                    local isPart = hotspot:IsA("BasePart")
+                    local isModel = hotspot:IsA("Model")
+                    
+                    if isPart or isModel then
                         local bubbles = hotspot:FindFirstChild("Bubbles")
                         -- Check for Active ParticleEmitter
                         if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
-                            local dist = (hotspot.Position - root.Position).Magnitude
+                            local pos = isPart and hotspot.Position or hotspot:GetPivot().Position
+                            local dist = (pos - root.Position).Magnitude
+                            
                             if dist < bestDist and dist <= WATER_RANGE then
                                 bestDist = dist
                                 bestHotspot = hotspot
@@ -300,7 +312,6 @@ local function getNearestHotspot()
         end
     end
     
-    return bestHotspot, bestDist
     return bestHotspot, bestDist
 end
 
@@ -532,7 +543,7 @@ local function doCast()
     if hotspot then
         -- REVERT: Y-Sync caused parallax issues if water level was wrong.
         -- Using direct hotspot position is safer if dev placed it correctly.
-        targetPos = hotspot.Position 
+        targetPos = hotspot:IsA("BasePart") and hotspot.Position or hotspot:GetPivot().Position
         log("🔥 Targeting Nearby Hotspot: " .. math.floor(hDist) .. " studs")
     else
         -- 2. Accurate Zone Targeting (Normal Mode)
@@ -566,8 +577,10 @@ local function doCast()
         end
     end
     
+    -- OFFSET FIX: Account for GuiInset (TopBar)
+    local guiInset = game:GetService("GuiService"):GetGuiInset()
     local screenX = math.floor(screenPos.X)
-    local screenY = math.floor(screenPos.Y)
+    local screenY = math.floor(screenPos.Y + guiInset.Y) -- Add inset to Y
     
     State.LastCastTime = tick()
     State.CastStartTime = tick() -- Capture precise start time for smart logic
