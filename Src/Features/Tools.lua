@@ -1098,55 +1098,31 @@ function SpectatorMode.Start(targetType, target)
                 CONFIG.MinDistance,
                 CONFIG.MaxDistance
             )
-            print("[Tools][DEBUG] Zoom: distance=" .. State.Spectator.Distance)
         end
     end)
     table.insert(State.Connections, inputConn)
     
     -- Grace period for target loading
     local startTime = tick()
-    local gracePeriod = 2 -- seconds to wait before checking validity
-    local debugCounter = 0
+    local gracePeriod = 2
     
     -- Main update loop
     local updateConn = RunService.RenderStepped:Connect(function(dt)
         if State.ActiveMode ~= "Spectator" then return end
         
-        debugCounter = debugCounter + 1
-        
-        -- Get target root
         local targetRoot = getSpectatorTargetRoot()
-        
-        -- Debug every 60 frames (approx 1 second)
-        if debugCounter % 60 == 1 then
-            print("[Tools][DEBUG] Update loop #" .. debugCounter)
-            print("[Tools][DEBUG] - targetRoot:", targetRoot and targetRoot.Name or "nil")
-            print("[Tools][DEBUG] - elapsed:", string.format("%.2f", tick() - startTime) .. "s")
-        end
         
         -- If no target root, check if we should stop or just skip frame
         if not targetRoot then
-            if debugCounter % 60 == 1 then
-                print("[Tools][DEBUG] - No targetRoot, checking grace period...")
-            end
-            
-            -- Allow grace period for loading
             if tick() - startTime < gracePeriod then
-                if debugCounter <= 5 then
-                    print("[Tools][DEBUG] - In grace period, skipping frame")
-                end
-                return -- Skip frame, wait for target to load
+                return
             end
             
-            print("[Tools][DEBUG] - Grace period expired, checking validity...")
-            -- After grace period, check validity
             if not isTargetValid() then
-                print("[Tools][DEBUG] - isTargetValid returned FALSE, STOPPING!")
                 SpectatorMode.Stop()
                 return
             end
-            print("[Tools][DEBUG] - isTargetValid OK but no targetRoot, skipping frame")
-            return -- Still skip this frame
+            return
         end
         
         local camera = getCamera()

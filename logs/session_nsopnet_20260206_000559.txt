@@ -1,0 +1,1014 @@
+=== WindUI Log Session ===
+Started: 2026-02-06 00:05:59
+User: nsopnet (ID: 8401342884)
+========================================
+
+[15:06:00][Info] Loader: Fetching MainInterface...
+[15:06:02][Info] [OP] Loading modules...
+[15:06:02][Info] [MainInterface] Speed module loaded table: table: 0x02fc7a5501e588a8
+[15:06:03][Info] [OP] Modules loaded!
+[15:06:03][Info] [OP] Initializing 99 Nights OP Script...
+[15:06:03][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:06:03][Info] [OP] KillTarget: Initialized
+[15:06:03][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:06:03][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[15:06:03][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:06:03][Info] [Fly] Initialized
+[15:06:03][Info] [Speed] Initialized
+[15:06:03][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:06:03][Info] [Teleport] Initialized
+[15:06:03][Info] [Tools] Initialized
+[15:06:03][Info] [PhysicsOptimizer] Initialized
+[15:06:03][Info] [FishFarm] Initialized
+[15:06:03][Info] [OP] Window created. Type: table
+[15:06:06][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:06:06][Info] [OP] UI Created! Ready to use.
+[15:06:06][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:06:06][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:06:47][Info] Loader: Fetching MainInterface...
+[15:06:48][Info] [OP] Loading modules...
+[15:06:49][Info] [MainInterface] Speed module loaded table: table: 0xbccf5badff28b0c7
+[15:06:49][Info] [OP] Modules loaded!
+[15:06:49][Info] [OP] Initializing 99 Nights OP Script...
+[15:06:49][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:06:49][Info] [OP] KillTarget: Initialized
+[15:06:49][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:06:49][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:06:49][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:06:49][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[15:06:49][Info] [Teleport] Initialized
+[15:06:49][Info] [Speed] Initialized
+[15:06:49][Info] [Fly] Initialized
+[15:06:49][Info] [PhysicsOptimizer] Initialized
+[15:06:49][Info] [OP] Window created. Type: table
+[15:06:49][Info] [Tools] Initialized
+[15:06:49][Info] [FishFarm] Initialized
+[15:06:52][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:06:53][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:06:53][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:06:53][Info] [OP] UI Created! Ready to use.
+[15:07:28][Warning] [OP] ItemCollector: No items selected!
+[15:07:29][Info] [ItemCollector] Selected: Chair
+[15:07:29][Info] [ItemCollector] Selected: Cultist
+[15:07:29][Info] [ItemCollector] Selected: Log
+[15:07:29][Info] [ItemCollector] Selected: Coal
+[15:07:29][Info] [ItemCollector] Selected: Fuel Canister
+[15:07:30][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[15:07:30][Info] [ItemCollector] Started Collection Thread.
+[15:07:32][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:32][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:32][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:32][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:33][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:33][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:33][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[15:07:34][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[15:07:35][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[15:07:36][Info] [ItemCollector] Process Stopped by User.
+[15:07:39][Info] [ItemCollector] Started Collection Thread.
+[15:07:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:41][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:07:42][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[15:07:42][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[15:07:45][Info] [ItemCollector] Collected 28 items.
+[15:07:45][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[15:07:51][Info] [OP] MapRevealer: Radius set to 1297
+[15:07:51][Info] [OP] MapRevealer: Radius set to 1500
+[15:07:52][Info] [OP] MapRevealer: Radius set to 1500
+[15:07:52][Info] [OP] MapRevealer: Spiral from 0, 1.5, 0 at height 40
+[15:07:52][Info] [OP] MapRevealer: Found Campfire at 0, 1.5, 0 (Dist: 25.9)
+[15:07:52][Info] [OP] MapRevealer: Starting (speed=170)
+[15:08:13][Info] [OP] GodMode: STARTED
+[15:08:15][Warning] item is no longer in workspace
+[15:08:15][Warning] item is no longer in workspace
+[15:08:20][Info] Stack Begin
+[15:08:20][Warning] Infinite yield possible on 'Workspace.Map.Landmarks.Stronghold.Functional:WaitForChild("Sign")'
+[15:08:20][Info] Script 'Players.nsopnet.PlayerScripts.Client.StrongholdModules.StrongholdCountdownClient', Line 69 - function StrongholdAdded
+[15:08:20][Info] Stack End
+[15:08:21][Info] [ItemCollector] Started Collection Thread.
+[15:08:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:08:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:08:21][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:08:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:08:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:08:22][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[15:08:22][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[15:08:22][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[15:08:23][Info] Volcanic
+[15:08:23][Info] Entered biome Volcanic
+[15:08:25][Info] nil
+[15:08:25][Info] Entered biome nil
+[15:08:39][Info] [ItemCollector] Cleared selection (removed 5 items).
+[15:08:39][Info] [ItemCollector UI] Cleared ALL selections via UI.
+[15:08:39][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:08:43][Info] [ItemCollector] Collected 92 items.
+[15:08:43][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[15:08:43][Info] Entered biome Volcanic
+[15:08:43][Info] Volcanic
+[15:08:48][Info] Entered biome nil
+[15:08:48][Info] nil
+[15:08:50][Info] Entered biome Fairy
+[15:08:50][Info] Fairy
+[15:08:52][Info] Entered biome nil
+[15:08:52][Info] nil
+[15:09:06][Info] Volcanic
+[15:09:06][Info] Entered biome Volcanic
+[15:09:12][Info] nil
+[15:09:12][Info] Entered biome nil
+[15:09:14][Info] Entered biome Fairy
+[15:09:14][Info] Fairy
+[15:09:17][Info] nil
+[15:09:17][Info] Entered biome nil
+[15:09:33][Info] Volcanic
+[15:09:33][Info] Entered biome Volcanic
+[15:09:39][Info] nil
+[15:09:39][Info] Entered biome nil
+[15:09:42][Info] Entered biome Fairy
+[15:09:42][Info] Fairy
+[15:09:46][Info] nil
+[15:09:46][Info] Entered biome nil
+[15:10:06][Info] Entered biome Volcanic
+[15:10:06][Info] Volcanic
+[15:10:07][Info] add Workspace.Characters.Kiwi
+[15:10:13][Info] nil
+[15:10:13][Info] Entered biome nil
+[15:10:16][Info] Fairy
+[15:10:16][Info] Entered biome Fairy
+[15:10:21][Info] Entered biome nil
+[15:10:21][Info] nil
+[15:10:34][Info] add Workspace.Characters.Kiwi
+[15:10:40][Info] Entered biome Volcanic
+[15:10:40][Info] Volcanic
+[15:10:45][Info] Volcano
+[15:10:45][Info] Entered biome Volcano
+[15:10:47][Info] Entered biome Volcanic
+[15:10:47][Info] Volcanic
+[15:10:51][Info] nil
+[15:10:51][Info] Entered biome nil
+[15:10:55][Info] Entered biome Fairy
+[15:10:55][Info] Fairy
+[15:10:58][Info] add Workspace.Characters.Kiwi
+[15:11:00][Info] Entered biome nil
+[15:11:00][Info] nil
+[15:11:10][Info] add Workspace.Characters.Kiwi
+[15:11:10][Info] add Workspace.Characters.Kiwi
+[15:11:15][Info] add Workspace.Characters.Kiwi
+[15:11:18][Info] add Workspace.Characters.Kiwi
+[15:11:22][Info] add Workspace.Characters.Kiwi
+[15:11:28][Info] Volcanic
+[15:11:28][Info] Entered biome Volcanic
+[15:11:32][Info] Found touch zone...
+[15:11:32][Info] BULLET THING ADDED
+[15:11:35][Info] add Workspace.Characters.Kiwi
+[15:11:36][Info] nil
+[15:11:36][Info] Entered biome nil
+[15:11:38][Info] [OP] MapRevealer: Stop requested
+[15:11:38][Info] [OP] MapRevealer: Done!
+[15:11:38][Info] [OP] MapRevealer: Teleported to campfire
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:38][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:39][Info] Lionfish true
+[15:11:39][Info] Mackerel true
+[15:11:39][Info] Clownfish true
+[15:11:39][Info] Salmon true
+[15:11:39][Info] Swordfish true
+[15:11:39][Info] Lava Eel true
+[15:11:48][Info] [ChestExplorer] Recorded Start Pos: 0.01656935177743435, 10.903977394104004, 0.2534625828266144
+[15:11:48][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[15:11:48][Info] [ChestExplorer] Opening 98 chests
+[15:11:48][Info] [ChestExplorer] Teleporting to: 151.0040283203125, 7.884567737579346, -201.9166259765625
+[15:11:48][Info] [ChestExplorer] Opening...
+[15:11:48][Info] [ChestExplorer] Targeting: Item Chest
+[15:11:49][Info] [ChestExplorer] Teleporting to: 461.9723205566406, -637.75, -327.31884765625
+[15:11:49][Info] [ChestExplorer] Targeting: StoneChest1
+[15:11:49][Info] [ChestExplorer] Opening...
+[15:11:50][Info] Cave
+[15:11:50][Info] Entered biome Cave
+[15:11:50][Info] add Workspace.Characters.Kiwi
+[15:11:51][Info] add Workspace.Characters.Kiwi
+[15:11:51][Info] [ChestExplorer] Teleporting to: 182.134521484375, -635.9500122070312, 252.2749786376953
+[15:11:51][Info] [ChestExplorer] Opening...
+[15:11:51][Info] [ChestExplorer] Targeting: StoneChest1
+[15:11:51][Info] add Workspace.Characters.Kiwi
+[15:11:52][Info] [ChestExplorer] Teleporting to: 488.97479248046875, -635.0701293945312, -255.3369598388672
+[15:11:52][Info] [ChestExplorer] Targeting: StoneChest1
+[15:11:52][Info] [ChestExplorer] Opening...
+[15:11:53][Info] [ChestExplorer] Targeting: StoneChest1
+[15:11:53][Info] [ChestExplorer] Teleporting to: 100.19921875, -634.6500244140625, -154.38853454589844
+[15:11:53][Info] [ChestExplorer] Opening...
+[15:11:54][Info] [ChestExplorer] Targeting: StoneChest1
+[15:11:54][Info] [ChestExplorer] Teleporting to: 251.95172119140625, -636.4500122070312, 252.6997528076172
+[15:11:54][Info] [ChestExplorer] Opening...
+[15:11:55][Info] [ChestExplorer] Teleporting to: -279.055908203125, -635.75, 536.5064086914062
+[15:11:55][Info] [ChestExplorer] Targeting: StoneChest1
+[15:11:55][Info] [ChestExplorer] Opening...
+[15:11:55][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:55][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:55][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:55][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:55][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:55][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:55][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:11:56][Info] [ChestExplorer] Teleporting to: -283.801025390625, -602.1499633789062, -33.04697799682617
+[15:11:56][Info] [ChestExplorer] Targeting: StoneChest1
+[15:11:56][Info] [ChestExplorer] Opening...
+[15:11:57][Info] [ChestExplorer] Opening...
+[15:11:57][Info] [ChestExplorer] Targeting: StoneChest1
+[15:11:57][Info] [ChestExplorer] Teleporting to: -385.3342590332031, -635.75, -235.3194122314453
+[15:11:58][Info] [ChestExplorer] Teleporting to: -428.8975524902344, -634.25, 288.0761413574219
+[15:11:58][Info] [ChestExplorer] Targeting: StoneChest1
+[15:11:58][Info] [ChestExplorer] Opening...
+[15:11:59][Info] [ChestExplorer] Teleporting to: 96.49956512451172, -635.25, -343.61920166015625
+[15:11:59][Info] [ChestExplorer] Targeting: StoneChest2
+[15:11:59][Info] [ChestExplorer] Opening...
+[15:12:00][Info] [ChestExplorer] Teleporting to: 137.3969268798828, -623.75, -165.30404663085938
+[15:12:00][Info] [ChestExplorer] Targeting: StoneChest1
+[15:12:00][Info] [ChestExplorer] Opening...
+[15:12:01][Info] [ChestExplorer] Targeting: StoneChest1
+[15:12:01][Info] [ChestExplorer] Teleporting to: 294.5954284667969, -634.6500244140625, 238.4918212890625
+[15:12:01][Info] [ChestExplorer] Opening...
+[15:12:02][Info] [ChestExplorer] Teleporting to: 287.1860656738281, -636.0701293945312, 191.58145141601562
+[15:12:02][Info] [ChestExplorer] Opening...
+[15:12:02][Info] [ChestExplorer] Targeting: StoneChest1
+[15:12:03][Info] [ChestExplorer] Opening...
+[15:12:03][Info] [ChestExplorer] Teleporting to: -908.0924682617188, 16.494041442871094, 171.14572143554688
+[15:12:03][Info] [ChestExplorer] Targeting: Mossy Chest
+[15:12:03][Info] Entered biome Fairy
+[15:12:03][Info] Fairy
+[15:12:04][Info] [ChestExplorer] Targeting: Item Chest5
+[15:12:04][Info] [ChestExplorer] Opening...
+[15:12:04][Info] [ChestExplorer] Teleporting to: -306.42047119140625, -633.75, 275.3173522949219
+[15:12:05][Info] Cave
+[15:12:05][Info] Entered biome Cave
+[15:12:06][Info] [ChestExplorer] Opening...
+[15:12:06][Info] [ChestExplorer] Targeting: Item Chest5
+[15:12:06][Info] [ChestExplorer] Teleporting to: -1201.872314453125, 9.653106689453125, -167.31451416015625
+[15:12:06][Info] Entered biome nil
+[15:12:06][Info] nil
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:07][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:12:07][Info] [ChestExplorer] Teleporting to: 192.76593017578125, 62.89995574951172, 558.9732055664062
+[15:12:07][Info] [ChestExplorer] Opening...
+[15:12:07][Info] Entered biome Volcanic
+[15:12:07][Info] Volcanic
+[15:12:07][Info] add Workspace.Characters.Kiwi
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:06][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:12:08][Info] Arrow nil
+[15:12:08][Info] Arrow nil
+[15:12:08][Info] [ChestExplorer] Opening...
+[15:12:08][Info] [ChestExplorer] Teleporting to: -768.0712890625, 5.209712505340576, 79.53659057617188
+[15:12:08][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:08][Info] Entered biome Fairy
+[15:12:08][Info] Fairy
+[15:12:09][Info] [ChestExplorer] Teleporting to: 447.1138916015625, 60.90301513671875, 1080.2708740234375
+[15:12:09][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:12:09][Info] [ChestExplorer] Opening...
+[15:12:09][Info] Volcanic
+[15:12:09][Info] Entered biome Volcanic
+[15:12:10][Info] Arrow nil
+[15:12:10][Info] Arrow nil
+[15:12:10][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:10][Info] [ChestExplorer] Teleporting to: 52.03661346435547, -635.0701293945312, -50.82966232299805
+[15:12:10][Info] [ChestExplorer] Opening...
+[15:12:10][Info] Entered biome Cave
+[15:12:10][Info] Cave
+[15:12:11][Info] [ChestExplorer] Targeting: Item Chest5
+[15:12:11][Info] [ChestExplorer] Teleporting to: -267.9090576171875, -635.75, 530.002685546875
+[15:12:11][Info] [ChestExplorer] Opening...
+[15:12:12][Info] [ChestExplorer] Opening...
+[15:12:12][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:12][Info] [ChestExplorer] Teleporting to: -202.2579803466797, -636.25, 569.6101684570312
+[15:12:13][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:13][Info] [ChestExplorer] Opening...
+[15:12:13][Info] [ChestExplorer] Teleporting to: 364.67254638671875, -635.0701293945312, 210.94898986816406
+[15:12:14][Info] [ChestExplorer] Opening...
+[15:12:14][Info] [ChestExplorer] Teleporting to: 494.587890625, -613.4500122070312, -244.5741424560547
+[15:12:14][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:15][Info] add Workspace.Characters.Kiwi
+[15:12:15][Info] [ChestExplorer] Teleporting to: 400.8388671875, -634.5161743164062, -258.4169616699219
+[15:12:15][Info] [ChestExplorer] Opening...
+[15:12:15][Info] [ChestExplorer] Targeting: Item Chest5
+[15:12:16][Info] add Workspace.Characters.Kiwi
+[15:12:16][Info] [ChestExplorer] Opening...
+[15:12:16][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:16][Info] [ChestExplorer] Teleporting to: 355.791748046875, -635.0701293945312, 232.543212890625
+[15:12:16][Info] Arrow nil
+[15:12:17][Info] Arrow nil
+[15:12:17][Info] [ChestExplorer] Teleporting to: 287.5487365722656, -636.0701293945312, 174.11070251464844
+[15:12:17][Info] [ChestExplorer] Opening...
+[15:12:17][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:18][Info] [ChestExplorer] Teleporting to: -274.1842346191406, -601.75, -80.52496337890625
+[15:12:18][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:18][Info] [ChestExplorer] Opening...
+[15:12:19][Info] Arrow nil
+[15:12:19][Info] Arrow nil
+[15:12:20][Info] [ChestExplorer] Targeting: Item Chest5
+[15:12:20][Info] [ChestExplorer] Opening...
+[15:12:20][Info] [ChestExplorer] Teleporting to: -214.9047393798828, -601.8104248046875, -48.286415100097656
+[15:12:21][Info] [ChestExplorer] Targeting: Item Chest5
+[15:12:21][Info] [ChestExplorer] Teleporting to: -395.3861389160156, -633.75, 215.67274475097656
+[15:12:21][Info] [ChestExplorer] Opening...
+[15:12:21][Info] Arrow nil
+[15:12:22][Info] Arrow nil
+[15:12:22][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:22][Info] [ChestExplorer] Teleporting to: -198.31712341308594, -636.25, 485.16925048828125
+[15:12:22][Info] [ChestExplorer] Opening...
+[15:12:23][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:23][Info] [ChestExplorer] Teleporting to: 89.62374114990234, -635.25, -116.7562255859375
+[15:12:23][Info] [ChestExplorer] Opening...
+[15:12:23][Info] Arrow nil
+[15:12:23][Info] Arrow nil
+[15:12:24][Info] [ChestExplorer] Teleporting to: -347.8249816894531, -636.25, -146.3396759033203
+[15:12:24][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:24][Info] [ChestExplorer] Opening...
+[15:12:25][Info] [ChestExplorer] Opening...
+[15:12:25][Info] [ChestExplorer] Teleporting to: 290.5180969238281, 7.787912368774414, 640.1732177734375
+[15:12:25][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:12:25][Info] Entered biome Volcanic
+[15:12:25][Info] Volcanic
+[15:12:26][Info] [ChestExplorer] Teleporting to: -376.7825927734375, -635.25, -189.836181640625
+[15:12:26][Info] [ChestExplorer] Targeting: Item Chest5
+[15:12:26][Info] [ChestExplorer] Opening...
+[15:12:26][Info] Entered biome Cave
+[15:12:26][Info] Cave
+[15:12:27][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:27][Info] [ChestExplorer] Teleporting to: -380.1842346191406, -635.25, -149.97161865234375
+[15:12:27][Info] [ChestExplorer] Opening...
+[15:12:28][Info] [ChestExplorer] Opening...
+[15:12:28][Info] [ChestExplorer] Targeting: Item Chest5
+[15:12:28][Info] [ChestExplorer] Teleporting to: -376.2109069824219, -635.75, -224.7544708251953
+[15:12:29][Info] [ChestExplorer] Teleporting to: -194.1505126953125, 38.903045654296875, 198.32415771484375
+[15:12:29][Info] [ChestExplorer] Targeting: Hardmode Crate
+[15:12:29][Info] [ChestExplorer] Opening...
+[15:12:29][Info] nil
+[15:12:29][Info] Entered biome nil
+[15:12:30][Info] [ChestExplorer] Targeting: Hardmode Crate
+[15:12:30][Info] [ChestExplorer] Teleporting to: -194.1505126953125, 38.903045654296875, 207.82415771484375
+[15:12:30][Info] [ChestExplorer] Opening...
+[15:12:31][Info] [ChestExplorer] Targeting: Hardmode Crate
+[15:12:31][Info] [ChestExplorer] Teleporting to: -123.1505126953125, 16.903045654296875, 218.82415771484375
+[15:12:31][Info] [ChestExplorer] Opening...
+[15:12:32][Info] [ChestExplorer] Targeting: Hardmode Crate
+[15:12:32][Info] [ChestExplorer] Teleporting to: -174.1505126953125, 16.903045654296875, 221.82415771484375
+[15:12:32][Info] [ChestExplorer] Opening...
+[15:12:33][Info] [ChestExplorer] Opening...
+[15:12:33][Info] [ChestExplorer] Targeting: Item Chest2
+[15:12:33][Info] [ChestExplorer] Teleporting to: 528.9013061523438, 8.53989315032959, 69.9347915649414
+[15:12:34][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:34][Info] [ChestExplorer] Teleporting to: 637.649169921875, 13.469523429870605, -355.8544921875
+[15:12:34][Info] [ChestExplorer] Opening...
+[15:12:35][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:35][Info] [ChestExplorer] Teleporting to: 431.5933837890625, 10.576221466064453, -639.68017578125
+[15:12:35][Info] [ChestExplorer] Opening...
+[15:12:36][Info] [ChestExplorer] Teleporting to: -300.14105224609375, 6.681734085083008, 38.61269760131836
+[15:12:36][Info] [ChestExplorer] Targeting: Item Chest
+[15:12:36][Info] [ChestExplorer] Opening...
+[15:12:37][Info] [ChestExplorer] Targeting: Item Chest
+[15:12:37][Info] [ChestExplorer] Teleporting to: 116.01480102539062, 14.328631401062012, -327.8446044921875
+[15:12:37][Info] [ChestExplorer] Opening...
+[15:12:39][Info] [ChestExplorer] Targeting: Item Chest
+[15:12:39][Info] [ChestExplorer] Opening...
+[15:12:39][Info] [ChestExplorer] Teleporting to: 345.5318908691406, -17.67391014099121, -46.12010955810547
+[15:12:40][Info] [ChestExplorer] Targeting: Item Chest2
+[15:12:40][Info] [ChestExplorer] Opening...
+[15:12:40][Info] [ChestExplorer] Teleporting to: 406.30242919921875, 9.772729873657227, -308.3431701660156
+[15:12:41][Info] [ChestExplorer] Targeting: Item Chest2
+[15:12:41][Info] [ChestExplorer] Opening...
+[15:12:41][Info] [ChestExplorer] Teleporting to: 320.24102783203125, 11.3739013671875, -400.296142578125
+[15:12:41][Info] Arrow nil
+[15:12:42][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:12:42][Info] [ChestExplorer] Teleporting to: -155.6327667236328, 4.636507987976074, 720.5781860351562
+[15:12:42][Info] [ChestExplorer] Opening...
+[15:12:42][Info] Entered biome Volcanic
+[15:12:42][Info] Volcanic
+[15:12:43][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:43][Info] [ChestExplorer] Teleporting to: -243.84136962890625, 11.144890785217285, -648.1983032226562
+[15:12:43][Info] [ChestExplorer] Opening...
+[15:12:43][Info] nil
+[15:12:43][Info] Entered biome nil
+[15:12:44][Info] [ChestExplorer] Targeting: Item Chest2
+[15:12:44][Info] [ChestExplorer] Teleporting to: 278.6971130371094, 13.858287811279297, -500.2935485839844
+[15:12:44][Info] [ChestExplorer] Opening...
+[15:12:45][Info] [ChestExplorer] Targeting: Item Chest2
+[15:12:45][Info] [ChestExplorer] Teleporting to: 194.39682006835938, 10.23647689819336, -507.37646484375
+[15:12:45][Info] [ChestExplorer] Opening...
+[15:12:46][Info] [ChestExplorer] Teleporting to: -677.54345703125, 54.975955963134766, -1.0134906768798828
+[15:12:46][Info] [ChestExplorer] Targeting: Item Chest6
+[15:12:46][Info] [ChestExplorer] Opening...
+[15:12:47][Info] Entered biome Fairy
+[15:12:47][Info] Fairy
+[15:12:47][Info] [ChestExplorer] Teleporting to: -511.9986877441406, 10.902514457702637, 200.2883758544922
+[15:12:47][Info] [ChestExplorer] Targeting: Item Chest2
+[15:12:47][Info] [ChestExplorer] Opening...
+[15:12:48][Info] [ChestExplorer] Opening...
+[15:12:48][Info] [ChestExplorer] Teleporting to: -689.896728515625, 5.400598049163818, 35.56291961669922
+[15:12:48][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:49][Info] [ChestExplorer] Teleporting to: -567.7936401367188, 11.40072250366211, 368.4255065917969
+[15:12:49][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:49][Info] [ChestExplorer] Opening...
+[15:12:51][Info] [ChestExplorer] Teleporting to: 557.4039306640625, -18.105510711669922, 558.3834838867188
+[15:12:51][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:12:51][Info] [ChestExplorer] Opening...
+[15:12:51][Info] Volcanic
+[15:12:51][Info] Entered biome Volcanic
+[15:12:52][Info] [ChestExplorer] Teleporting to: 54.725704193115234, 11.754955291748047, 858.0050048828125
+[15:12:52][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:12:52][Info] [ChestExplorer] Opening...
+[15:12:53][Info] [ChestExplorer] Teleporting to: -60.512611389160156, 10.576290130615234, 743.2200927734375
+[15:12:53][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:12:53][Info] [ChestExplorer] Opening...
+[15:12:54][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:54][Info] [ChestExplorer] Teleporting to: -486.78411865234375, -16.537843704223633, 602.770263671875
+[15:12:54][Info] [ChestExplorer] Opening...
+[15:12:54][Info] Entered biome nil
+[15:12:54][Info] nil
+[15:12:55][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:55][Info] [ChestExplorer] Opening...
+[15:12:55][Info] [ChestExplorer] Teleporting to: -768.2932739257812, 10.072477340698242, -315.523681640625
+[15:12:55][Info] add Workspace.Characters.Kiwi
+[15:12:56][Info] add Workspace.Characters.Kiwi
+[15:12:56][Info] [ChestExplorer] Opening...
+[15:12:56][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:56][Info] [ChestExplorer] Teleporting to: 225.0994415283203, 8.232734680175781, -886.0900268554688
+[15:12:57][Info] [ChestExplorer] Teleporting to: 764.716552734375, 46.803375244140625, -486.8725891113281
+[15:12:57][Info] [ChestExplorer] Targeting: Item Chest4
+[15:12:57][Info] [ChestExplorer] Opening...
+[15:12:58][Info] [ChestExplorer] Targeting: Item Chest3
+[15:12:58][Info] [ChestExplorer] Teleporting to: 758.616943359375, 10.135305404663086, 128.26980590820312
+[15:12:58][Info] [ChestExplorer] Opening...
+[15:12:59][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:12:59][Info] [ChestExplorer] Opening...
+[15:12:59][Info] [ChestExplorer] Teleporting to: 639.1513671875, 63.08407974243164, 727.3098754882812
+[15:13:00][Info] Entered biome Volcanic
+[15:13:00][Info] Volcanic
+[15:13:00][Info] Arrow nil
+[15:13:00][Info] Arrow nil
+[15:13:00][Info] [ChestExplorer] Teleporting to: 600.5155029296875, 6.390322685241699, 749.3630981445312
+[15:13:00][Info] [ChestExplorer] Opening...
+[15:13:00][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:13:01][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:13:01][Info] [ChestExplorer] Teleporting to: 501.82086181640625, 8.254960060119629, 734.3060913085938
+[15:13:01][Info] [ChestExplorer] Opening...
+[15:13:02][Info] Arrow nil
+[15:13:02][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:02][Info] [ChestExplorer] Opening...
+[15:13:02][Info] [ChestExplorer] Teleporting to: -602.0955810546875, 9.909737586975098, 844.5086059570312
+[15:13:03][Info] nil
+[15:13:03][Info] Entered biome nil
+[15:13:03][Info] [ChestExplorer] Opening...
+[15:13:03][Info] [ChestExplorer] Teleporting to: -638.7003784179688, 11.167015075683594, 751.3286743164062
+[15:13:03][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:05][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:05][Info] [ChestExplorer] Teleporting to: -767.707275390625, 5.538947582244873, 527.9156494140625
+[15:13:05][Info] [ChestExplorer] Opening...
+[15:13:05][Info] Entered biome Fairy
+[15:13:05][Info] Fairy
+[15:13:06][Info] [ChestExplorer] Teleporting to: -852.8565063476562, 18.909828186035156, -496.6807861328125
+[15:13:06][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:06][Info] [ChestExplorer] Opening...
+[15:13:06][Info] Entered biome nil
+[15:13:06][Info] nil
+[15:13:06][Info] add Workspace.Characters.Kiwi
+[15:13:06][Info] add Workspace.Characters.Kiwi
+[15:13:07][Info] [ChestExplorer] Teleporting to: -845.41162109375, 7.374734878540039, -670.3092041015625
+[15:13:07][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:07][Info] [ChestExplorer] Opening...
+[15:13:08][Info] [ChestExplorer] Teleporting to: -567.8565063476562, 9.263376235961914, -795.3956298828125
+[15:13:08][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:08][Info] [ChestExplorer] Opening...
+[15:13:09][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:09][Info] [ChestExplorer] Teleporting to: -683.9390869140625, 7.789391994476318, -890.7283325195312
+[15:13:09][Info] [ChestExplorer] Opening...
+[15:13:10][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:10][Info] [ChestExplorer] Teleporting to: 601.516357421875, 6.950927734375, -819.8271484375
+[15:13:10][Info] [ChestExplorer] Opening...
+[15:13:11][Info] [ChestExplorer] Teleporting to: 784.7495727539062, 15.387435913085938, -606.0307006835938
+[15:13:11][Info] [ChestExplorer] Opening...
+[15:13:11][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:12][Info] add Workspace.Characters.Kiwi
+[15:13:12][Info] [ChestExplorer] Opening...
+[15:13:12][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:12][Info] [ChestExplorer] Teleporting to: -44.461021423339844, 4.426468372344971, -1059.573974609375
+[15:13:13][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:13][Info] [ChestExplorer] Teleporting to: -248.12322998046875, 5.634965419769287, -1000.5271606445312
+[15:13:13][Info] [ChestExplorer] Opening...
+[15:13:14][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:14][Info] [ChestExplorer] Teleporting to: 320.6383972167969, 13.450669288635254, -996.2254638671875
+[15:13:14][Info] [ChestExplorer] Opening...
+[15:13:15][Info] [ChestExplorer] Teleporting to: 649.134765625, 46.72698974609375, -1044.2379150390625
+[15:13:15][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:15][Info] [ChestExplorer] Opening...
+[15:13:16][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:16][Info] [ChestExplorer] Teleporting to: 649.3865966796875, 28.727005004882812, -1054.013427734375
+[15:13:16][Info] [ChestExplorer] Opening...
+[15:13:18][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:18][Info] [ChestExplorer] Opening...
+[15:13:18][Info] [ChestExplorer] Teleporting to: 601.3248291015625, 64.72699737548828, -1074.9598388671875
+[15:13:19][Info] [ChestExplorer] Opening...
+[15:13:19][Info] [ChestExplorer] Teleporting to: 1020.8062744140625, 66.68368530273438, -614.3505249023438
+[15:13:19][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:20][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:20][Info] [ChestExplorer] Opening...
+[15:13:20][Info] [ChestExplorer] Teleporting to: 1032.7615966796875, -17.703022003173828, -116.85990142822266
+[15:13:21][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:21][Info] [ChestExplorer] Teleporting to: 1006.5679321289062, 47.670433044433594, 166.1787872314453
+[15:13:21][Info] [ChestExplorer] Opening...
+[15:13:22][Info] [ChestExplorer] Teleporting to: 881.9202880859375, 8.586723327636719, 511.78521728515625
+[15:13:22][Info] [ChestExplorer] Opening...
+[15:13:22][Info] [ChestExplorer] Targeting: Item Chest4
+[15:13:24][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[15:13:24][Info] [ChestExplorer] Teleporting to: 579.3634643554688, 12.787553787231445, 976.1864013671875
+[15:13:24][Info] [ChestExplorer] Opening...
+[15:13:24][Info] Volcanic
+[15:13:24][Info] Entered biome Volcanic
+[15:13:25][Info] [ChestExplorer] Targeting: Item Chest6
+[15:13:25][Info] [ChestExplorer] Teleporting to: -670.5198364257812, -17.572263717651367, 997.117431640625
+[15:13:25][Info] [ChestExplorer] Opening...
+[15:13:25][Info] nil
+[15:13:25][Info] Entered biome nil
+[15:13:26][Info] [ChestExplorer] Targeting: Volcanic Chest2
+[15:13:26][Info] [ChestExplorer] Opening...
+[15:13:26][Info] [ChestExplorer] Teleporting to: 210.81871032714844, 42.17928695678711, 1096.697021484375
+[15:13:26][Info] Volcanic
+[15:13:26][Info] Entered biome Volcanic
+[15:13:27][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:27][Info] [ChestExplorer] Teleporting to: -922.055908203125, 14.560830116271973, -791.7906494140625
+[15:13:27][Info] [ChestExplorer] Opening...
+[15:13:27][Info] Entered biome nil
+[15:13:27][Info] nil
+[15:13:28][Info] [ChestExplorer] Opening...
+[15:13:28][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:28][Info] [ChestExplorer] Teleporting to: -674.0031127929688, 13.377947807312012, -1000.85498046875
+[15:13:29][Info] Arrow nil
+[15:13:29][Info] [ChestExplorer] Teleporting to: -57.000492095947266, 41.247032165527344, -1208.527587890625
+[15:13:29][Info] [ChestExplorer] Opening...
+[15:13:29][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:30][Info] [ChestExplorer] Teleporting to: -39.98007583618164, 2.2189948558807373, -1248.1549072265625
+[15:13:30][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:30][Info] [ChestExplorer] Opening...
+[15:13:31][Info] [ChestExplorer] Teleporting to: 1112.7645263671875, 12.75619888305664, 358.8115539550781
+[15:13:31][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:31][Info] [ChestExplorer] Opening...
+[15:13:32][Info] [ChestExplorer] Teleporting to: 482.55255126953125, 72.06912994384766, 1237.3387451171875
+[15:13:32][Info] [ChestExplorer] Targeting: Volcanic Chest2
+[15:13:32][Info] [ChestExplorer] Opening...
+[15:13:33][Info] Entered biome Volcanic
+[15:13:33][Info] Volcanic
+[15:13:34][Info] [ChestExplorer] Targeting: Item Chest5
+[15:13:34][Info] [ChestExplorer] Opening...
+[15:13:34][Info] [ChestExplorer] Teleporting to: -496.18505859375, 9.686946868896484, 1153.451904296875
+[15:13:34][Info] nil
+[15:13:34][Info] Entered biome nil
+[15:13:35][Error] :292: cannot cancel thread
+    Stack Begin
+    Script 'Script', Line 292 - function Stop
+    Script 'Script', Line 283
+    Stack End
+[15:13:38][Info] [ChestExplorer] Stopped/Finished
+[15:13:38][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[15:14:23][Info] deactivate and unequip
+[15:14:47][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:14:51][Info] [ItemCollector] Started Collection Thread.
+[15:14:52][Warning] [ItemCollector] Failed to collect: Morningstar after 3 attempts.
+[15:14:52][Warning] [ItemCollector] No matching items found in map!
+[15:14:52][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[15:15:06][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:15:06][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:15:20][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:15:28][Info] [ItemCollector] Started Collection Thread.
+[15:15:28][Warning] [ItemCollector] Failed to collect: Spear after 3 attempts.
+[15:15:29][Warning] [ItemCollector] Failed to collect: Morningstar after 3 attempts.
+[15:15:29][Info] [ItemCollector] Collected 4 items.
+[15:15:29][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[15:15:34][Info] deactivate and unequip
+[15:15:44][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:15:45][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:15:48][Info] [ItemCollector] Started Collection Thread.
+[15:15:49][Warning] [ItemCollector] Failed to collect: Spear after 3 attempts.
+[15:15:49][Warning] [ItemCollector] Failed to collect: Giant Sack after 3 attempts.
+[15:15:49][Warning] [ItemCollector] Failed to collect: Giant Sack after 3 attempts.
+[15:15:49][Warning] [ItemCollector] Failed to collect: Morningstar after 3 attempts.
+[15:15:49][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[15:15:49][Info] [ItemCollector] Collected 6 items.
+[15:15:49][Info] function is already waiting :)
+[15:15:51][Info] toggle enabled not allowed
+[15:15:53][Info] deactivate and unequip
+[15:16:11][Info] [OP] KillAura: ON
+[15:16:18][Info] deactivate and unequip
+[15:16:37][Info] [OP] KillAura: OFF
+[15:16:42][Info] [FishFarm] ═══════════════════════════
+[15:16:42][Info] [FishFarm]       FISH FARM START      
+[15:16:42][Info] [FishFarm] ═══════════════════════════
+[15:16:42][Info] [FishFarm] Minigame watcher started
+[15:16:42][Info] [FishFarm] ⏳ Equip a rod...
+[15:16:42][Info] [FishFarm] FishDelay: 15s
+[15:16:42][Info] [FishFarm] Cleanup (fish: 0)
+[15:16:44][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:16:44][Info] [FishFarm] ─────────────────────
+[15:16:44][Info] [FishFarm] Target: -489, -2, 1145
+[15:16:44][Info] [FishFarm] ✓ Cast sent
+[15:16:44][Info] [FishFarm] Clicking at: 376, 297
+[15:16:44][Info] Cast rod
+[15:16:45][Info] new input type Touch
+[15:16:58][Info] [FishFarm] ▶ MINIGAME STARTED!
+[15:16:58][Info] [FishFarm] ✓ Zone expanded to 95%
+[15:16:58][Info] [FishFarm] Click #1
+[15:16:58][Info] [FishFarm] Click #2
+[15:16:58][Info] [FishFarm] Click #3
+[15:16:58][Info] [FishFarm] Click #4
+[15:16:59][Info] [FishFarm] Click #5
+[15:16:59][Info] [FishFarm] Click #6
+[15:16:59][Info] [FishFarm] Click #7
+[15:16:59][Info] [FishFarm] Click #8
+[15:16:59][Info] [FishFarm] 🎣 Fish #1
+[15:16:59][Info] [FishFarm] ■ MINIGAME ENDED (8 clicks)
+[15:17:00][Info] [FishFarm] ─────────────────────
+[15:17:00][Info] [FishFarm] Clicking at: 444, 335
+[15:17:00][Info] [FishFarm] ✓ Cast sent
+[15:17:00][Info] [FishFarm] Target: -489, -2, 1145
+[15:17:00][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:17:15][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:17:15][Info] [FishFarm] ─────────────────────
+[15:17:15][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:17:15][Info] [FishFarm] Target: -489, -2, 1145
+[15:17:15][Info] [FishFarm] Clicking at: 367, 220
+[15:17:15][Info] [FishFarm] ✓ Cast sent
+[15:17:15][Info] Cast rod
+[15:17:29][Info] [FishFarm] ✓ Zone expanded to 95%
+[15:17:29][Info] [FishFarm] ▶ MINIGAME STARTED!
+[15:17:29][Info] [FishFarm] Click #1
+[15:17:29][Info] [FishFarm] Click #2
+[15:17:30][Info] [FishFarm] Click #3
+[15:17:30][Info] [FishFarm] Click #4
+[15:17:30][Info] [FishFarm] Click #5
+[15:17:30][Info] [FishFarm] Click #6
+[15:17:31][Info] [FishFarm] Click #7
+[15:17:31][Info] [FishFarm] Click #8
+[15:17:31][Info] [FishFarm] 🎣 Fish #2
+[15:17:31][Info] [FishFarm] ■ MINIGAME ENDED (8 clicks)
+[15:17:31][Info] [FishFarm] Target: -489, -2, 1145
+[15:17:31][Info] [FishFarm] ─────────────────────
+[15:17:31][Info] [FishFarm] Clicking at: 367, 220
+[15:17:31][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:17:31][Info] [FishFarm] ✓ Cast sent
+[15:17:46][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:17:46][Info] [FishFarm] ─────────────────────
+[15:17:46][Info] [FishFarm] Target: -489, -2, 1145
+[15:17:46][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:17:46][Info] [FishFarm] Clicking at: 367, 220
+[15:17:46][Info] Cast rod
+[15:17:46][Info] [FishFarm] ✓ Cast sent
+[15:18:02][Info] [FishFarm] ─────────────────────
+[15:18:02][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:18:02][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:18:02][Info] [FishFarm] ✓ Zone expanded to 95%
+[15:18:02][Info] [FishFarm] Clicking at: 367, 220
+[15:18:02][Info] [FishFarm] Click #1
+[15:18:02][Info] [FishFarm] Target: -489, -2, 1145
+[15:18:02][Info] [FishFarm] ▶ MINIGAME STARTED!
+[15:18:02][Info] [FishFarm] ✓ Cast sent
+[15:18:02][Info] [FishFarm] Click #2
+[15:18:02][Info] [FishFarm] Click #3
+[15:18:03][Info] [FishFarm] Click #4
+[15:18:03][Info] [FishFarm] Click #5
+[15:18:03][Info] [FishFarm] Click #6
+[15:18:03][Info] [FishFarm] Click #7
+[15:18:03][Info] [FishFarm] Click #8
+[15:18:03][Info] [FishFarm] 🎣 Fish #3
+[15:18:03][Info] [FishFarm] ■ MINIGAME ENDED (8 clicks)
+[15:18:04][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:18:04][Info] [FishFarm] ─────────────────────
+[15:18:04][Info] [FishFarm] Target: -489, -2, 1145
+[15:18:04][Info] [FishFarm] Clicking at: 367, 220
+[15:18:04][Info] [FishFarm] ✓ Cast sent
+[15:18:19][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:18:19][Info] [FishFarm] Clicking at: 367, 220
+[15:18:19][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:18:19][Info] [FishFarm] ─────────────────────
+[15:18:19][Info] [FishFarm] Target: -489, -2, 1145
+[15:18:19][Info] Cast rod
+[15:18:19][Info] [FishFarm] ✓ Cast sent
+[15:18:35][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:18:35][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:18:35][Info] [FishFarm] ─────────────────────
+[15:18:35][Info] [FishFarm] Target: -489, -2, 1145
+[15:18:35][Info] [FishFarm] ✓ Cast sent
+[15:18:35][Info] [FishFarm] Clicking at: 367, 220
+[15:18:50][Info] [FishFarm] ─────────────────────
+[15:18:50][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:18:50][Info] [FishFarm] Target: -489, -2, 1145
+[15:18:50][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:18:50][Info] [FishFarm] ✓ Cast sent
+[15:18:50][Info] [FishFarm] Clicking at: 367, 220
+[15:18:50][Info] Cast rod
+[15:19:05][Info] [FishFarm] ▶ MINIGAME STARTED!
+[15:19:05][Info] [FishFarm] ✓ Zone expanded to 95%
+[15:19:05][Info] [FishFarm] Click #1
+[15:19:05][Info] [FishFarm] Click #2
+[15:19:05][Info] [FishFarm] Click #3
+[15:19:06][Info] [FishFarm] Click #4
+[15:19:06][Info] [FishFarm] Click #5
+[15:19:06][Info] [FishFarm] Click #6
+[15:19:06][Info] [FishFarm] Click #7
+[15:19:07][Info] [FishFarm] Click #8
+[15:19:07][Info] [FishFarm] Click #9
+[15:19:07][Info] [FishFarm] Click #10
+[15:19:07][Info] [FishFarm] Click #11
+[15:19:07][Info] [FishFarm] Click #12
+[15:19:08][Info] [FishFarm] Click #13
+[15:19:08][Info] [FishFarm] Click #14
+[15:19:08][Info] [FishFarm] Click #15
+[15:19:08][Info] [FishFarm] Click #16
+[15:19:08][Info] [FishFarm] Click #17
+[15:19:09][Info] [FishFarm] Click #18
+[15:19:09][Info] [FishFarm] Click #19
+[15:19:09][Info] [FishFarm] Click #20
+[15:19:09][Info] [FishFarm] Click #21
+[15:19:10][Info] [FishFarm] Click #22
+[15:19:10][Info] [FishFarm] Click #23
+[15:19:10][Info] [FishFarm] Click #24
+[15:19:10][Info] [FishFarm] 🎣 Fish #4
+[15:19:10][Info] [FishFarm] ■ MINIGAME ENDED (24 clicks)
+[15:19:10][Info] [FishFarm] ─────────────────────
+[15:19:10][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:19:10][Info] [FishFarm] Target: -489, -2, 1145
+[15:19:10][Info] [FishFarm] ✓ Cast sent
+[15:19:10][Info] [FishFarm] Clicking at: 367, 220
+[15:19:25][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:19:25][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:19:25][Info] [FishFarm] ─────────────────────
+[15:19:25][Info] [FishFarm] Clicking at: 367, 220
+[15:19:25][Info] [FishFarm] Target: -489, -2, 1145
+[15:19:25][Info] Cast rod
+[15:19:25][Info] [FishFarm] ✓ Cast sent
+[15:19:39][Info] [FishFarm] ▶ MINIGAME STARTED!
+[15:19:39][Info] [FishFarm] ✓ Zone expanded to 95%
+[15:19:39][Info] [FishFarm] Click #1
+[15:19:40][Info] [FishFarm] Click #2
+[15:19:40][Info] [FishFarm] Click #3
+[15:19:40][Info] [FishFarm] Click #4
+[15:19:40][Info] [FishFarm] Click #5
+[15:19:40][Info] [FishFarm] Click #6
+[15:19:41][Info] [FishFarm] Click #7
+[15:19:41][Info] [FishFarm] Click #8
+[15:19:41][Info] [FishFarm] ■ MINIGAME ENDED (8 clicks)
+[15:19:41][Info] [FishFarm] 🎣 Fish #5
+[15:19:41][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:19:41][Info] [FishFarm] ─────────────────────
+[15:19:41][Info] [FishFarm] Clicking at: 220, 314
+[15:19:41][Info] [FishFarm] Target: -489, -2, 1145
+[15:19:41][Info] [FishFarm] ✓ Cast sent
+[15:19:56][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:19:56][Info] [FishFarm] ✓ Cast sent
+[15:19:56][Info] [FishFarm] Target: -489, -2, 1145
+[15:19:56][Info] [FishFarm] ─────────────────────
+[15:19:56][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:19:56][Info] Cast rod
+[15:19:56][Info] [FishFarm] Clicking at: 217, 328
+[15:20:10][Info] [FishFarm] ▶ MINIGAME STARTED!
+[15:20:10][Info] [FishFarm] ✓ Zone expanded to 95%
+[15:20:10][Info] [FishFarm] Click #1
+[15:20:11][Info] [FishFarm] Click #2
+[15:20:11][Info] [FishFarm] Click #3
+[15:20:11][Info] [FishFarm] Click #4
+[15:20:11][Info] [FishFarm] Click #5
+[15:20:11][Info] [FishFarm] Click #6
+[15:20:12][Info] [FishFarm] Click #7
+[15:20:12][Info] [FishFarm] Click #8
+[15:20:12][Info] [FishFarm] ■ MINIGAME ENDED (8 clicks)
+[15:20:12][Info] [FishFarm] 🎣 Fish #6
+[15:20:12][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:20:12][Info] [FishFarm] ─────────────────────
+[15:20:12][Info] [FishFarm] ✓ Cast sent
+[15:20:12][Info] [FishFarm] Target: -489, -2, 1145
+[15:20:12][Info] [FishFarm] Clicking at: 364, 233
+[15:20:28][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:20:28][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:20:28][Info] [FishFarm] ✓ Cast sent
+[15:20:28][Info] [FishFarm] Clicking at: 363, 237
+[15:20:28][Info] [FishFarm] Target: -489, -2, 1145
+[15:20:28][Info] [FishFarm] ─────────────────────
+[15:20:28][Info] Cast rod
+[15:20:43][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:20:43][Info] [FishFarm] ─────────────────────
+[15:20:43][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:20:43][Info] [FishFarm] Clicking at: 361, 244
+[15:20:43][Info] [FishFarm] Target: -489, -2, 1145
+[15:20:43][Info] [FishFarm] ✓ Cast sent
+[15:20:58][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:20:58][Info] Cast rod
+[15:20:58][Info] [FishFarm] Target: -489, -2, 1145
+[15:20:58][Info] [FishFarm] ─────────────────────
+[15:20:58][Info] [FishFarm] Clicking at: 361, 244
+[15:20:58][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:20:58][Info] [FishFarm] ✓ Cast sent
+[15:21:11][Info] [FishFarm] ✓ Zone expanded to 95%
+[15:21:11][Info] [FishFarm] ▶ MINIGAME STARTED!
+[15:21:11][Info] [FishFarm] Click #1
+[15:21:12][Info] [FishFarm] Click #2
+[15:21:12][Info] [FishFarm] Click #3
+[15:21:12][Info] [FishFarm] Click #4
+[15:21:12][Info] [FishFarm] Click #5
+[15:21:12][Info] [FishFarm] Click #6
+[15:21:13][Info] [FishFarm] Click #7
+[15:21:13][Info] [FishFarm] ■ MINIGAME ENDED (7 clicks)
+[15:21:13][Info] [FishFarm] 🎣 Fish #7
+[15:21:13][Info] [FishFarm] ─────────────────────
+[15:21:13][Info] [FishFarm] Target: -489, -2, 1145
+[15:21:13][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:21:13][Info] [FishFarm] Clicking at: 438, 211
+[15:21:13][Info] [FishFarm] ✓ Cast sent
+[15:21:28][Info] [FishFarm] ─────────────────────
+[15:21:28][Info] [FishFarm] Target: -489, -2, 1145
+[15:21:28][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:21:28][Info] [FishFarm] Clicking at: 365, 253
+[15:21:28][Info] [FishFarm] ⚠ No fish after 15s, recasting...
+[15:21:28][Info] Cast rod
+[15:21:28][Info] [FishFarm] ✓ Cast sent
+[15:21:42][Info] [FishFarm] ✓ Zone expanded to 95%
+[15:21:42][Info] [FishFarm] ▶ MINIGAME STARTED!
+[15:21:42][Info] [FishFarm] Click #1
+[15:21:42][Info] [FishFarm] Click #2
+[15:21:43][Info] [FishFarm] Click #3
+[15:21:43][Info] [FishFarm] Click #4
+[15:21:43][Info] [FishFarm] Click #5
+[15:21:43][Info] [FishFarm] Click #6
+[15:21:44][Info] [FishFarm] Click #7
+[15:21:44][Info] [FishFarm] Click #8
+[15:21:44][Info] [FishFarm] ■ MINIGAME ENDED (8 clicks)
+[15:21:44][Info] [FishFarm] 🎣 Fish #8
+[15:21:44][Info] [FishFarm] ─────────────────────
+[15:21:44][Info] [FishFarm] Clicking at: 502, 295
+[15:21:44][Info] [FishFarm] Target: -489, -2, 1145
+[15:21:44][Info] [FishFarm] 🎣 Casting (rod: Old Rod, water: 9 studs)
+[15:21:44][Info] [FishFarm] ✓ Cast sent
+[15:21:52][Info] [FishFarm]       FISH FARM STOP       
+[15:21:52][Info] [FishFarm] ═══════════════════════════
+[15:21:52][Info] [FishFarm] ═══════════════════════════
+[15:21:52][Info] [FishFarm] Cleanup (fish: 8)
+[15:21:57][Info] deactivate and unequip
+[15:22:13][Error] :14612: Only HTTP/HTTPS protocols are allowed
+    Stack Begin
+    Script 'Script', Line 14612 - function close
+    Script 'Script', Line 14983
+    Stack End
+[15:25:01][Info] add Workspace.Characters.Kiwi
+[15:25:26][Info] deactivate and unequip
+[15:25:27][Warning] Infinite yield possible on 'ReplicatedStorage.Assets.FurnitureThumbnail:WaitForChild("Tea Candles")'
+[15:25:27][Info] Stack Begin
+[15:25:27][Info] Script 'Players.nsopnet.PlayerScripts.Client.FurnitureClient', Line 783 - function createOrUpdateRotatingButton
+[15:25:27][Info] Script 'Players.nsopnet.PlayerScripts.Client.FurnitureClient', Line 924
+[15:25:27][Info] Stack End
+[15:25:41][Info] [Speed] Enabled: 80 (Restore: 16)
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:46][Info] made smaller
+[15:25:57][Info] add Workspace.Characters.Kiwi
+[15:25:58][Info] add Workspace.Characters.Kiwi
+[15:25:59][Info] add Workspace.Characters.Kiwi
+[15:26:06][Info] add Workspace.Characters.Kiwi
+[15:26:20][Info] Entered biome Volcanic
+[15:26:20][Info] Volcanic
+[15:26:26][Info] less than 0
+[15:26:32][Info] Arrow nil
+[15:26:32][Info] Arrow nil
+[15:26:32][Info] Arrow nil
+[15:26:33][Info] Entered biome Volcano
+[15:26:33][Info] Volcano
+[15:26:34][Info] Arrow nil
+[15:27:46][Info] Entered biome Volcanic
+[15:27:46][Info] Volcanic
+[15:27:47][Info] Arrow nil
+[15:27:48][Info] Arrow nil
+[15:27:48][Info] Arrow nil
+[15:28:01][Info] Arrow nil
+[15:28:01][Info] Arrow nil
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Info] Arrow nil
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Info] Arrow nil
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:03][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:04][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:04][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:04][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:04][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:04][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:05][Info] Arrow nil
+[15:28:05][Info] Arrow nil
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:07][Info] Arrow nil
+[15:28:07][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:08][Info] Arrow nil
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:09][Info] Arrow nil
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:09][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:10][Info] Arrow nil
+[15:28:11][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:11][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:11][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:11][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:11][Warning] AnimationTrack limit of 64 tracks for one Animator exceeded, new animations will not be played.
+[15:28:11][Info] Arrow nil
+[15:28:12][Info] Arrow nil
+[15:28:13][Info] Arrow nil
+[15:28:14][Info] Arrow nil
+[15:28:15][Info] Arrow nil
+[15:28:17][Info] Arrow nil
+[15:28:24][Info] deactivate and unequip

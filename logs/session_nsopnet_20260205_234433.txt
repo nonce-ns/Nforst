@@ -1,0 +1,932 @@
+=== WindUI Log Session ===
+Started: 2026-02-05 23:44:33
+User: nsopnet (ID: 8401342884)
+========================================
+
+[14:44:34][Info] Loader: Fetching MainInterface...
+[14:44:36][Info] [OP] Loading modules...
+[14:44:36][Info] [MainInterface] Speed module loaded table: table: 0x1755a79676da52df
+[14:44:37][Info] [OP] Initializing 99 Nights OP Script...
+[14:44:37][Info] [OP] Modules loaded!
+[14:44:37][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[14:44:37][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[14:44:37][Info] [Fly] Initialized
+[14:44:37][Info] [OP] KillTarget: Initialized
+[14:44:37][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[14:44:37][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[14:44:37][Info] [Speed] Initialized
+[14:44:37][Info] [Tools] Initialized
+[14:44:37][Info] [Teleport] Initialized
+[14:44:37][Info] [FishFarm] Initialized
+[14:44:37][Info] [PhysicsOptimizer] Initialized
+[14:44:37][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[14:44:37][Info] [OP] Window created. Type: table
+[14:44:40][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[14:44:40][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[14:44:40][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[14:44:40][Info] [OP] UI Created! Ready to use.
+[14:44:50][Info] [Tools][DEBUG] - target: nil
+[14:44:50][Info] [Tools][DEBUG] - targetType: Self
+[14:44:50][Info] [Tools][DEBUG] SpectatorMode.Start called
+[14:44:50][Info] [Tools][DEBUG] - Camera backed up
+[14:44:50][Info] [Tools][DEBUG] - Self mode, character: nsopnet
+[14:44:50][Info] [Tools][DEBUG] - TargetType set to: Self
+[14:44:50][Info] [Tools][DEBUG] - ActiveMode set to: Spectator
+[14:44:50][Info] [Tools] Spectator: Following Self (Self)
+[14:44:50][Info] [Tools][DEBUG] Update loop #1
+[14:44:50][Info] [Tools][DEBUG] - Camera: exists
+[14:44:50][Info] [Tools][DEBUG] - elapsed: 0.02s
+[14:44:50][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:44:51][Info] [Tools][DEBUG] Update loop #61
+[14:44:51][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:44:51][Info] [Tools][DEBUG] - elapsed: 1.33s
+[14:44:53][Info] [Tools][DEBUG] Update loop #121
+[14:44:53][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:44:53][Info] [Tools][DEBUG] - elapsed: 2.65s
+[14:44:54][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:44:54][Info] [Tools][DEBUG] Update loop #181
+[14:44:54][Info] [Tools][DEBUG] - elapsed: 3.94s
+[14:44:55][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:44:55][Info] [Tools][DEBUG] Update loop #241
+[14:44:55][Info] [Tools][DEBUG] - elapsed: 5.44s
+[14:44:57][Info] [Tools][DEBUG] Update loop #301
+[14:44:57][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:44:57][Info] [Tools][DEBUG] - elapsed: 6.88s
+[14:44:58][Info] [Tools][DEBUG] Update loop #361
+[14:44:58][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:44:58][Info] [Tools][DEBUG] - elapsed: 8.17s
+[14:44:59][Info] [Tools][DEBUG] Update loop #421
+[14:44:59][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:44:59][Info] [Tools][DEBUG] - elapsed: 9.39s
+[14:45:01][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:01][Info] [Tools][DEBUG] - elapsed: 10.67s
+[14:45:01][Info] [Tools][DEBUG] Update loop #481
+[14:45:02][Info] [Tools][DEBUG] Update loop #541
+[14:45:02][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:02][Info] [Tools][DEBUG] - elapsed: 12.01s
+[14:45:04][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:04][Info] [Tools][DEBUG] Update loop #601
+[14:45:04][Info] [Tools][DEBUG] - elapsed: 13.52s
+[14:45:05][Info] [Tools][DEBUG] Update loop #661
+[14:45:05][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:05][Info] [Tools][DEBUG] - elapsed: 14.86s
+[14:45:06][Info] [Tools][DEBUG] Update loop #721
+[14:45:06][Info] [Tools][DEBUG] - elapsed: 16.13s
+[14:45:06][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:07][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:07][Info] [Tools][DEBUG] Update loop #781
+[14:45:07][Info] [Tools][DEBUG] - elapsed: 17.42s
+[14:45:09][Info] deactivate and unequip
+[14:45:09][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:09][Info] [Tools][DEBUG] Update loop #841
+[14:45:09][Info] [Tools][DEBUG] - elapsed: 18.82s
+[14:45:10][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:10][Info] [Tools][DEBUG] Update loop #901
+[14:45:10][Info] [Tools][DEBUG] - elapsed: 20.03s
+[14:45:11][Info] [Tools][DEBUG] Update loop #961
+[14:45:11][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:11][Info] [Tools][DEBUG] - elapsed: 21.31s
+[14:45:13][Info] [Tools][DEBUG] Update loop #1021
+[14:45:13][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:13][Info] [Tools][DEBUG] - elapsed: 22.67s
+[14:45:14][Info] [Tools][DEBUG] Update loop #1081
+[14:45:14][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:14][Info] [Tools][DEBUG] - elapsed: 23.85s
+[14:45:15][Info] [Tools][DEBUG] - elapsed: 25.06s
+[14:45:15][Info] [Tools][DEBUG] Update loop #1141
+[14:45:15][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:16][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:16][Info] [Tools][DEBUG] - elapsed: 26.38s
+[14:45:16][Info] [Tools][DEBUG] Update loop #1201
+[14:45:18][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:18][Info] [Tools][DEBUG] Update loop #1261
+[14:45:18][Info] [Tools][DEBUG] - elapsed: 27.78s
+[14:45:18][Info] [Remote][Success] RemoteEvents found: 207 remotes
+[14:45:18][Info] [OP] GodMode: STARTED
+[14:45:19][Info] [Tools][DEBUG] - elapsed: 29.28s
+[14:45:19][Info] [Tools][DEBUG] Update loop #1321
+[14:45:19][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:21][Info] [Tools][DEBUG] Update loop #1381
+[14:45:21][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:21][Info] [Tools][DEBUG] - elapsed: 30.53s
+[14:45:22][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:22][Info] [Tools][DEBUG] - elapsed: 31.84s
+[14:45:22][Info] [Tools][DEBUG] Update loop #1441
+[14:45:23][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:23][Info] [Tools][DEBUG] Update loop #1501
+[14:45:23][Info] [Tools][DEBUG] - elapsed: 33.09s
+[14:45:24][Info] [Tools][DEBUG] Update loop #1561
+[14:45:24][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:24][Info] [Tools][DEBUG] - elapsed: 34.37s
+[14:45:26][Info] [Tools][DEBUG] Update loop #1621
+[14:45:26][Info] [Tools][DEBUG] - elapsed: 35.64s
+[14:45:26][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:27][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:27][Info] [Tools][DEBUG] Update loop #1681
+[14:45:27][Info] [Tools][DEBUG] - elapsed: 37.09s
+[14:45:28][Info] [Tools][DEBUG] Update loop #1741
+[14:45:28][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:28][Info] [Tools][DEBUG] - elapsed: 38.42s
+[14:45:30][Info] [Tools][DEBUG] - elapsed: 39.64s
+[14:45:30][Info] [Tools][DEBUG] Update loop #1801
+[14:45:30][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:31][Info] [Tools][DEBUG] Update loop #1861
+[14:45:31][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:31][Info] [Tools][DEBUG] - elapsed: 41.04s
+[14:45:32][Info] [Tools][DEBUG] Update loop #1921
+[14:45:32][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:32][Info] [Tools][DEBUG] - elapsed: 42.37s
+[14:45:34][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:34][Info] [Tools][DEBUG] Update loop #1981
+[14:45:34][Info] [Tools][DEBUG] - elapsed: 43.70s
+[14:45:35][Info] [Tools][DEBUG] Update loop #2041
+[14:45:35][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:35][Info] [Tools][DEBUG] - elapsed: 45.03s
+[14:45:36][Info] [Tools][DEBUG] Update loop #2101
+[14:45:36][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:36][Info] [Tools][DEBUG] - elapsed: 46.28s
+[14:45:38][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:38][Info] [Tools][DEBUG] - elapsed: 47.64s
+[14:45:38][Info] [Tools][DEBUG] Update loop #2161
+[14:45:39][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:39][Info] [Tools][DEBUG] Update loop #2221
+[14:45:39][Info] [Tools][DEBUG] - elapsed: 48.93s
+[14:45:40][Info] [Tools][DEBUG] Update loop #2281
+[14:45:40][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:40][Info] [Tools][DEBUG] - elapsed: 50.27s
+[14:45:42][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:42][Info] [Tools][DEBUG] Update loop #2341
+[14:45:42][Info] [Tools][DEBUG] - elapsed: 51.62s
+[14:45:43][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:43][Info] [Tools][DEBUG] Update loop #2401
+[14:45:43][Info] [Tools][DEBUG] - elapsed: 52.90s
+[14:45:44][Info] [Tools][DEBUG] Update loop #2461
+[14:45:44][Info] [Tools][DEBUG] - elapsed: 54.20s
+[14:45:44][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:46][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:46][Info] [Tools][DEBUG] Update loop #2521
+[14:45:46][Info] [Tools][DEBUG] - elapsed: 55.63s
+[14:45:47][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:47][Info] [Tools][DEBUG] Update loop #2581
+[14:45:47][Info] [Tools][DEBUG] - elapsed: 57.00s
+[14:45:48][Info] [Tools][DEBUG] Update loop #2641
+[14:45:48][Info] [Tools][DEBUG] - elapsed: 58.28s
+[14:45:48][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:50][Info] [Tools][DEBUG] Update loop #2701
+[14:45:50][Info] [Tools][DEBUG] - elapsed: 59.84s
+[14:45:50][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:52][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:52][Info] [Tools][DEBUG] Update loop #2761
+[14:45:52][Info] [Tools][DEBUG] - elapsed: 61.50s
+[14:45:53][Info] [FishFarm] ═══════════════════════════
+[14:45:53][Info] [FishFarm]       FISH FARM START      
+[14:45:53][Info] [FishFarm] FishDelay: 10s
+[14:45:53][Info] [FishFarm] ═══════════════════════════
+[14:45:53][Info] [FishFarm] AutoClick: true
+[14:45:53][Info] [FishFarm] ExpandZone: true
+[14:45:53][Info] [FishFarm] Running cleanup...
+[14:45:53][Info] [FishFarm] Cleanup done (fish: 0)
+[14:45:53][Info] [FishFarm] Started minigame watcher
+[14:45:53][Info] [FishFarm] ⏳ Equip a rod...
+[14:45:53][Info] [Tools][DEBUG] Update loop #2821
+[14:45:53][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:53][Info] [Tools][DEBUG] - elapsed: 62.78s
+[14:45:54][Info] [Tools][DEBUG] Update loop #2881
+[14:45:54][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:54][Info] [Tools][DEBUG] - elapsed: 64.07s
+[14:45:55][Info] [FishFarm] ─────────────────────
+[14:45:55][Info] [FishFarm] Rod: Old Rod
+[14:45:55][Info] [FishFarm] 🎣 Fish attempt #1
+[14:45:55][Info] [FishFarm] Water: Water at -120, -4.426867485046387, -39.5
+[14:45:55][Info] [FishFarm] Step 1: Triggering cast animation...
+[14:45:55][Info] [Tools][DEBUG] Update loop #2941
+[14:45:55][Info] [Tools][DEBUG] - elapsed: 65.34s
+[14:45:55][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:56][Info] [FishFarm] Step 2: Bobber in water...
+[14:45:56][Info] [FishFarm] Step 3: StartCatchTimer...
+[14:45:57][Info] [Tools][DEBUG] - elapsed: 66.56s
+[14:45:57][Info] [Tools][DEBUG] Update loop #3001
+[14:45:57][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:58][Info] [Tools][DEBUG] Update loop #3061
+[14:45:58][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:58][Info] [Tools][DEBUG] - elapsed: 67.85s
+[14:45:59][Info] [Tools][DEBUG] Update loop #3121
+[14:45:59][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:45:59][Info] [Tools][DEBUG] - elapsed: 69.14s
+[14:46:00][Info] [Tools][DEBUG] Update loop #3181
+[14:46:00][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:00][Info] [Tools][DEBUG] - elapsed: 70.33s
+[14:46:02][Info] [Tools][DEBUG] - elapsed: 71.49s
+[14:46:02][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:02][Info] [Tools][DEBUG] Update loop #3241
+[14:46:03][Info] [Tools][DEBUG] Update loop #3301
+[14:46:03][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:03][Info] [Tools][DEBUG] - elapsed: 72.75s
+[14:46:04][Info] [Tools][DEBUG] Update loop #3361
+[14:46:04][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:04][Info] [Tools][DEBUG] - elapsed: 74.20s
+[14:46:04][Info] deactivate and unequip
+[14:46:06][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:06][Info] [Tools][DEBUG] Update loop #3421
+[14:46:06][Info] [Tools][DEBUG] - elapsed: 75.51s
+[14:46:07][Info] [Tools][DEBUG] Update loop #3481
+[14:46:07][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:07][Info] [Tools][DEBUG] - elapsed: 76.78s
+[14:46:08][Info] [Tools][DEBUG] Update loop #3541
+[14:46:08][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:08][Info] [Tools][DEBUG] - elapsed: 78.03s
+[14:46:09][Info] [FishFarm] Step 4: Waiting for minigame (10s max)...
+[14:46:09][Warning] [FishFarm] No server response
+[14:46:10][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:10][Info] [Tools][DEBUG] - elapsed: 79.56s
+[14:46:10][Info] [Tools][DEBUG] Update loop #3601
+[14:46:10][Info] [FishFarm] ═══════════════════════════
+[14:46:10][Info] [FishFarm] ═══════════════════════════
+[14:46:10][Info] [FishFarm]       FISH FARM STOP       
+[14:46:10][Info] [FishFarm] Running cleanup...
+[14:46:10][Info] [FishFarm] Cleanup done (fish: 0)
+[14:46:11][Info] [FishFarm] ═══════════════════════════
+[14:46:11][Info] [FishFarm]       FISH FARM START      
+[14:46:11][Info] [FishFarm] ═══════════════════════════
+[14:46:11][Info] [FishFarm] ExpandZone: true
+[14:46:11][Info] [FishFarm] FishDelay: 10s
+[14:46:11][Info] [FishFarm] AutoClick: true
+[14:46:11][Info] [FishFarm] Running cleanup...
+[14:46:11][Info] [FishFarm] ─────────────────────
+[14:46:11][Info] [FishFarm] Started minigame watcher
+[14:46:11][Info] [FishFarm] Cleanup done (fish: 0)
+[14:46:11][Info] [FishFarm] 🎣 Fish attempt #1
+[14:46:11][Info] [FishFarm] Rod: Old Rod
+[14:46:11][Info] [FishFarm] Step 1: Triggering cast animation...
+[14:46:11][Info] [FishFarm] Water: Water at -120, -4.426867485046387, -39.5
+[14:46:11][Info] [FishFarm] Step 2: Bobber in water...
+[14:46:11][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:11][Info] [Tools][DEBUG] Update loop #3661
+[14:46:11][Info] [Tools][DEBUG] - elapsed: 81.07s
+[14:46:11][Info] [FishFarm] Step 3: StartCatchTimer...
+[14:46:12][Info] [Tools][DEBUG] Update loop #3721
+[14:46:12][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:12][Info] [Tools][DEBUG] - elapsed: 82.38s
+[14:46:14][Info] [Tools][DEBUG] - elapsed: 83.58s
+[14:46:14][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:14][Info] [Tools][DEBUG] Update loop #3781
+[14:46:15][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:15][Info] [Tools][DEBUG] Update loop #3841
+[14:46:15][Info] [Tools][DEBUG] - elapsed: 84.89s
+[14:46:16][Info] [Tools][DEBUG] Update loop #3901
+[14:46:16][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:16][Info] [Tools][DEBUG] - elapsed: 86.18s
+[14:46:18][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:18][Info] [Tools][DEBUG] - elapsed: 88.25s
+[14:46:18][Info] [Tools][DEBUG] Update loop #3961
+[14:46:20][Info] [Tools][DEBUG] Update loop #4021
+[14:46:20][Info] [Tools][DEBUG] - elapsed: 89.64s
+[14:46:20][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:21][Info] [Tools][DEBUG] Update loop #4081
+[14:46:21][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:21][Info] [Tools][DEBUG] - elapsed: 90.99s
+[14:46:22][Info] [Tools][DEBUG] Update loop #4141
+[14:46:22][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:22][Info] [Tools][DEBUG] - elapsed: 92.23s
+[14:46:24][Info] [Tools][DEBUG] Update loop #4201
+[14:46:24][Info] [Tools][DEBUG] - elapsed: 93.66s
+[14:46:24][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:24][Info] [FishFarm]   Item: Salmon
+[14:46:24][Info] [FishFarm] ✓ Server response received!
+[14:46:24][Info] [FishFarm] Step 4: Waiting for minigame (10s max)...
+[14:46:24][Info] [FishFarm]   Difficulty: 3
+[14:46:25][Info] [Tools][DEBUG] Update loop #4261
+[14:46:25][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:25][Info] [Tools][DEBUG] - elapsed: 94.95s
+[14:46:26][Info] [Tools][DEBUG] Update loop #4321
+[14:46:26][Info] [Tools][DEBUG] - elapsed: 96.17s
+[14:46:26][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:28][Info] [Tools][DEBUG] - elapsed: 97.50s
+[14:46:28][Info] [Tools][DEBUG] Update loop #4381
+[14:46:28][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:29][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:29][Info] [Tools][DEBUG] Update loop #4441
+[14:46:29][Info] [Tools][DEBUG] - elapsed: 98.93s
+[14:46:30][Info] [Tools][DEBUG] Update loop #4501
+[14:46:30][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:30][Info] [Tools][DEBUG] - elapsed: 100.32s
+[14:46:32][Info] [Tools][DEBUG] Update loop #4561
+[14:46:32][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:32][Info] [Tools][DEBUG] - elapsed: 101.61s
+[14:46:33][Info] [Tools][DEBUG] Update loop #4621
+[14:46:33][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:33][Info] [Tools][DEBUG] - elapsed: 103.00s
+[14:46:34][Info] [FishFarm]   Frame found: Players.nsopnet.PlayerGui.Interface.FishingCatchFrame
+[14:46:34][Info] [FishFarm] Debug: Checking FishingCatchFrame...
+[14:46:34][Warning] [FishFarm] ⚠ Minigame never appeared!
+[14:46:34][Info] [FishFarm]   Visible: false
+[14:46:34][Info] [FishFarm] ✓ Fish #1 attempt complete
+[14:46:34][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:34][Info] [Tools][DEBUG] Update loop #4681
+[14:46:34][Info] [Tools][DEBUG] - elapsed: 104.25s
+[14:46:35][Info] [FishFarm] ─────────────────────
+[14:46:35][Info] [FishFarm] 🎣 Fish attempt #2
+[14:46:35][Info] [FishFarm] Rod: Old Rod
+[14:46:35][Info] [FishFarm] Water: Water at -120, -4.426867485046387, -39.5
+[14:46:35][Info] [FishFarm] Step 1: Triggering cast animation...
+[14:46:36][Info] [Tools][DEBUG] Update loop #4741
+[14:46:36][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:36][Info] [Tools][DEBUG] - elapsed: 105.48s
+[14:46:36][Info] [FishFarm] Step 2: Bobber in water...
+[14:46:36][Info] [FishFarm] Step 3: StartCatchTimer...
+[14:46:37][Info] [Tools][DEBUG] Update loop #4801
+[14:46:37][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:37][Info] [Tools][DEBUG] - elapsed: 106.85s
+[14:46:38][Info] [Tools][DEBUG] Update loop #4861
+[14:46:38][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:38][Info] [Tools][DEBUG] - elapsed: 108.15s
+[14:46:40][Info] [Tools][DEBUG] Update loop #4921
+[14:46:40][Info] [Tools][DEBUG] - elapsed: 109.59s
+[14:46:40][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:41][Info] [Tools][DEBUG] Update loop #4981
+[14:46:41][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:41][Info] [Tools][DEBUG] - elapsed: 110.90s
+[14:46:42][Info] [Tools][DEBUG] Update loop #5041
+[14:46:42][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:42][Info] [Tools][DEBUG] - elapsed: 112.20s
+[14:46:44][Info] [Tools][DEBUG] Update loop #5101
+[14:46:44][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:44][Info] [Tools][DEBUG] - elapsed: 113.56s
+[14:46:45][Info] [Tools][DEBUG] - elapsed: 115.01s
+[14:46:45][Info] [Tools][DEBUG] Update loop #5161
+[14:46:45][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:46][Info] [Tools][DEBUG] Update loop #5221
+[14:46:46][Info] [Tools][DEBUG] - elapsed: 116.21s
+[14:46:46][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:47][Info] [Tools][DEBUG] Update loop #5281
+[14:46:48][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:48][Info] [Tools][DEBUG] - elapsed: 117.47s
+[14:46:48][Info] [FishFarm] ✓ Server response received!
+[14:46:48][Info] [FishFarm]   Difficulty: 2
+[14:46:48][Info] [FishFarm]   Item: Mackerel
+[14:46:48][Info] [FishFarm] Step 4: Waiting for minigame (10s max)...
+[14:46:49][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:49][Info] [Tools][DEBUG] - elapsed: 118.66s
+[14:46:49][Info] [Tools][DEBUG] Update loop #5341
+[14:46:50][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:50][Info] [Tools][DEBUG] Update loop #5401
+[14:46:50][Info] [Tools][DEBUG] - elapsed: 120.14s
+[14:46:51][Info] [Tools][DEBUG] Update loop #5461
+[14:46:51][Info] [Tools][DEBUG] - elapsed: 121.40s
+[14:46:51][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:53][Info] [Tools][DEBUG] Update loop #5521
+[14:46:53][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:53][Info] [Tools][DEBUG] - elapsed: 122.68s
+[14:46:54][Info] [Tools][DEBUG] Update loop #5581
+[14:46:54][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:54][Info] [Tools][DEBUG] - elapsed: 124.03s
+[14:46:55][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:55][Info] [Tools][DEBUG] Update loop #5641
+[14:46:55][Info] [Tools][DEBUG] - elapsed: 125.27s
+[14:46:56][Info] deactivate and unequip
+[14:46:57][Info] [Tools][DEBUG] Update loop #5701
+[14:46:57][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:57][Info] [Tools][DEBUG] - elapsed: 126.52s
+[14:46:58][Info] [Tools][DEBUG] Update loop #5761
+[14:46:58][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:58][Info] [Tools][DEBUG] - elapsed: 127.76s
+[14:46:58][Warning] [FishFarm] ⚠ Minigame never appeared!
+[14:46:58][Info] [FishFarm]   Frame found: Players.nsopnet.PlayerGui.Interface.FishingCatchFrame
+[14:46:58][Info] [FishFarm] Debug: Checking FishingCatchFrame...
+[14:46:58][Info] [FishFarm]   Visible: false
+[14:46:58][Info] [FishFarm] ✓ Fish #2 attempt complete
+[14:46:59][Info] [Tools][DEBUG] - elapsed: 129.00s
+[14:46:59][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:46:59][Info] [Tools][DEBUG] Update loop #5821
+[14:46:59][Info] [FishFarm] ⏳ Equip a rod...
+[14:47:00][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:00][Info] [Tools][DEBUG] - elapsed: 130.41s
+[14:47:00][Info] [Tools][DEBUG] Update loop #5881
+[14:47:02][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:02][Info] [Tools][DEBUG] Update loop #5941
+[14:47:02][Info] [Tools][DEBUG] - elapsed: 131.67s
+[14:47:03][Info] [Tools][DEBUG] Update loop #6001
+[14:47:03][Info] [Tools][DEBUG] - elapsed: 133.06s
+[14:47:03][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:04][Info] [Tools][DEBUG] Update loop #6061
+[14:47:04][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:04][Info] [Tools][DEBUG] - elapsed: 134.30s
+[14:47:06][Info] [Tools][DEBUG] Update loop #6121
+[14:47:06][Info] [Tools][DEBUG] - elapsed: 135.60s
+[14:47:06][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:07][Info] [Tools][DEBUG] Update loop #6181
+[14:47:07][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:07][Info] [Tools][DEBUG] - elapsed: 136.81s
+[14:47:08][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:08][Info] [Tools][DEBUG] - elapsed: 138.03s
+[14:47:08][Info] [Tools][DEBUG] Update loop #6241
+[14:47:09][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:09][Info] [Tools][DEBUG] - elapsed: 139.39s
+[14:47:09][Info] [Tools][DEBUG] Update loop #6301
+[14:47:11][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:11][Info] [Tools][DEBUG] Update loop #6361
+[14:47:11][Info] [Tools][DEBUG] - elapsed: 140.64s
+[14:47:12][Info] [Tools][DEBUG] Update loop #6421
+[14:47:12][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:12][Info] [Tools][DEBUG] - elapsed: 141.95s
+[14:47:13][Info] [Tools][DEBUG] Update loop #6481
+[14:47:13][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:13][Info] [Tools][DEBUG] - elapsed: 143.41s
+[14:47:15][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:15][Info] [Tools][DEBUG] Update loop #6541
+[14:47:15][Info] [Tools][DEBUG] - elapsed: 144.73s
+[14:47:16][Info] [Tools][DEBUG] Update loop #6601
+[14:47:16][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:16][Info] [Tools][DEBUG] - elapsed: 145.91s
+[14:47:17][Info] [Tools][DEBUG] - elapsed: 147.06s
+[14:47:17][Info] [Tools][DEBUG] Update loop #6661
+[14:47:17][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:18][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:18][Info] [Tools][DEBUG] Update loop #6721
+[14:47:18][Info] [Tools][DEBUG] - elapsed: 148.34s
+[14:47:20][Info] [Tools][DEBUG] Update loop #6781
+[14:47:20][Info] [Tools][DEBUG] - elapsed: 149.56s
+[14:47:20][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:21][Info] [Tools][DEBUG] Update loop #6841
+[14:47:21][Info] [Tools][DEBUG] - elapsed: 150.87s
+[14:47:21][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:22][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:22][Info] [Tools][DEBUG] - elapsed: 152.20s
+[14:47:22][Info] [Tools][DEBUG] Update loop #6901
+[14:47:24][Info] [Tools][DEBUG] Update loop #6961
+[14:47:24][Info] [Tools][DEBUG] - elapsed: 153.55s
+[14:47:24][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:25][Info] [Tools][DEBUG] Update loop #7021
+[14:47:25][Info] [Tools][DEBUG] - elapsed: 154.78s
+[14:47:25][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:26][Info] [Tools][DEBUG] Update loop #7081
+[14:47:26][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:26][Info] [Tools][DEBUG] - elapsed: 155.98s
+[14:47:27][Info] [Tools][DEBUG] - elapsed: 157.17s
+[14:47:27][Info] [Tools][DEBUG] Update loop #7141
+[14:47:27][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:29][Info] [Tools][DEBUG] Update loop #7201
+[14:47:29][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:29][Info] [Tools][DEBUG] - elapsed: 158.49s
+[14:47:29][Info] [FishFarm] ⏳ Equip a rod...
+[14:47:30][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:30][Info] [Tools][DEBUG] - elapsed: 159.74s
+[14:47:30][Info] [Tools][DEBUG] Update loop #7261
+[14:47:31][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:31][Info] [Tools][DEBUG] Update loop #7321
+[14:47:31][Info] [Tools][DEBUG] - elapsed: 160.89s
+[14:47:32][Info] [Tools][DEBUG] Update loop #7381
+[14:47:32][Info] [Tools][DEBUG] - elapsed: 162.24s
+[14:47:32][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:34][Info] [Tools][DEBUG] Update loop #7441
+[14:47:34][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:34][Info] [Tools][DEBUG] - elapsed: 163.50s
+[14:47:35][Info] [Tools][DEBUG] Update loop #7501
+[14:47:35][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:35][Info] [Tools][DEBUG] - elapsed: 164.77s
+[14:47:36][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:36][Info] [Tools][DEBUG] Update loop #7561
+[14:47:36][Info] [Tools][DEBUG] - elapsed: 166.16s
+[14:47:37][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:37][Info] [Tools][DEBUG] Update loop #7621
+[14:47:37][Info] [Tools][DEBUG] - elapsed: 167.31s
+[14:47:39][Info] [Tools][DEBUG] Update loop #7681
+[14:47:39][Info] [Tools][DEBUG] - elapsed: 168.58s
+[14:47:39][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:40][Info] [Tools][DEBUG] Update loop #7741
+[14:47:40][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:40][Info] [Tools][DEBUG] - elapsed: 169.84s
+[14:47:41][Info] [Tools][DEBUG] Update loop #7801
+[14:47:41][Info] [Tools][DEBUG] - elapsed: 171.20s
+[14:47:41][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:43][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:43][Info] [Tools][DEBUG] - elapsed: 172.51s
+[14:47:43][Info] [Tools][DEBUG] Update loop #7861
+[14:47:44][Info] [Tools][DEBUG] Update loop #7921
+[14:47:44][Info] [Tools][DEBUG] - elapsed: 173.82s
+[14:47:44][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:45][Info] [Tools][DEBUG] Update loop #7981
+[14:47:45][Info] [Tools][DEBUG] - elapsed: 175.13s
+[14:47:45][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:46][Info] [Tools][DEBUG] Update loop #8041
+[14:47:46][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:46][Info] [Tools][DEBUG] - elapsed: 176.41s
+[14:47:48][Info] [Tools][DEBUG] Update loop #8101
+[14:47:48][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:48][Info] [Tools][DEBUG] - elapsed: 177.72s
+[14:47:49][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:49][Info] [Tools][DEBUG] Update loop #8161
+[14:47:49][Info] [Tools][DEBUG] - elapsed: 179.04s
+[14:47:50][Info] [Tools][DEBUG] Update loop #8221
+[14:47:50][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:50][Info] [Tools][DEBUG] - elapsed: 180.21s
+[14:47:51][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:51][Info] [Tools][DEBUG] Update loop #8281
+[14:47:51][Info] [Tools][DEBUG] - elapsed: 181.45s
+[14:47:53][Info] [Tools][DEBUG] Update loop #8341
+[14:47:53][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:53][Info] [Tools][DEBUG] - elapsed: 182.69s
+[14:47:54][Info] [Tools][DEBUG] Update loop #8401
+[14:47:54][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:54][Info] [Tools][DEBUG] - elapsed: 184.10s
+[14:47:56][Info] [Tools][DEBUG] Update loop #8461
+[14:47:56][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:56][Info] [Tools][DEBUG] - elapsed: 185.57s
+[14:47:57][Info] [Tools][DEBUG] Update loop #8521
+[14:47:57][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:57][Info] [Tools][DEBUG] - elapsed: 186.77s
+[14:47:58][Info] [Tools][DEBUG] Update loop #8581
+[14:47:58][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:47:58][Info] [Tools][DEBUG] - elapsed: 187.95s
+[14:47:59][Info] [Tools][DEBUG] - elapsed: 189.21s
+[14:47:59][Info] [Tools][DEBUG] Update loop #8641
+[14:47:59][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:00][Info] [FishFarm] ⏳ Equip a rod...
+[14:48:00][Info] [Tools][DEBUG] Update loop #8701
+[14:48:00][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:00][Info] [Tools][DEBUG] - elapsed: 190.47s
+[14:48:02][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:02][Info] [Tools][DEBUG] Update loop #8761
+[14:48:02][Info] [Tools][DEBUG] - elapsed: 191.79s
+[14:48:03][Info] [Tools][DEBUG] Update loop #8821
+[14:48:03][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:03][Info] [Tools][DEBUG] - elapsed: 193.03s
+[14:48:04][Info] [Tools][DEBUG] Update loop #8881
+[14:48:04][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:04][Info] [Tools][DEBUG] - elapsed: 194.26s
+[14:48:06][Info] [Tools][DEBUG] Update loop #8941
+[14:48:06][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:06][Info] [Tools][DEBUG] - elapsed: 195.62s
+[14:48:07][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:07][Info] [Tools][DEBUG] - elapsed: 196.84s
+[14:48:07][Info] [Tools][DEBUG] Update loop #9001
+[14:48:08][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:08][Info] [Tools][DEBUG] Update loop #9061
+[14:48:08][Info] [Tools][DEBUG] - elapsed: 198.10s
+[14:48:09][Info] [Tools][DEBUG] Update loop #9121
+[14:48:09][Info] [Tools][DEBUG] - elapsed: 199.38s
+[14:48:09][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:11][Info] [Tools][DEBUG] Update loop #9181
+[14:48:11][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:11][Info] [Tools][DEBUG] - elapsed: 200.86s
+[14:48:12][Info] [Tools][DEBUG] Update loop #9241
+[14:48:12][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:12][Info] [Tools][DEBUG] - elapsed: 202.13s
+[14:48:14][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:14][Info] [Tools][DEBUG] - elapsed: 203.50s
+[14:48:14][Info] [Tools][DEBUG] Update loop #9301
+[14:48:15][Info] [Tools][DEBUG] - elapsed: 204.72s
+[14:48:15][Info] [Tools][DEBUG] Update loop #9361
+[14:48:15][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:16][Info] [Tools][DEBUG] Update loop #9421
+[14:48:16][Info] [Tools][DEBUG] - elapsed: 205.97s
+[14:48:16][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:17][Info] [Tools][DEBUG] Update loop #9481
+[14:48:17][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:17][Info] [Tools][DEBUG] - elapsed: 207.17s
+[14:48:18][Info] [Tools][DEBUG] - elapsed: 208.46s
+[14:48:18][Info] [Tools][DEBUG] Update loop #9541
+[14:48:18][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:20][Info] [Tools][DEBUG] - elapsed: 209.68s
+[14:48:20][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:20][Info] [Tools][DEBUG] Update loop #9601
+[14:48:21][Info] [Tools][DEBUG] - elapsed: 210.90s
+[14:48:21][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:21][Info] [Tools][DEBUG] Update loop #9661
+[14:48:22][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:22][Info] [Tools][DEBUG] Update loop #9721
+[14:48:22][Info] [Tools][DEBUG] - elapsed: 212.21s
+[14:48:23][Info] [Tools][DEBUG] Update loop #9781
+[14:48:23][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:23][Info] [Tools][DEBUG] - elapsed: 213.41s
+[14:48:25][Info] [Tools][DEBUG] Update loop #9841
+[14:48:25][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:25][Info] [Tools][DEBUG] - elapsed: 214.54s
+[14:48:26][Info] [Tools][DEBUG] Update loop #9901
+[14:48:26][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:26][Info] [Tools][DEBUG] - elapsed: 216.07s
+[14:48:27][Info] [Tools][DEBUG] Update loop #9961
+[14:48:27][Info] [Tools][DEBUG] - elapsed: 217.38s
+[14:48:27][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:29][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:29][Info] [Tools][DEBUG] Update loop #10021
+[14:48:29][Info] [Tools][DEBUG] - elapsed: 218.66s
+[14:48:30][Info] [FishFarm] ⏳ Equip a rod...
+[14:48:30][Info] [Tools][DEBUG] Update loop #10081
+[14:48:30][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:30][Info] [Tools][DEBUG] - elapsed: 220.11s
+[14:48:31][Info] [Tools][DEBUG] Update loop #10141
+[14:48:31][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:31][Info] [Tools][DEBUG] - elapsed: 221.37s
+[14:48:33][Info] [Tools][DEBUG] Update loop #10201
+[14:48:33][Info] [Tools][DEBUG] - elapsed: 222.69s
+[14:48:33][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:34][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:34][Info] [Tools][DEBUG] Update loop #10261
+[14:48:34][Info] [Tools][DEBUG] - elapsed: 224.24s
+[14:48:36][Info] [Tools][DEBUG] Update loop #10321
+[14:48:36][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:36][Info] [Tools][DEBUG] - elapsed: 225.78s
+[14:48:37][Info] [Tools][DEBUG] Update loop #10381
+[14:48:37][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:37][Info] [Tools][DEBUG] - elapsed: 227.05s
+[14:48:39][Info] [Tools][DEBUG] Update loop #10441
+[14:48:39][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:39][Info] [Tools][DEBUG] - elapsed: 228.49s
+[14:48:40][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:40][Info] [Tools][DEBUG] Update loop #10501
+[14:48:40][Info] [Tools][DEBUG] - elapsed: 229.71s
+[14:48:41][Info] [Tools][DEBUG] Update loop #10561
+[14:48:41][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:41][Info] [Tools][DEBUG] - elapsed: 230.86s
+[14:48:42][Info] [Tools][DEBUG] Update loop #10621
+[14:48:42][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:42][Info] [Tools][DEBUG] - elapsed: 232.11s
+[14:48:43][Info] [Tools][DEBUG] Update loop #10681
+[14:48:43][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:43][Info] [Tools][DEBUG] - elapsed: 233.47s
+[14:48:45][Info] [Tools][DEBUG] Update loop #10741
+[14:48:45][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:45][Info] [Tools][DEBUG] - elapsed: 234.77s
+[14:48:46][Info] [Tools][DEBUG] - elapsed: 236.00s
+[14:48:46][Info] [Tools][DEBUG] Update loop #10801
+[14:48:46][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:47][Info] [Tools][DEBUG] Update loop #10861
+[14:48:47][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:47][Info] [Tools][DEBUG] - elapsed: 237.30s
+[14:48:49][Info] [Tools][DEBUG] Update loop #10921
+[14:48:49][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:49][Info] [Tools][DEBUG] - elapsed: 238.51s
+[14:48:50][Info] [Tools][DEBUG] Update loop #10981
+[14:48:50][Info] [Tools][DEBUG] - elapsed: 239.79s
+[14:48:50][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:51][Info] [Tools][DEBUG] Update loop #11041
+[14:48:51][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:51][Info] [Tools][DEBUG] - elapsed: 241.07s
+[14:48:52][Info] [Tools][DEBUG] - elapsed: 242.41s
+[14:48:52][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:52][Info] [Tools][DEBUG] Update loop #11101
+[14:48:54][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:54][Info] [Tools][DEBUG] - elapsed: 243.64s
+[14:48:54][Info] [Tools][DEBUG] Update loop #11161
+[14:48:55][Info] [Tools][DEBUG] Update loop #11221
+[14:48:55][Info] [Tools][DEBUG] - elapsed: 244.96s
+[14:48:55][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:56][Info] [Tools][DEBUG] - elapsed: 246.29s
+[14:48:56][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:56][Info] [Tools][DEBUG] Update loop #11281
+[14:48:58][Info] [Tools][DEBUG] - elapsed: 247.60s
+[14:48:58][Info] [Tools][DEBUG] Update loop #11341
+[14:48:58][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:59][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:48:59][Info] [Tools][DEBUG] Update loop #11401
+[14:48:59][Info] [Tools][DEBUG] - elapsed: 248.90s
+[14:49:00][Info] [FishFarm] ⏳ Equip a rod...
+[14:49:00][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:00][Info] [Tools][DEBUG] Update loop #11461
+[14:49:00][Info] [Tools][DEBUG] - elapsed: 250.12s
+[14:49:01][Info] [Tools][DEBUG] Update loop #11521
+[14:49:01][Info] [Tools][DEBUG] - elapsed: 251.36s
+[14:49:01][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:03][Info] [Tools][DEBUG] Update loop #11581
+[14:49:03][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:03][Info] [Tools][DEBUG] - elapsed: 252.75s
+[14:49:04][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:04][Info] [Tools][DEBUG] Update loop #11641
+[14:49:04][Info] [Tools][DEBUG] - elapsed: 254.03s
+[14:49:05][Info] [Tools][DEBUG] Update loop #11701
+[14:49:05][Info] [Tools][DEBUG] - elapsed: 255.30s
+[14:49:05][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:07][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:07][Info] [Tools][DEBUG] Update loop #11761
+[14:49:07][Info] [Tools][DEBUG] - elapsed: 256.55s
+[14:49:08][Info] [Tools][DEBUG] Update loop #11821
+[14:49:08][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:08][Info] [Tools][DEBUG] - elapsed: 257.73s
+[14:49:09][Info] [Tools][DEBUG] - elapsed: 258.94s
+[14:49:09][Info] [Tools][DEBUG] Update loop #11881
+[14:49:09][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:10][Info] [Tools][DEBUG] Update loop #11941
+[14:49:10][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:10][Info] [Tools][DEBUG] - elapsed: 260.15s
+[14:49:11][Info] [Tools][DEBUG] Update loop #12001
+[14:49:11][Info] [Tools][DEBUG] - elapsed: 261.42s
+[14:49:11][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:13][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:13][Info] [Tools][DEBUG] - elapsed: 262.74s
+[14:49:13][Info] [Tools][DEBUG] Update loop #12061
+[14:49:14][Info] [Tools][DEBUG] - elapsed: 263.95s
+[14:49:14][Info] [Tools][DEBUG] Update loop #12121
+[14:49:14][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:15][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:15][Info] [Tools][DEBUG] Update loop #12181
+[14:49:15][Info] [Tools][DEBUG] - elapsed: 265.25s
+[14:49:17][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:17][Info] [Tools][DEBUG] Update loop #12241
+[14:49:17][Info] [Tools][DEBUG] - elapsed: 266.55s
+[14:49:18][Info] [Tools][DEBUG] Update loop #12301
+[14:49:18][Info] [Tools][DEBUG] - elapsed: 267.77s
+[14:49:18][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:19][Info] [Tools][DEBUG] Update loop #12361
+[14:49:19][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:19][Info] [Tools][DEBUG] - elapsed: 269.11s
+[14:49:20][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:20][Info] [Tools][DEBUG] - elapsed: 270.28s
+[14:49:20][Info] [Tools][DEBUG] Update loop #12421
+[14:49:22][Info] [Tools][DEBUG] Update loop #12481
+[14:49:22][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:22][Info] [Tools][DEBUG] - elapsed: 271.68s
+[14:49:23][Info] [Tools][DEBUG] Update loop #12541
+[14:49:23][Info] [Tools][DEBUG] - elapsed: 273.05s
+[14:49:23][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:25][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:25][Info] [Tools][DEBUG] Update loop #12601
+[14:49:25][Info] [Tools][DEBUG] - elapsed: 274.54s
+[14:49:27][Info] [Tools][DEBUG] Update loop #12661
+[14:49:27][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:27][Info] [Tools][DEBUG] - elapsed: 276.69s
+[14:49:29][Info] [Tools][DEBUG] Update loop #12721
+[14:49:29][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:29][Info] [Tools][DEBUG] - elapsed: 278.80s
+[14:49:30][Info] [FishFarm] ⏳ Equip a rod...
+[14:49:30][Info] [Tools][DEBUG] Update loop #12781
+[14:49:30][Info] [Tools][DEBUG] - elapsed: 280.38s
+[14:49:30][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:32][Info] [Tools][DEBUG] Update loop #12841
+[14:49:32][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:32][Info] [Tools][DEBUG] - elapsed: 281.79s
+[14:49:33][Info] [Tools][DEBUG] - elapsed: 283.11s
+[14:49:33][Info] [Tools][DEBUG] Update loop #12901
+[14:49:33][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:34][Info] [Tools][DEBUG] Update loop #12961
+[14:49:34][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:34][Info] [Tools][DEBUG] - elapsed: 284.28s
+[14:49:36][Info] [Tools][DEBUG] Update loop #13021
+[14:49:36][Info] [Tools][DEBUG] - elapsed: 285.62s
+[14:49:36][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:37][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:37][Info] [Tools][DEBUG] Update loop #13081
+[14:49:37][Info] [Tools][DEBUG] - elapsed: 286.95s
+[14:49:38][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:38][Info] [Tools][DEBUG] Update loop #13141
+[14:49:38][Info] [Tools][DEBUG] - elapsed: 288.16s
+[14:49:40][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:40][Info] [Tools][DEBUG] - elapsed: 289.47s
+[14:49:40][Info] [Tools][DEBUG] Update loop #13201
+[14:49:41][Info] [Tools][DEBUG] Update loop #13261
+[14:49:41][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:41][Info] [Tools][DEBUG] - elapsed: 290.90s
+[14:49:42][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:42][Info] [Tools][DEBUG] - elapsed: 292.09s
+[14:49:42][Info] [Tools][DEBUG] Update loop #13321
+[14:49:43][Info] [Tools][DEBUG] Update loop #13381
+[14:49:43][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:43][Info] [Tools][DEBUG] - elapsed: 293.24s
+[14:49:44][Info] [Tools][DEBUG] Update loop #13441
+[14:49:44][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:44][Info] [Tools][DEBUG] - elapsed: 294.43s
+[14:49:46][Info] [Tools][DEBUG] Update loop #13501
+[14:49:46][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:46][Info] [Tools][DEBUG] - elapsed: 295.65s
+[14:49:47][Info] [Tools][DEBUG] Update loop #13561
+[14:49:47][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:47][Info] [Tools][DEBUG] - elapsed: 296.90s
+[14:49:48][Info] [Tools][DEBUG] Update loop #13621
+[14:49:48][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:48][Info] [Tools][DEBUG] - elapsed: 298.29s
+[14:49:50][Info] [Tools][DEBUG] Update loop #13681
+[14:49:50][Info] [Tools][DEBUG] - elapsed: 299.54s
+[14:49:50][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:51][Info] [Tools][DEBUG] Update loop #13741
+[14:49:51][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:51][Info] [Tools][DEBUG] - elapsed: 300.93s
+[14:49:52][Info] [Tools][DEBUG] Update loop #13801
+[14:49:52][Info] [Tools][DEBUG] - elapsed: 302.08s
+[14:49:52][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:54][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:54][Info] [Tools][DEBUG] Update loop #13861
+[14:49:54][Info] [Tools][DEBUG] - elapsed: 303.49s
+[14:49:55][Info] [Tools][DEBUG] Update loop #13921
+[14:49:55][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:55][Info] [Tools][DEBUG] - elapsed: 304.89s
+[14:49:56][Info] [Tools][DEBUG] Update loop #13981
+[14:49:56][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:56][Info] [Tools][DEBUG] - elapsed: 306.27s
+[14:49:58][Info] [Tools][DEBUG] Update loop #14041
+[14:49:58][Info] [Tools][DEBUG] - elapsed: 307.47s
+[14:49:58][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:49:59][Info] [Tools][DEBUG] Update loop #14101
+[14:49:59][Info] [Tools][DEBUG] - elapsed: 308.90s
+[14:49:59][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:00][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:00][Info] [Tools][DEBUG] Update loop #14161
+[14:50:00][Info] [Tools][DEBUG] - elapsed: 310.15s
+[14:50:00][Info] [FishFarm] ⏳ Equip a rod...
+[14:50:02][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:02][Info] [Tools][DEBUG] Update loop #14221
+[14:50:02][Info] [Tools][DEBUG] - elapsed: 311.53s
+[14:50:03][Info] [Tools][DEBUG] Update loop #14281
+[14:50:03][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:03][Info] [Tools][DEBUG] - elapsed: 312.78s
+[14:50:04][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:04][Info] [Tools][DEBUG] Update loop #14341
+[14:50:04][Info] [Tools][DEBUG] - elapsed: 314.01s
+[14:50:05][Info] [Tools][DEBUG] Update loop #14401
+[14:50:05][Info] [Tools][DEBUG] - elapsed: 315.19s
+[14:50:05][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:06][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:06][Info] [Tools][DEBUG] Update loop #14461
+[14:50:06][Info] [Tools][DEBUG] - elapsed: 316.36s
+[14:50:06][Info] [FishFarm] ─────────────────────
+[14:50:06][Info] [FishFarm] 🎣 Fish attempt #3
+[14:50:06][Info] [FishFarm] Rod: Old Rod
+[14:50:06][Info] [FishFarm] Step 1: Triggering cast animation...
+[14:50:06][Info] [FishFarm] Water: Water at -120, -4.426867485046387, -39.5
+[14:50:07][Info] [FishFarm] Step 2: Bobber in water...
+[14:50:07][Info] [FishFarm] Step 3: StartCatchTimer...
+[14:50:07][Info] deactivate and unequip
+[14:50:08][Info] [Tools][DEBUG] Update loop #14521
+[14:50:08][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:08][Info] [Tools][DEBUG] - elapsed: 317.63s
+[14:50:09][Info] [Tools][DEBUG] Update loop #14581
+[14:50:09][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:09][Info] [Tools][DEBUG] - elapsed: 318.92s
+[14:50:10][Info] deactivate and unequip
+[14:50:10][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:10][Info] [Tools][DEBUG] Update loop #14641
+[14:50:10][Info] [Tools][DEBUG] - elapsed: 320.12s
+[14:50:11][Info] deactivate and unequip
+[14:50:11][Info] [Tools][DEBUG] Update loop #14701
+[14:50:11][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:11][Info] [Tools][DEBUG] - elapsed: 321.28s
+[14:50:13][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:13][Info] [Tools][DEBUG] Update loop #14761
+[14:50:13][Info] [Tools][DEBUG] - elapsed: 322.56s
+[14:50:14][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:14][Info] [Tools][DEBUG] - elapsed: 323.89s
+[14:50:14][Info] [Tools][DEBUG] Update loop #14821
+[14:50:15][Info] [Tools][DEBUG] - elapsed: 325.33s
+[14:50:15][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:15][Info] [Tools][DEBUG] Update loop #14881
+[14:50:17][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:17][Info] [Tools][DEBUG] - elapsed: 326.99s
+[14:50:17][Info] [Tools][DEBUG] Update loop #14941
+[14:50:18][Info] [Tools][DEBUG] Update loop #15001
+[14:50:18][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:18][Info] [Tools][DEBUG] - elapsed: 328.39s
+[14:50:20][Info] [Tools][DEBUG] Update loop #15061
+[14:50:20][Info] [Tools][DEBUG] - elapsed: 329.89s
+[14:50:20][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:21][Warning] [FishFarm] No server response
+[14:50:21][Info] [FishFarm] Step 4: Waiting for minigame (10s max)...
+[14:50:21][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:21][Info] [Tools][DEBUG] Update loop #15121
+[14:50:21][Info] [Tools][DEBUG] - elapsed: 331.31s
+[14:50:23][Info] [Tools][DEBUG] - elapsed: 332.84s
+[14:50:23][Info] [Tools][DEBUG] Update loop #15181
+[14:50:23][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:24][Info] [Tools][DEBUG] Update loop #15241
+[14:50:24][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:24][Info] [Tools][DEBUG] - elapsed: 334.37s
+[14:50:26][Info] [Tools][DEBUG] Update loop #15301
+[14:50:26][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:26][Info] [Tools][DEBUG] - elapsed: 336.25s
+[14:50:28][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:28][Info] [Tools][DEBUG] - elapsed: 338.13s
+[14:50:28][Info] [Tools][DEBUG] Update loop #15361
+[14:50:30][Info] [Tools][DEBUG] Update loop #15421
+[14:50:30][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:30][Info] [Tools][DEBUG] - elapsed: 340.27s
+[14:50:31][Warning] [FishFarm] ⚠ Minigame never appeared!
+[14:50:31][Info] [FishFarm]   Frame found: Players.nsopnet.PlayerGui.Interface.FishingCatchFrame
+[14:50:31][Info] [FishFarm] Debug: Checking FishingCatchFrame...
+[14:50:31][Info] [FishFarm] ✓ Fish #3 attempt complete
+[14:50:31][Info] [FishFarm]   Visible: false
+[14:50:32][Info] [Tools][DEBUG] Update loop #15481
+[14:50:32][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:32][Info] [Tools][DEBUG] - elapsed: 342.19s
+[14:50:32][Info] [FishFarm] ⏳ Equip a rod...
+[14:50:34][Info] [Tools][DEBUG] Update loop #15541
+[14:50:34][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:34][Info] [Tools][DEBUG] - elapsed: 344.02s
+[14:50:36][Info] [Tools][DEBUG] Update loop #15601
+[14:50:36][Info] [Tools][DEBUG] - elapsed: 345.72s
+[14:50:36][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:37][Info] [Tools][DEBUG] Update loop #15661
+[14:50:37][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:37][Info] [Tools][DEBUG] - elapsed: 347.28s
+[14:50:39][Info] [Tools][DEBUG] Update loop #15721
+[14:50:39][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:39][Info] [Tools][DEBUG] - elapsed: 348.64s
+[14:50:40][Info] [Tools][DEBUG] Update loop #15781
+[14:50:40][Info] [Tools][DEBUG] - elapsed: 350.14s
+[14:50:40][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:42][Info] [Tools][DEBUG] Update loop #15841
+[14:50:42][Info] [Tools][DEBUG] - elapsed: 351.53s
+[14:50:42][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:43][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:43][Info] [Tools][DEBUG] - elapsed: 352.79s
+[14:50:43][Info] [Tools][DEBUG] Update loop #15901
+[14:50:44][Info] [Tools][DEBUG] Update loop #15961
+[14:50:44][Info] [Tools][DEBUG] - targetRoot: HumanoidRootPart
+[14:50:44][Info] [Tools][DEBUG] - elapsed: 354.33s

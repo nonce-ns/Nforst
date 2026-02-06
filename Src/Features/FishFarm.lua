@@ -1,12 +1,12 @@
 --[[
     Features/FishFarm.lua
-    Auto Fishing Feature (Memory-Safe + Debug Mode)
+    Auto Fishing Feature
     
-    - Auto-detects equipped rod via ToolHandle
-    - Finds nearest water part
-    - Expands minigame green zone for easy hits
-    - Auto-clicks when bar is in zone (with debounce)
-    - Comprehensive debug logging
+    Strategy:
+    1. Convert water position to screen coordinates
+    2. Click directly on water (VirtualInputManager with x,y)
+    3. Auto-expand zone + auto-click during minigame
+    4. Repeat
 ]]
 
 local FishFarm = {}
@@ -17,39 +17,24 @@ local Workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
 
--- Dependencies (injected via Init)
+-- Dependencies
 local Remote = nil
 
 -- Constants
 local ROD_KEYWORD = "rod"
 local WATER_RANGE = 50
-local CYCLE_DELAY = 0.5
+local CYCLE_DELAY = 1
 local ZONE_SIZE_EXPLOIT = 0.95
-local CLICK_COOLDOWN = 0.15
-local MINIGAME_CHECK_INTERVAL = 0.05
+local CLICK_COOLDOWN = 0.2
+local CAST_COOLDOWN = 1  -- Faster recast after catching
 
--- Debug settings
+-- Debug
 local DEBUG = true
-local DEBUG_VERBOSE = false  -- Extra detailed logs
-
 local function log(msg)
-    if DEBUG then
-        print("[FishFarm] " .. msg)
-    end
+    if DEBUG then print("[FishFarm] " .. msg) end
 end
-
-local function logVerbose(msg)
-    if DEBUG and DEBUG_VERBOSE then
-        print("[FishFarm:V] " .. msg)
-    end
-end
-
 local function logWarn(msg)
     warn("[FishFarm] " .. msg)
-end
-
-local function logError(msg)
-    warn("[FishFarm:ERROR] " .. msg)
 end
 
 -- State
@@ -58,25 +43,25 @@ local State = {
     FishingThread = nil,
     MinigameConnection = nil,
     FishCount = 0,
-    LastNoRodWarning = 0,
-    LastNoWaterWarning = 0,
     LastClickTime = 0,
+    LastCastTime = 0,
     IsMinigameActive = false,
-    IsFishing = false,
     ZoneExpanded = false,
-    ClickCount = 0,  -- Track clicks per minigame
-    MinigameStartTime = 0,
+    ClickCount = 0,
+    WaitingForMinigame = false,
+    Anchored = false,
+    AnchorGui = nil,
 }
 
 -- Settings
 local Settings = {
-    FishDelay = 5,
+    FishDelay = 15,
     AutoClick = true,
     ExpandZone = true,
 }
 
 -- ============================================
--- HELPER FUNCTIONS
+-- HELPERS
 -- ============================================
 local function isRod(name)
     if not name then return false end
@@ -85,55 +70,18 @@ end
 
 local function getEquippedRod()
     local char = LocalPlayer.Character
-    if not char then 
-        logVerbose("No character")
-        return nil 
-    end
+    if not char then return nil end
     
     local toolHandle = char:FindFirstChild("ToolHandle")
-    if not toolHandle then 
-        logVerbose("No ToolHandle")
-        return nil 
-    end
+    if not toolHandle then return nil end
     
     local originalItem = toolHandle:FindFirstChild("OriginalItem")
-    if not originalItem or not originalItem.Value then 
-        logVerbose("No OriginalItem")
-        return nil 
-    end
+    if not originalItem or not originalItem.Value then return nil end
     
     local weapon = originalItem.Value
     if isRod(weapon.Name) then
-        logVerbose("Rod found: " .. weapon.Name)
         return weapon
     end
-    
-    logVerbose("Equipped item is not rod: " .. weapon.Name)
-    return nil
-end
-
-local function getInventoryRod(rodName)
-    local inventory = LocalPlayer:FindFirstChild("Inventory")
-    if not inventory then 
-        logWarn("Inventory not found!")
-        return nil 
-    end
-    
-    local rod = inventory:FindFirstChild(rodName)
-    if rod then 
-        log("Found rod in inventory: " .. rodName)
-        return rod 
-    end
-    
-    -- Fallback
-    for _, item in ipairs(inventory:GetChildren()) do
-        if isRod(item.Name) then
-            log("Found fallback rod: " .. item.Name)
-            return item
-        end
-    end
-    
-    logWarn("No rod in inventory!")
     return nil
 end
 
@@ -143,21 +91,19 @@ local function getRoot()
     return char:FindFirstChild("HumanoidRootPart")
 end
 
+local function getCamera()
+    return Workspace.CurrentCamera
+end
+
 local function getNearestWater()
     local root = getRoot()
     if not root then return nil end
     
     local mapFolder = Workspace:FindFirstChild("Map")
-    if not mapFolder then 
-        logWarn("Map folder not found!")
-        return nil 
-    end
+    if not mapFolder then return nil end
     
     local waterFolder = mapFolder:FindFirstChild("Water")
-    if not waterFolder then 
-        logWarn("Water folder not found!")
-        return nil 
-    end
+    if not waterFolder then return nil end
     
     local nearestWater = nil
     local nearestDist = math.huge
@@ -172,21 +118,68 @@ local function getNearestWater()
         end
     end
     
-    if nearestWater then
-        logVerbose("Water found: " .. nearestWater.Name .. " at " .. math.floor(nearestDist) .. " studs")
-    end
-    
     return nearestWater, nearestDist
 end
 
-local function getWaterPosition(waterPart)
-    if not waterPart then return nil end
-    local pos = waterPart.Position
-    return Vector3.new(pos.X, pos.Y - 1, pos.Z)
+-- ============================================
+-- CLICK AT POSITION
+-- ============================================
+
+-- Convert world position to screen coordinates and click there
+local function clickAtWorldPosition(worldPos)
+    local camera = getCamera()
+    if not camera then return false end
+    
+    -- Convert world position to screen coordinates
+    local screenPos, onScreen = camera:WorldToScreenPoint(worldPos)
+    
+    if not onScreen then
+        logWarn("Water not on screen!")
+        return false
+    end
+    
+    local screenX = math.floor(screenPos.X)
+    local screenY = math.floor(screenPos.Y)
+    
+    log("Clicking at screen: " .. screenX .. ", " .. screenY)
+    
+    local success = pcall(function()
+        local vim = game:GetService("VirtualInputManager")
+        -- Click at water's screen position
+        vim:SendMouseButtonEvent(screenX, screenY, 0, true, game, 0)
+        task.delay(0.1, function()
+            pcall(function()
+                vim:SendMouseButtonEvent(screenX, screenY, 0, false, game, 0)
+            end)
+        end)
+    end)
+    
+    return success
+end
+
+-- Simple click for minigame (center screen)
+local function simulateClick()
+    local now = tick()
+    if now - State.LastClickTime < CLICK_COOLDOWN then
+        return false
+    end
+    State.LastClickTime = now
+    
+    local success = pcall(function()
+        local vim = game:GetService("VirtualInputManager")
+        vim:SendMouseButtonEvent(0, 0, 0, true, game, 0)
+        task.delay(0.1, function()
+            pcall(function()
+                vim:SendMouseButtonEvent(0, 0, 0, false, game, 0)
+            end)
+        end)
+    end)
+    
+    return success
 end
 
 -- ============================================
--- MINIGAME EXPLOIT
+-- MINIGAME HANDLER
 -- ============================================
 
 local function getFishingFrame()
@@ -196,10 +189,7 @@ local function getFishingFrame()
     for _, gui in ipairs(playerGui:GetChildren()) do
         if gui:IsA("ScreenGui") then
             local frame = gui:FindFirstChild("FishingCatchFrame", true)
-            if frame then 
-                logVerbose("FishingCatchFrame found in: " .. gui.Name)
-                return frame 
-            end
+            if frame then return frame end
         end
     end
     return nil
@@ -210,27 +200,18 @@ local function expandGreenZone()
     if State.ZoneExpanded then return true end
     
     local frame = getFishingFrame()
-    if not frame then 
-        logVerbose("expandGreenZone: No frame")
-        return false 
-    end
+    if not frame then return false end
     
     local timingBar = frame:FindFirstChild("TimingBar")
-    if not timingBar then 
-        logWarn("expandGreenZone: No TimingBar")
-        return false 
-    end
+    if not timingBar then return false end
     
     local successArea = timingBar:FindFirstChild("SuccessArea")
     if successArea then
-        local oldSize = successArea.Size.Y.Scale
         successArea.Size = UDim2.new(1, 0, ZONE_SIZE_EXPLOIT, 0)
         successArea.Position = UDim2.new(0.5, 0, 0.025, 0)
         State.ZoneExpanded = true
-        log("✓ Zone expanded: " .. math.floor(oldSize * 100) .. "% → " .. math.floor(ZONE_SIZE_EXPLOIT * 100) .. "%")
+        log("✓ Zone expanded to " .. (ZONE_SIZE_EXPLOIT * 100) .. "%")
         return true
-    else
-        logWarn("expandGreenZone: No SuccessArea")
     end
     
     return false
@@ -252,44 +233,9 @@ local function isBarInZone()
         local zoneY = successArea.AbsolutePosition.Y
         local zoneHeight = successArea.AbsoluteSize.Y
         
-        local inZone = barY >= zoneY and (barY + barHeight) <= (zoneY + zoneHeight)
-        
-        if DEBUG_VERBOSE then
-            logVerbose(string.format("Bar: Y=%.1f H=%.1f | Zone: Y=%.1f H=%.1f | InZone=%s", 
-                barY, barHeight, zoneY, zoneHeight, tostring(inZone)))
-        end
-        
-        return inZone
+        return barY >= zoneY and (barY + barHeight) <= (zoneY + zoneHeight)
     end
     return false
-end
-
-local function simulateClick()
-    local now = tick()
-    if now - State.LastClickTime < CLICK_COOLDOWN then
-        logVerbose("Click debounced")
-        return false
-    end
-    State.LastClickTime = now
-    State.ClickCount = State.ClickCount + 1
-    
-    local success = pcall(function()
-        local vim = game:GetService("VirtualInputManager")
-        vim:SendMouseButtonEvent(0, 0, 0, true, game, 0)
-        task.delay(0.05, function()
-            pcall(function()
-                vim:SendMouseButtonEvent(0, 0, 0, false, game, 0)
-            end)
-        end)
-    end)
-    
-    if success then
-        log("✓ Click #" .. State.ClickCount)
-    else
-        logWarn("Click failed!")
-    end
-    
-    return success
 end
 
 local function onMinigameFrame()
@@ -298,31 +244,32 @@ local function onMinigameFrame()
     local frame = getFishingFrame()
     
     if frame and frame.Visible then
-        -- Minigame just started
         if not State.IsMinigameActive then
             State.IsMinigameActive = true
             State.ZoneExpanded = false
             State.ClickCount = 0
-            State.MinigameStartTime = tick()
-            log("▶ Minigame STARTED")
+            State.WaitingForMinigame = false
+            log("▶ MINIGAME STARTED!")
         end
         
-        -- Expand zone
         expandGreenZone()
         
-        -- Auto-click
         if Settings.AutoClick and isBarInZone() then
-            simulateClick()
+            if simulateClick() then
+                State.ClickCount = State.ClickCount + 1
+                log("Click #" .. State.ClickCount)
+            end
         end
     else
-        -- Minigame ended
         if State.IsMinigameActive then
-            local duration = tick() - State.MinigameStartTime
-            log(string.format("■ Minigame ENDED (%.1fs, %d clicks)", duration, State.ClickCount))
+            log("■ MINIGAME ENDED (" .. State.ClickCount .. " clicks)")
+            State.FishCount = State.FishCount + 1
+            log("🎣 Fish #" .. State.FishCount)
             
             State.IsMinigameActive = false
             State.ZoneExpanded = false
             State.ClickCount = 0
+            State.LastCastTime = tick() - CAST_COOLDOWN + 1.5  -- Wait 1.5s after catch
         end
     end
 end
@@ -331,140 +278,189 @@ local function startMinigameWatcher()
     if State.MinigameConnection then
         State.MinigameConnection:Disconnect()
         State.MinigameConnection = nil
-        log("Disconnected old minigame watcher")
     end
     
     State.MinigameConnection = RunService.RenderStepped:Connect(onMinigameFrame)
-    log("Started minigame watcher (RenderStepped)")
+    log("Minigame watcher started")
 end
 
 local function stopMinigameWatcher()
     if State.MinigameConnection then
         State.MinigameConnection:Disconnect()
         State.MinigameConnection = nil
-        log("Stopped minigame watcher")
     end
     State.IsMinigameActive = false
     State.ZoneExpanded = false
-    State.ClickCount = 0
 end
 
 -- ============================================
--- FISHING LOGIC
+-- MAIN FISHING LOGIC
 -- ============================================
-local function doFishing(rod, waterPart)
-    if not State.Enabled then 
-        logVerbose("doFishing: Not enabled")
-        return false 
-    end
-    if State.IsFishing then 
-        logVerbose("doFishing: Already fishing")
-        return false 
+
+local function doCast()
+    local now = tick()
+    if now - State.LastCastTime < CAST_COOLDOWN then
+        return false
     end
     
-    State.IsFishing = true
+    local rod = getEquippedRod()
+    if not rod then return false end
+    
+    local water, dist = getNearestWater()
+    if not water then return false end
+    
+    local root = getRoot()
+    local camera = getCamera()
+    if not root or not camera then return false end
+    
     log("─────────────────────")
-    log("🎣 Starting fish attempt #" .. (State.FishCount + 1))
+    log("🎣 Casting (rod: " .. rod.Name .. ", water: " .. math.floor(dist) .. " studs)")
     
-    local success, err = pcall(function()
-        -- Get inventory rod
-        local inventoryRod = getInventoryRod(rod.Name)
-        if not inventoryRod then
-            logError("Rod not in Inventory: " .. rod.Name)
-            return
+    -- Get character's look direction
+    local lookVector = root.CFrame.LookVector
+    local playerPos = root.Position
+    
+    -- Calculate target position: 8 studs in front of character, at water level
+    local targetPos = playerPos + lookVector * 8
+    targetPos = Vector3.new(targetPos.X, water.Position.Y, targetPos.Z)
+    
+    log("Target: " .. math.floor(targetPos.X) .. ", " .. math.floor(targetPos.Y) .. ", " .. math.floor(targetPos.Z))
+    
+    -- Convert to screen position
+    local screenPos, onScreen = camera:WorldToScreenPoint(targetPos)
+    
+    if not onScreen then
+        logWarn("Target not on screen, trying water position...")
+        screenPos, onScreen = camera:WorldToScreenPoint(water.Position)
+        if not onScreen then
+            logWarn("Water not on screen!")
+            return false
         end
-        
-        -- Get water position
-        local waterPos = getWaterPosition(waterPart)
-        if not waterPos then 
-            logError("Failed to get water position")
-            return 
-        end
-        
-        log("Casting to: " .. waterPart.Name)
-        log("Position: " .. tostring(waterPos))
-        
-        -- Call remote
-        local result = Remote.StartCatchTimer(inventoryRod, waterPart, waterPos)
-        
-        if result then
-            log("✓ Server response: Fish hooked!")
-            if type(result) == "table" then
-                if result.Item then
-                    log("  Item: " .. tostring(result.Item))
-                end
-                if result.Difficulty then
-                    log("  Difficulty: " .. tostring(result.Difficulty))
-                end
-            end
-        else
-            logWarn("No server response (might be normal)")
-        end
-        
-        -- Wait for minigame
-        log("Waiting " .. Settings.FishDelay .. "s for minigame...")
-        local waited = 0
-        local wasMinigameActive = false
-        
-        while State.Enabled and waited < Settings.FishDelay do
-            task.wait(0.5)
-            waited = waited + 0.5
-            
-            -- Track minigame state
-            if State.IsMinigameActive and not wasMinigameActive then
-                wasMinigameActive = true
-                log("Minigame detected at " .. waited .. "s")
-            end
-            
-            -- Check if minigame ended early
-            if wasMinigameActive and not State.IsMinigameActive and waited > 1 then
-                log("Minigame ended early at " .. waited .. "s")
-                break
-            end
-        end
-        
-        if State.Enabled then
-            State.FishCount = State.FishCount + 1
-            log("✓ Fish #" .. State.FishCount .. " complete!")
-        end
+    end
+    
+    local screenX = math.floor(screenPos.X)
+    local screenY = math.floor(screenPos.Y)
+    
+    State.LastCastTime = tick()
+    State.WaitingForMinigame = true
+    
+    log("Clicking at: " .. screenX .. ", " .. screenY)
+    
+    local success = pcall(function()
+        local vim = game:GetService("VirtualInputManager")
+        vim:SendMouseButtonEvent(screenX, screenY, 0, true, game, 0)
+        task.delay(0.1, function()
+            pcall(function()
+                vim:SendMouseButtonEvent(screenX, screenY, 0, false, game, 0)
+            end)
+        end)
     end)
     
-    if not success then
-        logError("doFishing error: " .. tostring(err))
+    if success then
+        log("✓ Cast sent")
+    else
+        logWarn("Click failed")
+        State.WaitingForMinigame = false
+        return false
     end
     
-    State.IsFishing = false
-    return success
+    return true
 end
 
 -- ============================================
 -- CLEANUP
 -- ============================================
 local function fullCleanup()
-    log("Running full cleanup...")
-    
     stopMinigameWatcher()
     
     if State.FishingThread then
         pcall(function() task.cancel(State.FishingThread) end)
         State.FishingThread = nil
-        log("Cancelled fishing thread")
     end
     
-    local fishCount = State.FishCount
+    local count = State.FishCount
     
     State.Enabled = false
-    State.IsFishing = false
+    State.FishCount = 0
+    State.LastClickTime = 0
+    State.LastCastTime = 0
     State.IsMinigameActive = false
     State.ZoneExpanded = false
-    State.FishCount = 0
     State.ClickCount = 0
-    State.LastClickTime = 0
-    State.LastNoRodWarning = 0
-    State.LastNoWaterWarning = 0
-    State.MinigameStartTime = 0
+    State.WaitingForMinigame = false
     
-    log("Cleanup complete (caught " .. fishCount .. " fish)")
+    log("Cleanup (fish: " .. count .. ")")
+end
+
+-- ============================================
+-- ANCHOR GUI
+-- ============================================
+local function createAnchorGui()
+    if State.AnchorGui then return end
+    
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "FishFarmAnchorGui"
+    gui.ResetOnSpawn = false
+    gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    gui.Parent = LocalPlayer:FindFirstChild("PlayerGui")
+    
+    State.AnchorGui = gui
+    
+    -- Anchor Button
+    local anchorBtn = Instance.new("TextButton")
+    anchorBtn.Name = "AnchorButton"
+    anchorBtn.Size = UDim2.new(0, 90, 0, 40)
+    anchorBtn.Position = UDim2.new(0, 20, 0.7, 0)
+    anchorBtn.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+    anchorBtn.Text = "🔓 ANCHOR"
+    anchorBtn.TextColor3 = Color3.new(1, 1, 1)
+    anchorBtn.TextSize = 14
+    anchorBtn.Font = Enum.Font.GothamBold
+    anchorBtn.Parent = gui
+    
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 10)
+    corner.Parent = anchorBtn
+    
+    local stroke = Instance.new("UIStroke")
+    stroke.Color = Color3.fromRGB(120, 120, 120)
+    stroke.Thickness = 1
+    stroke.Parent = anchorBtn
+    
+    anchorBtn.MouseButton1Click:Connect(function()
+        State.Anchored = not State.Anchored
+        local root = getRoot()
+        
+        if State.Anchored then
+            anchorBtn.BackgroundColor3 = Color3.fromRGB(50, 180, 50)
+            anchorBtn.Text = "🔒 LOCKED"
+            stroke.Color = Color3.fromRGB(80, 200, 80)
+            if root then root.Anchored = true end
+            log("Player ANCHORED")
+        else
+            anchorBtn.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+            anchorBtn.Text = "🔓 ANCHOR"
+            stroke.Color = Color3.fromRGB(120, 120, 120)
+            if root then root.Anchored = false end
+            log("Player UNANCHORED")
+        end
+    end)
+    
+    log("Anchor button created")
+end
+
+local function destroyAnchorGui()
+    -- Unanchor player first
+    if State.Anchored then
+        State.Anchored = false
+        local root = getRoot()
+        if root then root.Anchored = false end
+    end
+    
+    if State.AnchorGui then
+        State.AnchorGui:Destroy()
+        State.AnchorGui = nil
+    end
 end
 
 -- ============================================
@@ -472,81 +468,82 @@ end
 -- ============================================
 function FishFarm.Init(deps)
     Remote = deps.Remote
-    log("Initialized (Debug: " .. tostring(DEBUG) .. ", Verbose: " .. tostring(DEBUG_VERBOSE) .. ")")
+    log("Initialized")
 end
 
 function FishFarm.Start()
-    if State.Enabled then 
-        logWarn("Already running!")
-        return 
-    end
+    if State.Enabled then return end
     
     log("═══════════════════════════")
     log("      FISH FARM START      ")
     log("═══════════════════════════")
-    log("Settings:")
-    log("  FishDelay: " .. Settings.FishDelay .. "s")
-    log("  AutoClick: " .. tostring(Settings.AutoClick))
-    log("  ExpandZone: " .. tostring(Settings.ExpandZone))
-    log("  ZoneSize: " .. (ZONE_SIZE_EXPLOIT * 100) .. "%")
+    log("FishDelay: " .. Settings.FishDelay .. "s")
     
     fullCleanup()
     State.Enabled = true
     
+    createAnchorGui()
     startMinigameWatcher()
     
     State.FishingThread = task.spawn(function()
-        log("Fishing loop started")
+        local noRodWarn = 0
+        local noWaterWarn = 0
         
         while State.Enabled do
             local rod = getEquippedRod()
+            local water = getNearestWater()
             
             if not rod then
                 local now = os.clock()
-                if now - State.LastNoRodWarning >= 30 then
-                    State.LastNoRodWarning = now
-                    log("⏳ Waiting for rod to be equipped...")
+                if now - noRodWarn >= 30 then
+                    noRodWarn = now
+                    log("⏳ Equip a rod...")
                 end
                 task.wait(CYCLE_DELAY)
                 continue
             end
             
-            local waterPart, waterDist = getNearestWater()
-            
-            if not waterPart then
+            if not water then
                 local now = os.clock()
-                if now - State.LastNoWaterWarning >= 30 then
-                    State.LastNoWaterWarning = now
-                    log("⏳ No water nearby (range: " .. WATER_RANGE .. " studs)")
+                if now - noWaterWarn >= 30 then
+                    noWaterWarn = now
+                    log("⏳ Go near water...")
                 end
                 task.wait(CYCLE_DELAY)
                 continue
             end
             
-            doFishing(rod, waterPart)
+            if State.IsMinigameActive then
+                task.wait(0.5)
+                continue
+            end
             
-            task.wait(1)
+            if State.WaitingForMinigame then
+                local waitTime = tick() - State.LastCastTime
+                if waitTime > Settings.FishDelay then
+                    log("⚠ No fish after " .. Settings.FishDelay .. "s, recasting...")
+                    State.WaitingForMinigame = false
+                else
+                    task.wait(0.5)
+                    continue
+                end
+            end
+            
+            doCast()
+            task.wait(CAST_COOLDOWN)
         end
-        
-        log("Fishing loop ended")
     end)
 end
 
 function FishFarm.Stop()
-    if not State.Enabled then 
-        logWarn("Not running!")
-        return 
-    end
+    if not State.Enabled then return end
     
     log("═══════════════════════════")
     log("      FISH FARM STOP       ")
     log("═══════════════════════════")
     
-    pcall(function() 
-        Remote.EndCatching() 
-        log("Called EndCatching")
-    end)
-    
+    destroyAnchorGui()
+    pcall(function() Remote.EndCatching() end)
     fullCleanup()
 end
 
@@ -559,10 +556,10 @@ function FishFarm.Cleanup()
 end
 
 function FishFarm.UpdateSetting(key, value)
-    log("Setting changed: " .. key .. " = " .. tostring(value))
+    log("Setting: " .. key .. " = " .. tostring(value))
     
     if key == "FishDelay" then
-        Settings.FishDelay = value or 5
+        Settings.FishDelay = value or 15
     elseif key == "AutoClick" then
         Settings.AutoClick = value
     elseif key == "ExpandZone" then
@@ -572,13 +569,6 @@ end
 
 function FishFarm.GetFishCount()
     return State.FishCount
-end
-
--- Debug toggle
-function FishFarm.SetDebug(enabled, verbose)
-    DEBUG = enabled
-    DEBUG_VERBOSE = verbose or false
-    log("Debug mode: " .. tostring(DEBUG) .. ", Verbose: " .. tostring(DEBUG_VERBOSE))
 end
 
 return FishFarm

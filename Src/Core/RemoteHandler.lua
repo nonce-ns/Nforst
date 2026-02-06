@@ -257,6 +257,15 @@ function RemoteHandler.ConfirmCatchItem()
     return RemoteHandler.Fire("ConfirmCatchItem")
 end
 
+-- Visual animation remotes
+function RemoteHandler.PlayerCastRod(castData)
+    return RemoteHandler.Fire("PlayerCastRod", castData)
+end
+
+function RemoteHandler.PlayerRodBobbleInWater(position)
+    return RemoteHandler.Fire("PlayerRodBobbleInWater", position)
+end
+
 function RemoteHandler.EndCatching()
     return RemoteHandler.Fire("EndCatching")
 end
