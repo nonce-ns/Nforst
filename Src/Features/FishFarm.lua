@@ -26,7 +26,7 @@ local WATER_RANGE = 50
 local CYCLE_DELAY = 1
 local ZONE_SIZE_EXPLOIT = 0.95
 local CLICK_COOLDOWN = 0.2
-local CAST_COOLDOWN = 1  -- Faster recast after catching
+local CAST_COOLDOWN = 0.7  -- Faster cooldown for aggressive retries
 
 -- Debug
 local DEBUG = false -- Production Ready
@@ -576,9 +576,9 @@ function FishFarm.Start()
         
         while State.Enabled do
             -- 1. Throttling: Slow down if minigame not active
-            if not State.IsMinigameActive and not State.WaitingForMinigame then
-                 task.wait(0.5)
-            else
+             if not State.IsMinigameActive and not State.WaitingForMinigame then
+                  task.wait(0.1) -- Fast throttle
+             else
                  RunService.Heartbeat:Wait()
             end
 
@@ -630,8 +630,8 @@ function FishFarm.Start()
                     end
                 else
                     -- No bobber found?
-                    if timeSinceCast > 1.5 then
-                        -- If 1.5s passed and still no bobber -> CAST FAILED or LINE CUT
+                    if timeSinceCast > 1.2 then -- Aggressive check (was 1.5)
+                        -- If 1.2s passed and still no bobber -> CAST FAILED or LINE CUT
                         log("⚡ Smart Recast: Cast failed / Bobber lost")
                         State.WaitingForMinigame = false -- Trigger recast
                     end
@@ -654,7 +654,7 @@ function FishFarm.Start()
                     State.CurrentBobber = nil
                 end
                 
-                task.wait(0.5) -- Small delay between actions
+                task.wait(0.1) -- Snappy response
             end
         end
     end)
