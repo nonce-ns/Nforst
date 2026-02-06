@@ -247,6 +247,21 @@ function RemoteHandler.FadeOutFogBlock(mode, part)
 end
 
 -- ============================================
+-- FISHING REMOTES
+-- ============================================
+function RemoteHandler.StartCatchTimer(rod, waterPart, position)
+    return RemoteHandler.Invoke("StartCatchTimer", rod, waterPart, position)
+end
+
+function RemoteHandler.ConfirmCatchItem()
+    return RemoteHandler.Fire("ConfirmCatchItem")
+end
+
+function RemoteHandler.EndCatching()
+    return RemoteHandler.Fire("EndCatching")
+end
+
+-- ============================================
 -- LIST ALL REMOTES (for debugging)
 -- ============================================
 function RemoteHandler.ListAll()

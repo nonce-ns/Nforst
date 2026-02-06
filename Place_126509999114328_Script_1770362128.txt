@@ -1,0 +1,136 @@
+-- Script Path: game:GetService("Players").nsopnet.PlayerScripts.Client.StructureModules.FishPosterClient
+-- Took 0.71s to decompile.
+-- Executor: Codex (2.0.0)
+
+-- Decompiled with Konstant V2.1, a fast Luau decompiler made in Luau by plusgiant5 (https://discord.gg/brNTY8nX8t)
+-- Decompiled on 2026-02-05 23:15:10
+-- Luau version 6, Types version 3
+-- Time taken: 0.006420 seconds
+
+local module = {}
+local Client_upvr = require(game.Players.LocalPlayer.PlayerScripts.Client)
+local var3_upvw
+local var4_upvw
+function NewFishPoster(arg1) -- Line 13
+    --[[ Upvalues[2]:
+        [1]: var3_upvw (read and write)
+        [2]: var4_upvw (read and write)
+    ]]
+    var3_upvw = arg1
+    local var9
+    if var4_upvw then
+        var9 = var3_upvw.Sign.SurfaceGui
+        local FishHolder_3 = var9.FishHolder
+        var9 = 0
+        for i, v in pairs(var4_upvw) do
+            if FishHolder_3:FindFirstChild(i) and v then
+                var9 += 1
+                FishHolder_3:FindFirstChild(i).ImageColor3 = Color3.fromRGB(255, 255, 255)
+            end
+        end
+        FishHolder_3.Parent.TextLabel.Text = "Fish Discovered "..var9..'/'..11
+    end
+end
+Client_upvr.Events.InitializeFishPoster:Connect(function(arg1) -- Line 28
+    --[[ Upvalues[2]:
+        [1]: var3_upvw (read and write)
+        [2]: var4_upvw (read and write)
+    ]]
+    repeat
+        local var19
+        var19 = 10
+        wait(var19)
+    until var3_upvw
+    var19 = var3_upvw:WaitForChild("Sign").SurfaceGui
+    local FishHolder = var19.FishHolder
+    var19 = 0
+    for i_2, v_2 in pairs(arg1) do
+        print(i_2, v_2)
+        if FishHolder:FindFirstChild(i_2) and v_2 then
+            var19 += 1
+            FishHolder:FindFirstChild(i_2).ImageColor3 = Color3.fromRGB(255, 255, 255)
+        end
+    end
+    FishHolder.Parent.TextLabel.Text = "Fish Discovered "..var19..'/'..11
+    var4_upvw = arg1
+end)
+Client_upvr.Events.UnlockFish:Connect(function(arg1) -- Line 44
+    --[[ Upvalues[1]:
+        [1]: var3_upvw (read and write)
+    ]]
+    print("got", arg1)
+    local var29
+    if not var3_upvw then
+    else
+        var29 = var3_upvw.Sign
+        local FishHolder_2 = var29.SurfaceGui.FishHolder
+        local SOME = FishHolder_2:FindFirstChild(arg1)
+        var29 = print
+        var29(SOME:GetFullName())
+        if SOME then
+            var29 = Color3.fromRGB(255, 255, 255)
+            SOME.ImageColor3 = var29
+        end
+        var29 = 0
+        for _, v_3 in pairs(FishHolder_2:GetChildren()) do
+            if v_3:IsA("ImageLabel") and 0.01 < v_3.ImageColor3.R then
+                var29 += 1
+            end
+        end
+        FishHolder_2.Parent.TextLabel.Text = "Fish Discovered "..var29..'/'..11
+    end
+end)
+local function animateFlipbook_upvr(arg1, arg2) -- Line 68, Named "animateFlipbook"
+    local ImageRectSize_upvw = arg1.ImageRectSize
+    if ImageRectSize_upvw == Vector2.new(0, 0) then
+        ImageRectSize_upvw = Vector2.new(1024, 1024)
+    end
+    arg1.ImageRectSize = ImageRectSize_upvw / 4ne 68, Named "animateFlipbook"
+    local ImageRectSize_upvw = arg1.ImageRectSize
+    if ImageRectSize_upvw == Vector2.new(0, 0) then
+        ImageRectSize_upvw = Vector2.new(1024, 1024)
+    end
+    arg1.ImageRectSize = ImageRectSize_upvw / 4
+    local var37_upvw = 0
+    local var38_upvw = arg2 or 12
+    spawn(function() -- Line 80
+        --[[ Upvalues[4]:
+            [1]: var37_upvw (read and write)
+            [2]: arg1 (readonly)
+            [3]: ImageRectSize_upvw (read and write)
+            [4]: var38_upvw (read and write)
+        ]]
+        while true do
+            arg1.ImageRectOffset = Vector2.new(var37_upvw % 4 * ImageRectSize_upvw.X / 4, math.floor(var37_upvw / 4) * ImageRectSize_upvw.Y / 4)
+            var37_upvw = (var37_upvw + 1) % 16
+            task.wait(1 / var38_upvw)
+        end
+    end)
+end
+local tbl_upvr = {}
+function NewHotspot(arg1) -- Line 101
+    --[[ Upvalues[2]:
+        [1]: tbl_upvr (readonly)
+        [2]: animateFlipbook_upvr (readonly)
+    ]]
+    if arg1:IsDescendantOf(workspace) then
+        if table.find(tbl_upvr, arg1) then return end
+        table.insert(tbl_upvr, arg1)
+        task.spawn(function() -- Line 109
+            --[[ Upvalues[2]:
+                [1]: arg1 (readonly)
+                [2]: animateFlipbook_upvr (copied, readonly)
+            ]]
+            arg1.SurfaceGui.ImageLabel.ImageTransparency = 0.45
+            animateFlipbook_upvr(arg1.SurfaceGui.ImageLabel, 10)
+        end)
+    end
+end
+function module.Init() -- Line 117
+    --[[ Upvalues[1]:
+        [1]: Client_upvr (readonly)
+    ]]
+    Client_upvr.Utility.ForAllTagged("FishPoster", NewFishPoster)
+    Client_upvr.Utility.ForAllTagged("FishHotspot", NewHotspot)
+end
+return module

@@ -123,6 +123,7 @@ local Teleport = loadModule("Features/Teleport.lua") -- [NEW]
 local PhysicsOptimizer = loadModule("Features/PhysicsOptimizer.lua") -- [NEW]
 local Tools = loadModule("Features/Tools.lua") -- [NEW] Free Camera & Spectator
 local KillTarget = loadModule("Features/KillTarget.lua") -- [NEW] Teleport Kill
+local FishFarm = loadModule("Features/FishFarm.lua") -- [NEW] Auto Fishing
 
 -- UI Tabs
 local HomeTab = loadModule("UI/Tabs/HomeTab.lua")
@@ -155,6 +156,7 @@ if getgenv then
         PhysicsOptimizer = PhysicsOptimizer,
         Tools = Tools,
         KillTarget = KillTarget,
+        FishFarm = FishFarm,
     }
 end
 
@@ -177,6 +179,7 @@ local Features = {
     PhysicsOptimizer = PhysicsOptimizer, -- [NEW]
     Tools = Tools, -- [NEW] Free Camera & Spectator
     KillTarget = KillTarget, -- [NEW] Teleport Kill
+    FishFarm = FishFarm, -- [NEW] Auto Fishing
 }
 
 -- ============================================
@@ -256,6 +259,7 @@ local function createUI(WindUI)
     if Teleport then Teleport.Init() end -- [NEW]
     if PhysicsOptimizer then PhysicsOptimizer.Init() end -- [NEW]
     if Tools then Tools.Init() end -- [NEW] Free Camera & Spectator
+    if FishFarm then FishFarm.Init({ Remote = Remote }) end -- [NEW] Auto Fishing
     
     -- Create window
     local Window = WindUI:CreateWindow({

@@ -219,6 +219,55 @@ function FarmingTab.Create(Window, Features, CONFIG)
         end,
     })
 
+    Tab:Space({ Size = 10 })
+    
+    -- ========================================
+    -- FISH FARM SECTION
+    -- ========================================
+    local FishSection = Tab:Section({
+        Title = "Fish Farm",
+        Icon = "solar:water-bold",
+        Box = true,
+        BoxBorder = true,
+        Opened = false,
+    })
+    
+    -- Enable Toggle
+    FishSection:Toggle({
+        Flag = "FishFarm.Enabled",
+        Title = "Enable Fish Farm",
+        Desc = "Auto fishing when rod equipped near water",
+        Value = false,
+        Callback = function(state)
+            if Features.FishFarm then
+                if state then
+                    Features.FishFarm.Start()
+                else
+                    Features.FishFarm.Stop()
+                end
+            end
+        end,
+    })
+    
+    -- Fish Delay Slider
+    FishSection:Slider({
+        Flag = "FishFarm.FishDelay",
+        Title = "Fish Delay",
+        Desc = "Delay before confirm catch (seconds)",
+        Step = 0.5,
+        Value = { Min = 1, Max = 10, Default = 5 },
+        Callback = function(value)
+            if Features.FishFarm then
+                Features.FishFarm.UpdateSetting("FishDelay", value)
+            end
+        end,
+    })
+    
+    -- Info text
+    FishSection:Paragraph({
+        Title = "ℹ️ How to use",
+        Desc = "Equip any Rod and stand near water. Auto-fish will cast and try to catch fish automatically.",
+    })
 
     
     return Tab

@@ -1,0 +1,116 @@
+-- Script Path: game:GetService("Players").nsopnet.PlayerScripts.Client.SkillModules.FishingUpgradeClient
+-- Took 0.71s to decompile.
+-- Executor: Codex (2.0.0)
+
+-- Decompiled with Konstant V2.1, a fast Luau decompiler made in Luau by plusgiant5 (https://discord.gg/brNTY8nX8t)
+-- Decompiled on 2026-02-05 23:15:35
+-- Luau version 6, Types version 3
+-- Time taken: 0.005973 seconds
+
+local module = {}
+local LocalPlayer_upvr = game.Players.LocalPlayer
+local Client_upvr = require(LocalPlayer_upvr.PlayerScripts.Client)
+function RunUpgradeRod(arg1, arg2) -- Line 8
+    --[[ Upvalues[2]:
+        [1]: Client_upvr (readonly)
+        [2]: LocalPlayer_upvr (readonly)
+    ]]
+    arg2:SetAttribute("LocalUpgrading", true)
+    local ProximityInteraction_upvr = arg2.PrimaryPart.ProximityAttachment.ProximityInteraction
+    ProximityInteraction_upvr.Enabled = false
+    local var10_upvr = arg2.Parent:FindFirstChild("RodUpgrades")
+    if var10_upvr then
+        var10_upvr = arg2.Parent:FindFirstChild("RodUpgrades"):FindFirstChild(arg1.Name)
+    end
+    if var10_upvr then
+        for _, v in pairs(var10_upvr:GetDescendants()) do
+            if v:IsA("BasePart") and v.Name ~= "Main" then
+                v.Transparency = 0
+            end
+        end
+    end
+    arg1.Parent = game.ReplicatedStorage.TempStorage
+    local any_InvokeServer_result1 = Client_upvr.Events.RequestUpgradeRod:InvokeServer(arg1, arg2)
+    if any_InvokeServer_result1 and any_InvokeServer_result1.Success then
+        task.spawn(function() -- Line 29
+            --[[ Upvalues[2]:
+                [1]: arg2 (readonly)
+                [2]: ProximityInteraction_upvr (readonly)
+            ]]
+            if arg2:GetAttribute("Upgrading") then
+                task.spawn(function() -- Line 31
+                    --[[ Upvalues[2]:
+                        [1]: arg2 (copied, readonly)
+                        [2]: ProximityInteraction_upvr (copied, readonly)
+                    ]]
+                    arg2:GetAttributeChangedSignal("Upgrading"):Wait()
+                    arg2:SetAttribute("LocalUpgrading", nil)
+                    ProximityInteraction_upvr.Enabled = true
+                end)
+            end
+        end)
+    else
+        task.spawn(function() -- Line 39
+            --[[ Upvalues[5]:
+                [1]: arg1 (readonly)
+                [2]: LocalPlayer_upvr (copied, readonly)
+                [3]: arg2 (readonly)
+                [4]: var10_upvr (readonly)
+                [5]: ProximityInteraction_upvr (readonly)
+            ]]
+            wait(0.5)
+            arg1.Parent = LocalPlayer_upvr.Inventory
+            arg2:SetAttribute("LocalUpgrading", nil)
+            if var10_upvr and not var10_upvr:GetAttribute("Upgrading") then
+                for _, v_2 in pairs(var10_upvr:GetDescendants()) do
+                    if v_2:IsA("BasePart") and v_2.Name ~= "Main" then
+                        v_2.Transparency = 1
+                    end
+                end
+            end
+            if not arg2:GetAttribute("Upgrading") then
+                ProximityInteraction_upvr.Enabled = true
+            elseif arg2:GetAttribute("Upgrading") then
+                task.spawn(function() -- Line 56
+                    --[[ Upvalues[2]:
+                        [1]: arg2 (copied, readonly)
+                        [2]: ProximityInteraction_upvr (copied, readonly)
+                    ]]
+                    arg2:GetAttributeChangedSignal("Upgrading"):Wait()
+                    arg2:SetAttribute("LocalUpgrading", nil)
+                    ProximityInteraction_upvr.Enabled = true
+                end)
+            end
+        end)
+    end
+end
+function module.RequestUpgradeRod(arg1) -- Line 67
+    --[[ Upvalues[1]:
+        [1]: Client_upvr (readonly)
+    ]]
+    if arg1:GetAttribute("Upgrading") or arg1:GetAttribute("LocalUpgrading") then
+    else
+        local any_GetCurrentlyEquipped_result1 = Client_upvr.InventoryHandler.GetCurrentlyEquipped()
+        if any_GetCurrentlyEquipped_result1 == nil then
+            Client_upvr.PopUpUI.AddPopUp("you are not holding a fishing rod", "warning")
+            return
+        end
+        if any_GetCurrentlyEquipped_result1:GetAttribute("ToolName") ~= "Fishing Rod" then
+            Client_upvr.PopUpUI.AddPopUp("you are not holding a fishing rod", "warning")
+            return
+        end
+        if any_GetCurrentlyEquipped_result1.Name ~= "Old Rod" and any_GetCurrentlyEquipped_result1.Name ~= "Good Rod" then return end
+        if not any_GetCurrentlyEquipped_result1:GetAttribute("XP") or not any_GetCurrentlyEquipped_result1:GetAttribute("LevelUpXP") then
+            Client_upvr.PopUpUI.AddPopUp("need more xp", "warning")
+            return
+        end
+        if any_GetCurrentlyEquipped_result1:GetAttribute("XP") / any_GetCurrentlyEquipped_result1:GetAttribute("LevelUpXP") < 1 then
+            Client_upvr.PopUpUI.AddPopUp("need more xp", "warning")
+            return
+        end
+        RunUpgradeRod(any_GetCurrentlyEquipped_result1, arg1)
+    end
+end
+function module.Init() -- Line 105
+end
+return module

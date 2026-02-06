@@ -1,0 +1,168 @@
+-- Script Path: game:GetService("ReplicatedStorage").Modules.ClickDetector
+-- Took 0.74s to decompile.
+-- Executor: Codex (2.0.0)
+
+-- Decompiled with Konstant V2.1, a fast Luau decompiler made in Luau by plusgiant5 (https://discord.gg/brNTY8nX8t)
+-- Decompiled on 2026-02-05 23:17:19
+-- Luau version 6, Types version 3
+-- Time taken: 0.004864 seconds
+
+local module_upvr = {}
+local any_IsServer_result1_upvr = game:GetService("RunService"):IsServer()
+if any_IsServer_result1_upvr then
+    local Server = require(game.ServerScriptService.Server)
+    Server.Events.GenericInteract:NetworkConnect(function(arg1, arg2) -- Line 10
+        --[[ Upvalues[1]:
+            [1]: module_upvr (readonly)
+        ]]
+        local var5 = module_upvr[arg2]
+        if var5 then
+            var5.Event:Fire(arg1)
+        end
+    end)
+    Server.Events.EndGenericInteract:NetworkConnect(function(arg1, arg2) -- Line 16
+        --[[ Upvalues[1]:
+            [1]: module_upvr (readonly)
+        ]]
+        local var7 = module_upvr[arg2]
+        if var7 then
+            var7.EndedEvent:Fire(arg1)
+        end
+    end)
+else
+    local LocalPlayer_upvr = game.Players.LocalPlayer
+    local Client = require(LocalPlayer_upvr.PlayerScripts.Client)
+    Client.Events.GenericInteract:Connect(function(arg1) -- Line 25
+        --[[ Upvalues[2]:
+            [1]: module_upvr (readonly)
+            [2]: LocalPlayer_upvr (readonly)
+        ]]
+        local var11 = module_upvr[arg1]
+        if var11 then
+            var11.Event:Fire(LocalPlayer_upvr)
+        end
+    end)
+    Client.Events.EndGenericInteract:Connect(function(arg1) -- Line 31
+        --[[ Upvalues[2]:
+            [1]: module_upvr (readonly)
+            [2]: LocalPlayer_upvr (readonly)
+        ]]
+        local var13 = module_upvr[arg1]
+        if var13 and var13.EndedEvent then
+            var13.EndedEvent:Fire(LocalPlayer_upvr)
+        end
+    end)
+end
+local BindableEvent_upvr = require(script.Parent.BindableEvent)
+function LocalPlayer_upvr(arg1, arg2, arg3, arg4, arg5) -- Line 39, Named "new"
+    --[[ Upvalues[3]:
+        [1]: module_upvr (readonly)
+        [2]: any_IsServer_result1_upvr (readonly)
+        [3]: BindableEvent_upvr (readonly)
+    ]]
+    local setmetatable_result1 = setmetatable({}, {
+        __index = module_upvr;
+    })
+    setmetatable_result1.Item = arg1
+    local var17
+    if any_IsServer_result1_upvr then
+        var17 = "Server"
+    else
+        var17 = "Client"
+    end
+    setmetatable_result1.Item:SetAttribute("Interaction", var17)
+    if arg2 then
+        setmetatable_result1:SetLabel(arg2)
+    end
+    setmetatable_result1.Event = BindableEvent_upvr.new()
+    setmetatable_result1.EndedEvent = BindableEvent_upvr.new()
+    if arg5 and arg5.TapToHold then
+        setmetatable_result1.TapToHold = true
+        var17 = true
+        setmetatable_result1.Item:SetAttribute("TapToHold", var17)
+    end
+    local var18
+    if arg3 then
+        var17 = arg3
+        var18 = setmetatable_result1.Event:Connect(var17)
+    end
+    local var19
+        ]]
+        local var11 = module_upvr[arg1]
+        if var11 then
+            var11.Event:Fire(LocalPlayer_upvr)
+        end
+    end)
+    Client.Events.EndGenericInteract:Connect(function(arg1) -- Line 31
+        --[[ Upvalues[2]:
+            [1]: module_upvr (readonly)
+            [2]: LocalPlayer_upvr (readonly)
+        ]]
+        local var13 = module_upvr[arg1]
+        if var13 and var13.EndedEvent then
+            var13.EndedEvent:Fire(LocalPlayer_upvr)
+        end
+    end)
+end
+local BindableEvent_upvr = require(script.Parent.BindableEvent)
+function LocalPlayer_upvr(arg1, arg2, arg3, arg4, arg5) -- Line 39, Named "new"
+    --[[ Upvalues[3]:
+        [1]: module_upvr (readonly)
+        [2]: any_IsServer_result1_upvr (readonly)
+        [3]: BindableEvent_upvr (readonly)
+    ]]
+    local setmetatable_result1 = setmetatable({}, {
+        __index = module_upvr;
+    })
+    setmetatable_result1.Item = arg1
+    local var17
+    if any_IsServer_result1_upvr then
+        var17 = "Server"
+    else
+        var17 = "Client"
+    end
+    setmetatable_result1.Item:SetAttribute("Interaction", var17)
+    if arg2 then
+        setmetatable_result1:SetLabel(arg2)
+    end
+    setmetatable_result1.Event = BindableEvent_upvr.new()
+    setmetatable_result1.EndedEvent = BindableEvent_upvr.new()
+    if arg5 and arg5.TapToHold then
+        setmetatable_result1.TapToHold = true
+        var17 = true
+        setmetatable_result1.Item:SetAttribute("TapToHold", var17)
+    end
+    local var18
+    if arg3 then
+        var17 = arg3
+        var18 = setmetatable_result1.Event:Connect(var17)
+    end
+    local var19
+    if arg4 then
+        var19 = setmetatable_result1.EndedEvent:Connect(arg4)
+    end
+    module_upvr[arg1] = setmetatable_result1
+    return setmetatable_result1, var18, var19
+end
+module_upvr.new = LocalPlayer_upvr
+function LocalPlayer_upvr(arg1, arg2) -- Line 72, Named "SetLabel"
+    arg1.Item:SetAttribute("MouseLabel", arg2)
+end
+module_upvr.SetLabel = LocalPlayer_upvr
+function LocalPlayer_upvr(arg1, arg2) -- Line 76, Named "Connect"
+    return arg1.Event:Connect(arg2)
+end
+module_upvr.Connect = LocalPlayer_upvr
+function LocalPlayer_upvr(arg1) -- Line 80, Named "Destroy"
+    arg1.Event:Destroy()
+end
+module_upvr.Destroy = LocalPlayer_upvr
+function LocalPlayer_upvr(arg1) -- Line 84, Named "Enable"
+    print("enable clickdetector")
+end
+module_upvr.Enable = LocalPlayer_upvr
+function LocalPlayer_upvr(arg1) -- Line 88, Named "Disable"
+    print("disable clickdetector")
+end
+module_upvr.Disable = LocalPlayer_upvr
+return module_upvr
