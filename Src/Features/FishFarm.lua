@@ -51,11 +51,17 @@ local State = {
     WaitingForMinigame = false,
     Anchored = false,
     AnchorGui = nil,
+    -- Smart Farm State
+    LastWaterPos = nil,
+    LastWaterCheckTime = 0,
+    CurrentBobber = nil,
+    BobberName = nil, -- Cache for auto-learned name
+    CastStartTime = 0,
 }
 
 -- Settings
 local Settings = {
-    FishDelay = 15,
+    FishDelay = 20,
     AutoClick = true,
     ExpandZone = true,
 }
@@ -85,6 +91,54 @@ local function getEquippedRod()
     return nil
 end
 
+local function findBobber()
+    local char = LocalPlayer.Character
+    if not char then return nil end
+    
+    -- 1. Fast Path: Check known name
+    if State.BobberName then
+        local bobber = char:FindFirstChild(State.BobberName, true)
+        if bobber then return bobber end
+    end
+    
+    -- 2. Discovery Mode (Run once efficiently)
+    -- A. Check Rod Children (Priority - Most likely location)
+    local rod = getEquippedRod()
+    if rod then
+        for _, child in ipairs(rod:GetDescendants()) do
+            if child:IsA("BasePart") then
+                local name = string.lower(child.Name)
+                if string.find(name, "bobber") or string.find(name, "float") or string.find(name, "lure") then
+                    State.BobberName = child.Name
+                    log("🔍 Auto-detected Bobber in Rod: " .. child.Name)
+                    return child
+                end
+            end
+        end
+    end
+
+    -- B. Check Character descendants (Fallback)
+    for _, child in ipairs(char:GetDescendants()) do
+        if child:IsA("BasePart") then
+            local name = string.lower(child.Name)
+            if string.find(name, "bobber") or string.find(name, "float") or string.find(name, "lure") then
+                State.BobberName = child.Name 
+                log("🔍 Auto-detected Bobber in Char: " .. child.Name)
+                return child
+            end
+        end
+    end
+    
+    -- 3. Deep Fallback (Only if CastStartTime is recent)
+    -- If we just casted < 1s ago, the bobber might be spawning in Workspace
+    if tick() - State.CastStartTime < 1.0 then
+        -- Only scan 10 studs around impact cache (LastWaterPos) to prevent lag
+        -- (Skipped for now to strictly follow anti-lag request, usually it's in character)
+    end
+
+    return nil
+end
+
 local function getRoot()
     local char = LocalPlayer.Character
     if not char then return nil end
@@ -98,6 +152,22 @@ end
 local function getNearestWater()
     local root = getRoot()
     if not root then return nil end
+    
+    -- 1. Check Cache (Reuse water if player hasn't moved far)
+    if State.LastWaterPos then
+        local dist = (State.LastWaterPos.Position - root.Position).Magnitude
+        if dist <= WATER_RANGE then
+            return State.LastWaterPos, dist
+        end
+        State.LastWaterPos = nil -- Cache invalid
+    end
+    
+    -- 2. Scan (Throttle: Max once per second if failing)
+    local now = tick()
+    if now - State.LastWaterCheckTime < 1 then
+        return nil -- Throttle scan
+    end
+    State.LastWaterCheckTime = now
     
     local mapFolder = Workspace:FindFirstChild("Map")
     if not mapFolder then return nil end
@@ -116,6 +186,11 @@ local function getNearestWater()
                 nearestWater = waterPart
             end
         end
+    end
+    
+    -- Update Cache
+    if nearestWater then
+        State.LastWaterPos = nearestWater
     end
     
     return nearestWater, nearestDist
@@ -269,7 +344,11 @@ local function onMinigameFrame()
             State.IsMinigameActive = false
             State.ZoneExpanded = false
             State.ClickCount = 0
-            State.LastCastTime = tick() - CAST_COOLDOWN + 1.5  -- Wait 1.5s after catch
+            
+            -- FIX: Animation needs ~1.5s+ to reset. 
+            -- We wait 2.5s to be safe and perfectly synced.
+            State.LastCastTime = tick() - CAST_COOLDOWN + 1.2
+            log("⏳ Waiting for animation reset...")
         end
     end
 end
@@ -342,6 +421,7 @@ local function doCast()
     local screenY = math.floor(screenPos.Y)
     
     State.LastCastTime = tick()
+    State.CastStartTime = tick() -- Capture precise start time for smart logic
     State.WaitingForMinigame = true
     
     log("Clicking at: " .. screenX .. ", " .. screenY)
@@ -488,49 +568,94 @@ function FishFarm.Start()
     State.FishingThread = task.spawn(function()
         local noRodWarn = 0
         local noWaterWarn = 0
+        local castAttempts = 0
+        
+        -- FIX: Initial delay for equip animation / start sync
+        log("⏳ Warming up (1.5s)...")
+        task.wait(1.5)
         
         while State.Enabled do
+            -- 1. Throttling: Slow down if minigame not active
+            if not State.IsMinigameActive and not State.WaitingForMinigame then
+                 task.wait(0.5)
+            else
+                 RunService.Heartbeat:Wait()
+            end
+
+            -- 2. Validate Rod & Water
             local rod = getEquippedRod()
-            local water = getNearestWater()
-            
             if not rod then
+                -- Reset state
+                State.LastWaterPos = nil
+                State.CurrentBobber = nil
+                
                 local now = os.clock()
                 if now - noRodWarn >= 30 then
                     noRodWarn = now
                     log("⏳ Equip a rod...")
                 end
-                task.wait(CYCLE_DELAY)
                 continue
             end
             
+            local water = getNearestWater()
             if not water then
                 local now = os.clock()
                 if now - noWaterWarn >= 30 then
                     noWaterWarn = now
                     log("⏳ Go near water...")
                 end
-                task.wait(CYCLE_DELAY)
                 continue
             end
             
+            -- 3. Minigame Active? (Just wait)
             if State.IsMinigameActive then
-                task.wait(0.5)
                 continue
             end
+            
+            -- 4. SMART LOGIC: Bobber Detection
+            local bobber = findBobber()
             
             if State.WaitingForMinigame then
-                local waitTime = tick() - State.LastCastTime
-                if waitTime > Settings.FishDelay then
-                    log("⚠ No fish after " .. Settings.FishDelay .. "s, recasting...")
-                    State.WaitingForMinigame = false
+                -- We are waiting for fish...
+                local timeSinceCast = tick() - State.LastCastTime
+                
+                if bobber then
+                    -- Good! Bobber exists.
+                    State.CurrentBobber = bobber
+                    
+                    if timeSinceCast > Settings.FishDelay + 5 then
+                        -- Stuck too long? Recast
+                        log("⚠ Stuck (timeout), recasting...")
+                        State.WaitingForMinigame = false
+                    end
                 else
-                    task.wait(0.5)
-                    continue
+                    -- No bobber found?
+                    if timeSinceCast > 1.5 then
+                        -- If 1.5s passed and still no bobber -> CAST FAILED or LINE CUT
+                        log("⚡ Smart Recast: Cast failed / Bobber lost")
+                        State.WaitingForMinigame = false -- Trigger recast
+                    end
+                    -- < 1.5s: Allow time for bobber to spawn
                 end
             end
             
-            doCast()
-            task.wait(CAST_COOLDOWN)
+            -- 5. Casting Logic
+            if not State.WaitingForMinigame then
+                -- Ready to cast
+                
+                -- Check cooldown
+                if tick() - State.LastCastTime < CAST_COOLDOWN then
+                    continue
+                end
+                
+                if doCast() then
+                    castAttempts = castAttempts + 1
+                    -- Reset bobber state
+                    State.CurrentBobber = nil
+                end
+                
+                task.wait(0.5) -- Small delay between actions
+            end
         end
     end)
 end

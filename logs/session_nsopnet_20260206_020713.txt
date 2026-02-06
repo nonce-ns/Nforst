@@ -1,0 +1,693 @@
+=== WindUI Log Session ===
+Started: 2026-02-06 02:07:13
+User: nsopnet (ID: 8401342884)
+========================================
+
+[17:07:14][Info] Loader: Fetching MainInterface...
+[17:07:16][Info] [OP] Loading modules...
+[17:07:16][Info] [MainInterface] Speed module loaded table: table: 0x4c44cbe49a60fba8
+[17:07:17][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[17:07:17][Info] [Tools] Initialized
+[17:07:17][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[17:07:17][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[17:07:17][Info] [Teleport] Initialized
+[17:07:17][Info] [Fly] Initialized
+[17:07:17][Info] [PhysicsOptimizer] Initialized
+[17:07:17][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[17:07:17][Info] [OP] Modules loaded!
+[17:07:17][Info] [OP] KillTarget: Initialized
+[17:07:17][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[17:07:17][Info] [OP] Initializing 99 Nights OP Script...
+[17:07:17][Info] [Speed] Initialized
+[17:07:17][Info] [OP] Window created. Type: table
+[17:07:22][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[17:07:22][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[17:07:22][Info] [OP] UI Created! Ready to use.
+[17:07:22][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[17:07:33][Info] [ItemCollector] Selected: Cultist
+[17:07:33][Info] [ItemCollector] Selected: Chair
+[17:07:33][Info] [ItemCollector] Selected: Log
+[17:07:33][Info] [ItemCollector] Selected: Oil Barrel
+[17:07:33][Info] [ItemCollector] Selected: Coal
+[17:07:33][Info] [ItemCollector] Selected: Fuel Canister
+[17:07:35][Info] [ItemCollector] Started Collection Thread.
+[17:07:35][Info] [Remote][Success] RemoteEvents found: 199 remotes
+[17:07:38][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:07:40][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[17:07:40][Info] [ItemCollector] Collected 29 items.
+[17:07:42][Info] [ItemCollector] Started Collection Thread.
+[17:07:42][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:07:42][Warning] [ItemCollector] No matching items found in map!
+[17:07:42][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[17:07:58][Info] [ChestExplorer] Recorded Start Pos: 7.391005992889404, 3.999999761581421, 2.0255801677703857
+[17:07:58][Info] [ChestExplorer] Opening 44 chests
+[17:07:58][Info] [ChestExplorer] Targeting: StoneChest1
+[17:07:58][Info] [ChestExplorer] Teleporting to: -429.69183349609375, -634.25, 288.7027282714844
+[17:07:58][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[17:07:58][Info] [ChestExplorer] Opening...
+[17:07:59][Info] Cave
+[17:07:59][Info] Entered biome Cave
+[17:07:59][Info] Arrow nil
+[17:07:59][Info] Arrow nil
+[17:07:59][Info] [ChestExplorer] Teleporting to: -283.39996337890625, -602.1499633789062, -33.02293014526367
+[17:07:59][Info] [ChestExplorer] Targeting: StoneChest1
+[17:07:59][Info] [ChestExplorer] Opening...
+[17:08:00][Info] Arrow nil
+[17:08:00][Info] Arrow nil
+[17:08:00][Info] [ChestExplorer] Teleporting to: -385.7297058105469, -635.75, -235.59141540527344
+[17:08:00][Info] [ChestExplorer] Opening...
+[17:08:00][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:01][Info] [ChestExplorer] Targeting: StoneChest2
+[17:08:01][Info] [ChestExplorer] Teleporting to: 96.5108871459961, -635.25, -344.11944580078125
+[17:08:01][Info] [ChestExplorer] Opening...
+[17:08:02][Info] [ChestExplorer] Teleporting to: 181.66049194335938, -635.9500122070312, 252.73158264160156
+[17:08:02][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:02][Info] [ChestExplorer] Opening...
+[17:08:03][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:03][Info] [ChestExplorer] Teleporting to: 251.7973175048828, -636.4500122070312, 252.4881591796875
+[17:08:03][Info] [ChestExplorer] Opening...
+[17:08:04][Info] [OP] GodMode: STARTED
+[17:08:05][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:05][Info] [ChestExplorer] Opening...
+[17:08:05][Info] [ChestExplorer] Teleporting to: 488.4044494628906, -635.0701293945312, -255.37705993652344
+[17:08:06][Info] [ChestExplorer] Teleporting to: 462.013427734375, -637.75, -326.5953063964844
+[17:08:06][Info] [ChestExplorer] Opening...
+[17:08:06][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:06][Warning] Infinite yield possible on 'Workspace.Map.Landmarks.Stronghold.Functional:WaitForChild("Sign")'
+[17:08:06][Info] Stack End
+[17:08:06][Info] Script 'Players.nsopnet.PlayerScripts.Client.StrongholdModules.StrongholdCountdownClient', Line 69 - function StrongholdAdded
+[17:08:06][Info] Stack Begin
+[17:08:07][Info] [ChestExplorer] Teleporting to: -279.2493896484375, -635.75, 536.9002075195312
+[17:08:07][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:07][Info] [ChestExplorer] Opening...
+[17:08:07][Warning] Infinite yield possible on 'Workspace.Map.Landmarks.Fishing Hut.FishPoster:WaitForChild("Sign")'
+[17:08:07][Info] Stack Begin
+[17:08:07][Info] Script 'Players.nsopnet.PlayerScripts.Client.StructureModules.FishPosterClient', Line 30
+[17:08:07][Info] Stack End
+[17:08:08][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:08][Info] [ChestExplorer] Opening...
+[17:08:08][Info] [ChestExplorer] Teleporting to: 100.4111328125, -634.6500244140625, -154.60047912597656
+[17:08:08][Info] Arrow nil
+[17:08:09][Info] Arrow nil
+[17:08:09][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:09][Info] [ChestExplorer] Teleporting to: 286.78350830078125, -636.0701293945312, 192.4858856201172
+[17:08:09][Info] [ChestExplorer] Opening...
+[17:08:10][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:10][Info] [ChestExplorer] Opening...
+[17:08:10][Info] [ChestExplorer] Teleporting to: 137.89901733398438, -623.75, -165.1201171875
+[17:08:11][Info] [ChestExplorer] Teleporting to: 295.0357360839844, -634.6500244140625, 238.1697998046875
+[17:08:11][Info] [ChestExplorer] Targeting: StoneChest1
+[17:08:11][Info] [ChestExplorer] Opening...
+[17:08:12][Info] [ChestExplorer] Opening...
+[17:08:12][Info] [ChestExplorer] Targeting: Mossy Chest
+[17:08:12][Info] [ChestExplorer] Teleporting to: 588.0924682617188, 18.083450317382812, 708.854248046875
+[17:08:12][Info] Fairy
+[17:08:12][Info] Entered biome Fairy
+[17:08:13][Info] [ChestExplorer] Opening...
+[17:08:13][Info] [ChestExplorer] Targeting: Item Chest5
+[17:08:13][Info] [ChestExplorer] Teleporting to: -396.09552001953125, -633.75, 216.3895721435547
+[17:08:13][Info] Entered biome Cave
+[17:08:13][Info] Cave
+[17:08:14][Info] [ChestExplorer] Teleporting to: -202.84376525878906, -636.25, 570.1254272460938
+[17:08:14][Info] [ChestExplorer] Targeting: Item Chest4
+[17:08:14][Info] [ChestExplorer] Opening...
+[17:08:15][Info] [ChestExplorer] Targeting: Item Chest5
+[17:08:15][Info] [ChestExplorer] Teleporting to: -306.57647705078125, -633.75, 275.3373107910156
+[17:08:15][Info] [ChestExplorer] Opening...
+[17:08:16][Info] [ChestExplorer] Targeting: Item Chest4
+[17:08:16][Info] [ChestExplorer] Opening...
+[17:08:16][Info] [ChestExplorer] Teleporting to: 364.17327880859375, -635.0701293945312, 211.0140380859375
+[17:08:17][Info] [ChestExplorer] Targeting: Item Chest3
+[17:08:17][Info] [ChestExplorer] Opening...
+[17:08:17][Info] [ChestExplorer] Teleporting to: 89.57533264160156, -635.25, -116.89503479003906
+[17:08:18][Info] Arrow nil
+[17:08:18][Info] Arrow nil
+[17:08:18][Info] [ChestExplorer] Teleporting to: -376.36376953125, -635.75, -223.9168701171875
+[17:08:18][Info] [ChestExplorer] Targeting: Item Chest5
+[17:08:18][Info] [ChestExplorer] Opening...
+[17:08:20][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:08:20][Info] [ChestExplorer] Teleporting to: -182.1107177734375, 9.865690231323242, -814.8690185546875
+[17:08:20][Info] [ChestExplorer] Opening...
+[17:08:20][Info] Entered biome Volcanic
+[17:08:20][Info] Volcanic
+[17:08:21][Info] [ChestExplorer] Teleporting to: -198.39730834960938, 10.31096363067627, -964.2908325195312
+[17:08:21][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:08:21][Info] [ChestExplorer] Opening...
+[17:08:21][Info] Arrow nil
+[17:08:22][Info] [ChestExplorer] Teleporting to: -232.32196044921875, 65.13699340820312, -921.0061645507812
+[17:08:22][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:08:22][Info] [ChestExplorer] Opening...
+[17:08:22][Info] Arrow nil
+[17:08:22][Info] Arrow nil
+[17:08:23][Info] [ChestExplorer] Targeting: Item Chest4
+[17:08:23][Info] [ChestExplorer] Teleporting to: -198.44308471679688, -636.25, 485.5173034667969
+[17:08:23][Info] [ChestExplorer] Opening...
+[17:08:23][Info] Cave
+[17:08:23][Info] Entered biome Cave
+[17:08:24][Info] [ChestExplorer] Targeting: Item Chest3
+[17:08:24][Info] [ChestExplorer] Teleporting to: 52.17148971557617, -635.0701293945312, -51.00688934326172
+[17:08:24][Info] [ChestExplorer] Opening...
+[17:08:24][Info] BULLET THING ADDED
+[17:08:24][Info] Found touch zone...
+[17:08:25][Info] [ChestExplorer] Targeting: Item Chest4
+[17:08:25][Info] [ChestExplorer] Teleporting to: 355.8114929199219, -635.0701293945312, 233.3527069091797
+[17:08:25][Info] [ChestExplorer] Opening...
+[17:08:26][Info] [ChestExplorer] Teleporting to: -201.29234313964844, 9.919136047363281, -1029.607177734375
+[17:08:26][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:08:26][Info] [ChestExplorer] Opening...
+[17:08:26][Info] Volcanic
+[17:08:26][Info] Entered biome Volcanic
+[17:08:27][Info] [ChestExplorer] Targeting: Item Chest5
+[17:08:27][Info] [ChestExplorer] Teleporting to: 400.6009216308594, -634.5161743164062, -258.43707275390625
+[17:08:27][Info] [ChestExplorer] Opening...
+[17:08:27][Info] Cave
+[17:08:27][Info] Entered biome Cave
+[17:08:28][Info] [ChestExplorer] Teleporting to: 494.5041809082031, -613.4500122070312, -244.37210083007812
+[17:08:28][Info] [ChestExplorer] Targeting: Item Chest4
+[17:08:28][Info] [ChestExplorer] Opening...
+[17:08:29][Info] [ChestExplorer] Teleporting to: -767.993896484375, 8.347382545471191, 968.6318969726562
+[17:08:29][Info] [ChestExplorer] Opening...
+[17:08:29][Info] [ChestExplorer] Targeting: Item Chest5
+[17:08:30][Info] Entered biome nil
+[17:08:30][Info] nil
+[17:08:30][Info] [ChestExplorer] Teleporting to: -608.1422119140625, 10.22684097290039, 466.6649169921875
+[17:08:30][Info] [ChestExplorer] Targeting: Item Chest3
+[17:08:30][Info] [ChestExplorer] Opening...
+[17:08:31][Info] [ChestExplorer] Opening...
+[17:08:31][Info] [ChestExplorer] Targeting: Item Chest5
+[17:08:31][Info] [ChestExplorer] Teleporting to: -214.06973266601562, -601.9376220703125, -48.22224426269531
+[17:08:32][Info] Entered biome Cave
+[17:08:32][Info] Cave
+[17:08:32][Info] [ChestExplorer] Opening...
+[17:08:32][Info] [ChestExplorer] Targeting: Item Chest5
+[17:08:32][Info] [ChestExplorer] Teleporting to: -375.9602966308594, -635.25, -188.9706573486328
+[17:08:33][Info] [ChestExplorer] Targeting: Item Chest2
+[17:08:33][Info] [ChestExplorer] Teleporting to: -447.6010437011719, 12.42205810546875, 364.6502685546875
+[17:08:33][Info] [ChestExplorer] Opening...
+[17:08:34][Info] Arrow nil
+[17:08:34][Info] Arrow nil
+[17:08:34][Info] Entered biome nil
+[17:08:34][Info] nil
+[17:08:35][Info] [ChestExplorer] Targeting: Item Chest5
+[17:08:35][Info] [ChestExplorer] Opening...
+[17:08:35][Info] [ChestExplorer] Teleporting to: -267.82159423828125, -635.75, 530.4218139648438
+[17:08:35][Info] Cave
+[17:08:35][Info] Entered biome Cave
+[17:08:36][Info] [ChestExplorer] Targeting: Item Chest3
+[17:08:36][Info] [ChestExplorer] Teleporting to: -591.900634765625, 9.619876861572266, 391.9841003417969
+[17:08:36][Info] [ChestExplorer] Opening...
+[17:08:36][Info] nil
+[17:08:36][Info] Entered biome nil
+[17:08:37][Info] [ChestExplorer] Targeting: Item Chest4
+[17:08:37][Info] [ChestExplorer] Opening...
+[17:08:37][Info] [ChestExplorer] Teleporting to: -348.0935974121094, -636.25, -146.00619506835938
+[17:08:37][Info] Cave
+[17:08:37][Info] Entered biome Cave
+[17:08:37][Info] Mackerel true
+[17:08:37][Info] Shark true
+[17:08:37][Info] Clownfish true
+[17:08:37][Info] Lionfish true
+[17:08:37][Info] Lava Eel true
+[17:08:37][Info] Salmon true
+[17:08:37][Info] Swordfish true
+[17:08:38][Info] [ChestExplorer] Teleporting to: -273.7146911621094, -601.75, -80.77568817138672
+[17:08:38][Info] [ChestExplorer] Opening...
+[17:08:38][Info] [ChestExplorer] Targeting: Item Chest4
+[17:08:39][Info] [ChestExplorer] Opening...
+[17:08:39][Info] [ChestExplorer] Targeting: Item Chest4
+[17:08:39][Info] [ChestExplorer] Teleporting to: 288.49615478515625, -636.0701293945312, 174.35104370117188
+[17:08:40][Info] [ChestExplorer] Opening...
+[17:08:40][Info] [ChestExplorer] Teleporting to: -380.0101013183594, -635.25, -149.84991455078125
+[17:08:40][Info] [ChestExplorer] Targeting: Item Chest4
+[17:08:41][Info] [ChestExplorer] Targeting: Hardmode Crate
+[17:08:41][Info] [ChestExplorer] Teleporting to: 114.1505126953125, 38.98418045043945, 161.67584228515625
+[17:08:41][Info] [ChestExplorer] Opening...
+[17:08:42][Info] nil
+[17:08:42][Info] Entered biome nil
+[17:08:42][Info] [ChestExplorer] Targeting: Hardmode Crate
+[17:08:42][Info] [ChestExplorer] Teleporting to: 114.1505126953125, 38.98418045043945, 152.17584228515625
+[17:08:42][Info] [ChestExplorer] Opening...
+[17:08:43][Info] [ChestExplorer] Teleporting to: 43.150508880615234, 16.984182357788086, 141.17584228515625
+[17:08:43][Info] [ChestExplorer] Targeting: Hardmode Crate
+[17:08:43][Info] [ChestExplorer] Opening...
+[17:08:44][Info] [ChestExplorer] Targeting: Hardmode Crate
+[17:08:44][Info] [ChestExplorer] Opening...
+[17:08:44][Info] [ChestExplorer] Teleporting to: 94.1505126953125, 16.984182357788086, 138.17584228515625
+[17:08:45][Error] :292: cannot cancel thread
+    Stack Begin
+    Script 'Script', Line 292 - function Stop
+    Script 'Script', Line 283
+    Stack End
+[17:08:51][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[17:08:51][Info] [ChestExplorer] Stopped/Finished
+[17:08:52][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[17:08:52][Info] [ChestExplorer] Recorded Start Pos: 94.1505126953125, 17.364534378051758, 138.17584228515625
+[17:08:52][Info] [ChestExplorer] Opening 34 chests
+[17:08:52][Info] [ChestExplorer] Targeting: Item Chest2
+[17:08:52][Info] [ChestExplorer] Opening...
+[17:08:52][Info] [ChestExplorer] Teleporting to: -431.87640380859375, 14.970574378967285, 276.06646728515625
+[17:08:53][Info] [ChestExplorer] Teleporting to: 96.5033950805664, -632.2197875976562, -344.1128845214844
+[17:08:53][Info] [ChestExplorer] Targeting: Ammo Crate Recipe Tablet
+[17:08:53][Info] [ChestExplorer] Opening...
+[17:08:54][Info] Entered biome Cave
+[17:08:54][Info] Cave
+[17:08:54][Error] Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient:533: invalid argument #1 to 'sub' (string expected, got nil)
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient', Line 533 - function CreateIcon
+    Stack End
+[17:08:54][Info] [ChestExplorer] Opening...
+[17:08:54][Info] [ChestExplorer] Targeting: Item Chest
+[17:08:54][Info] [ChestExplorer] Teleporting to: -311.96734619140625, -15.520597457885742, -255.69874572753906
+[17:08:55][Info] Entered biome nil
+[17:08:55][Info] nil
+[17:08:55][Info] [ChestExplorer] Targeting: Item Chest
+[17:08:55][Info] [ChestExplorer] Opening...
+[17:08:55][Info] [ChestExplorer] Teleporting to: -281.46197509765625, 13.047818183898926, -151.69345092773438
+[17:08:56][Info] [ChestExplorer] Opening...
+[17:08:56][Info] [ChestExplorer] Targeting: Item Chest2
+[17:08:56][Info] [ChestExplorer] Teleporting to: -456.58056640625, 9.975642204284668, -206.99310302734375
+[17:08:57][Info] [ChestExplorer] Targeting: Item Chest3
+[17:08:57][Info] [ChestExplorer] Teleporting to: -524.2944946289062, 11.964381217956543, -487.8967590332031
+[17:08:57][Info] [ChestExplorer] Opening...
+[17:08:59][Info] [ChestExplorer] Targeting: Volcanic Chest2
+[17:08:59][Info] [ChestExplorer] Opening...
+[17:08:59][Info] [ChestExplorer] Teleporting to: 68.8764419555664, 42.23466110229492, -696.8087158203125
+[17:08:59][Info] Volcanic
+[17:08:59][Info] Entered biome Volcanic
+[17:09:00][Info] [ChestExplorer] Teleporting to: -161.3641357421875, -22.40479278564453, -677.4459838867188
+[17:09:00][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:09:00][Info] [ChestExplorer] Opening...
+[17:09:01][Info] [ChestExplorer] Teleporting to: 177.27005004882812, 6.753938674926758, -623.18359375
+[17:09:01][Info] [ChestExplorer] Opening...
+[17:09:01][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:09:02][Info] [ChestExplorer] Targeting: Volcanic Chest2
+[17:09:02][Info] [ChestExplorer] Teleporting to: -2.68670916557312, 74.65013122558594, -564.4563598632812
+[17:09:02][Info] [ChestExplorer] Opening...
+[17:09:03][Info] [ChestExplorer] Targeting: Item Chest2
+[17:09:03][Info] [ChestExplorer] Teleporting to: 479.6791076660156, 3.9536712169647217, 78.28751373291016
+[17:09:03][Info] [ChestExplorer] Opening...
+[17:09:03][Info] Entered biome nil
+[17:09:03][Info] nil
+[17:09:04][Info] [ChestExplorer] Targeting: Item Chest
+[17:09:04][Info] [ChestExplorer] Teleporting to: 329.6239013671875, 4.77023983001709, 165.0576629638672
+[17:09:04][Info] [ChestExplorer] Opening...
+[17:09:05][Info] [ChestExplorer] Targeting: Item Chest
+[17:09:05][Info] [ChestExplorer] Teleporting to: 126.37964630126953, 10.51209831237793, 344.31378173828125
+[17:09:05][Info] [ChestExplorer] Opening...
+[17:09:06][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:06][Info] [ChestExplorer] Teleporting to: 665.89306640625, 8.805988311767578, -280.86968994140625
+[17:09:06][Info] [ChestExplorer] Opening...
+[17:09:07][Info] [ChestExplorer] Teleporting to: -280.1004638671875, 5.756678581237793, 711.4778442382812
+[17:09:07][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:07][Info] [ChestExplorer] Opening...
+[17:09:08][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:08][Info] [ChestExplorer] Teleporting to: -328.1249084472656, 11.101119995117188, 786.5242309570312
+[17:09:08][Info] [ChestExplorer] Opening...
+[17:09:09][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:09][Info] [ChestExplorer] Opening...
+[17:09:09][Info] [ChestExplorer] Teleporting to: 1.1018695831298828, 4.948329448699951, 799.5964965820312
+[17:09:10][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:10][Info] [ChestExplorer] Teleporting to: -300.73291015625, 8.60702133178711, 664.8023681640625
+[17:09:10][Info] [ChestExplorer] Opening...
+[17:09:11][Info] [ChestExplorer] Targeting: Item Chest2
+[17:09:11][Info] [ChestExplorer] Teleporting to: 528.7828979492188, 9.501026153564453, -66.3537368774414
+[17:09:11][Info] [ChestExplorer] Opening...
+[17:09:12][Info] [ChestExplorer] Teleporting to: 679.5225830078125, 59.47637939453125, -41.43798828125
+[17:09:12][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:12][Info] [ChestExplorer] Opening...
+[17:09:14][Info] [ChestExplorer] Teleporting to: 387.86663818359375, 23.0593204498291, 583.6554565429688
+[17:09:14][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:14][Info] [ChestExplorer] Opening...
+[17:09:14][Info] Fairy
+[17:09:14][Info] Entered biome Fairy
+[17:09:15][Info] [ChestExplorer] Teleporting to: 516.1818237304688, 8.765983581542969, 632.9054565429688
+[17:09:15][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:15][Info] [ChestExplorer] Opening...
+[17:09:15][Info] Arrow nil
+[17:09:15][Info] Arrow nil
+[17:09:16][Info] [ChestExplorer] Teleporting to: 340.60382080078125, 6.120916843414307, 841.1279907226562
+[17:09:16][Info] [ChestExplorer] Opening...
+[17:09:16][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:17][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:17][Info] [ChestExplorer] Opening...
+[17:09:17][Info] [ChestExplorer] Teleporting to: 426.28485107421875, 8.592370986938477, 888.6936645507812
+[17:09:18][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:18][Info] [ChestExplorer] Teleporting to: 505.1357421875, 8.765983581542969, 621.1390991210938
+[17:09:18][Info] [ChestExplorer] Opening...
+[17:09:19][Info] [ChestExplorer] Opening...
+[17:09:19][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:19][Info] [ChestExplorer] Teleporting to: 591.8118286132812, 8.863123893737793, 444.2825622558594
+[17:09:20][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:20][Info] [ChestExplorer] Teleporting to: -806.3746948242188, 25.495101928710938, 154.7500457763672
+[17:09:20][Info] [ChestExplorer] Opening...
+[17:09:21][Info] nil
+[17:09:21][Info] Entered biome nil
+[17:09:21][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:21][Info] [ChestExplorer] Teleporting to: -870.1185302734375, 47.52046585083008, 176.98651123046875
+[17:09:21][Info] [ChestExplorer] Opening...
+[17:09:22][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:22][Info] [ChestExplorer] Teleporting to: -846.553955078125, 27.895418167114258, 354.4022216796875
+[17:09:22][Info] [ChestExplorer] Opening...
+[17:09:23][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:23][Info] [ChestExplorer] Teleporting to: -807.6444091796875, 42.60919952392578, 474.0545959472656
+[17:09:23][Info] [ChestExplorer] Opening...
+[17:09:24][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:24][Info] [ChestExplorer] Teleporting to: -834.2205810546875, -19.465423583984375, 632.8434448242188
+[17:09:24][Info] [ChestExplorer] Opening...
+[17:09:26][Info] [ChestExplorer] Teleporting to: -69.30016326904297, 4.604341506958008, -1118.71533203125
+[17:09:26][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:09:26][Info] [ChestExplorer] Opening...
+[17:09:26][Info] Entered biome Volcanic
+[17:09:26][Info] Volcanic
+[17:09:27][Info] [ChestExplorer] Teleporting to: -340.174072265625, 8.78075885772705, -815.809326171875
+[17:09:27][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:09:27][Info] [ChestExplorer] Opening...
+[17:09:28][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:28][Info] [ChestExplorer] Opening...
+[17:09:28][Info] [ChestExplorer] Teleporting to: -439.66357421875, 12.713642120361328, -40.64023971557617
+[17:09:29][Info] Entered biome nil
+[17:09:29][Info] nil
+[17:09:29][Info] Arrow nil
+[17:09:29][Error] :292: cannot cancel thread
+    Stack Begin
+    Script 'Script', Line 292 - function Stop
+    Script 'Script', Line 283
+    Stack End
+[17:09:31][Info] Arrow nil
+[17:09:32][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[17:09:32][Info] [ChestExplorer] Stopped/Finished
+[17:09:33][Info] [ChestExplorer] Recorded Start Pos: -439.66357421875, 11.383302688598633, -40.64023971557617
+[17:09:33][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:33][Info] [ChestExplorer] Opening 10 chests
+[17:09:33][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[17:09:33][Info] [ChestExplorer] Opening...
+[17:09:33][Info] [ChestExplorer] Teleporting to: -777.0581665039062, 42.56825256347656, -270.5679016113281
+[17:09:33][Info] Arrow nil
+[17:09:34][Info] [ChestExplorer] Teleporting to: -554.5988159179688, -12.817169189453125, -574.4660034179688
+[17:09:34][Info] [ChestExplorer] Targeting: Item Chest3
+[17:09:34][Info] [ChestExplorer] Opening...
+[17:09:35][Info] [ChestExplorer] Teleporting to: -871.9945068359375, 9.614850997924805, -329.7875061035156
+[17:09:35][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:35][Info] [ChestExplorer] Opening...
+[17:09:36][Info] [ChestExplorer] Targeting: Seed Box
+[17:09:36][Info] [ChestExplorer] Teleporting to: -654.5780639648438, 14.349019050598145, 802.2056884765625
+[17:09:36][Info] [ChestExplorer] Opening...
+[17:09:38][Error] Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient:533: invalid argument #1 to 'sub' (string expected, got nil)
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient', Line 533 - function CreateIcon
+    Stack End
+[17:09:38][Info] [ChestExplorer] Targeting: Item Chest6
+[17:09:38][Info] [ChestExplorer] Teleporting to: -696.40869140625, 47.279972076416016, 991.7354125976562
+[17:09:38][Info] [ChestExplorer] Opening...
+[17:09:38][Info] anti-fling
+[17:09:39][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:39][Info] [ChestExplorer] Teleporting to: -321.51220703125, 9.276556015014648, 1008.5313720703125
+[17:09:39][Info] [ChestExplorer] Opening...
+[17:09:39][Info] anti-fling
+[17:09:39][Info] anti-fling
+[17:09:39][Info] anti-fling
+[17:09:40][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:40][Info] [ChestExplorer] Teleporting to: 137.08660888671875, 40.06733322143555, 910.1647338867188
+[17:09:40][Info] [ChestExplorer] Opening...
+[17:09:41][Info] [ChestExplorer] Opening...
+[17:09:41][Info] [ChestExplorer] Teleporting to: -701.072265625, 8.549635887145996, 841.2349243164062
+[17:09:41][Info] [ChestExplorer] Targeting: Item Chest4
+[17:09:42][Info] [ChestExplorer] Opening...
+[17:09:42][Info] [ChestExplorer] Teleporting to: 181.85986328125, 8.408079147338867, -1105.9700927734375
+[17:09:42][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:09:42][Info] Volcanic
+[17:09:42][Info] Entered biome Volcanic
+[17:09:43][Info] [ChestExplorer] Opening...
+[17:09:43][Info] [ChestExplorer] Teleporting to: 80.16795349121094, 61.4902229309082, -1327.1007080078125
+[17:09:43][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:09:44][Info] [ItemCollector] Started Collection Thread.
+[17:09:44][Info] anti-fling
+[17:09:44][Info] anti-fling
+[17:09:44][Info] anti-fling
+[17:09:44][Info] anti-fling
+[17:09:44][Error] :292: cannot cancel thread
+    Stack Begin
+    Script 'Script', Line 292 - function Stop
+    Script 'Script', Line 283
+    Stack End
+[17:09:45][Info] anti-fling
+[17:09:45][Info] anti-fling
+[17:09:45][Info] anti-fling
+[17:09:45][Info] anti-fling
+[17:09:46][Info] anti-fling
+[17:09:46][Info] anti-fling
+[17:09:46][Info] anti-fling
+[17:09:46][Info] Arrow nil
+[17:09:46][Info] Arrow nil
+[17:09:46][Info] anti-fling
+[17:09:46][Info] anti-fling
+[17:09:46][Info] anti-fling
+[17:09:46][Info] anti-fling
+[17:09:46][Info] anti-fling
+[17:09:47][Info] anti-fling
+[17:09:47][Info] anti-fling
+[17:09:47][Info] anti-fling
+[17:09:47][Info] anti-fling
+[17:09:47][Info] anti-fling
+[17:09:47][Info] anti-fling
+[17:09:47][Info] anti-fling
+[17:09:48][Info] anti-fling
+[17:09:48][Info] anti-fling
+[17:09:48][Info] anti-fling
+[17:09:48][Info] anti-fling
+[17:09:48][Info] Arrow nil
+[17:09:48][Info] Arrow nil
+[17:09:48][Info] anti-fling
+[17:09:48][Info] anti-fling
+[17:09:48][Info] anti-fling
+[17:09:49][Info] anti-fling
+[17:09:49][Info] anti-fling
+[17:09:49][Info] anti-fling
+[17:09:49][Info] anti-fling
+[17:09:49][Info] anti-fling
+[17:09:49][Info] anti-fling
+[17:09:49][Info] anti-fling
+[17:09:50][Info] anti-fling
+[17:09:50][Info] anti-fling
+[17:09:50][Info] anti-fling
+[17:09:50][Info] Arrow nil
+[17:09:50][Info] Arrow nil
+[17:09:50][Info] anti-fling
+[17:09:50][Info] anti-fling
+[17:09:50][Info] anti-fling
+[17:09:51][Info] anti-fling
+[17:09:51][Info] anti-fling
+[17:09:51][Info] anti-fling
+[17:09:51][Info] anti-fling
+[17:09:51][Info] anti-fling
+[17:09:51][Info] anti-fling
+[17:09:52][Info] anti-fling
+[17:09:52][Info] anti-fling
+[17:09:52][Info] anti-fling
+[17:09:52][Info] [ChestExplorer] Stopped/Finished
+[17:09:52][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[17:09:54][Info] [ChestExplorer] Opening 6 chests
+[17:09:54][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[17:09:54][Info] [ChestExplorer] Recorded Start Pos: 68.38670349121094, -1.0231494903564453, -1131.9344482421875
+[17:09:54][Info] [ChestExplorer] Teleporting to: -819.0301513671875, 7.784515857696533, -718.0262451171875
+[17:09:54][Info] [ChestExplorer] Targeting: Item Chest6
+[17:09:54][Info] [ChestExplorer] Opening...
+[17:09:55][Info] nil
+[17:09:55][Info] Entered biome nil
+[17:09:55][Info] [ChestExplorer] Targeting: Item Chest5
+[17:09:55][Info] [ChestExplorer] Teleporting to: -697.0086669921875, 47.279972076416016, 991.7354125976562
+[17:09:55][Info] [ChestExplorer] Opening...
+[17:09:56][Info] [ChestExplorer] Targeting: Item Chest5
+[17:09:56][Info] [ChestExplorer] Teleporting to: -350.2203674316406, 26.582351684570312, 1150.1209716796875
+[17:09:56][Info] [ChestExplorer] Opening...
+[17:09:57][Info] anti-fling
+[17:09:57][Info] anti-fling
+[17:09:57][Info] anti-fling
+[17:09:57][Info] [ChestExplorer] Targeting: Item Chest5
+[17:09:57][Info] anti-fling
+[17:09:57][Info] [ChestExplorer] Teleporting to: -288.3487548828125, 4.98234224319458, 1087.8658447265625
+[17:09:57][Info] [ChestExplorer] Opening...
+[17:09:59][Info] [ChestExplorer] Targeting: Item Chest5
+[17:09:59][Info] [ChestExplorer] Teleporting to: -297.7402648925781, 35.182342529296875, 1155.39892578125
+[17:09:59][Info] [ChestExplorer] Opening...
+[17:10:00][Info] [ChestExplorer] Opening...
+[17:10:00][Info] [ChestExplorer] Teleporting to: 313.0663146972656, 64.90750122070312, -1161.0245361328125
+[17:10:00][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[17:10:01][Info] Volcanic
+[17:10:01][Info] Entered biome Volcanic
+[17:10:01][Info] anti-fling
+[17:10:01][Error] :292: cannot cancel thread
+    Stack Begin
+    Script 'Script', Line 292 - function Stop
+    Script 'Script', Line 283
+    Stack End
+[17:10:02][Info] anti-fling
+[17:10:02][Info] anti-fling
+[17:10:02][Info] anti-fling
+[17:10:02][Info] Arrow nil
+[17:10:02][Info] Arrow nil
+[17:10:03][Info] anti-fling
+[17:10:03][Info] anti-fling
+[17:10:03][Info] [ItemCollector] Started Collection Thread.
+[17:10:03][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:03][Info] anti-fling
+[17:10:03][Info] anti-fling
+[17:10:04][Info] anti-fling
+[17:10:04][Info] anti-fling
+[17:10:04][Info] anti-fling
+[17:10:04][Info] anti-fling
+[17:10:04][Info] anti-fling
+[17:10:05][Info] Arrow nil
+[17:10:05][Info] Arrow nil
+[17:10:05][Info] anti-fling
+[17:10:05][Info] anti-fling
+[17:10:05][Info] anti-fling
+[17:10:06][Info] anti-fling
+[17:10:06][Info] anti-fling
+[17:10:06][Info] anti-fling
+[17:10:07][Info] Arrow nil
+[17:10:07][Info] Arrow nil
+[17:10:07][Info] anti-fling
+[17:10:07][Info] [ItemCollector] Process Stopped by User.
+[17:10:07][Info] anti-fling
+[17:10:07][Info] anti-fling
+[17:10:07][Info] anti-fling
+[17:10:08][Info] anti-fling
+[17:10:08][Info] anti-fling
+[17:10:08][Info] anti-fling
+[17:10:08][Info] anti-fling
+[17:10:09][Info] Arrow nil
+[17:10:09][Info] Arrow nil
+[17:10:09][Info] anti-fling
+[17:10:09][Info] anti-fling
+[17:10:10][Info] anti-fling
+[17:10:10][Info] anti-fling
+[17:10:10][Info] anti-fling
+[17:10:11][Info] Arrow nil
+[17:10:11][Info] Arrow nil
+[17:10:11][Info] anti-fling
+[17:10:11][Info] anti-fling
+[17:10:11][Info] anti-fling
+[17:10:11][Info] anti-fling
+[17:10:11][Info] anti-fling
+[17:10:12][Info] anti-fling
+[17:10:12][Info] anti-fling
+[17:10:12][Info] anti-fling
+[17:10:12][Info] anti-fling
+[17:10:13][Info] Arrow nil
+[17:10:13][Info] Arrow nil
+[17:10:13][Info] anti-fling
+[17:10:13][Info] anti-fling
+[17:10:13][Info] anti-fling
+[17:10:13][Info] anti-fling
+[17:10:14][Info] anti-fling
+[17:10:14][Info] anti-fling
+[17:10:14][Info] anti-fling
+[17:10:14][Info] anti-fling
+[17:10:15][Info] anti-fling
+[17:10:15][Info] anti-fling
+[17:10:15][Info] anti-fling
+[17:10:16][Info] [ItemCollector] Started Collection Thread.
+[17:10:16][Info] anti-fling
+[17:10:16][Info] anti-fling
+[17:10:16][Info] anti-fling
+[17:10:17][Info] anti-fling
+[17:10:17][Info] anti-fling
+[17:10:17][Info] anti-fling
+[17:10:17][Info] anti-fling
+[17:10:17][Info] anti-fling
+[17:10:18][Info] anti-fling
+[17:10:18][Info] anti-fling
+[17:10:18][Info] anti-fling
+[17:10:19][Info] anti-fling
+[17:10:19][Info] anti-fling
+[17:10:19][Info] anti-fling
+[17:10:19][Info] anti-fling
+[17:10:20][Info] anti-fling
+[17:10:20][Info] anti-fling
+[17:10:20][Info] anti-fling
+[17:10:20][Info] anti-fling
+[17:10:21][Info] anti-fling
+[17:10:21][Info] anti-fling
+[17:10:21][Info] anti-fling
+[17:10:21][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[17:10:21][Info] [ChestExplorer] Stopped/Finished
+[17:10:24][Info] [ChestExplorer] Recorded Start Pos: 295.8567810058594, 3.0302374362945557, -1094.7891845703125
+[17:10:24][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[17:10:24][Info] [ChestExplorer] Opening 3 chests
+[17:10:24][Info] [ChestExplorer] Teleporting to: -856.236083984375, 21.224246978759766, -861.2171630859375
+[17:10:24][Info] [ChestExplorer] Opening...
+[17:10:24][Info] [ChestExplorer] Targeting: Item Chest4
+[17:10:26][Info] Entered biome nil
+[17:10:26][Info] nil
+[17:10:26][Info] [ChestExplorer] Targeting: Item Chest4
+[17:10:26][Info] [ChestExplorer] Teleporting to: -884.5075073242188, 24.124250411987305, -852.0978393554688
+[17:10:26][Info] [ChestExplorer] Opening...
+[17:10:27][Info] anti-fling
+[17:10:28][Info] anti-fling
+[17:10:28][Info] [ChestExplorer] Teleporting to: -819.0301513671875, 7.784515857696533, -718.626220703125
+[17:10:28][Info] [ChestExplorer] Targeting: Item Chest5
+[17:10:28][Info] anti-fling
+[17:10:28][Info] [ChestExplorer] Opening...
+[17:10:28][Info] anti-fling
+[17:10:28][Info] anti-fling
+[17:10:29][Info] anti-fling
+[17:10:29][Error] :292: cannot cancel thread
+    Stack Begin
+    Script 'Script', Line 292 - function Stop
+    Script 'Script', Line 283
+    Stack End
+[17:10:29][Info] anti-fling
+[17:10:30][Info] [ChestExplorer] Stopped/Finished
+[17:10:30][Info] anti-fling
+[17:10:30][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[17:10:30][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:30][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[17:10:32][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[17:10:32][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:33][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[17:10:34][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:34][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:34][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:34][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:35][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:35][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:35][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:35][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[17:10:35][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:35][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:35][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:36][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:36][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:36][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:36][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[17:10:37][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[17:10:37][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[17:10:37][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[17:10:38][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[17:10:38][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:44][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:44][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:44][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:44][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:44][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:44][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[17:10:45][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:45][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:45][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[17:10:45][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:45][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[17:10:45][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:45][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:46][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:46][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:46][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:46][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[17:10:46][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[17:10:46][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[17:10:48][Info] [ItemCollector] Collected 135 items.
+[17:10:48][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[17:11:30][Info] Cast rod
+[17:11:48][Info] Cast rod
+[17:12:06][Info] Cast rod
+[17:12:23][Info] Cast rod
