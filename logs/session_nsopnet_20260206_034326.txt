@@ -1,0 +1,374 @@
+=== WindUI Log Session ===
+Started: 2026-02-06 03:43:26
+User: nsopnet (ID: 8401342884)
+========================================
+
+[18:43:27][Info] Loader: Fetching MainInterface...
+[18:43:29][Info] [OP] Loading modules...
+[18:43:29][Info] [MainInterface] Speed module loaded table: table: 0x74743659d53c36a9
+[18:43:30][Info] [OP] Modules loaded!
+[18:43:30][Info] [OP] Initializing 99 Nights OP Script...
+[18:43:30][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:43:30][Info] [OP] KillTarget: Initialized
+[18:43:30][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:43:30][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[18:43:30][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:43:30][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:43:30][Info] [Fly] Initialized
+[18:43:30][Info] [Speed] Initialized
+[18:43:30][Info] [Teleport] Initialized
+[18:43:30][Info] [PhysicsOptimizer] Initialized
+[18:43:30][Info] [Tools] Initialized
+[18:43:30][Info] [OP] Window created. Type: table
+[18:43:33][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:43:33][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:43:33][Info] [OP] UI Created! Ready to use.
+[18:43:33][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[18:44:05][Info] [ItemCollector] Selected: Chair
+[18:44:05][Info] [ItemCollector] Selected: Log
+[18:44:05][Info] [ItemCollector] Selected: Coal
+[18:44:07][Info] [ItemCollector] Started Collection Thread.
+[18:44:07][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[18:44:12][Info] [ItemCollector] Collected 32 items.
+[18:44:12][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:44:13][Info] [ItemCollector] Started Collection Thread.
+[18:44:13][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:44:13][Info] [ItemCollector] Collected 1 items.
+[18:44:27][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:44:27][Warning] [ItemCollector] No matching items found in map!
+[18:44:27][Info] [ItemCollector] Started Collection Thread.
+[18:44:42][Info] Arrow nil
+[18:44:43][Info] Fairy
+[18:44:43][Info] Entered biome Fairy
+[18:44:44][Info] Arrow nil
+[18:44:44][Info] [OP] GodMode: STARTED
+[18:44:47][Info] add Workspace.Characters.Kiwi
+[18:44:59][Info] [Fly] Enabled
+[18:45:06][Info] Entered biome nil
+[18:45:06][Info] nil
+[18:45:10][Info] Entered biome Fairy
+[18:45:10][Info] Fairy
+[18:45:16][Info] Entered biome nil
+[18:45:16][Info] nil
+[18:45:17][Info] Entered biome Fairy
+[18:45:17][Info] Fairy
+[18:45:20][Info] Entered biome nil
+[18:45:20][Info] nil
+[18:45:23][Info] Entered biome Fairy
+[18:45:23][Info] Fairy
+[18:45:26][Info] nil
+[18:45:26][Info] Entered biome nil
+[18:45:27][Info] Arrow nil
+[18:45:27][Info] Arrow nil
+[18:45:39][Info] Arrow nil
+[18:45:49][Info] Snow
+[18:45:49][Info] Entered biome Snow
+[18:45:50][Info] nil
+[18:45:50][Info] Entered biome nil
+[18:45:50][Info] Snow
+[18:45:50][Info] Entered biome Snow
+[18:45:59][Info] [ItemCollector] Started Collection Thread.
+[18:46:03][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[18:46:04][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[18:46:04][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[18:46:04][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[18:46:04][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[18:46:04][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[18:46:05][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:46:05][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[18:46:05][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[18:46:05][Warning] [ItemCollector] Failed to collect: Chair after 3 attempts.
+[18:46:05][Info] [ItemCollector] Process Stopped by User.
+[18:46:12][Info] nil
+[18:46:12][Info] Entered biome nil
+[18:46:21][Info] add Workspace.Characters.Kiwi
+[18:46:29][Info] [ItemCollector] Started Collection Thread.
+[18:46:34][Info] [ItemCollector] Process Stopped by User.
+[18:46:58][Info] Entered biome Snow
+[18:46:58][Info] Snow
+[18:47:01][Info] nil
+[18:47:01][Info] Entered biome nil
+[18:47:16][Info] add Workspace.Characters.Kiwi
+[18:47:23][Info] add Workspace.Characters.Kiwi
+[18:47:29][Info] Jellyfish true
+[18:47:29][Info] Salmon true
+[18:47:29][Info] Lionfish true
+[18:47:29][Info] Mackerel true
+[18:47:29][Info] Swordfish true
+[18:47:29][Info] Lava Eel true
+[18:47:29][Info] Shark true
+[18:47:29][Info] Clownfish true
+[18:47:40][Info] [Fly] Disabled
+[18:47:54][Info] toggle enabled not allowed
+[18:47:57][Info] deactivate and unequip
+[18:48:09][Info] Cast rod
+[18:48:14][Info] Cast rod
+[18:48:17][Info] Cast rod
+[18:48:21][Info] new input type Touch
+[18:48:21][Info] Cast rod
+[18:48:22][Info] collision with land
+[18:48:25][Info] Cast rod
+[18:48:29][Info] Cast rod
+[18:48:36][Info] Cast rod
+[18:48:41][Info] Cast rod
+[18:48:49][Info] Cast rod
+[18:48:51][Info] got Old Boot
+[18:48:51][Info] Workspace.Map.Landmarks.Fishing Hut.FishPoster.Sign.SurfaceGui.FishHolder.Old Boot
+[18:48:52][Info] Cast rod
+[18:49:01][Info] Cast rod
+[18:49:09][Info] Cast rod
+[18:49:14][Info] deactivate and unequip
+[18:49:23][Info] deactivate and unequip
+[18:49:26][Info] toggle enabled not allowed
+[18:49:40][Info] deactivate and unequip
+[18:49:50][Info] deactivate and unequip
+[18:49:57][Info] Cast rod
+[18:49:58][Info] collision with land
+[18:50:02][Info] deactivate and unequip
+[18:50:03][Info] Cast rod
+[18:50:09][Info] Cast rod
+[18:50:13][Info] Cast rod
+[18:50:18][Info] Cast rod
+[18:50:23][Info] Cast rod
+[18:50:28][Info] Cast rod
+[18:50:33][Warning] [FishFarm] Water not on screen!
+[18:50:33][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:33][Warning] [FishFarm] Water not on screen!
+[18:50:33][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:34][Warning] [FishFarm] Water not on screen!
+[18:50:34][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:34][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:34][Warning] [FishFarm] Water not on screen!
+[18:50:34][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:34][Warning] [FishFarm] Water not on screen!
+[18:50:34][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:34][Warning] [FishFarm] Water not on screen!
+[18:50:34][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:34][Warning] [FishFarm] Water not on screen!
+[18:50:35][Warning] [FishFarm] Water not on screen!
+[18:50:35][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:35][Warning] [FishFarm] Water not on screen!
+[18:50:35][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:35][Warning] [FishFarm] Water not on screen!
+[18:50:35][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:35][Warning] [FishFarm] Water not on screen!
+[18:50:35][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:36][Warning] [FishFarm] Water not on screen!
+[18:50:36][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:36][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:36][Warning] [FishFarm] Water not on screen!
+[18:50:36][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:36][Warning] [FishFarm] Water not on screen!
+[18:50:36][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:36][Warning] [FishFarm] Water not on screen!
+[18:50:37][Warning] [FishFarm] Water not on screen!
+[18:50:37][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:37][Warning] [FishFarm] Target not on screen, trying water position...
+[18:50:37][Warning] [FishFarm] Water not on screen!
+[18:50:37][Info] Cast rod
+[18:50:41][Info] Cast rod
+[18:50:45][Info] Cast rod
+[18:50:49][Info] Cast rod
+[18:50:55][Info] Cast rod
+[18:50:59][Info] Cast rod
+[18:51:03][Info] Cast rod
+[18:51:07][Info] Cast rod
+[18:51:11][Info] Cast rod
+[18:51:15][Info] Cast rod
+[18:51:19][Info] Cast rod
+[18:51:22][Info] Cast rod
+[18:51:27][Info] Cast rod
+[18:51:28][Info] collision with land
+[18:51:33][Info] Cast rod
+[18:51:37][Info] Cast rod
+[18:51:41][Info] Cast rod
+[18:51:45][Info] Cast rod
+[18:51:46][Info] function is already waiting :)
+[18:51:49][Info] Cast rod
+[18:51:54][Info] Cast rod
+[18:51:59][Info] Cast rod
+[18:52:02][Info] Cast rod
+[18:52:09][Info] Cast rod
+[18:52:09][Info] collision with land
+[18:52:14][Info] Cast rod
+[18:52:18][Info] Cast rod
+[18:52:21][Info] Cast rod
+[18:52:25][Info] Cast rod
+[18:52:29][Info] Cast rod
+[18:52:33][Info] Script 'Players.nsopnet.PlayerScripts.Client.NpcModules.NPCModuleClient', Line 29 - function NPCAdded
+[18:52:33][Warning] Infinite yield possible on 'Deer:WaitForChild("Animations")'
+[18:52:33][Info] Stack Begin
+[18:52:33][Info] Stack End
+[18:52:34][Info] Cast rod
+[18:52:40][Info] Cast rod
+[18:52:44][Info] Cast rod
+[18:52:48][Info] Cast rod
+[18:52:52][Info] Cast rod
+[18:52:55][Info] Cast rod
+[18:52:58][Info] Cast rod
+[18:53:02][Info] Cast rod
+[18:53:06][Info] Cast rod
+[18:53:10][Info] Cast rod
+[18:53:14][Info] Cast rod
+[18:53:19][Info] Cast rod
+[18:53:23][Info] Cast rod
+[18:53:28][Info] Cast rod
+[18:53:32][Info] Cast rod
+[18:53:38][Info] Cast rod
+[18:53:39][Info] collision with land
+[18:53:42][Info] Cast rod
+[18:53:46][Info] Cast rod
+[18:53:47][Info] collision with land
+[18:54:00][Info] Cast rod
+[18:54:03][Info] Cast rod
+[18:54:07][Info] Cast rod
+[18:54:12][Info] Cast rod
+[18:54:17][Info] Cast rod
+[18:54:20][Info] Cast rod
+[18:54:25][Info] Cast rod
+[18:54:30][Info] Cast rod
+[18:54:34][Info] Cast rod
+[18:54:38][Info] Cast rod
+[18:54:42][Info] Cast rod
+[18:54:46][Info] Cast rod
+[18:54:49][Info] Cast rod
+[18:54:53][Info] Cast rod
+[18:54:57][Info] Cast rod
+[18:55:01][Info] Cast rod
+[18:55:06][Info] Cast rod
+[18:55:11][Info] Cast rod
+[18:55:15][Info] Cast rod
+[18:55:23][Info] Cast rod
+[18:55:28][Info] Cast rod
+[18:55:33][Info] Cast rod
+[18:55:37][Info] Cast rod
+[18:55:42][Info] Cast rod
+[18:55:47][Info] Cast rod
+[18:55:52][Info] Cast rod
+[18:55:56][Info] Cast rod
+[18:55:57][Info] collision with land
+[18:56:05][Info] Cast rod
+[18:56:10][Info] Cast rod
+[18:56:11][Info] add Workspace.Characters.Kiwi
+[18:56:15][Info] Cast rod
+[18:56:20][Info] Cast rod
+[18:56:24][Info] Cast rod
+[18:56:29][Info] Cast rod
+[18:56:34][Info] Cast rod
+[18:56:39][Info] add Workspace.Characters.Kiwi
+[18:56:43][Info] Cast rod
+[18:56:47][Info] Cast rod
+[18:56:51][Info] Cast rod
+[18:56:54][Warning] [FishFarm] Target not on screen, trying water position...
+[18:56:54][Warning] [FishFarm] Water not on screen!
+[18:56:55][Info] Cast rod
+[18:56:59][Info] Cast rod
+[18:57:03][Info] Cast rod
+[18:57:04][Info] collision with land
+[18:57:13][Info] Cast rod
+[18:57:13][Info] collision with land
+[18:57:15][Info] Cast rod
+[18:57:16][Info] collision with land
+[18:57:20][Info] Cast rod
+[18:57:23][Info] collision with land
+[18:57:23][Info] deactivate and unequip
+[18:57:33][Info] Cast rod
+[18:57:34][Info] collision with land
+[18:57:36][Info] deactivate and unequip
+[18:57:40][Info] deactivate and unequip
+[18:57:44][Info] toggle enabled not allowed
+[18:58:06][Info] deactivate and unequip
+[18:58:12][Info] deactivate and unequip
+[18:58:18][Info] Cast rod
+[18:58:18][Info] collision with land
+[18:58:25][Info] deactivate and unequip
+[18:58:31][Info] deactivate and unequip
+[18:58:32][Info] deactivate and unequip
+[18:58:42][Info] deactivate and unequip
+[18:58:43][Info] deactivate and unequip
+[18:59:04][Info] Cast rod
+[18:59:09][Info] Cast rod
+[18:59:12][Info] Cast rod
+[18:59:16][Info] Cast rod
+[18:59:19][Info] Cast rod
+[18:59:23][Info] Cast rod
+[18:59:27][Info] Cast rod
+[18:59:32][Info] Cast rod
+[18:59:36][Info] Cast rod
+[18:59:40][Info] Cast rod
+[18:59:43][Info] Cast rod
+[18:59:47][Info] Cast rod
+[18:59:51][Info] Cast rod
+[18:59:55][Info] Cast rod
+[18:59:55][Info] collision with land
+[19:00:24][Info] Cast rod
+[19:00:27][Info] Cast rod
+[19:00:33][Info] Cast rod
+[19:00:37][Info] Cast rod
+[19:00:40][Info] Cast rod
+[19:00:44][Info] Cast rod
+[19:00:48][Info] Cast rod
+[19:00:52][Info] Cast rod
+[19:00:56][Info] Cast rod
+[19:01:00][Info] Cast rod
+[19:01:03][Info] Cast rod
+[19:01:07][Info] Cast rod
+[19:01:11][Info] Cast rod
+[19:01:16][Info] Cast rod
+[19:01:19][Info] Cast rod
+[19:01:20][Info] collision with land
+[19:01:26][Info] Cast rod
+[19:01:26][Info] collision with land
+[19:01:30][Info] Cast rod
+[19:01:30][Info] collision with land
+[19:01:34][Info] Cast rod
+[19:01:38][Info] Cast rod
+[19:01:38][Info] collision with land
+[19:01:40][Info] Cast rod
+[19:01:44][Info] Cast rod
+[19:01:45][Info] collision with land
+[19:01:46][Info] Cast rod
+[19:01:47][Info] collision with land
+[19:01:49][Info] Cast rod
+[19:01:52][Info] Cast rod
+[19:01:53][Info] collision with land
+[19:01:56][Info] Cast rod
+[19:01:57][Info] collision with land
+[19:02:03][Info] Cast rod
+[19:02:04][Info] collision with land
+[19:02:06][Info] Cast rod
+[19:02:10][Info] Cast rod
+[19:02:14][Info] Cast rod
+[19:02:18][Info] Cast rod
+[19:02:22][Info] Cast rod
+[19:02:26][Info] Cast rod
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:28][Info] made smaller
+[19:02:30][Info] Cast rod
+[19:02:34][Info] Cast rod
+[19:02:35][Info] collision with land

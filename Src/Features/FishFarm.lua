@@ -245,15 +245,18 @@ local function getGlobalActiveHotspot()
             local hotspots = zone:FindFirstChild("Hotspots")
             if hotspots then
                 for _, hotspot in ipairs(hotspots:GetChildren()) do
-                    local bubbles = hotspot:FindFirstChild("Bubbles")
-                    -- STRICT CHECK: Must be Enabled=true
-                    if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
-                        local pos = hotspot.Position
-                        local dist = (pos - root.Position).Magnitude
-                        
-                        if dist < shortestDist then
-                            shortestDist = dist
-                            bestHotspot = hotspot
+                    -- SAFETY: Ensure it's a Part before checking Position
+                    if hotspot:IsA("BasePart") then
+                        local bubbles = hotspot:FindFirstChild("Bubbles")
+                        -- STRICT CHECK: Must be Enabled=true
+                        if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
+                            local pos = hotspot.Position
+                            local dist = (pos - root.Position).Magnitude
+                            
+                            if dist < shortestDist then
+                                shortestDist = dist
+                                bestHotspot = hotspot
+                            end
                         end
                     end
                 end
@@ -298,6 +301,26 @@ local function getNearestHotspot()
     end
     
     return bestHotspot, bestDist
+    return bestHotspot, bestDist
+end
+
+-- Debug Visualizer
+local function visualizeTarget(pos)
+    if not pos then return end
+    
+    local viz = Workspace:FindFirstChild("FishFarmViz")
+    if not viz then
+        viz = Instance.new("Part")
+        viz.Name = "FishFarmViz"
+        viz.Shape = Enum.PartType.Ball
+        viz.Size = Vector3.new(1, 1, 1)
+        viz.Material = Enum.Material.Neon
+        viz.Color = Color3.fromRGB(255, 0, 0) -- RED = Target
+        viz.Anchored = true
+        viz.CanCollide = false
+        viz.Parent = Workspace
+    end
+    viz.Position = pos
 end
 
 -- ============================================
@@ -507,11 +530,9 @@ local function doCast()
     -- 1. Check for Active Hotspot (Priority for casting)
     local hotspot, hDist = getNearestHotspot() -- Function created in prev step (checks local range)
     if hotspot then
-        targetPos = hotspot.Position
-        -- Improve Accuracy: Sync Y with Water Surface
-        if water then
-            targetPos = Vector3.new(targetPos.X, water.Position.Y, targetPos.Z)
-        end
+        -- REVERT: Y-Sync caused parallax issues if water level was wrong.
+        -- Using direct hotspot position is safer if dev placed it correctly.
+        targetPos = hotspot.Position 
         log("🔥 Targeting Nearby Hotspot: " .. math.floor(hDist) .. " studs")
     else
         -- 2. Accurate Zone Targeting (Normal Mode)
@@ -527,6 +548,9 @@ local function doCast()
              targetPos = Vector3.new(targetPos.X, water.Position.Y, targetPos.Z)
         end
     end
+    
+    -- Debug: Show where we are aiming
+    visualizeTarget(targetPos)
     
     log("Target: " .. math.floor(targetPos.X) .. ", " .. math.floor(targetPos.Y) .. ", " .. math.floor(targetPos.Z))
     
