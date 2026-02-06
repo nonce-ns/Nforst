@@ -1,0 +1,96 @@
+=== WindUI Log Session ===
+Started: 2026-02-06 03:02:58
+User: nsopnet (ID: 8401342884)
+========================================
+
+[18:03:00][Info] Loader: Fetching MainInterface...
+[18:03:03][Info] [OP] Loading modules...
+[18:03:03][Info] [MainInterface] Speed module loaded table: table: 0x1e1ce20d8841c317
+[18:03:04][Info] [OP] Modules loaded!
+[18:03:04][Info] [OP] Initializing 99 Nights OP Script...
+[18:03:04][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:03:04][Info] [OP] KillTarget: Initialized
+[18:03:04][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:03:04][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:03:04][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[18:03:04][Info] [Speed] Initialized
+[18:03:04][Info] [PhysicsOptimizer] Initialized
+[18:03:04][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:03:04][Info] [Teleport] Initialized
+[18:03:04][Info] [Fly] Initialized
+[18:03:04][Info] [Tools] Initialized
+[18:03:04][Info] [OP] Window created. Type: table
+[18:03:07][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:03:08][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:03:08][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[18:03:08][Info] [OP] UI Created! Ready to use.
+[18:03:08][Info] Shark true
+[18:03:08][Info] Mackerel true
+[18:03:08][Info] Clownfish true
+[18:03:08][Info] Swordfish true
+[18:03:08][Info] Salmon true
+[18:03:08][Info] Lionfish true
+[18:03:08][Info] Lava Eel true
+[18:03:39][Info] [ItemCollector] Selected: Chair
+[18:03:39][Info] [ItemCollector] Selected: Coal
+[18:03:39][Info] [ItemCollector] Selected: Cultist
+[18:03:39][Info] [ItemCollector] Selected: Fuel Canister
+[18:03:40][Info] [ItemCollector] Started Collection Thread.
+[18:03:40][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[18:03:42][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:03:43][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:03:45][Info] [ItemCollector] Collected 35 items.
+[18:03:45][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:04:27][Info] -----------------------------
+[18:04:27][Info] 🔍 Scanning for Hotspot Bubbles...
+[18:04:27][Info] 📍 Location: Water Hole
+[18:04:27][Info]    Type: ParticleEmitter
+[18:04:27][Info]    Enabled: false
+[18:04:27][Info] 📍 Location: Water Hole
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info] -----------------------------
+[18:04:27][Info]    Type: ParticleEmitter
+[18:04:27][Info]    Enabled: true
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info] -----------------------------
+[18:04:27][Info]    Enabled: false
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info] 📍 Location: Water Hole1 Tier2
+[18:04:27][Info]    Type: ParticleEmitter
+[18:04:27][Info] -----------------------------
+[18:04:27][Info]    Enabled: false
+[18:04:27][Info] 📍 Location: Water Hole
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info]    Type: ParticleEmitter
+[18:04:27][Info] 📍 Location: Water Hole
+[18:04:27][Info]    Enabled: false
+[18:04:27][Info] -----------------------------
+[18:04:27][Info]    Type: ParticleEmitter
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info] -----------------------------
+[18:04:27][Info] 📍 Location: Fishing Hut
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info] 📍 Location: Water Hole1
+[18:04:27][Info] 📍 Location: Water Hole1
+[18:04:27][Info]    Enabled: false
+[18:04:27][Info]    Enabled: false
+[18:04:27][Info] -----------------------------
+[18:04:27][Info] -----------------------------
+[18:04:27][Info]    Enabled: false
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info] ✅ Found 20 bubble objects.
+[18:04:27][Info] -----------------------------
+[18:04:27][Info]    Type: ParticleEmitter
+[18:04:27][Info]    Type: ParticleEmitter
+[18:04:27][Info]    Enabled: true
+[18:04:27][Info]    Type: ParticleEmitter
+[18:04:27][Info] 📍 Location: Water Hole1
+[18:04:27][Info]    Rate: 5
+[18:04:27][Info]    Enabled: false
+[18:04:27][Info] -----------------------------
+[18:04:27][Info]    Enabled: false
+[18:04:27][Info] -----------------------------
+[18:04:27][Info] -----------------------------
+[18:04:27][Info]    Type: ParticleEmitter

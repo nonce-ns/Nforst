@@ -249,6 +249,19 @@ function FarmingTab.Create(Window, Features, CONFIG)
         end,
     })
     
+    -- Auto Hotspot Toggle
+    FishSection:Toggle({
+        Flag = "FishFarm.AutoHotspot",
+        Title = "Auto Hotspot Hunt 🚀",
+        Desc = "Teleport to active bubbles globally (High catch rate)",
+        Value = false,
+        Callback = function(state)
+            if Features.FishFarm then
+                 Features.FishFarm.UpdateSetting("AutoHotspot", state)
+            end
+        end,
+    })
+    
     -- Fish Delay Slider
     FishSection:Slider({
         Flag = "FishFarm.FishDelay",

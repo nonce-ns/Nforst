@@ -57,6 +57,7 @@ local State = {
     CurrentBobber = nil,
     BobberName = nil, -- Cache for auto-learned name
     CastStartTime = 0,
+    ActiveHotspot = nil, -- Cache for active hotspot
 }
 
 -- Settings
@@ -64,6 +65,7 @@ local Settings = {
     FishDelay = 20,
     AutoClick = true,
     ExpandZone = true,
+    AutoHotspot = false, -- New Setting
 }
 
 -- ============================================
@@ -194,6 +196,108 @@ local function getNearestWater()
     end
     
     return nearestWater, nearestDist
+end
+
+-- New: Accurate Center of nearest FishingZone
+local function getNearestZoneCenter()
+    local root = getRoot()
+    if not root then return nil end
+    
+    local landmarks = Workspace.Map:FindFirstChild("Landmarks")
+    if not landmarks then return nil end
+    
+    local bestZone = nil
+    local bestDist = math.huge
+    local centerPos = nil
+    
+    for _, landmark in ipairs(landmarks:GetChildren()) do
+        local zone = landmark:FindFirstChild("FishingZone")
+        if zone then
+            -- FishingZone is usually a Model/Folder with parts
+            -- We want the geometric center. Finding main part or calculating bounds.
+            local pivot = zone:GetPivot().Position
+            local dist = (pivot - root.Position).Magnitude
+            
+            if dist < bestDist and dist <= WATER_RANGE * 1.5 then
+                bestDist = dist
+                bestZone = zone
+                centerPos = pivot
+            end
+        end
+    end
+    
+    return centerPos, bestDist
+end
+
+-- New: Global Active Hotspot Scanner (For Teleport)
+local function getGlobalActiveHotspot()
+    local landmarks = Workspace.Map:FindFirstChild("Landmarks")
+    if not landmarks then return nil end
+    
+    local bestHotspot = nil
+    local shortestDist = math.huge
+    local root = getRoot()
+    if not root then return nil end
+    
+    for _, landmark in ipairs(landmarks:GetChildren()) do
+        local zone = landmark:FindFirstChild("FishingZone")
+        if zone then
+            local hotspots = zone:FindFirstChild("Hotspots")
+            if hotspots then
+                for _, hotspot in ipairs(hotspots:GetChildren()) do
+                    local bubbles = hotspot:FindFirstChild("Bubbles")
+                    -- STRICT CHECK: Must be Enabled=true
+                    if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
+                        local pos = hotspot.Position
+                        local dist = (pos - root.Position).Magnitude
+                        
+                        if dist < shortestDist then
+                            shortestDist = dist
+                            bestHotspot = hotspot
+                        end
+                    end
+                end
+            end
+        end
+    end
+    
+    return bestHotspot
+end
+
+local function getNearestHotspot()
+    local root = getRoot()
+    if not root then return nil end
+    
+    local landmarks = Workspace.Map:FindFirstChild("Landmarks")
+    if not landmarks then return nil end
+    
+    local bestHotspot = nil
+    local bestDist = math.huge
+    
+    -- Iterate through landmarks to find active bubbles
+    for _, landmark in ipairs(landmarks:GetChildren()) do
+        local zone = landmark:FindFirstChild("FishingZone")
+        if zone then
+            local hotspots = zone:FindFirstChild("Hotspots")
+            if hotspots then
+                for _, hotspot in ipairs(hotspots:GetChildren()) do
+                    if hotspot:IsA("BasePart") then
+                        local bubbles = hotspot:FindFirstChild("Bubbles")
+                        -- Check for Active ParticleEmitter
+                        if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
+                            local dist = (hotspot.Position - root.Position).Magnitude
+                            if dist < bestDist and dist <= WATER_RANGE then
+                                bestDist = dist
+                                bestHotspot = hotspot
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    
+    return bestHotspot, bestDist
 end
 
 -- ============================================
@@ -398,10 +502,31 @@ local function doCast()
     -- Get character's look direction
     local lookVector = root.CFrame.LookVector
     local playerPos = root.Position
+    local targetPos = nil
     
-    -- Calculate target position: 8 studs in front of character, at water level
-    local targetPos = playerPos + lookVector * 8
-    targetPos = Vector3.new(targetPos.X, water.Position.Y, targetPos.Z)
+    -- 1. Check for Active Hotspot (Priority for casting)
+    local hotspot, hDist = getNearestHotspot() -- Function created in prev step (checks local range)
+    if hotspot then
+        targetPos = hotspot.Position
+        -- Improve Accuracy: Sync Y with Water Surface
+        if water then
+            targetPos = Vector3.new(targetPos.X, water.Position.Y, targetPos.Z)
+        end
+        log("🔥 Targeting Nearby Hotspot: " .. math.floor(hDist) .. " studs")
+    else
+        -- 2. Accurate Zone Targeting (Normal Mode)
+        local zoneCenter, zDist = getNearestZoneCenter()
+        if zoneCenter then
+             targetPos = zoneCenter
+             -- Adjust height to water level
+             if water then targetPos = Vector3.new(targetPos.X, water.Position.Y, targetPos.Z) end
+             log("🎯 Targeting Zone Center: " .. math.floor(zDist) .. " studs")
+        else
+             -- 3. Fallback: Standard Offset
+             targetPos = playerPos + lookVector * 8
+             targetPos = Vector3.new(targetPos.X, water.Position.Y, targetPos.Z)
+        end
+    end
     
     log("Target: " .. math.floor(targetPos.X) .. ", " .. math.floor(targetPos.Y) .. ", " .. math.floor(targetPos.Z))
     
@@ -468,6 +593,7 @@ local function fullCleanup()
     State.ZoneExpanded = false
     State.ClickCount = 0
     State.WaitingForMinigame = false
+    State.ActiveHotspot = nil -- Fix: Clear reference to prevent memory leaks
     
     log("Cleanup (fish: " .. count .. ")")
 end
@@ -527,6 +653,29 @@ local function createAnchorGui()
     end)
     
     log("Anchor button created")
+end
+
+local function setAnchored(shouldAnchor)
+    State.Anchored = shouldAnchor
+    local root = getRoot()
+    if root then root.Anchored = shouldAnchor end
+    
+    if State.AnchorGui then
+        local btn = State.AnchorGui:FindFirstChild("AnchorButton")
+        local stroke = btn and btn:FindFirstChild("UIStroke")
+        
+        if btn and stroke then
+            if shouldAnchor then
+                btn.BackgroundColor3 = Color3.fromRGB(50, 180, 50)
+                btn.Text = "🔒 LOCKED"
+                stroke.Color = Color3.fromRGB(80, 200, 80)
+            else
+                btn.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+                btn.Text = "🔓 ANCHOR"
+                stroke.Color = Color3.fromRGB(120, 120, 120)
+            end
+        end
+    end
 end
 
 local function destroyAnchorGui()
@@ -612,6 +761,74 @@ function FishFarm.Start()
                 continue
             end
             
+            -- [NEW] Auto Hotspot Hunt Logic
+            if Settings.AutoHotspot and not State.WaitingForMinigame then
+                -- Check if current spot is still valid
+                local currentSpotValid = false
+                if State.ActiveHotspot then
+                    -- Safety: Check if object still exists in game
+                    if State.ActiveHotspot.Parent then
+                        local bubbles = State.ActiveHotspot:FindFirstChild("Bubbles")
+                        if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
+                             currentSpotValid = true
+                             
+                             -- AUTO-ANCHOR: Ensure we are anchored while fishing at valid spot
+                             if not State.Anchored then
+                                 setAnchored(true)
+                                 log("⚓ Auto-Anchored at Hotspot")
+                             end
+                        else
+                             log("⚠ Current hotspot expired!")
+                             State.ActiveHotspot = nil
+                        end
+                    else
+                        State.ActiveHotspot = nil -- Object destroyed
+                    end
+                end
+                
+                -- If no valid spot, HUNT!
+                if not currentSpotValid then
+                    log("🔎 Scanning for global hotspots...")
+                    
+                    -- Unanchor before moving
+                    if State.Anchored then
+                        setAnchored(false)
+                        log("⚓ Unanchored for Teleport")
+                    end
+                    
+                    local targetHotspot = getGlobalActiveHotspot()
+                    
+                    if targetHotspot then
+                        log("🚀 Found Hotspot! Teleporting...")
+                        
+                        -- Teleport Logic
+                        local root = getRoot()
+                        if root then
+                            -- Teleport slightly above and away to avoid falling in
+                            local targetCFrame = targetHotspot.CFrame * CFrame.new(0, 5, 8)
+                            -- Look at hotspot
+                            targetCFrame = CFrame.lookAt(targetCFrame.Position, targetHotspot.Position)
+                            
+                            root.CFrame = targetCFrame
+                            State.ActiveHotspot = targetHotspot
+                            State.LastWaterPos = nil -- Reset water cache
+                            
+                            -- Stabilize
+                            log("⏳ Stabilizing...")
+                            task.wait(1.5)
+                            
+                            -- Re-anchor immediately after stabilize
+                            setAnchored(true)
+                            log("⚓ Anchor restored")
+                        end
+                    else
+                        logWarn("No active hotspots found. Waiting...")
+                        task.wait(2)
+                        continue
+                    end
+                end
+            end
+            
             -- 4. SMART LOGIC: Bobber Detection
             local bobber = findBobber()
             
@@ -689,6 +906,9 @@ function FishFarm.UpdateSetting(key, value)
         Settings.AutoClick = value
     elseif key == "ExpandZone" then
         Settings.ExpandZone = value
+    elseif key == "AutoHotspot" then
+        Settings.AutoHotspot = value
+        log("AutoHotspot: " .. tostring(value))
     end
 end
 

@@ -1,0 +1,178 @@
+-- Decompiled with Konstant V2.1, a fast Luau decompiler made in Luau by plusgiant5 (https://discord.gg/brNTY8nX8t)
+-- Decompiled on 2026-02-06 02:52:37
+-- Luau version 6, Types version 3
+-- Time taken: 0.010053 seconds
+
+local module_upvr = {}
+module_upvr.__index = module_upvr
+module_upvr.Cooldown = 0.25
+module_upvr.Damage = 0
+module_upvr.TimeToWater = 3
+local LocalPlayer_upvr = game.Players.LocalPlayer
+local Client_upvr = require(LocalPlayer_upvr.PlayerScripts.Client)
+local OverlapParams_new_result1_upvr = OverlapParams.new()
+OverlapParams_new_result1_upvr.FilterType = Enum.RaycastFilterType.Include
+OverlapParams_new_result1_upvr.FilterDescendantsInstances = {workspace.Structures}
+function module_upvr.new(arg1, arg2) -- Line 18
+	--[[ Upvalues[1]:
+		[1]: module_upvr (readonly)
+	]]
+	local setmetatable_result1 = setmetatable({}, module_upvr)
+	setmetatable_result1.Model = arg1
+	setmetatable_result1.RealModel = arg2
+	setmetatable_result1.LastSwing = 0
+	setmetatable_result1.LastHits = {}
+	return setmetatable_result1
+end
+function module_upvr.Break(arg1) -- Line 31
+	--[[ Upvalues[1]:
+		[1]: Client_upvr (readonly)
+	]]
+	print("time to break locally")
+	arg1.Broken = true
+	Client_upvr.InventoryHandler.ClearItemFromInventory(arg1.RealModel)
+end
+function module_upvr.CheckHitbox(arg1, arg2) -- Line 37
+	--[[ Upvalues[3]:
+		[1]: LocalPlayer_upvr (readonly)
+		[2]: OverlapParams_new_result1_upvr (readonly)
+		[3]: Client_upvr (readonly)
+	]]
+	local Character_2 = LocalPlayer_upvr.Character
+	if Character_2 then
+		Character_2 = LocalPlayer_upvr.Character:FindFirstChild("HumanoidRootPart")
+	end
+	if Character_2 then
+		local tbl = {}
+		for _, v in pairs(workspace:GetPartBoundsInBox(Character_2.CFrame * CFrame.new(0, 0, -2), Vector3.new(6, 7, 7), OverlapParams_new_result1_upvr)) do
+			local var51
+			local function INLINED_2() -- Internal function, doesn't exist in bytecode
+				var51 = v.Parent
+				return var51
+			end
+			if not v.Parent:HasTag("FarmPlot") or not INLINED_2() then
+				var51 = v.Parent.Parent
+			end
+			if var51:HasTag("FarmPlot") then
+				tbl[var51] = true
+			end
+		end
+		for i_2 in pairs(tbl) do
+			var51 = arg1.LastHits
+			var51[i_2] = (arg1.LastHits[i_2] or 0) + arg2
+		end
+		for i_3 in pairs(arg1.LastHits) do
+			var51 = tbl[i_3]
+			if not var51 then
+				var51 = arg1.LastHits
+				var51[i_3] = nil
+			end
+		end
+		for i_4, v_2 in pairs(arg1.LastHits) do
+			var51 = arg1.TimeToWater
+			if var51 < v_2 then
+				var51 = i_4:GetAttribute("Watered")
+				if not var51 then
+					var51 = Client_upvr.Events.RequestWaterPlot:FireServer
+					var51(arg1.RealModel, i_4)
+				end
+			end
+		end
+	end
+end
+function module_upvr.GroundWaterParticles(arg1) -- Line 69
+	if not arg1.WaterParticles then
+		arg1.WaterParticles = game.ReplicatedStorage.Assets.Particles.WaterSplash:Clone()
+	end
+	local var62_upvr = arg1.Model.PrimaryPart.SpoutAttachment.WorldCFrame * CFrame.Angles(0.08726646259971647, 0, 0)
+	task.delay(0.25, function() -- Line 76
+		--[[ Upvalues[2]:
+			[1]: var62_upvr (readonly)
+			[2]: arg1 (readonly)
+		]]
+		local workspace_Raycast_result1 = workspace:Raycast(var62_upvr.Position, var62_upvr.LookVector * 20)
+		if workspace_Raycast_result1 then
+			print(workspace_Raycast_result1.Instance:GetFullName())
+			arg1.WaterParticles.CFrame = CFrame.new(workspace_Raycast_result1.Position + Vector3.new(0, 0.30000, 0))
+			arg1.WaterParticles.Parent = workspace.Particles
+		end
+	end)
+end
+function module_upvr.Activate(arg1) -- Line 86
+	--[[ Upvalues[1]:
+		[1]: Client_upvr (readonly)
+	]]
+	print("water")
+	if time() < arg1.LastSwing + arg1.Cooldown then
+	else
+		arg1.LastSwing = time()
+		local var64_upvr = (arg1.ActiveCount or 0) + 1
+		arg1.ActiveCount = var64_upvr
+		task.spawn(function() -- Line 97
+			--[[ Upvalues[3]:
+				[1]: Client_upvr (copied, readonly)
+				[2]: arg1 (readonly)
+				[3]: var64_upvr (readonly)
+			]]
+			Client_upvr.Sound.Play("WateringCan")
+			Client_upvr.Events.PlayAnimation:Fire("WateringCanPour")
+			arg1.Model.PrimaryPart.SpoutAttachment.Particles.Enabled = true
+			while arg1.ActiveCount == var64_upvr do
+				if arg1.Equipped and arg1.ActiveCount == var64_upvr then
+					task.spawn(function() -- Line 106
+						--[[ Upvalues[1]:
+							[1]: arg1 (copied, readonly)
+						]]
+						arg1:GroundWaterParticles()
+					end)
+				end
+			end
+			task.delay(0.25, function() -- Line 112
+				--[[ Upvalues[2]:
+					[1]: arg1 (copied, readonly)
+					[2]: var64_upvr (copied, readonly)
+				]]
+				if arg1.ActiveCount == var64_upvr + 1 and arg1.WaterParticles then
+					arg1.WaterParticles.Parent = nil
+				end
+			end)
+		end)
+	end
+end
+function module_upvr.Deactivate(arg1) -- Line 122
+	--[[ Upvalues[1]:
+		[1]: Client_upvr (readonly)
+	]]
+	arg1.Model.PrimaryPart.SpoutAttachment.Particles.Enabled = false
+	arg1.ActiveCount = (arg1.ActiveCount or 0) + 1
+	Client_upvr.Events.StopSound:Fire("WateringCan", {
+		FadeTime = 0.2;
+	})
+	Client_upvr.Events.StopAnimation:Fire("WateringCanPour")
+	arg1.LastHits = {}
+end
+function module_upvr.OnEquip(arg1) -- Line 130
+	--[[ Upvalues[1]:
+		[1]: Client_upvr (readonly)
+	]]
+	arg1.Equipped = true
+	Client_upvr.GuiButtonHandler.ShowButton("Swing")
+end
+function module_upvr.OnUnequip(arg1) -- Line 135
+	--[[ Upvalues[1]:
+		[1]: Client_upvr (readonly)
+	]]
+	arg1.Equipped = false
+	Client_upvr.GuiButtonHandler.HideButton("Swing")
+	arg1.ActiveCount = (arg1.ActiveCount or 0) + 1
+	Client_upvr.Events.StopSound:Fire("WateringCan", {
+		FadeTime = 0.2;
+	})
+	Client_upvr.Events.StopAnimation:Fire("WateringCanPour")
+	arg1.LastHits = {}
+	if arg1.WaterParticles then
+		arg1.WaterParticles:Destroy()
+		arg1.WaterParticles = nil
+	end
+end
+return module_upvr

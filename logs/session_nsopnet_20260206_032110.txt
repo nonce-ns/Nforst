@@ -1,0 +1,1002 @@
+=== WindUI Log Session ===
+Started: 2026-02-06 03:21:10
+User: nsopnet (ID: 8401342884)
+========================================
+
+[18:21:11][Info] Loader: Fetching MainInterface...
+[18:21:13][Info] [OP] Loading modules...
+[18:21:13][Info] [MainInterface] Speed module loaded table: table: 0x81c1669b5483074f
+[18:21:14][Info] [OP] Modules loaded!
+[18:21:14][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:21:14][Info] [OP] Initializing 99 Nights OP Script...
+[18:21:14][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:21:14][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:21:14][Info] [Fly] Initialized
+[18:21:14][Info] [OP] KillTarget: Initialized
+[18:21:14][Info] [Teleport] Initialized
+[18:21:14][Info] [PhysicsOptimizer] Initialized
+[18:21:14][Info] [Tools] Initialized
+[18:21:14][Info] [OP] Window created. Type: table
+[18:21:14][Info] [Speed] Initialized
+[18:21:14][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[18:21:14][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:21:17][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:21:17][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[18:21:17][Info] [OP] UI Created! Ready to use.
+[18:21:17][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:21:33][Info] [ItemCollector] Selected: Fuel Canister
+[18:21:33][Info] [ItemCollector] Selected: Coal
+[18:21:33][Info] [ItemCollector] Selected: Cultist
+[18:21:33][Info] [ItemCollector] Selected: Chair
+[18:21:33][Info] [ItemCollector] Selected: Log
+[18:21:35][Info] [ItemCollector] Started Collection Thread.
+[18:21:35][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[18:21:36][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:21:36][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:21:36][Info] not success
+[18:21:36][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:21:36][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:21:37][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:21:38][Info] not success
+[18:21:39][Info] [ItemCollector] Collected 25 items.
+[18:21:39][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:21:40][Info] not success
+[18:21:43][Info] not success
+[18:21:45][Info] not success
+[18:21:46][Info] [ItemCollector] Started Collection Thread.
+[18:21:46][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:21:46][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:21:47][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:21:47][Info] not success
+[18:21:47][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:21:47][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:21:49][Info] [ItemCollector] Collected 16 items.
+[18:21:49][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:21:49][Info] not success
+[18:21:51][Info] not success
+[18:21:53][Info] not success
+[18:21:55][Info] [ItemCollector] Started Collection Thread.
+[18:21:55][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:21:55][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:21:55][Info] not success
+[18:21:55][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:21:55][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:21:56][Warning] [ItemCollector] No matching items found in map!
+[18:21:56][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:21:56][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:21:57][Info] not success
+[18:21:59][Info] not success
+[18:22:02][Info] not success
+[18:22:04][Info] not success
+[18:22:05][Info] [OP] MapRevealer: Radius set to 434
+[18:22:05][Info] [OP] MapRevealer: Radius set to 672
+[18:22:05][Info] [OP] MapRevealer: Radius set to 1173
+[18:22:05][Info] [OP] MapRevealer: Radius set to 1500
+[18:22:06][Info] not success
+[18:22:08][Info] not success
+[18:22:08][Info] [OP] MapRevealer: Found Campfire at 0, 1.5, 0 (Dist: 14.2)
+[18:22:08][Info] [OP] MapRevealer: Radius set to 1500
+[18:22:08][Info] [OP] MapRevealer: Spiral from 0, 1.5, 0 at height 40
+[18:22:08][Info] [OP] MapRevealer: Starting (speed=170)
+[18:22:10][Info] not success
+[18:22:12][Info] not success
+[18:22:15][Info] not success
+[18:22:17][Info] not success
+[18:22:19][Info] not success
+[18:22:20][Info] [OP] MapRevealer: Stop requested
+[18:22:20][Info] [OP] MapRevealer: Done!
+[18:22:20][Info] [OP] MapRevealer: Teleported to campfire
+[18:22:21][Info] not success
+[18:22:23][Info] not success
+[18:22:25][Info] not success
+[18:22:27][Info] [ChestExplorer] Recorded Start Pos: 0.18937771022319794, 8.741118431091309, 0.2641369700431824
+[18:22:27][Info] [ChestExplorer] Opening 47 chests
+[18:22:27][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[18:22:27][Info] [ChestExplorer] Targeting: Mossy Chest
+[18:22:27][Info] [ChestExplorer] Opening...
+[18:22:27][Info] [ChestExplorer] Teleporting to: 508.09246826171875, 18.590606689453125, 748.854248046875
+[18:22:27][Info] Fairy
+[18:22:27][Info] Entered biome Fairy
+[18:22:28][Info] not success
+[18:22:28][Info] anti-fling
+[18:22:28][Info] anti-fling
+[18:22:28][Info] anti-fling
+[18:22:28][Info] anti-fling
+[18:22:28][Info] [ChestExplorer] Opening...
+[18:22:28][Info] [ChestExplorer] Teleporting to: -429.69775390625, -634.25, 288.6150817871094
+[18:22:28][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:28][Info] Entered biome Cave
+[18:22:28][Info] Cave
+[18:22:29][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:29][Info] [ChestExplorer] Opening...
+[18:22:29][Info] [ChestExplorer] Teleporting to: -284.2263488769531, -602.1499633789062, -33.230587005615234
+[18:22:30][Info] [ChestExplorer] Teleporting to: -385.8625793457031, -635.75, -235.19296264648438
+[18:22:30][Info] [ChestExplorer] Opening...
+[18:22:30][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:31][Info] [ChestExplorer] Targeting: StoneChest2
+[18:22:31][Info] [ChestExplorer] Opening...
+[18:22:31][Info] [ChestExplorer] Teleporting to: 96.72108459472656, -635.25, -344.1043701171875
+[18:22:32][Info] [ChestExplorer] Opening...
+[18:22:32][Info] [ChestExplorer] Teleporting to: 181.7005615234375, -635.9500122070312, 251.9661865234375
+[18:22:32][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:33][Info] [ChestExplorer] Teleporting to: 251.71585083007812, -636.4500122070312, 252.03225708007812
+[18:22:33][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:33][Info] [ChestExplorer] Opening...
+[18:22:34][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:34][Info] [ChestExplorer] Teleporting to: 488.99212646484375, -635.0701293945312, -254.607666015625
+[18:22:34][Info] [ChestExplorer] Opening...
+[18:22:35][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:35][Info] [ChestExplorer] Teleporting to: 461.7750244140625, -637.75, -327.3831787109375
+[18:22:35][Info] [ChestExplorer] Opening...
+[18:22:36][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:36][Info] [ChestExplorer] Teleporting to: -278.62457275390625, -635.75, 537.3390502929688
+[18:22:36][Info] [ChestExplorer] Opening...
+[18:22:37][Info] Script 'Players.nsopnet.PlayerScripts.Client.StrongholdModules.StrongholdCountdownClient', Line 69 - function StrongholdAdded
+[18:22:37][Warning] Infinite yield possible on 'Workspace.Map.Landmarks.Stronghold.Functional:WaitForChild("Sign")'
+[18:22:37][Info] Stack Begin
+[18:22:37][Info] Stack End
+[18:22:37][Info] [ChestExplorer] Teleporting to: 100.35875701904297, -634.6500244140625, -154.6986846923828
+[18:22:37][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:37][Info] [ChestExplorer] Opening...
+[18:22:39][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:39][Info] [ChestExplorer] Opening...
+[18:22:39][Info] [ChestExplorer] Teleporting to: 287.45367431640625, -636.0701293945312, 192.23281860351562
+[18:22:39][Info] Arrow nil
+[18:22:39][Info] Arrow nil
+[18:22:40][Info] [ChestExplorer] Targeting: Item Chest5
+[18:22:40][Info] [ChestExplorer] Teleporting to: -305.7953186035156, -633.75, 275.5201110839844
+[18:22:40][Info] [ChestExplorer] Opening...
+[18:22:41][Info] [ChestExplorer] Opening...
+[18:22:41][Info] [ChestExplorer] Targeting: Item Chest5
+[18:22:41][Info] [ChestExplorer] Teleporting to: -376.8129577636719, -635.75, -223.93772888183594
+[18:22:42][Info] [ChestExplorer] Teleporting to: -601.1194458007812, 8.208568572998047, -349.6182556152344
+[18:22:42][Info] [ChestExplorer] Opening...
+[18:22:42][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[18:22:42][Info] [OP] GodMode: STARTED
+[18:22:42][Info] Volcanic
+[18:22:42][Info] Entered biome Volcanic
+[18:22:43][Info] [ChestExplorer] Opening...
+[18:22:43][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:43][Info] [ChestExplorer] Teleporting to: 137.5085906982422, -623.75, -165.1359100341797
+[18:22:43][Info] Entered biome Cave
+[18:22:43][Info] Cave
+[18:22:44][Info] [ChestExplorer] Teleporting to: 294.8858337402344, -634.6500244140625, 238.33209228515625
+[18:22:44][Info] [ChestExplorer] Targeting: StoneChest1
+[18:22:44][Info] [ChestExplorer] Opening...
+[18:22:45][Info] [ChestExplorer] Teleporting to: -81.17240905761719, 7.641206741333008, 215.0609130859375
+[18:22:45][Info] [ChestExplorer] Opening...
+[18:22:45][Info] [ChestExplorer] Targeting: Item Chest
+[18:22:45][Info] Entered biome nil
+[18:22:45][Info] nil
+[18:22:45][Info] not success
+[18:22:46][Info] [ChestExplorer] Targeting: Item Chest
+[18:22:46][Info] [ChestExplorer] Teleporting to: 190.14463806152344, 48.76665496826172, -257.29583740234375
+[18:22:46][Info] [ChestExplorer] Opening...
+[18:22:47][Info] [ChestExplorer] Opening...
+[18:22:47][Info] [ChestExplorer] Teleporting to: 205.8494873046875, 37.13440704345703, -121.67584228515625
+[18:22:47][Info] [ChestExplorer] Targeting: Hardmode Crate
+[18:22:47][Info] not success
+[18:22:48][Info] [ChestExplorer] Targeting: Hardmode Crate
+[18:22:48][Info] [ChestExplorer] Opening...
+[18:22:48][Info] [ChestExplorer] Teleporting to: 205.8494873046875, 37.13440704345703, -112.17584228515625
+[18:22:49][Info] [ChestExplorer] Targeting: Item Chest4
+[18:22:49][Info] [ChestExplorer] Teleporting to: 364.9484558105469, -635.0701293945312, 211.06053161621094
+[18:22:49][Info] [ChestExplorer] Opening...
+[18:22:49][Info] Entered biome Cave
+[18:22:49][Info] Cave
+[18:22:50][Info] [ChestExplorer] Teleporting to: -267.4089050292969, -635.75, 529.4590454101562
+[18:22:50][Info] [ChestExplorer] Opening...
+[18:22:50][Info] [ChestExplorer] Targeting: Item Chest5
+[18:22:51][Info] [ChestExplorer] Targeting: Item Chest4
+[18:22:51][Info] [ChestExplorer] Opening...
+[18:22:51][Info] [ChestExplorer] Teleporting to: -198.8233642578125, -636.25, 485.4839782714844
+[18:22:52][Info] not success
+[18:22:52][Info] [ChestExplorer] Teleporting to: 276.8494873046875, 15.134407043457031, -101.17584228515625
+[18:22:52][Info] [ChestExplorer] Targeting: Hardmode Crate
+[18:22:52][Info] [ChestExplorer] Opening...
+[18:22:52][Info] Entered biome nil
+[18:22:52][Info] nil
+[18:22:54][Info] [ChestExplorer] Targeting: Hardmode Crate
+[18:22:54][Info] [ChestExplorer] Teleporting to: 225.8494873046875, 15.134407043457031, -98.17584228515625
+[18:22:54][Info] [ChestExplorer] Opening...
+[18:22:54][Info] not success
+[18:22:55][Info] [ChestExplorer] Targeting: Item Chest4
+[18:22:55][Info] [ChestExplorer] Teleporting to: -202.25132751464844, -636.25, 569.4806518554688
+[18:22:55][Info] Entered biome Cave
+[18:22:55][Info] Cave
+[18:22:55][Info] [ChestExplorer] Opening...
+[18:22:56][Info] [ChestExplorer] Teleporting to: 355.8023986816406, -635.0701293945312, 233.1765899658203
+[18:22:56][Info] [ChestExplorer] Opening...
+[18:22:56][Info] [ChestExplorer] Targeting: Item Chest4
+[18:22:56][Info] not success
+[18:22:57][Info] [ChestExplorer] Opening...
+[18:22:57][Info] [ChestExplorer] Targeting: Item Chest4
+[18:22:57][Info] [ChestExplorer] Teleporting to: -379.7018127441406, -635.25, -150.0922088623047
+[18:22:58][Info] [ChestExplorer] Targeting: Item Chest5
+[18:22:58][Info] [ChestExplorer] Opening...
+[18:22:58][Info] [ChestExplorer] Teleporting to: -214.13461303710938, -601.931396484375, -48.51469039916992
+[18:22:58][Info] not success
+[18:22:59][Info] [ChestExplorer] Targeting: Item Chest3
+[18:22:59][Info] [ChestExplorer] Teleporting to: 52.261474609375, -635.0701293945312, -51.09098815917969
+[18:22:59][Info] [ChestExplorer] Opening...
+[18:23:00][Info] [ChestExplorer] Targeting: Item Chest5
+[18:23:00][Info] [ChestExplorer] Teleporting to: -395.2304992675781, -633.75, 215.88648986816406
+[18:23:00][Info] [ChestExplorer] Opening...
+[18:23:00][Info] not success
+[18:23:01][Info] [ChestExplorer] Returning to start position...
+[18:23:01][Info] [ChestExplorer] Teleporting to: 0.18937771022319794, 8.741118431091309, 0.2641369700431824
+[18:23:01][Info] nil
+[18:23:01][Info] Entered biome nil
+[18:23:01][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[18:23:01][Info] [ChestExplorer] Stopped/Finished
+[18:23:02][Info] not success
+[18:23:03][Info] [ChestExplorer] Recorded Start Pos: 0.18937771022319794, 8.74381160736084, 0.2641369700431824
+[18:23:03][Info] [ChestExplorer] Opening 35 chests
+[18:23:03][Info] [ChestExplorer] Targeting: Item Chest5
+[18:23:03][Info] [ChestExplorer] Teleporting to: 400.67095947265625, -634.5161743164062, -258.6830749511719
+[18:23:03][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[18:23:03][Info] [ChestExplorer] Opening...
+[18:23:03][Info] Entered biome Cave
+[18:23:03][Info] Cave
+[18:23:04][Info] Arrow nil
+[18:23:04][Info] [ChestExplorer] Teleporting to: 89.50833892822266, -635.25, -116.21812438964844
+[18:23:04][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:04][Info] [ChestExplorer] Opening...
+[18:23:05][Info] Arrow nil
+[18:23:05][Info] not success
+[18:23:05][Info] [ChestExplorer] Teleporting to: 494.5874938964844, -613.4500122070312, -243.89540100097656
+[18:23:05][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:05][Info] [ChestExplorer] Opening...
+[18:23:06][Info] [ChestExplorer] Teleporting to: 287.78607177734375, -636.0701293945312, 173.7238006591797
+[18:23:06][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:06][Info] [ChestExplorer] Opening...
+[18:23:07][Info] not success
+[18:23:07][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:07][Info] [ChestExplorer] Teleporting to: -274.05499267578125, -601.75, -80.20111846923828
+[18:23:07][Info] [ChestExplorer] Opening...
+[18:23:09][Info] [ChestExplorer] Teleporting to: -375.88623046875, -635.25, -189.15341186523438
+[18:23:09][Info] [ChestExplorer] Opening...
+[18:23:09][Info] [ChestExplorer] Targeting: Item Chest5
+[18:23:09][Info] not success
+[18:23:09][Info] Arrow nil
+[18:23:09][Info] Arrow nil
+[18:23:10][Info] [ChestExplorer] Teleporting to: -347.7121276855469, -636.25, -146.62411499023438
+[18:23:10][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:10][Info] [ChestExplorer] Opening...
+[18:23:11][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:11][Info] [ChestExplorer] Opening...
+[18:23:11][Info] Fairy
+[18:23:11][Info] Entered biome Fairy
+[18:23:11][Info] [ChestExplorer] Teleporting to: 600.5087280273438, 8.73272705078125, 751.2022094726562
+[18:23:11][Info] anti-fling
+[18:23:11][Info] not success
+[18:23:12][Info] [ChestExplorer] Targeting: Item Chest
+[18:23:12][Info] [ChestExplorer] Opening...
+[18:23:12][Info] [ChestExplorer] Teleporting to: -315.5794372558594, 6.036019802093506, 179.99737548828125
+[18:23:12][Info] anti-fling
+[18:23:12][Info] anti-fling
+[18:23:12][Info] anti-fling
+[18:23:12][Info] anti-fling
+[18:23:12][Info] anti-fling
+[18:23:12][Info] anti-fling
+[18:23:12][Info] nil
+[18:23:12][Info] Entered biome nil
+[18:23:13][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[18:23:13][Info] [ChestExplorer] Teleporting to: -480.1035461425781, 61.78107833862305, -327.55987548828125
+[18:23:13][Info] [ChestExplorer] Opening...
+[18:23:13][Info] Entered biome Volcanic
+[18:23:13][Info] Volcanic
+[18:23:13][Info] Arrow nil
+[18:23:13][Info] Arrow nil
+[18:23:14][Info] not success
+[18:23:14][Info] [ChestExplorer] Targeting: Item Chest2
+[18:23:14][Info] [ChestExplorer] Opening...
+[18:23:14][Info] [ChestExplorer] Teleporting to: 206.18417358398438, 11.772088050842285, -441.13568115234375
+[18:23:14][Info] Entered biome nil
+[18:23:14][Info] nil
+[18:23:14][Info] Arrow nil
+[18:23:15][Info] [ChestExplorer] Targeting: Item Chest2
+[18:23:15][Info] [ChestExplorer] Teleporting to: -19.135841369628906, 5.763011932373047, -478.8934020996094
+[18:23:15][Info] [ChestExplorer] Opening...
+[18:23:15][Info] [ItemCollector] Started Collection Thread.
+[18:23:15][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:23:16][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[18:23:16][Info] not success
+[18:23:16][Info] [ChestExplorer] Targeting: Item Chest
+[18:23:16][Info] [ChestExplorer] Teleporting to: 76.12832641601562, -11.795278549194336, 374.5616760253906
+[18:23:16][Info] [ChestExplorer] Opening...
+[18:23:16][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:23:17][Info] [ChestExplorer] Targeting: Item Chest2
+[18:23:17][Info] [ChestExplorer] Teleporting to: -183.7243194580078, 22.40142059326172, 387.9984436035156
+[18:23:17][Info] [ChestExplorer] Opening...
+[18:23:18][Info] not success
+[18:23:18][Info] [ChestExplorer] Targeting: Item Chest2
+[18:23:18][Info] [ChestExplorer] Teleporting to: 363.59130859375, 4.953179359436035, 410.46026611328125
+[18:23:18][Info] Fairy
+[18:23:18][Info] Entered biome Fairy
+[18:23:18][Info] [ChestExplorer] Opening...
+[18:23:19][Info] [ChestExplorer] Teleporting to: 294.962646484375, 6.038229465484619, 721.02197265625
+[18:23:19][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:19][Info] [ChestExplorer] Opening...
+[18:23:19][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[18:23:20][Info] [ItemCollector] Retrying item: Log (Attempt 2/3)
+[18:23:20][Info] [ChestExplorer] Opening...
+[18:23:20][Info] [ChestExplorer] Teleporting to: -664.2698974609375, 6.799528121948242, 379.4620056152344
+[18:23:20][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:20][Info] not success
+[18:23:20][Info] Entered biome nil
+[18:23:20][Info] nil
+[18:23:21][Info] [ChestExplorer] Teleporting to: -567.62646484375, -15.89924430847168, 362.5633239746094
+[18:23:21][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:21][Info] [ChestExplorer] Opening...
+[18:23:21][Info] Arrow nil
+[18:23:22][Info] [ChestExplorer] Teleporting to: -676.0819091796875, 6.799528121948242, 367.344970703125
+[18:23:22][Info] [ChestExplorer] Opening...
+[18:23:22][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:23][Info] Arrow nil
+[18:23:23][Info] Arrow nil
+[18:23:23][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:23][Info] [ChestExplorer] Teleporting to: -597.6488037109375, 51.81670379638672, 198.83212280273438
+[18:23:23][Info] [ChestExplorer] Opening...
+[18:23:24][Info] [ChestExplorer] Targeting: Ammo Crate Recipe Tablet
+[18:23:24][Info] [ChestExplorer] Teleporting to: 96.7334213256836, -632.2197875976562, -344.0978698730469
+[18:23:24][Info] [ChestExplorer] Opening...
+[18:23:24][Info] Entered biome Cave
+[18:23:24][Info] Cave
+[18:23:25][Error] Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient:533: invalid argument #1 to 'sub' (string expected, got nil)
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient', Line 533 - function CreateIcon
+    Stack End
+[18:23:25][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:25][Info] [ChestExplorer] Teleporting to: -160.2148895263672, 11.287177085876465, 648.2219848632812
+[18:23:25][Info] nil
+[18:23:25][Info] Entered biome nil
+[18:23:25][Info] [ChestExplorer] Opening...
+[18:23:26][Info] [ItemCollector] Retrying item: Coal (Attempt 2/3)
+[18:23:26][Info] not success
+[18:23:27][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:27][Info] [ChestExplorer] Teleporting to: -435.85272216796875, 11.087759017944336, 607.602783203125
+[18:23:27][Info] [ChestExplorer] Opening...
+[18:23:28][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:28][Info] [ChestExplorer] Teleporting to: -417.9645690917969, 39.13435745239258, 794.9880981445312
+[18:23:28][Info] [ChestExplorer] Opening...
+[18:23:29][Info] [ChestExplorer] Returning to start position...
+[18:23:29][Info] [ChestExplorer] Teleporting to: 0.18937771022319794, 8.74381160736084, 0.2641369700431824
+[18:23:29][Info] not success
+[18:23:29][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[18:23:29][Info] [ChestExplorer] Stopped/Finished
+[18:23:31][Info] not success
+[18:23:33][Info] not success
+[18:23:33][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:23:33][Info] [ItemCollector] Collected 107 items.
+[18:23:35][Info] not success
+[18:23:37][Info] not success
+[18:23:37][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[18:23:37][Info] [ChestExplorer] Recorded Start Pos: 0.19403867423534393, 10.903977394104004, 0.3531942367553711
+[18:23:37][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:37][Info] [ChestExplorer] Opening 19 chests
+[18:23:37][Info] [ChestExplorer] Opening...
+[18:23:37][Info] [ChestExplorer] Teleporting to: -681.6234130859375, 10.357378005981445, 580.6817016601562
+[18:23:38][Info] [ChestExplorer] Teleporting to: -759.1302490234375, 5.363942623138428, 504.9765625
+[18:23:38][Info] [ChestExplorer] Opening...
+[18:23:38][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:39][Info] not success
+[18:23:39][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:39][Info] [ChestExplorer] Teleporting to: -530.7059326171875, 7.802363395690918, 563.4078369140625
+[18:23:39][Info] [ChestExplorer] Opening...
+[18:23:40][Info] [ChestExplorer] Teleporting to: -865.5146484375, 15.249505043029785, 277.9211730957031
+[18:23:40][Info] [ChestExplorer] Targeting: Seed Box
+[18:23:40][Info] [ChestExplorer] Opening...
+[18:23:41][Error] Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient:533: invalid argument #1 to 'sub' (string expected, got nil)
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient', Line 533 - function CreateIcon
+    Stack End
+[18:23:42][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:42][Info] [ChestExplorer] Opening...
+[18:23:42][Info] [ChestExplorer] Teleporting to: -740.7704467773438, 7.535658836364746, 281.90118408203125
+[18:23:42][Info] not success
+[18:23:43][Info] [ChestExplorer] Targeting: Seed Box
+[18:23:43][Info] [ChestExplorer] Teleporting to: -111.47090148925781, 15.912939071655273, 1064.7506103515625
+[18:23:43][Info] [ChestExplorer] Opening...
+[18:23:44][Error] Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient:533: invalid argument #1 to 'sub' (string expected, got nil)
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient', Line 533 - function CreateIcon
+    Stack End
+[18:23:44][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:44][Info] [ChestExplorer] Opening...
+[18:23:44][Info] [ChestExplorer] Teleporting to: -539.997802734375, 9.363985061645508, 916.2797241210938
+[18:23:44][Info] not success
+[18:23:45][Info] [ChestExplorer] Teleporting to: 481.1048889160156, 3.516622543334961, -254.31031799316406
+[18:23:45][Info] [ChestExplorer] Targeting: Item Chest2
+[18:23:45][Info] [ChestExplorer] Opening...
+[18:23:46][Info] add Workspace.Characters.Kiwi
+[18:23:46][Info] [ChestExplorer] Teleporting to: 625.3609619140625, 6.32904052734375, 158.97705078125
+[18:23:46][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:46][Info] [ChestExplorer] Opening...
+[18:23:47][Info] add Workspace.Characters.Kiwi
+[18:23:47][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:47][Info] [ChestExplorer] Teleporting to: -408.5785827636719, 8.934357643127441, 727.6965942382812
+[18:23:47][Info] [ChestExplorer] Opening...
+[18:23:48][Info] not success
+[18:23:48][Info] [ChestExplorer] Teleporting to: -470.12762451171875, 30.534366607666016, 790.1318359375
+[18:23:48][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:48][Info] [ChestExplorer] Opening...
+[18:23:49][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[18:23:49][Info] [ChestExplorer] Opening...
+[18:23:49][Info] [ChestExplorer] Teleporting to: -682.3903198242188, -19.206409454345703, -160.87574768066406
+[18:23:49][Info] Entered biome Volcanic
+[18:23:49][Info] Volcanic
+[18:23:50][Info] [ChestExplorer] Teleporting to: -778.5464477539062, 8.216501235961914, -265.76617431640625
+[18:23:50][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[18:23:50][Info] [ChestExplorer] Opening...
+[18:23:51][Info] not success
+[18:23:51][Info] Arrow nil
+[18:23:51][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:51][Info] [ChestExplorer] Teleporting to: 625.350830078125, 6.780185699462891, -539.0022583007812
+[18:23:51][Info] [ChestExplorer] Opening...
+[18:23:52][Info] BULLET THING ADDED
+[18:23:52][Info] Entered biome nil
+[18:23:52][Info] Found touch zone...
+[18:23:52][Info] nil
+[18:23:52][Info] apply knockback Hellephant table: 0x094fe65d4076f9cf
+[18:23:52][Info] Arrow nil
+[18:23:52][Info] Arrow nil
+[18:23:52][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:52][Info] [ChestExplorer] Opening...
+[18:23:52][Info] [ChestExplorer] Teleporting to: 9.881903648376465, 6.038334369659424, -551.2445678710938
+[18:23:53][Info] [ChestExplorer] Teleporting to: -23.365812301635742, 23.884273529052734, -692.5042114257812
+[18:23:53][Info] [ChestExplorer] Targeting: Item Chest5
+[18:23:53][Info] [ChestExplorer] Opening...
+[18:23:55][Info] [ChestExplorer] Teleporting to: 635.9208374023438, 6.780185699462891, -527.460205078125
+[18:23:55][Info] [ChestExplorer] Targeting: Item Chest3
+[18:23:55][Info] [ChestExplorer] Opening...
+[18:23:55][Info] Arrow nil
+[18:23:56][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[18:23:56][Info] [ChestExplorer] Teleporting to: -599.4955444335938, 59.88326644897461, -192.419189453125
+[18:23:56][Info] [ChestExplorer] Opening...
+[18:23:56][Info] Volcanic
+[18:23:56][Info] Entered biome Volcanic
+[18:23:56][Info] Arrow nil
+[18:23:56][Info] Arrow nil
+[18:23:57][Info] [ChestExplorer] Opening...
+[18:23:57][Info] [ChestExplorer] Targeting: Item Chest4
+[18:23:57][Info] [ChestExplorer] Teleporting to: 312.5059509277344, 42.520042419433594, 1034.669921875
+[18:23:57][Info] not success
+[18:23:57][Info] Fairy
+[18:23:57][Info] Entered biome Fairy
+[18:23:58][Info] [ChestExplorer] Returning to start position...
+[18:23:58][Info] [ChestExplorer] Teleporting to: 0.19403867423534393, 10.903977394104004, 0.3531942367553711
+[18:23:58][Info] Entered biome nil
+[18:23:58][Info] nil
+[18:23:58][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[18:23:58][Info] [ChestExplorer] Stopped/Finished
+[18:23:59][Info] not success
+[18:24:00][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[18:24:00][Info] [ChestExplorer] Targeting: Item Chest4
+[18:24:00][Info] [ChestExplorer] Opening...
+[18:24:00][Info] [ChestExplorer] Opening 10 chests
+[18:24:00][Info] [ChestExplorer] Recorded Start Pos: 0.19403867423534393, 11.703977584838867, 0.3531942367553711
+[18:24:00][Info] [ChestExplorer] Teleporting to: -1077.9725341796875, 10.348721504211426, 351.7337646484375
+[18:24:00][Info] Mackerel true
+[18:24:00][Info] Shark true
+[18:24:00][Info] Lionfish true
+[18:24:00][Info] Clownfish true
+[18:24:00][Info] Salmon true
+[18:24:00][Info] Swordfish true
+[18:24:00][Info] Lava Eel true
+[18:24:01][Info] [ChestExplorer] Targeting: Item Chest5
+[18:24:01][Info] [ChestExplorer] Teleporting to: -956.029052734375, 13.079423904418945, 841.776123046875
+[18:24:01][Info] [ChestExplorer] Opening...
+[18:24:01][Info] not success
+[18:24:02][Info] [ChestExplorer] Targeting: Item Chest5
+[18:24:02][Info] [ChestExplorer] Teleporting to: -340.6837158203125, 17.700218200683594, 1185.66064453125
+[18:24:02][Info] [ChestExplorer] Opening...
+[18:24:03][Info] add Workspace.Characters.Kiwi
+[18:24:03][Info] [ChestExplorer] Teleporting to: -17.339649200439453, 47.77278518676758, 1250.0853271484375
+[18:24:03][Info] [ChestExplorer] Targeting: Item Chest5
+[18:24:03][Info] [ChestExplorer] Opening...
+[18:24:04][Info] [ChestExplorer] Opening...
+[18:24:04][Info] [ChestExplorer] Teleporting to: -22.454465866088867, 42.82091522216797, 1110.47314453125
+[18:24:04][Info] [ChestExplorer] Targeting: Item Chest4
+[18:24:05][Info] [ChestExplorer] Targeting: Item Chest5
+[18:24:05][Info] [ChestExplorer] Teleporting to: -372.49969482421875, 23.600217819213867, 1244.5472412109375
+[18:24:05][Info] [ChestExplorer] Opening...
+[18:24:06][Info] [ChestExplorer] Opening...
+[18:24:06][Info] [ChestExplorer] Teleporting to: 33.23068618774414, 9.630537986755371, -782.4682006835938
+[18:24:06][Info] [ChestExplorer] Targeting: Item Chest3
+[18:24:07][Info] not success
+[18:24:07][Info] [ChestExplorer] Teleporting to: 226.70166015625, 7.354211807250977, -712.1688232421875
+[18:24:07][Info] [ChestExplorer] Targeting: Item Chest4
+[18:24:07][Info] [ChestExplorer] Opening...
+[18:24:09][Info] [ChestExplorer] Targeting: Volcanic Chest2
+[18:24:09][Info] [ChestExplorer] Teleporting to: -1056.7266845703125, 40.03675842285156, -348.98028564453125
+[18:24:09][Info] [ChestExplorer] Opening...
+[18:24:09][Info] Entered biome Volcanic
+[18:24:09][Info] Volcanic
+[18:24:09][Info] [ChestExplorer] Teleporting to: 0.19403867423534393, 11.703977584838867, 0.3531942367553711
+[18:24:09][Info] [ChestExplorer] Returning to start position...
+[18:24:10][Info] nil
+[18:24:10][Info] Entered biome nil
+[18:24:10][Info] not success
+[18:24:10][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[18:24:10][Info] [ChestExplorer] Stopped/Finished
+[18:24:12][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[18:24:12][Info] [ChestExplorer] Recorded Start Pos: 0.19403867423534393, 11.703977584838867, 0.3531942367553711
+[18:24:12][Info] [ChestExplorer] Opening 8 chests
+[18:24:12][Info] [ChestExplorer] Targeting: Volcanic Chest2
+[18:24:12][Info] [ChestExplorer] Teleporting to: -883.994873046875, 73.52555847167969, -157.19798278808594
+[18:24:12][Info] [ChestExplorer] Opening...
+[18:24:12][Info] Entered biome Volcanic
+[18:24:12][Info] Volcanic
+[18:24:12][Info] not success
+[18:24:13][Info] [ChestExplorer] Targeting: Item Chest5
+[18:24:13][Info] [ChestExplorer] Teleporting to: -1165.1351318359375, 37.6894645690918, 338.0345153808594
+[18:24:13][Info] [ChestExplorer] Opening...
+[18:24:13][Info] Entered biome nil
+[18:24:13][Info] nil
+[18:24:14][Info] [ChestExplorer] Targeting: Item Chest5
+[18:24:14][Info] [ChestExplorer] Opening...
+[18:24:14][Info] [ChestExplorer] Teleporting to: -1232.3935546875, 7.489462375640869, 328.17816162109375
+[18:24:15][Info] [ChestExplorer] Teleporting to: 430.6211242675781, 47.47699737548828, -937.6841430664062
+[18:24:15][Info] [ChestExplorer] Opening...
+[18:24:15][Info] [ChestExplorer] Targeting: Item Chest4
+[18:24:15][Info] not success
+[18:24:15][Info] add Workspace.Characters.Kiwi
+[18:24:16][Info] [ChestExplorer] Teleporting to: -248.57884216308594, 7.109133720397949, -881.7022705078125
+[18:24:16][Info] [ChestExplorer] Targeting: Item Chest4
+[18:24:16][Info] [ChestExplorer] Opening...
+[18:24:17][Info] [ChestExplorer] Targeting: Item Chest4
+[18:24:17][Info] [ChestExplorer] Teleporting to: 29.946611404418945, 4.523059844970703, -968.9375
+[18:24:17][Info] [ChestExplorer] Opening...
+[18:24:18][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[18:24:18][Info] [ChestExplorer] Teleporting to: -1241.1705322265625, 66.58184814453125, -367.36712646484375
+[18:24:18][Info] [ChestExplorer] Opening...
+[18:24:18][Info] Entered biome Volcanic
+[18:24:18][Info] Volcanic
+[18:24:19][Info] Arrow nil
+[18:24:19][Info] Arrow nil
+[18:24:19][Info] [ChestExplorer] Teleporting to: -1255.8294677734375, 8.329785346984863, -420.19281005859375
+[18:24:19][Info] [ChestExplorer] Opening...
+[18:24:19][Info] [ChestExplorer] Targeting: Volcanic Chest1
+[18:24:20][Info] [ChestExplorer] Teleporting to: 0.19403867423534393, 11.703977584838867, 0.3531942367553711
+[18:24:20][Info] [ChestExplorer] Returning to start position...
+[18:24:20][Info] Entered biome nil
+[18:24:20][Info] nil
+[18:24:20][Info] not success
+[18:24:20][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[18:24:20][Info] [ChestExplorer] Stopped/Finished
+[18:24:22][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[18:24:22][Info] [ChestExplorer] Recorded Start Pos: 0.19403867423534393, 11.703977584838867, 0.3531942367553711
+[18:24:22][Info] [ChestExplorer] Targeting: Item Chest6
+[18:24:22][Info] [ChestExplorer] Opening 3 chests
+[18:24:22][Info] [ChestExplorer] Teleporting to: 168.10885620117188, 10.925721168518066, -1278.8487548828125
+[18:24:22][Info] [ChestExplorer] Opening...
+[18:24:23][Info] [ChestExplorer] Teleporting to: 664.6323852539062, 9.044281005859375, -1048.353515625
+[18:24:23][Info] [ChestExplorer] Targeting: Seed Box
+[18:24:23][Info] [ChestExplorer] Opening...
+[18:24:24][Error] Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient:533: invalid argument #1 to 'sub' (string expected, got nil)
+    Stack Begin
+    Script 'Players.nsopnet.PlayerScripts.Client.StructureModules.MapDrawClient', Line 533 - function CreateIcon
+    Stack End
+[18:24:24][Info] [ChestExplorer] Teleporting to: 200.78060913085938, 7.133172035217285, -1243.67431640625
+[18:24:24][Info] [ChestExplorer] Targeting: Item Chest5
+[18:24:24][Info] [ChestExplorer] Opening...
+[18:24:25][Info] Arrow nil
+[18:24:25][Error] :292: cannot cancel thread
+    Stack Begin
+    Script 'Script', Line 292 - function Stop
+    Script 'Script', Line 283
+    Stack End
+[18:24:26][Info] [ChestExplorer] Stopped/Finished
+[18:24:26][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[18:24:27][Info] Arrow nil
+[18:24:27][Info] [ChestExplorer] Recorded Start Pos: 200.78060913085938, 6.071213245391846, -1243.67431640625
+[18:24:27][Info] [ChestExplorer] Fly Stabilizer: STARTED
+[18:24:27][Info] [ChestExplorer] Targeting: Item Chest5
+[18:24:27][Info] [ChestExplorer] Opening...
+[18:24:27][Info] [ChestExplorer] Opening 1 chests
+[18:24:27][Info] [ChestExplorer] Teleporting to: 168.7088623046875, 10.925721168518066, -1278.8487548828125
+[18:24:28][Error] :292: cannot cancel thread
+    Stack Begin
+    Script 'Script', Line 292 - function Stop
+    Script 'Script', Line 283
+    Stack End
+[18:24:29][Info] [ChestExplorer] Fly Stabilizer: STOPPED
+[18:24:29][Info] [ChestExplorer] Stopped/Finished
+[18:24:31][Info] not success
+[18:24:33][Info] not success
+[18:24:36][Info] not success
+[18:24:38][Info] not success
+[18:24:40][Info] not success
+[18:24:42][Info] not success
+[18:24:44][Info] not success
+[18:24:46][Info] not success
+[18:24:49][Info] not success
+[18:24:51][Info] not success
+[18:24:53][Info] not success
+[18:24:54][Warning] [FishFarm] Target not on screen, trying water position...
+[18:24:54][Warning] [FishFarm] Water not on screen!
+[18:24:54][Warning] [FishFarm] Target not on screen, trying water position...
+[18:24:54][Warning] [FishFarm] Water not on screen!
+[18:24:55][Warning] [FishFarm] Target not on screen, trying water position...
+[18:24:55][Warning] [FishFarm] Water not on screen!
+[18:24:55][Warning] [FishFarm] Water not on screen!
+[18:24:55][Warning] [FishFarm] Target not on screen, trying water position...
+[18:24:55][Info] not success
+[18:24:55][Info] Cast rod
+[18:24:55][Info] new input type Touch
+[18:24:57][Info] not success
+[18:24:59][Info] not success
+[18:25:00][Info] deactivate and unequip
+[18:25:01][Info] not success
+[18:25:03][Info] not success
+[18:25:06][Info] not success
+[18:25:08][Info] not success
+[18:25:10][Info] not success
+[18:25:12][Info] not success
+[18:25:14][Info] not success
+[18:25:14][Info] Cast rod
+[18:25:16][Info] not success
+[18:25:18][Info] Cast rod
+[18:25:18][Info] not success
+[18:25:21][Info] not success
+[18:25:22][Info] Cast rod
+[18:25:23][Info] not success
+[18:25:25][Info] not success
+[18:25:27][Info] not success
+[18:25:28][Info] Cast rod
+[18:25:29][Info] not success
+[18:25:31][Info] not success
+[18:25:32][Info] function is already waiting :)
+[18:25:32][Info] Cast rod
+[18:25:33][Info] not success
+[18:25:36][Info] not success
+[18:25:36][Info] Cast rod
+[18:25:38][Info] not success
+[18:25:40][Info] not success
+[18:25:40][Info] Cast rod
+[18:25:42][Info] not success
+[18:25:44][Info] Cast rod
+[18:25:44][Info] not success
+[18:25:46][Info] not success
+[18:25:47][Info] Cast rod
+[18:25:48][Info] not success
+[18:25:51][Info] not success
+[18:25:52][Info] Cast rod
+[18:25:53][Info] not success
+[18:25:55][Info] Cast rod
+[18:25:55][Info] not success
+[18:25:57][Info] not success
+[18:25:59][Info] Cast rod
+[18:25:59][Info] not success
+[18:26:01][Info] not success
+[18:26:03][Info] not success
+[18:26:05][Info] not success
+[18:26:07][Info] Cast rod
+[18:26:08][Info] not success
+[18:26:10][Info] not success
+[18:26:11][Info] Cast rod
+[18:26:12][Info] not success
+[18:26:14][Info] not success
+[18:26:15][Info] Cast rod
+[18:26:16][Info] not success
+[18:26:18][Info] not success
+[18:26:19][Info] Cast rod
+[18:26:20][Info] not success
+[18:26:22][Info] not success
+[18:26:23][Info] Cast rod
+[18:26:25][Info] not success
+[18:26:27][Info] not success
+[18:26:29][Info] not success
+[18:26:31][Info] not success
+[18:26:34][Info] not success
+[18:26:36][Info] not success
+[18:26:38][Info] not success
+[18:26:40][Info] not success
+[18:26:42][Info] not success
+[18:26:42][Info] Cast rod
+[18:26:44][Info] not success
+[18:26:46][Info] not success
+[18:26:46][Info] Cast rod
+[18:26:48][Info] not success
+[18:26:51][Info] not success
+[18:26:53][Info] Cast rod
+[18:26:53][Info] not success
+[18:26:55][Info] not success
+[18:26:57][Info] Cast rod
+[18:26:57][Info] not success
+[18:26:59][Info] not success
+[18:27:00][Info] Cast rod
+[18:27:01][Info] not success
+[18:27:03][Info] not success
+[18:27:04][Info] Cast rod
+[18:27:05][Info] not success
+[18:27:08][Info] Cast rod
+[18:27:08][Info] not success
+[18:27:09][Info] add Workspace.Characters.Kiwi
+[18:27:10][Info] not success
+[18:27:12][Info] not success
+[18:27:12][Info] Cast rod
+[18:27:14][Info] not success
+[18:27:16][Info] Cast rod
+[18:27:17][Info] not success
+[18:27:19][Info] not success
+[18:27:20][Info] Cast rod
+[18:27:21][Info] not success
+[18:27:23][Info] not success
+[18:27:24][Info] Cast rod
+[18:27:25][Info] not success
+[18:27:27][Info] not success
+[18:27:28][Info] Cast rod
+[18:27:29][Info] not success
+[18:27:31][Info] add Workspace.Characters.Kiwi
+[18:27:32][Info] not success
+[18:27:32][Info] Cast rod
+[18:27:34][Info] not success
+[18:27:36][Info] Cast rod
+[18:27:36][Info] not success
+[18:27:38][Info] not success
+[18:27:39][Info] Cast rod
+[18:27:40][Info] not success
+[18:27:42][Info] not success
+[18:27:43][Info] Cast rod
+[18:27:45][Info] not success
+[18:27:47][Info] not success
+[18:27:47][Info] Cast rod
+[18:27:49][Info] not success
+[18:27:51][Info] not success
+[18:27:52][Info] Cast rod
+[18:27:53][Info] not success
+[18:27:55][Info] not success
+[18:27:56][Info] Cast rod
+[18:27:57][Info] not success
+[18:27:59][Info] Cast rod
+[18:28:00][Info] not success
+[18:28:00][Info] collision with land
+[18:28:02][Info] not success
+[18:28:04][Info] not success
+[18:28:06][Info] not success
+[18:28:08][Info] not success
+[18:28:08][Info] Cast rod
+[18:28:09][Info] collision with land
+[18:28:10][Info] not success
+[18:28:12][Info] not success
+[18:28:15][Info] not success
+[18:28:17][Info] Cast rod
+[18:28:17][Info] not success
+[18:28:19][Info] not success
+[18:28:21][Info] not success
+[18:28:22][Info] Cast rod
+[18:28:23][Info] not success
+[18:28:25][Info] not success
+[18:28:27][Info] Cast rod
+[18:28:27][Info] not success
+[18:28:29][Info] not success
+[18:28:32][Info] not success
+[18:28:33][Info] Cast rod
+[18:28:34][Info] not success
+[18:28:36][Info] not success
+[18:28:37][Info] Cast rod
+[18:28:38][Info] not success
+[18:28:40][Info] not success
+[18:28:42][Info] not success
+[18:28:43][Info] Cast rod
+[18:28:45][Info] not success
+[18:28:47][Info] not success
+[18:28:48][Info] Cast rod
+[18:28:49][Info] not success
+[18:28:51][Info] not success
+[18:28:53][Info] not success
+[18:28:55][Info] not success
+[18:28:57][Info] not success
+[18:29:00][Info] not success
+[18:29:00][Info] Cast rod
+[18:29:02][Info] not success
+[18:29:03][Info] Cast rod
+[18:29:04][Info] not success
+[18:29:06][Info] not success
+[18:29:08][Info] not success
+[18:29:09][Info] Cast rod
+[18:29:10][Info] not success
+[18:29:12][Info] not success
+[18:29:12][Info] Cast rod
+[18:29:14][Info] not success
+[18:29:17][Info] not success
+[18:29:17][Info] Cast rod
+[18:29:19][Info] not success
+[18:29:21][Info] not success
+[18:29:21][Info] Cast rod
+[18:29:23][Info] not success
+[18:29:25][Info] not success
+[18:29:25][Info] Cast rod
+[18:29:27][Info] not success
+[18:29:29][Info] not success
+[18:29:31][Info] Cast rod
+[18:29:32][Info] not success
+[18:29:34][Info] not success
+[18:29:36][Info] not success
+[18:29:37][Info] Cast rod
+[18:29:38][Info] not success
+[18:29:40][Info] not success
+[18:29:42][Info] got Jellyfish
+[18:29:42][Info] Workspace.Map.Landmarks.Fishing Hut.FishPoster.Sign.SurfaceGui.FishHolder.Jellyfish
+[18:29:42][Info] not success
+[18:29:43][Info] Cast rod
+[18:29:44][Info] not success
+[18:29:47][Info] not success
+[18:29:49][Info] not success
+[18:29:50][Info] Cast rod
+[18:29:51][Info] not success
+[18:29:53][Info] not success
+[18:29:55][Info] not success
+[18:29:56][Info] Cast rod
+[18:29:57][Info] not success
+[18:29:59][Info] not success
+[18:30:02][Info] not success
+[18:30:03][Info] Cast rod
+[18:30:04][Info] not success
+[18:30:06][Info] not success
+[18:30:08][Info] not success
+[18:30:09][Info] Cast rod
+[18:30:10][Info] not success
+[18:30:12][Info] not success
+[18:30:14][Info] not success
+[18:30:15][Info] Cast rod
+[18:30:16][Info] collision with land
+[18:30:16][Info] not success
+[18:30:18][Info] Cast rod
+[18:30:19][Info] not success
+[18:30:21][Info] not success
+[18:30:23][Info] not success
+[18:30:24][Info] Cast rod
+[18:30:25][Info] not success
+[18:30:27][Info] not success
+[18:30:29][Info] Cast rod
+[18:30:29][Info] not success
+[18:30:31][Info] Cast rod
+[18:30:31][Info] not success
+[18:30:33][Info] not success
+[18:30:36][Info] not success
+[18:30:38][Info] Cast rod
+[18:30:38][Info] not success
+[18:30:40][Info] not success
+[18:30:42][Info] not success
+[18:30:44][Info] Cast rod
+[18:30:44][Info] not success
+[18:30:46][Info] not success
+[18:30:49][Info] not success
+[18:30:50][Info] Cast rod
+[18:30:51][Info] not success
+[18:30:53][Info] not success
+[18:30:55][Info] not success
+[18:30:57][Info] Cast rod
+[18:30:57][Info] not success
+[18:30:59][Info] not success
+[18:31:01][Info] not success
+[18:31:03][Info] Cast rod
+[18:31:04][Info] not success
+[18:31:06][Info] not success
+[18:31:08][Info] not success
+[18:31:10][Info] not success
+[18:31:12][Info] not success
+[18:31:12][Info] Cast rod
+[18:31:14][Info] not success
+[18:31:16][Info] not success
+[18:31:18][Info] not success
+[18:31:21][Info] not success
+[18:31:23][Info] not success
+[18:31:25][Info] not success
+[18:31:26][Info] Cast rod
+[18:31:27][Info] not success
+[18:31:29][Info] not success
+[18:31:29][Info] Cast rod
+[18:31:31][Info] not success
+[18:31:33][Info] not success
+[18:31:34][Info] Cast rod
+[18:31:36][Info] not success
+[18:31:38][Info] not success
+[18:31:38][Info] Cast rod
+[18:31:40][Info] not success
+[18:31:42][Info] not success
+[18:31:44][Info] not success
+[18:31:46][Info] Cast rod
+[18:31:46][Info] not success
+[18:31:48][Info] not success
+[18:31:49][Info] add Workspace.Characters.Kiwi
+[18:31:50][Info] Cast rod
+[18:31:51][Info] not success
+[18:31:53][Info] not success
+[18:31:54][Info] Cast rod
+[18:31:55][Info] not success
+[18:31:57][Info] not success
+[18:31:59][Info] not success
+[18:32:00][Info] Cast rod
+[18:32:01][Info] collision with land
+[18:32:01][Info] not success
+[18:32:04][Info] not success
+[18:32:06][Info] not success
+[18:32:08][Info] not success
+[18:32:10][Info] not success
+[18:32:12][Info] not success
+[18:32:14][Info] not success
+[18:32:16][Info] not success
+[18:32:18][Info] not success
+[18:32:21][Info] not success
+[18:32:23][Info] not success
+[18:32:25][Info] not success
+[18:32:25][Info] Cast rod
+[18:32:26][Info] collision with land
+[18:32:27][Info] not success
+[18:32:29][Info] not success
+[18:32:31][Info] not success
+[18:32:33][Info] Cast rod
+[18:32:33][Info] not success
+[18:32:35][Info] not success
+[18:32:37][Info] not success
+[18:32:40][Info] not success
+[18:32:42][Info] not success
+[18:32:42][Info] Cast rod
+[18:32:43][Info] collision with land
+[18:32:44][Info] not success
+[18:32:44][Info] Cast rod
+[18:32:46][Info] not success
+[18:32:48][Info] Cast rod
+[18:32:48][Info] not success
+[18:32:49][Info] collision with land
+[18:32:50][Info] not success
+[18:32:50][Info] Cast rod
+[18:32:52][Info] not success
+[18:32:54][Info] Cast rod
+[18:32:55][Info] not success
+[18:32:57][Info] not success
+[18:32:58][Info] Cast rod
+[18:32:59][Info] not success
+[18:33:01][Info] not success
+[18:33:03][Info] not success
+[18:33:05][Info] Cast rod
+[18:33:05][Info] not success
+[18:33:07][Info] not success
+[18:33:10][Info] not success
+[18:33:11][Info] Cast rod
+[18:33:12][Info] not success
+[18:33:14][Info] not success
+[18:33:16][Info] not success
+[18:33:17][Info] Cast rod
+[18:33:18][Info] not success
+[18:33:20][Info] not success
+[18:33:22][Info] not success
+[18:33:23][Info] Cast rod
+[18:33:24][Info] not success
+[18:33:27][Info] not success
+[18:33:29][Info] not success
+[18:33:29][Info] Cast rod
+[18:33:31][Info] not success
+[18:33:33][Info] not success
+[18:33:36][Info] not success
+[18:33:38][Info] not success
+[18:33:40][Info] not success
+[18:33:42][Info] not success
+[18:33:44][Info] not success
+[18:33:46][Info] Cast rod
+[18:33:47][Info] not success
+[18:33:49][Info] not success
+[18:33:51][Info] Cast rod
+[18:33:51][Info] not success
+[18:33:53][Info] not success
+[18:33:54][Info] Cast rod
+[18:33:55][Info] not success
+[18:33:57][Info] not success
+[18:33:59][Info] not success
+[18:34:00][Info] Cast rod
+[18:34:01][Info] not success
+[18:34:03][Info] not success
+[18:34:06][Info] not success
+[18:34:08][Info] not success
+[18:34:09][Info] Cast rod
+[18:34:10][Info] not success
+[18:34:12][Info] not success
+[18:34:14][Info] not success
+[18:34:14][Info] Cast rod
+[18:34:16][Info] not success
+[18:34:19][Info] not success
+[18:34:21][Info] not success
