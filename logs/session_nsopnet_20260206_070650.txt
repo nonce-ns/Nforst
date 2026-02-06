@@ -1,0 +1,27 @@
+=== WindUI Log Session ===
+Started: 2026-02-06 07:06:50
+User: nsopnet (ID: 8401342884)
+========================================
+
+[22:06:51][Info] Loader: Fetching MainInterface...
+[22:06:53][Info] [OP] Loading modules...
+[22:06:53][Info] [MainInterface] Speed module loaded table: table: 0xa6cf1c6798883b67
+[22:06:54][Info] [OP] Modules loaded!
+[22:06:54][Info] [OP] Initializing 99 Nights OP Script...
+[22:06:54][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[22:06:54][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[22:06:54][Info] [OP] KillTarget: Initialized
+[22:06:54][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[22:06:54][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[22:06:54][Info] [Fly] Initialized
+[22:06:54][Info] [Teleport] Initialized
+[22:06:54][Info] [Speed] Initialized
+[22:06:54][Info] [PhysicsOptimizer] Initialized
+[22:06:54][Info] [Tools] Initialized
+[22:06:54][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[22:06:54][Info] [FishFarm] Initialized
+[22:06:54][Info] [OP] Window created. Type: table
+[22:06:57][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[22:06:57][Info] [OP] UI Created! Ready to use.
+[22:06:57][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[22:06:57][Info] [ItemCollector UI] Selection updated manually. Count: 0

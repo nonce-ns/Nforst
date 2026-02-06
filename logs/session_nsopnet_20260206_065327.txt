@@ -1,0 +1,87 @@
+=== WindUI Log Session ===
+Started: 2026-02-06 06:53:27
+User: nsopnet (ID: 8401342884)
+========================================
+
+[21:53:28][Info] Loader: Fetching MainInterface...
+[21:53:30][Info] [OP] Loading modules...
+[21:53:30][Info] [MainInterface] Speed module loaded table: table: 0x90e87afd4a2dbb1c
+[21:53:31][Info] [OP] Modules loaded!
+[21:53:31][Info] [OP] Initializing 99 Nights OP Script...
+[21:53:31][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[21:53:31][Info] [OP] KillTarget: Initialized
+[21:53:31][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[21:53:31][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[21:53:31][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[21:53:31][Info] [Fly] Initialized
+[21:53:31][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[21:53:31][Info] [Speed] Initialized
+[21:53:31][Info] [Teleport] Initialized
+[21:53:31][Info] [PhysicsOptimizer] Initialized
+[21:53:31][Info] [Tools] Initialized
+[21:53:31][Info] [OP] Window created. Type: table
+[21:53:34][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[21:53:34][Info] [OP] UI Created! Ready to use.
+[21:53:34][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[21:53:34][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[21:54:00][Info] [ItemCollector] Selected: Cultist
+[21:54:00][Info] [ItemCollector] Selected: Chair
+[21:54:00][Info] [ItemCollector] Selected: Coal
+[21:54:00][Info] [ItemCollector] Selected: Oil Barrel
+[21:54:00][Info] [ItemCollector] Selected: Fuel Canister
+[21:54:01][Info] [Remote][Success] RemoteEvents found: 201 remotes
+[21:54:01][Info] [ItemCollector] Started Collection Thread.
+[21:54:02][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[21:54:02][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[21:54:03][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[21:54:03][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[21:54:04][Info] deactivate and unequip
+[21:54:04][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[21:54:04][Info] [ItemCollector] Collected 19 items.
+[21:54:07][Info] [ItemCollector] Started Collection Thread.
+[21:54:07][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[21:54:07][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[21:54:08][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[21:54:08][Warning] [ItemCollector] No matching items found in map!
+[21:54:08][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[21:54:08][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[21:54:52][Info] Cast rod
+[21:54:52][Info] new input type Touch
+[21:54:56][Info] Cast rod
+[21:55:00][Info] Cast rod
+[21:55:04][Info] Cast rod
+[21:55:08][Info] Cast rod
+[21:55:11][Info] Cast rod
+[21:55:14][Error] GetPivot is not a valid member of Folder "Workspace.Map.Landmarks.Water Hole.FishingZone"
+    Stack Begin
+    Script 'Script', Line 233 - function getNearestZoneCenter
+    Script 'Script', Line 561 - function doCast
+    Script 'Script', Line 963
+    Stack End
+[21:56:58][Info] [OP] Cleanup: FishFarm
+[21:56:58][Info] [ChestExplorer] Cleaned up resources
+[21:56:58][Info] [OP] Cleanup: ChestExplorer
+[21:56:58][Info] [OP] Cleanup: ItemCollector
+[21:56:58][Info] [ChestExplorer] Stopped/Finished
+[21:56:58][Info] [OP] MapRevealer: Cleanup complete
+[21:56:58][Info] [OP] Cleanup: MapRevealer
+[21:56:58][Info] [OP] Cleanup: Tools
+[21:56:58][Info] [PhysicsOptimizer] Storage box destroyed
+[21:56:58][Info] [Tools] Cleanup complete
+[21:56:58][Info] [OP] Cleanup: PhysicsOptimizer
+[21:56:58][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[21:56:58][Info] [OP] Cleanup: TreeFarm
+[21:56:58][Info] [OP] Cleanup: AutoPlant
+[21:56:58][Info] [OP] Script unloaded successfully! All features stopped.
+[21:56:58][Info] [OP] Cleanup: Speed
+[21:56:58][Info] [OP] Cleanup: SoundManager
+[21:56:58][Info] [OP] Cleanup: KillAura
+[21:56:58][Info] [OP] Cleanup: AutoEat
+[21:56:58][Info] [OP] SoundManager: Cleanup complete
+[21:56:58][Info] [OP] AutoEat: STOPPED
+[21:56:58][Info] [OP] GodMode: STOPPED
+[21:56:58][Info] [OP] Cleanup: KillTarget
+[21:56:58][Info] [OP] Cleanup: GodMode
+[21:56:58][Info] [OP] Cleanup: Fly
+[21:57:02][Info] Cast rod
+[21:57:03][Info] deactivate and unequip

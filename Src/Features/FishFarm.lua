@@ -29,7 +29,7 @@ local CLICK_COOLDOWN = 0.2
 local CAST_COOLDOWN = 0.7  -- Faster cooldown for aggressive retries
 
 -- Debug
-local DEBUG = false -- Production Ready
+local DEBUG = true -- DEBUG MODE ON
 local function log(msg)
     if DEBUG then print("[FishFarm] " .. msg) end
 end
@@ -40,6 +40,7 @@ end
 -- State
 local State = {
     Enabled = false,
+    IsStarting = false, -- Fix #2: Race condition prevention
     FishingThread = nil,
     MinigameConnection = nil,
     FishCount = 0,
@@ -60,9 +61,19 @@ local State = {
     ActiveHotspot = nil, -- Cache for active hotspot
 }
 
+-- Fix #10: Reset state on character death/respawn
+LocalPlayer.CharacterAdded:Connect(function(character)
+    if State.Anchored then
+        State.Anchored = false
+    end
+    State.CurrentBobber = nil
+    State.BobberName = nil
+    log("Character respawned, state reset")
+end)
+
 -- Settings
 local Settings = {
-    FishDelay = 20,
+    FishDelay = 20, -- Default: 20s before timeout recast
     AutoClick = true,
     ExpandZone = true,
     AutoHotspot = false, -- New Setting
@@ -217,15 +228,29 @@ local function getNearestZoneCenter()
     for _, landmark in ipairs(landmarks:GetChildren()) do
         local zone = landmark:FindFirstChild("FishingZone")
         if zone then
-            -- FishingZone is usually a Model/Folder with parts
-            -- We want the geometric center. Finding main part or calculating bounds.
-            local pivot = zone:GetPivot().Position
-            local dist = (pivot - root.Position).Magnitude
+            -- FishingZone can be Model, Folder, or Part - handle all cases
+            local zonePos = nil
             
-            if dist < bestDist and dist <= WATER_RANGE * 1.5 then
-                bestDist = dist
-                bestZone = zone
-                centerPos = pivot
+            if zone:IsA("BasePart") then
+                zonePos = zone.Position
+            elseif zone:IsA("Model") then
+                zonePos = zone:GetPivot().Position
+            else
+                -- Folder or other: Find first BasePart child
+                local firstPart = zone:FindFirstChildWhichIsA("BasePart", true)
+                if firstPart then
+                    zonePos = firstPart.Position
+                end
+            end
+            
+            if zonePos then
+                local dist = (zonePos - root.Position).Magnitude
+                
+                if dist < bestDist and dist <= WATER_RANGE * 1.5 then
+                    bestDist = dist
+                    bestZone = zone
+                    centerPos = zonePos
+                end
             end
         end
     end
@@ -612,7 +637,15 @@ end
 -- ============================================
 -- CLEANUP
 -- ============================================
+
+-- Fix #3: Helper to destroy visualizer
+local function destroyVisualizer()
+    local viz = Workspace:FindFirstChild("FishFarmViz")
+    if viz then viz:Destroy() end
+end
+
 local function fullCleanup()
+    destroyVisualizer() -- Fix #3: Cleanup red viz ball
     stopMinigameWatcher()
     
     if State.FishingThread then
@@ -623,6 +656,7 @@ local function fullCleanup()
     local count = State.FishCount
     
     State.Enabled = false
+    State.IsStarting = false -- Fix #2: Reset race condition flag
     State.FishCount = 0
     State.LastClickTime = 0
     State.LastCastTime = 0
@@ -630,7 +664,12 @@ local function fullCleanup()
     State.ZoneExpanded = false
     State.ClickCount = 0
     State.WaitingForMinigame = false
-    State.ActiveHotspot = nil -- Fix: Clear reference to prevent memory leaks
+    State.ActiveHotspot = nil
+    -- Fix #5 & #9: Complete state reset
+    State.BobberName = nil
+    State.CurrentBobber = nil
+    State.LastWaterPos = nil
+    State.CastStartTime = 0
     
     log("Cleanup (fish: " .. count .. ")")
 end
@@ -695,7 +734,24 @@ end
 local function setAnchored(shouldAnchor)
     State.Anchored = shouldAnchor
     local root = getRoot()
-    if root then root.Anchored = shouldAnchor end
+    
+    -- Fix #11: Use BodyPosition instead of direct HRP anchor (safer, less detectable)
+    if root then
+        local existingBP = root:FindFirstChild("FishFarmAnchor")
+        if shouldAnchor then
+            if not existingBP then
+                local bp = Instance.new("BodyPosition")
+                bp.Name = "FishFarmAnchor"
+                bp.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+                bp.Position = root.Position
+                bp.Parent = root
+            else
+                existingBP.Position = root.Position
+            end
+        else
+            if existingBP then existingBP:Destroy() end
+        end
+    end
     
     if State.AnchorGui then
         local btn = State.AnchorGui:FindFirstChild("AnchorButton")
@@ -716,11 +772,14 @@ local function setAnchored(shouldAnchor)
 end
 
 local function destroyAnchorGui()
-    -- Unanchor player first
+    -- Unanchor player first (using BodyPosition cleanup)
     if State.Anchored then
         State.Anchored = false
         local root = getRoot()
-        if root then root.Anchored = false end
+        if root then
+            local bp = root:FindFirstChild("FishFarmAnchor")
+            if bp then bp:Destroy() end
+        end
     end
     
     if State.AnchorGui then
@@ -738,7 +797,9 @@ function FishFarm.Init(deps)
 end
 
 function FishFarm.Start()
-    if State.Enabled then return end
+    -- Fix #2: Check both flags to prevent race condition
+    if State.Enabled or State.IsStarting then return end
+    State.IsStarting = true
     
     log("═══════════════════════════")
     log("      FISH FARM START      ")
@@ -747,6 +808,7 @@ function FishFarm.Start()
     
     fullCleanup()
     State.Enabled = true
+    State.IsStarting = false -- Transition complete
     
     createAnchorGui()
     startMinigameWatcher()
@@ -785,12 +847,17 @@ function FishFarm.Start()
             
             local water = getNearestWater()
             if not water then
-                local now = os.clock()
-                if now - noWaterWarn >= 30 then
-                    noWaterWarn = now
-                    log("⏳ Go near water...")
+                -- FIX: Skip water check if AutoHotspot needs to teleport first
+                local needsTeleport = Settings.AutoHotspot and not State.ActiveHotspot
+                if not needsTeleport then
+                    local now = os.clock()
+                    if now - noWaterWarn >= 30 then
+                        noWaterWarn = now
+                        log("⏳ Go near water...")
+                    end
+                    continue
                 end
-                continue
+                -- Allow loop to continue to AutoHotspot logic
             end
             
             -- 3. Minigame Active? (Just wait)
@@ -841,10 +908,20 @@ function FishFarm.Start()
                         -- Teleport Logic
                         local root = getRoot()
                         if root then
+                            -- Fix #1: Handle both Part and Model safely
+                            local hotspotCFrame, hotspotPos
+                            if targetHotspot:IsA("BasePart") then
+                                hotspotCFrame = targetHotspot.CFrame
+                                hotspotPos = targetHotspot.Position
+                            else
+                                hotspotCFrame = targetHotspot:GetPivot()
+                                hotspotPos = hotspotCFrame.Position
+                            end
+                            
                             -- Teleport slightly above and away to avoid falling in
-                            local targetCFrame = targetHotspot.CFrame * CFrame.new(0, 5, 8)
+                            local targetCFrame = hotspotCFrame * CFrame.new(0, 5, 8)
                             -- Look at hotspot
-                            targetCFrame = CFrame.lookAt(targetCFrame.Position, targetHotspot.Position)
+                            targetCFrame = CFrame.lookAt(targetCFrame.Position, hotspotPos)
                             
                             root.CFrame = targetCFrame
                             State.ActiveHotspot = targetHotspot
@@ -915,14 +992,19 @@ function FishFarm.Start()
 end
 
 function FishFarm.Stop()
-    if not State.Enabled then return end
+    -- Fix #2: Check both flags to prevent race condition
+    if not State.Enabled and not State.IsStarting then return end
+    State.IsStarting = false
     
     log("═══════════════════════════")
     log("      FISH FARM STOP       ")
     log("═══════════════════════════")
     
     destroyAnchorGui()
-    pcall(function() Remote.EndCatching() end)
+    -- Fix #8: Explicit nil check before calling Remote
+    if Remote and Remote.EndCatching then
+        pcall(function() Remote.EndCatching() end)
+    end
     fullCleanup()
 end
 
@@ -938,7 +1020,7 @@ function FishFarm.UpdateSetting(key, value)
     log("Setting: " .. key .. " = " .. tostring(value))
     
     if key == "FishDelay" then
-        Settings.FishDelay = value or 15
+        Settings.FishDelay = value or 25
     elseif key == "AutoClick" then
         Settings.AutoClick = value
     elseif key == "ExpandZone" then

@@ -266,9 +266,9 @@ function FarmingTab.Create(Window, Features, CONFIG)
     FishSection:Slider({
         Flag = "FishFarm.FishDelay",
         Title = "Fish Delay",
-        Desc = "Delay before confirm catch (seconds)",
+        Desc = "Max wait time before recast (seconds)",
         Step = 0.5,
-        Value = { Min = 1, Max = 10, Default = 5 },
+        Value = { Min = 3, Max = 30, Default = 20 },
         Callback = function(value)
             if Features.FishFarm then
                 Features.FishFarm.UpdateSetting("FishDelay", value)
