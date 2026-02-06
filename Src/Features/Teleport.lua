@@ -53,6 +53,10 @@ local CONFIG = {
             Name = "Fairy Tree", 
             Path = "Map.Landmarks.Fairy Tree.Sign",
         },
+        { 
+            Name = "Rod Bench", 
+            Path = "Map.Landmarks.SkillsBuilding.RodBench",
+        },
     },
 }
 

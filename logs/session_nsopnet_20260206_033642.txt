@@ -1,0 +1,58 @@
+=== WindUI Log Session ===
+Started: 2026-02-06 03:36:42
+User: nsopnet (ID: 8401342884)
+========================================
+
+[18:36:43][Info] Loader: Fetching MainInterface...
+[18:36:45][Info] [OP] Loading modules...
+[18:36:46][Info] [MainInterface] Speed module loaded table: table: 0x3199af31e2919480
+[18:36:46][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:36:46][Info] [OP] Modules loaded!
+[18:36:46][Info] [OP] KillTarget: Initialized
+[18:36:46][Info] [OP] Initializing 99 Nights OP Script...
+[18:36:46][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:36:46][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[18:36:46][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:36:46][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:36:46][Info] [Fly] Initialized
+[18:36:46][Info] [Speed] Initialized
+[18:36:46][Info] [PhysicsOptimizer] Initialized
+[18:36:46][Info] [Teleport] Initialized
+[18:36:46][Info] [Tools] Initialized
+[18:36:46][Info] [OP] Window created. Type: table
+[18:36:50][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:36:50][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:36:50][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[18:36:50][Info] [OP] UI Created! Ready to use.
+[18:37:08][Warning] [OP] ItemCollector: No items selected!
+[18:37:15][Info] [ItemCollector] Selected: Coal
+[18:37:15][Info] [ItemCollector] Selected: Fuel Canister
+[18:37:15][Info] [ItemCollector] Selected: Chair
+[18:37:15][Info] [ItemCollector] Selected: Log
+[18:37:16][Info] [ItemCollector] Started Collection Thread.
+[18:37:16][Info] [Remote][Success] RemoteEvents found: 197 remotes
+[18:37:18][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:37:20][Info] [ItemCollector] Collected 30 items.
+[18:37:20][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:37:24][Info] [ItemCollector] Started Collection Thread.
+[18:37:24][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:37:24][Warning] [ItemCollector] No matching items found in map!
+[18:37:24][Warning] [ItemCollector] Failed to collect: Fuel Canister after 3 attempts.
+[18:37:42][Info] [Speed] Enabled: 40 (Restore: 16)
+[18:37:42][Info] [Speed] Disabled
+[18:37:44][Info] [Fly] Enabled
+[18:37:55][Info] add Workspace.Characters.Kiwi
+[18:38:02][Info] Shark true
+[18:38:02][Info] Salmon true
+[18:38:02][Info] Jellyfish true
+[18:38:02][Info] Clownfish true
+[18:38:02][Info] Lionfish true
+[18:38:02][Info] Mackerel true
+[18:38:02][Info] Swordfish true
+[18:38:02][Info] Lava Eel true
+[18:38:15][Info] add Workspace.Characters.Kiwi
+[18:39:08][Error] :14612: Only HTTP/HTTPS protocols are allowed
+    Stack Begin
+    Script 'Script', Line 14612 - function close
+    Script 'Script', Line 14983
+    Stack End
