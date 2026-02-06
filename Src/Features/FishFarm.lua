@@ -29,7 +29,7 @@ local CLICK_COOLDOWN = 0.2
 local CAST_COOLDOWN = 1  -- Faster recast after catching
 
 -- Debug
-local DEBUG = true
+local DEBUG = false -- Production Ready
 local function log(msg)
     if DEBUG then print("[FishFarm] " .. msg) end
 end

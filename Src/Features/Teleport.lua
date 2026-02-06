@@ -38,6 +38,18 @@ local CONFIG = {
             Path = "Map.Landmarks.ToolWorkshop",
         },
         { 
+            Name = "Fishing Hut", 
+            Path = "Map.Landmarks.Fishing Hut.FishPoster",
+        },
+        { 
+            Name = "Volcano", 
+            Path = "Map.Landmarks.Volcano.Functional.Sacrifice.Altar.Platform",
+        },
+        { 
+            Name = "Kings Palace", 
+            Path = "Map.Landmarks.Kings Palace.Functional.Coffin.Main",
+        },
+        { 
             Name = "Fairy Tree", 
             Path = "Map.Landmarks.Fairy Tree.Sign",
         },
@@ -90,16 +102,9 @@ local function findLandmarkByName(landmarkName)
 end
 
 function Teleport.ScanChildren(doPreload)
-    -- Pre-load known locations if requested (Bypasses StreamingEnabled)
+    -- Preload removed as StaticTargets is not defined
     if doPreload then
-        local player = Players.LocalPlayer
-        for i, pos in ipairs(CONFIG.StaticTargets) do -- Use StaticTargets for preload
-            pcall(function()
-                player:RequestStreamAroundAsync(pos.Position) -- Access Position field
-            end)
-            task.wait(0.1)
-        end
-        task.wait(1)
+        task.wait(0.1)
     end
 
     local found = {}
