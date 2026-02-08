@@ -1,0 +1,107 @@
+=== WindUI Log Session ===
+Started: 2026-02-08 15:57:38
+User: nsopnet (ID: 8401342884)
+========================================
+
+[15:57:38][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:38][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:38][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:38][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:38][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:38][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:38][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:38][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:38][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:38][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:38][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:38][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:38][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:38][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:38][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:38][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:38][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:38][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:38][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:38][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:38][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:38][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:38][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:38][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:39][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:39][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:39][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:39][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:39][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:39][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:39][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:39][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:39][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:39][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:39][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:39][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:39][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:39][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:39][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:39][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:39][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:39][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:39][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:39][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:39][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:39][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:39][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:39][Info] deactivate and unequip
+[15:57:43][Info] Loader: Fetching MainInterface...
+[15:57:45][Info] [ChestExplorer] Cleaned up resources
+[15:57:45][Info] [ChestExplorer] Stopped/Finished
+[15:57:45][Info] [ChestExplorer] Stopped/Finished
+[15:57:46][Info] [OP] MapRevealer: Cleanup complete
+[15:57:46][Info] [PhysicsOptimizer] Storage box destroyed
+[15:57:46][Info] [Tools] Cleanup complete
+[15:57:46][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[15:57:46][Info] [OP] AutoEat: STOPPED
+[15:57:46][Info] [OP] GodMode: STOPPED
+[15:57:46][Info] [OP] GodMode: STOPPED
+[15:57:46][Info] [OP] AutoEat: STOPPED
+[15:57:46][Info] [OP] Loading modules...
+[15:57:46][Info] [OP] SoundManager: Cleanup complete
+[15:57:46][Info] [MainInterface] Speed module loaded table: table: 0xafd4f794ec532e36
+[15:57:46][Warning] [Loader] Failed to load: Features/FishFarm.lua - :78: attempt to call a nil value
+[15:57:47][Info] [OP] Initializing 99 Nights OP Script...
+[15:57:47][Info] [OP] Modules loaded!
+[15:57:47][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:57:47][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:57:47][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[15:57:47][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:57:47][Info] [OP] KillTarget: Initialized
+[15:57:47][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:57:47][Info] [Fly] Initialized
+[15:57:47][Info] [Speed] Initialized
+[15:57:47][Info] [Teleport] Initialized
+[15:57:47][Info] [PhysicsOptimizer] Initialized
+[15:57:47][Info] [Tools] Initialized
+[15:57:47][Info] [OP] Window created. Type: table
+[15:57:47][Info] function is already waiting :)
+[15:57:57][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:57:57][Info] [OP] UI Created! Ready to use.
+[15:57:57][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:57:57][Info] [OP] TreeFarm: Filter OFF - All trees allowed

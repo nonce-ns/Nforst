@@ -1,0 +1,101 @@
+=== WindUI Log Session ===
+Started: 2026-02-08 18:44:32
+User: nsopnet (ID: 8401342884)
+========================================
+
+[18:44:32][Info] Loader: Fetching MainInterface...
+[18:44:34][Info] [OP] Loading modules...
+[18:44:34][Info] [MainInterface] Speed module loaded table: table: 0xa9d037d20198ac5a
+[18:44:34][Info] [OP] Modules loaded!
+[18:44:34][Info] [OP] Initializing 99 Nights OP Script...
+[18:44:34][Info] [OP] KillTarget: Initialized
+[18:44:34][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[18:44:34][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[18:44:34][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[18:44:34][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[18:44:34][Info] [Speed] Initialized
+[18:44:34][Info] [Teleport] Initialized
+[18:44:34][Info] [Tools] Initialized
+[18:44:34][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[18:44:34][Info] [PhysicsOptimizer] Initialized
+[18:44:34][Info] [Fly] Initialized
+[18:44:35][Info] [OP] Window created. Type: table
+[18:44:45][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[18:44:45][Info] [OP] UI Created! Ready to use.
+[18:44:45][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[18:44:45][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[18:44:55][Info] [ItemCollector] Selected: Chair
+[18:44:55][Info] [ItemCollector] Selected: Coal
+[18:44:55][Info] [ItemCollector] Selected: Fuel Canister
+[18:44:55][Info] [ItemCollector] Selected: Log
+[18:44:55][Info] [ItemCollector] Selected: Oil Barrel
+[18:44:56][Info] [ItemCollector] Started Collection Thread.
+[18:44:56][Info] [Remote][Success] RemoteEvents found: 198 remotes
+[18:44:57][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[18:44:57][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[18:44:57][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[18:44:57][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[18:44:57][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[18:44:58][Warning] [ItemCollector] Failed to collect: Log after 3 attempts.
+[18:45:01][Warning] [ItemCollector] Failed to collect: Oil Barrel after 3 attempts.
+[18:45:05][Info] [ItemCollector] Collected 46 items.
+[18:45:05][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[18:45:23][Info] Cast rod
+[18:45:28][Info] Cast rod
+[18:45:32][Info] Cast rod
+[18:45:33][Info] new input type Touch
+[18:45:35][Info] Cast rod
+[18:45:39][Info] Cast rod
+[18:45:45][Info] Cast rod
+[18:45:51][Info] Cast rod
+[18:45:57][Info] Cast rod
+[18:46:00][Info] Cast rod
+[18:46:04][Info] Cast rod
+[18:46:08][Info] Cast rod
+[18:46:15][Info] Cast rod
+[18:46:20][Info] Cast rod
+[18:46:21][Info] collision with land
+[18:46:30][Info] deactivate and unequip
+[18:46:45][Info] Cast rod
+[18:46:46][Info] collision with land
+[18:46:51][Info] Cast rod
+[18:46:51][Info] collision with land
+[18:47:01][Info] Cast rod
+[18:47:05][Info] Cast rod
+[18:47:08][Info] Cast rod
+[18:47:12][Info] Cast rod
+[18:47:16][Info] [OP] GodMode: STARTED
+[18:47:18][Info] Cast rod
+[18:47:22][Info] Cast rod
+[18:47:28][Info] Cast rod
+[18:47:33][Info] Cast rod
+[18:47:39][Info] Cast rod
+[18:47:43][Info] Cast rod
+[18:47:47][Info] Cast rod
+[18:47:51][Info] Cast rod
+[18:47:56][Info] Cast rod
+[18:48:00][Info] Cast rod
+[18:48:03][Info] Cast rod
+[18:48:08][Info] Cast rod
+[18:48:11][Info] deactivate and unequip
+[18:48:24][Info] Cast rod
+[18:48:30][Info] Cast rod
+[18:48:45][Info] Cast rod
+[18:48:46][Info] function is already waiting :)
+[18:48:51][Info] Cast rod
+[18:48:57][Info] Cast rod
+[18:48:58][Info] collision with land
+[18:49:00][Info] deactivate and unequip
+[18:49:13][Info] Cast rod
+[18:49:33][Info] Cast rod
+[18:49:53][Info] Cast rod
+[18:50:17][Info] Cast rod
+[18:50:23][Info] Cast rod
+[18:50:29][Info] Cast rod
+[18:50:35][Info] Cast rod
+[18:50:42][Info] Cast rod
+[18:50:48][Info] Cast rod
+[18:50:56][Info] Cast rod
+[18:51:01][Info] Cast rod
+[18:51:04][Info] Cast rod
+[18:51:10][Info] Cast rod

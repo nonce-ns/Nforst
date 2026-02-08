@@ -1,0 +1,92 @@
+=== WindUI Log Session ===
+Started: 2026-02-08 15:59:19
+User: nsopnet (ID: 8401342884)
+========================================
+
+[15:59:18][Info] Loader: Fetching MainInterface...
+[15:59:20][Info] [ChestExplorer] Stopped/Finished
+[15:59:20][Info] [ChestExplorer] Stopped/Finished
+[15:59:20][Info] [ChestExplorer] Cleaned up resources
+[15:59:21][Info] [OP] MapRevealer: Cleanup complete
+[15:59:21][Info] [Tools] Cleanup complete
+[15:59:21][Info] [PhysicsOptimizer] Storage box destroyed
+[15:59:21][Info] [OP] GodMode: STOPPED
+[15:59:21][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[15:59:21][Info] [OP] GodMode: STOPPED
+[15:59:21][Info] [OP] AutoEat: STOPPED
+[15:59:21][Info] [OP] AutoEat: STOPPED
+[15:59:21][Info] [OP] SoundManager: Cleanup complete
+[15:59:21][Info] [OP] Loading modules...
+[15:59:22][Info] [MainInterface] Speed module loaded table: table: 0x0ac8bf5f4caf7fa6
+[15:59:23][Info] [OP] Modules loaded!
+[15:59:23][Info] [OP] KillTarget: Initialized
+[15:59:23][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:59:23][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:59:23][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:59:23][Info] [PhysicsOptimizer] Initialized
+[15:59:23][Info] [Tools] Initialized
+[15:59:23][Info] [Teleport] Initialized
+[15:59:23][Info] [Speed] Initialized
+[15:59:23][Info] [Fly] Initialized
+[15:59:23][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[15:59:23][Info] [OP] Initializing 99 Nights OP Script...
+[15:59:23][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:59:33][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:59:33][Info] [OP] Window created. Type: table
+[15:59:33][Info] [OP] UI Created! Ready to use.
+[15:59:33][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:59:33][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:59:43][Warning] [FishFarm DEBUG] Creating viz at: 76.44879150390625, 4.280028820037842, -714.578369140625
+[15:59:43][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:59:43][Info] Cast rod
+[15:59:49][Warning] [FishFarm DEBUG] Creating viz at: 76.44879150390625, 4.280028820037842, -714.578369140625
+[15:59:49][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:59:49][Info] Cast rod
+[15:59:55][Warning] [FishFarm DEBUG] Creating viz at: 76.44879150390625, 4.280028820037842, -714.578369140625
+[15:59:55][Info] Cast rod
+[15:59:55][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:01][Warning] [FishFarm DEBUG] Creating viz at: 76.44879150390625, 4.280028820037842, -714.578369140625
+[16:00:01][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:01][Info] Cast rod
+[16:00:07][Warning] [FishFarm DEBUG] Creating viz at: 76.44879150390625, 4.280028820037842, -714.578369140625
+[16:00:07][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:07][Info] Cast rod
+[16:00:14][Warning] [FishFarm DEBUG] Creating viz at: 76.44879150390625, 4.280028820037842, -714.578369140625
+[16:00:14][Info] Cast rod
+[16:00:14][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:22][Warning] [FishFarm DEBUG] Creating viz at: 125.421630859375, 3.675848960876465, -716.4487915039062
+[16:00:22][Info] Cast rod
+[16:00:22][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:28][Warning] [FishFarm DEBUG] Creating viz at: 125.421630859375, 3.675848960876465, -716.4487915039062
+[16:00:28][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:28][Info] Cast rod
+[16:00:38][Warning] [FishFarm DEBUG] Creating viz at: 125.421630859375, 3.675848960876465, -716.4487915039062
+[16:00:38][Info] Cast rod
+[16:00:38][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:43][Warning] [FishFarm DEBUG] Creating viz at: 125.421630859375, 3.675848960876465, -716.4487915039062
+[16:00:43][Info] Cast rod
+[16:00:43][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:50][Warning] [FishFarm DEBUG] Creating viz at: 125.421630859375, 3.675848960876465, -716.4487915039062
+[16:00:50][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:50][Info] Cast rod
+[16:00:56][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:00:56][Warning] [FishFarm DEBUG] Creating viz at: 125.421630859375, 3.675848960876465, -716.4487915039062
+[16:00:56][Info] Cast rod
+[16:01:04][Warning] [FishFarm DEBUG] Creating viz at: 116.44879150390625, 1.1393358707427979, -994.578369140625
+[16:01:04][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:01:04][Info] Cast rod
+[16:01:10][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:01:10][Info] Cast rod
+[16:01:10][Warning] [FishFarm DEBUG] Creating viz at: 116.44879150390625, 1.1393358707427979, -994.578369140625
+[16:01:17][Warning] [FishFarm DEBUG] Creating viz at: 116.44879150390625, 1.1393358707427979, -994.578369140625
+[16:01:17][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:01:17][Info] Cast rod
+[16:01:23][Warning] [FishFarm DEBUG] Creating viz at: 116.44879150390625, 1.1393358707427979, -994.578369140625
+[16:01:23][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:01:23][Info] Cast rod
+[16:01:30][Warning] [FishFarm DEBUG] Creating viz at: 116.44879150390625, 1.1393358707427979, -994.578369140625
+[16:01:30][Warning] [FishFarm DEBUG] Viz created successfully!
+[16:01:30][Info] Cast rod
+[16:01:31][Info] collision with land
+[16:01:55][Warning] [FishFarm DEBUG] Creating viz at: 116.44879150390625, 1.1393358707427979, -994.578369140625
+[16:01:55][Warning] [FishFarm DEBUG] Viz created successfully!

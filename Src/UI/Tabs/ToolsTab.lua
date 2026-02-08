@@ -358,11 +358,62 @@ function ToolsTab.Create(Window, Features, CONFIG, WindUI)
     Tab:Space({ Size = 10 })
     
     -- ========================================
+    -- CAMERA SHAKE SECTION
+    -- ========================================
+    local CameraSection = Tab:Section({
+        Title = "📷 Camera Settings",
+        Icon = "lucide:camera-off",
+        Box = true,
+        BoxBorder = true,
+        Opened = true,
+    })
+    
+    local cameraShakeDisabled = false
+    
+    CameraSection:Toggle({
+        Flag = "Tools.DisableCameraShake",
+        Title = "Disable Camera Shake",
+        Desc = "Stop all camera shake effects (explosions, bumps, etc)",
+        Value = false,
+        Callback = function(enabled)
+            local RunService = game:GetService("RunService")
+            
+            if enabled then
+                pcall(function()
+                    RunService:UnbindFromRenderStep("CameraShaker")
+                end)
+                cameraShakeDisabled = true
+                
+                if WindUI then
+                    WindUI:Notify({
+                        Title = "Camera Shake",
+                        Content = "Disabled - no more screen shake!",
+                        Duration = 2,
+                    })
+                end
+            else
+                if cameraShakeDisabled then
+                    if WindUI then
+                        WindUI:Notify({
+                            Title = "Camera Shake",
+                            Content = "Re-enable requires rejoin (game limitation)",
+                            Icon = "alert-triangle",
+                            Duration = 3,
+                        })
+                    end
+                end
+            end
+        end,
+    })
+    
+    Tab:Space({ Size = 10 })
+    
+    -- ========================================
     -- INFO SECTION
     -- ========================================
     Tab:Paragraph({
         Title = "💡 Tips",
-        Desc = "• Self: View your character from orbit camera\n• Players: Spectate other players\n• NPCs: Follow wolves, deer, etc (200 stud radius)\n• All modes restore camera on disable",
+        Desc = "• Self: View your character from orbit camera\n• Players: Spectate other players\n• NPCs: Follow wolves, deer, etc (200 stud radius)\n• Camera Shake: Once disabled, rejoin to re-enable",
     })
     
     return Tab

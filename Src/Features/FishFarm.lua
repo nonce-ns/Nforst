@@ -43,6 +43,7 @@ local State = {
     ActiveHotspot = nil,
     CharacterConnection = nil,
     AnchorButtonConnection = nil,
+    AnchorLoop = nil,
     OriginalZoneSize = nil,
 }
 
@@ -740,18 +741,55 @@ local function setAnchored(shouldAnchor)
     
     if root then
         local existingBP = root:FindFirstChild("FishFarmAnchor")
+        local existingBG = root:FindFirstChild("FishFarmGyro")
+        local existingLoop = State.AnchorLoop
+        
         if shouldAnchor then
+            local lockPos = root.Position
+            local lockCFrame = root.CFrame
+            
             if not existingBP then
                 local bp = Instance.new("BodyPosition")
                 bp.Name = "FishFarmAnchor"
                 bp.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
-                bp.Position = root.Position
+                bp.D = 1000
+                bp.P = 50000
+                bp.Position = lockPos
                 bp.Parent = root
             else
-                existingBP.Position = root.Position
+                existingBP.Position = lockPos
+            end
+            
+            if not existingBG then
+                local bg = Instance.new("BodyGyro")
+                bg.Name = "FishFarmGyro"
+                bg.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+                bg.D = 1000
+                bg.P = 50000
+                bg.CFrame = lockCFrame
+                bg.Parent = root
+            else
+                existingBG.CFrame = lockCFrame
+            end
+            
+            root.AssemblyLinearVelocity = Vector3.zero
+            root.AssemblyAngularVelocity = Vector3.zero
+            
+            if not existingLoop then
+                State.AnchorLoop = RunService.Heartbeat:Connect(function()
+                    if State.Anchored and root and root.Parent then
+                        root.AssemblyLinearVelocity = Vector3.zero
+                        root.AssemblyAngularVelocity = Vector3.zero
+                    end
+                end)
             end
         else
             if existingBP then existingBP:Destroy() end
+            if existingBG then existingBG:Destroy() end
+            if existingLoop then
+                existingLoop:Disconnect()
+                State.AnchorLoop = nil
+            end
         end
     end
     

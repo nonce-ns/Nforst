@@ -1,0 +1,1263 @@
+=== WindUI Log Session ===
+Started: 2026-02-08 15:48:49
+User: nsopnet (ID: 8401342884)
+========================================
+
+[15:48:48][Info] Loader: Fetching MainInterface...
+[15:48:50][Info] [OP] Loading modules...
+[15:48:51][Info] [MainInterface] Speed module loaded table: table: 0x071e7b3b91d8e076
+[15:48:51][Info] [OP] Modules loaded!
+[15:48:51][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:48:51][Info] [OP] Initializing 99 Nights OP Script...
+[15:48:51][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:48:51][Info] [OP] KillTarget: Initialized
+[15:48:51][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:48:51][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[15:48:51][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:48:51][Info] [Speed] Initialized
+[15:48:51][Info] [Tools] Initialized
+[15:48:51][Info] [Fly] Initialized
+[15:48:51][Info] [Teleport] Initialized
+[15:48:51][Info] [PhysicsOptimizer] Initialized
+[15:48:51][Info] [OP] Window created. Type: table
+[15:49:01][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:49:02][Info] [OP] UI Created! Ready to use.
+[15:49:02][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:49:02][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:49:36][Info] [ItemCollector] Selected: Chair
+[15:49:36][Info] [ItemCollector] Selected: Cultist
+[15:49:36][Info] [ItemCollector] Selected: Fuel Canister
+[15:49:36][Info] [ItemCollector] Selected: Coal
+[15:49:36][Info] [ItemCollector] Selected: Log
+[15:49:37][Info] [Remote][Success] RemoteEvents found: 198 remotes
+[15:49:37][Info] [ItemCollector] Started Collection Thread.
+[15:49:42][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[15:49:44][Info] [ItemCollector] Collected 35 items.
+[15:49:44][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[15:49:46][Info] [ItemCollector] Started Collection Thread.
+[15:49:46][Warning] [ItemCollector] No matching items found in map!
+[15:49:46][Info] [ItemCollector] Collection Thread Finished. Active threads: 0
+[15:49:46][Warning] [ItemCollector] Failed to collect: Coal after 3 attempts.
+[15:49:58][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: nil
+[15:49:58][Warning] [FishFarm DEBUG] Found new hotspot! Teleporting...
+[15:49:58][Warning] [FishFarm DEBUG] Hunting for new hotspot...
+[15:49:58][Warning] [FishFarm DEBUG] No ActiveHotspot cached
+[15:49:58][Warning] [FishFarm DEBUG] getGlobalActiveHotspot returned: Hotspot
+[15:50:00][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:50:00][Warning] [FishFarm DEBUG] Target pos: -85.55119323730469, -1.9510440826416016, -193.578369140625
+[15:50:00][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:50:00][Warning] [FishFarm DEBUG] Screen pos: 94.28207397460938, 143.86126708984375, 6.744380950927734, onScreen: true
+[15:50:00][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:50:00][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:50:00][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:50:00][Info] Cast rod
+[15:50:00][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:50:00][Warning] [FishFarm DEBUG] Sending mouse up
+[15:50:00][Error] Position is not a valid member of Model "Workspace.nsopnet.ToolHandle.Bobber"
+    Stack Begin
+    Script 'Script', Line 151 - function findBobber
+    Script 'Script', Line 1153
+    Stack End
+[15:50:00][Warning] [FishFarm DEBUG] Player pos: -77.4898452758789, -2.7873690128326416, -193.578369140625
+[15:50:00][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:50:00][Warning] [FishFarm DEBUG] Creating viz at: -85.55119323730469, -1.9510440826416016, -193.578369140625
+[15:50:00][Warning] [FishFarm DEBUG] Final click pos: 94, 201
+[15:50:00][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:50:00][Warning] [FishFarm DEBUG] Sending mouse down at 94, 201
+[15:50:00][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:50:00][Info] add Workspace.Characters.Kiwi
+[15:50:01][Info] collision with land
+[15:50:01][Info] new input type Touch
+[15:50:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: nil
+[15:50:18][Warning] [FishFarm DEBUG] Hunting for new hotspot...
+[15:50:18][Warning] [FishFarm DEBUG] No ActiveHotspot cached
+[15:50:18][Warning] [FishFarm DEBUG] Found new hotspot! Teleporting...
+[15:50:18][Warning] [FishFarm DEBUG] getGlobalActiveHotspot returned: Hotspot
+[15:50:19][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:50:19][Warning] [FishFarm DEBUG] Player pos: -77.4898681640625, -2.7873690128326416, -193.578369140625
+[15:50:19][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:50:19][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:50:19][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:50:19][Warning] [FishFarm DEBUG] Screen pos: 513.913818359375, 96.55438232421875, 18.381248474121094, onScreen: true
+[15:50:19][Warning] [FishFarm DEBUG] Target pos: -85.55119323730469, -1.9510440826416016, -193.578369140625
+[15:50:19][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:50:19][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:50:19][Warning] [FishFarm DEBUG] Sending mouse down at 513, 154
+[15:50:19][Warning] [FishFarm DEBUG] Sending mouse up
+[15:50:19][Error] Position is not a valid member of Model "Workspace.nsopnet.ToolHandle.Bobber"
+    Stack Begin
+    Script 'Script', Line 151 - function findBobber
+    Script 'Script', Line 1153
+    Stack End
+[15:50:19][Warning] [FishFarm DEBUG] Creating viz at: -85.55119323730469, -1.9510440826416016, -193.578369140625
+[15:50:19][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:50:19][Info] Cast rod
+[15:50:19][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:50:19][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:50:19][Warning] [FishFarm DEBUG] Final click pos: 513, 154
+[15:50:51][Info] Cast rod
+[15:50:52][Info] collision with land
+[15:51:04][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: nil
+[15:51:04][Warning] [FishFarm DEBUG] Hunting for new hotspot...
+[15:51:04][Warning] [FishFarm DEBUG] No ActiveHotspot cached
+[15:51:04][Warning] [FishFarm DEBUG] getGlobalActiveHotspot returned: Hotspot
+[15:51:04][Warning] [FishFarm DEBUG] Found new hotspot! Teleporting...
+[15:51:06][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:51:06][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:51:06][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:51:06][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:51:06][Warning] [FishFarm DEBUG] Player pos: -77.49101257324219, -2.7873690128326416, -193.578369140625
+[15:51:06][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:51:06][Warning] [FishFarm DEBUG] Target pos: -85.55119323730469, -1.9510440826416016, -193.578369140625
+[15:51:06][Warning] [FishFarm DEBUG] Creating viz at: -85.55119323730469, -1.9510440826416016, -193.578369140625
+[15:51:06][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:51:06][Info] Cast rod
+[15:51:06][Error] Position is not a valid member of Model "Workspace.nsopnet.ToolHandle.Bobber"
+    Stack Begin
+    Script 'Script', Line 151 - function findBobber
+    Script 'Script', Line 1153
+    Stack End
+[15:51:06][Warning] [FishFarm DEBUG] Sending mouse up
+[15:51:06][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:51:06][Warning] [FishFarm DEBUG] Screen pos: 476.02838134765625, 69.37454986572266, 18.323116302490234, onScreen: true
+[15:51:06][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:51:06][Warning] [FishFarm DEBUG] Final click pos: 476, 127
+[15:51:06][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:51:06][Warning] [FishFarm DEBUG] Sending mouse down at 476, 127
+[15:52:06][Info] [OP] GodMode: STARTED
+[15:53:12][Info] Loader: Fetching MainInterface...
+[15:53:12][Info] Cast rod
+[15:53:13][Info] collision with land
+[15:53:14][Info] [ChestExplorer] Stopped/Finished
+[15:53:14][Info] [ChestExplorer] Stopped/Finished
+[15:53:14][Info] [ChestExplorer] Cleaned up resources
+[15:53:14][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[15:53:14][Info] [Tools] Cleanup complete
+[15:53:14][Info] [PhysicsOptimizer] Storage box destroyed
+[15:53:14][Info] [OP] GodMode: STOPPED
+[15:53:14][Info] [OP] GodMode: STOPPED
+[15:53:14][Info] [OP] AutoEat: STOPPED
+[15:53:14][Info] [OP] SoundManager: Cleanup complete
+[15:53:14][Info] [OP] Loading modules...
+[15:53:14][Info] [OP] AutoEat: STOPPED
+[15:53:15][Info] [MainInterface] Speed module loaded table: table: 0xc0c775d7d0990826
+[15:53:14][Info] [OP] MapRevealer: Cleanup complete
+[15:53:15][Info] [OP] Modules loaded!
+[15:53:15][Info] [OP] Initializing 99 Nights OP Script...
+[15:53:15][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:53:15][Info] [OP] KillTarget: Initialized
+[15:53:15][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:53:15][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:53:15][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[15:53:15][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:53:15][Info] [Speed] Initialized
+[15:53:15][Info] [Fly] Initialized
+[15:53:15][Info] [Tools] Initialized
+[15:53:15][Info] [Teleport] Initialized
+[15:53:15][Info] [PhysicsOptimizer] Initialized
+[15:53:16][Info] [OP] Window created. Type: table
+[15:53:26][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:53:26][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:53:26][Info] [OP] UI Created! Ready to use.
+[15:53:26][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:53:28][Info] deactivate and unequip
+[15:53:36][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: nil
+[15:53:36][Warning] [FishFarm DEBUG] getGlobalActiveHotspot returned: Hotspot
+[15:53:36][Warning] [FishFarm DEBUG] Hunting for new hotspot...
+[15:53:36][Warning] [FishFarm DEBUG] Found new hotspot! Teleporting...
+[15:53:36][Warning] [FishFarm DEBUG] No ActiveHotspot cached
+[15:53:38][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:53:38][Warning] [FishFarm DEBUG] Player pos: -278.421630859375, 7.455107688903809, -104.52517700195312
+[15:53:38][Warning] [FishFarm DEBUG] Found hotspot at 9 studs
+[15:53:38][Warning] [FishFarm DEBUG] Target pos: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:53:38][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:53:38][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:53:38][Warning] [FishFarm DEBUG] Screen pos: 599.3779296875, 305.2332458496094, 14.036880493164062, onScreen: true
+[15:53:38][Warning] [FishFarm DEBUG] Sending mouse up
+[15:53:38][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:53:38][Warning] [FishFarm DEBUG] Sending mouse down at 599, 363
+[15:53:38][Info] Cast rod
+[15:53:38][Warning] [FishFarm DEBUG] Final click pos: 599, 363
+[15:53:38][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:53:38][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:53:38][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:53:38][Warning] [FishFarm DEBUG] Creating viz at: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:53:38][Warning] [FishFarm DEBUG] Water: Water at 16 studs
+[15:53:38][Info] collision with land
+[15:53:41][Info] deactivate and unequip
+[15:53:46][Info] deactivate and unequip
+[15:53:51][Info] deactivate and unequip
+[15:53:55][Info] Loader: Fetching MainInterface...
+[15:53:57][Info] [ChestExplorer] Stopped/Finished
+[15:53:57][Info] [Remote][Success] RemoteEvents found: 206 remotes
+[15:53:57][Info] [ChestExplorer] Stopped/Finished
+[15:53:57][Info] [ChestExplorer] Cleaned up resources
+[15:53:58][Info] [OP] MapRevealer: Cleanup complete
+[15:53:58][Info] [Tools] Cleanup complete
+[15:53:58][Info] [PhysicsOptimizer] Storage box destroyed
+[15:53:58][Info] [PhysicsOptimizer] Cleanup complete - no memory leaks
+[15:53:58][Info] [OP] GodMode: STOPPED
+[15:53:58][Info] [OP] GodMode: STOPPED
+[15:53:58][Info] [OP] AutoEat: STOPPED
+[15:53:58][Info] [OP] AutoEat: STOPPED
+[15:53:58][Info] [OP] SoundManager: Cleanup complete
+[15:53:58][Info] [OP] Loading modules...
+[15:53:58][Info] [MainInterface] Speed module loaded table: table: 0xa182e82b1ddc3c66
+[15:53:59][Info] [OP] KillAura: Initialized (Melee Only, 75 studs)
+[15:53:59][Info] [OP] Modules loaded!
+[15:53:59][Info] [OP] Initializing 99 Nights OP Script...
+[15:53:59][Info] [OP] TreeFarm: Initialized (Axe Only, 75 studs)
+[15:53:59][Info] [OP] KillTarget: Initialized
+[15:53:59][Info] [OP] AutoPlant: Initialized (Multi-Pattern, Infinite Sapling)
+[15:53:59][Info] [Fly] Initialized
+[15:53:59][Info] [ChestExplorer] Initialized (Teleport + Fly Mode)
+[15:53:59][Info] [Speed] Initialized
+[15:53:59][Info] [Teleport] Initialized
+[15:53:59][Info] [PhysicsOptimizer] Initialized
+[15:53:59][Info] [Tools] Initialized
+[15:53:59][Info] [OP] SoundManager: Initialized (Hybrid Mode)
+[15:54:08][Info] [OP] Window created. Type: table
+[15:54:08][Success] Loader: Ready. Use '⚡' button in Logger to reload.
+[15:54:09][Info] [OP] UI Created! Ready to use.
+[15:54:09][Info] [OP] TreeFarm: Filter OFF - All trees allowed
+[15:54:09][Info] [ItemCollector UI] Selection updated manually. Count: 0
+[15:54:16][Info] [Remote][Success] RemoteEvents found: 206 remotes
+[15:54:19][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: nil
+[15:54:19][Warning] [FishFarm DEBUG] Hunting for new hotspot...
+[15:54:19][Warning] [FishFarm DEBUG] No ActiveHotspot cached
+[15:54:19][Warning] [FishFarm DEBUG] getGlobalActiveHotspot returned: Hotspot
+[15:54:19][Warning] [FishFarm DEBUG] Found new hotspot! Teleporting...
+[15:54:20][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:54:20][Warning] [FishFarm DEBUG] Player pos: -278.421630859375, 7.455107688903809, -104.52517700195312
+[15:54:20][Warning] [FishFarm DEBUG] Found hotspot at 9 studs
+[15:54:20][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:54:20][Warning] [FishFarm DEBUG] Creating viz at: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:20][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:54:20][Warning] [FishFarm DEBUG] Sending mouse down at 520, 187
+[15:54:20][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:54:20][Info] Cast rod
+[15:54:21][Warning] [FishFarm DEBUG] Sending mouse up
+[15:54:20][Warning] [FishFarm DEBUG] Screen pos: 520.5469970703125, 129.44329833984375, 20.658828735351562, onScreen: true
+[15:54:20][Warning] [FishFarm DEBUG] Target pos: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:20][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:54:20][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:54:20][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:54:20][Warning] [FishFarm DEBUG] Final click pos: 520, 187
+[15:54:20][Warning] [FishFarm DEBUG] Water: Water at 16 studs
+[15:54:23][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:23][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:23][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:23][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:23][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:23][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:23][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:23][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:23][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:23][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:23][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:23][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:24][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:24][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:24][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:24][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:25][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:25][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:25][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:25][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:25][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:25][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:25][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:54:25][Warning] [FishFarm DEBUG] Player pos: -278.421630859375, 7.455107688903809, -104.52517700195312
+[15:54:25][Warning] [FishFarm DEBUG] Found hotspot at 9 studs
+[15:54:25][Warning] [FishFarm DEBUG] Target pos: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:25][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:54:25][Warning] [FishFarm DEBUG] Creating viz at: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:25][Warning] [FishFarm DEBUG] Screen pos: 520.5473022460938, 129.4431610107422, 20.658843994140625, onScreen: true
+[15:54:25][Warning] [FishFarm DEBUG] Water: Water at 16 studs
+[15:54:25][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:54:25][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:54:25][Warning] [FishFarm DEBUG] Sending mouse up
+[15:54:25][Info] Cast rod
+[15:54:25][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:54:25][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:54:25][Warning] [FishFarm DEBUG] Final click pos: 520, 187
+[15:54:25][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:54:25][Warning] [FishFarm DEBUG] Sending mouse down at 520, 187
+[15:54:27][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:27][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:27][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:27][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:27][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:27][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:27][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:27][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:27][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:27][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:27][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:27][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:27][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:27][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:28][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:28][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:28][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:28][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:28][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:28][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:28][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:28][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:28][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:28][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:28][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:28][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:28][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:28][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:28][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:28][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:28][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:28][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:28][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:28][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:28][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:28][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:28][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:28][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:28][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:28][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:28][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:29][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:29][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:29][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:29][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:54:29][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:54:29][Warning] [FishFarm DEBUG] Water: Water at 16 studs
+[15:54:29][Warning] [FishFarm DEBUG] Player pos: -278.421630859375, 7.455107688903809, -104.52517700195312
+[15:54:29][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:29][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:29][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:54:29][Warning] [FishFarm DEBUG] Target pos: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:29][Warning] [FishFarm DEBUG] Found hotspot at 9 studs
+[15:54:29][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:54:29][Warning] [FishFarm DEBUG] Sending mouse down at 520, 187
+[15:54:29][Info] Cast rod
+[15:54:29][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:54:29][Warning] [FishFarm DEBUG] Sending mouse up
+[15:54:29][Warning] [FishFarm DEBUG] Screen pos: 520.5469970703125, 129.44329833984375, 20.658828735351562, onScreen: true
+[15:54:29][Warning] [FishFarm DEBUG] Creating viz at: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:29][Warning] [FishFarm DEBUG] Final click pos: 520, 187
+[15:54:29][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:54:29][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:29][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:54:31][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:31][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:31][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:31][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:31][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:31][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:31][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:31][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:31][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:31][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:31][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:31][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:31][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:31][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:31][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:31][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:31][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:31][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:32][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:32][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:32][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:32][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:32][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:32][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:32][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:32][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:32][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:32][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:32][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:32][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:32][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:32][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:32][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:32][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:32][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:54:32][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:54:32][Warning] [FishFarm DEBUG] Water: Water at 16 studs
+[15:54:32][Warning] [FishFarm DEBUG] Player pos: -278.421630859375, 7.455107688903809, -104.52517700195312
+[15:54:32][Warning] [FishFarm DEBUG] Found hotspot at 9 studs
+[15:54:32][Warning] [FishFarm DEBUG] Target pos: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:33][Warning] [FishFarm DEBUG] Sending mouse up
+[15:54:32][Warning] [FishFarm DEBUG] Sending mouse down at 520, 187
+[15:54:32][Info] Cast rod
+[15:54:32][Warning] [FishFarm DEBUG] Screen pos: 520.5473022460938, 129.4431610107422, 20.658843994140625, onScreen: true
+[15:54:32][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:54:32][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:54:32][Warning] [FishFarm DEBUG] Final click pos: 520, 187
+[15:54:32][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:54:32][Warning] [FishFarm DEBUG] Creating viz at: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:32][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:54:32][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:54:32][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:32][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:35][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:35][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:35][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:35][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:35][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:35][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:35][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:35][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:35][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:35][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:35][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:35][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:35][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:35][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:35][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:35][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:35][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:35][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:35][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:35][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:35][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:35][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:35][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:35][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:36][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:36][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:36][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:36][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:36][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:36][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:36][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:36][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:36][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:36][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:36][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:36][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:36][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:36][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:36][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:36][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:36][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:36][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:36][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:36][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:36][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:36][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:54:36][Warning] [FishFarm DEBUG] Water: Water at 16 studs
+[15:54:36][Warning] [FishFarm DEBUG] Player pos: -278.421630859375, 7.455107688903809, -104.52517700195312
+[15:54:36][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:54:36][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:54:36][Warning] [FishFarm DEBUG] Creating viz at: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:36][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:54:36][Warning] [FishFarm DEBUG] Screen pos: 520.5469970703125, 129.44329833984375, 20.658828735351562, onScreen: true
+[15:54:36][Warning] [FishFarm DEBUG] Sending mouse up
+[15:54:36][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:36][Warning] [FishFarm DEBUG] Found hotspot at 9 studs
+[15:54:36][Warning] [FishFarm DEBUG] Sending mouse down at 520, 187
+[15:54:36][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:54:36][Info] Cast rod
+[15:54:36][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:54:36][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:36][Warning] [FishFarm DEBUG] Final click pos: 520, 187
+[15:54:36][Warning] [FishFarm DEBUG] Target pos: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:36][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:54:39][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:39][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:39][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:39][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:39][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:39][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:39][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:39][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:39][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:39][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:39][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:39][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:40][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:40][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:40][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:40][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:40][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:40][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:40][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:40][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:40][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:40][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:40][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:40][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:40][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:40][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:40][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:40][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:40][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:40][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:40][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:40][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:40][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:40][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:40][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:40][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:40][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:40][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:40][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:40][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:40][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:41][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:41][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:41][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:41][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:41][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:41][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:54:41][Warning] [FishFarm DEBUG] Water: Water at 16 studs
+[15:54:41][Warning] [FishFarm DEBUG] Found hotspot at 9 studs
+[15:54:41][Warning] [FishFarm DEBUG] Player pos: -278.421630859375, 7.455107688903809, -104.52517700195312
+[15:54:41][Warning] [FishFarm DEBUG] Sending mouse up
+[15:54:41][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:41][Warning] [FishFarm DEBUG] Creating viz at: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:41][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:54:41][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:54:41][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:54:41][Warning] [FishFarm DEBUG] Screen pos: 520.5473022460938, 129.4431610107422, 20.658843994140625, onScreen: true
+[15:54:41][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:54:41][Info] Cast rod
+[15:54:41][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:54:41][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:54:41][Warning] [FishFarm DEBUG] Final click pos: 520, 187
+[15:54:41][Warning] [FishFarm DEBUG] Target pos: -278.421630859375, 3.29144287109375, -112.55119323730469
+[15:54:41][Warning] [FishFarm DEBUG] Sending mouse down at 520, 187
+[15:54:43][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:43][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:43][Warning] [FishFarm DEBUG] Enabled: true
+[15:54:43][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:43][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:43][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:54:43][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:54:43][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:54:43][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:54:43][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:54:43][Warning] [FishFarm DEBUG] Hotspot EXPIRED! Bubbles disabled or missing
+[15:54:43][Warning] [FishFarm DEBUG] Hunting for new hotspot...
+[15:54:43][Warning] [FishFarm DEBUG] Enabled: false
+[15:54:43][Warning] [FishFarm DEBUG] Found new hotspot! Teleporting...
+[15:54:43][Warning] [FishFarm DEBUG] getGlobalActiveHotspot returned: Hotspot
+[15:54:44][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:54:44][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:54:44][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:54:44][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:54:44][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:54:44][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:54:44][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:54:44][Warning] [FishFarm DEBUG] Final click pos: 640, 239
+[15:54:44][Warning] [FishFarm DEBUG] Sending mouse up
+[15:54:44][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:54:44][Info] Cast rod
+[15:54:44][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:54:44][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:54:44][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:54:44][Warning] [FishFarm DEBUG] Sending mouse down at 640, 239
+[15:54:44][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:54:44][Warning] [FishFarm DEBUG] Screen pos: 640.124755859375, 181.53553771972656, 12.662246704101562, onScreen: true
+[15:54:45][Info] collision with land
+[15:55:09][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:55:09][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:55:09][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:55:09][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:55:09][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:55:09][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:55:09][Warning] [FishFarm DEBUG] Screen pos: 640.124755859375, 181.53553771972656, 12.662246704101562, onScreen: true
+[15:55:09][Warning] [FishFarm DEBUG] Sending mouse down at 640, 239
+[15:55:09][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:55:09][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:55:09][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:55:09][Warning] [FishFarm DEBUG] Sending mouse up
+[15:55:09][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:55:09][Info] Cast rod
+[15:55:09][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:55:09][Warning] [FishFarm DEBUG] Final click pos: 640, 239
+[15:55:09][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:55:10][Info] collision with land
+[15:55:34][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:55:34][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:55:34][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:55:34][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:55:34][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:55:34][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:55:34][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:55:34][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:55:34][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:55:34][Warning] [FishFarm DEBUG] Screen pos: 640.124755859375, 181.53553771972656, 12.662246704101562, onScreen: true
+[15:55:34][Warning] [FishFarm DEBUG] Final click pos: 640, 239
+[15:55:34][Warning] [FishFarm DEBUG] Sending mouse down at 640, 239
+[15:55:34][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:55:34][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:55:34][Warning] [FishFarm DEBUG] Sending mouse up
+[15:55:34][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:55:34][Info] Cast rod
+[15:55:35][Info] collision with land
+[15:55:59][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:55:59][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:55:59][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:55:59][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:55:59][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:55:59][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:55:59][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:55:59][Warning] [FishFarm DEBUG] Screen pos: 640.124755859375, 181.53553771972656, 12.662246704101562, onScreen: true
+[15:55:59][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:55:59][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:55:59][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:55:59][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:56:00][Warning] [FishFarm DEBUG] Sending mouse up
+[15:55:59][Info] Cast rod
+[15:55:59][Warning] [FishFarm DEBUG] Sending mouse down at 640, 239
+[15:55:59][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:55:59][Warning] [FishFarm DEBUG] Final click pos: 640, 239
+[15:56:00][Info] collision with land
+[15:56:24][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:56:24][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:56:24][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:56:24][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:56:24][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:56:24][Warning] [FishFarm DEBUG] Final click pos: 640, 239
+[15:56:24][Warning] [FishFarm DEBUG] Sending mouse down at 640, 239
+[15:56:24][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:56:25][Warning] [FishFarm DEBUG] Sending mouse up
+[15:56:24][Info] Cast rod
+[15:56:24][Warning] [FishFarm DEBUG] Screen pos: 640.124755859375, 181.53553771972656, 12.662246704101562, onScreen: true
+[15:56:24][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:56:24][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:56:24][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:56:24][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:56:24][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:56:24][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:56:25][Info] collision with land
+[15:56:44][Info] deactivate and unequip
+[15:56:47][Info] deactivate and unequip
+[15:56:49][Info] deactivate and unequip
+[15:56:49][Info] Cast rod
+[15:56:49][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:56:49][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:56:49][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:56:49][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:56:49][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:56:49][Warning] [FishFarm DEBUG] Screen pos: 640.124755859375, 181.53553771972656, 12.662246704101562, onScreen: true
+[15:56:49][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:56:50][Warning] [FishFarm DEBUG] Sending mouse up
+[15:56:49][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:56:49][Warning] [FishFarm DEBUG] Final click pos: 640, 239
+[15:56:49][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:56:49][Warning] [FishFarm DEBUG] Sending mouse down at 640, 239
+[15:56:49][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:56:49][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:56:49][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:56:49][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:56:50][Info] collision with land
+[15:56:52][Info] Cast rod
+[15:56:53][Info] collision with land
+[15:56:54][Info] Cast rod
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:56][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:56][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:56][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:56][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:56][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:56][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:56][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:56][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:56][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:56][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:56][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:56][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:56][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:56][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:56][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:57][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:57][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:57][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:57][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:57][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:57][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:57][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:57][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:57][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:57][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:57][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:57][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:57][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:57][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:57][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:57][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:57][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:57][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:56:57][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:56:57][Warning] [FishFarm DEBUG] Enabled: true
+[15:56:57][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:56:57][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:56:57][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:56:57][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:56:57][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:56:57][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:56:57][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:56:57][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:56:57][Warning] [FishFarm DEBUG] Screen pos: 640.124755859375, 181.53553771972656, 12.662246704101562, onScreen: true
+[15:56:57][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:56:57][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:56:57][Info] Cast rod
+[15:56:57][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:56:57][Warning] [FishFarm DEBUG] Sending mouse up
+[15:56:57][Warning] [FishFarm DEBUG] Sending mouse down at 640, 239
+[15:56:57][Warning] [FishFarm DEBUG] Final click pos: 640, 239
+[15:56:57][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:56:57][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:56:58][Info] collision with land
+[15:57:00][Info] Cast rod
+[15:57:02][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:02][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:02][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:02][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:02][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:02][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:02][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:02][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:02][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:02][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:02][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:02][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:02][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:02][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:02][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:02][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:02][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:02][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:02][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:03][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:03][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:03][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:03][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:03][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:03][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:03][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:03][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:03][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:03][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:03][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:03][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:03][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:03][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:03][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:57:03][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:57:03][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:57:03][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:57:03][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:57:03][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:57:03][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:57:03][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:57:03][Warning] [FishFarm DEBUG] Screen pos: 640.124755859375, 181.53553771972656, 12.662246704101562, onScreen: true
+[15:57:03][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:57:03][Info] Cast rod
+[15:57:03][Warning] [FishFarm DEBUG] Sending mouse up
+[15:57:03][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:03][Warning] [FishFarm DEBUG] Final click pos: 640, 239
+[15:57:03][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:57:04][Info] collision with land
+[15:57:03][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:57:03][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:57:03][Warning] [FishFarm DEBUG] Sending mouse down at 640, 239
+[15:57:06][Info] Cast rod
+[15:57:09][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:09][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:09][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:09][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:09][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:09][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:09][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:09][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:09][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:09][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:09][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:09][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:09][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:09][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:09][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:09][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:09][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:09][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:09][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:09][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:09][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:09][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:10][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:10][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:10][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:10][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:10][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:10][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:10][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:10][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:10][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:10][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:10][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:10][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:10][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:10][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:10][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:10][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:10][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:10][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:10][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:10][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:10][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:10][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:10][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:10][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:57:10][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:10][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:57:10][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:57:10][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:57:10][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:57:10][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:57:10][Warning] [FishFarm DEBUG] Screen pos: 439.5035400390625, 72.768310546875, 18.701778411865234, onScreen: true
+[15:57:10][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:57:10][Warning] [FishFarm DEBUG] Sending mouse down at 439, 130
+[15:57:10][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:57:10][Info] Cast rod
+[15:57:10][Warning] [FishFarm DEBUG] Final click pos: 439, 130
+[15:57:10][Warning] [FishFarm DEBUG] Sending mouse up
+[15:57:10][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:57:10][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:57:10][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:57:10][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:57:17][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:17][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:17][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:17][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:17][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:17][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:17][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:17][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:17][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:17][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:17][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:17][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:18][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:18][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:18][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:18][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:18][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:18][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:18][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:18][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:18][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:18][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:18][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:18][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:18][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:18][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:18][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:18][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:18][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:19][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:19][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:19][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:19][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:19][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:19][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:19][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:57:19][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:57:19][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:57:19][Warning] [FishFarm DEBUG] Sending mouse up
+[15:57:19][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:57:19][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:57:19][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:57:19][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:57:19][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:57:19][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:57:19][Warning] [FishFarm DEBUG] Screen pos: 439.5035400390625, 72.768310546875, 18.701778411865234, onScreen: true
+[15:57:19][Info] Cast rod
+[15:57:19][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:57:19][Warning] [FishFarm DEBUG] Final click pos: 439, 130
+[15:57:19][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:57:19][Warning] [FishFarm DEBUG] Sending mouse down at 439, 130
+[15:57:19][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:57:21][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:21][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:21][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:21][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:21][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:21][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:21][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:21][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:21][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:21][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:21][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:21][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:21][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:21][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:21][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:21][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:21][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:21][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:22][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:22][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:22][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:22][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:22][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:22][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:22][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:22][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:22][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:22][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:22][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:22][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:22][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:22][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:22][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:22][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:22][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:22][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:22][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:22][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
+[15:57:22][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:22][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:22][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:22][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:23][Warning] [FishFarm DEBUG] AutoHotspot check - ActiveHotspot: Hotspot
+[15:57:23][Warning] [FishFarm DEBUG] Bubbles.Parent: Hotspot
+[15:57:23][Warning] [FishFarm DEBUG] IsParticleEmitter: true
+[15:57:23][Warning] [FishFarm DEBUG] Enabled: true
+[15:57:23][Warning] [FishFarm DEBUG] ========== doCast() START ==========
+[15:57:23][Warning] [FishFarm DEBUG] Rod: Old Rod
+[15:57:23][Warning] [FishFarm DEBUG] Water: Water at 6 studs
+[15:57:23][Warning] [FishFarm DEBUG] Found hotspot at 8 studs
+[15:57:23][Warning] [FishFarm DEBUG] Sending mouse up
+[15:57:23][Warning] [FishFarm DEBUG] Target type: Hotspot
+[15:57:23][Warning] [FishFarm DEBUG] Sending mouse down at 439, 130
+[15:57:23][Warning] [FishFarm DEBUG] Screen pos: 439.5035400390625, 72.768310546875, 18.701778411865234, onScreen: true
+[15:57:23][Warning] [FishFarm DEBUG] ========== doCast() END ==========
+[15:57:23][Warning] [FishFarm DEBUG] Cast sent OK!
+[15:57:23][Warning] [FishFarm DEBUG] Final click pos: 439, 130
+[15:57:23][Warning] [FishFarm DEBUG] Viz created successfully!
+[15:57:23][Warning] [FishFarm DEBUG] GuiInset: 0, 58
+[15:57:23][Warning] [FishFarm DEBUG] Creating viz at: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:57:23][Info] Cast rod
+[15:57:23][Warning] [FishFarm DEBUG] Target pos: 165.421630859375, 1.437657356262207, -72.44880676269531
+[15:57:23][Warning] [FishFarm DEBUG] Player pos: 165.421630859375, 0.6013249158859253, -80.5101547241211
+[15:57:23][Warning] [FishFarm DEBUG] Current spot VALID!
+[15:57:23][Warning] [FishFarm DEBUG] Bubbles found: Bubbles
