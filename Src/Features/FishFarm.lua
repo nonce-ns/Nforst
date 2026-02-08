@@ -1,35 +1,19 @@
---[[
-    Features/FishFarm.lua
-    Auto Fishing Feature
-    
-    Strategy:
-    1. Convert water position to screen coordinates
-    2. Click directly on water (VirtualInputManager with x,y)
-    3. Auto-expand zone + auto-click during minigame
-    4. Repeat
-]]
-
 local FishFarm = {}
 
--- Services
 local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
 
--- Dependencies
 local Remote = nil
 
--- Constants
-local ROD_KEYWORD = "rod"
 local WATER_RANGE = 50
 local CYCLE_DELAY = 1
-local ZONE_SIZE_EXPLOIT = 0.95
+local ZONE_SIZE_EXPLOIT = 0.99
 local CLICK_COOLDOWN = 0.2
-local CAST_COOLDOWN = 0.7  -- Faster cooldown for aggressive retries
+local CAST_COOLDOWN = 0.7
 
--- Debug
-local DEBUG = true -- DEBUG MODE ON
+local DEBUG = getgenv().OP_DEBUG or false
 local function log(msg)
     if DEBUG then print("[FishFarm] " .. msg) end
 end
@@ -37,10 +21,9 @@ local function logWarn(msg)
     warn("[FishFarm] " .. msg)
 end
 
--- State
 local State = {
     Enabled = false,
-    IsStarting = false, -- Fix #2: Race condition prevention
+    IsStarting = false,
     FishingThread = nil,
     MinigameConnection = nil,
     FishCount = 0,
@@ -52,43 +35,51 @@ local State = {
     WaitingForMinigame = false,
     Anchored = false,
     AnchorGui = nil,
-    -- Smart Farm State
     LastWaterPos = nil,
     LastWaterCheckTime = 0,
     CurrentBobber = nil,
-    BobberName = nil, -- Cache for auto-learned name
+    BobberName = nil,
     CastStartTime = 0,
-    ActiveHotspot = nil, -- Cache for active hotspot
+    ActiveHotspot = nil,
+    CharacterConnection = nil,
+    AnchorButtonConnection = nil,
+    OriginalZoneSize = nil,
 }
 
--- Fix #10: Reset state on character death/respawn
-LocalPlayer.CharacterAdded:Connect(function(character)
-    if State.Anchored then
-        State.Anchored = false
+local function setupCharacterConnection()
+    if State.CharacterConnection then
+        State.CharacterConnection:Disconnect()
+        State.CharacterConnection = nil
     end
-    State.CurrentBobber = nil
-    State.BobberName = nil
-    log("Character respawned, state reset")
-end)
+    
+    State.CharacterConnection = LocalPlayer.CharacterAdded:Connect(function(character)
+        if State.Anchored then
+            State.Anchored = false
+        end
+        State.CurrentBobber = nil
+        State.BobberName = nil
+        log("Character respawned, state reset")
+    end)
+end
 
--- Settings
+setupCharacterConnection()
+
 local Settings = {
-    FishDelay = 20, -- Default: 20s before timeout recast
+    FishDelay = 20, 
     AutoClick = true,
     ExpandZone = true,
-    AutoHotspot = false, -- New Setting
+    AutoHotspot = false,
+    RodKeyword = "rod",
+    Debug = false,
 }
 
--- ============================================
--- HELPERS
--- ============================================
 local function isRod(name)
     if not name then return false end
-    if not ROD_KEYWORD then return false end
-    -- Check string library just in case
+    local keyword = Settings.RodKeyword or "rod"
+    if not keyword or keyword == "" then return false end
     if not string or not string.lower or not string.find then return false end
     
-    return string.find(string.lower(name), ROD_KEYWORD) ~= nil
+    return string.find(string.lower(name), string.lower(keyword)) ~= nil
 end
 
 local function getEquippedRod()
@@ -108,54 +99,6 @@ local function getEquippedRod()
     return nil
 end
 
-local function findBobber()
-    local char = LocalPlayer.Character
-    if not char then return nil end
-    
-    -- 1. Fast Path: Check known name
-    if State.BobberName then
-        local bobber = char:FindFirstChild(State.BobberName, true)
-        if bobber then return bobber end
-    end
-    
-    -- 2. Discovery Mode (Run once efficiently)
-    -- A. Check Rod Children (Priority - Most likely location)
-    local rod = getEquippedRod()
-    if rod then
-        for _, child in ipairs(rod:GetDescendants()) do
-            if child:IsA("BasePart") then
-                local name = string.lower(child.Name)
-                if string.find(name, "bobber") or string.find(name, "float") or string.find(name, "lure") then
-                    State.BobberName = child.Name
-                    log("🔍 Auto-detected Bobber in Rod: " .. child.Name)
-                    return child
-                end
-            end
-        end
-    end
-
-    -- B. Check Character descendants (Fallback)
-    for _, child in ipairs(char:GetDescendants()) do
-        if child:IsA("BasePart") then
-            local name = string.lower(child.Name)
-            if string.find(name, "bobber") or string.find(name, "float") or string.find(name, "lure") then
-                State.BobberName = child.Name 
-                log("🔍 Auto-detected Bobber in Char: " .. child.Name)
-                return child
-            end
-        end
-    end
-    
-    -- 3. Deep Fallback (Only if CastStartTime is recent)
-    -- If we just casted < 1s ago, the bobber might be spawning in Workspace
-    if tick() - State.CastStartTime < 1.0 then
-        -- Only scan 10 studs around impact cache (LastWaterPos) to prevent lag
-        -- (Skipped for now to strictly follow anti-lag request, usually it's in character)
-    end
-
-    return nil
-end
-
 local function getRoot()
     local char = LocalPlayer.Character
     if not char then return nil end
@@ -166,25 +109,109 @@ local function getCamera()
     return Workspace.CurrentCamera
 end
 
+local function getObjectPosition(obj)
+    if not obj then return nil end
+    if obj:IsA("BasePart") then
+        return obj.Position
+    elseif obj:IsA("Model") then
+        return obj:GetPivot().Position
+    else
+        local primaryPart = obj:IsA("Model") and obj.PrimaryPart
+        if primaryPart then return primaryPart.Position end
+        local firstPart = obj:FindFirstChildWhichIsA("BasePart", true)
+        if firstPart then return firstPart.Position end
+    end
+    return nil
+end
+
+local function findBobber()
+    local char = LocalPlayer.Character
+    if not char then return nil end
+    local root = getRoot()
+    
+    if State.BobberName then
+        local bobber = char:FindFirstChild(State.BobberName, true)
+        if bobber and bobber.Parent then
+            local bobberPos = getObjectPosition(bobber)
+            if root and bobberPos then
+                local dist = (bobberPos - root.Position).Magnitude
+                if dist <= WATER_RANGE * 2 then
+                    return bobber
+                else
+                    State.BobberName = nil
+                    log("⚠ Cached bobber too far, resetting cache")
+                end
+            elseif bobberPos then
+                return bobber
+            end
+        else
+            State.BobberName = nil
+        end
+    end
+    
+    for _, child in ipairs(char:GetChildren()) do
+        local name = string.lower(child.Name)
+        if string.find(name, "bobber") or string.find(name, "float") or string.find(name, "lure") then
+            local childPos = getObjectPosition(child)
+            if root and childPos then
+                local dist = (childPos - root.Position).Magnitude
+                if dist > 3 then
+                    State.BobberName = child.Name
+                    log("🔍 Auto-detected Bobber: " .. child.Name .. " (dist: " .. math.floor(dist) .. ")")
+                    return child
+                end
+            else
+                State.BobberName = child.Name
+                return child
+            end
+        end
+    end
+    
+    local toolHandle = char:FindFirstChild("ToolHandle")
+    if toolHandle then
+        for _, child in ipairs(toolHandle:GetChildren()) do
+            local name = string.lower(child.Name)
+            if string.find(name, "bobber") or string.find(name, "float") or string.find(name, "lure") then
+                local childPos = getObjectPosition(child)
+                if root and childPos then
+                    local dist = (childPos - root.Position).Magnitude
+                    if dist > 3 then
+                        State.BobberName = child.Name
+                        log("🔍 Auto-detected Bobber in ToolHandle: " .. child.Name)
+                        return child
+                    end
+                else
+                    State.BobberName = child.Name
+                    return child
+                end
+            end
+        end
+    end
+    
+    if tick() - State.CastStartTime < 1.0 then
+    end
+
+    return nil
+end
+
 local function getNearestWater()
     local root = getRoot()
     if not root then return nil end
     
-    -- 1. Check Cache (Reuse water if player hasn't moved far)
     if State.LastWaterPos then
-        local dist = (State.LastWaterPos.Position - root.Position).Magnitude
-        if dist <= WATER_RANGE then
-            return State.LastWaterPos, dist
+        if State.LastWaterPos.Parent then
+            local dist = (State.LastWaterPos.Position - root.Position).Magnitude
+            if dist <= WATER_RANGE then
+                return State.LastWaterPos, dist
+            end
         end
-        State.LastWaterPos = nil -- Cache invalid
+        State.LastWaterPos = nil
     end
     
-    -- 2. Scan (Throttle: Max once per second if failing)
     local now = tick()
     if now - State.LastWaterCheckTime < 1 then
-        return nil -- Throttle scan
+        return nil
     end
-    State.LastWaterCheckTime = now
     
     local mapFolder = Workspace:FindFirstChild("Map")
     if not mapFolder then return nil end
@@ -205,7 +232,8 @@ local function getNearestWater()
         end
     end
     
-    -- Update Cache
+    State.LastWaterCheckTime = now
+    
     if nearestWater then
         State.LastWaterPos = nearestWater
     end
@@ -213,12 +241,14 @@ local function getNearestWater()
     return nearestWater, nearestDist
 end
 
--- New: Accurate Center of nearest FishingZone
 local function getNearestZoneCenter()
     local root = getRoot()
     if not root then return nil end
     
-    local landmarks = Workspace.Map:FindFirstChild("Landmarks")
+    local mapFolder = Workspace:FindFirstChild("Map")
+    if not mapFolder then return nil end
+    
+    local landmarks = mapFolder:FindFirstChild("Landmarks")
     if not landmarks then return nil end
     
     local bestZone = nil
@@ -228,7 +258,6 @@ local function getNearestZoneCenter()
     for _, landmark in ipairs(landmarks:GetChildren()) do
         local zone = landmark:FindFirstChild("FishingZone")
         if zone then
-            -- FishingZone can be Model, Folder, or Part - handle all cases
             local zonePos = nil
             
             if zone:IsA("BasePart") then
@@ -236,7 +265,6 @@ local function getNearestZoneCenter()
             elseif zone:IsA("Model") then
                 zonePos = zone:GetPivot().Position
             else
-                -- Folder or other: Find first BasePart child
                 local firstPart = zone:FindFirstChildWhichIsA("BasePart", true)
                 if firstPart then
                     zonePos = firstPart.Position
@@ -258,9 +286,11 @@ local function getNearestZoneCenter()
     return centerPos, bestDist
 end
 
--- New: Global Active Hotspot Scanner (For Teleport)
 local function getGlobalActiveHotspot()
-    local landmarks = Workspace.Map:FindFirstChild("Landmarks")
+    local mapFolder = Workspace:FindFirstChild("Map")
+    if not mapFolder then return nil end
+    
+    local landmarks = mapFolder:FindFirstChild("Landmarks")
     if not landmarks then return nil end
     
     local bestHotspot = nil
@@ -274,13 +304,11 @@ local function getGlobalActiveHotspot()
             local hotspots = zone:FindFirstChild("Hotspots")
             if hotspots then
                 for _, hotspot in ipairs(hotspots:GetChildren()) do
-                    -- SUPPORT: Handle both Parts and Models safely
                     local isPart = hotspot:IsA("BasePart")
                     local isModel = hotspot:IsA("Model")
                     
                     if isPart or isModel then
                         local bubbles = hotspot:FindFirstChild("Bubbles")
-                        -- STRICT CHECK: Must be Enabled=true
                         if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
                             local pos = isPart and hotspot.Position or hotspot:GetPivot().Position
                             local dist = (pos - root.Position).Magnitude
@@ -303,13 +331,15 @@ local function getNearestHotspot()
     local root = getRoot()
     if not root then return nil end
     
-    local landmarks = Workspace.Map:FindFirstChild("Landmarks")
+    local mapFolder = Workspace:FindFirstChild("Map")
+    if not mapFolder then return nil end
+    
+    local landmarks = mapFolder:FindFirstChild("Landmarks")
     if not landmarks then return nil end
     
     local bestHotspot = nil
     local bestDist = math.huge
     
-    -- Iterate through landmarks to find active bubbles
     for _, landmark in ipairs(landmarks:GetChildren()) do
         local zone = landmark:FindFirstChild("FishingZone")
         if zone then
@@ -321,7 +351,6 @@ local function getNearestHotspot()
                     
                     if isPart or isModel then
                         local bubbles = hotspot:FindFirstChild("Bubbles")
-                        -- Check for Active ParticleEmitter
                         if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
                             local pos = isPart and hotspot.Position or hotspot:GetPivot().Position
                             local dist = (pos - root.Position).Magnitude
@@ -340,35 +369,33 @@ local function getNearestHotspot()
     return bestHotspot, bestDist
 end
 
--- Debug Visualizer
 local function visualizeTarget(pos)
     if not pos then return end
     
-    local viz = Workspace:FindFirstChild("FishFarmViz")
-    if not viz then
-        viz = Instance.new("Part")
+    local oldViz = Workspace:FindFirstChild("FishFarmViz")
+    if oldViz then
+        pcall(function() oldViz:Destroy() end)
+    end
+    
+    pcall(function()
+        local viz = Instance.new("Part")
         viz.Name = "FishFarmViz"
         viz.Shape = Enum.PartType.Ball
         viz.Size = Vector3.new(1, 1, 1)
         viz.Material = Enum.Material.Neon
-        viz.Color = Color3.fromRGB(255, 0, 0) -- RED = Target
+        viz.Color = Color3.fromRGB(255, 0, 0)
         viz.Anchored = true
         viz.CanCollide = false
+        viz.Transparency = 0.3
         viz.Parent = Workspace
-    end
-    viz.Position = pos
+        viz.Position = pos
+    end)
 end
 
--- ============================================
--- CLICK AT POSITION
--- ============================================
-
--- Convert world position to screen coordinates and click there
 local function clickAtWorldPosition(worldPos)
     local camera = getCamera()
     if not camera then return false end
     
-    -- Convert world position to screen coordinates
     local screenPos, onScreen = camera:WorldToScreenPoint(worldPos)
     
     if not onScreen then
@@ -381,9 +408,8 @@ local function clickAtWorldPosition(worldPos)
     
     log("Clicking at screen: " .. screenX .. ", " .. screenY)
     
-    local success = pcall(function()
+    local success, err = pcall(function()
         local vim = game:GetService("VirtualInputManager")
-        -- Click at water's screen position
         vim:SendMouseButtonEvent(screenX, screenY, 0, true, game, 0)
         task.delay(0.1, function()
             pcall(function()
@@ -392,10 +418,14 @@ local function clickAtWorldPosition(worldPos)
         end)
     end)
     
+    if not success then
+        logWarn("VirtualInputManager failed: " .. tostring(err))
+        logWarn("Your executor may not support VIM. Try a different executor.")
+    end
+    
     return success
 end
 
--- Simple click for minigame (center screen)
 local function simulateClick()
     local now = tick()
     if now - State.LastClickTime < CLICK_COOLDOWN then
@@ -415,10 +445,6 @@ local function simulateClick()
     
     return success
 end
-
--- ============================================
--- MINIGAME HANDLER
--- ============================================
 
 local function getFishingFrame()
     local playerGui = LocalPlayer:FindFirstChild("PlayerGui")
@@ -445,6 +471,13 @@ local function expandGreenZone()
     
     local successArea = timingBar:FindFirstChild("SuccessArea")
     if successArea then
+        if not State.OriginalZoneSize then
+            State.OriginalZoneSize = {
+                Size = successArea.Size,
+                Position = successArea.Position
+            }
+        end
+        
         successArea.Size = UDim2.new(1, 0, ZONE_SIZE_EXPLOIT, 0)
         successArea.Position = UDim2.new(0.5, 0, 0.025, 0)
         State.ZoneExpanded = true
@@ -453,6 +486,33 @@ local function expandGreenZone()
     end
     
     return false
+end
+
+local function restoreGreenZone()
+    if not State.OriginalZoneSize then return end
+    
+    local frame = getFishingFrame()
+    if not frame then
+        State.OriginalZoneSize = nil
+        return
+    end
+    
+    local timingBar = frame:FindFirstChild("TimingBar")
+    if not timingBar then
+        State.OriginalZoneSize = nil
+        return
+    end
+    
+    local successArea = timingBar:FindFirstChild("SuccessArea")
+    if successArea then
+        pcall(function()
+            successArea.Size = State.OriginalZoneSize.Size
+            successArea.Position = State.OriginalZoneSize.Position
+        end)
+        log("Zone restored to original size")
+    end
+    
+    State.OriginalZoneSize = nil
 end
 
 local function isBarInZone()
@@ -508,8 +568,6 @@ local function onMinigameFrame()
             State.ZoneExpanded = false
             State.ClickCount = 0
             
-            -- FIX: Animation needs ~1.5s+ to reset. 
-            -- We wait 2.5s to be safe and perfectly synced.
             State.LastCastTime = tick() - CAST_COOLDOWN + 1.2
             log("⏳ Waiting for animation reset...")
         end
@@ -518,8 +576,8 @@ end
 
 local function startMinigameWatcher()
     if State.MinigameConnection then
-        State.MinigameConnection:Disconnect()
-        State.MinigameConnection = nil
+        log("MinigameWatcher already running, skipping restart")
+        return
     end
     
     State.MinigameConnection = RunService.RenderStepped:Connect(onMinigameFrame)
@@ -533,11 +591,9 @@ local function stopMinigameWatcher()
     end
     State.IsMinigameActive = false
     State.ZoneExpanded = false
+    
+    restoreGreenZone()
 end
-
--- ============================================
--- MAIN FISHING LOGIC
--- ============================================
 
 local function doCast()
     local now = tick()
@@ -555,65 +611,76 @@ local function doCast()
     local camera = getCamera()
     if not root or not camera then return false end
     
-    log("─────────────────────")
-    log("🎣 Casting (rod: " .. rod.Name .. ", water: " .. math.floor(dist) .. " studs)")
-    
-    -- Get character's look direction
     local lookVector = root.CFrame.LookVector
     local playerPos = root.Position
     local targetPos = nil
+    local targetType = "unknown"
+
     
-    -- 1. Check for Active Hotspot (Priority for casting)
-    local hotspot, hDist = getNearestHotspot() -- Function created in prev step (checks local range)
+    local hotspot, hDist = getNearestHotspot()
     if hotspot then
-        -- REVERT: Y-Sync caused parallax issues if water level was wrong.
-        -- Using direct hotspot position is safer if dev placed it correctly.
         targetPos = hotspot:IsA("BasePart") and hotspot.Position or hotspot:GetPivot().Position
-        log("🔥 Targeting Nearby Hotspot: " .. math.floor(hDist) .. " studs")
+        targetType = "Hotspot"
+        log("🎯 Targeting hotspot at " .. math.floor(hDist) .. " studs")
     else
-        -- 2. Accurate Zone Targeting (Normal Mode)
         local zoneCenter, zDist = getNearestZoneCenter()
         if zoneCenter then
              targetPos = zoneCenter
-             -- Adjust height to water level
              if water then targetPos = Vector3.new(targetPos.X, water.Position.Y, targetPos.Z) end
-             log("🎯 Targeting Zone Center: " .. math.floor(zDist) .. " studs")
+             targetType = "ZoneCenter"
+             log("🎯 Targeting zone center at " .. math.floor(zDist) .. " studs")
         else
-             -- 3. Fallback: Standard Offset
              targetPos = playerPos + lookVector * 8
              targetPos = Vector3.new(targetPos.X, water.Position.Y, targetPos.Z)
+             targetType = "Fallback"
         end
     end
     
-    -- Debug: Show where we are aiming
     visualizeTarget(targetPos)
     
-    log("Target: " .. math.floor(targetPos.X) .. ", " .. math.floor(targetPos.Y) .. ", " .. math.floor(targetPos.Z))
-    
-    -- Convert to screen position
     local screenPos, onScreen = camera:WorldToScreenPoint(targetPos)
     
     if not onScreen then
-        logWarn("Target not on screen, trying water position...")
-        screenPos, onScreen = camera:WorldToScreenPoint(water.Position)
-        if not onScreen then
-            logWarn("Water not on screen!")
-            return false
+        log("📷 Auto-fixing camera to face target...")
+        
+        local camDistance = 15
+        local camHeight = 8
+        
+        local toTarget = (targetPos - playerPos).Unit
+        
+        local camPos = playerPos - (toTarget * camDistance) + Vector3.new(0, camHeight, 0)
+        
+        camera.CFrame = CFrame.lookAt(camPos, targetPos)
+        
+        root.CFrame = CFrame.lookAt(playerPos, Vector3.new(targetPos.X, playerPos.Y, targetPos.Z))
+        
+        task.wait(0.3)
+        
+        screenPos, onScreen = camera:WorldToScreenPoint(targetPos)
+        
+        if onScreen then
+            log("📷 Camera fixed! Target now on screen")
+        else
+            screenPos, onScreen = camera:WorldToScreenPoint(water.Position)
+            if not onScreen then
+                log("⚠ Cannot get target on screen, aborting cast")
+                return false
+            end
         end
     end
     
-    -- OFFSET FIX: Account for GuiInset (TopBar)
     local guiInset = game:GetService("GuiService"):GetGuiInset()
+    
     local screenX = math.floor(screenPos.X)
-    local screenY = math.floor(screenPos.Y + guiInset.Y) -- Add inset to Y
+    local screenY = math.floor(screenPos.Y + guiInset.Y)
+    
+    log("🎣 Casting at screen " .. screenX .. ", " .. screenY)
     
     State.LastCastTime = tick()
-    State.CastStartTime = tick() -- Capture precise start time for smart logic
+    State.CastStartTime = tick()
     State.WaitingForMinigame = true
     
-    log("Clicking at: " .. screenX .. ", " .. screenY)
-    
-    local success = pcall(function()
+    local success, err = pcall(function()
         local vim = game:GetService("VirtualInputManager")
         vim:SendMouseButtonEvent(screenX, screenY, 0, true, game, 0)
         task.delay(0.1, function()
@@ -623,10 +690,8 @@ local function doCast()
         end)
     end)
     
-    if success then
-        log("✓ Cast sent")
-    else
-        logWarn("Click failed")
+    if not success then
+        logWarn("Cast failed: " .. tostring(err))
         State.WaitingForMinigame = false
         return false
     end
@@ -634,18 +699,13 @@ local function doCast()
     return true
 end
 
--- ============================================
--- CLEANUP
--- ============================================
-
--- Fix #3: Helper to destroy visualizer
 local function destroyVisualizer()
     local viz = Workspace:FindFirstChild("FishFarmViz")
     if viz then viz:Destroy() end
 end
 
 local function fullCleanup()
-    destroyVisualizer() -- Fix #3: Cleanup red viz ball
+    destroyVisualizer()
     stopMinigameWatcher()
     
     if State.FishingThread then
@@ -656,7 +716,7 @@ local function fullCleanup()
     local count = State.FishCount
     
     State.Enabled = false
-    State.IsStarting = false -- Fix #2: Reset race condition flag
+    State.IsStarting = false
     State.FishCount = 0
     State.LastClickTime = 0
     State.LastCastTime = 0
@@ -665,77 +725,19 @@ local function fullCleanup()
     State.ClickCount = 0
     State.WaitingForMinigame = false
     State.ActiveHotspot = nil
-    -- Fix #5 & #9: Complete state reset
     State.BobberName = nil
     State.CurrentBobber = nil
     State.LastWaterPos = nil
     State.CastStartTime = 0
+    State.OriginalZoneSize = nil
     
     log("Cleanup (fish: " .. count .. ")")
-end
-
--- ============================================
--- ANCHOR GUI
--- ============================================
-local function createAnchorGui()
-    if State.AnchorGui then return end
-    
-    local gui = Instance.new("ScreenGui")
-    gui.Name = "FishFarmAnchorGui"
-    gui.ResetOnSpawn = false
-    gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    gui.Parent = LocalPlayer:FindFirstChild("PlayerGui")
-    
-    State.AnchorGui = gui
-    
-    -- Anchor Button
-    local anchorBtn = Instance.new("TextButton")
-    anchorBtn.Name = "AnchorButton"
-    anchorBtn.Size = UDim2.new(0, 90, 0, 40)
-    anchorBtn.Position = UDim2.new(0, 20, 0.7, 0)
-    anchorBtn.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-    anchorBtn.Text = "🔓 ANCHOR"
-    anchorBtn.TextColor3 = Color3.new(1, 1, 1)
-    anchorBtn.TextSize = 14
-    anchorBtn.Font = Enum.Font.GothamBold
-    anchorBtn.Parent = gui
-    
-    local corner = Instance.new("UICorner")
-    corner.CornerRadius = UDim.new(0, 10)
-    corner.Parent = anchorBtn
-    
-    local stroke = Instance.new("UIStroke")
-    stroke.Color = Color3.fromRGB(120, 120, 120)
-    stroke.Thickness = 1
-    stroke.Parent = anchorBtn
-    
-    anchorBtn.MouseButton1Click:Connect(function()
-        State.Anchored = not State.Anchored
-        local root = getRoot()
-        
-        if State.Anchored then
-            anchorBtn.BackgroundColor3 = Color3.fromRGB(50, 180, 50)
-            anchorBtn.Text = "🔒 LOCKED"
-            stroke.Color = Color3.fromRGB(80, 200, 80)
-            if root then root.Anchored = true end
-            log("Player ANCHORED")
-        else
-            anchorBtn.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-            anchorBtn.Text = "🔓 ANCHOR"
-            stroke.Color = Color3.fromRGB(120, 120, 120)
-            if root then root.Anchored = false end
-            log("Player UNANCHORED")
-        end
-    end)
-    
-    log("Anchor button created")
 end
 
 local function setAnchored(shouldAnchor)
     State.Anchored = shouldAnchor
     local root = getRoot()
     
-    -- Fix #11: Use BodyPosition instead of direct HRP anchor (safer, less detectable)
     if root then
         local existingBP = root:FindFirstChild("FishFarmAnchor")
         if shouldAnchor then
@@ -760,44 +762,80 @@ local function setAnchored(shouldAnchor)
         if btn and stroke then
             if shouldAnchor then
                 btn.BackgroundColor3 = Color3.fromRGB(50, 180, 50)
-                btn.Text = "🔒 LOCKED"
+                btn.Text = "LOCKED"
                 stroke.Color = Color3.fromRGB(80, 200, 80)
             else
                 btn.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-                btn.Text = "🔓 ANCHOR"
+                btn.Text = "ANCHOR"
                 stroke.Color = Color3.fromRGB(120, 120, 120)
             end
         end
     end
 end
 
+local function createAnchorGui()
+    if State.AnchorGui then return end
+    
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "FishFarmAnchorGui"
+    gui.ResetOnSpawn = false
+    gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    gui.Parent = LocalPlayer:FindFirstChild("PlayerGui")
+    
+    State.AnchorGui = gui
+    
+    local anchorBtn = Instance.new("TextButton")
+    anchorBtn.Name = "AnchorButton"
+    anchorBtn.Size = UDim2.new(0, 90, 0, 40)
+    anchorBtn.Position = UDim2.new(0, 20, 0.7, 0)
+    anchorBtn.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+    anchorBtn.Text = "ANCHOR"
+    anchorBtn.TextColor3 = Color3.new(1, 1, 1)
+    anchorBtn.TextSize = 14
+    anchorBtn.Font = Enum.Font.GothamBold
+    anchorBtn.Parent = gui
+    
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 10)
+    corner.Parent = anchorBtn
+    
+    local stroke = Instance.new("UIStroke")
+    stroke.Color = Color3.fromRGB(120, 120, 120)
+    stroke.Thickness = 1
+    stroke.Parent = anchorBtn
+    
+    State.AnchorButtonConnection = anchorBtn.MouseButton1Click:Connect(function()
+        setAnchored(not State.Anchored)
+        log("Player " .. (State.Anchored and "ANCHORED" or "UNANCHORED"))
+    end)
+    
+    log("Anchor button created")
+end
+
 local function destroyAnchorGui()
-    -- Unanchor player first (using BodyPosition cleanup)
     if State.Anchored then
-        State.Anchored = false
-        local root = getRoot()
-        if root then
-            local bp = root:FindFirstChild("FishFarmAnchor")
-            if bp then bp:Destroy() end
-        end
+        setAnchored(false)
+    end
+    
+    if State.AnchorButtonConnection then
+        State.AnchorButtonConnection:Disconnect()
+        State.AnchorButtonConnection = nil
     end
     
     if State.AnchorGui then
-        State.AnchorGui:Destroy()
+        pcall(function()
+            State.AnchorGui:Destroy()
+        end)
         State.AnchorGui = nil
     end
 end
 
--- ============================================
--- PUBLIC API
--- ============================================
 function FishFarm.Init(deps)
     Remote = deps.Remote
     log("Initialized")
 end
 
 function FishFarm.Start()
-    -- Fix #2: Check both flags to prevent race condition
     if State.Enabled or State.IsStarting then return end
     State.IsStarting = true
     
@@ -806,9 +844,22 @@ function FishFarm.Start()
     log("═══════════════════════════")
     log("FishDelay: " .. Settings.FishDelay .. "s")
     
-    fullCleanup()
+    State.FishCount = 0
+    State.LastClickTime = 0
+    State.LastCastTime = 0
+    State.IsMinigameActive = false
+    State.ZoneExpanded = false
+    State.ClickCount = 0
+    State.WaitingForMinigame = false
+    State.ActiveHotspot = nil
+    State.BobberName = nil
+    State.CurrentBobber = nil
+    State.LastWaterPos = nil
+    State.CastStartTime = 0
+    State.OriginalZoneSize = nil
+    
     State.Enabled = true
-    State.IsStarting = false -- Transition complete
+    State.IsStarting = false
     
     createAnchorGui()
     startMinigameWatcher()
@@ -818,22 +869,18 @@ function FishFarm.Start()
         local noWaterWarn = 0
         local castAttempts = 0
         
-        -- FIX: Initial delay for equip animation / start sync
         log("⏳ Warming up (1.5s)...")
         task.wait(1.5)
         
         while State.Enabled do
-            -- 1. Throttling: Slow down if minigame not active
              if not State.IsMinigameActive and not State.WaitingForMinigame then
-                  task.wait(0.1) -- Fast throttle
+                  task.wait(0.1)
              else
                  RunService.Heartbeat:Wait()
             end
-
-            -- 2. Validate Rod & Water
+            
             local rod = getEquippedRod()
             if not rod then
-                -- Reset state
                 State.LastWaterPos = nil
                 State.CurrentBobber = nil
                 
@@ -847,7 +894,6 @@ function FishFarm.Start()
             
             local water = getNearestWater()
             if not water then
-                -- FIX: Skip water check if AutoHotspot needs to teleport first
                 local needsTeleport = Settings.AutoHotspot and not State.ActiveHotspot
                 if not needsTeleport then
                     local now = os.clock()
@@ -857,58 +903,50 @@ function FishFarm.Start()
                     end
                     continue
                 end
-                -- Allow loop to continue to AutoHotspot logic
             end
             
-            -- 3. Minigame Active? (Just wait)
             if State.IsMinigameActive then
                 continue
             end
             
-            -- [NEW] Auto Hotspot Hunt Logic
             if Settings.AutoHotspot and not State.WaitingForMinigame then
-                -- Check if current spot is still valid
                 local currentSpotValid = false
                 if State.ActiveHotspot then
-                    -- Safety: Check if object still exists in game
                     if State.ActiveHotspot.Parent then
                         local bubbles = State.ActiveHotspot:FindFirstChild("Bubbles")
-                        if bubbles and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
+                        
+                        if bubbles and bubbles.Parent and bubbles:IsA("ParticleEmitter") and bubbles.Enabled then
                              currentSpotValid = true
                              
-                             -- AUTO-ANCHOR: Ensure we are anchored while fishing at valid spot
                              if not State.Anchored then
                                  setAnchored(true)
                                  log("⚓ Auto-Anchored at Hotspot")
                              end
                         else
-                             log("⚠ Current hotspot expired!")
+                             log("⚠ Hotspot bubbles expired!")
                              State.ActiveHotspot = nil
                         end
                     else
-                        State.ActiveHotspot = nil -- Object destroyed
+                        log("⚠ Hotspot object destroyed")
+                        State.ActiveHotspot = nil
                     end
                 end
                 
-                -- If no valid spot, HUNT!
                 if not currentSpotValid then
-                    log("🔎 Scanning for global hotspots...")
+                    log("🔎 Hunting for new hotspot...")
                     
-                    -- Unanchor before moving
                     if State.Anchored then
                         setAnchored(false)
-                        log("⚓ Unanchored for Teleport")
                     end
                     
                     local targetHotspot = getGlobalActiveHotspot()
                     
                     if targetHotspot then
-                        log("🚀 Found Hotspot! Teleporting...")
+                        log("🚀 Teleporting to hotspot!")
                         
-                        -- Teleport Logic
                         local root = getRoot()
+                        local camera = getCamera()
                         if root then
-                            -- Fix #1: Handle both Part and Model safely
                             local hotspotCFrame, hotspotPos
                             if targetHotspot:IsA("BasePart") then
                                 hotspotCFrame = targetHotspot.CFrame
@@ -918,81 +956,77 @@ function FishFarm.Start()
                                 hotspotPos = hotspotCFrame.Position
                             end
                             
-                            -- Teleport slightly above and away to avoid falling in
-                            local targetCFrame = hotspotCFrame * CFrame.new(0, 5, 8)
-                            -- Look at hotspot
-                            targetCFrame = CFrame.lookAt(targetCFrame.Position, hotspotPos)
+                            local direction = (hotspotPos - root.Position).Unit
+                            local targetPos = hotspotPos - (direction * 8) + Vector3.new(0, 5, 0)
+                            local targetCFrame = CFrame.lookAt(targetPos, hotspotPos)
                             
                             root.CFrame = targetCFrame
+                            
+                            if camera then
+                                camera.CFrame = CFrame.lookAt(targetPos + Vector3.new(0, 2, 0), hotspotPos)
+                            end
+                            
                             State.ActiveHotspot = targetHotspot
-                            State.LastWaterPos = nil -- Reset water cache
+                            State.LastWaterPos = nil
                             
-                            -- Stabilize
-                            log("⏳ Stabilizing...")
-                            task.wait(1.5)
+                            log("⏳ Stabilizing position...")
+                            task.wait(2.5)
                             
-                            -- Re-anchor immediately after stabilize
+                            if camera and root then
+                                local lookAtPos = hotspotPos
+                                root.CFrame = CFrame.lookAt(root.Position, Vector3.new(lookAtPos.X, root.Position.Y, lookAtPos.Z))
+                            end
+                            
                             setAnchored(true)
-                            log("⚓ Anchor restored")
+                            log("⚓ Ready to fish!")
+                            
+                            task.wait(0.5)
                         end
                     else
-                        logWarn("No active hotspots found. Waiting...")
-                        task.wait(2)
+                        log("⏳ No hotspots found, waiting...")
+                        task.wait(3)
                         continue
                     end
                 end
             end
             
-            -- 4. SMART LOGIC: Bobber Detection
             local bobber = findBobber()
             
             if State.WaitingForMinigame then
-                -- We are waiting for fish...
                 local timeSinceCast = tick() - State.LastCastTime
                 
                 if bobber then
-                    -- Good! Bobber exists.
                     State.CurrentBobber = bobber
                     
                     if timeSinceCast > Settings.FishDelay + 5 then
-                        -- Stuck too long? Recast
                         log("⚠ Stuck (timeout), recasting...")
                         State.WaitingForMinigame = false
                     end
                 else
-                    -- No bobber found?
-                    if timeSinceCast > 1.2 then -- Aggressive check (was 1.5)
-                        -- If 1.2s passed and still no bobber -> CAST FAILED or LINE CUT
+                    if timeSinceCast > 1.2 then
                         log("⚡ Smart Recast: Cast failed / Bobber lost")
-                        State.WaitingForMinigame = false -- Trigger recast
+                        State.WaitingForMinigame = false
                     end
-                    -- < 1.5s: Allow time for bobber to spawn
                 end
             end
             
-            -- 5. Casting Logic
             if not State.WaitingForMinigame then
-                -- Ready to cast
-                
-                -- Check cooldown
                 if tick() - State.LastCastTime < CAST_COOLDOWN then
                     continue
                 end
                 
                 if doCast() then
                     castAttempts = castAttempts + 1
-                    -- Reset bobber state
                     State.CurrentBobber = nil
                 end
                 
-                task.wait(0.1) -- Snappy response
+                task.wait(0.1)
             end
         end
     end)
 end
 
 function FishFarm.Stop()
-    -- Fix #2: Check both flags to prevent race condition
     if not State.Enabled and not State.IsStarting then return end
     State.IsStarting = false
     
@@ -1001,7 +1035,6 @@ function FishFarm.Stop()
     log("═══════════════════════════")
     
     destroyAnchorGui()
-    -- Fix #8: Explicit nil check before calling Remote
     if Remote and Remote.EndCatching then
         pcall(function() Remote.EndCatching() end)
     end
@@ -1014,6 +1047,13 @@ end
 
 function FishFarm.Cleanup()
     FishFarm.Stop()
+    
+    if State.CharacterConnection then
+        State.CharacterConnection:Disconnect()
+        State.CharacterConnection = nil
+    end
+    
+    log("FishFarm fully cleaned up")
 end
 
 function FishFarm.UpdateSetting(key, value)
@@ -1028,6 +1068,11 @@ function FishFarm.UpdateSetting(key, value)
     elseif key == "AutoHotspot" then
         Settings.AutoHotspot = value
         log("AutoHotspot: " .. tostring(value))
+    elseif key == "RodKeyword" then
+        Settings.RodKeyword = value or "rod"
+    elseif key == "Debug" then
+        Settings.Debug = value
+        DEBUG = value
     end
 end
 

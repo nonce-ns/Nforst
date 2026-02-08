@@ -281,6 +281,55 @@ function FarmingTab.Create(Window, Features, CONFIG)
         Title = "ℹ️ How to use",
         Desc = "Equip any Rod and stand near water. Auto-fish will cast and try to catch fish automatically.",
     })
+    
+    -- Fix #17: Add missing UI controls
+    FishSection:Toggle({
+        Flag = "FishFarm.AutoClick",
+        Title = "Auto Click",
+        Desc = "Automatically click during fishing minigame",
+        Value = true,
+        Callback = function(state)
+            if Features.FishFarm then
+                Features.FishFarm.UpdateSetting("AutoClick", state)
+            end
+        end,
+    })
+    
+    FishSection:Toggle({
+        Flag = "FishFarm.ExpandZone",
+        Title = "Expand Green Zone",
+        Desc = "Make success zone 95% (more visible cheat)",
+        Value = true,
+        Callback = function(state)
+            if Features.FishFarm then
+                Features.FishFarm.UpdateSetting("ExpandZone", state)
+            end
+        end,
+    })
+    
+    FishSection:Input({
+        Flag = "FishFarm.RodKeyword",
+        Title = "Rod Keyword",
+        Desc = "Partial name to detect rods (e.g., 'rod', 'pole')",
+        Value = "rod",
+        Callback = function(value)
+            if Features.FishFarm then
+                Features.FishFarm.UpdateSetting("RodKeyword", value)
+            end
+        end,
+    })
+    
+    FishSection:Toggle({
+        Flag = "FishFarm.Debug",
+        Title = "Debug Logging",
+        Desc = "Show detailed logs in console",
+        Value = false,
+        Callback = function(state)
+            if Features.FishFarm then
+                Features.FishFarm.UpdateSetting("Debug", state)
+            end
+        end,
+    })
 
     
     return Tab
